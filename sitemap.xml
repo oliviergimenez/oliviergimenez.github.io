@@ -88,17 +88,47 @@
   </url>
   
   <url>
+    <loc>https://oliviergimenez.github.io/authors/</loc>
+    <lastmod>2020-03-09T17:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/authors/olivier-gimenez/</loc>
+    <lastmod>2020-03-09T17:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/sem/</loc>
+    <lastmod>2020-03-09T17:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/seminar/</loc>
+    <lastmod>2020-03-09T17:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/statistical-ecology/</loc>
+    <lastmod>2020-03-09T17:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/talk/2020-rennes-largecarnivores/</loc>
+    <lastmod>2020-03-09T17:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/talk/</loc>
+    <lastmod>2020-03-09T17:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://oliviergimenez.github.io/blog/gdrecostat/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://oliviergimenez.github.io/tags/rennes/</loc>
-    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/statistical-ecology/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -229,11 +259,6 @@
   
   <url>
     <loc>https://oliviergimenez.github.io/blog/semjags/</loc>
-    <lastmod>2020-02-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/sem/</loc>
     <lastmod>2020-02-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -1738,11 +1763,6 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/seminar/</loc>
-    <lastmod>2017-02-27T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/blog/anr_democom_kickoff/</loc>
     <lastmod>2017-02-23T12:00:00+00:00</lastmod>
   </url>
@@ -2182,15 +2202,15 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/authors/</loc>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/categories/</loc>
   </url>
   
   <url>
     <loc>https://oliviergimenez.github.io/publication_types/</loc>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/publication/</loc>
   </url>
   
 </urlset>

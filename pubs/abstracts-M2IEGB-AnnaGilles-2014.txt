@@ -1,0 +1,45 @@
+-----------------------------------------------------------------------------------------------
+
+Anna Lenoël - Abundance and social structure of the Risso's dolphin in the North-Western Mediterranean Sea
+
+Risso’s dolphins Grampus griseus remains a poorly-known species. The Mediterranean subpopulation
+being listed as “Data deficient” on the French IUCN list, studying its abundance
+and behavior are much needed to implement proper conservation actions. Here we aimed at
+enhancing knowledge about the demography and the social organization of the population that
+lives in the North-Western Mediterranean Sea. Using a combination of photo-identification
+and capture-recapture models we estimated abundances from 1991 to 2012 while accounting
+for various sources of heterogeneity in the detection process. Besides, we described the
+association patterns among the population using a non-hierarchical clustering method. The
+abundance ranged from 77 (SE = 53) to 1028 (SE = 295) individuals, large intervals being
+correlated with a low resighting rate. When heterogeneity in the detection process was
+accounted for, population size was reevaluated to be ~23% higher than when it was ignored.
+We also found low but significant rates of association between individuals that seemed to
+correspond to geographic groups. Our study is a first step towards the understanding of a
+social structure and the definition of a conservation status for the Risso’s dolphin population.
+
+Key words: abundance estimation, clustering, Cormack-Jolly-Seber model, issue of
+detectability < 1, population structure, Risso’s dolphin
+
+#-----------------------------------------------------------------------------------------------
+
+Gilles Maurer - Bioeconomic modelling of the dynamic of captive elephant populations in Laos
+
+Laos has a tradition of raising Asian elephants for centuries. However the captive population
+has plummeted over the past twenty years due to the intensification of work in the logging
+industry in a country recently opening up to the market economy. This study aims at
+describing the dynamics of an exploited population of Asian elephants in Laos, paying
+particular attention to the determinants of its fecundity. We adopted a population demography
+modeling framework, making an explicit link between fecundity and elephant owners profit
+maximization. Our results show that fecundity is impacted by i) the dynamics of wild elephant
+pool through the mating of captive females by wild males, and ii) the financial inducement of
+elephant owners to breed their animal. As a result, we expect fecundity to rise again gradually
+in response to the rapid increase in elephants’ prices. Our bio-economic approach allows
+describing the underlying dynamics, including interactions with the wild pool, that govern the
+demography of captive elephants in Laos. Our results provide new ecological-economic
+equilibriums that will serve as a basis for designing recommendations for a sustainable
+management of the species.
+
+Key words : Asian elephant – Bio-economics – Demography – Elephas maximus – Lao PDR –
+Modeling – Wild / captive interactions.
+
+-----------------------------------------------------------------------------------------------
