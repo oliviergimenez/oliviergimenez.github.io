@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cnrs | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tag/cnrs/</link>
+      <atom:link href="https://oliviergimenez.github.io/tag/cnrs/index.xml" rel="self" type="application/rss+xml" />
+    <description>cnrs</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Fri, 20 Apr 2012 12:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>cnrs</title>
+      <link>https://oliviergimenez.github.io/tag/cnrs/</link>
+    </image>
+    
+    <item>
+      <title>My CNRS interview for a senior scientist position</title>
+      <link>https://oliviergimenez.github.io/blog/cnrs_interview/</link>
+      <pubDate>Fri, 20 Apr 2012 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/cnrs_interview/</guid>
+      <description>&lt;p&gt;Here are the slides of my interview for a CNRS senior scientist position (DR2). Note that
+CNRS offers interdisciplinary positions, which is sadly not true for all of our research
+institutes.&lt;/p&gt;
+&lt;iframe src=&#34;https://widgets.figshare.com/articles/4833104/embed?show_title=1&#34; width=&#34;568&#34; height=&#34;426&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

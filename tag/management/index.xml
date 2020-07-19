@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>management | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tag/management/</link>
+      <atom:link href="https://oliviergimenez.github.io/tag/management/index.xml" rel="self" type="application/rss+xml" />
+    <description>management</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 23 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>management</title>
+      <link>https://oliviergimenez.github.io/tag/management/</link>
+    </image>
+    
+    <item>
+      <title>New preprint by Julie Louvrier on forecasting species distribution</title>
+      <link>https://oliviergimenez.github.io/blog/preprintmecastat/</link>
+      <pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/preprintmecastat/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;We&amp;#39;ve been thinking a lot about &lt;a href=&#34;https://twitter.com/hashtag/predictions?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#predictions&lt;/a&gt; in ecology lately. Here&amp;#39;s our modest crack at it &lt;a href=&#34;https://t.co/NU7ROWLFWF&#34;&gt;https://t.co/NU7ROWLFWF&lt;/a&gt; led by &lt;a href=&#34;https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw&#34;&gt;@LouvrierJulie&lt;/a&gt; w/ a mechanistic-statistical &lt;a href=&#34;https://twitter.com/hashtag/SpeciesDistributionModel?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SpeciesDistributionModel&lt;/a&gt; to &lt;a href=&#34;https://twitter.com/hashtag/forecast?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#forecast&lt;/a&gt; 🇫🇷🐺 expansion &lt;a href=&#34;https://twitter.com/hashtag/ImperfectDetection?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ImperfectDetection&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#WomenInSTEM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ODEs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ODEs&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bayes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bayes&lt;/a&gt; &lt;a href=&#34;https://t.co/D1n38edpDd&#34;&gt;pic.twitter.com/D1n38edpDd&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1209009946743980032?ref_src=twsrc%5Etfw&#34;&gt;December 23, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
+      <link>https://oliviergimenez.github.io/blog/erc_lynx/</link>
+      <pubDate>Tue, 28 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/erc_lynx/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;width:200px;margin-bottom:5px&#34; src=&#34;https://oliviergimenez.github.io/img/jura.jpg&#34;&gt;
+Our project `Avoid, reduce and compensate mortality risks of the Eurasian Lynx by collision with transport vehicles` aims to build on previous works on lynx population viability, collision risks while crossing terrestrial transport infrastructures and mitigation strategies. Our team will develop an operational tool upon which the technical operators will be able to rely on in the decision-making process for land-use planning. More details [here](https://sites.google.com/view/erclynx/) (in French).
+&lt;p&gt;This applied research project gathers a group of various actors (public and private; researchers, wildlife managers and carnivore experts; infrastructure managers and road/transport planning experts) with the following objectives:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Maintaining functional connectivity between favorable lynx habitats and elaborating strategies for avoiding, reducing and compensating collision risks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Building a tool to reinforce and facilitation the implementation of land-use planning public policies.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To achieve these objectives, we will rely on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Data on collisions (roads, railways) and external structural factors (ITT presence and their characteristics);&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A predictive statistical model to identify the zones with high probability of collision risks;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A spatially-explicit individual-based population viability model (SEPVA) to predict extinction risks;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A user-friendly computer program implemented in R. We will follow a companion modeling approach to ensure the smooth adoption and use of this program by the actors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This project will fill a gap between the academic research, the stakes of land planning, the lynx conservation and the needs of ITT managers/operators. We will contribute to the implementation of national public policies (TVB, SRCE/SRADDET, &amp;ldquo;Avoid, Reduce, Compensate&amp;rdquo; doctrine) by testing our approach on pilot sites in the Vosges and Jura areas. This project will benefit from the sharing of experiences and skills from our colleagues in Switzerland and Germany.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Human-dolphin interactions</title>
+      <link>https://oliviergimenez.github.io/project/interact/</link>
+      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
+      <guid>https://oliviergimenez.github.io/project/interact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Large carnivores monitoring</title>
+      <link>https://oliviergimenez.github.io/project/carnivores/</link>
+      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
+      <guid>https://oliviergimenez.github.io/project/carnivores/</guid>
+      <description>&lt;p&gt;Large carnivores are difficult to monitor in the field: they are elusive and live at low densities over wide areas. With their recent recovery in Europe,
+large carnivores are having increasing interactions with human activities. We contribute to the estimation of their abundance and distribution by applying
+and developing methods that make optimal use of available data. We are also working on applying science-based management using the structured
+decision making
+framework.&lt;/p&gt;
+&lt;p&gt;Ongoing projects are mostly led by 
+&lt;a href=&#34;https://oliviergimenez.github.io/#current&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Master students, PhDs and post-docs&lt;/a&gt;: Julie Louvrier worked on tools to infer the
+distribution of large carnivores in France and Norway; Loreleï Guéry in her post-doc studied population dynamics of lynx in Switzerland using
+spatially-explicit closed and open capture-recapture models; Vincenzo Gervasi&amp;rsquo;s post-doc aimed at assessing the
+determinants of conflicts on large carnivores in Europe and build trans-boundary management tools for wolves (France-Italy) and wolverines (Sweden-Norway); Nina Santostasi in her PhD is developing
+demographic models for studying hybridizing species, with wolves in Italy as as case study; Lorena Mansilla in her PhD is developing capture-recapture models to assess the population dynamics of social species; Sarah Bauduin&amp;rsquo;s post-doc aims at developing a spatially-explicit agent-based model and software program for assessing lynx viability in France; Lucile Marescot&amp;rsquo;s post-doc aims at developing multispecies occupancy models for large carnivores and their preys.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Multispecies demography</title>
+      <link>https://oliviergimenez.github.io/project/democom/</link>
+      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
+      <guid>https://oliviergimenez.github.io/project/democom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
+      <link>https://oliviergimenez.github.io/project/lynx/</link>
+      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
+      <guid>https://oliviergimenez.github.io/project/lynx/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

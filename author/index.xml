@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/author/</link>
+      <atom:link href="https://oliviergimenez.github.io/author/index.xml" rel="self" type="application/rss+xml" />
+    <description>Olivier Gimenez</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright>
+    <image>
+      <url>https://oliviergimenez.github.io/author/avatar_hu2cb62cde7ffbf991a23ad99f81001b35_47904_270x270_fill_q90_lanczos_center.jpg</url>
+      <title>Olivier Gimenez</title>
+      <link>https://oliviergimenez.github.io/author/</link>
+    </image>
+    
+  </channel>
+</rss>

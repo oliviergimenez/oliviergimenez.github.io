@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sociology | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tag/sociology/</link>
+      <atom:link href="https://oliviergimenez.github.io/tag/sociology/index.xml" rel="self" type="application/rss+xml" />
+    <description>sociology</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sat, 12 Aug 2017 13:07:40 +0300</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>sociology</title>
+      <link>https://oliviergimenez.github.io/tag/sociology/</link>
+    </image>
+    
+    <item>
+      <title>Human-dolphin interactions</title>
+      <link>https://oliviergimenez.github.io/project/interact/</link>
+      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
+      <guid>https://oliviergimenez.github.io/project/interact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

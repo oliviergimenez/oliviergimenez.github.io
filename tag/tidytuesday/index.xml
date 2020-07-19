@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tidytuesday | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tag/tidytuesday/</link>
+      <atom:link href="https://oliviergimenez.github.io/tag/tidytuesday/index.xml" rel="self" type="application/rss+xml" />
+    <description>tidytuesday</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>tidytuesday</title>
+      <link>https://oliviergimenez.github.io/tag/tidytuesday/</link>
+    </image>
+    
+    <item>
+      <title>Tidytuesday</title>
+      <link>https://oliviergimenez.github.io/blog/tidytuesday/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/tidytuesday/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Happy 2020 &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;! To celebrate, my modest first &lt;a href=&#34;https://twitter.com/hashtag/TidyTuesday?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TidyTuesday&lt;/a&gt; submission for wk 2019-52. Spatio-temporal trends in 🐺 presence in 🇫🇷 w/ data from &lt;a href=&#34;https://twitter.com/oncfs?ref_src=twsrc%5Etfw&#34;&gt;@oncfs&lt;/a&gt; &lt;a href=&#34;https://twitter.com/OFBiodiversite?ref_src=twsrc%5Etfw&#34;&gt;@OFBiodiversite&lt;/a&gt; (bugged dynamic map below)&lt;a href=&#34;https://twitter.com/hashtag/ggplot2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ggplot2&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/dataviz?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#dataviz&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/sf?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#sf&lt;/a&gt; &lt;a href=&#34;https://twitter.com/thomas_mock?ref_src=twsrc%5Etfw&#34;&gt;@thomas_mock&lt;/a&gt; &lt;br&gt;&lt;br&gt;Code: &lt;a href=&#34;https://t.co/eKkehXlTJH&#34;&gt;https://t.co/eKkehXlTJH&lt;/a&gt; &lt;a href=&#34;https://t.co/hHwkOmSamR&#34;&gt;pic.twitter.com/hHwkOmSamR&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1212701671802970113?ref_src=twsrc%5Etfw&#34;&gt;January 2, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+  </channel>
+</rss>

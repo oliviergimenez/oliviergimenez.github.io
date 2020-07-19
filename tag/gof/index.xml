@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gof | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tag/gof/</link>
+      <atom:link href="https://oliviergimenez.github.io/tag/gof/index.xml" rel="self" type="application/rss+xml" />
+    <description>gof</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sat, 21 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>gof</title>
+      <link>https://oliviergimenez.github.io/tag/gof/</link>
+    </image>
+    
+    <item>
+      <title>New paper!</title>
+      <link>https://oliviergimenez.github.io/blog/bibi_paper/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/bibi_paper/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&amp;quot;R2ucare: An R &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; package to perform goodness‐of‐fit tests for capture‐recapture models&amp;quot; in &lt;a href=&#34;https://twitter.com/MethodsEcolEvol?ref_src=twsrc%5Etfw&#34;&gt;@MethodsEcolEvol&lt;/a&gt; &lt;a href=&#34;https://t.co/ieQohrn3jA&#34;&gt;https://t.co/ieQohrn3jA&lt;/a&gt; 🤓😎 - paper entirely written w/ &lt;a href=&#34;https://twitter.com/hashtag/rmarkdown?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rmarkdown&lt;/a&gt; thx &lt;a href=&#34;https://twitter.com/stevenvmiller?ref_src=twsrc%5Etfw&#34;&gt;@stevenvmiller&lt;/a&gt; &lt;a href=&#34;https://t.co/9FapGe3oGV&#34;&gt;https://t.co/9FapGe3oGV&lt;/a&gt; 💯 - replication files ➡️ &lt;a href=&#34;https://t.co/h9F6sKbcpI&#34;&gt;https://t.co/h9F6sKbcpI&lt;/a&gt; &lt;a href=&#34;https://t.co/JyzQ33Wrl3&#34;&gt;pic.twitter.com/JyzQ33Wrl3&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/987622130455142401?ref_src=twsrc%5Etfw&#34;&gt;21 avril 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

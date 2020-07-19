@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sdm | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tag/sdm/</link>
+      <atom:link href="https://oliviergimenez.github.io/tag/sdm/index.xml" rel="self" type="application/rss+xml" />
+    <description>sdm</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 23 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>sdm</title>
+      <link>https://oliviergimenez.github.io/tag/sdm/</link>
+    </image>
+    
+    <item>
+      <title>New preprint by Julie Louvrier on forecasting species distribution</title>
+      <link>https://oliviergimenez.github.io/blog/preprintmecastat/</link>
+      <pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/preprintmecastat/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;We&amp;#39;ve been thinking a lot about &lt;a href=&#34;https://twitter.com/hashtag/predictions?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#predictions&lt;/a&gt; in ecology lately. Here&amp;#39;s our modest crack at it &lt;a href=&#34;https://t.co/NU7ROWLFWF&#34;&gt;https://t.co/NU7ROWLFWF&lt;/a&gt; led by &lt;a href=&#34;https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw&#34;&gt;@LouvrierJulie&lt;/a&gt; w/ a mechanistic-statistical &lt;a href=&#34;https://twitter.com/hashtag/SpeciesDistributionModel?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SpeciesDistributionModel&lt;/a&gt; to &lt;a href=&#34;https://twitter.com/hashtag/forecast?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#forecast&lt;/a&gt; 🇫🇷🐺 expansion &lt;a href=&#34;https://twitter.com/hashtag/ImperfectDetection?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ImperfectDetection&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#WomenInSTEM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ODEs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ODEs&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Bayes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bayes&lt;/a&gt; &lt;a href=&#34;https://t.co/D1n38edpDd&#34;&gt;pic.twitter.com/D1n38edpDd&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1209009946743980032?ref_src=twsrc%5Etfw&#34;&gt;December 23, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>New preprint by Valentin Lauret on integrated SDMs</title>
+      <link>https://oliviergimenez.github.io/blog/preprintval/</link>
+      <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/preprintval/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/preprint?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#preprint&lt;/a&gt; in which &lt;a href=&#34;https://twitter.com/ValentinLauret?ref_src=twsrc%5Etfw&#34;&gt;@ValentinLauret&lt;/a&gt; combines aerial &amp;amp; boat surveys in &lt;a href=&#34;https://twitter.com/hashtag/SDM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SDM&lt;/a&gt; for bottlenose dolphins w/ &lt;a href=&#34;https://twitter.com/hashtag/occupancy?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#occupancy&lt;/a&gt; models (single and repeated visits) - w/ H. Labach &amp;amp; M. Authier &lt;a href=&#34;https://t.co/t2IJMTbUf8&#34;&gt;https://t.co/t2IJMTbUf8&lt;/a&gt; &lt;a href=&#34;https://t.co/F2ftXu0DtK&#34;&gt;pic.twitter.com/F2ftXu0DtK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1197428792588984320?ref_src=twsrc%5Etfw&#34;&gt;November 21 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>Combining multiple data sources in species distribution models while accounting for spatial dependence and overfitting with penalised likelihood maximisation</title>
+      <link>https://oliviergimenez.github.io/blog/preprintian/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/preprintian/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New &lt;a href=&#34;https://twitter.com/hashtag/preprint?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#preprint&lt;/a&gt; on &amp;quot;Combining multiple data sources in species distribution models while accounting for spatial dependence and overfitting with penalised likelihood maximisation&amp;quot; &lt;a href=&#34;https://t.co/7GLRrgpo4D&#34;&gt;https://t.co/7GLRrgpo4D&lt;/a&gt; w/ &lt;a href=&#34;https://twitter.com/MoonbeamLevels?ref_src=twsrc%5Etfw&#34;&gt;@MoonbeamLevels&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw&#34;&gt;@LouvrierJulie&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SDM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SDM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/MachineLearning?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#MachineLearning&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/PointProcess?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#PointProcess&lt;/a&gt; &lt;a href=&#34;https://t.co/6xzAlARV9E&#34;&gt;pic.twitter.com/6xzAlARV9E&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1121084877225517057?ref_src=twsrc%5Etfw&#34;&gt;24 avri 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New preprint!</title>
+      <link>https://oliviergimenez.github.io/blog/newpreprint/</link>
+      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/newpreprint/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Check out our new preprint by awesome Anne-Sophie Bonnet-Lebrun &amp;quot;Identifying priority conservation areas for recovering large &lt;a href=&#34;https://twitter.com/hashtag/carnivores?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#carnivores&lt;/a&gt; using &lt;a href=&#34;https://twitter.com/hashtag/citizenscience?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#citizenscience&lt;/a&gt; data&amp;quot; w/ 🐟 point-process models to map 🇬🇷 🐻 distribution &lt;a href=&#34;https://t.co/CEUbVKuXRQ&#34;&gt;https://t.co/CEUbVKuXRQ&lt;/a&gt; starring &lt;a href=&#34;https://twitter.com/Arcturosgr?ref_src=twsrc%5Etfw&#34;&gt;@Arcturosgr&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MoonbeamLevels?ref_src=twsrc%5Etfw&#34;&gt;@MoonbeamLevels&lt;/a&gt; &lt;a href=&#34;https://t.co/fb9UAP3Aep&#34;&gt;pic.twitter.com/fb9UAP3Aep&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🚸 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1057018119829495808?ref_src=twsrc%5Etfw&#34;&gt;29 oct8&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Julie Louvrier submitted her PhD manuscript!</title>
+      <link>https://oliviergimenez.github.io/blog/phdjulie_delivered/</link>
+      <pubDate>Sun, 30 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/phdjulie_delivered/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🤩🍾🥳 Well done &lt;a href=&#34;https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw&#34;&gt;@LouvrierJulie&lt;/a&gt; - Impressiiiiiiiiiiiiive work! &lt;a href=&#34;https://t.co/wd99KZcYTy&#34;&gt;https://t.co/wd99KZcYTy&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🚸 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1046509884831924225?ref_src=twsrc%5Etfw&#34;&gt;30 septembre 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

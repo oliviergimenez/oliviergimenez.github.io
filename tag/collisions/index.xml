@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>collisions | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tag/collisions/</link>
+      <atom:link href="https://oliviergimenez.github.io/tag/collisions/index.xml" rel="self" type="application/rss+xml" />
+    <description>collisions</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sat, 12 Aug 2017 13:07:40 +0300</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>collisions</title>
+      <link>https://oliviergimenez.github.io/tag/collisions/</link>
+    </image>
+    
+    <item>
+      <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
+      <link>https://oliviergimenez.github.io/project/lynx/</link>
+      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
+      <guid>https://oliviergimenez.github.io/project/lynx/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

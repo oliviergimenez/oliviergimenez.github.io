@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>expertise | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tag/expertise/</link>
+      <atom:link href="https://oliviergimenez.github.io/tag/expertise/index.xml" rel="self" type="application/rss+xml" />
+    <description>expertise</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sat, 25 Mar 2017 12:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>expertise</title>
+      <link>https://oliviergimenez.github.io/tag/expertise/</link>
+    </image>
+    
+    <item>
+      <title>Expertise on wolf population dynamic in France</title>
+      <link>https://oliviergimenez.github.io/blog/wolf_expertise/</link>
+      <pubDate>Sat, 25 Mar 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/wolf_expertise/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/expert.jpg&#34;&gt;
+Our report (in French) on foresighting wolf population dynamic in France is available from 
+[here](https://t.co/a6ibQoF7Nr). My contribution was mostly based on 
+the work of my present or former students, including L. Marescot, J. Louvrier and S. Cubaynes.
+&lt;p&gt;Difficult exercise, partly because you constantly
+think of what people will retain from your writings.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

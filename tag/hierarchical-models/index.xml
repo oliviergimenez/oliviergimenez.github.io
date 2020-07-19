@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hierarchical models | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tag/hierarchical-models/</link>
+      <atom:link href="https://oliviergimenez.github.io/tag/hierarchical-models/index.xml" rel="self" type="application/rss+xml" />
+    <description>hierarchical models</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 28 Nov 2016 12:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>hierarchical models</title>
+      <link>https://oliviergimenez.github.io/tag/hierarchical-models/</link>
+    </image>
+    
+    <item>
+      <title>Workshop on issues in fitting hierarchical models in ecology</title>
+      <link>https://oliviergimenez.github.io/blog/working_group_hm/</link>
+      <pubDate>Mon, 28 Nov 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/working_group_hm/</guid>
+      <description>&lt;p&gt;Frederic Gosselin, Etienne Rivot and I organised a 2-day workshop on issues in
+fitting hierarchical models in ecology. I gave a talk on &amp;ldquo;Local minima and multistate
+capture-recapture models&amp;rdquo;, slides and R code available on
+
+&lt;a href=&#34;https://github.com/oliviergimenez/multistate_local_minima&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe src=&#34;https://widgets.figshare.com/articles/4833524/embed?show_title=1&#34; width=&#34;568&#34; height=&#34;351&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;The idea is to consider several problematic case studies and explore the issues using
+several computing platforms (R, Jags, Nimble, Stan, Admb). Next meeting in May.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
