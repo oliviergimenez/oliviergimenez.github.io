@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenBUGS | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/openbugs/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/openbugs/index.xml" rel="self" type="application/rss+xml" />
+    <description>OpenBUGS</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>OpenBUGS</title>
+      <link>https://oliviergimenez.github.io/tags/openbugs/</link>
+    </image>
+    
+    <item>
+      <title>Tutorial on fitting a system of Ordinary Differential Equations to time-series data using OpenBUGS</title>
+      <link>https://oliviergimenez.github.io/blog/fitodedata/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/fitodedata/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Just wrote a short &lt;a href=&#34;https://twitter.com/hashtag/tutorial?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tutorial&lt;/a&gt; on fitting a system of Ordinary Differential Equations to time-series data using &lt;a href=&#34;https://twitter.com/hashtag/OpenBUGS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#OpenBUGS&lt;/a&gt; in &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/7luj8XVgP6&#34;&gt;https://t.co/7luj8XVgP6&lt;/a&gt; - Data and model are from &lt;a href=&#34;https://t.co/X9CwX7dW83&#34;&gt;https://t.co/X9CwX7dW83&lt;/a&gt; in which &lt;a href=&#34;https://twitter.com/hashtag/zombie?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#zombie&lt;/a&gt; movies are used for illustration &lt;a href=&#34;https://twitter.com/hashtag/shaunofthedead?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#shaunofthedead&lt;/a&gt; &lt;a href=&#34;https://t.co/MHmiGhH7Ri&#34;&gt;pic.twitter.com/MHmiGhH7Ri&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1126568687396433920?ref_src=twsrc%5Etfw&#34;&gt;9 mai 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Running OpenBUGS in parallel</title>
+      <link>https://oliviergimenez.github.io/blog/run_openbugs_parallel/</link>
+      <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/run_openbugs_parallel/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;width:200px;margin-bottom:5px&#34; src=&#34;https://oliviergimenez.github.io/img/parcomp.jpg&#34;&gt; 
+Recently, I have been using `OpenBUGS` for some analyses that `JAGS` cannot do. However, `JAGS` can be run in parallel through [the `jagsUI` package](https://github.com/kenkellner/jagsUI), which can save you some precious time. So the question is how to run several chains in parallel with `OpenBUGS`. 
+&lt;p&gt;Well, first you&amp;rsquo;ll need to install &lt;code&gt;OpenBUGS&lt;/code&gt; (if you&amp;rsquo;re on a Mac, check out 
+&lt;a href=&#34;https://oliviergimenez.github.io/post/run_openbugs_on_mac/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this short tutorial&lt;/a&gt;). Then, you&amp;rsquo;ll need to run &lt;code&gt;OpenBUGS&lt;/code&gt; from &lt;code&gt;R&lt;/code&gt; through the pacage &lt;code&gt;R2OpenBUGS&lt;/code&gt;, which you can install via:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;if(!require(R2OpenBUGS)) install.packages(&amp;quot;R2OpenBUGS&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: R2OpenBUGS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;standard-analysis&#34;&gt;Standard analysis&lt;/h2&gt;
+&lt;p&gt;Now let&amp;rsquo;s run the classical &lt;code&gt;BUGS&lt;/code&gt; &lt;code&gt;school&lt;/code&gt; example:&lt;/p&gt;
+&lt;p&gt;Load the &lt;code&gt;OpenBUGS&lt;/code&gt; Package&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(R2OpenBUGS)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Load the data&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;data(schools)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define the model, write it to a text file and have a look&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;nummodel &amp;lt;- function(){
+for (j in 1:J){
+  y[j] ~ dnorm (theta[j], tau.y[j])
+  theta[j] ~ dnorm (mu.theta, tau.theta)
+  tau.y[j] &amp;lt;- pow(sigma.y[j], -2)}
+mu.theta ~ dnorm (0.0, 1.0E-6)
+tau.theta &amp;lt;- pow(sigma.theta, -2)
+sigma.theta ~ dunif (0, 1000)
+}
+write.model(nummodel, &amp;quot;nummodel.txt&amp;quot;)
+model.file1 = paste(getwd(),&amp;quot;nummodel.txt&amp;quot;, sep=&amp;quot;/&amp;quot;)
+file.show(&amp;quot;nummodel.txt&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Prepare the data for input into OpenBUGS&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;J &amp;lt;- nrow(schools)
+y &amp;lt;- schools$estimate
+sigma.y &amp;lt;- schools$sd
+data &amp;lt;- list (&amp;quot;J&amp;quot;, &amp;quot;y&amp;quot;, &amp;quot;sigma.y&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Initialization of variables&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;inits &amp;lt;- function(){
+  list(theta = rnorm(J, 0, 100), mu.theta = rnorm(1, 0, 100), sigma.theta = runif(1, 0, 100))}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Set the &lt;code&gt;Wine&lt;/code&gt; working directory and the directory to &lt;code&gt;OpenBUGS&lt;/code&gt;, and change the OpenBUGS.exe location as necessary:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;WINE=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/wine&amp;quot;
+WINEPATH=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/winepath&amp;quot;
+OpenBUGS.pgm=&amp;quot;/Applications/OpenBUGS323/OpenBUGS.exe&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The are the parameters to save&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;parameters = c(&amp;quot;theta&amp;quot;, &amp;quot;mu.theta&amp;quot;, &amp;quot;sigma.theta&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Run the model&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ptm &amp;lt;- proc.time()
+schools.sim &amp;lt;- bugs(data, inits, model.file = model.file1,parameters=parameters,n.chains = 2, n.iter = 500000, n.burnin = 10000, OpenBUGS.pgm=OpenBUGS.pgm, WINE=WINE, WINEPATH=WINEPATH,useWINE=T)
+elapsed_time &amp;lt;- proc.time() - ptm
+elapsed_time 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##  50.835   2.053  55.010
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;print(schools.sim)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Bugs model at &amp;quot;/Users/oliviergimenez/Desktop/nummodel.txt&amp;quot;, 
+## Current: 2 chains, each with 5e+05 iterations (first 10000 discarded)
+## Cumulative: n.sims = 980000 iterations saved
+##             mean  sd  2.5%  25%  50%  75% 97.5% Rhat  n.eff
+## theta[1]    11.6 8.4  -1.9  6.1 10.5 15.8  32.0    1 370000
+## theta[2]     8.0 6.4  -4.8  4.0  8.0 12.0  20.9    1  67000
+## theta[3]     6.4 7.8 -11.3  2.2  6.8 11.2  20.9    1  55000
+## theta[4]     7.7 6.6  -5.7  3.7  7.8 11.8  20.9    1  70000
+## theta[5]     5.5 6.5  -8.8  1.6  5.9  9.8  17.1    1  26000
+## theta[6]     6.2 6.9  -8.9  2.3  6.6 10.7  18.9    1  23000
+## theta[7]    10.7 6.9  -1.4  6.0 10.1 14.7  26.2    1 480000
+## theta[8]     8.7 7.9  -6.8  4.0  8.4 13.0  25.7    1  76000
+## mu.theta     8.1 5.3  -2.0  4.7  8.1 11.4  18.5    1  30000
+## sigma.theta  6.6 5.7   0.2  2.5  5.2  9.1  20.9    1  12000
+## deviance    60.5 2.2  57.0 59.1 60.1 61.4  66.0    1 980000
+## 
+## For each parameter, n.eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor (at convergence, Rhat=1).
+## 
+## DIC info (using the rule, pD = Dbar-Dhat)
+## pD = 2.8 and DIC = 63.2
+## DIC is an estimate of expected predictive error (lower deviance is better).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;parallel-computations&#34;&gt;Parallel computations&lt;/h2&gt;
+&lt;p&gt;To run several chains in parallel, we&amp;rsquo;ll follow the steps described in 
+&lt;a href=&#34;http://www.petrkeil.com/?p=63&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this nice post&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# loading packages
+library(snow)
+library(snowfall)
+
+# setting the number of CPUs to be 2
+sfInit(parallel=TRUE, cpus=2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in searchCommandline(parallel, cpus = cpus, type
+## = type, socketHosts = socketHosts, : Unknown option on
+## commandline: rmarkdown::render(&#39;/Users/oliviergimenez/Desktop/
+## run_openbugs_in_parallel.Rmd&#39;,~+~~+~encoding~+~
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## R Version:  R version 3.4.3 (2017-11-30)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## snowfall 1.84-6.1 initialized (using snow 0.4-2): parallel execution on 2 CPUs.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# and assigning the R2OpenBUGS library to each CPU
+sfLibrary(R2OpenBUGS)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Library R2OpenBUGS loaded.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Library R2OpenBUGS loaded in cluster.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# create list of data
+J &amp;lt;- nrow(schools)
+y &amp;lt;- schools$estimate
+sigma.y &amp;lt;- schools$sd
+x.data &amp;lt;- list (J=J, y=y, sigma.y=sigma.y)
+
+# creating separate directory for each CPU process
+folder1 &amp;lt;- paste(getwd(), &amp;quot;/chain1&amp;quot;, sep=&amp;quot;&amp;quot;)
+folder2 &amp;lt;- paste(getwd(), &amp;quot;/chain2&amp;quot;, sep=&amp;quot;&amp;quot;)
+dir.create(folder1); dir.create(folder2); 
+ 
+# sinking the model into a file in each directory
+for (folder in c(folder1, folder2))
+{
+  sink(paste(folder, &amp;quot;/nummodel.txt&amp;quot;, sep=&amp;quot;&amp;quot;))
+cat(&amp;quot;
+	model{
+for (j in 1:J){
+  y[j] ~ dnorm (theta[j], tau.y[j])
+  theta[j] ~ dnorm (mu.theta, tau.theta)
+  tau.y[j] &amp;lt;- pow(sigma.y[j], -2)}
+mu.theta ~ dnorm (0.0, 1.0E-6)
+tau.theta &amp;lt;- pow(sigma.theta, -2)
+sigma.theta ~ dunif (0, 1000)
+	}
+&amp;quot;)
+  sink()
+}
+ 
+# defining the function that will run MCMC on each CPU
+# Arguments:
+# chain - will be 1 or 2
+# x.data - the data list
+# params - parameters to be monitored
+parallel.bugs &amp;lt;- function(chain, x.data, params)
+{
+  # a. defining directory for each CPU
+  sub.folder &amp;lt;- paste(getwd(),&amp;quot;/chain&amp;quot;, chain, sep=&amp;quot;&amp;quot;)
+ 
+  # b. specifying the initial MCMC values
+  inits &amp;lt;- function()list(theta = rnorm(x.data$J, 0, 100), mu.theta = rnorm(1, 0, 100), sigma.theta = runif(1, 0, 100))
+ 
+  # c. calling OpenBugs
+  # (you may need to change the OpenBUGS.pgm directory)
+  # je suis sous Mac, je fais tourner OpenBUGS via Wine
+  bugs(data=x.data, inits=inits, parameters.to.save=params,
+             n.iter = 500000, n.burnin = 10000, n.chains=1,
+             model.file=&amp;quot;nummodel.txt&amp;quot;, debug=FALSE, codaPkg=TRUE,
+             useWINE=TRUE, OpenBUGS.pgm = &amp;quot;/Applications/OpenBUGS323/OpenBUGS.exe&amp;quot;,
+             working.directory = sub.folder,
+             WINE=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/wine&amp;quot;, 
+             WINEPATH=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/winepath&amp;quot;)
+}
+ 
+# setting the parameters to be monitored
+params &amp;lt;- c(&amp;quot;theta&amp;quot;, &amp;quot;mu.theta&amp;quot;, &amp;quot;sigma.theta&amp;quot;)
+ 
+# calling the sfLapply function that will run
+# parallel.bugs on each of the 2 CPUs
+ptm &amp;lt;- proc.time()
+sfLapply(1:2, fun=parallel.bugs, x.data=x.data, params=params)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [[1]]
+## [1] &amp;quot;/Users/oliviergimenez/Desktop/chain1/CODAchain1.txt&amp;quot;
+## 
+## [[2]]
+## [1] &amp;quot;/Users/oliviergimenez/Desktop/chain2/CODAchain1.txt&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;elapsed_time = proc.time() - ptm
+elapsed_time
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##   0.013   0.000  32.157
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# locating position of each CODA chain
+chain1 &amp;lt;- paste(folder1, &amp;quot;/CODAchain1.txt&amp;quot;, sep=&amp;quot;&amp;quot;)
+chain2 &amp;lt;- paste(folder2, &amp;quot;/CODAchain1.txt&amp;quot;, sep=&amp;quot;&amp;quot;)
+ 
+# and, finally, getting the results
+res &amp;lt;- read.bugs(c(chain1, chain2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Abstracting deviance ... 490000 valid values
+## Abstracting mu.theta ... 490000 valid values
+## Abstracting sigma.theta ... 490000 valid values
+## Abstracting theta[1] ... 490000 valid values
+## Abstracting theta[2] ... 490000 valid values
+## Abstracting theta[3] ... 490000 valid values
+## Abstracting theta[4] ... 490000 valid values
+## Abstracting theta[5] ... 490000 valid values
+## Abstracting theta[6] ... 490000 valid values
+## Abstracting theta[7] ... 490000 valid values
+## Abstracting theta[8] ... 490000 valid values
+## Abstracting deviance ... 490000 valid values
+## Abstracting mu.theta ... 490000 valid values
+## Abstracting sigma.theta ... 490000 valid values
+## Abstracting theta[1] ... 490000 valid values
+## Abstracting theta[2] ... 490000 valid values
+## Abstracting theta[3] ... 490000 valid values
+## Abstracting theta[4] ... 490000 valid values
+## Abstracting theta[5] ... 490000 valid values
+## Abstracting theta[6] ... 490000 valid values
+## Abstracting theta[7] ... 490000 valid values
+## Abstracting theta[8] ... 490000 valid values
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(res)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Iterations = 10001:5e+05
+## Thinning interval = 1 
+## Number of chains = 2 
+## Sample size per chain = 490000 
+## 
+## 1. Empirical mean and standard deviation for each variable,
+##    plus standard error of the mean:
+## 
+##               Mean    SD Naive SE Time-series SE
+## deviance    60.453 2.221 0.002243       0.005737
+## mu.theta     8.109 5.261 0.005315       0.020596
+## sigma.theta  6.610 5.682 0.005740       0.027336
+## theta[1]    11.697 8.407 0.008493       0.027974
+## theta[2]     8.023 6.395 0.006460       0.019264
+## theta[3]     6.365 7.866 0.007946       0.022485
+## theta[4]     7.735 6.601 0.006668       0.019766
+## theta[5]     5.467 6.504 0.006570       0.022580
+## theta[6]     6.234 6.885 0.006955       0.021332
+## theta[7]    10.727 6.891 0.006961       0.023304
+## theta[8]     8.648 7.892 0.007972       0.021541
+## 
+## 2. Quantiles for each variable:
+## 
+##                 2.5%    25%    50%    75% 97.5%
+## deviance     57.0200 59.120 60.040 61.430 65.99
+## mu.theta     -2.0600  4.784  8.066 11.410 18.50
+## sigma.theta   0.2275  2.456  5.275  9.190 20.82
+## theta[1]     -1.8850  6.195 10.560 15.880 32.04
+## theta[2]     -4.8350  4.049  8.004 11.980 20.96
+## theta[3]    -11.4800  2.194  6.871 11.170 20.90
+## theta[4]     -5.7500  3.711  7.784 11.820 20.92
+## theta[5]     -8.8490  1.603  5.938  9.834 17.14
+## theta[6]     -8.8940  2.255  6.632 10.680 18.95
+## theta[7]     -1.3450  6.125 10.140 14.680 26.27
+## theta[8]     -6.8910  4.037  8.409 12.960 25.72
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Run OpenBUGS on a Mac</title>
+      <link>https://oliviergimenez.github.io/blog/run_openbugs_on_mac/</link>
+      <pubDate>Sat, 13 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/run_openbugs_on_mac/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;width:200px;margin-bottom:5px&#34; src=&#34;https://oliviergimenez.github.io/img/bugs.jpg&#34;&gt; 
+I had to use the good old `OpenBUGS` for some analyses that cannot be done in `JAGS`. Below are the steps to install `OpenBUGS` then to run it from your Mac either natively or from `R`. This tutorial is an adaptation of [this post](https://sites.google.com/site/mmeclimate/-bayesmet/openbugs-on-mac-os-x) and [that one](http://www.davideagle.org/r-2/bayesian-modeling-using-winbugs-and-openbugs/running-openbugs-on-mac-using-wine). 
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;If not done already, install 
+&lt;a href=&#34;https://brew.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Homebrew&lt;/a&gt;. This program will make the installation of any other programs on your Mac so easy!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install 
+&lt;a href=&#34;https://www.winehq.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wine&lt;/a&gt; which will allow you to run any Windows programs (.exe) on your Mac. To do so, start by 
+&lt;a href=&#34;http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;opening Terminal&lt;/a&gt;, then type in the command: &lt;em&gt;brew install wine&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Next, download the Windows version of &lt;code&gt;OpenBUGS&lt;/code&gt; 
+&lt;a href=&#34;https://www.mrc-bsu.cam.ac.uk/training/short-courses/bayescourse/download/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To install &lt;code&gt;OpenBUGS&lt;/code&gt;, still in Terminal, go to the directory where the file was downloaded and type (you might need to unzip the file you downloaded first): &lt;em&gt;wine OpenBUGS323setup.exe&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;OpenBUGS&lt;/code&gt; is now installed and ready to be used! You can run it by first going to the directory where &lt;code&gt;OpenBUGS&lt;/code&gt; was installed. On my laptop, it can be achieved via the command: &lt;em&gt;cd /Applications/OpenBUGS323&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then, you just need to tye in the following command in the Terminal, and you should see an OpenBUGS windows poping up: &lt;em&gt;wine OpenBUGS&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now we would like to run &lt;code&gt;OpenBUGS&lt;/code&gt; from &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Install the package &lt;code&gt;R2OpenBUGS&lt;/code&gt; by typing in the &lt;code&gt;R&lt;/code&gt; console:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;if(!require(R2OpenBUGS)) install.packages(&amp;quot;R2OpenBUGS&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: R2OpenBUGS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Now let&amp;rsquo;s see whether everything works well by running the classical &lt;code&gt;BUGS&lt;/code&gt; &lt;code&gt;school&lt;/code&gt; example:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Load the &lt;code&gt;OpenBUGS&lt;/code&gt; Package&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(R2OpenBUGS)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Load the data&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;data(schools)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define the model, write it to a text file and have a look&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;nummodel &amp;lt;- function(){
+for (j in 1:J){
+  y[j] ~ dnorm (theta[j], tau.y[j])
+  theta[j] ~ dnorm (mu.theta, tau.theta)
+  tau.y[j] &amp;lt;- pow(sigma.y[j], -2)}
+mu.theta ~ dnorm (0.0, 1.0E-6)
+tau.theta &amp;lt;- pow(sigma.theta, -2)
+sigma.theta ~ dunif (0, 1000)
+}
+write.model(nummodel, &amp;quot;nummodel.txt&amp;quot;)
+model.file1 = paste(getwd(),&amp;quot;nummodel.txt&amp;quot;, sep=&amp;quot;/&amp;quot;)
+file.show(&amp;quot;nummodel.txt&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Prepare the data for input into OpenBUGS&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;J &amp;lt;- nrow(schools)
+y &amp;lt;- schools$estimate
+sigma.y &amp;lt;- schools$sd
+data &amp;lt;- list (&amp;quot;J&amp;quot;, &amp;quot;y&amp;quot;, &amp;quot;sigma.y&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Initialization of variables&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;inits &amp;lt;- function(){
+  list(theta = rnorm(J, 0, 100), mu.theta = rnorm(1, 0, 100), sigma.theta = runif(1, 0, 100))}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Set the &lt;code&gt;Wine&lt;/code&gt; working directory and the directory to &lt;code&gt;OpenBUGS&lt;/code&gt;, and change the OpenBUGS.exe location as necessary:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;WINE=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/wine&amp;quot;
+WINEPATH=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/winepath&amp;quot;
+OpenBUGS.pgm=&amp;quot;/Applications/OpenBUGS323/OpenBUGS.exe&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The are the parameters to save&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;parameters = c(&amp;quot;theta&amp;quot;, &amp;quot;mu.theta&amp;quot;, &amp;quot;sigma.theta&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Run the model&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;schools.sim &amp;lt;- bugs(data, inits, model.file = model.file1,parameters=parameters,n.chains = 3, n.iter = 1000, OpenBUGS.pgm=OpenBUGS.pgm, WINE=WINE, WINEPATH=WINEPATH,useWINE=T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; will pause. You might get a weird message starting by err:ole, just ignore it. When the run is complete, a prompt will reappear, then just type the following command to get the result:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;print(schools.sim)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Bugs model at &amp;quot;/Users/oliviergimenez/Desktop/nummodel.txt&amp;quot;, 
+## Current: 3 chains, each with 1000 iterations (first 500 discarded)
+## Cumulative: n.sims = 1500 iterations saved
+##             mean  sd 2.5%  25%  50%  75% 97.5% Rhat n.eff
+## theta[1]    12.2 7.9 -1.3  7.5 11.2 16.4  32.1  1.0    62
+## theta[2]     9.1 6.5 -4.0  5.1  9.4 13.2  21.4  1.0   150
+## theta[3]     7.8 7.7 -9.4  3.6  8.5 12.6  21.1  1.0   360
+## theta[4]     8.8 6.6 -4.5  4.5  9.2 13.3  20.4  1.0   110
+## theta[5]     6.8 6.9 -8.2  2.3  7.5 11.4  17.7  1.0   410
+## theta[6]     7.3 7.2 -8.6  2.7  8.2 11.8  18.9  1.0   190
+## theta[7]    11.5 6.4 -0.3  7.5 11.2 15.7  25.0  1.1    42
+## theta[8]     9.7 7.6 -4.7  5.1  9.6 14.4  25.1  1.0   130
+## mu.theta     9.2 5.2 -1.2  5.8  9.3 12.5  18.2  1.0    88
+## sigma.theta  5.9 5.6  0.2  1.7  4.4  8.5  20.2  1.1    51
+## deviance    60.7 2.2 57.2 59.2 60.1 61.9  65.6  1.0   120
+## 
+## For each parameter, n.eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor (at convergence, Rhat=1).
+## 
+## DIC info (using the rule, pD = Dbar-Dhat)
+## pD = 2.8 and DIC = 63.4
+## DIC is an estimate of expected predictive error (lower deviance is better).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When run natively, &lt;code&gt;WinBUGS&lt;/code&gt; and &lt;code&gt;OpenBUGS&lt;/code&gt; have nice debugging capabilities; also, you can see what is going on, I mean the program reading the data, generating inits, and so on. To get the &lt;code&gt;OpenBUGS&lt;/code&gt; window with a bunch of useful info, just add &lt;code&gt;debug=T&lt;/code&gt; to the call of the &lt;code&gt;bugs&lt;/code&gt; function, and re-run the model&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;schools.sim &amp;lt;- bugs(data, inits, model.file = model.file1,parameters=parameters,n.chains = 3, n.iter = 1000, OpenBUGS.pgm=OpenBUGS.pgm, WINE=WINE, WINEPATH=WINEPATH,useWINE=T,debug=T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## arguments &#39;show.output.on.console&#39;, &#39;minimized&#39; and &#39;invisible&#39; are for Windows only
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You will have to close the &lt;code&gt;OpenBUGS&lt;/code&gt; window to get the prompt back.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

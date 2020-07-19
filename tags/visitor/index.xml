@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>visitor | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/visitor/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/visitor/index.xml" rel="self" type="application/rss+xml" />
+    <description>visitor</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sun, 01 Jan 2017 12:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>visitor</title>
+      <link>https://oliviergimenez.github.io/tags/visitor/</link>
+    </image>
+    
+    <item>
+      <title>Another visit of Ian Renner</title>
+      <link>https://oliviergimenez.github.io/blog/ian_visit2/</link>
+      <pubDate>Sun, 01 Jan 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/ian_visit2/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://www.newcastle.edu.au/profile/ian-renner&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ian Renner&lt;/a&gt; from the University of
+Newcastle in Australia, who visited us back in 2015, is with us again for a short 3-week
+visit.&lt;/p&gt;
+&lt;p&gt;We resumed the work we started one year ago on developing a method to combine
+sources of information on species distribution. We also started a new project on model
+selection in occupancy and capture-recapture models using the LASSO.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Another visit of Raluca Bancila</title>
+      <link>https://oliviergimenez.github.io/blog/raluca_visit2/</link>
+      <pubDate>Sat, 01 Oct 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/raluca_visit2/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://www.researchgate.net/profile/Raluca_Bancila&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Raluca Bancila&lt;/a&gt;, who visited us
+back in 2015, is with us again for a short 2-week visit. We will resume a project we
+started one year ago on the evaluation of demographic parameters of two related species
+of spadefoot toads (Pelobates syriacus and P. fuscus) from the 
+&lt;a href=&#34;http://whc.unesco.org/en/list/588&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Danube Delta
+Biosphere Reserve&lt;/a&gt;, Romania, using capture-recapture models.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Laura Cowen&#39;s sabbatical</title>
+      <link>https://oliviergimenez.github.io/blog/laura_cowen/</link>
+      <pubDate>Thu, 01 Sep 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/laura_cowen/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;http://www.math.uvic.ca/~lcowen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Laura Cowen&lt;/a&gt; from the Department of Math and Stat
+at University of Victoria (Canada) will be on a sabbatical with us for 3 months.
+We will be working on the applications of hidden Markov models to capture-recapture data.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ian Renner&#39;s visit</title>
+      <link>https://oliviergimenez.github.io/blog/ian_first_visit/</link>
+      <pubDate>Mon, 26 Oct 2015 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/ian_first_visit/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.newcastle.edu.au/profile/ian-renner&#34; target=&#34;_blank&#34;&gt;Ian Renner&lt;/a&gt; from
+the University of Newcastle in Australia spent some time with us while on a sabbatical.
+We worked together on developing a method to combine sources of information on species
+distribution. Ian brought his sound expertise on the Lasso for covariate selection and
+point processes that provide a nice integrated framework. It was fun to program in R
+in parallel. I wish I could do that more often. We even managed (credit goes to Ian)
+to present something at the
+International Statistical Ecology Conference.&lt;/p&gt;
+&lt;iframe src=&#34;https://widgets.figshare.com/articles/4833098/embed?show_title=1&#34; width=&#34;568&#34; height=&#34;351&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;On a personal side, Ian has
+become a friend, his kindness and interest in other people are amazing.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Raluca Bancila&#39;s visit</title>
+      <link>https://oliviergimenez.github.io/blog/raluca_visit1/</link>
+      <pubDate>Thu, 01 Oct 2015 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/raluca_visit1/</guid>
+      <description>&lt;p&gt;I had the visit of  &lt;a href=&#34;https://www.researchgate.net/profile/Raluca_Bancila&#34; target=&#34;_blank&#34;&gt;Raluca
+Bancila&lt;/a&gt; a research scientist from Romania. We investigated spatio-temporal environmental variation
+in and individual heterogeneity on emigration/immigration rates of the
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Troglofauna&#34; target=&#34;_blank&#34;&gt;troglophile harvestmen
+species&lt;/a&gt; Paranemastoma silli with capture-recapture models. We used two P. silli populations
+inhabiting two caves, Closani and Lazului Caves, located in the Mehedinti Mountains in southwestern
+Romania. Yes, we do not only work on big emblematic mammal species ;-)
+On a personal side, Raluca is always smiling and laughing – ‘la banane’ like we say in French,
+it was so good to have her in the team. I’m looking forward to hosting her again!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Visitors from Berlin</title>
+      <link>https://oliviergimenez.github.io/blog/visit_from_izw/</link>
+      <pubDate>Wed, 01 Jul 2015 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/visit_from_izw/</guid>
+      <description>&lt;p&gt;I had the visit of Sarah Benhaim and Lucile Marescot (a former PhD student of mine),
+both post-doc at the Leibniz Institute in Berlin supervised
+by &lt;a href=&#34;http://www.izw-berlin.de/kramer-schadt-stefanie.html&#34; target=&#34;_blank&#34;&gt;Stephanie
+Kramer-Schadt&lt;/a&gt;. It was an exciting week that we spent discussing and analyzing
+data on the spotted hyenas from the Serengeti National Park with questions at the
+interface of demography, sociality and epidemiology. This is joint work with Heribert
+Hofer and Marion East.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nina Santostasi&#39;s visit</title>
+      <link>https://oliviergimenez.github.io/blog/nina_visit/</link>
+      <pubDate>Tue, 07 Apr 2015 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/nina_visit/</guid>
+      <description>&lt;p&gt;I had the visit of Nina Santostasi from Italy to work for a few days on the estimation
+of striped dolphin abundance in the gulf of Corinth (in Greece). Nina is working with
+Giovanni Bearzi and Silvia Bonizzoni from the &lt;a href=&#34;http://www.dolphinbiology.org/about.htm&#34; target=&#34;_blank&#34;&gt;NGO
+Dolphin Biology&lt;/a&gt; and Conservation. Hopefully our collaboration will provide elements
+for the conservation of the species.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Jim Sedinger&#39;s sabbatical</title>
+      <link>https://oliviergimenez.github.io/blog/jim_sedinger/</link>
+      <pubDate>Tue, 16 Dec 2014 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/jim_sedinger/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.ag.unr.edu/sedinger/&#34; target=&#34;_blank&#34;&gt;Jim Sedinger&lt;/a&gt;, professor
+at the University of Nevada (Reno), said goodbye to the team after 3 months with us
+on a sabbatical. It’s been great to have Jim here analyzing data collected as part
+of the amazing Black Brant monitoring initiated in the 40s. More soon on our joint
+project on senescence and individual heterogeneity.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Economy and large carnivores</title>
+      <link>https://oliviergimenez.github.io/blog/economy_wolf/</link>
+      <pubDate>Wed, 25 Jun 2014 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/economy_wolf/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.uwyo.edu/agecon/about%20us/facultystaff/faculty%20pages/benjamin%20rashford.html&#34; target=&#34;_blank&#34;&gt;Ben
+Rashford&lt;/a&gt; and &lt;a href=&#34;http://www.uwyo.edu/agecon/about%20us/facultystaff/faculty%20pages/thomas%20foulke.html&#34; 
+target=&#34;_blank&#34;&gt;Thomas Foulke&lt;/a&gt; from the University of Wyoming visited us. They gave a great
+talk on &amp;ldquo;Wolf Re-Introduction in the Northern Rockies, USA: From Population and Predation
+Trends to Policy and Economics&amp;rdquo;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bye bye Lise and Dave</title>
+      <link>https://oliviergimenez.github.io/blog/lise_dave/</link>
+      <pubDate>Thu, 10 Apr 2014 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/lise_dave/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.cnr.usu.edu/htm/facstaff/koons-page&#34; target=&#34;_blank&#34;&gt;Dave&lt;/a&gt;
+and &lt;a href=&#34;http://liseaubry.webs.com/&#34; target=&#34;_blank&#34;&gt;Lise &lt;/a&gt;are going
+back home to the US after a 6-month sabbatical with us. It&amp;rsquo;s been awesome to
+have you here!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>monitoring | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/monitoring/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <description>monitoring</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sat, 12 Aug 2017 13:07:40 +0300</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>monitoring</title>
+      <link>https://oliviergimenez.github.io/tags/monitoring/</link>
+    </image>
+    
+    <item>
+      <title>Large carnivores monitoring</title>
+      <link>https://oliviergimenez.github.io/project/carnivores/</link>
+      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
+      <guid>https://oliviergimenez.github.io/project/carnivores/</guid>
+      <description>&lt;p&gt;Large carnivores are difficult to monitor in the field: they are elusive and live at low densities over wide areas. With their recent recovery in Europe,
+large carnivores are having increasing interactions with human activities. We contribute to the estimation of their abundance and distribution by applying
+and developing methods that make optimal use of available data. We are also working on applying science-based management using the structured
+decision making
+framework.&lt;/p&gt;
+&lt;p&gt;Ongoing projects are mostly led by 
+&lt;a href=&#34;https://oliviergimenez.github.io/#current&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Master students, PhDs and post-docs&lt;/a&gt;: Julie Louvrier worked on tools to infer the
+distribution of large carnivores in France and Norway; Loreleï Guéry in her post-doc studied population dynamics of lynx in Switzerland using
+spatially-explicit closed and open capture-recapture models; Vincenzo Gervasi&amp;rsquo;s post-doc aimed at assessing the
+determinants of conflicts on large carnivores in Europe and build trans-boundary management tools for wolves (France-Italy) and wolverines (Sweden-Norway); Nina Santostasi in her PhD is developing
+demographic models for studying hybridizing species, with wolves in Italy as as case study; Lorena Mansilla in her PhD is developing capture-recapture models to assess the population dynamics of social species; Sarah Bauduin&amp;rsquo;s post-doc aims at developing a spatially-explicit agent-based model and software program for assessing lynx viability in France; Lucile Marescot&amp;rsquo;s post-doc aims at developing multispecies occupancy models for large carnivores and their preys.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

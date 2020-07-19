@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>multievent | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/multievent/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/multievent/index.xml" rel="self" type="application/rss+xml" />
+    <description>multievent</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Fri, 20 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>multievent</title>
+      <link>https://oliviergimenez.github.io/tags/multievent/</link>
+    </image>
+    
+    <item>
+      <title>Nimble and HMM</title>
+      <link>https://oliviergimenez.github.io/blog/nimblehmm/</link>
+      <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/nimblehmm/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Playing around w/ awesome &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; to fit multievent &lt;a href=&#34;https://twitter.com/hashtag/HMM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMM&lt;/a&gt; capture-recapture models to data - Code and data here &lt;a href=&#34;https://t.co/2oHvsplahv&#34;&gt;https://t.co/2oHvsplahv&lt;/a&gt; Comments welcome 🤗 &lt;a href=&#34;https://t.co/tA89r80YYV&#34;&gt;pic.twitter.com/tA89r80YYV&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1207959690744881152?ref_src=twsrc%5Etfw&#34;&gt;December 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>New paper!</title>
+      <link>https://oliviergimenez.github.io/blog/sarahlulu_paper/</link>
+      <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/sarahlulu_paper/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New paper by &lt;a href=&#34;https://twitter.com/hashtag/SarahBenhaiem?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SarahBenhaiem&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/LMarescot?ref_src=twsrc%5Etfw&#34;&gt;@LMarescot&lt;/a&gt; 🤩👏 &amp;quot;Robustness of Eco-Epidemiological Capture-Recapture Parameter Estimates to Variation in Infection State Uncertainty&amp;quot; &lt;a href=&#34;https://t.co/ZvNghUHUUY&#34;&gt;https://t.co/ZvNghUHUUY&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HMM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/multievent?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#multievent&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/TMB?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TMB&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#WomenInSTEM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/carnivorepapersbywomen?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#carnivorepapersbywomen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/heynas?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#heynas&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/serengeti?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#serengeti&lt;/a&gt; &lt;a href=&#34;https://t.co/VT6iStk5UW&#34;&gt;pic.twitter.com/VT6iStk5UW&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1034490461304619010?ref_src=twsrc%5Etfw&#34;&gt;28 août 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fitting HMM/multievent capture-recapture models with TMB</title>
+      <link>https://oliviergimenez.github.io/blog/multievent_in_tmb/</link>
+      <pubDate>Mon, 21 Aug 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/multievent_in_tmb/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/tmb.png&#34;&gt;
+Following my attempts to fit a HMM model to [capture-recapture data with Rcpp](http://localhost:1313/post/multievent_in_rcpp/) and to [occupancy data with ADMB](http://localhost:1313/post/occupancy_in_admb/), a few colleagues suggested TMB as a potential alternative for several reasons (fast, allows for parallel computations, works with R, accomodates spatial stuff, easy implementation of random effects, and probably other reasons that I don&#39;t know).
+&lt;p&gt;I found materials on the internet to teach myself TMB, at least what I needed to implement a simple HMM model. See 
+&lt;a href=&#34;http://seananderson.ca/2014/10/17/tmb.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for a linear regression and a Gompertz state space model examples, 
+&lt;a href=&#34;https://www.youtube.com/watch?v=A5CLrhzNzVU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for the same linear regression example on Youtube (that&amp;rsquo;s awesome!) and many other examples 
+&lt;a href=&#34;http://kaskr.github.io/adcomp/examples.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. However, I got stuck and posted my desperate request for help on the 
+&lt;a href=&#34;https://groups.google.com/forum/#!forum/tmb-users&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TMB forum&lt;/a&gt;. Guess what, I got an answer less than a few hours after - thank you Mollie Brooks!&lt;/p&gt;
+&lt;p&gt;The R code is available on my GitHub 
+&lt;a href=&#34;https://github.com/oliviergimenez/hmm_tmb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Minimizing the deviance coded with TMB was&amp;hellip; wait for it&amp;hellip; &amp;gt; 300 times faster than using the deviance coded in standard R.&lt;/p&gt;
+&lt;p&gt;Hope this is useful.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fitting multievent capture-recapture models with Rcpp</title>
+      <link>https://oliviergimenez.github.io/blog/multievent_in_rcpp/</link>
+      <pubDate>Fri, 11 Aug 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/multievent_in_rcpp/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/seamless.png&#34;&gt;
+Following my previous post on [using ADMB to fit hidden Markov models](https://oliviergimenez.github.io/post/occupancy_in_admb/), I took some time to learn how to use Rcpp ([Eddelbuettel &amp; Francois 2011](https://www.jstatsoft.org/article/view/v040i08); [Eddelbuettel 2013](http://www.springer.com/us/book/9781461468677)), a package that gives friendly access to the power of C++ and increase the speed of your R programs. Kudos to Dirk Eddelbuettel, Romain Francois and their colleagues, Rcpp is awesome! 
+&lt;p&gt;I started with the excellent 
+&lt;a href=&#34;http://adv-r.had.co.nz/Rcpp.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rcpp chapter&lt;/a&gt; in the 
+&lt;a href=&#34;http://adv-r.had.co.nz/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Advanced R&lt;/a&gt; book by Hadley Wickham which I complemented with the various 
+&lt;a href=&#34;https://cran.r-project.org/web/packages/Rcpp/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vignettes&lt;/a&gt; that come with the package. As always, I googled the problems I had and often ended up finding the solution on 
+&lt;a href=&#34;https://stackoverflow.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stackoverflow&lt;/a&gt;. The 
+&lt;a href=&#34;http://lists.r-forge.r-project.org/mailman/listinfo/rcpp-devel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rcpp-devel discussion list&lt;/a&gt; is the place where questions should be asked about Rcpp.&lt;/p&gt;
+&lt;p&gt;My objective was to implement the likelihood of a relatively simple multievent capture-recapture model (
+&lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/j.1541-0420.2005.00318.x/abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pradel 2005&lt;/a&gt;) with Rcpp. I recycled some R code I had and a dataset on shearwaters I used in a paper (
+&lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-pubs/Gimenezetal2012TPB.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gimenez et al. 2012&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The R code is available on my GitHub 
+&lt;a href=&#34;https://github.com/oliviergimenez/multieventRcpp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. To run it, you just need to type Rcpp::sourceCpp(&amp;lsquo;multi event.cpp&amp;rsquo;) in the console. I&amp;rsquo;m convinced that the code can be improved, but this simple exercise showed that minimizing the deviance coded with Rcpp and calculating the Hessian was 10 times faster than using the deviance coded in standard R.&lt;/p&gt;
+&lt;p&gt;Next steps will be to go for RcppArmadillo for matrix computations and RcppNumerical for optimisation (and numerical integration for random effects).&lt;/p&gt;
+&lt;p&gt;Hope this is useful.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Following an advice from Romain Francois and Dirk Eddelbuettel (the Rcpp gurus), I have switched to 
+&lt;a href=&#34;https://cran.r-project.org/web/packages/RcppArmadillo/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RcppArmadillo&lt;/a&gt; to rely on the code developed by professionals and decades of testing. Now the RcppArmadillo code is 50 times faster than basic R! The code is available on 
+&lt;a href=&#34;https://github.com/oliviergimenez/multieventRcpp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my GitHub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/r/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <description>R</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/sharon-mccutcheon-62vi3TG5EDg-unsplash_small.jpg</url>
+      <title>R</title>
+      <link>https://oliviergimenez.github.io/tags/r/</link>
+    </image>
+    
+    <item>
+      <title>Introduction to spatial analyses in R</title>
+      <link>https://oliviergimenez.github.io/blog/intro_spatial/</link>
+      <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/intro_spatial/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;👩
+💻🗺️👨
+💻 The slides of my introduction to &lt;a href=&#34;https://twitter.com/hashtag/GIS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GIS&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/hashtag/mapping?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#mapping&lt;/a&gt; in &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; using the &lt;a href=&#34;https://twitter.com/hashtag/sf?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#sf&lt;/a&gt; 📦 and brown 🐻 distribution in the &lt;a href=&#34;https://twitter.com/hashtag/pyrenees?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#pyrenees&lt;/a&gt; as a case study &lt;a href=&#34;https://t.co/SKQOCzbxHn&#34;&gt;https://t.co/SKQOCzbxHn&lt;/a&gt; - raw material on &lt;a href=&#34;https://twitter.com/hashtag/github?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#github&lt;/a&gt; &lt;a href=&#34;https://t.co/dHoMz6I2Kp&#34;&gt;https://t.co/dHoMz6I2Kp&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rspatial?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rspatial&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/spatial?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatial&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ggplot2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ggplot2&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/dataviz?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#dataviz&lt;/a&gt; &lt;a href=&#34;https://t.co/22eD1Y55d3&#34;&gt;pic.twitter.com/22eD1Y55d3&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1093882504560414721?ref_src=twsrc%5Etfw&#34;&gt;8 février 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script asyncc=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Procrastination...</title>
+      <link>https://oliviergimenez.github.io/blog/procrastination/</link>
+      <pubDate>Wed, 06 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/procrastination/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Procrastination at its highest level 😜 My first attempt to design hex stickers for our &lt;a href=&#34;https://twitter.com/hashtag/R2ucare?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#R2ucare&lt;/a&gt; 📦 &lt;a href=&#34;https://t.co/ZbclwJKB5W&#34;&gt;https://t.co/ZbclwJKB5W&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; code on &lt;a href=&#34;https://twitter.com/hashtag/github?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#github&lt;/a&gt; &lt;a href=&#34;https://t.co/TbEgjQf7iC&#34;&gt;https://t.co/TbEgjQf7iC&lt;/a&gt; Comments more than welcome 😁 &lt;a href=&#34;https://t.co/vVdVnJ9B79&#34;&gt;pic.twitter.com/vVdVnJ9B79&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1093076050656063488?ref_src=twsrc%5Etfw&#34;&gt;6 février 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;sync src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introduction to the Tidyverse</title>
+      <link>https://oliviergimenez.github.io/blog/intro_tidyverse/</link>
+      <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/intro_tidyverse/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;My introduction to the &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt; for our lab meeting to manipulate and visualise data in &lt;a href=&#34;https://twitter.com/hashtag/rstat?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstat&lt;/a&gt; &lt;a href=&#34;https://t.co/As9bkXY9GZ&#34;&gt;https://t.co/As9bkXY9GZ&lt;/a&gt;. Feel free to steal and modify this material for your own use. Be advised, this is work in progress &amp;amp; a mix of 🇬🇧/🇫🇷😋 Comments welcome! &lt;a href=&#34;https://twitter.com/hashtag/datascience?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#datascience&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/davaviz?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#davaviz&lt;/a&gt; &lt;a href=&#34;https://t.co/2vrrdbzuWh&#34;&gt;pic.twitter.com/2vrrdbzuWh&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1085492126404751360?ref_src=twsrc%5Etfw&#34;&gt;16 janvier 2019&lt;/a&gt;&lt;/blockote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New paper!</title>
+      <link>https://oliviergimenez.github.io/blog/articlenina/</link>
+      <pubDate>Fri, 09 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/articlenina/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🐬🇬🇷🇮🇹🇫🇷 New paper by &lt;a href=&#34;https://twitter.com/NSantostasi?ref_src=twsrc%5Etfw&#34;&gt;@NSantostasi&lt;/a&gt; &lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw&#34;&gt;@CNRS_OccitaniE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/IsiteMUSE?ref_src=twsrc%5Etfw&#34;&gt;@IsiteMUSE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/umontpellier?ref_src=twsrc%5Etfw&#34;&gt;@umontpellier&lt;/a&gt; 🤩👏 &lt;a href=&#34;https://t.co/6vQ6d9HevV&#34;&gt;https://t.co/6vQ6d9HevV&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 💤 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1060966359348269058?ref_src=twsrc%5Etfw&#34;&gt;9 novembre 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Workshop on spatio-temporal models with INLA</title>
+      <link>https://oliviergimenez.github.io/blog/inla_workshop/</link>
+      <pubDate>Tue, 06 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/inla_workshop/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/INLA?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#INLA&lt;/a&gt; workshop on spatio-temporal models in the beautiful city of &lt;a href=&#34;https://twitter.com/hashtag/Avignon?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Avignon&lt;/a&gt; 🤩 &lt;a href=&#34;https://twitter.com/hashtag/RESSTE?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RESSTE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/GdREcoStat?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GdREcoStat&lt;/a&gt; &lt;a href=&#34;https://twitter.com/oksanagrente?ref_src=twsrc%5Etfw&#34;&gt;@oksanagrente&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CREEM_cake?ref_src=twsrc%5Etfw&#34;&gt;@CREEM_cake&lt;/a&gt; &lt;a href=&#34;https://t.co/nuLhIkMiwO&#34;&gt;pic.twitter.com/nuLhIkMiwO&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 💤 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1060085610793394177?ref_src=twsrc%5Etfw&#34;&gt;718&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Crash course on individual-based models using NetLogoR</title>
+      <link>https://oliviergimenez.github.io/blog/crashcourse_netlogor/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/crashcourse_netlogor/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The famous &lt;a href=&#34;https://twitter.com/hashtag/NetLogo?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#NetLogo&lt;/a&gt; butterfly example coded in &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; w/ &lt;a href=&#34;https://twitter.com/hashtag/NetLogoR?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#NetLogoR&lt;/a&gt; &lt;a href=&#34;https://t.co/VbUUa5vIep&#34;&gt;pic.twitter.com/VbUUa5vIep&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🚸 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1059445943689510913?ref_src=twsrc%5Etfw&#34;&gt;5 novembre 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Wolf model from Marucco &amp;amp; &lt;a href=&#34;https://twitter.com/eliotmcintire?ref_src=twsrc%5Etfw&#34;&gt;@eliotmcintire&lt;/a&gt; coded in &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; w/ &lt;a href=&#34;https://twitter.com/hashtag/NetLogoR?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#NetLogoR&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/hashtag/SpaDES?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SpaDES&lt;/a&gt; &lt;a href=&#34;https://t.co/ERx71CIgZv&#34;&gt;https://t.co/ERx71CIgZv&lt;/a&gt; &lt;a href=&#34;https://t.co/f0YTHuKGSS&#34;&gt;pic.twitter.com/f0YTHuKGSS&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🚸 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1059450575660687361?ref_src=twsrc%5Etfw&#34;&gt;5 novembre 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Running OpenBUGS in parallel</title>
+      <link>https://oliviergimenez.github.io/blog/run_openbugs_parallel/</link>
+      <pubDate>Sun, 14 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/run_openbugs_parallel/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;width:200px;margin-bottom:5px&#34; src=&#34;https://oliviergimenez.github.io/img/parcomp.jpg&#34;&gt; 
+Recently, I have been using `OpenBUGS` for some analyses that `JAGS` cannot do. However, `JAGS` can be run in parallel through [the `jagsUI` package](https://github.com/kenkellner/jagsUI), which can save you some precious time. So the question is how to run several chains in parallel with `OpenBUGS`. 
+&lt;p&gt;Well, first you&amp;rsquo;ll need to install &lt;code&gt;OpenBUGS&lt;/code&gt; (if you&amp;rsquo;re on a Mac, check out 
+&lt;a href=&#34;https://oliviergimenez.github.io/post/run_openbugs_on_mac/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this short tutorial&lt;/a&gt;). Then, you&amp;rsquo;ll need to run &lt;code&gt;OpenBUGS&lt;/code&gt; from &lt;code&gt;R&lt;/code&gt; through the pacage &lt;code&gt;R2OpenBUGS&lt;/code&gt;, which you can install via:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;if(!require(R2OpenBUGS)) install.packages(&amp;quot;R2OpenBUGS&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: R2OpenBUGS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;standard-analysis&#34;&gt;Standard analysis&lt;/h2&gt;
+&lt;p&gt;Now let&amp;rsquo;s run the classical &lt;code&gt;BUGS&lt;/code&gt; &lt;code&gt;school&lt;/code&gt; example:&lt;/p&gt;
+&lt;p&gt;Load the &lt;code&gt;OpenBUGS&lt;/code&gt; Package&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(R2OpenBUGS)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Load the data&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;data(schools)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define the model, write it to a text file and have a look&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;nummodel &amp;lt;- function(){
+for (j in 1:J){
+  y[j] ~ dnorm (theta[j], tau.y[j])
+  theta[j] ~ dnorm (mu.theta, tau.theta)
+  tau.y[j] &amp;lt;- pow(sigma.y[j], -2)}
+mu.theta ~ dnorm (0.0, 1.0E-6)
+tau.theta &amp;lt;- pow(sigma.theta, -2)
+sigma.theta ~ dunif (0, 1000)
+}
+write.model(nummodel, &amp;quot;nummodel.txt&amp;quot;)
+model.file1 = paste(getwd(),&amp;quot;nummodel.txt&amp;quot;, sep=&amp;quot;/&amp;quot;)
+file.show(&amp;quot;nummodel.txt&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Prepare the data for input into OpenBUGS&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;J &amp;lt;- nrow(schools)
+y &amp;lt;- schools$estimate
+sigma.y &amp;lt;- schools$sd
+data &amp;lt;- list (&amp;quot;J&amp;quot;, &amp;quot;y&amp;quot;, &amp;quot;sigma.y&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Initialization of variables&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;inits &amp;lt;- function(){
+  list(theta = rnorm(J, 0, 100), mu.theta = rnorm(1, 0, 100), sigma.theta = runif(1, 0, 100))}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Set the &lt;code&gt;Wine&lt;/code&gt; working directory and the directory to &lt;code&gt;OpenBUGS&lt;/code&gt;, and change the OpenBUGS.exe location as necessary:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;WINE=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/wine&amp;quot;
+WINEPATH=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/winepath&amp;quot;
+OpenBUGS.pgm=&amp;quot;/Applications/OpenBUGS323/OpenBUGS.exe&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The are the parameters to save&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;parameters = c(&amp;quot;theta&amp;quot;, &amp;quot;mu.theta&amp;quot;, &amp;quot;sigma.theta&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Run the model&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ptm &amp;lt;- proc.time()
+schools.sim &amp;lt;- bugs(data, inits, model.file = model.file1,parameters=parameters,n.chains = 2, n.iter = 500000, n.burnin = 10000, OpenBUGS.pgm=OpenBUGS.pgm, WINE=WINE, WINEPATH=WINEPATH,useWINE=T)
+elapsed_time &amp;lt;- proc.time() - ptm
+elapsed_time 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##  50.835   2.053  55.010
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;print(schools.sim)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Bugs model at &amp;quot;/Users/oliviergimenez/Desktop/nummodel.txt&amp;quot;, 
+## Current: 2 chains, each with 5e+05 iterations (first 10000 discarded)
+## Cumulative: n.sims = 980000 iterations saved
+##             mean  sd  2.5%  25%  50%  75% 97.5% Rhat  n.eff
+## theta[1]    11.6 8.4  -1.9  6.1 10.5 15.8  32.0    1 370000
+## theta[2]     8.0 6.4  -4.8  4.0  8.0 12.0  20.9    1  67000
+## theta[3]     6.4 7.8 -11.3  2.2  6.8 11.2  20.9    1  55000
+## theta[4]     7.7 6.6  -5.7  3.7  7.8 11.8  20.9    1  70000
+## theta[5]     5.5 6.5  -8.8  1.6  5.9  9.8  17.1    1  26000
+## theta[6]     6.2 6.9  -8.9  2.3  6.6 10.7  18.9    1  23000
+## theta[7]    10.7 6.9  -1.4  6.0 10.1 14.7  26.2    1 480000
+## theta[8]     8.7 7.9  -6.8  4.0  8.4 13.0  25.7    1  76000
+## mu.theta     8.1 5.3  -2.0  4.7  8.1 11.4  18.5    1  30000
+## sigma.theta  6.6 5.7   0.2  2.5  5.2  9.1  20.9    1  12000
+## deviance    60.5 2.2  57.0 59.1 60.1 61.4  66.0    1 980000
+## 
+## For each parameter, n.eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor (at convergence, Rhat=1).
+## 
+## DIC info (using the rule, pD = Dbar-Dhat)
+## pD = 2.8 and DIC = 63.2
+## DIC is an estimate of expected predictive error (lower deviance is better).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;parallel-computations&#34;&gt;Parallel computations&lt;/h2&gt;
+&lt;p&gt;To run several chains in parallel, we&amp;rsquo;ll follow the steps described in 
+&lt;a href=&#34;http://www.petrkeil.com/?p=63&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this nice post&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# loading packages
+library(snow)
+library(snowfall)
+
+# setting the number of CPUs to be 2
+sfInit(parallel=TRUE, cpus=2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in searchCommandline(parallel, cpus = cpus, type
+## = type, socketHosts = socketHosts, : Unknown option on
+## commandline: rmarkdown::render(&#39;/Users/oliviergimenez/Desktop/
+## run_openbugs_in_parallel.Rmd&#39;,~+~~+~encoding~+~
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## R Version:  R version 3.4.3 (2017-11-30)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## snowfall 1.84-6.1 initialized (using snow 0.4-2): parallel execution on 2 CPUs.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# and assigning the R2OpenBUGS library to each CPU
+sfLibrary(R2OpenBUGS)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Library R2OpenBUGS loaded.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Library R2OpenBUGS loaded in cluster.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# create list of data
+J &amp;lt;- nrow(schools)
+y &amp;lt;- schools$estimate
+sigma.y &amp;lt;- schools$sd
+x.data &amp;lt;- list (J=J, y=y, sigma.y=sigma.y)
+
+# creating separate directory for each CPU process
+folder1 &amp;lt;- paste(getwd(), &amp;quot;/chain1&amp;quot;, sep=&amp;quot;&amp;quot;)
+folder2 &amp;lt;- paste(getwd(), &amp;quot;/chain2&amp;quot;, sep=&amp;quot;&amp;quot;)
+dir.create(folder1); dir.create(folder2); 
+ 
+# sinking the model into a file in each directory
+for (folder in c(folder1, folder2))
+{
+  sink(paste(folder, &amp;quot;/nummodel.txt&amp;quot;, sep=&amp;quot;&amp;quot;))
+cat(&amp;quot;
+	model{
+for (j in 1:J){
+  y[j] ~ dnorm (theta[j], tau.y[j])
+  theta[j] ~ dnorm (mu.theta, tau.theta)
+  tau.y[j] &amp;lt;- pow(sigma.y[j], -2)}
+mu.theta ~ dnorm (0.0, 1.0E-6)
+tau.theta &amp;lt;- pow(sigma.theta, -2)
+sigma.theta ~ dunif (0, 1000)
+	}
+&amp;quot;)
+  sink()
+}
+ 
+# defining the function that will run MCMC on each CPU
+# Arguments:
+# chain - will be 1 or 2
+# x.data - the data list
+# params - parameters to be monitored
+parallel.bugs &amp;lt;- function(chain, x.data, params)
+{
+  # a. defining directory for each CPU
+  sub.folder &amp;lt;- paste(getwd(),&amp;quot;/chain&amp;quot;, chain, sep=&amp;quot;&amp;quot;)
+ 
+  # b. specifying the initial MCMC values
+  inits &amp;lt;- function()list(theta = rnorm(x.data$J, 0, 100), mu.theta = rnorm(1, 0, 100), sigma.theta = runif(1, 0, 100))
+ 
+  # c. calling OpenBugs
+  # (you may need to change the OpenBUGS.pgm directory)
+  # je suis sous Mac, je fais tourner OpenBUGS via Wine
+  bugs(data=x.data, inits=inits, parameters.to.save=params,
+             n.iter = 500000, n.burnin = 10000, n.chains=1,
+             model.file=&amp;quot;nummodel.txt&amp;quot;, debug=FALSE, codaPkg=TRUE,
+             useWINE=TRUE, OpenBUGS.pgm = &amp;quot;/Applications/OpenBUGS323/OpenBUGS.exe&amp;quot;,
+             working.directory = sub.folder,
+             WINE=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/wine&amp;quot;, 
+             WINEPATH=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/winepath&amp;quot;)
+}
+ 
+# setting the parameters to be monitored
+params &amp;lt;- c(&amp;quot;theta&amp;quot;, &amp;quot;mu.theta&amp;quot;, &amp;quot;sigma.theta&amp;quot;)
+ 
+# calling the sfLapply function that will run
+# parallel.bugs on each of the 2 CPUs
+ptm &amp;lt;- proc.time()
+sfLapply(1:2, fun=parallel.bugs, x.data=x.data, params=params)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [[1]]
+## [1] &amp;quot;/Users/oliviergimenez/Desktop/chain1/CODAchain1.txt&amp;quot;
+## 
+## [[2]]
+## [1] &amp;quot;/Users/oliviergimenez/Desktop/chain2/CODAchain1.txt&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;elapsed_time = proc.time() - ptm
+elapsed_time
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##   0.013   0.000  32.157
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# locating position of each CODA chain
+chain1 &amp;lt;- paste(folder1, &amp;quot;/CODAchain1.txt&amp;quot;, sep=&amp;quot;&amp;quot;)
+chain2 &amp;lt;- paste(folder2, &amp;quot;/CODAchain1.txt&amp;quot;, sep=&amp;quot;&amp;quot;)
+ 
+# and, finally, getting the results
+res &amp;lt;- read.bugs(c(chain1, chain2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Abstracting deviance ... 490000 valid values
+## Abstracting mu.theta ... 490000 valid values
+## Abstracting sigma.theta ... 490000 valid values
+## Abstracting theta[1] ... 490000 valid values
+## Abstracting theta[2] ... 490000 valid values
+## Abstracting theta[3] ... 490000 valid values
+## Abstracting theta[4] ... 490000 valid values
+## Abstracting theta[5] ... 490000 valid values
+## Abstracting theta[6] ... 490000 valid values
+## Abstracting theta[7] ... 490000 valid values
+## Abstracting theta[8] ... 490000 valid values
+## Abstracting deviance ... 490000 valid values
+## Abstracting mu.theta ... 490000 valid values
+## Abstracting sigma.theta ... 490000 valid values
+## Abstracting theta[1] ... 490000 valid values
+## Abstracting theta[2] ... 490000 valid values
+## Abstracting theta[3] ... 490000 valid values
+## Abstracting theta[4] ... 490000 valid values
+## Abstracting theta[5] ... 490000 valid values
+## Abstracting theta[6] ... 490000 valid values
+## Abstracting theta[7] ... 490000 valid values
+## Abstracting theta[8] ... 490000 valid values
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(res)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Iterations = 10001:5e+05
+## Thinning interval = 1 
+## Number of chains = 2 
+## Sample size per chain = 490000 
+## 
+## 1. Empirical mean and standard deviation for each variable,
+##    plus standard error of the mean:
+## 
+##               Mean    SD Naive SE Time-series SE
+## deviance    60.453 2.221 0.002243       0.005737
+## mu.theta     8.109 5.261 0.005315       0.020596
+## sigma.theta  6.610 5.682 0.005740       0.027336
+## theta[1]    11.697 8.407 0.008493       0.027974
+## theta[2]     8.023 6.395 0.006460       0.019264
+## theta[3]     6.365 7.866 0.007946       0.022485
+## theta[4]     7.735 6.601 0.006668       0.019766
+## theta[5]     5.467 6.504 0.006570       0.022580
+## theta[6]     6.234 6.885 0.006955       0.021332
+## theta[7]    10.727 6.891 0.006961       0.023304
+## theta[8]     8.648 7.892 0.007972       0.021541
+## 
+## 2. Quantiles for each variable:
+## 
+##                 2.5%    25%    50%    75% 97.5%
+## deviance     57.0200 59.120 60.040 61.430 65.99
+## mu.theta     -2.0600  4.784  8.066 11.410 18.50
+## sigma.theta   0.2275  2.456  5.275  9.190 20.82
+## theta[1]     -1.8850  6.195 10.560 15.880 32.04
+## theta[2]     -4.8350  4.049  8.004 11.980 20.96
+## theta[3]    -11.4800  2.194  6.871 11.170 20.90
+## theta[4]     -5.7500  3.711  7.784 11.820 20.92
+## theta[5]     -8.8490  1.603  5.938  9.834 17.14
+## theta[6]     -8.8940  2.255  6.632 10.680 18.95
+## theta[7]     -1.3450  6.125 10.140 14.680 26.27
+## theta[8]     -6.8910  4.037  8.409 12.960 25.72
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Run OpenBUGS on a Mac</title>
+      <link>https://oliviergimenez.github.io/blog/run_openbugs_on_mac/</link>
+      <pubDate>Sat, 13 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/run_openbugs_on_mac/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;width:200px;margin-bottom:5px&#34; src=&#34;https://oliviergimenez.github.io/img/bugs.jpg&#34;&gt; 
+I had to use the good old `OpenBUGS` for some analyses that cannot be done in `JAGS`. Below are the steps to install `OpenBUGS` then to run it from your Mac either natively or from `R`. This tutorial is an adaptation of [this post](https://sites.google.com/site/mmeclimate/-bayesmet/openbugs-on-mac-os-x) and [that one](http://www.davideagle.org/r-2/bayesian-modeling-using-winbugs-and-openbugs/running-openbugs-on-mac-using-wine). 
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;If not done already, install 
+&lt;a href=&#34;https://brew.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Homebrew&lt;/a&gt;. This program will make the installation of any other programs on your Mac so easy!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install 
+&lt;a href=&#34;https://www.winehq.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wine&lt;/a&gt; which will allow you to run any Windows programs (.exe) on your Mac. To do so, start by 
+&lt;a href=&#34;http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;opening Terminal&lt;/a&gt;, then type in the command: &lt;em&gt;brew install wine&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Next, download the Windows version of &lt;code&gt;OpenBUGS&lt;/code&gt; 
+&lt;a href=&#34;https://www.mrc-bsu.cam.ac.uk/training/short-courses/bayescourse/download/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To install &lt;code&gt;OpenBUGS&lt;/code&gt;, still in Terminal, go to the directory where the file was downloaded and type (you might need to unzip the file you downloaded first): &lt;em&gt;wine OpenBUGS323setup.exe&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;OpenBUGS&lt;/code&gt; is now installed and ready to be used! You can run it by first going to the directory where &lt;code&gt;OpenBUGS&lt;/code&gt; was installed. On my laptop, it can be achieved via the command: &lt;em&gt;cd /Applications/OpenBUGS323&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then, you just need to tye in the following command in the Terminal, and you should see an OpenBUGS windows poping up: &lt;em&gt;wine OpenBUGS&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now we would like to run &lt;code&gt;OpenBUGS&lt;/code&gt; from &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Install the package &lt;code&gt;R2OpenBUGS&lt;/code&gt; by typing in the &lt;code&gt;R&lt;/code&gt; console:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;if(!require(R2OpenBUGS)) install.packages(&amp;quot;R2OpenBUGS&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: R2OpenBUGS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Now let&amp;rsquo;s see whether everything works well by running the classical &lt;code&gt;BUGS&lt;/code&gt; &lt;code&gt;school&lt;/code&gt; example:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Load the &lt;code&gt;OpenBUGS&lt;/code&gt; Package&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(R2OpenBUGS)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Load the data&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;data(schools)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define the model, write it to a text file and have a look&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;nummodel &amp;lt;- function(){
+for (j in 1:J){
+  y[j] ~ dnorm (theta[j], tau.y[j])
+  theta[j] ~ dnorm (mu.theta, tau.theta)
+  tau.y[j] &amp;lt;- pow(sigma.y[j], -2)}
+mu.theta ~ dnorm (0.0, 1.0E-6)
+tau.theta &amp;lt;- pow(sigma.theta, -2)
+sigma.theta ~ dunif (0, 1000)
+}
+write.model(nummodel, &amp;quot;nummodel.txt&amp;quot;)
+model.file1 = paste(getwd(),&amp;quot;nummodel.txt&amp;quot;, sep=&amp;quot;/&amp;quot;)
+file.show(&amp;quot;nummodel.txt&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Prepare the data for input into OpenBUGS&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;J &amp;lt;- nrow(schools)
+y &amp;lt;- schools$estimate
+sigma.y &amp;lt;- schools$sd
+data &amp;lt;- list (&amp;quot;J&amp;quot;, &amp;quot;y&amp;quot;, &amp;quot;sigma.y&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Initialization of variables&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;inits &amp;lt;- function(){
+  list(theta = rnorm(J, 0, 100), mu.theta = rnorm(1, 0, 100), sigma.theta = runif(1, 0, 100))}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Set the &lt;code&gt;Wine&lt;/code&gt; working directory and the directory to &lt;code&gt;OpenBUGS&lt;/code&gt;, and change the OpenBUGS.exe location as necessary:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;WINE=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/wine&amp;quot;
+WINEPATH=&amp;quot;/usr/local/Cellar/wine/2.0.4/bin/winepath&amp;quot;
+OpenBUGS.pgm=&amp;quot;/Applications/OpenBUGS323/OpenBUGS.exe&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The are the parameters to save&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;parameters = c(&amp;quot;theta&amp;quot;, &amp;quot;mu.theta&amp;quot;, &amp;quot;sigma.theta&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Run the model&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;schools.sim &amp;lt;- bugs(data, inits, model.file = model.file1,parameters=parameters,n.chains = 3, n.iter = 1000, OpenBUGS.pgm=OpenBUGS.pgm, WINE=WINE, WINEPATH=WINEPATH,useWINE=T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; will pause. You might get a weird message starting by err:ole, just ignore it. When the run is complete, a prompt will reappear, then just type the following command to get the result:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;print(schools.sim)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Bugs model at &amp;quot;/Users/oliviergimenez/Desktop/nummodel.txt&amp;quot;, 
+## Current: 3 chains, each with 1000 iterations (first 500 discarded)
+## Cumulative: n.sims = 1500 iterations saved
+##             mean  sd 2.5%  25%  50%  75% 97.5% Rhat n.eff
+## theta[1]    12.2 7.9 -1.3  7.5 11.2 16.4  32.1  1.0    62
+## theta[2]     9.1 6.5 -4.0  5.1  9.4 13.2  21.4  1.0   150
+## theta[3]     7.8 7.7 -9.4  3.6  8.5 12.6  21.1  1.0   360
+## theta[4]     8.8 6.6 -4.5  4.5  9.2 13.3  20.4  1.0   110
+## theta[5]     6.8 6.9 -8.2  2.3  7.5 11.4  17.7  1.0   410
+## theta[6]     7.3 7.2 -8.6  2.7  8.2 11.8  18.9  1.0   190
+## theta[7]    11.5 6.4 -0.3  7.5 11.2 15.7  25.0  1.1    42
+## theta[8]     9.7 7.6 -4.7  5.1  9.6 14.4  25.1  1.0   130
+## mu.theta     9.2 5.2 -1.2  5.8  9.3 12.5  18.2  1.0    88
+## sigma.theta  5.9 5.6  0.2  1.7  4.4  8.5  20.2  1.1    51
+## deviance    60.7 2.2 57.2 59.2 60.1 61.9  65.6  1.0   120
+## 
+## For each parameter, n.eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor (at convergence, Rhat=1).
+## 
+## DIC info (using the rule, pD = Dbar-Dhat)
+## pD = 2.8 and DIC = 63.4
+## DIC is an estimate of expected predictive error (lower deviance is better).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When run natively, &lt;code&gt;WinBUGS&lt;/code&gt; and &lt;code&gt;OpenBUGS&lt;/code&gt; have nice debugging capabilities; also, you can see what is going on, I mean the program reading the data, generating inits, and so on. To get the &lt;code&gt;OpenBUGS&lt;/code&gt; window with a bunch of useful info, just add &lt;code&gt;debug=T&lt;/code&gt; to the call of the &lt;code&gt;bugs&lt;/code&gt; function, and re-run the model&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;schools.sim &amp;lt;- bugs(data, inits, model.file = model.file1,parameters=parameters,n.chains = 3, n.iter = 1000, OpenBUGS.pgm=OpenBUGS.pgm, WINE=WINE, WINEPATH=WINEPATH,useWINE=T,debug=T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## arguments &#39;show.output.on.console&#39;, &#39;minimized&#39; and &#39;invisible&#39; are for Windows only
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You will have to close the &lt;code&gt;OpenBUGS&lt;/code&gt; window to get the prompt back.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Simulating data with JAGS</title>
+      <link>https://oliviergimenez.github.io/blog/sim_with_jags/</link>
+      <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/sim_with_jags/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;width:200px;margin-bottom:5px&#34; src=&#34;https://oliviergimenez.github.io/img/posterior_plots_lr.png&#34;&gt;
+Here, I illustrate the possibility to use `JAGS` to simulate data with two examples that might be of interest to population ecologists: first a linear regression, second a Cormack-Jolly-Seber capture-recapture model to estimate animal survival (formulated as a state-space model). The code is available from [GitHub](https://github.com/oliviergimenez/simul_with_jags).
+&lt;p&gt;Recently, I have been struggling with simulating data from complex hierarchical models. After several unsuccessful attempts in &lt;code&gt;R&lt;/code&gt;, I remembered the good old times when I was using &lt;code&gt;WinBUGS&lt;/code&gt; (more than 10 years already!) and the possibility to simulate data with it. I&amp;rsquo;m using &lt;code&gt;JAGS&lt;/code&gt; now, and a quick search in Google with &amp;lsquo;simulating data with jags&amp;rsquo; led me to 
+&lt;a href=&#34;https://www.georg-hosoya.de/wordpress/?p=799&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a complex example&lt;/a&gt; and 
+&lt;a href=&#34;https://stackoverflow.com/questions/38295839/simulate-data-in-jags-r2jags&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a simple example&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Simulating data with &lt;code&gt;JAGS&lt;/code&gt; is convenient because you can use (almost) the same code for simulation and inference, and you can carry out simulation studies (bias, precision, interval coverage) in the same environment (namely &lt;code&gt;JAGS&lt;/code&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;linear-regression-example&#34;&gt;Linear regression example&lt;/h2&gt;
+&lt;p&gt;We first load the packages we need for this tutorial:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(R2jags)
+library(runjags)
+library(mcmcplots)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then straight to the point, let&amp;rsquo;s generate data from a linear regression model. The trick is to use a &lt;code&gt;data&lt;/code&gt; block, have the simplest &lt;code&gt;model&lt;/code&gt; block you could think of and pass the parameters as if they were data. Note that it&amp;rsquo;d be possible to use only a model block, see comment 
+&lt;a href=&#34;https://stackoverflow.com/questions/38295839/simulate-data-in-jags-r2jags&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;txtstring &amp;lt;- &#39;
+data{
+# Likelihood:
+for (i in 1:N){
+y[i] ~ dnorm(mu[i], tau) # tau is precision (1 / variance)
+mu[i] &amp;lt;- alpha + beta * x[i]
+}
+}
+model{
+fake &amp;lt;- 0
+}
+&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here, &lt;code&gt;alpha&lt;/code&gt; and &lt;code&gt;beta&lt;/code&gt; are the intercept and slope, &lt;code&gt;tau&lt;/code&gt; the precision or the inverse of the variance, &lt;code&gt;y&lt;/code&gt; the response variable and &lt;code&gt;x&lt;/code&gt; the explanatory variable.&lt;/p&gt;
+&lt;p&gt;We pick some values for the model parameters that we will use as data:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# parameters for simulations 
+N = 30 # nb of observations
+x &amp;lt;- 1:N # predictor
+alpha = 0.5 # intercept
+beta = 1 # slope
+sigma &amp;lt;- .1 # residual sd
+tau &amp;lt;- 1/(sigma*sigma) # precision
+# parameters are treated as data for the simulation step
+data&amp;lt;-list(N=N,x=x,alpha=alpha,beta=beta,tau=tau)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now call &lt;code&gt;JAGS&lt;/code&gt;; note that we monitor the response variable instead of parameters as we would do when conducting standard inference:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# run jags
+out &amp;lt;- run.jags(txtstring, data = data,monitor=c(&amp;quot;y&amp;quot;),sample=1, n.chains=1, summarise=FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Compiling rjags model...
+## Calling the simulation using the rjags method...
+## Note: the model did not require adaptation
+## Burning in the model for 4000 iterations...
+## Running the model for 1 iterations...
+## Simulation complete
+## Finished running the simulation
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The output is a bit messy and needs to be formatted appropriately:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# reformat the outputs
+Simulated &amp;lt;- coda::as.mcmc(out)
+Simulated
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Markov Chain Monte Carlo (MCMC) output:
+## Start = 5001 
+## End = 5001 
+## Thinning interval = 1 
+##          y[1]    y[2]    y[3]     y[4]     y[5]     y[6]     y[7]     y[8]
+## 5001 1.288399 2.52408 3.61516 4.583587 5.600675 6.566052 7.593407 8.457497
+##         y[9]    y[10]   y[11]    y[12]    y[13]    y[14]    y[15]    y[16]
+## 5001 9.70847 10.38035 11.5105 12.55048 13.49143 14.46356 15.45641 16.56148
+##         y[17]    y[18]    y[19]    y[20]    y[21]   y[22]    y[23]
+## 5001 17.50935 18.51501 19.66197 20.49477 21.57079 22.6199 23.48232
+##         y[24]    y[25]    y[26]    y[27]    y[28]    y[29]    y[30]
+## 5001 24.57923 25.47368 26.33674 27.46525 28.35525 29.60279 30.42952
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dim(Simulated)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  1 30
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat = as.vector(Simulated)
+dat
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1]  1.288399  2.524080  3.615160  4.583587  5.600675  6.566052  7.593407
+##  [8]  8.457497  9.708470 10.380351 11.510500 12.550482 13.491435 14.463564
+## [15] 15.456410 16.561483 17.509350 18.515005 19.661969 20.494767 21.570790
+## [22] 22.619899 23.482317 24.579228 25.473676 26.336736 27.465251 28.355248
+## [29] 29.602791 30.429517
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now let&amp;rsquo;s fit the model we used to simulate to the data we just generated. I won&amp;rsquo;t go into the details and assume that the reader is familiar with &lt;code&gt;JAGS&lt;/code&gt; and linear regression.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# specify model in BUGS language
+model &amp;lt;- 	
+paste(&amp;quot;	
+model {
+# Likelihood:
+for (i in 1:N){
+y[i] ~ dnorm(mu[i], tau) # tau is precision (1 / variance)
+mu[i] &amp;lt;- alpha + beta * x[i]
+}
+# Priors:
+alpha ~ dnorm(0, 0.01) # intercept
+beta ~ dnorm(0, 0.01) # slope
+sigma ~ dunif(0, 100) # standard deviation
+tau &amp;lt;- 1 / (sigma * sigma) 
+}
+&amp;quot;)
+writeLines(model,&amp;quot;lin_reg.jags&amp;quot;)	
+
+# data
+jags.data &amp;lt;- list(y = dat, N = length(dat), x = x)
+
+# initial values
+inits &amp;lt;- function(){list(alpha = rnorm(1), beta = rnorm(1), sigma = runif(1,0,10))}  
+
+# parameters monitored
+parameters &amp;lt;- c(&amp;quot;alpha&amp;quot;, &amp;quot;beta&amp;quot;, &amp;quot;sigma&amp;quot;)
+
+# MCMC settings
+ni &amp;lt;- 10000
+nt &amp;lt;- 6
+nb &amp;lt;- 5000
+nc &amp;lt;- 2
+
+# call JAGS from R
+res &amp;lt;- jags(jags.data, inits, parameters, &amp;quot;lin_reg.jags&amp;quot;, n.chains = nc, n.thin = nt, n.iter = ni, n.burnin = nb, working.directory = getwd())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## module glm loaded
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Compiling model graph
+##    Resolving undeclared variables
+##    Allocating nodes
+## Graph information:
+##    Observed stochastic nodes: 30
+##    Unobserved stochastic nodes: 3
+##    Total graph size: 130
+## 
+## Initializing model
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s have a look to the results and compare with the parameters we used to simulate the data (see above):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# summarize posteriors
+print(res, digits = 3)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Bugs model at &amp;quot;lin_reg.jags&amp;quot;, fit using jags,
+##  2 chains, each with 10000 iterations (first 5000 discarded), n.thin = 6
+##  n.sims = 1668 iterations saved
+##          mu.vect sd.vect    2.5%     25%     50%     75%   97.5%  Rhat
+## alpha      0.544   0.038   0.469   0.518   0.545   0.570   0.617 1.000
+## beta       0.998   0.002   0.994   0.997   0.998   1.000   1.003 1.001
+## sigma      0.102   0.015   0.078   0.091   0.100   0.110   0.138 1.002
+## deviance -53.810   2.724 -56.867 -55.808 -54.516 -52.641 -46.676 1.001
+##          n.eff
+## alpha     1700
+## beta      1700
+## sigma      780
+## deviance  1700
+## 
+## For each parameter, n.eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor (at convergence, Rhat=1).
+## 
+## DIC info (using the rule, pD = var(deviance)/2)
+## pD = 3.7 and DIC = -50.1
+## DIC is an estimate of expected predictive error (lower deviance is better).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pretty close!&lt;/p&gt;
+&lt;p&gt;Check convergence:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# trace plots
+traplot(res,c(&amp;quot;alpha&amp;quot;, &amp;quot;beta&amp;quot;, &amp;quot;sigma&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/unnamed-chunk-8-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;Plot the posterior distribution of the regression parameters and residual standard deviation:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# posterior distributions
+denplot(res,c(&amp;quot;alpha&amp;quot;, &amp;quot;beta&amp;quot;, &amp;quot;sigma&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/unnamed-chunk-9-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;capture-recapture-example&#34;&gt;Capture-recapture example&lt;/h2&gt;
+&lt;p&gt;I now illustrate the use of &lt;code&gt;JAGS&lt;/code&gt; to simulate data from a Cormack-Jolly-Seber model with constant survival and recapture probabilities. I assume that the reader is familiar with this model and its formulation as a state-space model.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s simulate!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;txtstring &amp;lt;- &#39;
+data{
+# Constant survival and recapture probabilities
+for (i in 1:nind){
+   for (t in f[i]:(n.occasions-1)){
+      phi[i,t] &amp;lt;- mean.phi
+      p[i,t] &amp;lt;- mean.p
+      } #t
+   } #i
+# Likelihood 
+for (i in 1:nind){
+   # Define latent state and obs at first capture
+   z[i,f[i]] &amp;lt;- 1
+   mu2[i,1] &amp;lt;- 1 * z[i,f[i]] # detection is 1 at first capture (&amp;quot;conditional on first capture&amp;quot;)
+   y[i,1] ~ dbern(mu2[i,1])
+   # then deal w/ subsequent occasions
+   for (t in (f[i]+1):n.occasions){
+      # State process
+      z[i,t] ~ dbern(mu1[i,t])
+      mu1[i,t] &amp;lt;- phi[i,t-1] * z[i,t-1]
+      # Observation process
+      y[i,t] ~ dbern(mu2[i,t])
+      mu2[i,t] &amp;lt;- p[i,t-1] * z[i,t]
+      } #t
+   } #i
+}
+model{
+fake &amp;lt;- 0
+}
+&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s pick some values for parameters and store them in a data list:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# parameter for simulations 
+n.occasions = 10 # nb of occasions
+nind = 100 # nb of individuals
+mean.phi &amp;lt;- 0.8 # survival
+mean.p &amp;lt;- 0.6 # recapture
+f = rep(1,nind) # date of first capture
+data&amp;lt;-list(n.occasions = n.occasions, mean.phi = mean.phi, mean.p = mean.p, f = f, nind = nind)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now run &lt;code&gt;JAGS&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;out &amp;lt;- run.jags(txtstring, data = data,monitor=c(&amp;quot;y&amp;quot;),sample=1, n.chains=1, summarise=FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Compiling rjags model...
+## Calling the simulation using the rjags method...
+## Note: the model did not require adaptation
+## Burning in the model for 4000 iterations...
+## Running the model for 1 iterations...
+## Simulation complete
+## Finished running the simulation
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Format the output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;Simulated &amp;lt;- coda::as.mcmc(out)
+dim(Simulated)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]    1 1000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat = matrix(Simulated,nrow=nind)
+head(dat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+## [1,]    1    1    0    0    0    0    0    0    0     0
+## [2,]    1    1    1    1    0    0    0    0    0     0
+## [3,]    1    0    0    0    0    0    0    0    0     0
+## [4,]    1    0    0    0    0    0    0    0    0     0
+## [5,]    1    0    0    0    0    0    0    0    0     0
+## [6,]    1    1    1    1    0    0    1    0    1     1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here I monitored only the detections and non-detections, but it is also possible to get the simulated values for the states, i.e. whether an individual is alive or dead at each occasion. You just need to amend the call to &lt;code&gt;JAGS&lt;/code&gt; with &lt;code&gt;monitor=c(&amp;quot;y&amp;quot;,&amp;quot;x&amp;quot;)&lt;/code&gt; and to amend the output accordingly.&lt;/p&gt;
+&lt;p&gt;Now we fit a Cormack-Jolly-Seber model to the data we&amp;rsquo;ve just simulated, assuming constant parameters:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;model &amp;lt;- 	
+paste(&amp;quot;	
+model {
+# Priors and constraints
+for (i in 1:nind){
+   for (t in f[i]:(n.occasions-1)){
+      phi[i,t] &amp;lt;- mean.phi
+      p[i,t] &amp;lt;- mean.p
+      } #t
+   } #i
+mean.phi ~ dunif(0, 1)         # Prior for mean survival
+mean.p ~ dunif(0, 1)           # Prior for mean recapture
+# Likelihood 
+for (i in 1:nind){
+   # Define latent state at first capture
+   z[i,f[i]] &amp;lt;- 1
+   for (t in (f[i]+1):n.occasions){
+      # State process
+      z[i,t] ~ dbern(mu1[i,t])
+      mu1[i,t] &amp;lt;- phi[i,t-1] * z[i,t-1]
+      # Observation process
+      y[i,t] ~ dbern(mu2[i,t])
+      mu2[i,t] &amp;lt;- p[i,t-1] * z[i,t]
+      } #t
+   } #i
+}
+&amp;quot;)
+writeLines(model,&amp;quot;cjs.jags&amp;quot;)	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Prepare the data:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# vector with occasion of marking
+get.first &amp;lt;- function(x) min(which(x!=0))
+f &amp;lt;- apply(dat, 1, get.first)
+# data
+jags.data &amp;lt;- list(y = dat, f = f, nind = dim(dat)[1], n.occasions = dim(dat)[2])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Initial values
+known.state.cjs &amp;lt;- function(ch){
+   state &amp;lt;- ch
+   for (i in 1:dim(ch)[1]){
+      n1 &amp;lt;- min(which(ch[i,]==1))
+      n2 &amp;lt;- max(which(ch[i,]==1))
+      state[i,n1:n2] &amp;lt;- 1
+      state[i,n1] &amp;lt;- NA
+      }
+   state[state==0] &amp;lt;- NA
+   return(state)
+   }
+inits &amp;lt;- function(){list(mean.phi = runif(1, 0, 1), mean.p = runif(1, 0, 1), z = known.state.cjs(dat))}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We&amp;rsquo;d like to carry out inference about survival and recapture probabilities:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;parameters &amp;lt;- c(&amp;quot;mean.phi&amp;quot;, &amp;quot;mean.p&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Standard MCMC settings:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ni &amp;lt;- 10000
+nt &amp;lt;- 6
+nb &amp;lt;- 5000
+nc &amp;lt;- 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ready to run &lt;code&gt;JAGS&lt;/code&gt;!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Call JAGS from R (BRT 1 min)
+cjs &amp;lt;- jags(jags.data, inits, parameters, &amp;quot;cjs.jags&amp;quot;, n.chains = nc, n.thin = nt, n.iter = ni, n.burnin = nb, working.directory = getwd())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Compiling model graph
+##    Resolving undeclared variables
+##    Allocating nodes
+## Graph information:
+##    Observed stochastic nodes: 900
+##    Unobserved stochastic nodes: 902
+##    Total graph size: 3707
+## 
+## Initializing model
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Summarize posteriors and compare to the values we used to simulate the data:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;print(cjs, digits = 3)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Bugs model at &amp;quot;cjs.jags&amp;quot;, fit using jags,
+##  2 chains, each with 10000 iterations (first 5000 discarded), n.thin = 6
+##  n.sims = 1668 iterations saved
+##          mu.vect sd.vect    2.5%     25%     50%     75%   97.5%  Rhat
+## mean.p     0.596   0.033   0.531   0.574   0.597   0.618   0.660 1.000
+## mean.phi   0.784   0.021   0.742   0.770   0.785   0.799   0.824 1.001
+## deviance 440.611  18.374 408.121 427.569 438.662 452.512 479.608 1.001
+##          n.eff
+## mean.p    1700
+## mean.phi  1700
+## deviance  1700
+## 
+## For each parameter, n.eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor (at convergence, Rhat=1).
+## 
+## DIC info (using the rule, pD = var(deviance)/2)
+## pD = 168.9 and DIC = 609.5
+## DIC is an estimate of expected predictive error (lower deviance is better).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again pretty close!&lt;/p&gt;
+&lt;p&gt;Trace plots&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;traplot(cjs,c(&amp;quot;mean.phi&amp;quot;, &amp;quot;mean.p&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/unnamed-chunk-21-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;Posterior distribution plots:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;denplot(cjs,c(&amp;quot;mean.phi&amp;quot;, &amp;quot;mean.p&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/unnamed-chunk-22-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fitting dynamic occupancy models with TMB</title>
+      <link>https://oliviergimenez.github.io/blog/occupancy_in_tmb/</link>
+      <pubDate>Thu, 24 Aug 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/occupancy_in_tmb/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;width:200px;margin-bottom:5px&#34; src=&#34;https://oliviergimenez.github.io/img/occ_darryl.png&#34;&gt;
+Following my recent attempt to [fit a HMM model to capture-recapture data with TMB](https://oliviergimenez.github.io/post/multievent_in_tmb/) and the rather estonishing outcome (the code was &gt; 300 time faster than the equivalent R code!), I was curious to add TMB to the [list of options I tried to fit dynamic occupancy models](https://oliviergimenez.github.io/post/occupancy_in_admb/). Well, the least I can say is that TMB is fast, damn fast!
+&lt;p&gt;The reasons for trying TMB were the same as before: TMB is said to be fast, allows for parallel computations, works with R, accomodates spatial stuff, allows easy implementation of random effects).&lt;/p&gt;
+&lt;p&gt;I found materials on the internet to teach myself TMB, at least what I needed to implement a simple HMM model. See 
+&lt;a href=&#34;http://seananderson.ca/2014/10/17/tmb.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for a linear regression and a Gompertz state space model examples, 
+&lt;a href=&#34;https://www.youtube.com/watch?v=A5CLrhzNzVU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for the same linear regression example on Youtube (that&amp;rsquo;s awesome!) and many other examples 
+&lt;a href=&#34;http://kaskr.github.io/adcomp/examples.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The R code is available on my GitHub 
+&lt;a href=&#34;https://github.com/oliviergimenez/occupancy_tmb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. TMB was&amp;hellip; wait for it&amp;hellip; &amp;gt; 300 times faster than ADMB, &amp;gt; 140 times than Unmarked and &amp;gt; 6000 times faster than Jags (although the comparison with the latter is a bit unfair I suppose). The results are available 
+&lt;a href=&#34;http://rpubs.com/ogimenez/301798&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m new to TMB, but I&amp;rsquo;m gonna definitely dig into it. Congrats to 
+&lt;a href=&#34;https://github.com/kaskr/adcomp/graphs/contributors&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the developers&lt;/a&gt;! Check out the 
+&lt;a href=&#34;http://tmb-project.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TMB website&lt;/a&gt; as well as 
+&lt;a href=&#34;https://www.jstatsoft.org/article/view/v070i05&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the paper&lt;/a&gt; that comes with it.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fitting HMM/multievent capture-recapture models with TMB</title>
+      <link>https://oliviergimenez.github.io/blog/multievent_in_tmb/</link>
+      <pubDate>Mon, 21 Aug 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/multievent_in_tmb/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/tmb.png&#34;&gt;
+Following my attempts to fit a HMM model to [capture-recapture data with Rcpp](http://localhost:1313/post/multievent_in_rcpp/) and to [occupancy data with ADMB](http://localhost:1313/post/occupancy_in_admb/), a few colleagues suggested TMB as a potential alternative for several reasons (fast, allows for parallel computations, works with R, accomodates spatial stuff, easy implementation of random effects, and probably other reasons that I don&#39;t know).
+&lt;p&gt;I found materials on the internet to teach myself TMB, at least what I needed to implement a simple HMM model. See 
+&lt;a href=&#34;http://seananderson.ca/2014/10/17/tmb.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for a linear regression and a Gompertz state space model examples, 
+&lt;a href=&#34;https://www.youtube.com/watch?v=A5CLrhzNzVU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for the same linear regression example on Youtube (that&amp;rsquo;s awesome!) and many other examples 
+&lt;a href=&#34;http://kaskr.github.io/adcomp/examples.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. However, I got stuck and posted my desperate request for help on the 
+&lt;a href=&#34;https://groups.google.com/forum/#!forum/tmb-users&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TMB forum&lt;/a&gt;. Guess what, I got an answer less than a few hours after - thank you Mollie Brooks!&lt;/p&gt;
+&lt;p&gt;The R code is available on my GitHub 
+&lt;a href=&#34;https://github.com/oliviergimenez/hmm_tmb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Minimizing the deviance coded with TMB was&amp;hellip; wait for it&amp;hellip; &amp;gt; 300 times faster than using the deviance coded in standard R.&lt;/p&gt;
+&lt;p&gt;Hope this is useful.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Statistical ecology</title>
+      <link>https://oliviergimenez.github.io/project/methods/</link>
+      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
+      <guid>https://oliviergimenez.github.io/project/methods/</guid>
+      <description>&lt;p&gt;Trained in mathematics and statistics, I work in 
+&lt;a href=&#34;https://www.cefe.cnrs.fr/fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;an ecology and evolution lab&lt;/a&gt; which allowed me to develop a bottomless taste for questions in 
+&lt;a href=&#34;http://rsbl.royalsocietypublishing.org/content/10/12/20140698&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;statistical ecology&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I often resort to 
+&lt;a href=&#34;https://oliviergimenez.github.io/#books&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;state-space models&lt;/a&gt;, and hidden Markov models (
+&lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-pubs/Gimenezetal2014.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
+&lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-pubs/Gimenezetal2012TPB.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;) in particular, to develop statistical methods for capture-recapture, occupancy and integrated models.&lt;/p&gt;
+&lt;p&gt;We address questions in conservation biology to assess species viability, in ecology to study the effect of climate change on animal demography, in evolution to examine life-history tactics and individual heterogeneity and in wildlife management to develop strategies for conservation and conflict mitigation. To account for the human dimension related to these questions, I recently went back to the university to study sociology. A nice illustration of this interdisciplinary work is 
+&lt;a href=&#34;https://oliviergimenez.github.io/#current&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gilles Maurer&amp;rsquo;s PhD&lt;/a&gt; combining anthropology, demography, economics and genetics to better understand the interactions between captive and wild population of Asian elephants.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m doing my best to teach statistics (including the Bayesian way) to the students of the 
+&lt;a href=&#34;https://www.masters-biologie-ecologie.com/blog/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ecology and Evolution Master in Montpellier&lt;/a&gt;. We also make efforts to structure the community in France through our 
+&lt;a href=&#34;https://sites.google.com/site/gdrecostat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;national research group in statistical ecology&lt;/a&gt;. Last but not least, every year our team organizes 
+&lt;a href=&#34;https://multievent.sciencesconf.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;workshops&lt;/a&gt; to diffuse the methods we develop.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fitting multievent capture-recapture models with Rcpp</title>
+      <link>https://oliviergimenez.github.io/blog/multievent_in_rcpp/</link>
+      <pubDate>Fri, 11 Aug 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/multievent_in_rcpp/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/seamless.png&#34;&gt;
+Following my previous post on [using ADMB to fit hidden Markov models](https://oliviergimenez.github.io/post/occupancy_in_admb/), I took some time to learn how to use Rcpp ([Eddelbuettel &amp; Francois 2011](https://www.jstatsoft.org/article/view/v040i08); [Eddelbuettel 2013](http://www.springer.com/us/book/9781461468677)), a package that gives friendly access to the power of C++ and increase the speed of your R programs. Kudos to Dirk Eddelbuettel, Romain Francois and their colleagues, Rcpp is awesome! 
+&lt;p&gt;I started with the excellent 
+&lt;a href=&#34;http://adv-r.had.co.nz/Rcpp.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rcpp chapter&lt;/a&gt; in the 
+&lt;a href=&#34;http://adv-r.had.co.nz/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Advanced R&lt;/a&gt; book by Hadley Wickham which I complemented with the various 
+&lt;a href=&#34;https://cran.r-project.org/web/packages/Rcpp/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vignettes&lt;/a&gt; that come with the package. As always, I googled the problems I had and often ended up finding the solution on 
+&lt;a href=&#34;https://stackoverflow.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stackoverflow&lt;/a&gt;. The 
+&lt;a href=&#34;http://lists.r-forge.r-project.org/mailman/listinfo/rcpp-devel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rcpp-devel discussion list&lt;/a&gt; is the place where questions should be asked about Rcpp.&lt;/p&gt;
+&lt;p&gt;My objective was to implement the likelihood of a relatively simple multievent capture-recapture model (
+&lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/j.1541-0420.2005.00318.x/abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pradel 2005&lt;/a&gt;) with Rcpp. I recycled some R code I had and a dataset on shearwaters I used in a paper (
+&lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-pubs/Gimenezetal2012TPB.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gimenez et al. 2012&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The R code is available on my GitHub 
+&lt;a href=&#34;https://github.com/oliviergimenez/multieventRcpp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. To run it, you just need to type Rcpp::sourceCpp(&amp;lsquo;multi event.cpp&amp;rsquo;) in the console. I&amp;rsquo;m convinced that the code can be improved, but this simple exercise showed that minimizing the deviance coded with Rcpp and calculating the Hessian was 10 times faster than using the deviance coded in standard R.&lt;/p&gt;
+&lt;p&gt;Next steps will be to go for RcppArmadillo for matrix computations and RcppNumerical for optimisation (and numerical integration for random effects).&lt;/p&gt;
+&lt;p&gt;Hope this is useful.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Following an advice from Romain Francois and Dirk Eddelbuettel (the Rcpp gurus), I have switched to 
+&lt;a href=&#34;https://cran.r-project.org/web/packages/RcppArmadillo/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RcppArmadillo&lt;/a&gt; to rely on the code developed by professionals and decades of testing. Now the RcppArmadillo code is 50 times faster than basic R! The code is available on 
+&lt;a href=&#34;https://github.com/oliviergimenez/multieventRcpp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my GitHub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fitting occupancy models in ADMB</title>
+      <link>https://oliviergimenez.github.io/blog/occupancy_in_admb/</link>
+      <pubDate>Sun, 06 Aug 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/occupancy_in_admb/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;margin-bottom:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/admb.png&#34;&gt;
+Some time ago, a student of mine got stuck when fitting dynamic occupancy models to real data in Jags because of the computational burden. 
+&lt;p&gt;We had a dataset with several thousands sites, more than 20 seasons and 4 surveys per season (yeah!).&lt;/p&gt;
+&lt;p&gt;We thought of using Unmarked instead (the likelihood is written in C++ and used through Rcpp), but dynamic models with false positives and/or random effects are not (yet?) implemented, and we were interested in considering both in our analysis. Some years ago, I had the opportunity to learn ADMB in a NCEAS meeting (thanks Hans Skaug!), I thought I would give it a try. ADMB allows you to write down any likelihood functions yourself and to incorporate random effects in an efficient way. It&amp;rsquo;s known to be fast for reasons I won&amp;rsquo;t go into here. Last but not least, ADMB can be run from R like JAGS and Unmarked (thanks Ben Bolker!).&lt;/p&gt;
+&lt;p&gt;Here we go. I first simulate some data, then fit a dynamic model using ADMB, JAGS and Unmarked and finally perform a quick benchmarking. I&amp;rsquo;m going for a standard dynamic model, because the aims are i) to verify that JAGS is slower than Unmarked, ii) that ADMB is closer to Unmarked than JAGS in terms of time computation. If ii) is verified, then it will be worth the effort coding everything in ADMB.&lt;/p&gt;
+&lt;p&gt;The results are available on RPub 
+&lt;a href=&#34;http://rpubs.com/ogimenez/297167&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The code is available on GitHub 
+&lt;a href=&#34;https://github.com/oliviergimenez/occupancy_in_ADMB&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Hope this is useful.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Working group on animal/human demography</title>
+      <link>https://oliviergimenez.github.io/blog/working_group_demo/</link>
+      <pubDate>Thu, 26 Jan 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/working_group_demo/</guid>
+      <description>&lt;p&gt;We organised a 2-day workshop on the metrics of longevity used in human and
+animal demography. The idea is to explore potential bridges between the two fields.
+Next meeting in April. The group is led by S. Cubaynes, a former PhD student of mine,
+who now holds a lecturer position at Montpellier University.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Workshop on issues in fitting hierarchical models in ecology</title>
+      <link>https://oliviergimenez.github.io/blog/working_group_hm/</link>
+      <pubDate>Mon, 28 Nov 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/working_group_hm/</guid>
+      <description>&lt;p&gt;Frederic Gosselin, Etienne Rivot and I organised a 2-day workshop on issues in
+fitting hierarchical models in ecology. I gave a talk on &amp;ldquo;Local minima and multistate
+capture-recapture models&amp;rdquo;, slides and R code available on
+
+&lt;a href=&#34;https://github.com/oliviergimenez/multistate_local_minima&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe src=&#34;https://widgets.figshare.com/articles/4833524/embed?show_title=1&#34; width=&#34;568&#34; height=&#34;351&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;The idea is to consider several problematic case studies and explore the issues using
+several computing platforms (R, Jags, Nimble, Stan, Admb). Next meeting in May.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Analysing the social Star Wars network in The Attack of the Clones with R</title>
+      <link>https://oliviergimenez.github.io/blog/starwars_network/</link>
+      <pubDate>Sun, 07 Aug 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/starwars_network/</guid>
+      <description>&lt;p&gt;This is a free adaptation of two (very) clever analyses made by others:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://evelinag.com/blog/2015/12-15-star-wars-social-network&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Star Wars Social Network by Evelina Gabasov&lt;/a&gt; in which program F# was mostly used to analyse the Star wars social networks&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://varianceexplained.org/r/love-actually-network/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Analyzing networks of characters in &amp;lsquo;Love Actually&amp;rsquo; by David Robinson&lt;/a&gt; in which R was used to analyse the links between the characters of the movie Love Actually.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The aim here is to try and reproduce Evelina&amp;rsquo;s analysis using R only, using David&amp;rsquo;s contribution plus several tweaks I found here and there on the internet. The R code and data are available on my 
+&lt;a href=&#34;https://github.com/oliviergimenez/starwars_network&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Disclaimer&lt;/em&gt;: The original blog posts are awesome and full of relevant details, check them out! My objective here was to teach myself how to manipulate data using trendy R packages and do some network analyses. Some comments below have been copied and pasted from these blogs, the credits entirely go to the authors Evelina and David. Last but not least, my code comes with mistakes probably.&lt;/p&gt;
+&lt;h1 id=&#34;read-and-format-data&#34;&gt;Read and format data&lt;/h1&gt;
+&lt;p&gt;First, read in data. I found the movie script in doc format 
+&lt;a href=&#34;theforce.net/timetales/ep2se.doc&#34;&gt;here&lt;/a&gt;, which I converted in txt format for convenience. Then, apply various treatments to have the data ready for analysis. I use the old school way for modifying the original dataframe. 
+&lt;a href=&#34;https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Piping&lt;/a&gt; would have made the code more readable, but I do not feel confident with this approach yet.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# load convenient packages
+library(dplyr)
+library(stringr)
+library(tidyr)
+
+# read file line by line 
+raw &amp;lt;- readLines(&amp;quot;attack-of-the-clones.txt&amp;quot;)
+
+# create data frame
+lines &amp;lt;- data_frame(raw = raw) 
+
+# get rid of leading and trailing white spaces
+# http://stackoverflow.com/questions/2261079/how-to-trim-leading-and-trailing-whitespace-in-r
+trim &amp;lt;- function (x) gsub(&amp;quot;^\\s+|\\s+$&amp;quot;, &amp;quot;&amp;quot;, x)
+lines &amp;lt;- mutate(lines,raw=trim(raw))
+
+# get rid of the empty lines
+lines2 &amp;lt;- filter(lines, raw != &amp;quot;&amp;quot;)
+
+# detect scenes: begin by EXT. or INT.
+lines3 &amp;lt;-  mutate(lines2, is_scene = str_detect(raw, &amp;quot;T.&amp;quot;),scene = cumsum(is_scene)) 
+
+# drop lines that start with EXT. or INT.
+lines4 &amp;lt;- filter(lines3,!is_scene)
+
+# distinguish characters from what they say
+lines5 &amp;lt;- separate(lines4, raw, c(&amp;quot;speaker&amp;quot;, &amp;quot;dialogue&amp;quot;), sep = &amp;quot;:&amp;quot;, fill = &amp;quot;left&amp;quot;,extra=&#39;drop&#39;)
+
+# read in aliases (from Evelina&#39;s post)
+aliases &amp;lt;- read.table(&#39;aliases.csv&#39;,sep=&#39;,&#39;,header=T,colClasses = &amp;quot;character&amp;quot;)
+aliases$Alias
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;BEN&amp;quot;           &amp;quot;SEE-THREEPIO&amp;quot;  &amp;quot;THREEPIO&amp;quot;      &amp;quot;ARTOO-DETOO&amp;quot;  
+##  [5] &amp;quot;ARTOO&amp;quot;         &amp;quot;PALPATINE&amp;quot;     &amp;quot;DARTH SIDIOUS&amp;quot; &amp;quot;BAIL&amp;quot;         
+##  [9] &amp;quot;MACE&amp;quot;          &amp;quot;WINDU&amp;quot;         &amp;quot;MACE-WINDU&amp;quot;    &amp;quot;NUTE&amp;quot;         
+## [13] &amp;quot;AUNT BERU&amp;quot;     &amp;quot;DOOKU&amp;quot;         &amp;quot;BOBA&amp;quot;          &amp;quot;JANGO&amp;quot;        
+## [17] &amp;quot;PANAKA&amp;quot;        &amp;quot;NUTE&amp;quot;          &amp;quot;KI-ADI&amp;quot;        &amp;quot;BIBBLE&amp;quot;       
+## [21] &amp;quot;BIB&amp;quot;           &amp;quot;CHEWIE&amp;quot;        &amp;quot;VADER&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;aliases$Name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;OBI-WAN&amp;quot;        &amp;quot;C-3PO&amp;quot;          &amp;quot;C-3PO&amp;quot;          &amp;quot;R2-D2&amp;quot;         
+##  [5] &amp;quot;R2-D2&amp;quot;          &amp;quot;EMPEROR&amp;quot;        &amp;quot;EMPEROR&amp;quot;        &amp;quot;BAIL ORGANA&amp;quot;   
+##  [9] &amp;quot;MACE WINDU&amp;quot;     &amp;quot;MACE WINDU&amp;quot;     &amp;quot;MACE WINDU&amp;quot;     &amp;quot;NUTE GUNRAY&amp;quot;   
+## [13] &amp;quot;BERU&amp;quot;           &amp;quot;COUNT DOOKU&amp;quot;    &amp;quot;BOBA FETT&amp;quot;      &amp;quot;JANGO FETT&amp;quot;    
+## [17] &amp;quot;CAPTAIN PANAKA&amp;quot; &amp;quot;NUTE GUNRAY&amp;quot;    &amp;quot;KI-ADI-MUNDI&amp;quot;   &amp;quot;SIO BIBBLE&amp;quot;    
+## [21] &amp;quot;BIB FORTUNA&amp;quot;    &amp;quot;CHEWBACCA&amp;quot;      &amp;quot;DARTH VADER&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# assign unique name to characters
+# http://stackoverflow.com/questions/28593265/is-there-a-function-like-switch-which-works-inside-of-dplyrmutate
+multipleReplace &amp;lt;- function(x, what, by) {
+  stopifnot(length(what)==length(by))               
+  ind &amp;lt;- match(x, what)
+  ifelse(is.na(ind),x,by[ind])
+}
+lines6 &amp;lt;- mutate(lines5,speaker=multipleReplace(speaker,what=aliases$Alias,by=aliases$Name))
+
+# read in actual names (from Evelina&#39;s post)
+actual.names &amp;lt;- read.csv(&#39;characters.csv&#39;,header=F,colClasses = &amp;quot;character&amp;quot;)
+actual.names &amp;lt;- c(as.matrix(actual.names))
+# filter out non-characters
+lines7 &amp;lt;- filter(lines6,speaker %in% actual.names)
+
+# group by scene
+lines8 &amp;lt;- group_by(lines7, scene, line = cumsum(!is.na(speaker))) 
+
+lines9 &amp;lt;- summarize(lines8, speaker = speaker[1], dialogue = str_c(dialogue, collapse = &amp;quot; &amp;quot;))
+
+# Count the lines-per-scene-per-character
+# Turn the result into a binary speaker-by-scene matrix
+by_speaker_scene &amp;lt;- count(lines9, scene, speaker)
+by_speaker_scene
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 447 x 3
+## # Groups:   scene [321]
+##    scene    speaker     n
+##    &amp;lt;int&amp;gt;      &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;
+##  1    26      PADME     1
+##  2    27      PADME     1
+##  3    29      PADME     1
+##  4    48      PADME     1
+##  5    50      PADME     2
+##  6    66 MACE WINDU     1
+##  7    67 MACE WINDU     1
+##  8    69       YODA     1
+##  9    70 MACE WINDU     1
+## 10    74       YODA     1
+## # ... with 437 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(reshape2)
+speaker_scene_matrix &amp;lt;-acast(by_speaker_scene , speaker ~ scene, fun.aggregate = length)
+dim(speaker_scene_matrix)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]  19 321
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;analyses&#34;&gt;Analyses&lt;/h1&gt;
+&lt;h2 id=&#34;hierarchical-clustering&#34;&gt;Hierarchical clustering&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;norm &amp;lt;- speaker_scene_matrix / rowSums(speaker_scene_matrix)
+h &amp;lt;- hclust(dist(norm, method = &amp;quot;manhattan&amp;quot;))
+plot(h)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/starwars_network_files/figure-html/unnamed-chunk-2-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;timeline&#34;&gt;Timeline&lt;/h2&gt;
+&lt;p&gt;Use tree to give an ordering that puts similar characters close together&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ordering &amp;lt;- h$labels[h$order]
+ordering
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;MACE WINDU&amp;quot;  &amp;quot;YODA&amp;quot;        &amp;quot;SHMI&amp;quot;        &amp;quot;QUI-GON&amp;quot;     &amp;quot;PLO KOON&amp;quot;   
+##  [6] &amp;quot;LAMA SU&amp;quot;     &amp;quot;OBI-WAN&amp;quot;     &amp;quot;BAIL ORGANA&amp;quot; &amp;quot;JAR JAR&amp;quot;     &amp;quot;POGGLE&amp;quot;     
+## [11] &amp;quot;ANAKIN&amp;quot;      &amp;quot;PADME&amp;quot;       &amp;quot;CLIEGG&amp;quot;      &amp;quot;BERU&amp;quot;        &amp;quot;OWEN&amp;quot;       
+## [16] &amp;quot;SIO BIBBLE&amp;quot;  &amp;quot;RUWEE&amp;quot;       &amp;quot;JOBAL&amp;quot;       &amp;quot;SOLA&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This ordering can be used to make other graphs more informative. For instance, we can visualize a timeline of all scenes:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;scenes &amp;lt;-  filter(by_speaker_scene, n() &amp;gt; 1) # scenes with &amp;gt; 1 character
+scenes2 &amp;lt;- ungroup(scenes)
+scenes3 &amp;lt;- mutate(scenes2, scene = as.numeric(factor(scene)),
+           character = factor(speaker, levels = ordering))
+library(ggplot2)
+ggplot(scenes3, aes(scene, character)) +
+    geom_point() +
+    geom_path(aes(group = scene))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/starwars_network_files/figure-html/unnamed-chunk-4-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;Create a cooccurence matrix (see 
+&lt;a href=&#34;http://stackoverflow.com/questions/13281303/creating-co-occurrence-matrix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;) containing how many times two characters share scenes&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;cooccur &amp;lt;- speaker_scene_matrix %*% t(speaker_scene_matrix)
+heatmap(cooccur)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/starwars_network_files/figure-html/unnamed-chunk-5-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;social-network-analyses&#34;&gt;Social network analyses&lt;/h2&gt;
+&lt;h3 id=&#34;graphical-representation-of-the-network&#34;&gt;Graphical representation of the network&lt;/h3&gt;
+&lt;p&gt;Here the nodes represent characters in the movies. The characters are connected by a link if they both speak in the same scene. And the more the characters speak together, the thicker the link between them.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(igraph)
+g &amp;lt;- graph.adjacency(cooccur, weighted = TRUE, mode = &amp;quot;undirected&amp;quot;, diag = FALSE)
+plot(g, edge.width = E(g)$weight)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/starwars_network_files/figure-html/unnamed-chunk-6-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;Compute standard network features, degree and betweeness.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;degree(g)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      ANAKIN BAIL ORGANA        BERU      CLIEGG     JAR JAR       JOBAL 
+##          12           1           4           4           4           4 
+##     LAMA SU  MACE WINDU     OBI-WAN        OWEN       PADME    PLO KOON 
+##           1           5           6           4          12           0 
+##      POGGLE     QUI-GON       RUWEE        SHMI  SIO BIBBLE        SOLA 
+##           1           1           4           1           0           4 
+##        YODA 
+##           4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;betweenness(g)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      ANAKIN BAIL ORGANA        BERU      CLIEGG     JAR JAR       JOBAL 
+##   42.600000    0.000000    1.750000    0.500000   22.000000    0.000000 
+##     LAMA SU  MACE WINDU     OBI-WAN        OWEN       PADME    PLO KOON 
+##    0.000000   18.366667   15.000000    5.250000   55.133333    0.000000 
+##      POGGLE     QUI-GON       RUWEE        SHMI  SIO BIBBLE        SOLA 
+##    0.000000    0.000000    0.700000    0.000000    0.000000    5.000000 
+##        YODA 
+##    3.366667
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To get a nicer representation of the network, see 
+&lt;a href=&#34;http://tagteam.harvard.edu/hub_feeds/1981/feed_items/1388531&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and the formating from igraph to d3Network. Below is the code you’d need:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(d3Network)
+library(networkD3)
+sg &amp;lt;- simplify(g)
+df &amp;lt;- get.edgelist(g, names=TRUE)
+df &amp;lt;- as.data.frame(df)
+colnames(df) &amp;lt;- c(&#39;source&#39;, &#39;target&#39;)
+df$value &amp;lt;- rep(1, nrow(df))
+# get communities
+fc &amp;lt;- fastgreedy.community(g)
+com &amp;lt;- membership(fc)
+node.info &amp;lt;- data.frame(name=names(com), group=as.vector(com))
+links &amp;lt;- data.frame(source=match(df$source, node.info$name)-1,target=match(df$target, node.info$name)-1,value=df$value)
+
+forceNetwork(Links = links, Nodes = node.info,Source = &amp;quot;source&amp;quot;, Target = &amp;quot;target&amp;quot;,Value = &amp;quot;value&amp;quot;, NodeID = &amp;quot;name&amp;quot;,Group = &amp;quot;group&amp;quot;, opacity = 1, opacityNoHover=1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The nodes represent characters in the movies. The characters are connected by a link if they both speak in the same scene. The colors are for groups obtained by some algorithms.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Self teaching reproducible research</title>
+      <link>https://oliviergimenez.github.io/blog/reproducible_research/</link>
+      <pubDate>Sun, 10 Jul 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/reproducible_research/</guid>
+      <description>&lt;p&gt;I decided to teach myself how to do proper reproducible research. Many reasons to
+that: save time on the mid/long term, make my analyses open and criticizable, share with others, &amp;hellip;&lt;/p&gt;
+&lt;p&gt;There are tons of resources on  the web. I use the 
+&lt;a href=&#34;http://kbroman.org/pages/tutorials.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tutorials&lt;/a&gt;
+cooked by guru 
+&lt;a href=&#34;http://kbroman.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Karl Broman&lt;/a&gt;.
+For people like me who learned S-plus, he has some 
+&lt;a href=&#34;http://kbroman.org/hipsteR/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;advice&lt;/a&gt; to switch to modern tools.
+Among others, I try and use more and more RStudio in connection with KnitR and R Markdown and
+share my codes on 
+&lt;a href=&#34;https://github.com/oliviergimenez&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. I am more a Fortran guy,
+but Rcpp makes me wonder about C++.  Version control, piping and the tidy universe are
+not yet entirely familiar to me, I’m making baby steps (or grandpa steps I should say). Let’s see how it goes.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>New kids on the Bayesian block</title>
+      <link>https://oliviergimenez.github.io/blog/nimble/</link>
+      <pubDate>Thu, 10 Jul 2014 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/nimble/</guid>
+      <description>&lt;p&gt;I attended Daniel Turek&amp;rsquo;s talk at ISEC about &lt;a href=&#34;http://r-nimble.org/&#34; target=&#34;_blank&#34;&gt;NIMBLE&lt;/a&gt;
+a neat alternative to WinBUGS and JAGS. It is developed by
+&lt;a href=&#34;http://nature.berkeley.edu/~pdevalpine/&#34; target=&#34;_blank&#34;&gt;Perry de Valpine&amp;rsquo;s
+group&lt;/a&gt; at Berkeley and &lt;em&gt;&#39;lets you use BUGS models natively in R, program functions
+that use them, and compile everything via C++ for faster computing&amp;rsquo;.&lt;/em&gt; I played around
+with NIMBLE a bit, &lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-codes/cjs-nimble.R&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
+is an example of fitting a classic capture-recapture model to simulated data - thanks to Perry
+and Daniel for their help! NIMBLE seems a lot faster than its competitors, and much more flexible.
+I&amp;rsquo;ll continue my investigations with more complex models - stay tuned.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
