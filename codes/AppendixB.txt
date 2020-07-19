@@ -1,0 +1,488 @@
+## Appendix B. BUGS and R codes to estimate LRS using SSM fitted to deer data
+
+##################################################################
+# 0 - READ IN DATA
+##################################################################
+
+mydata <- matrix(
+c(0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,0,1,0,1,0,1,0,1,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,1,0,1,0,0,
+0,0,0,0,0,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,1,1,1,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,1,0,0,0,
+0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,0,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,0,0,1,1,0,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,1,
+0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,
+0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1,1,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,1,0,0,1,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,1,0,
+0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,1,0,
+0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,1,1,1,0,1,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,1,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1,1,1,1,1,0,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,1,1,0,0,1,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,
+0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,
+0,0,0,1,1,0,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,1,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),byrow=T,nrow=50)
+
+repro<-matrix(
+c(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,2,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,2,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,2,0,2,2,1,0,0,
+0,0,0,0,0,0,0,1,3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,2,2,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,3,3,2,2,2,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,3,2,1,0,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,0,2,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,1,0,
+0,0,0,0,0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,3,1,0,3,3,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,3,3,3,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,3,0,2,2,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,2,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,1,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,2,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,2,0,1,2,3,2,2,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,3,2,0,0,3,1,2,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,3,3,1,3,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,
+0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,2,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,3,0,0,0,3,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,3,3,0,3,0,3,2,3,3,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,2,1,1,0,0,3,2,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,1,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),byrow=T,nrow=50)
+
+
+##################################################################
+# 1 - DATA MANIPULATION
+##################################################################
+
+# Data are in matrix ‘mydata’, one female per row, with coding as follows: 
+# 0 = female not observed;
+# 1 = female observed with no fawn;
+# 2 = female observed with 1 fawn;
+# 3 = female observed with 2 fawns;
+# 4 = female observed with 3 fawns.
+
+# number of individuals 
+n <- dim(mydata)[[1]] 
+
+# number of capture occasions
+K <- dim(mydata)[[2]] 
+
+# compute date of first capture
+e <- NULL
+for (i in 1:n){
+temp <- 1:K
+e <- c(e,min(temp[mydata[i,]>=1]))}
+
+# compute number of states and remove structural zeros 
+# (typically prior first capture)
+lgr = NULL
+for (i in 1:n)
+{
+lgr = c(lgr,length(e[i]:K))
+}
+lgr = 1:sum(lgr)
+
+index = matrix(NA,nrow=n,ncol=K)
+ind=1
+for (i in 1:n)
+{
+for (j in e[i]:K)
+{
+index[i,j] = lgr[ind]
+ind=ind+1
+}
+}
+
+# compute age
+age <- matrix(NA,nrow=nrow(mydata),ncol=ncol(mydata))
+for (i in 1:nrow(age)){
+	for (j in e[i]:ncol(age)){
+		if (j == e[i]) age[i,j] <- 1 # yearling
+		if ((j > e[i]) & (j <= e[i]+5)) age[i,j] <- 2 # prime-age
+		if (j > e[i]+5) age[i,j] <- 3 # senescent
+		}
+	}
+
+##################################################################
+# 2 - BUGS MODEL
+##################################################################
+
+sink("multistatect.bug")
+cat("
+
+# BUGS code of the state-space formulation 
+# of capture-recapture models (O. Gimenez, May, 2011)
+
+# notation used
+
+# OBSERVATIONS
+# 0 = female not observed;
+# 1 = female observed with no fawn;
+# 2 = female observed with 1 fawn;
+# 3 = female observed with 2 fawns;
+# 4 = female observed with 3 fawns.
+
+# STATES
+# NB = non-breeding female;
+# B1 = female breeding with 1 fawn;
+# B2 = female breeding with 2 fawns;
+# B3 = female breeding with 3 fawns;
+# B4 = dead.
+
+# parameters
+# phiNB  survival prob. of non-breeding individuals  / by age
+# phiB  survival prob. of breeding individuals / by age
+# pNB  detection prob. of NB individuals 
+# pB  detection prob. of B individuals 
+# psiNBB1 transition prob. from NB to B1
+# psiB1B2 transition prob. from B1 to B2
+# psiB2B3 transition prob. from B2 to B3
+# psiB1B3 transition prob. from B1 to B3
+# piNB prob. of being in initial state NB
+
+model
+{
+
+	##############
+	# LIKELIHOOD
+	##############
+	
+	# probabilities for each initial state
+		px0[1] <- 1 # prob. of being in initial state NB
+		px0[2] <- 0 # prob. of being in initial state B1
+		px0[3] <- 0 # prob. of being in initial state B2
+		px0[4] <- 0 # prob. of being in initial state B3
+		px0[5] <- 0 # because of the conditioning on first capture, prob. of being in initial state dead is 0
+	
+	# probabilities of observations at a given occasion given states at this occasion
+		po[1,1] <- 1-pNB
+		po[1,2] <- pNB
+		po[1,3] <- 0
+		po[1,4] <- 0
+		po[1,5] <- 0
+
+		po[2,1] <- 1-pB
+		po[2,2] <- 0
+		po[2,3] <- pB
+		po[2,4] <- 0
+		po[2,5] <- 0
+
+		po[3,1] <- 1-pB
+		po[3,2] <- 0
+		po[3,3] <- 0
+		po[3,4] <- pB
+		po[3,5] <- 0
+
+		po[4,1] <- 1-pB
+		po[4,2] <- 0
+		po[4,3] <- 0
+		po[4,4] <- 0
+		po[4,5] <- pB
+
+		po[5,1] <- 1
+		po[5,2] <- 0
+		po[5,3] <- 0
+		po[5,4] <- 0
+		po[5,5] <- 0
+	
+	for (i in 1:N)  # for each female
+	{
+	
+	# estimated probabilities of initial states are the proportions in each state at first capture occasion
+	alive[i,First[i]] ~ dcat(px0[1:5])
+
+		for (j in (First[i]+1):Years)  # loop over time
+
+		{
+# define age-dependent survival probabilities 
+# if ageij = 1, then phi = phi-young
+# if ageij = 2, then phi = phi-subadult
+# if ageij = 3, then phi = phi-adult
+phiNB[i,j-1] <- phiNBy*equals(age[i,j-1],1)+phiNBsa*equals(age[i,j-1],2)+phiNBa*equals(age[i,j-1],3) 
+phiB[i,j-1] <- 0 * equals(age[i,j-1],1) + phiBsa * equals(age[i,j-1],2) + phiBa * equals(age[i,j-1],3)
+		
+		# probabilities of states at a given occasion given states at previous occasion
+		# uses mulitnomial logit for the transition probabilities between breeding states
+		px[1,i,j-1,1] <- phiNB[i,j-1] * 1/(1+exp(alpha[1,1])+exp(alpha[1,2])+exp(alpha[1,3]))
+		px[1,i,j-1,2] <- phiNB[i,j-1] * exp(alpha[1,1])/(1+exp(alpha[1,1])+exp(alpha[1,2])+exp(alpha[1,3]))
+		px[1,i,j-1,3] <- phiNB[i,j-1] * exp(alpha[1,2])/(1+exp(alpha[1,1])+exp(alpha[1,2])+exp(alpha[1,3]))
+		px[1,i,j-1,4] <- phiNB[i,j-1] * exp(alpha[1,3])/(1+exp(alpha[1,1])+exp(alpha[1,2])+exp(alpha[1,3]))
+		px[1,i,j-1,5] <- 1-phiNB[i,j-1]
+		
+		px[2,i,j-1,1] <- phiB[i,j-1] * exp(alpha[2,1])/(1+exp(alpha[2,1])+exp(alpha[2,2])+exp(alpha[2,3]))
+		px[2,i,j-1,2] <- phiB[i,j-1] * 1/(1+exp(alpha[2,1])+exp(alpha[2,2])+exp(alpha[2,3])) #
+		px[2,i,j-1,3] <- phiB[i,j-1] * exp(alpha[2,2])/(1+exp(alpha[2,1])+exp(alpha[2,2])+exp(alpha[2,3]))
+		px[2,i,j-1,4] <- phiB[i,j-1] * exp(alpha[2,3])/(1+exp(alpha[2,1])+exp(alpha[2,2])+exp(alpha[2,3]))
+		px[2,i,j-1,5] <- 1-phiB[i,j-1] 
+		
+		px[3,i,j-1,1] <- phiB[i,j-1] * exp(alpha[3,1])/(1+exp(alpha[3,1])+exp(alpha[3,2])+exp(alpha[3,3]))
+		px[3,i,j-1,2] <- phiB[i,j-1] * exp(alpha[3,2])/(1+exp(alpha[3,1])+exp(alpha[3,2])+exp(alpha[3,3]))
+		px[3,i,j-1,3] <- phiB[i,j-1] * 1/(1+exp(alpha[3,1])+exp(alpha[3,2])+exp(alpha[3,3])) #
+		px[3,i,j-1,4] <- phiB[i,j-1] * exp(alpha[3,3])/(1+exp(alpha[3,1])+exp(alpha[3,2])+exp(alpha[3,3]))
+		px[3,i,j-1,5] <- 1-phiB[i,j-1] 
+
+		px[4,i,j-1,1] <- phiB[i,j-1] * exp(alpha[4,1])/(1+exp(alpha[4,1])+exp(alpha[4,2])+exp(alpha[4,3]))
+		px[4,i,j-1,2] <- phiB[i,j-1] * exp(alpha[4,2])/(1+exp(alpha[4,1])+exp(alpha[4,2])+exp(alpha[4,3]))
+		px[4,i,j-1,3] <- phiB[i,j-1] * exp(alpha[4,3])/(1+exp(alpha[4,1])+exp(alpha[4,2])+exp(alpha[4,3]))
+		px[4,i,j-1,4] <- phiB[i,j-1] * 1/(1+exp(alpha[4,1])+exp(alpha[4,2])+exp(alpha[4,3]))
+		px[4,i,j-1,5] <- 1-phiB[i,j-1]  #
+
+		px[5,i,j-1,1] <- 0
+		px[5,i,j-1,2] <- 0
+		px[5,i,j-1,3] <- 0
+		px[5,i,j-1,4] <- 0
+		px[5,i,j-1,5] <- 1
+
+		## STATE EQUATIONS ##
+		# draw states at j given states at j-1
+		alive[i,j] ~ dcat(px[alive[i,j-1],i,j-1,1:5])
+
+		## OBSERVATION EQUATIONS ##
+		# draw observations at j given states at j
+		mydata[i,j] ~ dcat(po[alive[i,j],1:5])
+
+		}
+	
+	}
+
+#########
+# PRIORS 
+#########
+
+pNB ~ dunif(0, 1) # non-breeder detectability
+pB ~ dunif(0, 1) # breeder detectability
+
+phiBsa ~ dunif(0, 1) # breeder survival sub-adult
+phiBa ~ dunif(0, 1) # breeder survival adult
+
+phiNBy ~ dunif(0, 1) # non-breeder survival young
+phiNBsa ~ dunif(0, 1) # non-breeder survival sub-adult
+phiNBa ~ dunif(0, 1) # non-breeder survival adult
+
+# transition probabilites - multinomial logit
+for (i in 1:4){
+	for (j in 1:3){
+		alpha[i,j] ~ dnorm(0,0.1)
+			      }
+			  }
+	
+# for each female at each occasion, store its state
+for (i in 1:N){
+	for (j in First[i]:Years){
+		lrs[indicateur[i,j]] <- alive[i,j]
+		                     }
+	          }
+
+	
+}
+
+",fill=TRUE)
+sink()
+
+##################################################################
+# 3 - BAYESIAN COMPUTATION WITH JAGS
+##################################################################
+
+# data
+mydatax <- list(N=n,Years=K,mydata=as.matrix(mydata+1),First=e,indicateur=index,age=as.matrix(age)) 
+
+# first list of inits
+alive = mydata
+for (i in 1:n) {
+	for (j in 1:K) {
+		if (j > e[i] & mydata[i,j]==0) {alive[i,j] = which(rmultinom(1, 1, c(1/4,1/4,1/4,1/4))==1)}
+		if (j < e[i]) {alive[i,j] = NA}
+	}
+}
+alive <- as.matrix(alive)
+
+init1 <- list(pB=0.5,phiNBy=0.3,alive=alive)
+# second list of inits
+init2 <- list(pB=0.5,phiNBy=0.6,alive=alive)
+# concatenate list of initial values
+inits <- list(init1,init2)
+
+# specify the parameters to be monitored
+parameters <- c("phiBsa","phiBa","phiNBy","phiNBsa","phiNBa","pB","pNB","alpha","lrs")
+
+# load R package to call JAGS from R
+library(rjags)
+
+# run JAGS
+start<-as.POSIXlt(Sys.time())
+jmodel <- jags.model("multistatect.bug", mydatax, inits, n.chains = 2,n.adapt = 50000)
+jsample <- coda.samples(jmodel, parameters, n.iter=10000, thin = 1)
+end <-as.POSIXlt(Sys.time())
+duration = end-start
+
+# save results
+save(jsample,jmodel,duration,file='agedeer30.Rdata')
+
+##################################################################
+# 4 - RESULTS
+##################################################################
+
+# check convergence
+#plot(jsample, trace = TRUE, density = FALSE,ask = dev.interactive())
+#gelman.diag(jsample)
+
+# numerical summaries and posterior distributions
+#summary(jsample)
+#plot(jsample, trace = FALSE, density = TRUE,ask = dev.interactive()) 
+
+#-- display transition probabilities (back-transformation using inverse multinomial logit)
+
+# psiNBNB psiNBB1 psiNBB2 psiNBB3
+a12 <- c(jsample[[1]][,'alpha[1,1]'],jsample[[2]][,'alpha[1,1]'])
+a13 <- c(jsample[[1]][,'alpha[1,2]'],jsample[[2]][,'alpha[1,2]'])
+a14 <- c(jsample[[1]][,'alpha[1,3]'],jsample[[2]][,'alpha[1,3]'])
+a11 <- rep(0,length(a12)) ## ref
+a1<-cbind(a11,a12,a13,a14)
+apply(exp(a1)/apply(exp(a1),1,sum),2,mean)
+apply(exp(a1)/apply(exp(a1),1,sum),2,sd)
+
+# psiB1NB psiB1B1 psiB1B2 psiB1B3
+a21 <- c(jsample[[1]][,'alpha[2,1]'],jsample[[2]][,'alpha[2,1]'])
+a23 <- c(jsample[[1]][,'alpha[2,2]'],jsample[[2]][,'alpha[2,2]'])
+a24 <- c(jsample[[1]][,'alpha[2,3]'],jsample[[2]][,'alpha[2,3]'])
+a22 <- rep(0,length(a21)) ## ref
+a2<-cbind(a21,a22,a23,a24)
+apply(exp(a2)/apply(exp(a2),1,sum),2,mean)
+apply(exp(a2)/apply(exp(a2),1,sum),2,sd)
+
+# psiB2NB psiB2B1 psiB2B2 psiB2B3
+a31 <- c(jsample[[1]][,'alpha[3,1]'],jsample[[2]][,'alpha[3,1]'])
+a32 <- c(jsample[[1]][,'alpha[3,2]'],jsample[[2]][,'alpha[3,2]'])
+a34 <- c(jsample[[1]][,'alpha[3,3]'],jsample[[2]][,'alpha[3,3]'])
+a33 <- rep(0,length(a31)) ## ref
+a3<-cbind(a31,a32,a33,a34)
+apply(exp(a3)/apply(exp(a3),1,sum),2,mean)
+apply(exp(a3)/apply(exp(a3),1,sum),2,sd)
+
+# psiB3NB psiB3B1 psiB3B2 psiB3B3
+a41 <- c(jsample[[1]][,'alpha[4,1]'],jsample[[2]][,'alpha[4,1]'])
+a42 <- c(jsample[[1]][,'alpha[4,2]'],jsample[[2]][,'alpha[4,2]'])
+a43 <- c(jsample[[1]][,'alpha[4,3]'],jsample[[2]][,'alpha[4,3]'])
+a44 <- rep(0,length(a41)) ## ref
+a4<-cbind(a41,a42,a43,a44)
+apply(exp(a4)/apply(exp(a4),1,sum),2,mean)
+apply(exp(a4)/apply(exp(a4),1,sum),2,sd)
+
+
+#----- compute LRS
+
+# merge two MCMC chains
+res <- rbind(jsample[[1]],jsample[[2]])
+dim(res) # 20000 x 962
+lrs <- res[,13:955]
+dim(lrs)
+
+# number of simulations
+nrowarray = dim(lrs)[1]
+
+# matrix of estimated states
+lrsind = array(NA,c(nrowarray,n,K))
+for (k in 1:nrowarray)
+{
+ind=1
+for (i in 1:n)
+{
+for (j in e[i]:K)
+{
+lrsind[k,i,j] = lrs[k,index[i,j]]
+ind=ind+1
+}
+}
+}
+dim(lrsind)
+
+lrstot <- matrix(0,nrow=n,ncol=nrowarray)
+for (kk in 1:nrowarray){
+	for (i in 1:n){
+		for (j in e[i]:K){
+			if (lrsind[kk,i,j] == 1) lrstot[i,kk] <- lrstot[i,kk] + 0
+			if (lrsind[kk,i,j] == 2) lrstot[i,kk] <- lrstot[i,kk] + 1
+			if (lrsind[kk,i,j] == 3) lrstot[i,kk] <- lrstot[i,kk] + 2
+			if (lrsind[kk,i,j] == 4) lrstot[i,kk] <- lrstot[i,kk] + 3
+			if (lrsind[kk,i,j] == 5) lrstot[i,kk] <- lrstot[i,kk] + 0
+			           }
+			      }
+			          }		
+
+# compute LRS, credible intervals and stadard deviation
+lrsfinal <- apply(lrstot,1,median)
+lrs.lb <- apply(lrstot,1,quantile,probs=2.5/100)
+lrs.ub <- apply(lrstot,1,quantile,probs=97.5/100)
+lrs.sd <- apply(lrstot,1,sd)
+
+# frequency distribution of LRS
+lrsfinal.mod <- as.factor(lrsfinal)
+res <- NULL
+for(i in levels(lrsfinal.mod))
+{
+mask=(lrsfinal.mod==i)
+res <- c(res,mean(lrs.sd[mask]))
+}
+barx <- barplot(table(lrsfinal),col="white",ylim=c(0,60),xlab="Lifetime reproductive success", ylab="Number of individuals")
+arrows(barx,table(lrsfinal)+res, barx, table(lrsfinal)-res, angle=90, code=3,length = 0.05)
+
+

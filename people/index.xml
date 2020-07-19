@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>People | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/people/</link>
+      <atom:link href="https://oliviergimenez.github.io/people/index.xml" rel="self" type="application/rss+xml" />
+    <description>People</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfshing.jpg</url>
+      <title>People</title>
+      <link>https://oliviergimenez.github.io/people/</link>
+    </image>
+    
+    <item>
+      <title>Current lab members</title>
+      <link>https://oliviergimenez.github.io/people/current/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/people/current/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/maud.png&#34;&gt; 
+**Maud Quéroué** (PhD 2018-2021) is developing multispecies demographic models to 
+study predator-prey interactions in seabirds and competition/coexistence in passerines. 
+This is joint work with [Christophe Barbraud](http://www.cebc.cnrs.fr/ecomm/Fr_ecomm/equip_CB.html), [Pierre-Yves Henry](http://mecadev.cnrs.fr/index.php?post/Henry-Pierre-Yves) and [Vincent Devictor](http://vincent.devictor.free.fr/).
+&lt;img style=&#34;float:right;margin-left:10px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/oksana.png&#34;&gt;
+**Oksana Grente** (PhD 2018-2021) is evaluating the impact of lethal control on the French wolf population,
+with a special interest in social structure and livestock depredation. She will also develop an 
+adaptive management framework based on occupancy models. This is joint work with 
+Christophe Duchamp and Nolwenn Hoguet-Drouet from [ONCFS](http://www.oncfs.gouv.fr/).
+&lt;img style=&#34;float:left;margin-right:10px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/valentin.png&#34;&gt; 
+**Valentin Lauret** (PhD 2018-2021) is developing a structured decision making approach for adaptive
+monitoring of cetaceans in the network of marine protected areas in the French Mediterranean Sea. 
+This is joint work with Hélène Labach from [GIS3M](https://www.gis3m.org/).
+&lt;img style=&#34;float:right;margin-left:5px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/helene.jpg&#34;&gt;
+**Hélène Labach** (PhD 2016-2019) from [GIS3M](https://www.gis3m.org/) is working on the 
+conservation of bottlenose dolphins in the North-Western Mediterranean Sea. Her work 
+relies on the data collected through the [GDEGeM project](https://www.gdegem.org/).
+&lt;img style=&#34;float:left;margin-right:10px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/gilles.jpg&#34;&gt; 
+**Gilles Maurer** (PhD 2015-2018, post-doc 2018-2020) is studying the interactions between wild and 
+semi-captive pools of Asian elephants with an interdisciplinary framework 
+(demography, economy, anthropology, population genetics). This is joint work with 
+Baptiste Mulot at [Beauval Nature](http://www.beauvalnature.com/en/), 
+Finn Kjellberg and Nicolas Lescureux from CEFE.
+&lt;img style=&#34;float:right;margin-left:5px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/alix.jpg&#34;&gt;
+**Alix Cosquer** (post-doc 2019-2020) is an environmental psychologist. She is studying how
+to favor human-nature connection and children in particular using educative marine areas.
+&lt;img style=&#34;float:left;margin-right:10px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/monia.jpg&#34;&gt; 
+**Mónia Nakamura Mercier Real** (PhD 2019-2024) is investigating the impacts of anthropogenic 
+factors on large carnivores persistence in human-dominated landscapes. She uses wolf in Spain and Portugal as a model species 
+to address how different humanization levels can influence habitat selection and land use, and ultimately 
+affect its demography, status and viability. The thesis is co-supervised with [José Vicente López-Bao](https://scholar.google.es/citations?user=mWcf6MsAAAAJ&amp;hl=es) and [Pedro Monterroso](https://scholar.google.com/citations?user=2ulB-8QAAAAJ&amp;hl=en).
+</description>
+    </item>
+    
+    <item>
+      <title>Former lab members</title>
+      <link>https://oliviergimenez.github.io/people/alumni/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/people/alumni/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/nina.jpg&#34;&gt;
+**Nina Santostasi** (PhD 2016-2019) developed capture-recapture and demographic models 
+for studying hybridization in the wild. As case studies, she considered dolphins in the Gulf of 
+Corinth in Greece (with Giovanni Bearzi and Silvia Bonizzoni from [Dolphin Biology and 
+Conservation](http://www.dolphinbiology.org/)) and wolves in Italy (with [Paolo 
+Ciucci](https://www.researchgate.net/profile/Paolo_Ciucci) from University of Rome - 
+La Sapienza). Nina is now a post-doc with La Sapienza working on estimating population abundance of brown bears.
+&lt;img style=&#34;float:right;margin-left:5px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/SarahBauduin.jpg&#34;&gt;
+**Sarah Bauduin** (post-doc 2018-2019) built spatially-explicit agent-based models
+to assess the viability of Eurasian lynx in France, and more broadly to study multispecies demography. 
+Sarah is now a permanent researcher with the French Game and Wildlife Agency.
+&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/lorena.jpg&#34;&gt;
+**Lorena Mansilla** (PhD 2016-2019) developed capture-recapture and demographic models 
+for social species with wolves, dolphins and elephant seals as case studies. She used spatially-explicit 
+capture-recapture models, social networks, cluster analyses and integrated population models.
+&lt;img style=&#34;float:right;margin-left:5px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/vincenzo.png&#34;&gt;
+**Vincenzo Gervasi** (post-doc 2017-2019) used an interdisciplinary approach to 
+understand coexistence patterns and build trans-boundary management tools for coexistence 
+between large carnivores and human activities in Europe. This was joint work with [John 
+Linnell](https://nina.academia.edu/JohnLinnell) from NINA (Norway) and 
+[Luigi Boitani](http://bbcd.bio.uniroma1.it/bbcd/en/users/boitani-luigi) from 
+University of Rome - La Sapienza. Vincenzo is now a post-doc with ISPRA back in Italy working on the African swine fever epidemics in wild boar. 
+&lt;img style=&#34;float:left;margin-right:15px;margin-top:10px&#34; src=&#34;https://oliviergimenez.github.io/img/lucile-marescot.jpg&#34;&gt;
+**Lucile Marescot** (post-doc 2017-2019) developed multi-species occupancy models for large mammals. 
+This was a collaboration with Christophe Duchamp 
+and Nolwenn Hoguet-Drouet from [ONCFS](http://www.oncfs.gouv.fr/) (France) and Arnaud Lyet from
+[WWF-US](https://www.worldwildlife.org/pages/arnaud-lyet-ph-d). Lucile now runs her own business as a statistical ecology consultant. 
+&lt;img style=&#34;float:right;margin-left:10px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/julie.jpg&#34;&gt;
+**Julie Louvrier** (PhD 2015-2018) evaluated and developed occupancy models for assessing the 
+distribution of large carnivores (wolf, lynx) in Europe. This was joint work with 
+Christophe Duchamp, Nolwenn Hoguet-Drouet and Eric Marboutin from [ONCFS](http://www.oncfs.gouv.fr/).
+Julie is now a post-doc at the [Leibniz Institute for Zoo and Wildlife Research](www.izw-berlin.de/welcome.html).
+&lt;img style=&#34;float:right;margin-left:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/lorelei.jpg&#34;&gt;
+**Loreleï Guéry** (post-doc 2016-2018) studied the dynamics of lynx in 
+Switzerland using spatially-explicit capture-recapture models. This was joint work with 
+[Fridolin Zimmermann](http://www.kora.ch/index.php?id=232&amp;L=1) from KORA. Loreleï is now a post-doc
+in the MARBEC lab, working with [Daniel Gaertner](http://www.umr-marbec.fr/gaertner-daniel.html) from IRD
+on the population dynamics of tunas. 
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/Blaise_Piedallu.png&#34;&gt;
+**Blaise Piédallu** - PhD (2013-2016) developed an integrated approach for managing human-wildlife 
+conflicts with the Pyrenean brown bear population as a case study (joint work with 
+Pierre-Yves Quenette from ONCFS). Blaise is now working as a biology teacher.
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/laetitia-blanc.jpg&#34;&gt;
+**Laetitia Blanc** - PhD (2012-2016), ATER (2016) Conservation of lynx in France using 
+spatially-explicit individual-based models (joint work with Stephanie Kramer-Schadt from 
+IZW and Eric Marboutin from ONCFS). Laetitia is now working as a biology teacher.
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/pamecc81la-lagrange.jpg&#34;&gt;
+**Paméla Lagrange** - PhD (2011-2015) Drivers of survival and 
+dispersal in Tree Swallows using capture-recapture data (joint work with 
+[Marc Bélisle](http://www.usherbrooke.ca/sciences/personnel/biologie/professeurs/ecologie-terrestre/marc-belisle/) at Sherbrooke). Pam is now working as a project manager at [Réserves Naturelles de France](http://www.reserves-naturelles.org/).
+&lt;img style=&#34;float:right;margin-left:5px;margin-top:15px;&#34; src=&#34;https://oliviergimenez.github.io/img/tamar.png&#34;&gt;
+**Tamar Lok** - Post-doc (2015-2017) - Integrated population models combining
+colour-banding, tracking and count data to assess within- and between-individual 
+variation in different aspects of migratory behaviour of the Eurasian Spoonbill and 
+the Red Knot. Tamar is back to the Netherlands where [she is a researcher](https://www.nioz.nl/en/about/organisation/staff/tamar-lok).
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/papaix_small.jpg&#34;&gt;
+**Julien Papaïx** - Post-doc (2014) - Impact of global change on the population dynamics of Atlantic salmons 
+(joint work with [Etienne Prévost](http://www6.bordeaux-aquitaine.inra.fr/st_pee_eng/UMR-Ecobiop/Members/Etienne-Prevost)). Now a [permanent researcher at INRA](https://scholar.google.fr/citations?user=fRLFulEAAAAJ&amp;hl=fr).
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/fitsum.jpg&#34;&gt;
+**Fitsum Abadi** - Post-doc (2012) - Integrated population 
+modelling. Post-doc in SA, lecturer in SA, now [assistant professor in 
+the US, New Mexico State University](http://aces.nmsu.edu/academics/fws/fitsum-abadi-gebreselass.html).
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/index1.jpg&#34;&gt;
+**Guillaume Péron** - Post-doc (2010) - Spatial 
+heterogeneity in Eurasian woodcock survival. Post-doc in the US, contractual 
+researcher with ONCFS and French National Parks, post-doc in the US, now a [permanent researcher at CNRS](https://guillaumeperon.wordpress.com/).
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/sabrina.jpg&#34;&gt;
+**Sabrina Servanty** - Post-doc (2008-2009) - Dynamic of 
+exploited populations with wild boar as a case study. Post-doc in the US, post-doc 
+in St-Pée/Nivelle on the Côte Basque.
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/32.jpg&#34;&gt;
+**Elena Papadatou** - Post-doc (2009) - Environmental 
+variation and population dynamics of bats. Environmental expert in Greece, now project manager at [Arup](https://www.arup.com/).
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/marene-gamelon-pho2014_k2e5582.jpg&#34;&gt;
+**Marlène Gamelon** - PhD (2011-2013) - Environmental 
+variation and reproduction tactics (joint work with Jean-Michel Gaillard and 
+Eric Baubet). [Post-doc in Norway](https://www.ntnu.edu/employees/marlene.gamelon).
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/lucile-marescot.jpg&#34;&gt;
+**Lucile Marescot** - PhD (2010-2012) - Modelling the 
+recolonization of wolves in France (joint work with Eric Marboutin and Guillaume Chapron). 
+Post-doc in NZ and the US, post-doc in Germany, now post-doc at CEFE.
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/cubaynes_s.jpg&#34;&gt;
+**Sarah Cubaynes** - PhD (2009-2011) - Capture-recapture 
+mixed models (joint work with Christian Lavergne). Post-doc in Oxford, post-doc with us, now 
+[assistant professor at Montpellier](https://www.ephe.fr/annuaire/sarah-cubaynes) University, France.
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/index.jpg&#34;&gt;
+**Mathieu Buoro** - PhD (2010-2012) - Evolutionary ecology 
+in the wild using mark-recapture data in Atlantic salmons (joint work with Etienne 
+Prévost). Post-doc at Berkeley, then in Toulouse. Now a [permanent researcher at INRA](http://mathieubuoro.com/).
+&lt;img style=&#34;float:right;margin-left:15px&#34; src=&#34;https://oliviergimenez.github.io/img/francois-guilhaumon.jpg&#34;&gt;
+**François Guilhaumon** - PhD (2008-2010) - Analysis of 
+biodiversity patterns at large scale and conservation biogeography 
+(joint work with David Mouillot). Now a [permanent researcher at IRD](http://www.umr-marbec.fr/guilhaumon-francois.html).
+&lt;p&gt;A list of my former Master students is available 
+&lt;a href=&#34;https://oliviergimenez.github.io/MasterStudents.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
