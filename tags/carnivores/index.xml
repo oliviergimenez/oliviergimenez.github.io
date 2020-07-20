@@ -5,12 +5,25 @@
     <link>https://oliviergimenez.github.io/tags/carnivores/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/carnivores/index.xml" rel="self" type="application/rss+xml" />
     <description>carnivores</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Tue, 15 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfshing.jpg</url>
       <title>carnivores</title>
       <link>https://oliviergimenez.github.io/tags/carnivores/</link>
     </image>
+    
+    <item>
+      <title>Large carnivores monitoring</title>
+      <link>https://oliviergimenez.github.io/project/carnivores/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/project/carnivores/</guid>
+      <description>&lt;p&gt;Large carnivores are difficult to monitor in the field: they are elusive and live at low densities over wide areas. With their recent recovery in Europe,
+large carnivores are having increasing interactions with human activities. We contribute to the estimation of their abundance and distribution by applying
+and developing methods that make optimal use of available data. We are also working on applying science-based management using the structured
+decision making framework. Past and ongoing projects were are are mostly led by 
+&lt;a href=&#34;https://oliviergimenez.github.io/#current&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Master students, PhDs and post-docs&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Inferring wildlife poaching in Southeast Asia with multispecies dynamic occupancy models</title>
@@ -40,6 +53,22 @@
       <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New paper by &lt;a href=&#34;https://twitter.com/hashtag/SarahBenhaiem?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SarahBenhaiem&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/LMarescot?ref_src=twsrc%5Etfw&#34;&gt;@LMarescot&lt;/a&gt; 🤩👏 &amp;quot;Robustness of Eco-Epidemiological Capture-Recapture Parameter Estimates to Variation in Infection State Uncertainty&amp;quot; &lt;a href=&#34;https://t.co/ZvNghUHUUY&#34;&gt;https://t.co/ZvNghUHUUY&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HMM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/multievent?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#multievent&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/TMB?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TMB&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#WomenInSTEM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/carnivorepapersbywomen?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#carnivorepapersbywomen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/heynas?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#heynas&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/serengeti?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#serengeti&lt;/a&gt; &lt;a href=&#34;https://t.co/VT6iStk5UW&#34;&gt;pic.twitter.com/VT6iStk5UW&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1034490461304619010?ref_src=twsrc%5Etfw&#34;&gt;28 août 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Socio-ecological management of large carnivores</title>
+      <link>https://oliviergimenez.github.io/project/sciencepolicy/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/project/sciencepolicy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
+      <link>https://oliviergimenez.github.io/project/lynx/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/project/lynx/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -86,41 +115,6 @@ Our project `Avoid, reduce and compensate mortality risks of the Eurasian Lynx b
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This project will fill a gap between the academic research, the stakes of land planning, the lynx conservation and the needs of ITT managers/operators. We will contribute to the implementation of national public policies (TVB, SRCE/SRADDET, &amp;ldquo;Avoid, Reduce, Compensate&amp;rdquo; doctrine) by testing our approach on pilot sites in the Vosges and Jura areas. This project will benefit from the sharing of experiences and skills from our colleagues in Switzerland and Germany.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Large carnivores monitoring</title>
-      <link>https://oliviergimenez.github.io/project/carnivores/</link>
-      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
-      <guid>https://oliviergimenez.github.io/project/carnivores/</guid>
-      <description>&lt;p&gt;Large carnivores are difficult to monitor in the field: they are elusive and live at low densities over wide areas. With their recent recovery in Europe,
-large carnivores are having increasing interactions with human activities. We contribute to the estimation of their abundance and distribution by applying
-and developing methods that make optimal use of available data. We are also working on applying science-based management using the structured
-decision making
-framework.&lt;/p&gt;
-&lt;p&gt;Ongoing projects are mostly led by 
-&lt;a href=&#34;https://oliviergimenez.github.io/#current&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Master students, PhDs and post-docs&lt;/a&gt;: Julie Louvrier worked on tools to infer the
-distribution of large carnivores in France and Norway; Loreleï Guéry in her post-doc studied population dynamics of lynx in Switzerland using
-spatially-explicit closed and open capture-recapture models; Vincenzo Gervasi&amp;rsquo;s post-doc aimed at assessing the
-determinants of conflicts on large carnivores in Europe and build trans-boundary management tools for wolves (France-Italy) and wolverines (Sweden-Norway); Nina Santostasi in her PhD is developing
-demographic models for studying hybridizing species, with wolves in Italy as as case study; Lorena Mansilla in her PhD is developing capture-recapture models to assess the population dynamics of social species; Sarah Bauduin&amp;rsquo;s post-doc aims at developing a spatially-explicit agent-based model and software program for assessing lynx viability in France; Lucile Marescot&amp;rsquo;s post-doc aims at developing multispecies occupancy models for large carnivores and their preys.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
-      <link>https://oliviergimenez.github.io/project/lynx/</link>
-      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
-      <guid>https://oliviergimenez.github.io/project/lynx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Socio-ecological management of large carnivores</title>
-      <link>https://oliviergimenez.github.io/project/sciencepolicy/</link>
-      <pubDate>Tue, 08 Aug 2017 13:07:40 +0300</pubDate>
-      <guid>https://oliviergimenez.github.io/project/sciencepolicy/</guid>
-      <description></description>
     </item>
     
   </channel>

@@ -5,12 +5,32 @@
     <link>https://oliviergimenez.github.io/tags/bayes/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/bayes/index.xml" rel="self" type="application/rss+xml" />
     <description>bayes</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Fri, 20 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfshing.jpg</url>
       <title>bayes</title>
       <link>https://oliviergimenez.github.io/tags/bayes/</link>
     </image>
+    
+    <item>
+      <title>Statistical ecology</title>
+      <link>https://oliviergimenez.github.io/project/methods/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/project/methods/</guid>
+      <description>&lt;p&gt;Trained in mathematics and statistics, I have developed a bottomless taste for questions in 
+&lt;a href=&#34;http://rsbl.royalsocietypublishing.org/content/10/12/20140698&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;statistical ecology&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I often resort to 
+&lt;a href=&#34;https://oliviergimenez.github.io/#books&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;state-space models&lt;/a&gt;, and hidden Markov models (
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Gimenezetal2014.pdf&#34;&gt;here&lt;/a&gt; and 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Gimenezetal2012TPB.pdf&#34;&gt;here&lt;/a&gt;) in particular, to develop statistical methods for capture-recapture, occupancy and integrated models.&lt;/p&gt;
+&lt;p&gt;We address questions in conservation biology to assess species viability, in ecology to study the effect of climate change on animal demography, in evolution to examine life-history tactics and individual heterogeneity and in wildlife management to develop strategies for conservation and conflict mitigation. To account for the human dimension related to these questions, I recently went back to the university to study sociology. A nice illustration of this interdisciplinary work is 
+&lt;a href=&#34;https://oliviergimenez.github.io/#current&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gilles Maurer&amp;rsquo;s PhD&lt;/a&gt; combining anthropology, demography, economics and genetics to better understand the interactions between captive and wild population of Asian elephants.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m doing my best to teach statistics (including the Bayesian way) to the students of the 
+&lt;a href=&#34;https://www.masters-biologie-ecologie.com/blog/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ecology and Evolution Master in Montpellier&lt;/a&gt;. We also make efforts to structure the community in France through our 
+&lt;a href=&#34;https://sites.google.com/site/gdrecostat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;national research group in statistical ecology&lt;/a&gt;. Last but not least, every year our team organizes 
+&lt;a href=&#34;https://multievent.sciencesconf.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;workshops&lt;/a&gt; to diffuse the methods we develop.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Nimble and HMM</title>
@@ -26,27 +46,6 @@
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/blog/daniel_turek/</guid>
       <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🥳 It is a pleasure to welcome Daniel Turek &lt;a href=&#34;https://twitter.com/WilliamsCollege?ref_src=twsrc%5Etfw&#34;&gt;@WilliamsCollege&lt;/a&gt; for a 6-month sabbatical here in &lt;a href=&#34;https://twitter.com/montpellier_?ref_src=twsrc%5Etfw&#34;&gt;@montpellier_&lt;/a&gt; Stay tuned for more about &lt;a href=&#34;https://twitter.com/hashtag/Bayes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bayes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/StatisticalEcology?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StatisticalEcology&lt;/a&gt; w/ &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; 🤩 Check out Daniel&amp;#39;s website ▶️ &lt;a href=&#34;https://t.co/HYyMMrN6Nb&#34;&gt;https://t.co/HYyMMrN6Nb&lt;/a&gt; &lt;a href=&#34;https://t.co/vK7q6bYzPU&#34;&gt;pic.twitter.com/vK7q6bYzPU&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1171146444021125124?ref_src=twsrc%5Etfw&#34;&gt;September 919&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
-    </item>
-    
-    <item>
-      <title>Statistical ecology</title>
-      <link>https://oliviergimenez.github.io/project/methods/</link>
-      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
-      <guid>https://oliviergimenez.github.io/project/methods/</guid>
-      <description>&lt;p&gt;Trained in mathematics and statistics, I work in 
-&lt;a href=&#34;https://www.cefe.cnrs.fr/fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;an ecology and evolution lab&lt;/a&gt; which allowed me to develop a bottomless taste for questions in 
-&lt;a href=&#34;http://rsbl.royalsocietypublishing.org/content/10/12/20140698&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;statistical ecology&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I often resort to 
-&lt;a href=&#34;https://oliviergimenez.github.io/#books&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;state-space models&lt;/a&gt;, and hidden Markov models (
-&lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-pubs/Gimenezetal2014.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
-&lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-pubs/Gimenezetal2012TPB.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;) in particular, to develop statistical methods for capture-recapture, occupancy and integrated models.&lt;/p&gt;
-&lt;p&gt;We address questions in conservation biology to assess species viability, in ecology to study the effect of climate change on animal demography, in evolution to examine life-history tactics and individual heterogeneity and in wildlife management to develop strategies for conservation and conflict mitigation. To account for the human dimension related to these questions, I recently went back to the university to study sociology. A nice illustration of this interdisciplinary work is 
-&lt;a href=&#34;https://oliviergimenez.github.io/#current&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gilles Maurer&amp;rsquo;s PhD&lt;/a&gt; combining anthropology, demography, economics and genetics to better understand the interactions between captive and wild population of Asian elephants.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m doing my best to teach statistics (including the Bayesian way) to the students of the 
-&lt;a href=&#34;https://www.masters-biologie-ecologie.com/blog/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ecology and Evolution Master in Montpellier&lt;/a&gt;. We also make efforts to structure the community in France through our 
-&lt;a href=&#34;https://sites.google.com/site/gdrecostat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;national research group in statistical ecology&lt;/a&gt;. Last but not least, every year our team organizes 
-&lt;a href=&#34;https://multievent.sciencesconf.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;workshops&lt;/a&gt; to diffuse the methods we develop.&lt;/p&gt;
-</description>
     </item>
     
     <item>

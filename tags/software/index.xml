@@ -5,12 +5,20 @@
     <link>https://oliviergimenez.github.io/tags/software/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
     <description>software</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Tue, 28 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sun, 12 Aug 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfshing.jpg</url>
       <title>software</title>
       <link>https://oliviergimenez.github.io/tags/software/</link>
     </image>
+    
+    <item>
+      <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
+      <link>https://oliviergimenez.github.io/project/lynx/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/project/lynx/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
@@ -44,14 +52,6 @@ Our project `Avoid, reduce and compensate mortality risks of the Eurasian Lynx b
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This project will fill a gap between the academic research, the stakes of land planning, the lynx conservation and the needs of ITT managers/operators. We will contribute to the implementation of national public policies (TVB, SRCE/SRADDET, &amp;ldquo;Avoid, Reduce, Compensate&amp;rdquo; doctrine) by testing our approach on pilot sites in the Vosges and Jura areas. This project will benefit from the sharing of experiences and skills from our colleagues in Switzerland and Germany.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
-      <link>https://oliviergimenez.github.io/project/lynx/</link>
-      <pubDate>Sat, 12 Aug 2017 13:07:40 +0300</pubDate>
-      <guid>https://oliviergimenez.github.io/project/lynx/</guid>
-      <description></description>
     </item>
     
   </channel>
