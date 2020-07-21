@@ -33,6 +33,15 @@
     </item>
     
     <item>
+      <title>Workshop on Bayesian statistics</title>
+      <link>https://oliviergimenez.github.io/blog/bayesworkshop/</link>
+      <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/bayesworkshop/</guid>
+      <description>&lt;p&gt;Just finished polishing up my slides for a workshop on Bayesian statistics.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Just finished polishing up my slides for a workshop on Bayesian statistics 🥱😅 &lt;br&gt;☑️ Slides, code &amp;amp; data &lt;a href=&#34;https://t.co/1SrGkYO8o0&#34;&gt;https://t.co/1SrGkYO8o0&lt;/a&gt;&lt;br&gt;☑️ Videos 🎦 soon to follow (in French, then English w/ strong accent).&lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/jags?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#jags&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/BayesianStatistics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#BayesianStatistics&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/MCMC?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#MCMC&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/EcologicalStatistics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#EcologicalStatistics&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/MultilevelModels?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#MultilevelModels&lt;/a&gt; &lt;a href=&#34;https://t.co/lxleExWjqE&#34;&gt;pic.twitter.com/lxleExWjqE&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1284407024156127232?ref_src=twsrc%5Etfw&#34;&gt;July 18, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
       <title>Nimble and HMM</title>
       <link>https://oliviergimenez.github.io/blog/nimblehmm/</link>
       <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>

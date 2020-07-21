@@ -448,20 +448,16 @@
         
 
         
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/talk"><span>Talks & workshops</span></a>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>Talks & workshops</span><span class="caret"></span>
+          </a>
+          <div class="dropdown-menu">
+            
+              <a class="dropdown-item" href="/talks/talk"><span>Talks</span></a>
+            
+              <a class="dropdown-item" href="/talks/workshop"><span>Workshops</span></a>
+            
+          </div>
         </li>
 
         
@@ -549,6 +545,19 @@
       <div class="article-style">
         
           Developing, communicating and teaching methods and models for ecology and conservation biology.
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/blog/interactiveocc/" >Interactive visualisation of bias in occupancy models</a></h2>
+      <div class="article-style">
+        
+          Interactive data visualisation of bias in occupancy models w/ flexdashboard.
+
         
       </div>
     </div>
@@ -649,18 +658,6 @@
       <div class="article-style">
         
           I had to use the good old `OpenBUGS` for some analyses that cannot be done in `JAGS`. Below are the steps to install `OpenBUGS` then to run it from your Mac either natively or from `R`. This tutorial is an adaptation of [this post](https://sites.google.com/site/mmeclimate/-bayesmet/openbugs-on-mac-os-x) and [that one](http://www.davideagle.org/r-2/bayesian-modeling-using-winbugs-and-openbugs/running-openbugs-on-mac-using-wine).
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/blog/sim_with_jags/" >Simulating data with JAGS</a></h2>
-      <div class="article-style">
-        
-          Here, I illustrate the possibility to use `JAGS` to simulate data with two examples that might be of interest to population ecologists: first a linear regression, second a Cormack-Jolly-Seber capture-recapture model to estimate animal survival (formulated as a state-space model). The code is available from [GitHub](https://github.com/oliviergimenez/simul_with_jags).
         
       </div>
     </div>

@@ -5,12 +5,31 @@
     <link>https://oliviergimenez.github.io/tags/simulations/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/simulations/index.xml" rel="self" type="application/rss+xml" />
     <description>simulations</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Thu, 23 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 13 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfshing.jpg</url>
       <title>simulations</title>
       <link>https://oliviergimenez.github.io/tags/simulations/</link>
     </image>
+    
+    <item>
+      <title>Simulations from the Rota&#39;s multispecies occupancy model</title>
+      <link>https://oliviergimenez.github.io/blog/rota/</link>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/rota/</guid>
+      <description>&lt;p&gt;How to simulate data from the Rota&amp;rsquo;s multispecies occupancy model.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m working a lot w/ multispecies occupancy models these days, needed to simulate data from models à la Rota et al. (2016), in case it is useful to others ➡️ &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; code &lt;a href=&#34;https://t.co/qVzaXLoYcV&#34;&gt;https://t.co/qVzaXLoYcV&lt;/a&gt; Feedbacks welcome 😉 See also comments ⬇️ &lt;a href=&#34;https://t.co/fDNBp48GXT&#34;&gt;pic.twitter.com/fDNBp48GXT&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1249586726806466561?ref_src=twsrc%5Etfw&#34;&gt;April 13, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;A *Bayesian* follow-up on fitting a 2-species occupancy model w/ &lt;a href=&#34;https://twitter.com/hashtag/unmarked?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#unmarked&lt;/a&gt; to &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; simulated data: How to fit the simplest Rota&amp;#39;s model in &lt;a href=&#34;https://twitter.com/hashtag/Jags?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Jags&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; ➡️ &lt;a href=&#34;https://t.co/BmEAx0cRvw&#34;&gt;https://t.co/BmEAx0cRvw&lt;/a&gt; Feedback is welcome 😊 &lt;a href=&#34;https://t.co/PCO8pGLtLB&#34;&gt;https://t.co/PCO8pGLtLB&lt;/a&gt; &lt;a href=&#34;https://t.co/OpSskddTxP&#34;&gt;pic.twitter.com/OpSskddTxP&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1250169942084923394?ref_src=twsrc%5Etfw&#34;&gt;April 14, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bias in occupancy models</title>
+      <link>https://oliviergimenez.github.io/blog/occusimu/</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/occusimu/</guid>
+      <description>&lt;p&gt;Quick &amp;amp; dirty simulations to look at bias in occupancy estimates with respect to species detection for a static/single-season model.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Quick &amp;amp; dirty simulations to look at bias in occupancy estimates with respect to species detection for a static/single-season model &lt;a href=&#34;https://t.co/RRNpXuB3la&#34;&gt;https://t.co/RRNpXuB3la&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/occupancy?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#occupancy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/unmarked?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#unmarked&lt;/a&gt; &lt;a href=&#34;https://t.co/eN5kkdbkfm&#34;&gt;pic.twitter.com/eN5kkdbkfm&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1249433364232318982?ref_src=twsrc%5Etfw&#34;&gt;April 12, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
     
     <item>
       <title>Simulating data with JAGS</title>
