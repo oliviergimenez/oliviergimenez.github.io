@@ -7,16 +7,16 @@
     <description>management</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://oliviergimenez.github.io/img/flyfshing.jpg</url>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>management</title>
       <link>https://oliviergimenez.github.io/tags/management/</link>
     </image>
     
     <item>
       <title>Large carnivores monitoring</title>
-      <link>https://oliviergimenez.github.io/project/carnivores/</link>
+      <link>https://oliviergimenez.github.io/my-project/external-project/carnivores/</link>
       <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/project/carnivores/</guid>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/carnivores/</guid>
       <description>&lt;p&gt;Large carnivores are difficult to monitor in the field: they are elusive and live at low densities over wide areas. With their recent recovery in Europe,
 large carnivores are having increasing interactions with human activities. We contribute to the estimation of their abundance and distribution by applying
 and developing methods that make optimal use of available data. We are also working on applying science-based management using the structured
@@ -35,9 +35,9 @@ decision making framework. Past and ongoing projects were are are mostly led by
     
     <item>
       <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
-      <link>https://oliviergimenez.github.io/project/lynx/</link>
+      <link>https://oliviergimenez.github.io/my-project/external-project/lynx/</link>
       <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/project/lynx/</guid>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/lynx/</guid>
       <description></description>
     </item>
     
@@ -77,17 +77,17 @@ Our project `Avoid, reduce and compensate mortality risks of the Eurasian Lynx b
     
     <item>
       <title>Human-dolphin interactions</title>
-      <link>https://oliviergimenez.github.io/project/interact/</link>
+      <link>https://oliviergimenez.github.io/my-project/external-project/interact/</link>
       <pubDate>Sat, 12 Aug 2017 00:01:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/project/interact/</guid>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/interact/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multispecies demography</title>
-      <link>https://oliviergimenez.github.io/project/democom/</link>
+      <link>https://oliviergimenez.github.io/my-project/external-project/democom/</link>
       <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/project/democom/</guid>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/democom/</guid>
       <description></description>
     </item>
     

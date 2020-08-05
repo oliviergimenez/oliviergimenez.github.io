@@ -284,8 +284,8 @@ fitting hierarchical models in ecology. I gave a talk on &ldquo;Local minima and
 capture-recapture models&rdquo;, slides and R code available on
 
 GitHub.
-"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfshing.jpg">
-  <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfshing.jpg"><meta property="og:locale" content="en-us">
+"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
+  <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2016-11-28T12:00:00&#43;00:00">
@@ -330,7 +330,8 @@ GitHub.
 
       <div id="search-box">
         
-        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
         
       </div>
 
@@ -438,7 +439,7 @@ GitHub.
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/project"><span>Projects</span></a>
+          <a class="nav-link " href="/project_landing"><span>Projects</span></a>
         </li>
 
         
@@ -503,6 +504,10 @@ GitHub.
     </div>
 
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
       
 
       
@@ -658,26 +663,13 @@ several computing platforms (R, Jags, Nimble, Stan, Admb). Next meeting in May.<
       <div class="media-body">
         <h5 class="card-title"><a href="https://oliviergimenez.github.io"></a></h5>
         <h6 class="card-subtitle">Statistics, ecology &amp; social sciences</h6>
-        <p class="card-text">I&rsquo;m a senior scientist working at the interface of animal ecology, statistical modeling and social sciences.</p>
+        <p class="card-text">I&rsquo;m a scientist working at the interface of animal ecology, statistical modeling and social sciences.</p>
         <ul class="network-icon" aria-hidden="true">
   
     
     
     
-    
-    
-    
-    
       
-    
-    <li>
-      <a href="/www.researchgate.net/profile/Olivier_Gimenez" >
-        <i class="ai ai-researchgate"></i>
-      </a>
-    </li>
-  
-    
-    
     
     
     
@@ -686,8 +678,8 @@ several computing platforms (R, Jags, Nimble, Stan, Admb). Next meeting in May.<
       
     
     <li>
-      <a href="https://figshare.com/authors/_/3914297" target="_blank" rel="noopener">
-        <i class="ai ai-figshare"></i>
+      <a href="https://github.com/oliviergimenez" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
       </a>
     </li>
   
@@ -720,8 +712,38 @@ several computing platforms (R, Jags, Nimble, Stan, Admb). Next meeting in May.<
       
     
     <li>
-      <a href="https://github.com/oliviergimenez" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
+      <a href="https://www.facebook.com/groups/464518943663021/" target="_blank" rel="noopener">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.fr/citations?user=5NkQUA8AAAAJ&amp;hl=fr" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/www.researchgate.net/profile/Olivier_Gimenez" >
+        <i class="ai ai-researchgate"></i>
       </a>
     </li>
   
@@ -739,36 +761,6 @@ several computing platforms (R, Jags, Nimble, Stan, Admb). Next meeting in May.<
     <li>
       <a href="https://www.linkedin.com/in/olivier-gimenez-545451115/" target="_blank" rel="noopener">
         <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://orcid.org/0000-0001-7001-5142" target="_blank" rel="noopener">
-        <i class="ai ai-orcid"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://scholar.google.fr/citations?user=5NkQUA8AAAAJ&amp;hl=fr" target="_blank" rel="noopener">
-        <i class="ai ai-google-scholar"></i>
       </a>
     </li>
   
@@ -876,11 +868,46 @@ several computing platforms (R, Jags, Nimble, Stan, Admb). Next meeting in May.<
     
 
     
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
 
     
     
 
     
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
 
     
     
@@ -893,7 +920,6 @@ several computing platforms (R, Jags, Nimble, Stan, Admb). Next meeting in May.<
 
     
     
-
     
     
     
@@ -901,12 +927,12 @@ several computing platforms (R, Jags, Nimble, Stan, Admb). Next meeting in May.<
     
     
     
+      
     
     
     
     
-    
-    <script src="/js/academic.min.6f7ce8be710290b8c431bbc97f405d15.js"></script>
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
 
     
 

@@ -7,7 +7,7 @@
     <description>ecology</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://oliviergimenez.github.io/img/flyfshing.jpg</url>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>ecology</title>
       <link>https://oliviergimenez.github.io/tags/ecology/</link>
     </image>
@@ -213,9 +213,9 @@ ggsave(filename = &amp;quot;ecology_network.pdf&amp;quot;,width=30,height = 20)
     
     <item>
       <title>Socio-ecological management of large carnivores</title>
-      <link>https://oliviergimenez.github.io/project/sciencepolicy/</link>
+      <link>https://oliviergimenez.github.io/my-project/external-project/sciencepolicy/</link>
       <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/project/sciencepolicy/</guid>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/sciencepolicy/</guid>
       <description></description>
     </item>
     

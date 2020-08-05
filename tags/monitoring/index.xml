@@ -7,16 +7,16 @@
     <description>monitoring</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://oliviergimenez.github.io/img/flyfshing.jpg</url>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>monitoring</title>
       <link>https://oliviergimenez.github.io/tags/monitoring/</link>
     </image>
     
     <item>
       <title>Large carnivores monitoring</title>
-      <link>https://oliviergimenez.github.io/project/carnivores/</link>
+      <link>https://oliviergimenez.github.io/my-project/external-project/carnivores/</link>
       <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/project/carnivores/</guid>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/carnivores/</guid>
       <description>&lt;p&gt;Large carnivores are difficult to monitor in the field: they are elusive and live at low densities over wide areas. With their recent recovery in Europe,
 large carnivores are having increasing interactions with human activities. We contribute to the estimation of their abundance and distribution by applying
 and developing methods that make optimal use of available data. We are also working on applying science-based management using the structured
