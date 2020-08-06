@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/talks/</link>
       <atom:link href="https://oliviergimenez.github.io/talks/index.xml" rel="self" type="application/rss+xml" />
     <description>Talks and workshops</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Thu, 06 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Talks and workshops</title>
@@ -15,122 +15,127 @@
     <item>
       <title>Talks</title>
       <link>https://oliviergimenez.github.io/talks/talk/</link>
-      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/talk/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=j1f-p7Cc6Qk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Flexible spatio-temporal modelling of occupancy using GAMs: A case study with large carnivores.&lt;/a&gt;. Speed talk at 
-&lt;a href=&#34;https://www.isec2020.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ISEC2020&lt;/a&gt;. 2020, virtual Sydney Australia.&lt;/p&gt;
+&lt;p&gt;Flexible spatio-temporal modelling of occupancy using GAMs: A case study with large carnivores. Speed talk at 
+&lt;a href=&#34;https://www.isec2020.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ISEC&lt;/a&gt;. 2020, virtual Sydney Australia. 
+&lt;a href=&#34;https://youtu.be/j1f-p7Cc6Qk?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video&lt;/a&gt; and 
+&lt;a href=&#34;https://figshare.com/articles/Flexible_spatio-temporal_modelling_of_occupancy_using_GAMs_A_case_study_with_large_carnivores_/12443249/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.11913771.v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistical ecology and large carnivores&lt;/a&gt;. Public lecture. 2020, Rennes France.&lt;/p&gt;
+&lt;p&gt;Statistical ecology and large carnivores. Public lecture. 2020, Rennes France. 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.11913771.v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.11918226.v2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Modélisation spatio-temporelle de l’aire d’occupation : le cas des grands carnivores en France&lt;/a&gt;. Annual meeting of the French network in Statistical ecology. 2020, Rennes France.&lt;/p&gt;
+&lt;p&gt;Modélisation spatio-temporelle de l’aire d’occupation : le cas des grands carnivores en France. Annual meeting of the French network in Statistical ecology. 2020, Rennes France. 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.11918226.v2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.12102420.v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A review of research in capture-recapture: Ecological questions and methods&lt;/a&gt;.
-Wildlife Research and Conservation. 2019, Berlin Germany. Material 
-&lt;a href=&#34;https://github.com/oliviergimenez/capture-recapture-review&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A review of research in capture-recapture: Ecological questions and methods.
+Wildlife Research and Conservation. 2019, Berlin Germany. 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.12102420.v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;, 
+&lt;a href=&#34;https://youtu.be/RJiUIqs15ig?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video&lt;/a&gt; and 
+&lt;a href=&#34;https://github.com/oliviergimenez/capture-recapture-review&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;material&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Le_projet_INTERACT_Interactions_entre_dauphins_et_activit_s_humaines_sur_le_littoral_m_diterran_en_fran_ais/11474244&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Le projet INTERACT : Interactions entre dauphins et activités humaines sur le littoral méditerranéen français&lt;/a&gt;. Rencontres humains - cétacés. 2019, Nice France.&lt;/p&gt;
+&lt;p&gt;Le projet INTERACT : Interactions entre dauphins et activités humaines sur le littoral méditerranéen français. Rencontres humains - cétacés. 2019, Nice France. 
+&lt;a href=&#34;https://figshare.com/articles/Le_projet_INTERACT_Interactions_entre_dauphins_et_activit_s_humaines_sur_le_littoral_m_diterran_en_fran_ais/11474244&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
+&lt;a href=&#34;https://youtu.be/zbth8sSpeaw?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vidéos&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Inferring_animal_social_networks_with_imperfect_detection/11306948/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Inferring animal social networks with imperfect detection&lt;/a&gt;.
-World Marine Mammal Conference. 2019, Barcelona Spain.&lt;/p&gt;
+&lt;p&gt;Inferring animal social networks with imperfect detection.
+World Marine Mammal Conference. 2019, Barcelona Spain. 
+&lt;a href=&#34;https://figshare.com/articles/Inferring_animal_social_networks_with_imperfect_detection/11306948/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Variable_selection_in_capture-recapture_models_using_the_Lasso/6725144&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Variable selection in capture-recapture models using the Lasso&lt;/a&gt;. International Statistical Ecology Conference. 2018, St Andrews Scotland&lt;/p&gt;
+&lt;p&gt;Variable selection in capture-recapture models using the Lasso. International Statistical Ecology Conference. 2018, St Andrews Scotland. 
+&lt;a href=&#34;https://figshare.com/articles/Variable_selection_in_capture-recapture_models_using_the_Lasso/6725144&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Interactions_humains_et_c_tac_s_recherche_acad_mique/6686816&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Humains, cétacés et recherche académique&lt;/a&gt;. 
-&lt;a href=&#34;https://www.gis3m.org/actu/rencontres-hommes-cetaces-mediterranee-programme-conference&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rencontres sur les Interactions entre Humains et Cétacés&lt;/a&gt;. 2018, Marseille France.&lt;/p&gt;
+&lt;p&gt;Humains, cétacés et recherche académique. 
+&lt;a href=&#34;https://www.gis3m.org/actu/rencontres-hommes-cetaces-mediterranee-programme-conference&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rencontres sur les Interactions entre Humains et Cétacés&lt;/a&gt;. 2018, Marseille France. 
+&lt;a href=&#34;https://figshare.com/articles/Interactions_humains_et_c_tac_s_recherche_acad_mique/6686816&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
+&lt;a href=&#34;https://youtu.be/2bwI2cvm9kU?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vidéo&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Le_loup_dans_la_presse_approche_interdisciplinaire/9165239&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Le loup dans la presse : approche interdisciplinaire&lt;/a&gt;. Séminaire linguistique et écologie. 2018, Montpellier France.&lt;/p&gt;
+&lt;p&gt;Le loup dans la presse : approche interdisciplinaire. Séminaire linguistique et écologie. 2018, Montpellier France. 
+&lt;a href=&#34;https://figshare.com/articles/Le_loup_dans_la_presse_approche_interdisciplinaire/9165239&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Tenter_l_interdisciplinarit_dans_le_cadre_d_une_th_se_sur_les_conflits_humains-ours/9165176&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tenter l&amp;rsquo;interdisciplinarité dans le cadre d&amp;rsquo;une thèse sur les conflits humains-ours&lt;/a&gt;. Séminaire interdisciplinarité écologie – SHS. 2017, Grenoble France.&lt;/p&gt;
+&lt;p&gt;Tenter l&amp;rsquo;interdisciplinarité dans le cadre d&amp;rsquo;une thèse sur les conflits humains-ours. Séminaire interdisciplinarité écologie – SHS. 2017, Grenoble France. 
+&lt;a href=&#34;https://figshare.com/articles/Tenter_l_interdisciplinarit_dans_le_cadre_d_une_th_se_sur_les_conflits_humains-ours/9165176&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
+&lt;a href=&#34;https://youtu.be/VwExgy536K4?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vidéo&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/GimenezISEC2016_pdf/4833107&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dealing with many correlated covariates in capture-recapture models&lt;/a&gt;. International Statistical Ecology Conference. 2016, Seattle USA.&lt;/p&gt;
+&lt;p&gt;Dealing with many correlated covariates in capture-recapture models. International Statistical Ecology Conference. 2016, Seattle USA. 
+&lt;a href=&#34;https://figshare.com/articles/GimenezISEC2016_pdf/4833107&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/guinotghestem-gimenezsfe2016marseilleweb-161022125305_pdf/4832624&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Conservation and management of large carnivores in France: A beneficial collaboration between ONCFS practitioners and CNRS researchers&lt;/a&gt;. International Conference of Ecological Sciences. 2016, Marseille France.&lt;/p&gt;
+&lt;p&gt;Conservation and management of large carnivores in France: A beneficial collaboration between ONCFS practitioners and CNRS researchers. International Conference of Ecological Sciences. 2016, Marseille France. 
+&lt;a href=&#34;https://figshare.com/articles/guinotghestem-gimenezsfe2016marseilleweb-161022125305_pdf/4832624&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Abundance of bottlenose dolphins along the French Mediterranean coast (see 
+&lt;p&gt;Abundance of bottlenose dolphins along the French Mediterranean coast. 
+&lt;a href=&#34;https://www.gdegem.org/international-workshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;International workshop on Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea&lt;/a&gt;. 2015, Marseille France. Slides 
 &lt;a href=&#34;https://figshare.com/articles/tursiops_abundance_pdf/4833089&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
-&lt;a href=&#34;https://figshare.com/articles/tursiops_workshop_pdf/4833083&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt;). 
-&lt;a href=&#34;https://www.gdegem.org/international-workshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;International workshop on Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea&lt;/a&gt;. 2015, Marseille France.&lt;/p&gt;
+&lt;a href=&#34;https://figshare.com/articles/tursiops_workshop_pdf/4833083&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/GimenezICCB2015MontpellierV4_pptx/4833110&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Making sense of citizen science data: A review of methods&lt;/a&gt;. International Congress for Conservation Biology. 2014, Montpellier France.&lt;/p&gt;
+&lt;p&gt;Making sense of citizen science data: A review of methods. International Congress for Conservation Biology. 2014, Montpellier France. 
+&lt;a href=&#34;https://figshare.com/articles/GimenezICCB2015MontpellierV4_pptx/4833110&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/hmm_occupancy_pptx/4833092&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hidden Markov modelling of occupancy data&lt;/a&gt;. International Statistical Ecology Conference. 2014, Montpellier France.&lt;/p&gt;
+&lt;p&gt;Hidden Markov modelling of occupancy data. International Statistical Ecology Conference. 2014, Montpellier France. 
+&lt;a href=&#34;https://figshare.com/articles/hmm_occupancy_pptx/4833092&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/plenary_euring2013_pptx/4833095&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;All equal, really? Individual variability in capture-recapture models from biological and methodological perspectives&lt;/a&gt;. EURING analytical meeting. 2013, Athens USA.&lt;/p&gt;
+&lt;p&gt;All equal, really? Individual variability in capture-recapture models from biological and methodological perspectives. EURING analytical meeting. 2013, Athens USA. 
+&lt;a href=&#34;https://figshare.com/articles/plenary_euring2013_pptx/4833095&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Estimating_fitness_with_capture-recapture_data/9164753&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Estimating fitness in the wild&lt;/a&gt;. International Statistical Ecology Conference. 2012, Oslo Norway.&lt;/p&gt;
+&lt;p&gt;Estimating fitness in the wild. International Statistical Ecology Conference. 2012, Oslo Norway. 
+&lt;a href=&#34;https://figshare.com/articles/Estimating_fitness_with_capture-recapture_data/9164753&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Assessing_Inter-population_Variation_in_Survival_Using_Mark-Recapture_Data/9165182&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Assessing Inter-population Variation in Survival Using Mark-Recapture Data&lt;/a&gt;. Seminar at French National Museum of Natural History. 2011, Paris France.&lt;/p&gt;
+&lt;p&gt;Assessing Inter-population Variation in Survival Using Mark-Recapture Data. Seminar at French National Museum of Natural History. 2011, Paris France. 
+&lt;a href=&#34;https://figshare.com/articles/Assessing_Inter-population_Variation_in_Survival_Using_Mark-Recapture_Data/9165182&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/HDROGimenez-format3_pdf/4833509&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Des modèles de capture-recapture pour l&#39;écologie évolutive&lt;/a&gt;. 
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Habilitation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Habilitation à Diriger des Recherches&lt;/a&gt;. 2010, Montpellier France. Manuscript available 
-&lt;a href=&#34;https://figshare.com/articles/Manuscrit_HDR_Des_mod_les_de_capture-recapture_pour_l_cologie_volutive/9169991&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Des modèles de capture-recapture pour l&#39;écologie évolutive. 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Habilitation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Habilitation à Diriger des Recherches&lt;/a&gt;. 2010, Montpellier France. 
+&lt;a href=&#34;https://figshare.com/articles/HDROGimenez-format3_pdf/4833509&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
+&lt;a href=&#34;https://figshare.com/articles/Manuscrit_HDR_Des_mod_les_de_capture-recapture_pour_l_cologie_volutive/9169991&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;manuscript&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Combining_longitudinal_data_and_pedigree_information_to_assess_heritability_of_survival/9165149&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Combining longitudinal data and pedigree information to assess heritability of survival&lt;/a&gt;. 2009, Pescara Italy.&lt;/p&gt;
+&lt;p&gt;Combining longitudinal data and pedigree information to assess heritability of survival. 2009, Pescara Italy. 
+&lt;a href=&#34;https://figshare.com/articles/Combining_longitudinal_data_and_pedigree_information_to_assess_heritability_of_survival/9165149&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Importance_of_accounting_for_detection_heterogeneity_when_estimating_abundance_the_case_of_French_wolves_Canis_lupus_/9165212&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Importance of accounting for detection heterogeneity when estimating abundance: the case of French wolves (Canis lupus)&lt;/a&gt;. Seminar. 2009, Berkeley USA.&lt;/p&gt;
+&lt;p&gt;Importance of accounting for detection heterogeneity when estimating abundance: the case of French wolves (Canis lupus). Seminar. 2009, Berkeley USA. 
+&lt;a href=&#34;https://figshare.com/articles/Importance_of_accounting_for_detection_heterogeneity_when_estimating_abundance_the_case_of_French_wolves_Canis_lupus_/9165212&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Individual_heterogeneity_in_mortality_for_incomplete_longitudinal_data/9165209&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Individual heterogeneity in mortality for incomplete longitudinal data&lt;/a&gt;. Workshop in Biodemography. 2009, Stanford USA.&lt;/p&gt;
+&lt;p&gt;Individual heterogeneity in mortality for incomplete longitudinal data. Workshop in Biodemography. 2009, Stanford USA. 
+&lt;a href=&#34;https://figshare.com/articles/Individual_heterogeneity_in_mortality_for_incomplete_longitudinal_data/9165209&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Path_analysis_and_structural_equation_modeling_of_mark-recapture_data/9165164&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Path analysis and structural equation modeling of mark-recapture data&lt;/a&gt;. International Statistical Ecology Conference. 2008, St Andrews Scotland.&lt;/p&gt;
+&lt;p&gt;Path analysis and structural equation modeling of mark-recapture data. International Statistical Ecology Conference. 2008, St Andrews Scotland. 
+&lt;a href=&#34;https://figshare.com/articles/Path_analysis_and_structural_equation_modeling_of_mark-recapture_data/9165164&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Nonparametric_estimation_of_survival_using_penalized_splines_Applications_in_ecology_and_evolution/9165194&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nonparametric estimation of survival using penalized splines: Applications in ecology and evolution&lt;/a&gt;. EURING analytical meeting 2007 Dunedin New Zealand, International Biometric Conference 2008 Dublin Ireland, Conference of the French Society for Biometry 2005 Paris France.&lt;/p&gt;
+&lt;p&gt;Nonparametric estimation of survival using penalized splines: Applications in ecology and evolution. EURING analytical meeting 2007 Dunedin New Zealand, International Biometric Conference 2008 Dublin Ireland, Conference of the French Society for Biometry 2005 Paris France. 
+&lt;a href=&#34;https://figshare.com/articles/Nonparametric_estimation_of_survival_using_penalized_splines_Applications_in_ecology_and_evolution/9165194&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Investigate_Parameter-Redundancy_by_Yourself/9165200&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Investigate Parameter-Redundancy by Yourself&lt;/a&gt; 2003, Radolfzell Germany.&lt;/p&gt;
+&lt;p&gt;Investigating Parameter-Redundancy by Yourself 2003, Radolfzell Germany. 
+&lt;a href=&#34;https://figshare.com/articles/Investigate_Parameter-Redundancy_by_Yourself/9165200&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://figshare.com/articles/Slides_of_my_PhD_defense_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169988&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Estimation, inference and goodness-of-fit tests for multistate capture-recapture models&lt;/a&gt;. PhD defense. 2003, Montpellier France. Manuscript available 
-&lt;a href=&#34;https://figshare.com/articles/My_PhD_manuscript_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169994&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Estimation, inference and goodness-of-fit tests for multistate capture-recapture models. PhD defense. 2003, Montpellier France. 
+&lt;a href=&#34;https://figshare.com/articles/Slides_of_my_PhD_defense_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169988&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt; and 
+&lt;a href=&#34;https://figshare.com/articles/My_PhD_manuscript_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169994&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;manuscript&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -139,12 +144,12 @@ World Marine Mammal Conference. 2019, Barcelona Spain.&lt;/p&gt;
     <item>
       <title>Workshops</title>
       <link>https://oliviergimenez.github.io/talks/workshop/</link>
-      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/workshop/</guid>
       <description>&lt;p&gt;Novembre 2020. 
 &lt;a href=&#34;https://www.fondationbiodiversite.fr/evenement/frb-cesab-formation-reproductibilite-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bonnes pratiques pour une recherche reproductible en écologie numérique&lt;/a&gt;. Montpellier, France.&lt;/p&gt;
 &lt;p&gt;July 2020. 
-&lt;a href=&#34;https://github.com/oliviergimenez/Bayesian_Workshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian statistics&lt;/a&gt;. Remotely via Zoom.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/Bayesian_Workshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian statistics with R and Jags&lt;/a&gt;. Remotely via Zoom.&lt;/p&gt;
 &lt;p&gt;Décembre 2019. 
 &lt;a href=&#34;https://frbcesab.github.io/datatoolbox/index.html#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bonnes pratiques pour une recherche reproductible en écologie numérique&lt;/a&gt;. Montpellier, France.&lt;/p&gt;
 &lt;p&gt;2010-2018. 
