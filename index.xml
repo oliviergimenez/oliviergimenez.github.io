@@ -17,7 +17,8 @@
       <link>https://oliviergimenez.github.io/people/current/</link>
       <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/current/</guid>
-      <description>&lt;hr&gt; 
+      <description>&lt;br&gt;
+&lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/maud.png&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Maud Quéroué&lt;/strong&gt; (PhD 2018-2021) is developing multispecies demographic models to study predator-prey interactions in seabirds and competition/coexistence in passerines. This is joint work with 
 &lt;a href=&#34;http://www.cebc.cnrs.fr/ecomm/Fr_ecomm/equip_CB.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Christophe Barbraud&lt;/a&gt;, 
@@ -1269,22 +1270,6 @@ decision making framework. Past and ongoing projects were are are mostly led by
     </item>
     
     <item>
-      <title>Workshop on Bayesian statistics</title>
-      <link>https://oliviergimenez.github.io/talk2/2019-review-cmr/</link>
-      <pubDate>Thu, 09 Jul 2020 17:15:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/talk2/2019-review-cmr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Workshop on Bayesian statistics</title>
-      <link>https://oliviergimenez.github.io/talk2/2020-bayes-workshop/</link>
-      <pubDate>Thu, 09 Jul 2020 17:15:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/talk2/2020-bayes-workshop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Text mining of the ISEC2020 abstracts</title>
       <link>https://oliviergimenez.github.io/blog/textminingisec/</link>
       <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
@@ -1401,14 +1386,6 @@ decision making framework. Past and ongoing projects were are are mostly led by
       <guid>https://oliviergimenez.github.io/blog/gamoccupancy/</guid>
       <description>&lt;p&gt;Ongoing work on a flexible spatio-temporal model for occupancy data w/ a GAM-like approach in Nimble.&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;😺📉 Ongoing work on a flexible spatio-temporal model for &lt;a href=&#34;https://twitter.com/hashtag/occupancy?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#occupancy&lt;/a&gt; data w/ GAM-like approach in &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt;&lt;br&gt;This work wouldn&amp;#39;t be possible wo/ the dedication of &lt;a href=&#34;https://twitter.com/OFBiodiversite?ref_src=twsrc%5Etfw&#34;&gt;@OFBiodiversite&lt;/a&gt; colleagues 🙏💯 &lt;br&gt;Slides➡️&lt;a href=&#34;https://t.co/MSjwmtCCSq&#34;&gt;https://t.co/MSjwmtCCSq&lt;/a&gt; GAM anim courtesy &lt;a href=&#34;https://twitter.com/ucfagls?ref_src=twsrc%5Etfw&#34;&gt;@ucfagls&lt;/a&gt;&lt;br&gt;Thx &lt;a href=&#34;https://twitter.com/Yvan2935?ref_src=twsrc%5Etfw&#34;&gt;@Yvan2935&lt;/a&gt; for the tweet &lt;a href=&#34;https://t.co/zsyTyh1Qru&#34;&gt;https://t.co/zsyTyh1Qru&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1237824132223578114?ref_src=twsrc%5Etfw&#34;&gt;March 11, 2/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
-    </item>
-    
-    <item>
-      <title>Statistical ecology and large carnivores</title>
-      <link>https://oliviergimenez.github.io/talk2/2020-rennes-largecarnivores/</link>
-      <pubDate>Mon, 09 Mar 2020 17:15:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/talk2/2020-rennes-largecarnivores/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -5077,6 +5054,238 @@ institutes.&lt;/p&gt;
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Habilitation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in other countries&lt;/a&gt;) to be authorized
 to supervise (officially) PhD students.&lt;/p&gt;
 &lt;iframe src=&#34;https://widgets.figshare.com/articles/4833509/embed?show_title=1&#34; width=&#34;568&#34; height=&#34;351&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;</description>
+    </item>
+    
+    <item>
+      <title>Random pieces of code</title>
+      <link>https://oliviergimenez.github.io/coding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/coding/</guid>
+      <description>&lt;p&gt;Below I provide pieces of code I have written over the years and shared through 
+&lt;a href=&#34;https://github.com/oliviergimenez&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt; on 
+&lt;a href=&#34;#capture-recapture&#34;&gt;capture-recapture&lt;/a&gt;,  
+&lt;a href=&#34;#occupancy&#34;&gt;occupancy&lt;/a&gt; and 
+&lt;a href=&#34;#epidemiological-models-and-odes&#34;&gt;epidemiological&lt;/a&gt; models, 
+&lt;a href=&#34;#spatial&#34;&gt;spatial stuff&lt;/a&gt;, 
+&lt;a href=&#34;#social-networks&#34;&gt;social networks&lt;/a&gt;, 
+&lt;a href=&#34;#deep-learning-and-species-identification&#34;&gt;deep learning&lt;/a&gt;, 
+&lt;a href=&#34;#bibliometric-and-textual-analyses&#34;&gt;textual analyses&lt;/a&gt;, the 
+&lt;a href=&#34;#tidyverse&#34;&gt;tidyverse&lt;/a&gt; and some 
+&lt;a href=&#34;#random-stuff&#34;&gt;random stuff&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This code is provided as is without warranty of any kind. If you find a bug or anything, feel free to 
+&lt;a href=&#34;mailto:olivier.gimenez@cefe.cnrs.fr&#34;&gt;get in touch&lt;/a&gt; or 
+&lt;a href=&#34;https://docs.github.com/en/github/managing-your-work-on-github/creating-an-issue&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fill an issue on GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You may find other pieces of code in 
+&lt;a href=&#34;https://oliviergimenez.github.io/publication/papers/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;papers&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;capture-recapture&#34;&gt;Capture-recapture&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/multievent_jags_R&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multievent&lt;/a&gt; capture-recapture models &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;, &lt;code&gt;Nimble&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/multieventRcpp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multievent&lt;/a&gt; capture-recapture models with Rcpp &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Rcpp&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/sir_multievent&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multievent SIR models&lt;/a&gt; and capture-recapture data &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;TMB&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/multistate_local_minima&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Local minima&lt;/a&gt; and multistate capture-recapture models  &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;, &lt;code&gt;ADMB&lt;/code&gt;, &lt;code&gt;Stan&lt;/code&gt;, &lt;code&gt;unmarked&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/social_networks_capture_recapture&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Animal social networks&lt;/a&gt; and capture-recapture data &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/estim_fitness&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Individual fitness in the wild&lt;/a&gt; and capture-recapture data &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;, &lt;code&gt;E-SURGE&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gompertz capture-recapture model with a 
+&lt;a href=&#34;https://github.com/oliviergimenez/GammaGompertzCR&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gamma frailty&lt;/a&gt; &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/p2cr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Many correlated covariates&lt;/a&gt; in capture-recapture models &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;RMark&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/sem_capturerecapture&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Structural equation&lt;/a&gt; capture-recapture models &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/abundance_estimation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Abundance estimation&lt;/a&gt; using capture-recapture models &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;RMark&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/mixed-bandrecovery-models&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Band-recovery models with time random effects&lt;/a&gt; in a frequentist framework  &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bayesian implementation of capture-recapture models with 
+&lt;a href=&#34;https://github.com/oliviergimenez/bayesRD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;robust design&lt;/a&gt;  &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Predator-prey 
+&lt;a href=&#34;https://github.com/oliviergimenez/predator_prey_icm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;integrated community models&lt;/a&gt; &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;occupancy&#34;&gt;Occupancy&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/ursus_Pyrenees_occupancy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dynamic analysis&lt;/a&gt; of brown bear habitat use in the Pyrenees &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;unmarked&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dynamic occupancy models in 
+&lt;a href=&#34;https://github.com/oliviergimenez/occupancy_TMB&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;TMB&lt;/code&gt;&lt;/a&gt; and 
+&lt;a href=&#34;https://github.com/oliviergimenez/occupancy_in_ADMB&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;ADMB&lt;/code&gt;&lt;/a&gt; &amp;ndash; &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;TMB&lt;/code&gt;, &lt;code&gt;ADMB&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/multistate_occupancy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multistate occupancy model with uncertainty&lt;/a&gt;  &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/poaching_occupancy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HMM formulation of a multispecies dynamic&lt;/a&gt; occupancy models &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Simulation and fit of a 2-species occupancy model à la Rota et al. (2016) 
+&lt;a href=&#34;https://github.com/oliviergimenez/2speciesoccupancy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; with &lt;code&gt;unmarked&lt;/code&gt; and 
+&lt;a href=&#34;https://github.com/oliviergimenez/bayes2speciesoccupancy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt; with &lt;code&gt;Jags&lt;/code&gt; and &lt;code&gt;Nimble&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/bias_occupancy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bias in occupancy&lt;/a&gt; estimate for a static occupancy model, with an 
+&lt;a href=&#34;https://ecologicalstatistics.shinyapps.io/bias_occupancy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;interactive dashboard&lt;/a&gt; &amp;ndash; &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;unmarked&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;spatial&#34;&gt;Spatial&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/tidytuesday/tree/master/2019/week52&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Animated map&lt;/a&gt; of wolf presence in France &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Distribution map from an occupancy model, with 
+&lt;a href=&#34;https://github.com/oliviergimenez/gis_map_occupancy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eurasian&lt;/a&gt; or 
+&lt;a href=&#34;https://github.com/oliviergimenez/occ_balkanlynx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Balkan&lt;/a&gt; lynx &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;unmarked&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Introduction to 
+&lt;a href=&#34;https://github.com/oliviergimenez/intro_spatialR&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GIS and mapping in &lt;code&gt;R&lt;/code&gt;&lt;/a&gt; using the &lt;code&gt;sf&lt;/code&gt; package with 
+&lt;a href=&#34;https://oliviergimenez.github.io/introspatialR/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt; &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;epidemiological-models-and-odes&#34;&gt;Epidemiological models and ODEs&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Dynamic models based on 
+&lt;a href=&#34;https://github.com/oliviergimenez/fitODEnimble&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ODEs&lt;/a&gt; &amp;ndash;  &lt;code&gt;Nimble&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Explore strategies of 
+&lt;a href=&#34;https://github.com/oliviergimenez/SIRcovid19#motivation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;social distancing on epidemic w/ SIR model&lt;/a&gt; &amp;ndash; &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/fitODEswithOpenBUGS&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zombie apocalypse&lt;/a&gt; and a Bayesian approach for fitting an epidemiological model to data &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;OpenBUGS&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;social-networks&#34;&gt;Social networks&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Network analysis of 
+&lt;a href=&#34;https://github.com/oliviergimenez/starwars_network&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Star Wars The Attack of the Clones&lt;/a&gt; in R&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Animal social networks from 
+&lt;a href=&#34;https://github.com/oliviergimenez/social_networks_capture_recapture&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;capture-recapture data&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Analysis of 
+&lt;a href=&#34;https://github.com/oliviergimenez/tursiops_network_analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bottlenose dolphin&lt;/a&gt; social network &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/phd-in-ecology-network&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scientific research&lt;/a&gt; is all about networking &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;deep-learning-and-species-identification&#34;&gt;Deep learning and species identification&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;Piégeage photo et pipeline pour l&amp;rsquo;identification d&amp;rsquo;espèces via 
+&lt;a href=&#34;https://github.com/oliviergimenez/DLcamtrap#pi%C3%A9geage-photo-et-pipeline-pour-lidentification-desp%C3%A8ces&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;deep learning&lt;/a&gt; &amp;ndash; &lt;code&gt;Python&lt;/code&gt;, &lt;code&gt;R&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt; 
+&lt;h3 id=&#34;bibliometric-and-textual-analyses&#34;&gt;Bibliometric and textual analyses&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/wolf_content_analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Content analysis&lt;/a&gt; of French articles in newspapers about wolf  &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bibliometric and textual analyses of the 
+&lt;a href=&#34;https://github.com/oliviergimenez/appendix_capturerecapture_review&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;last decade of research in capture-recapture&lt;/a&gt; &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Quick and dirty 
+&lt;a href=&#34;https://github.com/oliviergimenez/isec2018_tweet_analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;analyses of ISEC 2018 tweets&lt;/a&gt; &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Text mining of the 
+&lt;a href=&#34;https://github.com/oliviergimenez/textmining_isec2020/blob/master/textmining_isec2020abstracts.R&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ISEC 2020 abstracts&lt;/a&gt; &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;tidyverse&#34;&gt;Tidyverse&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/intro_tidyverse#introduction-to-the-tidyverse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction&lt;/a&gt; to the tidyverse &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Analyses of 
+&lt;a href=&#34;https://github.com/oliviergimenez/analysesGeoloup&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wolf depredation in France&lt;/a&gt; &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Visualizing 
+&lt;a href=&#34;https://github.com/oliviergimenez/deces_coulmont&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;trends in French deaths&lt;/a&gt; &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;random-stuff&#34;&gt;Random stuff&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Illustration of the 
+&lt;a href=&#34;https://github.com/oliviergimenez/delta_method&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;delta-method&lt;/a&gt; &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Creating a 
+&lt;a href=&#34;https://github.com/oliviergimenez/R2ucarehex&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hex sticker&lt;/a&gt; for the  &lt;code&gt;R2ucare&lt;/code&gt; package &amp;ndash;  &lt;code&gt;R&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/simul_with_jags&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Simulate data with &lt;code&gt;Jags&lt;/code&gt;&lt;/a&gt;  &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>
