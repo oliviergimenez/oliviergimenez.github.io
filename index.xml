@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/</link>
       <atom:link href="https://oliviergimenez.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Olivier Gimenez</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Olivier Gimenez</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Current lab members</title>
       <link>https://oliviergimenez.github.io/people/current/</link>
-      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/current/</guid>
       <description>&lt;br&gt;
 &lt;hr&gt; 
@@ -49,9 +49,8 @@
 &lt;a href=&#34;https://institute.sandiegozoo.org/staff/nicholas-pilfold-phd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nicholas Pilfold&lt;/a&gt; and 
 &lt;a href=&#34;https://www.cefe.cnrs.fr/fr/actus/44-french/recherche/bc/bev/291-aurelien-besnard&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Aurélien Besnard&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt; 
-&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/gilles.jpg&#34; alt=&#34;&#34;&gt;
-&lt;strong&gt;Gilles Maurer&lt;/strong&gt; (PhD 2015-2018, post-doc 2018-2021) is studying the interactions between wild and semi-captive pools of Asian elephants with an interdisciplinary framework (demography, economy, anthropology, population genetics). This is joint work with Baptiste Mulot at 
-&lt;a href=&#34;http://www.beauvalnature.com/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Beauval Nature&lt;/a&gt;, Finn Kjellberg and Nicolas Lescureux from CEFE.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/patricia.jpg&#34; alt=&#34;&#34;&gt; &lt;strong&gt;Patrícia Rodrigues&lt;/strong&gt; (post-doc 2021) seeks to better understand the complexity associated with human-wildlife interactions in the subsistence landscapes of Ethiopia&amp;rsquo;s highlands. More 
+&lt;a href=&#34;https://rodriguespatri.wixsite.com/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/alix.jpg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Alix Cosquer&lt;/strong&gt; (post-doc 2019-2021) is an environmental psychologist. She is studying how to favor connections between nature and children using educative marine areas.&lt;/p&gt;
@@ -61,7 +60,7 @@
     <item>
       <title>Former lab members</title>
       <link>https://oliviergimenez.github.io/people/alumni/</link>
-      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/alumni/</guid>
       <description>&lt;br&gt;
 &lt;hr&gt; 
@@ -83,6 +82,11 @@ Sarah is now a
 &lt;a href=&#34;https://www.sarahbauduin.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;permanent researcher with the French Office of Biodiversity&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/gilles.jpg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Gilles Maurer&lt;/strong&gt; (PhD 2015-2018, post-doc 2018-2020) studied the interactions between wild and semi-captive pools of Asian elephants with an interdisciplinary framework (demography, economy, anthropology, population genetics). This was joint work with Baptiste Mulot at 
+&lt;a href=&#34;http://www.beauvalnature.com/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Beauval Nature&lt;/a&gt;, Finn Kjellberg and Nicolas Lescureux from CEFE. Gilles is now permanent researcher at Beauval Nature, hosted at CEFE.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/lorena.jpg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Lorena Mansilla&lt;/strong&gt; (PhD 2016-2019) developed capture-recapture and demographic models
 for social species with wolves, dolphins and elephant seals as case studies. She used spatially-explicit
@@ -221,174 +225,32 @@ biodiversity patterns at large scale and worked in conservation biogeography
     </item>
     
     <item>
-      <title>Talks</title>
-      <link>https://oliviergimenez.github.io/talks/talk/</link>
-      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/talks/talk/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Flexible spatio-temporal modelling of occupancy using GAMs: A case study with large carnivores. Speed talk at 
-&lt;a href=&#34;https://www.isec2020.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ISEC&lt;/a&gt;. 2020, virtual Sydney Australia. 
-&lt;a href=&#34;https://youtu.be/j1f-p7Cc6Qk?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video&lt;/a&gt; and 
-&lt;a href=&#34;https://figshare.com/articles/Flexible_spatio-temporal_modelling_of_occupancy_using_GAMs_A_case_study_with_large_carnivores_/12443249/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Statistical ecology and large carnivores. Public lecture. 2020, Rennes France. 
-&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.11913771.v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Modélisation spatio-temporelle de l’aire d’occupation : le cas des grands carnivores en France. Annual meeting of the French network in Statistical ecology. 2020, Rennes France. 
-&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.11918226.v2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A review of research in capture-recapture: Ecological questions and methods.
-Wildlife Research and Conservation. 2019, Berlin Germany. 
-&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.12102420.v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;, 
-&lt;a href=&#34;https://youtu.be/RJiUIqs15ig?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video&lt;/a&gt; and 
-&lt;a href=&#34;https://github.com/oliviergimenez/capture-recapture-review&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;material&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Le projet INTERACT : Interactions entre dauphins et activités humaines sur le littoral méditerranéen français. Rencontres humains - cétacés. 2019, Nice France. 
-&lt;a href=&#34;https://figshare.com/articles/Le_projet_INTERACT_Interactions_entre_dauphins_et_activit_s_humaines_sur_le_littoral_m_diterran_en_fran_ais/11474244&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
-&lt;a href=&#34;https://youtu.be/zbth8sSpeaw?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vidéos&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Inferring animal social networks with imperfect detection.
-World Marine Mammal Conference. 2019, Barcelona Spain. 
-&lt;a href=&#34;https://figshare.com/articles/Inferring_animal_social_networks_with_imperfect_detection/11306948/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Variable selection in capture-recapture models using the Lasso. International Statistical Ecology Conference. 2018, St Andrews Scotland. 
-&lt;a href=&#34;https://figshare.com/articles/Variable_selection_in_capture-recapture_models_using_the_Lasso/6725144&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Humains, cétacés et recherche académique. 
-&lt;a href=&#34;https://www.gis3m.org/actu/rencontres-hommes-cetaces-mediterranee-programme-conference&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rencontres sur les Interactions entre Humains et Cétacés&lt;/a&gt;. 2018, Marseille France. 
-&lt;a href=&#34;https://figshare.com/articles/Interactions_humains_et_c_tac_s_recherche_acad_mique/6686816&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
-&lt;a href=&#34;https://youtu.be/2bwI2cvm9kU?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vidéo&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Le loup dans la presse : approche interdisciplinaire. Séminaire linguistique et écologie. 2018, Montpellier France. 
-&lt;a href=&#34;https://figshare.com/articles/Le_loup_dans_la_presse_approche_interdisciplinaire/9165239&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Tenter l&amp;rsquo;interdisciplinarité dans le cadre d&amp;rsquo;une thèse sur les conflits humains-ours. Séminaire interdisciplinarité écologie – SHS. 2017, Grenoble France. 
-&lt;a href=&#34;https://figshare.com/articles/Tenter_l_interdisciplinarit_dans_le_cadre_d_une_th_se_sur_les_conflits_humains-ours/9165176&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
-&lt;a href=&#34;https://youtu.be/VwExgy536K4?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vidéo&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Dealing with many correlated covariates in capture-recapture models. International Statistical Ecology Conference. 2016, Seattle USA. 
-&lt;a href=&#34;https://figshare.com/articles/GimenezISEC2016_pdf/4833107&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Conservation and management of large carnivores in France: A beneficial collaboration between ONCFS practitioners and CNRS researchers. International Conference of Ecological Sciences. 2016, Marseille France. 
-&lt;a href=&#34;https://figshare.com/articles/guinotghestem-gimenezsfe2016marseilleweb-161022125305_pdf/4832624&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Abundance of bottlenose dolphins along the French Mediterranean coast. 
-&lt;a href=&#34;https://www.gdegem.org/international-workshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;International workshop on Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea&lt;/a&gt;. 2015, Marseille France. Slides 
-&lt;a href=&#34;https://figshare.com/articles/tursiops_abundance_pdf/4833089&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
-&lt;a href=&#34;https://figshare.com/articles/tursiops_workshop_pdf/4833083&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Making sense of citizen science data: A review of methods. International Congress for Conservation Biology. 2014, Montpellier France. 
-&lt;a href=&#34;https://figshare.com/articles/GimenezICCB2015MontpellierV4_pptx/4833110&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Hidden Markov modelling of occupancy data. International Statistical Ecology Conference. 2014, Montpellier France. 
-&lt;a href=&#34;https://figshare.com/articles/hmm_occupancy_pptx/4833092&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;All equal, really? Individual variability in capture-recapture models from biological and methodological perspectives. EURING analytical meeting. 2013, Athens USA. 
-&lt;a href=&#34;https://figshare.com/articles/plenary_euring2013_pptx/4833095&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Estimating fitness in the wild. International Statistical Ecology Conference. 2012, Oslo Norway. 
-&lt;a href=&#34;https://figshare.com/articles/Estimating_fitness_with_capture-recapture_data/9164753&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Assessing Inter-population Variation in Survival Using Mark-Recapture Data. Seminar at French National Museum of Natural History. 2011, Paris France. 
-&lt;a href=&#34;https://figshare.com/articles/Assessing_Inter-population_Variation_in_Survival_Using_Mark-Recapture_Data/9165182&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Des modèles de capture-recapture pour l&#39;écologie évolutive. 
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Habilitation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Habilitation à Diriger des Recherches&lt;/a&gt;. 2010, Montpellier France. 
-&lt;a href=&#34;https://figshare.com/articles/HDROGimenez-format3_pdf/4833509&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
-&lt;a href=&#34;https://figshare.com/articles/Manuscrit_HDR_Des_mod_les_de_capture-recapture_pour_l_cologie_volutive/9169991&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;manuscript&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Combining longitudinal data and pedigree information to assess heritability of survival. 2009, Pescara Italy. 
-&lt;a href=&#34;https://figshare.com/articles/Combining_longitudinal_data_and_pedigree_information_to_assess_heritability_of_survival/9165149&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Importance of accounting for detection heterogeneity when estimating abundance: the case of French wolves (Canis lupus). Seminar. 2009, Berkeley USA. 
-&lt;a href=&#34;https://figshare.com/articles/Importance_of_accounting_for_detection_heterogeneity_when_estimating_abundance_the_case_of_French_wolves_Canis_lupus_/9165212&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Individual heterogeneity in mortality for incomplete longitudinal data. Workshop in Biodemography. 2009, Stanford USA. 
-&lt;a href=&#34;https://figshare.com/articles/Individual_heterogeneity_in_mortality_for_incomplete_longitudinal_data/9165209&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Path analysis and structural equation modeling of mark-recapture data. International Statistical Ecology Conference. 2008, St Andrews Scotland. 
-&lt;a href=&#34;https://figshare.com/articles/Path_analysis_and_structural_equation_modeling_of_mark-recapture_data/9165164&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Nonparametric estimation of survival using penalized splines: Applications in ecology and evolution. EURING analytical meeting 2007 Dunedin New Zealand, International Biometric Conference 2008 Dublin Ireland, Conference of the French Society for Biometry 2005 Paris France. 
-&lt;a href=&#34;https://figshare.com/articles/Nonparametric_estimation_of_survival_using_penalized_splines_Applications_in_ecology_and_evolution/9165194&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Investigating Parameter-Redundancy by Yourself 2003, Radolfzell Germany. 
-&lt;a href=&#34;https://figshare.com/articles/Investigate_Parameter-Redundancy_by_Yourself/9165200&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Estimation, inference and goodness-of-fit tests for multistate capture-recapture models. PhD defense. 2003, Montpellier France. 
-&lt;a href=&#34;https://figshare.com/articles/Slides_of_my_PhD_defense_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169988&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt; and 
-&lt;a href=&#34;https://figshare.com/articles/My_PhD_manuscript_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169994&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;manuscript&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Papers</title>
       <link>https://oliviergimenez.github.io/publication/papers/</link>
-      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/publication/papers/</guid>
-      <description>&lt;ol&gt;
+      <description>&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Preprints&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Bauduin S., O. Grente, N.L. Santostasi, P. Ciucci, C. Duchamp, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
-&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0304380020302799&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An individual-based model to explore the impacts of lesser-known social dynamics on wolf populations.&lt;/a&gt; &lt;em&gt;Ecological Modelling&lt;/em&gt; 433: 109209.&lt;/p&gt;
+&lt;p&gt;Turek, D., C. Wehrhahn, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://arxiv.org/abs/2007.10163&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian Non-Parametric Detection Heterogeneity in Ecological Models.&lt;/a&gt; arXiv preprint.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Turek, D., C. Wehrhahn, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). Bayesian Non-Parametric Detection Heterogeneity in Ecological Models. 
-&lt;a href=&#34;https://arxiv.org/abs/2007.10163&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv preprint.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Kazakou E., F. Guillaume, Cheptou P.-O., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.01.08.898247v2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Does seed mass drive interspecies variation in the effect of management practices on weed demography?&lt;/a&gt;. bioRxiv.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;McClintock B.T., R. Langrock, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, E. Cam, D.L. Borchers, R. Glennie, T. A. Patterson (2020). Uncovering ecological state dynamics with hidden Markov models. &lt;em&gt;Ecology Letters&lt;/em&gt; in press. 
-&lt;a href=&#34;https://arxiv.org/abs/2002.10497&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv preprint.&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Santostasi N.L., Ciucci P., Bearzi G., Bonizzoni S., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
-&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Santostasietal2020EcolModel.pdf&#34;&gt;Assessing the dynamics of hybridization through a matrix modelling approach.&lt;/a&gt; &lt;em&gt;Ecological Modelling&lt;/em&gt; 431: 109120.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Chero G., Pradel R., Derville S., Bonneville C., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Garrigue C. (2020). 
-&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Cheroetal2020MEPS.pdf&#34;&gt;Reproductive capacity of an endangered and recovering population of humpback whales in the Southern Hemisphere.&lt;/a&gt; &lt;em&gt;Marine Ecology Progress Series&lt;/em&gt; 643: 219-227.&lt;/p&gt;
+&lt;p&gt;Grente O., T. Saubusse, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, E. Marboutin, C. Duchamp (2020). 
+&lt;a href=&#34;https://ecoevorxiv.org/n8rzg/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wolf depredation hotspots in France: Clustering analyses accounting for livestock availability.&lt;/a&gt; EcoEvoRxiv.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Maurer G., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Mulot B., Lescureux N. (2020). 
-&lt;a href=&#34;https://osf.io/preprints/socarxiv/7g2yd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;From spirits&amp;rsquo; control to market forces: Questioning the resilience of the current human-wild-captive elephant social-ecological system in Laos.&lt;/a&gt; SocArXiv.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Milleret C., Dupont P., Chipperfield J., Turek D., Brøseth H., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, de Valpine P., Bischof R. (2020). 
-&lt;a href=&#34;https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3172&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Estimating abundance with interruptions in data collection using open population spatial capture–recapture models.&lt;/a&gt; &lt;em&gt;Ecosphere&lt;/em&gt; 11( 6):e03172.&lt;/p&gt;
+&lt;a href=&#34;https://osf.io/preprints/socarxiv/7g2yd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;From spirits&#39; control to market forces: Questioning the resilience of the current human-wild-captive elephant social-ecological system in Laos.&lt;/a&gt; SocArXiv.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Lauret V., Labach H., Authier M., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
 &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/848663v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Combining single- and repeated-visit occupancy models to make the best of monitoring surveys.&lt;/a&gt; bioRxiv preprint.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Louvrier L., Papaïx J., Duchamp C., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Louvrier2020SpatialStatistics.pdf&#34; target=&#34;_blank&#34;&gt;A mechanistic-statistical species distribution model to explain and forecast wolf (Canis lupus) colonization in South-Eastern France.&lt;/a&gt; &lt;em&gt;Spatial Statistics&lt;/em&gt; 36: 100428.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Gamelon M, Baubet E., Besnard A., Gaillard J.-M., Lebreton J.-D., Touzot L., Veylit L., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
@@ -403,12 +265,59 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
 &lt;a href=&#34;https://arxiv.org/abs/1904.02145&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fitting stochastic predator-prey models using both population density and kill rate data&lt;/a&gt;. arXiv preprint.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Genovart M., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Bertolero A., Choquet R., Oro D., Pradel R. (2020). 
-&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/686451v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Changes in social cohesion in a long-lived species under a perturbation regime.&lt;/a&gt; bioRxiv preprint.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;p&gt;Cubaynes S., Aars J., Yoccoz N.G., Pradel R., Wiig Ø, Ims R.A. &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
 &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/596437v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Modeling the demography of species providing extended parental care: A capture-recapture approach with a case study on Polar Bears (Ursus maritimus).&lt;/a&gt; bioRxiv preprint.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Quéroué M., C. Barbraud, F. Barraquand, D. Turek, K. Delord, N. Pacoureau, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.06.26.174250v2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multispecies integrated population model reveals bottom-up dynamics in a seabird predator-prey system&lt;/a&gt; bioRxiv preprint.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;E. F. Kleiven, F. Barraquand, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, J.-A. Henden, R. Anker Ims, E. M. Soininen, N. G. Yoccoz (2020). 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.12.16.423067v1.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A dynamic and hierarchical spatial occupancy model for interacting species.&lt;/a&gt; bioRxiv.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;V. Gervasi, J. Linnell, T. Berce, L. Boitani, B. Cretois, P. Ciucci, C. Duchamp, A. Gastineau, O. Grente, D. Hilfiker, D. Huber, Y. Iliopoulos, A. Karamanlidis, F. Marucco, Y. Mertzanis, P. Mannil, H. Norberg, N. Pagon, L. Pedrotti, P.-Y. Quenette, S. Reljic, V. Salvatori, T. Talvi, M. von Arx, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.04.14.041160v2.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ecological and anthropogenic drivers of large carnivore depredation on sheep in Europe&lt;/a&gt;. bioRxiv.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Published&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Bischof R., C. Milleret, P. Dupont, J. Chipperfield, M. Tourani, A. Ordiz, P. de Valpine, D. Turek, J. A. Royle, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Ø. Flagstad, M. Åkesson, L. Svensson, H. Brøseth, J. Kindberg (2020). 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Bischof2020PNAS.pdf&#34;&gt;Estimating and forecasting spatial population dynamics of apex predators using transnational genetic monitoring.&lt;/a&gt; &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; 117:30531-30538.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vitet C., P. Duncan, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, C. Mabika, S. Chamaillé‐Jammes (2020). 
+&lt;a href=&#34;https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3288&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plains zebras bring evidence that dilution and detection effects may not always matter behaviorally and demographically.&lt;/a&gt; &lt;em&gt;Ecosphere&lt;/em&gt; 11: e03288.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bauduin S., O. Grente, N.L. Santostasi, P. Ciucci, C. Duchamp, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0304380020302799&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An individual-based model to explore the impacts of lesser-known social dynamics on wolf populations.&lt;/a&gt; &lt;em&gt;Ecological Modelling&lt;/em&gt; 433: 109209.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;McClintock B.T., R. Langrock, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, E. Cam, D.L. Borchers, R. Glennie, T. A. Patterson (2020). 
+&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13610&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Uncovering ecological state dynamics with hidden Markov models.&lt;/a&gt; &lt;em&gt;Ecology Letters&lt;/em&gt; 23: 1878-1903.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Genovart M., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, A. Bertolero, R. Choquet, D. Oro, R. Pradel (2020). 
+&lt;a href=&#34;https://www.nature.com/articles/s41598-020-75259-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Decrease in social cohesion in a colonial seabird under a perturbation regime.&lt;/a&gt; &lt;em&gt;Scientific reports&lt;/em&gt; 10: 18720.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Santostasi N.L., Ciucci P., Bearzi G., Bonizzoni S., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Santostasietal2020EcolModel.pdf&#34;&gt;Assessing the dynamics of hybridization through a matrix modelling approach.&lt;/a&gt; &lt;em&gt;Ecological Modelling&lt;/em&gt; 431: 109120.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chero G., Pradel R., Derville S., Bonneville C., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Garrigue C. (2020). 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Cheroetal2020MEPS.pdf&#34;&gt;Reproductive capacity of an endangered and recovering population of humpback whales in the Southern Hemisphere.&lt;/a&gt; &lt;em&gt;Marine Ecology Progress Series&lt;/em&gt; 643: 219-227.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Milleret C., Dupont P., Chipperfield J., Turek D., Brøseth H., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, de Valpine P., Bischof R. (2020). 
+&lt;a href=&#34;https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3172&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Estimating abundance with interruptions in data collection using open population spatial capture–recapture models.&lt;/a&gt; &lt;em&gt;Ecosphere&lt;/em&gt; 11( 6):e03172.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Louvrier L., Papaïx J., Duchamp C., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Louvrier2020SpatialStatistics.pdf&#34; target=&#34;_blank&#34;&gt;A mechanistic-statistical species distribution model to explain and forecast wolf (Canis lupus) colonization in South-Eastern France.&lt;/a&gt; &lt;em&gt;Spatial Statistics&lt;/em&gt; 36: 100428.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Marescot L., Lyet A., Singh R., Carter N., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2019). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Marescot2019Ecography.pdf&#34; target=&#34;_blank&#34;&gt;Inferring wildlife poaching in southeast Asia with multispecies dynamic occupancy models.&lt;/a&gt; &lt;em&gt;Ecography&lt;/em&gt; 42: 1–12.&lt;/p&gt;
@@ -457,8 +366,7 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
 &lt;p&gt;&lt;strong&gt;Gimenez O.&lt;/strong&gt;, L. Mansilla, M.J. Klaich, M.A. Coscarella, S.N. Pedraza, E.A. Crespo (2019). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Gimenezetal2019EcolModel.pdf&#34; target=&#34;_blank&#34;&gt;Inferring animal social networks with imperfect detection.&lt;/a&gt; &lt;em&gt;Ecological Modelling&lt;/em&gt;. 401: 69-74.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Melovski, D., Von Arx, M., Avukatov, V., Breitenmoser-Würsten, C., Đurović, M., Elezi, R., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, &amp;hellip; , Breitenmoser, U. (2019). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Melovskietal2019OryxBalkanLynx.pdf&#34; target=&#34;_blank&#34;&gt;Using questionnaire surveys and occupancy modelling to identify conservation priorities for the Critically Endangered Balkan lynx Lynx lynx balcanicus.&lt;/a&gt; &lt;em&gt;Oryx&lt;/em&gt;. 1-9. 
-&lt;a href=&#34;https://www.cambridge.org/core/journals/oryx/article/using-questionnaire-surveys-and-occupancy-modelling-to-identify-conservation-priorities-for-the-critically-endangered-balkan-lynx-lynx-lynx-balcanicus/F6A07DB92A1D32EB3057E641AF52C43D/share/49a0a6fe6efa36ab289456d90fd8aa9c0f277fe1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;doi:10.1017/S0030605318000492&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Melovski, D., Von Arx, M., Avukatov, V., Breitenmoser-Würsten, C., Đurović, M., Elezi, R., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, &amp;hellip; , Breitenmoser, U. (2019). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Melovskietal2019OryxBalkanLynx.pdf&#34; target=&#34;_blank&#34;&gt;Using questionnaire surveys and occupancy modelling to identify conservation priorities for the Critically Endangered Balkan lynx Lynx lynx balcanicus.&lt;/a&gt; &lt;em&gt;Oryx&lt;/em&gt;. 54: 706-714.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Benhaiem S., Marescot L., East M. L., Kramer-Schadt S., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Lebreton J.-D. Hofer H. (2018). 
@@ -996,12 +904,159 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
     </item>
     
     <item>
+      <title>Talks</title>
+      <link>https://oliviergimenez.github.io/talks/talk/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/talks/talk/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Large carnivores and statistical ecology. Seminar in Lisbon (remotely) Dec 2020. 
+&lt;a href=&#34;https://www.youtube.com/watch?v=jM5i7vxLcGM&amp;amp;t=0s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video&lt;/a&gt; and 
+&lt;a href=&#34;https://figshare.com/articles/presentation/Large_carnivores_and_statistical_ecology/13337822/4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;First steps in Deep Learning - Species identification and camera traps. Speed talk at 
+&lt;a href=&#34;https://imaginecology.sciencesconf.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;imaginecology&lt;/a&gt;. November 16-17, 2020, Lyon. 
+&lt;a href=&#34;https://www.youtube.com/watch?v=CAbm9S39y5M&amp;amp;t=0s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video&lt;/a&gt;, 
+&lt;a href=&#34;https://oliviergimenez.github.io/prezimaginecology/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt; and 
+&lt;a href=&#34;https://github.com/oliviergimenez/DLcamtrap&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;workflow&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Flexible spatio-temporal modelling of occupancy using GAMs: A case study with large carnivores. Speed talk at 
+&lt;a href=&#34;https://www.isec2020.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ISEC&lt;/a&gt;. 2020, virtual Sydney Australia. 
+&lt;a href=&#34;https://youtu.be/j1f-p7Cc6Qk?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video&lt;/a&gt; and 
+&lt;a href=&#34;https://figshare.com/articles/Flexible_spatio-temporal_modelling_of_occupancy_using_GAMs_A_case_study_with_large_carnivores_/12443249/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Grands carnivores et écologie statistique. Séminaire grand public 2020, Rennes France. 
+&lt;a href=&#34;https://www.youtube.com/watch?v=RHZR-bC-pMQ&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vidéo&lt;/a&gt; et 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.11913771.v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;diapos&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Modélisation spatio-temporelle de l’aire d’occupation : le cas des grands carnivores en France. Annual meeting of the French network in Statistical ecology. 2020, Rennes France. 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.11918226.v2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A review of research in capture-recapture: Ecological questions and methods.
+Wildlife Research and Conservation. 2019, Berlin Germany. 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.12102420.v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;, 
+&lt;a href=&#34;https://youtu.be/RJiUIqs15ig?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video&lt;/a&gt; and 
+&lt;a href=&#34;https://github.com/oliviergimenez/capture-recapture-review&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;material&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Le projet INTERACT : Interactions entre dauphins et activités humaines sur le littoral méditerranéen français. Rencontres humains - cétacés. 2019, Nice France. 
+&lt;a href=&#34;https://figshare.com/articles/Le_projet_INTERACT_Interactions_entre_dauphins_et_activit_s_humaines_sur_le_littoral_m_diterran_en_fran_ais/11474244&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
+&lt;a href=&#34;https://youtu.be/zbth8sSpeaw?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vidéos&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Inferring animal social networks with imperfect detection.
+World Marine Mammal Conference. 2019, Barcelona Spain. 
+&lt;a href=&#34;https://figshare.com/articles/Inferring_animal_social_networks_with_imperfect_detection/11306948/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Variable selection in capture-recapture models using the Lasso. International Statistical Ecology Conference. 2018, St Andrews Scotland. 
+&lt;a href=&#34;https://figshare.com/articles/Variable_selection_in_capture-recapture_models_using_the_Lasso/6725144&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Humains, cétacés et recherche académique. 
+&lt;a href=&#34;https://www.gis3m.org/actu/rencontres-hommes-cetaces-mediterranee-programme-conference&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rencontres sur les Interactions entre Humains et Cétacés&lt;/a&gt;. 2018, Marseille France. 
+&lt;a href=&#34;https://figshare.com/articles/Interactions_humains_et_c_tac_s_recherche_acad_mique/6686816&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
+&lt;a href=&#34;https://youtu.be/2bwI2cvm9kU?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vidéo&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Le loup dans la presse : approche interdisciplinaire. Séminaire linguistique et écologie. 2018, Montpellier France. 
+&lt;a href=&#34;https://figshare.com/articles/Le_loup_dans_la_presse_approche_interdisciplinaire/9165239&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tenter l&amp;rsquo;interdisciplinarité dans le cadre d&amp;rsquo;une thèse sur les conflits humains-ours. Séminaire interdisciplinarité écologie – SHS. 2017, Grenoble France. 
+&lt;a href=&#34;https://figshare.com/articles/Tenter_l_interdisciplinarit_dans_le_cadre_d_une_th_se_sur_les_conflits_humains-ours/9165176&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
+&lt;a href=&#34;https://youtu.be/VwExgy536K4?t=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vidéo&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dealing with many correlated covariates in capture-recapture models. International Statistical Ecology Conference. 2016, Seattle USA. 
+&lt;a href=&#34;https://figshare.com/articles/GimenezISEC2016_pdf/4833107&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Conservation and management of large carnivores in France: A beneficial collaboration between ONCFS practitioners and CNRS researchers. International Conference of Ecological Sciences. 2016, Marseille France. 
+&lt;a href=&#34;https://figshare.com/articles/guinotghestem-gimenezsfe2016marseilleweb-161022125305_pdf/4832624&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Abundance of bottlenose dolphins along the French Mediterranean coast. 
+&lt;a href=&#34;https://www.gdegem.org/international-workshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;International workshop on Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea&lt;/a&gt;. 2015, Marseille France. Slides 
+&lt;a href=&#34;https://figshare.com/articles/tursiops_abundance_pdf/4833089&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
+&lt;a href=&#34;https://figshare.com/articles/tursiops_workshop_pdf/4833083&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Making sense of citizen science data: A review of methods. International Congress for Conservation Biology. 2014, Montpellier France. 
+&lt;a href=&#34;https://figshare.com/articles/GimenezICCB2015MontpellierV4_pptx/4833110&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hidden Markov modelling of occupancy data. International Statistical Ecology Conference. 2014, Montpellier France. 
+&lt;a href=&#34;https://figshare.com/articles/hmm_occupancy_pptx/4833092&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;All equal, really? Individual variability in capture-recapture models from biological and methodological perspectives. EURING analytical meeting. 2013, Athens USA. 
+&lt;a href=&#34;https://figshare.com/articles/plenary_euring2013_pptx/4833095&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Estimating fitness in the wild. International Statistical Ecology Conference. 2012, Oslo Norway. 
+&lt;a href=&#34;https://figshare.com/articles/Estimating_fitness_with_capture-recapture_data/9164753&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Assessing Inter-population Variation in Survival Using Mark-Recapture Data. Seminar at French National Museum of Natural History. 2011, Paris France. 
+&lt;a href=&#34;https://figshare.com/articles/Assessing_Inter-population_Variation_in_Survival_Using_Mark-Recapture_Data/9165182&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Des modèles de capture-recapture pour l&amp;rsquo;écologie évolutive. 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Habilitation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Habilitation à Diriger des Recherches&lt;/a&gt;. 2010, Montpellier France. 
+&lt;a href=&#34;https://figshare.com/articles/HDROGimenez-format3_pdf/4833509&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
+&lt;a href=&#34;https://figshare.com/articles/Manuscrit_HDR_Des_mod_les_de_capture-recapture_pour_l_cologie_volutive/9169991&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;manuscript&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Combining longitudinal data and pedigree information to assess heritability of survival. 2009, Pescara Italy. 
+&lt;a href=&#34;https://figshare.com/articles/Combining_longitudinal_data_and_pedigree_information_to_assess_heritability_of_survival/9165149&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Importance of accounting for detection heterogeneity when estimating abundance: the case of French wolves (Canis lupus). Seminar. 2009, Berkeley USA. 
+&lt;a href=&#34;https://figshare.com/articles/Importance_of_accounting_for_detection_heterogeneity_when_estimating_abundance_the_case_of_French_wolves_Canis_lupus_/9165212&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Individual heterogeneity in mortality for incomplete longitudinal data. Workshop in Biodemography. 2009, Stanford USA. 
+&lt;a href=&#34;https://figshare.com/articles/Individual_heterogeneity_in_mortality_for_incomplete_longitudinal_data/9165209&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Path analysis and structural equation modeling of mark-recapture data. International Statistical Ecology Conference. 2008, St Andrews Scotland. 
+&lt;a href=&#34;https://figshare.com/articles/Path_analysis_and_structural_equation_modeling_of_mark-recapture_data/9165164&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nonparametric estimation of survival using penalized splines: Applications in ecology and evolution. EURING analytical meeting 2007 Dunedin New Zealand, International Biometric Conference 2008 Dublin Ireland, Conference of the French Society for Biometry 2005 Paris France. 
+&lt;a href=&#34;https://figshare.com/articles/Nonparametric_estimation_of_survival_using_penalized_splines_Applications_in_ecology_and_evolution/9165194&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Investigating Parameter-Redundancy by Yourself 2003, Radolfzell Germany. 
+&lt;a href=&#34;https://figshare.com/articles/Investigate_Parameter-Redundancy_by_Yourself/9165200&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Estimation, inference and goodness-of-fit tests for multistate capture-recapture models. PhD defense. 2003, Montpellier France. 
+&lt;a href=&#34;https://figshare.com/articles/Slides_of_my_PhD_defense_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169988&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt; and 
+&lt;a href=&#34;https://figshare.com/articles/My_PhD_manuscript_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169994&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;manuscript&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Workshops</title>
       <link>https://oliviergimenez.github.io/talks/workshop/</link>
-      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/workshop/</guid>
-      <description>&lt;p&gt;Novembre 2020. 
+      <description>&lt;p&gt;November 23-27, 2020. 
+&lt;a href=&#34;http://www.phidot.org/forum/viewtopic.php?f=8&amp;amp;t=3968&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Integrated population models&lt;/a&gt;. Remotely via Zoom. Slides and videos on capture-recapture models 
+&lt;a href=&#34;https://github.com/oliviergimenez/IPMworkshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;November 2020. 
 &lt;a href=&#34;https://www.fondationbiodiversite.fr/evenement/frb-cesab-formation-reproductibilite-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bonnes pratiques pour une recherche reproductible en écologie numérique&lt;/a&gt;. Montpellier, France.&lt;/p&gt;
+&lt;p&gt;October 2020. 
+&lt;a href=&#34;https://github.com/oliviergimenez/statistics-for-ecologists-Master-courses&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistics for ecologists&lt;/a&gt; Master course.&lt;/p&gt;
 &lt;p&gt;July 2020. 
 &lt;a href=&#34;https://github.com/oliviergimenez/Bayesian_Workshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian statistics with R and Jags&lt;/a&gt;. Remotely via Zoom.&lt;/p&gt;
 &lt;p&gt;Décembre 2019. 
@@ -1221,6 +1276,89 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
 &lt;/figure&gt;
 
 </description>
+    </item>
+    
+    <item>
+      <title>We had a great 2020 year, considering...</title>
+      <link>https://oliviergimenez.github.io/blog/retrospective2020/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/retrospective2020/</guid>
+      <description>&lt;p&gt;Some highlights on the year 2020 for our group.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Our research group had a fantastic 2020 year! A thread w/ some highlights 🥳🍾 &lt;a href=&#34;https://t.co/BuNSAceisM&#34;&gt;https://t.co/BuNSAceisM&lt;/a&gt; 0/9 &lt;a href=&#34;https://t.co/uPuAjV5uve&#34;&gt;pic.twitter.com/uPuAjV5uve&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1341868208500985860?ref_src=twsrc%5Etfw&#34;&gt;December 23, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on reproducible science</title>
+      <link>https://oliviergimenez.github.io/blog/reproscience2020/</link>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/reproscience2020/</guid>
+      <description>&lt;p&gt;Workshop to come on reproducible science in our lab.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🧑‍🔬💻♻️ Planning a 1-day workshop on reproducible science for our lab &lt;a href=&#34;https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw&#34;&gt;@cefemontpellier&lt;/a&gt;. We&amp;#39;ll use R and RStudio, Git, GitHub, R Markdown, tidyverse and sf 🤩&lt;br&gt;&lt;br&gt;Material here &lt;a href=&#34;https://t.co/QApKQsl1FU&#34;&gt;https://t.co/QApKQsl1FU&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ReproducibleScience?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ReproducibleScience&lt;/a&gt; &lt;a href=&#34;https://twitter.com/twitthair1?ref_src=twsrc%5Etfw&#34;&gt;@twitthair1&lt;/a&gt; &lt;br&gt;&lt;br&gt;pix by &lt;a href=&#34;https://twitter.com/scriberian?ref_src=twsrc%5Etfw&#34;&gt;@scriberian&lt;/a&gt; &lt;a href=&#34;https://t.co/LFBwZmelit&#34;&gt;pic.twitter.com/LFBwZmelit&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1339896916109373440?ref_src=twsrc%5Etfw&#34;&gt;December 18, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Seminar on large carnivores and statistical ecology</title>
+      <link>https://oliviergimenez.github.io/blog/talklisboa/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/talklisboa/</guid>
+      <description>&lt;p&gt;A seminar I gave remotely for the university of Lisboa.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Statistical ecology 🌍📊, large carnivores 🐺🐻 and a pinch of social sciences 🤷, happy to share our research in this 45&amp;#39; talk 🤩🍾&lt;br&gt;&lt;br&gt;slides: &lt;a href=&#34;https://t.co/fKTMWko5J9&#34;&gt;https://t.co/fKTMWko5J9&lt;/a&gt;&lt;br&gt;video: &lt;a href=&#34;https://t.co/7KubqYJIBU&#34;&gt;https://t.co/7KubqYJIBU&lt;/a&gt; &lt;a href=&#34;https://t.co/OJ292VWuel&#34;&gt;pic.twitter.com/OJ292VWuel&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1337013328942665728?ref_src=twsrc%5Etfw&#34;&gt;December 10, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on integrated population models</title>
+      <link>https://oliviergimenez.github.io/blog/ipmworkshop_thread/</link>
+      <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/ipmworkshop_thread/</guid>
+      <description>&lt;p&gt;Just finished a workshop on integrated population models.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;And it&amp;#39;s oooooooooooon ! &lt;a href=&#34;https://t.co/sEy70RCORN&#34;&gt;https://t.co/sEy70RCORN&lt;/a&gt; &lt;a href=&#34;https://t.co/nNBCvIonjV&#34;&gt;pic.twitter.com/nNBCvIonjV&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1330785278328401922?ref_src=twsrc%5Etfw&#34;&gt;November 23, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Journées annuelles réseau Mate-SHS</title>
+      <link>https://oliviergimenez.github.io/blog/mateshs/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/mateshs/</guid>
+      <description>&lt;p&gt;Co-organisé les journées annuelles Mate-shs pendant lesquelles on a parlé des nouveaux métiers et outils autour des données en SHS.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;fr&#34; dir=&#34;ltr&#34;&gt;Les journées annuelles Mate-shs se tiennent aujourd&amp;#39;hui et demain 🎉🤩 On y parle des nouveaux métiers et outils autour des données en SHS &lt;a href=&#34;https://twitter.com/mate_shs_cnrs?ref_src=twsrc%5Etfw&#34;&gt;@mate_shs_cnrs&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MSHsud?ref_src=twsrc%5Etfw&#34;&gt;@MSHsud&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CNRS?ref_src=twsrc%5Etfw&#34;&gt;@CNRS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/INSHS_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INSHS_CNRS&lt;/a&gt; &lt;br&gt;&lt;br&gt;Site web : &lt;a href=&#34;https://t.co/oDJsi9deUo&#34;&gt;https://t.co/oDJsi9deUo&lt;/a&gt;&lt;br&gt;Programme : &lt;a href=&#34;https://t.co/kKkklKhEsd&#34;&gt;https://t.co/kKkklKhEsd&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/SHS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SHS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/interdisciplinarit%C3%A9?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#interdisciplinarité&lt;/a&gt; &lt;a href=&#34;https://t.co/bliBnZm8qY&#34;&gt;pic.twitter.com/bliBnZm8qY&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1329381523435479042?ref_src=twsrc%5Etfw&#34;&gt;November 19, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on Deep Learning and Ecology</title>
+      <link>https://oliviergimenez.github.io/blog/deeplearning/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/deeplearning/</guid>
+      <description>&lt;p&gt;Co-organised a workshop on deep learning applications in ecology. Thread below and my notes 
+&lt;a href=&#34;https://twitter.com/oaggimenez/status/1329091540082257924?s=20&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🥁🤩 Our workshop on &lt;a href=&#34;https://twitter.com/hashtag/DeepLearning?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DeepLearning&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/hashtag/Ecology?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Ecology&lt;/a&gt; is about to begin. We&amp;#39;ll be talking about how to process and analyse images 📸 and sounds 🎙️ &lt;br&gt;&lt;br&gt;Program: &lt;a href=&#34;https://t.co/gUXD0tMCW1&#34;&gt;https://t.co/gUXD0tMCW1&lt;/a&gt;&lt;br&gt;Curated list of resources for ecologists: &lt;a href=&#34;https://t.co/HieQfqgVEx&#34;&gt;https://t.co/HieQfqgVEx&lt;/a&gt; &lt;br&gt;GDR EcoStat: &lt;a href=&#34;https://t.co/kTXpjJXlya&#34;&gt;https://t.co/kTXpjJXlya&lt;/a&gt; &lt;a href=&#34;https://t.co/nfjVke9ETU&#34;&gt;pic.twitter.com/nfjVke9ETU&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1328238117049012224?ref_src=twsrc%5Etfw&#34;&gt;November 16, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Master course on statistics for ecologists</title>
+      <link>https://oliviergimenez.github.io/blog/stat-course-2020/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/stat-course-2020/</guid>
+      <description>&lt;p&gt;The material (slides and video) of my course on statistics for ecologists for Master students.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Every year I teach a 12h course on statistics for ecologists for Master students at &lt;a href=&#34;https://twitter.com/umontpellier?ref_src=twsrc%5Etfw&#34;&gt;@umontpellier&lt;/a&gt; covering freq/bayes GLM(M)s. The material of the course is available ➡️ &lt;a href=&#34;https://t.co/Y1CTvkmH8Q&#34;&gt;https://t.co/Y1CTvkmH8Q&lt;/a&gt; w/ slides, practicals &amp;amp; videos (in French).&lt;a href=&#34;https://twitter.com/hashtag/StatisticalEcology?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StatisticalEcology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ReproducibleTeaching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ReproducibleTeaching&lt;/a&gt; &lt;a href=&#34;https://t.co/A15vndiw49&#34;&gt;pic.twitter.com/A15vndiw49&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1326753364193972225?ref_src=twsrc%5Etfw&#34;&gt;November 12, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Article The Conversation sur le lynx et l&#39;écologie statistique</title>
+      <link>https://oliviergimenez.github.io/blog/theconversation/</link>
+      <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/theconversation/</guid>
+      <description>&lt;p&gt;Notre article pour la Fête de la Science dans The Conversation &amp;ldquo;
+&lt;a href=&#34;https://theconversation.com/mieux-connaitre-le-lynx-boreal-grace-a-lecologie-statistique-147241&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mieux connaître le lynx boréal grâce à l&amp;rsquo;écologie statistique&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;fr&#34; dir=&#34;ltr&#34;&gt;Jetez un coup d&amp;#39;oeil à notre article pour la Fête de la Science dans &lt;a href=&#34;https://twitter.com/FR_Conversation?ref_src=twsrc%5Etfw&#34;&gt;@FR_Conversation&lt;/a&gt; &amp;quot;Mieux connaître le lynx boréal grâce à l&amp;#39;écologie statistique&amp;quot; &lt;a href=&#34;https://t.co/d40TzNcmis&#34;&gt;https://t.co/d40TzNcmis&lt;/a&gt; co-écrit avec &lt;a href=&#34;https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw&#34;&gt;@LouvrierJulie&lt;/a&gt; &amp;amp; Sarah Bauduin - avec l&amp;#39;aide précieuse de Françoise Marmouyet &lt;a href=&#34;https://twitter.com/hashtag/FDS2020?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#FDS2020&lt;/a&gt; &lt;a href=&#34;https://t.co/xmJX0crmmy&#34;&gt;pic.twitter.com/xmJX0crmmy&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1314271226190327809?ref_src=twsrc%5Etfw&#34;&gt;October 8, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Some random piece of code</title>
+      <link>https://oliviergimenez.github.io/blog/pieceofcode/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/pieceofcode/</guid>
+      <description>&lt;p&gt;Gathered some code on occupancy, capture-recapture &amp;amp; epidemiological models, social networks, spatial stuff, textual analyses, reproducible science, etc&amp;hellip;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;👩‍💻👨‍💻 In hope it&amp;#39;s useful, I gathered random pieces of code I wrote on occupancy, capture-recapture &amp;amp; epidemiological models, social networks, spatial stuff, textual analyses, &lt;a href=&#34;https://twitter.com/hashtag/DeepLearning?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DeepLearning&lt;/a&gt; and the &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt; ➡️ &lt;a href=&#34;https://t.co/T1PlbmDLZO&#34;&gt;https://t.co/T1PlbmDLZO&lt;/a&gt; I also went full purple &lt;a href=&#34;https://twitter.com/MoonbeamLevels?ref_src=twsrc%5Etfw&#34;&gt;@MoonbeamLevels&lt;/a&gt; 💜 &lt;a href=&#34;https://t.co/q6vK4LYVS7&#34;&gt;pic.twitter.com/q6vK4LYVS7&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1291749139596955650?ref_src=twsrc%5Etfw&#34;&gt;August 7, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
     </item>
     
     <item>
@@ -1450,7 +1588,7 @@ decision making framework. Past and ongoing projects were are are mostly led by
       <link>https://oliviergimenez.github.io/blog/reviewhmm/</link>
       <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/blog/reviewhmm/</guid>
-      <description>&lt;p&gt;Our new preprint on HMMs for ecology, or how we&amp;rsquo;&#39;&amp;lsquo;ve been using HMMs for ever without even knowing it.&lt;/p&gt;
+      <description>&lt;p&gt;Our new preprint on HMMs for ecology, or how we&#39;&#39;&amp;rsquo;ve been using HMMs for ever without even knowing it.&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;😎😉 Our new &lt;a href=&#34;https://twitter.com/hashtag/preprint?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#preprint&lt;/a&gt; on &lt;a href=&#34;https://twitter.com/hashtag/HMM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMM&lt;/a&gt; for ecology, or how we&amp;#39;ve been using &lt;a href=&#34;https://twitter.com/hashtag/HMMs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMMs&lt;/a&gt; for ever wo even knowing it - all credit goes to &lt;a href=&#34;https://twitter.com/bt_mcclintock?ref_src=twsrc%5Etfw&#34;&gt;@bt_mcclintock&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/RolandLangrock?ref_src=twsrc%5Etfw&#34;&gt;@RolandLangrock&lt;/a&gt; for the heavy lifting. Written in &lt;a href=&#34;https://twitter.com/overleaf?ref_src=twsrc%5Etfw&#34;&gt;@overleaf&lt;/a&gt; 😉 &lt;a href=&#34;https://twitter.com/EcoHMM?ref_src=twsrc%5Etfw&#34;&gt;@EcoHMM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/twitthair1?ref_src=twsrc%5Etfw&#34;&gt;@twitthair1&lt;/a&gt; &lt;a href=&#34;https://t.co/vSAJF5abH7&#34;&gt;https://t.co/vSAJF5abH7&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1232522350882705409?ref_src=twsrc%5Etfw&#34;&gt;February 26020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
     </item>
     
@@ -2044,7 +2182,7 @@ decision making framework. Past and ongoing projects were are are mostly led by
 &lt;p&gt;Two things to take care of:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;First, the variables in the formula must be labelled $x_1, x_2, \text{text}$. You cannot use $x, y, z, &amp;hellip;$ for example. Just numbered $x$&#39;s.&lt;/p&gt;
+&lt;p&gt;First, the variables in the formula must be labelled $x_1, x_2, \text{text}$. You cannot use $x, y, z, &amp;hellip;$ for example. Just numbered $x$&amp;rsquo;s.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Second, the input parameters are the estimate and its squared SE (not the SE), and by default you will get as an output the SE (not the squared SE) of the function defined by the formula.&lt;/p&gt;
@@ -2306,7 +2444,7 @@ ggsave(filename = &amp;quot;ecology_network.pdf&amp;quot;,width=30,height = 20)
       <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Our team has had a fantastic 2018 year! Inspired by &lt;a href=&#34;https://twitter.com/Maestrelab?ref_src=twsrc%5Etfw&#34;&gt;@Maestrelab&lt;/a&gt;, below is a thread of some highlights 🍾😜🤩 &lt;a href=&#34;https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw&#34;&gt;@CNRS_OccitaniE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/umontpellier?ref_src=twsrc%5Etfw&#34;&gt;@umontpellier&lt;/a&gt; &lt;a href=&#34;https://twitter.com/IsiteMUSE?ref_src=twsrc%5Etfw&#34;&gt;@IsiteMUSE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/LMarescot?ref_src=twsrc%5Etfw&#34;&gt;@LMarescot&lt;/a&gt; &lt;a href=&#34;https://twitter.com/NSantostasi?ref_src=twsrc%5Etfw&#34;&gt;@NSantostasi&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MaudQueroue?ref_src=twsrc%5Etfw&#34;&gt;@MaudQueroue&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ValentinLauret?ref_src=twsrc%5Etfw&#34;&gt;@ValentinLauret&lt;/a&gt; &lt;a href=&#34;https://twitter.com/oksanagrente?ref_src=twsrc%5Etfw&#34;&gt;@oksanagrente&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GueryLorelei?ref_src=twsrc%5Etfw&#34;&gt;@GueryLorelei&lt;/a&gt; &lt;a href=&#34;https://twitter.com/roques_seb?ref_src=twsrc%5Etfw&#34;&gt;@roques_seb&lt;/a&gt; &lt;a href=&#34;https://t.co/FaP9o0bOD4&#34;&gt;https://t.co/FaP9o0bOD4&lt;/a&gt;.&lt;/p&gt;&amp;mdash; Olivier Gimenez 💤 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1076808581817749504?ref_src=twsrc%5Etfw&#34;&gt;23 décembre 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;&amp;lt;&lt;/p&gt;
-&lt;p&gt;blockquote class=&amp;quot;twitter-tweet&amp;rdquo; data-lang=&amp;quot;fr&amp;quot;&amp;gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;1. We published papers in &lt;a href=&#34;https://twitter.com/hashtag/statistalecology?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#statistalecology&lt;/a&gt; &amp;amp; large mammals &lt;a href=&#34;https://twitter.com/hashtag/conservation?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#conservation&lt;/a&gt; w/ interest in human &amp;amp; social sciences &lt;a href=&#34;https://t.co/Xlh6reUUQc&#34;&gt;https://t.co/Xlh6reUUQc&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Oikos_Journal?ref_src=twsrc%5Etfw&#34;&gt;@Oikos_Journal&lt;/a&gt; &lt;a href=&#34;https://twitter.com/PopulEcology?ref_src=twsrc%5Etfw&#34;&gt;@PopulEcology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/AnimalEcology?ref_src=twsrc%5Etfw&#34;&gt;@AnimalEcology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/JOSS_TheOJ?ref_src=twsrc%5Etfw&#34;&gt;@JOSS_TheOJ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/OryxTheJournal?ref_src=twsrc%5Etfw&#34;&gt;@OryxTheJournal&lt;/a&gt; &lt;a href=&#34;https://twitter.com/EcographyJourna?ref_src=twsrc%5Etfw&#34;&gt;@EcographyJourna&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CommsBio?ref_src=twsrc%5Etfw&#34;&gt;@CommsBio&lt;/a&gt; &lt;a href=&#34;https://twitter.com/FunEcology?ref_src=twsrc%5Etfw&#34;&gt;@FunEcology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MethodsEcolEvol?ref_src=twsrc%5Etfw&#34;&gt;@MethodsEcolEvol&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ConBiology?ref_src=twsrc%5Etfw&#34;&gt;@ConBiology&lt;/a&gt;. &lt;a href=&#34;https://t.co/FvakGRzacx&#34;&gt;pic.twitter.com/FvakGRzacx&lt;/a&gt;&lt;/p&gt;— Olivier Gimenez 💤 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1076808583269044224?ref_src=twsrc%5Etfw&#34;&gt;23 décembre 2018&lt;/a&gt;&lt;/blockquote&gt;&lt;/p&gt;
+&lt;p&gt;blockquote class=&amp;ldquo;twitter-tweet&amp;rdquo; data-lang=&amp;ldquo;fr&amp;rdquo;&amp;gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;1. We published papers in &lt;a href=&#34;https://twitter.com/hashtag/statistalecology?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#statistalecology&lt;/a&gt; &amp;amp; large mammals &lt;a href=&#34;https://twitter.com/hashtag/conservation?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#conservation&lt;/a&gt; w/ interest in human &amp;amp; social sciences &lt;a href=&#34;https://t.co/Xlh6reUUQc&#34;&gt;https://t.co/Xlh6reUUQc&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Oikos_Journal?ref_src=twsrc%5Etfw&#34;&gt;@Oikos_Journal&lt;/a&gt; &lt;a href=&#34;https://twitter.com/PopulEcology?ref_src=twsrc%5Etfw&#34;&gt;@PopulEcology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/AnimalEcology?ref_src=twsrc%5Etfw&#34;&gt;@AnimalEcology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/JOSS_TheOJ?ref_src=twsrc%5Etfw&#34;&gt;@JOSS_TheOJ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/OryxTheJournal?ref_src=twsrc%5Etfw&#34;&gt;@OryxTheJournal&lt;/a&gt; &lt;a href=&#34;https://twitter.com/EcographyJourna?ref_src=twsrc%5Etfw&#34;&gt;@EcographyJourna&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CommsBio?ref_src=twsrc%5Etfw&#34;&gt;@CommsBio&lt;/a&gt; &lt;a href=&#34;https://twitter.com/FunEcology?ref_src=twsrc%5Etfw&#34;&gt;@FunEcology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MethodsEcolEvol?ref_src=twsrc%5Etfw&#34;&gt;@MethodsEcolEvol&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ConBiology?ref_src=twsrc%5Etfw&#34;&gt;@ConBiology&lt;/a&gt;. &lt;a href=&#34;https://t.co/FvakGRzacx&#34;&gt;pic.twitter.com/FvakGRzacx&lt;/a&gt;&lt;/p&gt;— Olivier Gimenez 💤 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1076808583269044224?ref_src=twsrc%5Etfw&#34;&gt;23 décembre 2018&lt;/a&gt;&lt;/blockquote&gt;&lt;/p&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;2. We had amazing interns! D. Folio analysed maternal traits &amp;amp; polar  bears reproduction w/ &lt;a href=&#34;https://twitter.com/SCubi25?ref_src=twsrc%5Etfw&#34;&gt;@SCubi25&lt;/a&gt; &amp;amp; J. Aars &lt;a href=&#34;https://twitter.com/NorskPolar?ref_src=twsrc%5Etfw&#34;&gt;@NorskPolar&lt;/a&gt;; A. Hendrick  studied ethnology &amp;amp; whale-whatching w/ N. Lescureux &amp;amp; H. Labach &lt;a href=&#34;https://twitter.com/GIS_3M?ref_src=twsrc%5Etfw&#34;&gt;@GIS_3M&lt;/a&gt;; &lt;a href=&#34;https://twitter.com/ValentinLauret?ref_src=twsrc%5Etfw&#34;&gt;@ValentinLauret&lt;/a&gt; developed adaptive monitoring for a &lt;a href=&#34;https://twitter.com/hashtag/MPAs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#MPAs&lt;/a&gt; network. &lt;a href=&#34;https://t.co/7RCc9hAXgm&#34;&gt;pic.twitter.com/7RCc9hAXgm&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 💤 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1076808586674737152?ref_src=twsrc%5Etfw&#34;&gt;23 décembre 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
@@ -4822,7 +4960,7 @@ paper&lt;/a&gt; showing that the identification of patterns and processes linkin
 diversity to functional or phylogenetic diversity depends on the methodological choices
 we make as analysts. This reminds me of
 the &lt;a href=&#34;http://andrewgelman.com/2012/11/01/researcher-degrees-of-freedom/&#34; target=&#34;_blank&#34;&gt;discussion
-about &amp;ldquo;Researcher Degrees of Freedom&amp;quot;&lt;/a&gt; on Gelman’s blog.&lt;/p&gt;
+about &amp;ldquo;Researcher Degrees of Freedom&amp;rdquo;&lt;/a&gt; on Gelman’s blog.&lt;/p&gt;
 </description>
     </item>
     
@@ -4892,7 +5030,7 @@ Ecology conference in Lille.&lt;/p&gt;
       <description>&lt;p&gt;I attended Daniel Turek&amp;rsquo;s talk at ISEC about &lt;a href=&#34;http://r-nimble.org/&#34; target=&#34;_blank&#34;&gt;NIMBLE&lt;/a&gt;
 a neat alternative to WinBUGS and JAGS. It is developed by
 &lt;a href=&#34;http://nature.berkeley.edu/~pdevalpine/&#34; target=&#34;_blank&#34;&gt;Perry de Valpine&amp;rsquo;s
-group&lt;/a&gt; at Berkeley and &lt;em&gt;&#39;lets you use BUGS models natively in R, program functions
+group&lt;/a&gt; at Berkeley and &lt;em&gt;&amp;lsquo;lets you use BUGS models natively in R, program functions
 that use them, and compile everything via C++ for faster computing&amp;rsquo;.&lt;/em&gt; I played around
 with NIMBLE a bit, &lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-codes/cjs-nimble.R&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
 is an example of fitting a classic capture-recapture model to simulated data - thanks to Perry
@@ -4967,7 +5105,7 @@ La Poste comes and picks them up. Now the question is how many of them we will w
       <pubDate>Sun, 01 Jun 2014 12:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/blog/isec2014_prep/</guid>
       <description>&lt;p&gt;The team is leading the organisation of &lt;a href=&#34;http://isec2014.sciencesconf.org/&#34; target=&#34;_blank&#34;&gt;ISEC2014&lt;/a&gt;.
-We&amp;rsquo;re getting ready by, among many other things, preparing the delegates&amp;rsquo; packs. Of
+We&amp;rsquo;re getting ready by, among many other things, preparing the delegates&#39; packs. Of
 course, these efforts cannot go without some relaxing time.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/preparing-delegate-pack.jpg&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;https://oliviergimenez.github.io/img/relaxing-planche-de-la-mer.jpg&#34; alt=&#34;&#34;&gt;
@@ -5075,6 +5213,7 @@ to supervise (officially) PhD students.&lt;/p&gt;
       <guid>https://oliviergimenez.github.io/coding/</guid>
       <description>&lt;p&gt;Below I provide pieces of code I have written over the years and shared through 
 &lt;a href=&#34;https://github.com/oliviergimenez&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt; on 
+&lt;a href=&#34;#reproducible-science&#34;&gt;reproducible science&lt;/a&gt;, 
 &lt;a href=&#34;#capture-recapture&#34;&gt;capture-recapture&lt;/a&gt;,  
 &lt;a href=&#34;#occupancy&#34;&gt;occupancy&lt;/a&gt; and 
 &lt;a href=&#34;#epidemiological-models-and-odes&#34;&gt;epidemiological&lt;/a&gt; models, 
@@ -5090,9 +5229,50 @@ to supervise (officially) PhD students.&lt;/p&gt;
 &lt;p&gt;You may find other pieces of code in 
 &lt;a href=&#34;https://oliviergimenez.github.io/publication/papers/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;papers&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
+&lt;h3 id=&#34;reproducible-science&#34;&gt;Reproducible science&lt;/h3&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Introduction to &lt;code&gt;Git&lt;/code&gt; and &lt;code&gt;GitHub&lt;/code&gt; with &lt;code&gt;RStudio&lt;/code&gt; [
+&lt;a href=&#34;https://oliviergimenez.github.io/quick-intro-git-github-rstudio/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;] [
+&lt;a href=&#34;https://github.com/oliviergimenez/quick-intro-git-github-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;material&lt;/a&gt;]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Writing dynamic and reproducible documents with &lt;code&gt;R Markdown&lt;/code&gt; [
+&lt;a href=&#34;https://oliviergimenez.github.io/intro_rmarkdown/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;] [
+&lt;a href=&#34;https://github.com/oliviergimenez/intro_rmarkdown&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;material&lt;/a&gt;] [
+&lt;a href=&#34;https://github.com/oliviergimenez/intro_rmarkdown_practical&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;practical&lt;/a&gt;] [
+&lt;a href=&#34;https://github.com/oliviergimenez/bias_occupancy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;interactive dashboard&lt;/a&gt;] [
+&lt;a href=&#34;https://www.youtube.com/watch?v=4OUEss2XF7E&amp;amp;t=1s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website&lt;/a&gt;]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Manipulate and visualise data in the &lt;code&gt;tidyverse&lt;/code&gt; [
+&lt;a href=&#34;https://oliviergimenez.github.io/intro_tidyverse/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;] [
+&lt;a href=&#34;https://github.com/oliviergimenez/intro_tidyverse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;material&lt;/a&gt;] [
+&lt;a href=&#34;https://oliviergimenez.github.io/tidyverse-tips/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tips&lt;/a&gt;]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Focus on GIS and spatial data with &lt;code&gt;sf&lt;/code&gt; package [
+&lt;a href=&#34;https://oliviergimenez.github.io/intro_spatialR/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;] [
+&lt;a href=&#34;https://github.com/oliviergimenez/intro_spatialR&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;material&lt;/a&gt;]&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;capture-recapture&#34;&gt;Capture-recapture&lt;/h3&gt;
 &lt;br&gt;
 &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/IPMworkshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Capture-recapture models as HMMs&lt;/a&gt; &amp;ndash; &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/basics_spatial_capturerecapture&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spatial capture-recapture models&lt;/a&gt; for closed and open populations &amp;ndash; &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Nimble&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/bayes-multistate-jollyseber&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jolly-Seber&lt;/a&gt; capture-recapture models &amp;ndash; &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://github.com/oliviergimenez/multievent_jags_R&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multievent&lt;/a&gt; capture-recapture models &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;, &lt;code&gt;Nimble&lt;/code&gt;&lt;/p&gt;
@@ -5107,7 +5287,8 @@ to supervise (officially) PhD students.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://github.com/oliviergimenez/multistate_local_minima&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Local minima&lt;/a&gt; and multistate capture-recapture models  &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;, &lt;code&gt;ADMB&lt;/code&gt;, &lt;code&gt;Stan&lt;/code&gt;, &lt;code&gt;unmarked&lt;/code&gt;&lt;/p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/multistate_local_minima&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Local minima&lt;/a&gt; and multistate capture-recapture models; see also 
+&lt;a href=&#34;https://github.com/oliviergimenez/multistate_recaprecov&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt; for mixture of recaptures and recoveries &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;, &lt;code&gt;ADMB&lt;/code&gt;, &lt;code&gt;Stan&lt;/code&gt;, &lt;code&gt;unmarked&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;
@@ -5202,8 +5383,9 @@ to supervise (officially) PhD students.&lt;/p&gt;
 &lt;br&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Dynamic models based on 
-&lt;a href=&#34;https://github.com/oliviergimenez/fitODEnimble&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ODEs&lt;/a&gt; &amp;ndash;  &lt;code&gt;Nimble&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Dynamic models based on ODEs 
+&lt;a href=&#34;https://github.com/oliviergimenez/fitODEnimble&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
+&lt;a href=&#34;https://github.com/oliviergimenez/ODEnimble&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt; &amp;ndash;  &lt;code&gt;Nimble&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Explore strategies of 
@@ -5299,6 +5481,14 @@ to supervise (officially) PhD students.&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://github.com/oliviergimenez/simul_with_jags&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Simulate data with &lt;code&gt;Jags&lt;/code&gt;&lt;/a&gt;  &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/firststepsinPython&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;First steps in Python&lt;/a&gt; &amp;ndash; &lt;code&gt;Python&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/oliviergimenez/marss_jags&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian Multivariate Autoregressive State-Space&lt;/a&gt; models - MARSS &amp;ndash;  &lt;code&gt;R&lt;/code&gt;, &lt;code&gt;Jags&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>

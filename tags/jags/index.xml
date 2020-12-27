@@ -5,12 +5,21 @@
     <link>https://oliviergimenez.github.io/tags/jags/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/jags/index.xml" rel="self" type="application/rss+xml" />
     <description>jags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sat, 13 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>jags</title>
       <link>https://oliviergimenez.github.io/tags/jags/</link>
     </image>
+    
+    <item>
+      <title>Some random piece of code</title>
+      <link>https://oliviergimenez.github.io/blog/pieceofcode/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/pieceofcode/</guid>
+      <description>&lt;p&gt;Gathered some code on occupancy, capture-recapture &amp;amp; epidemiological models, social networks, spatial stuff, textual analyses, reproducible science, etc&amp;hellip;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;👩‍💻👨‍💻 In hope it&amp;#39;s useful, I gathered random pieces of code I wrote on occupancy, capture-recapture &amp;amp; epidemiological models, social networks, spatial stuff, textual analyses, &lt;a href=&#34;https://twitter.com/hashtag/DeepLearning?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DeepLearning&lt;/a&gt; and the &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt; ➡️ &lt;a href=&#34;https://t.co/T1PlbmDLZO&#34;&gt;https://t.co/T1PlbmDLZO&lt;/a&gt; I also went full purple &lt;a href=&#34;https://twitter.com/MoonbeamLevels?ref_src=twsrc%5Etfw&#34;&gt;@MoonbeamLevels&lt;/a&gt; 💜 &lt;a href=&#34;https://t.co/q6vK4LYVS7&#34;&gt;pic.twitter.com/q6vK4LYVS7&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1291749139596955650?ref_src=twsrc%5Etfw&#34;&gt;August 7, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
     
     <item>
       <title>Jags code to fit a multistate single-season occupancy model</title>

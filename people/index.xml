@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/people/</link>
       <atom:link href="https://oliviergimenez.github.io/people/index.xml" rel="self" type="application/rss+xml" />
     <description>People</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Thu, 06 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>People</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Current lab members</title>
       <link>https://oliviergimenez.github.io/people/current/</link>
-      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/current/</guid>
       <description>&lt;br&gt;
 &lt;hr&gt; 
@@ -49,9 +49,8 @@
 &lt;a href=&#34;https://institute.sandiegozoo.org/staff/nicholas-pilfold-phd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nicholas Pilfold&lt;/a&gt; and 
 &lt;a href=&#34;https://www.cefe.cnrs.fr/fr/actus/44-french/recherche/bc/bev/291-aurelien-besnard&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Aurélien Besnard&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt; 
-&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/gilles.jpg&#34; alt=&#34;&#34;&gt;
-&lt;strong&gt;Gilles Maurer&lt;/strong&gt; (PhD 2015-2018, post-doc 2018-2021) is studying the interactions between wild and semi-captive pools of Asian elephants with an interdisciplinary framework (demography, economy, anthropology, population genetics). This is joint work with Baptiste Mulot at 
-&lt;a href=&#34;http://www.beauvalnature.com/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Beauval Nature&lt;/a&gt;, Finn Kjellberg and Nicolas Lescureux from CEFE.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/patricia.jpg&#34; alt=&#34;&#34;&gt; &lt;strong&gt;Patrícia Rodrigues&lt;/strong&gt; (post-doc 2021) seeks to better understand the complexity associated with human-wildlife interactions in the subsistence landscapes of Ethiopia&amp;rsquo;s highlands. More 
+&lt;a href=&#34;https://rodriguespatri.wixsite.com/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/alix.jpg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Alix Cosquer&lt;/strong&gt; (post-doc 2019-2021) is an environmental psychologist. She is studying how to favor connections between nature and children using educative marine areas.&lt;/p&gt;
@@ -61,7 +60,7 @@
     <item>
       <title>Former lab members</title>
       <link>https://oliviergimenez.github.io/people/alumni/</link>
-      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/alumni/</guid>
       <description>&lt;br&gt;
 &lt;hr&gt; 
@@ -83,6 +82,11 @@ Sarah is now a
 &lt;a href=&#34;https://www.sarahbauduin.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;permanent researcher with the French Office of Biodiversity&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/gilles.jpg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Gilles Maurer&lt;/strong&gt; (PhD 2015-2018, post-doc 2018-2020) studied the interactions between wild and semi-captive pools of Asian elephants with an interdisciplinary framework (demography, economy, anthropology, population genetics). This was joint work with Baptiste Mulot at 
+&lt;a href=&#34;http://www.beauvalnature.com/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Beauval Nature&lt;/a&gt;, Finn Kjellberg and Nicolas Lescureux from CEFE. Gilles is now permanent researcher at Beauval Nature, hosted at CEFE.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/lorena.jpg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Lorena Mansilla&lt;/strong&gt; (PhD 2016-2019) developed capture-recapture and demographic models
 for social species with wolves, dolphins and elephant seals as case studies. She used spatially-explicit

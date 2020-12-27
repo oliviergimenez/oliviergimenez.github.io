@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/tags/isec/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/isec/index.xml" rel="self" type="application/rss+xml" />
     <description>isec</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 09 Jul 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>isec</title>
@@ -95,7 +95,7 @@ information on species distribution.&lt;/p&gt;
       <description>&lt;p&gt;I attended Daniel Turek&amp;rsquo;s talk at ISEC about &lt;a href=&#34;http://r-nimble.org/&#34; target=&#34;_blank&#34;&gt;NIMBLE&lt;/a&gt;
 a neat alternative to WinBUGS and JAGS. It is developed by
 &lt;a href=&#34;http://nature.berkeley.edu/~pdevalpine/&#34; target=&#34;_blank&#34;&gt;Perry de Valpine&amp;rsquo;s
-group&lt;/a&gt; at Berkeley and &lt;em&gt;&#39;lets you use BUGS models natively in R, program functions
+group&lt;/a&gt; at Berkeley and &lt;em&gt;&amp;lsquo;lets you use BUGS models natively in R, program functions
 that use them, and compile everything via C++ for faster computing&amp;rsquo;.&lt;/em&gt; I played around
 with NIMBLE a bit, &lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-codes/cjs-nimble.R&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
 is an example of fitting a classic capture-recapture model to simulated data - thanks to Perry
@@ -132,7 +132,7 @@ fitting occupancy models with hidden-Markov models using E-SURGE:&lt;/p&gt;
       <pubDate>Sun, 01 Jun 2014 12:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/blog/isec2014_prep/</guid>
       <description>&lt;p&gt;The team is leading the organisation of &lt;a href=&#34;http://isec2014.sciencesconf.org/&#34; target=&#34;_blank&#34;&gt;ISEC2014&lt;/a&gt;.
-We&amp;rsquo;re getting ready by, among many other things, preparing the delegates&amp;rsquo; packs. Of
+We&amp;rsquo;re getting ready by, among many other things, preparing the delegates&#39; packs. Of
 course, these efforts cannot go without some relaxing time.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/preparing-delegate-pack.jpg&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;https://oliviergimenez.github.io/img/relaxing-planche-de-la-mer.jpg&#34; alt=&#34;&#34;&gt;

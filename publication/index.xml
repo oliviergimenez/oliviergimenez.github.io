@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/publication/</link>
       <atom:link href="https://oliviergimenez.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sat, 19 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Publications</title>
@@ -15,43 +15,30 @@
     <item>
       <title>Papers</title>
       <link>https://oliviergimenez.github.io/publication/papers/</link>
-      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/publication/papers/</guid>
-      <description>&lt;ol&gt;
+      <description>&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Preprints&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Bauduin S., O. Grente, N.L. Santostasi, P. Ciucci, C. Duchamp, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
-&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0304380020302799&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An individual-based model to explore the impacts of lesser-known social dynamics on wolf populations.&lt;/a&gt; &lt;em&gt;Ecological Modelling&lt;/em&gt; 433: 109209.&lt;/p&gt;
+&lt;p&gt;Turek, D., C. Wehrhahn, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://arxiv.org/abs/2007.10163&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian Non-Parametric Detection Heterogeneity in Ecological Models.&lt;/a&gt; arXiv preprint.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Turek, D., C. Wehrhahn, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). Bayesian Non-Parametric Detection Heterogeneity in Ecological Models. 
-&lt;a href=&#34;https://arxiv.org/abs/2007.10163&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv preprint.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Kazakou E., F. Guillaume, Cheptou P.-O., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.01.08.898247v2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Does seed mass drive interspecies variation in the effect of management practices on weed demography?&lt;/a&gt;. bioRxiv.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;McClintock B.T., R. Langrock, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, E. Cam, D.L. Borchers, R. Glennie, T. A. Patterson (2020). Uncovering ecological state dynamics with hidden Markov models. &lt;em&gt;Ecology Letters&lt;/em&gt; in press. 
-&lt;a href=&#34;https://arxiv.org/abs/2002.10497&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv preprint.&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Santostasi N.L., Ciucci P., Bearzi G., Bonizzoni S., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
-&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Santostasietal2020EcolModel.pdf&#34;&gt;Assessing the dynamics of hybridization through a matrix modelling approach.&lt;/a&gt; &lt;em&gt;Ecological Modelling&lt;/em&gt; 431: 109120.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Chero G., Pradel R., Derville S., Bonneville C., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Garrigue C. (2020). 
-&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Cheroetal2020MEPS.pdf&#34;&gt;Reproductive capacity of an endangered and recovering population of humpback whales in the Southern Hemisphere.&lt;/a&gt; &lt;em&gt;Marine Ecology Progress Series&lt;/em&gt; 643: 219-227.&lt;/p&gt;
+&lt;p&gt;Grente O., T. Saubusse, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, E. Marboutin, C. Duchamp (2020). 
+&lt;a href=&#34;https://ecoevorxiv.org/n8rzg/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wolf depredation hotspots in France: Clustering analyses accounting for livestock availability.&lt;/a&gt; EcoEvoRxiv.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Maurer G., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Mulot B., Lescureux N. (2020). 
-&lt;a href=&#34;https://osf.io/preprints/socarxiv/7g2yd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;From spirits&amp;rsquo; control to market forces: Questioning the resilience of the current human-wild-captive elephant social-ecological system in Laos.&lt;/a&gt; SocArXiv.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Milleret C., Dupont P., Chipperfield J., Turek D., Brøseth H., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, de Valpine P., Bischof R. (2020). 
-&lt;a href=&#34;https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3172&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Estimating abundance with interruptions in data collection using open population spatial capture–recapture models.&lt;/a&gt; &lt;em&gt;Ecosphere&lt;/em&gt; 11( 6):e03172.&lt;/p&gt;
+&lt;a href=&#34;https://osf.io/preprints/socarxiv/7g2yd/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;From spirits&#39; control to market forces: Questioning the resilience of the current human-wild-captive elephant social-ecological system in Laos.&lt;/a&gt; SocArXiv.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Lauret V., Labach H., Authier M., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
 &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/848663v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Combining single- and repeated-visit occupancy models to make the best of monitoring surveys.&lt;/a&gt; bioRxiv preprint.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Louvrier L., Papaïx J., Duchamp C., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Louvrier2020SpatialStatistics.pdf&#34; target=&#34;_blank&#34;&gt;A mechanistic-statistical species distribution model to explain and forecast wolf (Canis lupus) colonization in South-Eastern France.&lt;/a&gt; &lt;em&gt;Spatial Statistics&lt;/em&gt; 36: 100428.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Gamelon M, Baubet E., Besnard A., Gaillard J.-M., Lebreton J.-D., Touzot L., Veylit L., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
@@ -66,12 +53,59 @@
 &lt;a href=&#34;https://arxiv.org/abs/1904.02145&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fitting stochastic predator-prey models using both population density and kill rate data&lt;/a&gt;. arXiv preprint.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Genovart M., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Bertolero A., Choquet R., Oro D., Pradel R. (2020). 
-&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/686451v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Changes in social cohesion in a long-lived species under a perturbation regime.&lt;/a&gt; bioRxiv preprint.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;p&gt;Cubaynes S., Aars J., Yoccoz N.G., Pradel R., Wiig Ø, Ims R.A. &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
 &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/596437v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Modeling the demography of species providing extended parental care: A capture-recapture approach with a case study on Polar Bears (Ursus maritimus).&lt;/a&gt; bioRxiv preprint.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Quéroué M., C. Barbraud, F. Barraquand, D. Turek, K. Delord, N. Pacoureau, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.06.26.174250v2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multispecies integrated population model reveals bottom-up dynamics in a seabird predator-prey system&lt;/a&gt; bioRxiv preprint.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;E. F. Kleiven, F. Barraquand, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, J.-A. Henden, R. Anker Ims, E. M. Soininen, N. G. Yoccoz (2020). 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.12.16.423067v1.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A dynamic and hierarchical spatial occupancy model for interacting species.&lt;/a&gt; bioRxiv.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;V. Gervasi, J. Linnell, T. Berce, L. Boitani, B. Cretois, P. Ciucci, C. Duchamp, A. Gastineau, O. Grente, D. Hilfiker, D. Huber, Y. Iliopoulos, A. Karamanlidis, F. Marucco, Y. Mertzanis, P. Mannil, H. Norberg, N. Pagon, L. Pedrotti, P.-Y. Quenette, S. Reljic, V. Salvatori, T. Talvi, M. von Arx, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.04.14.041160v2.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ecological and anthropogenic drivers of large carnivore depredation on sheep in Europe&lt;/a&gt;. bioRxiv.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Published&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Bischof R., C. Milleret, P. Dupont, J. Chipperfield, M. Tourani, A. Ordiz, P. de Valpine, D. Turek, J. A. Royle, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Ø. Flagstad, M. Åkesson, L. Svensson, H. Brøseth, J. Kindberg (2020). 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Bischof2020PNAS.pdf&#34;&gt;Estimating and forecasting spatial population dynamics of apex predators using transnational genetic monitoring.&lt;/a&gt; &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; 117:30531-30538.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vitet C., P. Duncan, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, C. Mabika, S. Chamaillé‐Jammes (2020). 
+&lt;a href=&#34;https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3288&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plains zebras bring evidence that dilution and detection effects may not always matter behaviorally and demographically.&lt;/a&gt; &lt;em&gt;Ecosphere&lt;/em&gt; 11: e03288.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bauduin S., O. Grente, N.L. Santostasi, P. Ciucci, C. Duchamp, &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0304380020302799&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An individual-based model to explore the impacts of lesser-known social dynamics on wolf populations.&lt;/a&gt; &lt;em&gt;Ecological Modelling&lt;/em&gt; 433: 109209.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;McClintock B.T., R. Langrock, &lt;strong&gt;Gimenez O.&lt;/strong&gt;, E. Cam, D.L. Borchers, R. Glennie, T. A. Patterson (2020). 
+&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13610&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Uncovering ecological state dynamics with hidden Markov models.&lt;/a&gt; &lt;em&gt;Ecology Letters&lt;/em&gt; 23: 1878-1903.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Genovart M., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, A. Bertolero, R. Choquet, D. Oro, R. Pradel (2020). 
+&lt;a href=&#34;https://www.nature.com/articles/s41598-020-75259-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Decrease in social cohesion in a colonial seabird under a perturbation regime.&lt;/a&gt; &lt;em&gt;Scientific reports&lt;/em&gt; 10: 18720.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Santostasi N.L., Ciucci P., Bearzi G., Bonizzoni S., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Santostasietal2020EcolModel.pdf&#34;&gt;Assessing the dynamics of hybridization through a matrix modelling approach.&lt;/a&gt; &lt;em&gt;Ecological Modelling&lt;/em&gt; 431: 109120.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chero G., Pradel R., Derville S., Bonneville C., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Garrigue C. (2020). 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Cheroetal2020MEPS.pdf&#34;&gt;Reproductive capacity of an endangered and recovering population of humpback whales in the Southern Hemisphere.&lt;/a&gt; &lt;em&gt;Marine Ecology Progress Series&lt;/em&gt; 643: 219-227.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Milleret C., Dupont P., Chipperfield J., Turek D., Brøseth H., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, de Valpine P., Bischof R. (2020). 
+&lt;a href=&#34;https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.3172&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Estimating abundance with interruptions in data collection using open population spatial capture–recapture models.&lt;/a&gt; &lt;em&gt;Ecosphere&lt;/em&gt; 11( 6):e03172.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Louvrier L., Papaïx J., Duchamp C., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2020). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Louvrier2020SpatialStatistics.pdf&#34; target=&#34;_blank&#34;&gt;A mechanistic-statistical species distribution model to explain and forecast wolf (Canis lupus) colonization in South-Eastern France.&lt;/a&gt; &lt;em&gt;Spatial Statistics&lt;/em&gt; 36: 100428.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Marescot L., Lyet A., Singh R., Carter N., &lt;strong&gt;Gimenez O.&lt;/strong&gt; (2019). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Marescot2019Ecography.pdf&#34; target=&#34;_blank&#34;&gt;Inferring wildlife poaching in southeast Asia with multispecies dynamic occupancy models.&lt;/a&gt; &lt;em&gt;Ecography&lt;/em&gt; 42: 1–12.&lt;/p&gt;
@@ -120,8 +154,7 @@
 &lt;p&gt;&lt;strong&gt;Gimenez O.&lt;/strong&gt;, L. Mansilla, M.J. Klaich, M.A. Coscarella, S.N. Pedraza, E.A. Crespo (2019). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Gimenezetal2019EcolModel.pdf&#34; target=&#34;_blank&#34;&gt;Inferring animal social networks with imperfect detection.&lt;/a&gt; &lt;em&gt;Ecological Modelling&lt;/em&gt;. 401: 69-74.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Melovski, D., Von Arx, M., Avukatov, V., Breitenmoser-Würsten, C., Đurović, M., Elezi, R., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, &amp;hellip; , Breitenmoser, U. (2019). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Melovskietal2019OryxBalkanLynx.pdf&#34; target=&#34;_blank&#34;&gt;Using questionnaire surveys and occupancy modelling to identify conservation priorities for the Critically Endangered Balkan lynx Lynx lynx balcanicus.&lt;/a&gt; &lt;em&gt;Oryx&lt;/em&gt;. 1-9. 
-&lt;a href=&#34;https://www.cambridge.org/core/journals/oryx/article/using-questionnaire-surveys-and-occupancy-modelling-to-identify-conservation-priorities-for-the-critically-endangered-balkan-lynx-lynx-lynx-balcanicus/F6A07DB92A1D32EB3057E641AF52C43D/share/49a0a6fe6efa36ab289456d90fd8aa9c0f277fe1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;doi:10.1017/S0030605318000492&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Melovski, D., Von Arx, M., Avukatov, V., Breitenmoser-Würsten, C., Đurović, M., Elezi, R., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, &amp;hellip; , Breitenmoser, U. (2019). &lt;a href=&#34;https://oliviergimenez.github.io/pubs/Melovskietal2019OryxBalkanLynx.pdf&#34; target=&#34;_blank&#34;&gt;Using questionnaire surveys and occupancy modelling to identify conservation priorities for the Critically Endangered Balkan lynx Lynx lynx balcanicus.&lt;/a&gt; &lt;em&gt;Oryx&lt;/em&gt;. 54: 706-714.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Benhaiem S., Marescot L., East M. L., Kramer-Schadt S., &lt;strong&gt;Gimenez O.&lt;/strong&gt;, Lebreton J.-D. Hofer H. (2018). 

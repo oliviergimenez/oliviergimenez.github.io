@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/talks/</link>
       <atom:link href="https://oliviergimenez.github.io/talks/index.xml" rel="self" type="application/rss+xml" />
     <description>Talks and workshops</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Thu, 06 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Talks and workshops</title>
@@ -15,9 +15,21 @@
     <item>
       <title>Talks</title>
       <link>https://oliviergimenez.github.io/talks/talk/</link>
-      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/talk/</guid>
       <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Large carnivores and statistical ecology. Seminar in Lisbon (remotely) Dec 2020. 
+&lt;a href=&#34;https://www.youtube.com/watch?v=jM5i7vxLcGM&amp;amp;t=0s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video&lt;/a&gt; and 
+&lt;a href=&#34;https://figshare.com/articles/presentation/Large_carnivores_and_statistical_ecology/13337822/4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;First steps in Deep Learning - Species identification and camera traps. Speed talk at 
+&lt;a href=&#34;https://imaginecology.sciencesconf.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;imaginecology&lt;/a&gt;. November 16-17, 2020, Lyon. 
+&lt;a href=&#34;https://www.youtube.com/watch?v=CAbm9S39y5M&amp;amp;t=0s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Video&lt;/a&gt;, 
+&lt;a href=&#34;https://oliviergimenez.github.io/prezimaginecology/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt; and 
+&lt;a href=&#34;https://github.com/oliviergimenez/DLcamtrap&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;workflow&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Flexible spatio-temporal modelling of occupancy using GAMs: A case study with large carnivores. Speed talk at 
 &lt;a href=&#34;https://www.isec2020.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ISEC&lt;/a&gt;. 2020, virtual Sydney Australia. 
@@ -25,8 +37,9 @@
 &lt;a href=&#34;https://figshare.com/articles/Flexible_spatio-temporal_modelling_of_occupancy_using_GAMs_A_case_study_with_large_carnivores_/12443249/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Statistical ecology and large carnivores. Public lecture. 2020, Rennes France. 
-&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.11913771.v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Grands carnivores et écologie statistique. Séminaire grand public 2020, Rennes France. 
+&lt;a href=&#34;https://www.youtube.com/watch?v=RHZR-bC-pMQ&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vidéo&lt;/a&gt; et 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.11913771.v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;diapos&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Modélisation spatio-temporelle de l’aire d’occupation : le cas des grands carnivores en France. Annual meeting of the French network in Statistical ecology. 2020, Rennes France. 
@@ -103,7 +116,7 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
 &lt;a href=&#34;https://figshare.com/articles/Assessing_Inter-population_Variation_in_Survival_Using_Mark-Recapture_Data/9165182&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Des modèles de capture-recapture pour l&#39;écologie évolutive. 
+&lt;p&gt;Des modèles de capture-recapture pour l&amp;rsquo;écologie évolutive. 
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Habilitation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Habilitation à Diriger des Recherches&lt;/a&gt;. 2010, Montpellier France. 
 &lt;a href=&#34;https://figshare.com/articles/HDROGimenez-format3_pdf/4833509&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Diapos&lt;/a&gt; et 
 &lt;a href=&#34;https://figshare.com/articles/Manuscrit_HDR_Des_mod_les_de_capture-recapture_pour_l_cologie_volutive/9169991&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;manuscript&lt;/a&gt;.&lt;/p&gt;
@@ -144,10 +157,15 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
     <item>
       <title>Workshops</title>
       <link>https://oliviergimenez.github.io/talks/workshop/</link>
-      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/workshop/</guid>
-      <description>&lt;p&gt;Novembre 2020. 
+      <description>&lt;p&gt;November 23-27, 2020. 
+&lt;a href=&#34;http://www.phidot.org/forum/viewtopic.php?f=8&amp;amp;t=3968&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Integrated population models&lt;/a&gt;. Remotely via Zoom. Slides and videos on capture-recapture models 
+&lt;a href=&#34;https://github.com/oliviergimenez/IPMworkshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;November 2020. 
 &lt;a href=&#34;https://www.fondationbiodiversite.fr/evenement/frb-cesab-formation-reproductibilite-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bonnes pratiques pour une recherche reproductible en écologie numérique&lt;/a&gt;. Montpellier, France.&lt;/p&gt;
+&lt;p&gt;October 2020. 
+&lt;a href=&#34;https://github.com/oliviergimenez/statistics-for-ecologists-Master-courses&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistics for ecologists&lt;/a&gt; Master course.&lt;/p&gt;
 &lt;p&gt;July 2020. 
 &lt;a href=&#34;https://github.com/oliviergimenez/Bayesian_Workshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian statistics with R and Jags&lt;/a&gt;. Remotely via Zoom.&lt;/p&gt;
 &lt;p&gt;Décembre 2019. 

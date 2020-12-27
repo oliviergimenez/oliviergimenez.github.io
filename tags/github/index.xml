@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/github/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <description>GitHub</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Fri, 18 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>GitHub</title>
+      <link>https://oliviergimenez.github.io/tags/github/</link>
+    </image>
+    
+    <item>
+      <title>Workshop on reproducible science</title>
+      <link>https://oliviergimenez.github.io/blog/reproscience2020/</link>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/reproscience2020/</guid>
+      <description>&lt;p&gt;Workshop to come on reproducible science in our lab.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🧑‍🔬💻♻️ Planning a 1-day workshop on reproducible science for our lab &lt;a href=&#34;https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw&#34;&gt;@cefemontpellier&lt;/a&gt;. We&amp;#39;ll use R and RStudio, Git, GitHub, R Markdown, tidyverse and sf 🤩&lt;br&gt;&lt;br&gt;Material here &lt;a href=&#34;https://t.co/QApKQsl1FU&#34;&gt;https://t.co/QApKQsl1FU&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ReproducibleScience?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ReproducibleScience&lt;/a&gt; &lt;a href=&#34;https://twitter.com/twitthair1?ref_src=twsrc%5Etfw&#34;&gt;@twitthair1&lt;/a&gt; &lt;br&gt;&lt;br&gt;pix by &lt;a href=&#34;https://twitter.com/scriberian?ref_src=twsrc%5Etfw&#34;&gt;@scriberian&lt;/a&gt; &lt;a href=&#34;https://t.co/LFBwZmelit&#34;&gt;pic.twitter.com/LFBwZmelit&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1339896916109373440?ref_src=twsrc%5Etfw&#34;&gt;December 18, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
