@@ -1,57 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>seminar | Olivier Gimenez</title>
-    <link>https://oliviergimenez.github.io/tags/seminar/</link>
-      <atom:link href="https://oliviergimenez.github.io/tags/seminar/index.xml" rel="self" type="application/rss+xml" />
-    <description>seminar</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>seminar</title>
-      <link>https://oliviergimenez.github.io/tags/seminar/</link>
-    </image>
-    
-    <item>
-      <title>Seminar on large carnivores and statistical ecology</title>
-      <link>https://oliviergimenez.github.io/blog/talklisboa/</link>
-      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/talklisboa/</guid>
-      <description>&lt;p&gt;A seminar I gave remotely for the university of Lisboa.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Statistical ecology 🌍📊, large carnivores 🐺🐻 and a pinch of social sciences 🤷, happy to share our research in this 45&amp;#39; talk 🤩🍾&lt;br&gt;&lt;br&gt;slides: &lt;a href=&#34;https://t.co/fKTMWko5J9&#34;&gt;https://t.co/fKTMWko5J9&lt;/a&gt;&lt;br&gt;video: &lt;a href=&#34;https://t.co/7KubqYJIBU&#34;&gt;https://t.co/7KubqYJIBU&lt;/a&gt; &lt;a href=&#34;https://t.co/OJ292VWuel&#34;&gt;pic.twitter.com/OJ292VWuel&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1337013328942665728?ref_src=twsrc%5Etfw&#34;&gt;December 10, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
-    </item>
-    
-    <item>
-      <title>Ecology meets linguistic</title>
-      <link>https://oliviergimenez.github.io/blog/praxiling/</link>
-      <pubDate>Mon, 27 Feb 2017 12:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/praxiling/</guid>
-      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/semling.png&#34;&gt;
-We organized a meeting between our lab and [Praxiling](http://www.praxiling.fr/?lang=en) 
-a lab working in linguistic to explore potential collaborations between ecology and linguistic. 
-Marie Chandelier and I gave a talk on our recent results on a content analysis we 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>seminar | Olivier Gimenez</title><link>https://oliviergimenez.github.io/tags/seminar/</link><atom:link href="https://oliviergimenez.github.io/tags/seminar/index.xml" rel="self" type="application/rss+xml"/><description>seminar</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>seminar</title><link>https://oliviergimenez.github.io/tags/seminar/</link></image><item><title>Seminar on large carnivores and statistical ecology</title><link>https://oliviergimenez.github.io/blog/talklisboa/</link><pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/talklisboa/</guid><description>&lt;p>A seminar I gave remotely for the university of Lisboa.&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Statistical ecology 🌍📊, large carnivores 🐺🐻 and a pinch of social sciences 🤷, happy to share our research in this 45&amp;#39; talk 🤩🍾&lt;br>&lt;br>slides: &lt;a href="https://t.co/fKTMWko5J9">https://t.co/fKTMWko5J9&lt;/a>&lt;br>video: &lt;a href="https://t.co/7KubqYJIBU">https://t.co/7KubqYJIBU&lt;/a> &lt;a href="https://t.co/OJ292VWuel">pic.twitter.com/OJ292VWuel&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1337013328942665728?ref_src=twsrc%5Etfw">December 10, 2020&lt;/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Ecology meets linguistic</title><link>https://oliviergimenez.github.io/blog/praxiling/</link><pubDate>Mon, 27 Feb 2017 12:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/praxiling/</guid><description>&lt;img style="float:left;margin-right:10px;margin-top:10px;" src="https://oliviergimenez.github.io/img/semling.png">
+We organized a meeting between our lab and [Praxiling](http://www.praxiling.fr/?lang=en)
+a lab working in linguistic to explore potential collaborations between ecology and linguistic.
+Marie Chandelier and I gave a talk on our recent results on a content analysis we
 performed on wolf recovery in France
-and its coverage by newspapers. More soon on this front.
-</description>
-    </item>
-    
-    <item>
-      <title>H. Smith&#39;s talk on detection dogs</title>
-      <link>https://oliviergimenez.github.io/blog/seminar_detection_dogs/</link>
-      <pubDate>Wed, 13 May 2015 12:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/seminar_detection_dogs/</guid>
-      <description>&lt;p&gt;As one of our always excellent department seminar, we had the chance to welcome
-&lt;a href=&#34;http://conservationbiology.uw.edu/conservation-canines/conservation-canines-staff/&#34; target=&#34;_blank&#34;&gt;Heath
-Smith from University of Washington, Center for Conservation Biology&lt;/a&gt;. Heath, together
+and its coverage by newspapers. More soon on this front.</description></item><item><title>H. Smith's talk on detection dogs</title><link>https://oliviergimenez.github.io/blog/seminar_detection_dogs/</link><pubDate>Wed, 13 May 2015 12:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/seminar_detection_dogs/</guid><description>&lt;p>As one of our always excellent department seminar, we had the chance to welcome
+&lt;a href="http://conservationbiology.uw.edu/conservation-canines/conservation-canines-staff/" target="_blank">Heath
+Smith from University of Washington, Center for Conservation Biology&lt;/a>. Heath, together
 with his dog Chester with whom I became friend during the talk, is working with detection
 dogs on all sorts of important questions and organisms in conservation biology. Heath then
 headed to the Pyrénées with Nathalie Espuno to meet with our colleagues from the ONCFS
 bear (dream)team with whom we&amp;rsquo;re working
 on Blaise Piédallu&amp;rsquo;s
 PhD. They&amp;rsquo;re gonna try this technique there, no doubt the results will be of
-interest for our work on large carnivores!&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+interest for our work on large carnivores!&lt;/p></description></item></channel></rss>

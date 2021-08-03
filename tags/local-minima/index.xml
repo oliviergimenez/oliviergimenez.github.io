@@ -1,26 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>local minima | Olivier Gimenez</title>
-    <link>https://oliviergimenez.github.io/tags/local-minima/</link>
-      <atom:link href="https://oliviergimenez.github.io/tags/local-minima/index.xml" rel="self" type="application/rss+xml" />
-    <description>local minima</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>local minima</title>
-      <link>https://oliviergimenez.github.io/tags/local-minima/</link>
-    </image>
-    
-    <item>
-      <title>Local minima and multistate capture-recapture models</title>
-      <link>https://oliviergimenez.github.io/blog/localminima_reboot/</link>
-      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/localminima_reboot/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I thought I&amp;#39;d share some &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; code about local minima in &lt;a href=&#34;https://twitter.com/hashtag/multistate?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#multistate&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/capturerecapture?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#capturerecapture&lt;/a&gt; models &lt;a href=&#34;https://t.co/aJE33dBtdO&#34;&gt;https://t.co/aJE33dBtdO&lt;/a&gt; using &lt;a href=&#34;https://twitter.com/hashtag/Mark?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Mark&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Admb?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Admb&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Jags?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Jags&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Stan?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Stan&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/hashtag/Nimble?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Nimble&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/hashtag/TMB?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TMB&lt;/a&gt; to come). Largely inspired by Chapter 9 of the &amp;quot;Gentle introduction to Mark&amp;quot; by Cooch &amp;amp; White 😉 &lt;a href=&#34;https://t.co/NxzG6w0Bzq&#34;&gt;pic.twitter.com/NxzG6w0Bzq&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1127680025568993281?ref_src=twsrc%5Etfw&#34;&gt;12 mai 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>local minima | Olivier Gimenez</title><link>https://oliviergimenez.github.io/tags/local-minima/</link><atom:link href="https://oliviergimenez.github.io/tags/local-minima/index.xml" rel="self" type="application/rss+xml"/><description>local minima</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>local minima</title><link>https://oliviergimenez.github.io/tags/local-minima/</link></image><item><title>Local minima and multistate capture-recapture models</title><link>https://oliviergimenez.github.io/blog/localminima_reboot/</link><pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/localminima_reboot/</guid><description>&lt;blockquote class="twitter-tweet" data-lang="fr">&lt;p lang="en" dir="ltr">I thought I&amp;#39;d share some &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw">#rstats&lt;/a> code about local minima in &lt;a href="https://twitter.com/hashtag/multistate?src=hash&amp;amp;ref_src=twsrc%5Etfw">#multistate&lt;/a> &lt;a href="https://twitter.com/hashtag/capturerecapture?src=hash&amp;amp;ref_src=twsrc%5Etfw">#capturerecapture&lt;/a> models &lt;a href="https://t.co/aJE33dBtdO">https://t.co/aJE33dBtdO&lt;/a> using &lt;a href="https://twitter.com/hashtag/Mark?src=hash&amp;amp;ref_src=twsrc%5Etfw">#Mark&lt;/a> &lt;a href="https://twitter.com/hashtag/Admb?src=hash&amp;amp;ref_src=twsrc%5Etfw">#Admb&lt;/a> &lt;a href="https://twitter.com/hashtag/Jags?src=hash&amp;amp;ref_src=twsrc%5Etfw">#Jags&lt;/a> &lt;a href="https://twitter.com/hashtag/Stan?src=hash&amp;amp;ref_src=twsrc%5Etfw">#Stan&lt;/a> (&lt;a href="https://twitter.com/hashtag/Nimble?src=hash&amp;amp;ref_src=twsrc%5Etfw">#Nimble&lt;/a> &amp;amp; &lt;a href="https://twitter.com/hashtag/TMB?src=hash&amp;amp;ref_src=twsrc%5Etfw">#TMB&lt;/a> to come). Largely inspired by Chapter 9 of the &amp;quot;Gentle introduction to Mark&amp;quot; by Cooch &amp;amp; White 😉 &lt;a href="https://t.co/NxzG6w0Bzq">pic.twitter.com/NxzG6w0Bzq&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1127680025568993281?ref_src=twsrc%5Etfw">12 mai 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item></channel></rss>

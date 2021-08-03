@@ -1,28 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>sf | Olivier Gimenez</title>
-    <link>https://oliviergimenez.github.io/tags/sf/</link>
-      <atom:link href="https://oliviergimenez.github.io/tags/sf/index.xml" rel="self" type="application/rss+xml" />
-    <description>sf</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Fri, 08 Feb 2019 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>sf</title>
-      <link>https://oliviergimenez.github.io/tags/sf/</link>
-    </image>
-    
-    <item>
-      <title>Introduction to spatial analyses in R</title>
-      <link>https://oliviergimenez.github.io/blog/intro_spatial/</link>
-      <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/intro_spatial/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;👩
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sf | Olivier Gimenez</title><link>https://oliviergimenez.github.io/tags/sf/</link><atom:link href="https://oliviergimenez.github.io/tags/sf/index.xml" rel="self" type="application/rss+xml"/><description>sf</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Fri, 08 Feb 2019 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>sf</title><link>https://oliviergimenez.github.io/tags/sf/</link></image><item><title>Introduction to spatial analyses in R</title><link>https://oliviergimenez.github.io/blog/intro_spatial/</link><pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/intro_spatial/</guid><description>&lt;blockquote class="twitter-tweet" data-lang="fr">&lt;p lang="en" dir="ltr">👩
 💻🗺️👨
-💻 The slides of my introduction to &lt;a href=&#34;https://twitter.com/hashtag/GIS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#GIS&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/hashtag/mapping?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#mapping&lt;/a&gt; in &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; using the &lt;a href=&#34;https://twitter.com/hashtag/sf?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#sf&lt;/a&gt; 📦 and brown 🐻 distribution in the &lt;a href=&#34;https://twitter.com/hashtag/pyrenees?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#pyrenees&lt;/a&gt; as a case study &lt;a href=&#34;https://t.co/SKQOCzbxHn&#34;&gt;https://t.co/SKQOCzbxHn&lt;/a&gt; - raw material on &lt;a href=&#34;https://twitter.com/hashtag/github?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#github&lt;/a&gt; &lt;a href=&#34;https://t.co/dHoMz6I2Kp&#34;&gt;https://t.co/dHoMz6I2Kp&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rspatial?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rspatial&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/spatial?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatial&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ggplot2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ggplot2&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/dataviz?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#dataviz&lt;/a&gt; &lt;a href=&#34;https://t.co/22eD1Y55d3&#34;&gt;pic.twitter.com/22eD1Y55d3&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1093882504560414721?ref_src=twsrc%5Etfw&#34;&gt;8 février 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script asyncc=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+💻 The slides of my introduction to &lt;a href="https://twitter.com/hashtag/GIS?src=hash&amp;amp;ref_src=twsrc%5Etfw">#GIS&lt;/a> and &lt;a href="https://twitter.com/hashtag/mapping?src=hash&amp;amp;ref_src=twsrc%5Etfw">#mapping&lt;/a> in &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw">#rstats&lt;/a> using the &lt;a href="https://twitter.com/hashtag/sf?src=hash&amp;amp;ref_src=twsrc%5Etfw">#sf&lt;/a> 📦 and brown 🐻 distribution in the &lt;a href="https://twitter.com/hashtag/pyrenees?src=hash&amp;amp;ref_src=twsrc%5Etfw">#pyrenees&lt;/a> as a case study &lt;a href="https://t.co/SKQOCzbxHn">https://t.co/SKQOCzbxHn&lt;/a> - raw material on &lt;a href="https://twitter.com/hashtag/github?src=hash&amp;amp;ref_src=twsrc%5Etfw">#github&lt;/a> &lt;a href="https://t.co/dHoMz6I2Kp">https://t.co/dHoMz6I2Kp&lt;/a> &lt;a href="https://twitter.com/hashtag/rspatial?src=hash&amp;amp;ref_src=twsrc%5Etfw">#rspatial&lt;/a> &lt;a href="https://twitter.com/hashtag/spatial?src=hash&amp;amp;ref_src=twsrc%5Etfw">#spatial&lt;/a> &lt;a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;amp;ref_src=twsrc%5Etfw">#ggplot2&lt;/a> &lt;a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw">#tidyverse&lt;/a> &lt;a href="https://twitter.com/hashtag/dataviz?src=hash&amp;amp;ref_src=twsrc%5Etfw">#dataviz&lt;/a> &lt;a href="https://t.co/22eD1Y55d3">pic.twitter.com/22eD1Y55d3&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1093882504560414721?ref_src=twsrc%5Etfw">8 février 2019&lt;/a>&lt;/blockquote>
+&lt;script asyncc="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item></channel></rss>

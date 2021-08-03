@@ -1,157 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>lynx | Olivier Gimenez</title>
-    <link>https://oliviergimenez.github.io/tags/lynx/</link>
-      <atom:link href="https://oliviergimenez.github.io/tags/lynx/index.xml" rel="self" type="application/rss+xml" />
-    <description>lynx</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Sat, 28 Sep 2019 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>lynx</title>
-      <link>https://oliviergimenez.github.io/tags/lynx/</link>
-    </image>
-    
-    <item>
-      <title>New paper on lynx densities in France</title>
-      <link>https://oliviergimenez.github.io/blog/paper_lynxdensities/</link>
-      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/paper_lynxdensities/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🥳🍾 Our paper providing lynx density estimates for 🇫🇷 Jura and Vosges mountains is out in &lt;a href=&#34;https://twitter.com/Ecol_Evol?ref_src=twsrc%5Etfw&#34;&gt;@Ecol_Evol&lt;/a&gt; &lt;a href=&#34;https://t.co/74rA1iUaQU&#34;&gt;https://t.co/74rA1iUaQU&lt;/a&gt; &lt;a href=&#34;https://twitter.com/oncfs?ref_src=twsrc%5Etfw&#34;&gt;@oncfs&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CROC_Estelle?ref_src=twsrc%5Etfw&#34;&gt;@CROC_Estelle&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ZiFridolin?ref_src=twsrc%5Etfw&#34;&gt;@ZiFridolin&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/CameraTrap?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CameraTrap&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/SCR?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SCR&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/spatial?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatial&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/capturerecapture?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#capturerecapture&lt;/a&gt; w/ &lt;a href=&#34;https://twitter.com/oSCR_package?ref_src=twsrc%5Etfw&#34;&gt;@oSCR_package&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/openaccess?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#openaccess&lt;/a&gt; &lt;a href=&#34;https://t.co/s8ooMzNDVI&#34;&gt;https://t.co/s8ooMzNDVI&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1177868206230441984?ref_src=twsrc%5Etfw&#34;&gt;September 28,2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
-    </item>
-    
-    <item>
-      <title>Co-construction d&#39;une interface logiciel</title>
-      <link>https://oliviergimenez.github.io/blog/atelier3erclynx/</link>
-      <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/atelier3erclynx/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;fr&#34; dir=&#34;ltr&#34;&gt;Découverte par les acteurs de l&amp;#39;interface logiciel pour évaluer l&amp;#39;impact d&amp;#39;aménagements sur la viabilité du lynx - 3ème atelier co-construction projet &amp;quot;Eviter, réduire &amp;amp; compenser la mortalité du Lynx par collision avec les véhicules de transport&amp;quot; &lt;a href=&#34;https://t.co/uKY5ylOli2&#34;&gt;https://t.co/uKY5ylOli2&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ITTECOP?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ITTECOP&lt;/a&gt; &lt;a href=&#34;https://t.co/0MWDBraOa3&#34;&gt;pic.twitter.com/0MWDBraOa3&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1176877243878006784?ref_src=twsrc%5Etfw&#34;&gt;September 25,2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
-    </item>
-    
-    <item>
-      <title>Lynx meeting on transboundary monitoring and research</title>
-      <link>https://oliviergimenez.github.io/blog/koraoncfsmeeting/</link>
-      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/koraoncfsmeeting/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Stimulating 🇨🇭🇫🇷 meeting to discuss transboundary monitoring and research on 🐱🐺 in the Jura ⛰️ &lt;a href=&#34;https://twitter.com/hashtag/KORA?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#KORA&lt;/a&gt; &lt;a href=&#34;https://twitter.com/oncfs?ref_src=twsrc%5Etfw&#34;&gt;@oncfs&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt;) C. Duchamp, &lt;a href=&#34;https://twitter.com/ZiFridolin?ref_src=twsrc%5Etfw&#34;&gt;@ZiFridolin&lt;/a&gt;, U. Breitenmoser, C. Breitenmoser-Würsten, and N. Drouet-Hoguet not on the pix &lt;a href=&#34;https://t.co/WInB8uh1Vh&#34;&gt;pic.twitter.com/WInB8uh1Vh&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1172589294415941633?ref_src=twsrc%5Etfw&#34;&gt;September 13, 20/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
-    </item>
-    
-    <item>
-      <title>Preprint on how many lynx in France</title>
-      <link>https://oliviergimenez.github.io/blog/preprintog/</link>
-      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/preprintog/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;ro&#34; dir=&#34;ltr&#34;&gt;How many lynx are there? &amp;quot;Spatial density estimates of Eurasian lynx (Lynx lynx) in the 🇫🇷 Jura and Vosges 🏔️&amp;quot; &lt;a href=&#34;https://t.co/roLlOsFxw7&#34;&gt;https://t.co/roLlOsFxw7&lt;/a&gt; &lt;a href=&#34;https://twitter.com/oncfs?ref_src=twsrc%5Etfw&#34;&gt;@oncfs&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CROC_Estelle?ref_src=twsrc%5Etfw&#34;&gt;@CROC_Estelle&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ZiFridolin?ref_src=twsrc%5Etfw&#34;&gt;@ZiFridolin&lt;/a&gt; w/ awesome &lt;a href=&#34;https://twitter.com/hashtag/oSCR?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#oSCR&lt;/a&gt; &lt;a href=&#34;https://twitter.com/rstats?ref_src=twsrc%5Etfw&#34;&gt;@rstats&lt;/a&gt; 📦 &lt;a href=&#34;https://twitter.com/chrissuthy?ref_src=twsrc%5Etfw&#34;&gt;@chrissuthy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/andyroyle_pwrc?ref_src=twsrc%5Etfw&#34;&gt;@andyroyle_pwrc&lt;/a&gt; &lt;a href=&#34;https://twitter.com/dwlinden?ref_src=twsrc%5Etfw&#34;&gt;@dwlinden&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw&#34;&gt;@CNRS_OccitaniE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt; &lt;a href=&#34;https://t.co/AsUGJVhmKx&#34;&gt;pic.twitter.com/AsUGJVhmKx&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1114193860887044096?ref_src=twsrc%5Etfw&#34;&gt;5 avril 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Julie Louvrier submitted her PhD manuscript!</title>
-      <link>https://oliviergimenez.github.io/blog/phdjulie_delivered/</link>
-      <pubDate>Sun, 30 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/phdjulie_delivered/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🤩🍾🥳 Well done &lt;a href=&#34;https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw&#34;&gt;@LouvrierJulie&lt;/a&gt; - Impressiiiiiiiiiiiiive work! &lt;a href=&#34;https://t.co/wd99KZcYTy&#34;&gt;https://t.co/wd99KZcYTy&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🚸 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1046509884831924225?ref_src=twsrc%5Etfw&#34;&gt;30 septembre 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>New paper!</title>
-      <link>https://oliviergimenez.github.io/blog/julie_paper/</link>
-      <pubDate>Fri, 20 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/julie_paper/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🤩🐱 New paper by unstoppable &lt;a href=&#34;https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw&#34;&gt;@LouvrierJulie&lt;/a&gt; &amp;quot;Use of ambiguous detections to improve estimates from &lt;a href=&#34;https://twitter.com/hashtag/SDMs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SDMs&lt;/a&gt;&amp;quot; in &lt;a href=&#34;https://twitter.com/ConBiology?ref_src=twsrc%5Etfw&#34;&gt;@ConBiology&lt;/a&gt; &lt;a href=&#34;https://t.co/XXZFGDT7ko&#34;&gt;https://t.co/XXZFGDT7ko&lt;/a&gt;  &lt;a href=&#34;https://twitter.com/hashtag/teamboulet?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#teamboulet&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ZiFridolin?ref_src=twsrc%5Etfw&#34;&gt;@ZiFridolin&lt;/a&gt; &lt;a href=&#34;https://twitter.com/aveamphibious?ref_src=twsrc%5Etfw&#34;&gt;@aveamphibious&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#WomenInSTEM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/carnivorepapersbywomen?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#carnivorepapersbywomen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ONCFS_officiel?ref_src=twsrc%5Etfw&#34;&gt;@ONCFS_officiel&lt;/a&gt; &lt;a href=&#34;https://twitter.com/umontpellier?ref_src=twsrc%5Etfw&#34;&gt;@umontpellier&lt;/a&gt; &lt;a href=&#34;https://twitter.com/IsiteMUSE?ref_src=twsrc%5Etfw&#34;&gt;@IsiteMUSE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw&#34;&gt;@CNRSenLR&lt;/a&gt; &lt;a href=&#34;https://t.co/LkZtbswikJ&#34;&gt;pic.twitter.com/LkZtbswikJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1020221886565896192?ref_src=twsrc%5Etfw&#34;&gt;20 juillet8&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Workshop on mitigating lynx-vehicle collisions</title>
-      <link>https://oliviergimenez.github.io/blog/ittecop_meeting2/</link>
-      <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/ittecop_meeting2/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Building w/ stakeholders an interface to assess lynx viability in 🇫🇷 Sarah Bauduin gives a crash course on spatially-explicit individual-based models (aka PacMan) &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/shiny?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#shiny&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/leaflet?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#leaflet&lt;/a&gt; &lt;a href=&#34;https://t.co/v9e865t2ib&#34;&gt;https://t.co/v9e865t2ib&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/teamboulet?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#teamboulet&lt;/a&gt; &lt;a href=&#34;https://t.co/1oTtRQRG1j&#34;&gt;pic.twitter.com/1oTtRQRG1j&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1004270684405628928rc=twsrc%5Etfw&#34;&gt;6 juin 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Kick-off meeting of our project on mitigating lynx-vehicle collisions</title>
-      <link>https://oliviergimenez.github.io/blog/ittecop_meeting/</link>
-      <pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/ittecop_meeting/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;fr&#34; dir=&#34;ltr&#34;&gt;Réunion de lancement avec les acteurs du territoire de notre projet sur &amp;quot;Eviter, réduire et compenser la mortalité du Lynx par collision avec les véhicules de transport&amp;quot; &lt;a href=&#34;https://t.co/uKY5ylOli2&#34;&gt;https://t.co/uKY5ylOli2&lt;/a&gt; &lt;a href=&#34;https://twitter.com/_Cerema?ref_src=twsrc%5Etfw&#34;&gt;@_Cerema&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/oncfs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#oncfs&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CROC_Estelle?ref_src=twsrc%5Etfw&#34;&gt;@CROC_Estelle&lt;/a&gt; &lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ittecop?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ittecop&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ademe?ref_src=twsrc%5Etfw&#34;&gt;@ademe&lt;/a&gt; &lt;a href=&#34;https://twitter.com/FRBiodiv?ref_src=twsrc%5Etfw&#34;&gt;@FRBiodiv&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Min_Ecologie?ref_src=twsrc%5Etfw&#34;&gt;@Min_Ecologie&lt;/a&gt; 🤩💪 &lt;a href=&#34;https://t.co/3sY0rDIODQ&#34;&gt;pic.twitter.com/3sY0rDIODQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/970803220355407872?ref_src=twsrc%5Etfw&#34;&gt;5 mars 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
-      <link>https://oliviergimenez.github.io/blog/erc_lynx/</link>
-      <pubDate>Tue, 28 Nov 2017 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/erc_lynx/</guid>
-      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;width:200px;margin-bottom:5px&#34; src=&#34;https://oliviergimenez.github.io/img/jura.jpg&#34;&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lynx | Olivier Gimenez</title><link>https://oliviergimenez.github.io/tags/lynx/</link><atom:link href="https://oliviergimenez.github.io/tags/lynx/index.xml" rel="self" type="application/rss+xml"/><description>lynx</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Sat, 28 Sep 2019 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>lynx</title><link>https://oliviergimenez.github.io/tags/lynx/</link></image><item><title>New paper on lynx densities in France</title><link>https://oliviergimenez.github.io/blog/paper_lynxdensities/</link><pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/paper_lynxdensities/</guid><description>&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">🥳🍾 Our paper providing lynx density estimates for 🇫🇷 Jura and Vosges mountains is out in &lt;a href="https://twitter.com/Ecol_Evol?ref_src=twsrc%5Etfw">@Ecol_Evol&lt;/a> &lt;a href="https://t.co/74rA1iUaQU">https://t.co/74rA1iUaQU&lt;/a> &lt;a href="https://twitter.com/oncfs?ref_src=twsrc%5Etfw">@oncfs&lt;/a> &lt;a href="https://twitter.com/CROC_Estelle?ref_src=twsrc%5Etfw">@CROC_Estelle&lt;/a> &lt;a href="https://twitter.com/ZiFridolin?ref_src=twsrc%5Etfw">@ZiFridolin&lt;/a> &lt;a href="https://twitter.com/hashtag/CameraTrap?src=hash&amp;amp;ref_src=twsrc%5Etfw">#CameraTrap&lt;/a> &lt;a href="https://twitter.com/hashtag/SCR?src=hash&amp;amp;ref_src=twsrc%5Etfw">#SCR&lt;/a> &lt;a href="https://twitter.com/hashtag/spatial?src=hash&amp;amp;ref_src=twsrc%5Etfw">#spatial&lt;/a> &lt;a href="https://twitter.com/hashtag/capturerecapture?src=hash&amp;amp;ref_src=twsrc%5Etfw">#capturerecapture&lt;/a> w/ &lt;a href="https://twitter.com/oSCR_package?ref_src=twsrc%5Etfw">@oSCR_package&lt;/a> &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw">#rstats&lt;/a> &lt;a href="https://twitter.com/hashtag/openaccess?src=hash&amp;amp;ref_src=twsrc%5Etfw">#openaccess&lt;/a> &lt;a href="https://t.co/s8ooMzNDVI">https://t.co/s8ooMzNDVI&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1177868206230441984?ref_src=twsrc%5Etfw">September 28,2019&lt;/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Co-construction d'une interface logiciel</title><link>https://oliviergimenez.github.io/blog/atelier3erclynx/</link><pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/atelier3erclynx/</guid><description>&lt;blockquote class="twitter-tweet">&lt;p lang="fr" dir="ltr">Découverte par les acteurs de l&amp;#39;interface logiciel pour évaluer l&amp;#39;impact d&amp;#39;aménagements sur la viabilité du lynx - 3ème atelier co-construction projet &amp;quot;Eviter, réduire &amp;amp; compenser la mortalité du Lynx par collision avec les véhicules de transport&amp;quot; &lt;a href="https://t.co/uKY5ylOli2">https://t.co/uKY5ylOli2&lt;/a> &lt;a href="https://twitter.com/hashtag/ITTECOP?src=hash&amp;amp;ref_src=twsrc%5Etfw">#ITTECOP&lt;/a> &lt;a href="https://t.co/0MWDBraOa3">pic.twitter.com/0MWDBraOa3&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1176877243878006784?ref_src=twsrc%5Etfw">September 25,2019&lt;/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Lynx meeting on transboundary monitoring and research</title><link>https://oliviergimenez.github.io/blog/koraoncfsmeeting/</link><pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/koraoncfsmeeting/</guid><description>&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Stimulating 🇨🇭🇫🇷 meeting to discuss transboundary monitoring and research on 🐱🐺 in the Jura ⛰️ &lt;a href="https://twitter.com/hashtag/KORA?src=hash&amp;amp;ref_src=twsrc%5Etfw">#KORA&lt;/a> &lt;a href="https://twitter.com/oncfs?ref_src=twsrc%5Etfw">@oncfs&lt;/a> (&lt;a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS&lt;/a>) C. Duchamp, &lt;a href="https://twitter.com/ZiFridolin?ref_src=twsrc%5Etfw">@ZiFridolin&lt;/a>, U. Breitenmoser, C. Breitenmoser-Würsten, and N. Drouet-Hoguet not on the pix &lt;a href="https://t.co/WInB8uh1Vh">pic.twitter.com/WInB8uh1Vh&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1172589294415941633?ref_src=twsrc%5Etfw">September 13, 20/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Preprint on how many lynx in France</title><link>https://oliviergimenez.github.io/blog/preprintog/</link><pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/preprintog/</guid><description>&lt;blockquote class="twitter-tweet" data-lang="fr">&lt;p lang="ro" dir="ltr">How many lynx are there? &amp;quot;Spatial density estimates of Eurasian lynx (Lynx lynx) in the 🇫🇷 Jura and Vosges 🏔️&amp;quot; &lt;a href="https://t.co/roLlOsFxw7">https://t.co/roLlOsFxw7&lt;/a> &lt;a href="https://twitter.com/oncfs?ref_src=twsrc%5Etfw">@oncfs&lt;/a> &lt;a href="https://twitter.com/CROC_Estelle?ref_src=twsrc%5Etfw">@CROC_Estelle&lt;/a> &lt;a href="https://twitter.com/ZiFridolin?ref_src=twsrc%5Etfw">@ZiFridolin&lt;/a> w/ awesome &lt;a href="https://twitter.com/hashtag/oSCR?src=hash&amp;amp;ref_src=twsrc%5Etfw">#oSCR&lt;/a> &lt;a href="https://twitter.com/rstats?ref_src=twsrc%5Etfw">@rstats&lt;/a> 📦 &lt;a href="https://twitter.com/chrissuthy?ref_src=twsrc%5Etfw">@chrissuthy&lt;/a> &lt;a href="https://twitter.com/andyroyle_pwrc?ref_src=twsrc%5Etfw">@andyroyle_pwrc&lt;/a> &lt;a href="https://twitter.com/dwlinden?ref_src=twsrc%5Etfw">@dwlinden&lt;/a> &lt;a href="https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw">@CNRS_OccitaniE&lt;/a> &lt;a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS&lt;/a> &lt;a href="https://t.co/AsUGJVhmKx">pic.twitter.com/AsUGJVhmKx&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1114193860887044096?ref_src=twsrc%5Etfw">5 avril 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Julie Louvrier submitted her PhD manuscript!</title><link>https://oliviergimenez.github.io/blog/phdjulie_delivered/</link><pubDate>Sun, 30 Sep 2018 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/phdjulie_delivered/</guid><description>&lt;blockquote class="twitter-tweet" data-lang="fr">&lt;p lang="en" dir="ltr">🤩🍾🥳 Well done &lt;a href="https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw">@LouvrierJulie&lt;/a> - Impressiiiiiiiiiiiiive work! &lt;a href="https://t.co/wd99KZcYTy">https://t.co/wd99KZcYTy&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🚸 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1046509884831924225?ref_src=twsrc%5Etfw">30 septembre 2018&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>New paper!</title><link>https://oliviergimenez.github.io/blog/julie_paper/</link><pubDate>Fri, 20 Jul 2018 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/julie_paper/</guid><description>&lt;blockquote class="twitter-tweet" data-lang="fr">&lt;p lang="en" dir="ltr">🤩🐱 New paper by unstoppable &lt;a href="https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw">@LouvrierJulie&lt;/a> &amp;quot;Use of ambiguous detections to improve estimates from &lt;a href="https://twitter.com/hashtag/SDMs?src=hash&amp;amp;ref_src=twsrc%5Etfw">#SDMs&lt;/a>&amp;quot; in &lt;a href="https://twitter.com/ConBiology?ref_src=twsrc%5Etfw">@ConBiology&lt;/a> &lt;a href="https://t.co/XXZFGDT7ko">https://t.co/XXZFGDT7ko&lt;/a> &lt;a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;amp;ref_src=twsrc%5Etfw">#teamboulet&lt;/a> &lt;a href="https://twitter.com/ZiFridolin?ref_src=twsrc%5Etfw">@ZiFridolin&lt;/a> &lt;a href="https://twitter.com/aveamphibious?ref_src=twsrc%5Etfw">@aveamphibious&lt;/a> &lt;a href="https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;amp;ref_src=twsrc%5Etfw">#WomenInSTEM&lt;/a> &lt;a href="https://twitter.com/hashtag/carnivorepapersbywomen?src=hash&amp;amp;ref_src=twsrc%5Etfw">#carnivorepapersbywomen&lt;/a> &lt;a href="https://twitter.com/ONCFS_officiel?ref_src=twsrc%5Etfw">@ONCFS_officiel&lt;/a> &lt;a href="https://twitter.com/umontpellier?ref_src=twsrc%5Etfw">@umontpellier&lt;/a> &lt;a href="https://twitter.com/IsiteMUSE?ref_src=twsrc%5Etfw">@IsiteMUSE&lt;/a> &lt;a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR&lt;/a> &lt;a href="https://t.co/LkZtbswikJ">pic.twitter.com/LkZtbswikJ&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1020221886565896192?ref_src=twsrc%5Etfw">20 juillet8&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Workshop on mitigating lynx-vehicle collisions</title><link>https://oliviergimenez.github.io/blog/ittecop_meeting2/</link><pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/ittecop_meeting2/</guid><description>&lt;blockquote class="twitter-tweet" data-lang="fr">&lt;p lang="en" dir="ltr">Building w/ stakeholders an interface to assess lynx viability in 🇫🇷 Sarah Bauduin gives a crash course on spatially-explicit individual-based models (aka PacMan) &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw">#rstats&lt;/a> &lt;a href="https://twitter.com/hashtag/shiny?src=hash&amp;amp;ref_src=twsrc%5Etfw">#shiny&lt;/a> &lt;a href="https://twitter.com/hashtag/leaflet?src=hash&amp;amp;ref_src=twsrc%5Etfw">#leaflet&lt;/a> &lt;a href="https://t.co/v9e865t2ib">https://t.co/v9e865t2ib&lt;/a> &lt;a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;amp;ref_src=twsrc%5Etfw">#teamboulet&lt;/a> &lt;a href="https://t.co/1oTtRQRG1j">pic.twitter.com/1oTtRQRG1j&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1004270684405628928rc=twsrc%5Etfw">6 juin 2018&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Kick-off meeting of our project on mitigating lynx-vehicle collisions</title><link>https://oliviergimenez.github.io/blog/ittecop_meeting/</link><pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/ittecop_meeting/</guid><description>&lt;blockquote class="twitter-tweet" data-lang="fr">&lt;p lang="fr" dir="ltr">Réunion de lancement avec les acteurs du territoire de notre projet sur &amp;quot;Eviter, réduire et compenser la mortalité du Lynx par collision avec les véhicules de transport&amp;quot; &lt;a href="https://t.co/uKY5ylOli2">https://t.co/uKY5ylOli2&lt;/a> &lt;a href="https://twitter.com/_Cerema?ref_src=twsrc%5Etfw">@_Cerema&lt;/a> &lt;a href="https://twitter.com/hashtag/oncfs?src=hash&amp;amp;ref_src=twsrc%5Etfw">#oncfs&lt;/a> &lt;a href="https://twitter.com/CROC_Estelle?ref_src=twsrc%5Etfw">@CROC_Estelle&lt;/a> &lt;a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS&lt;/a> &lt;a href="https://twitter.com/hashtag/ittecop?src=hash&amp;amp;ref_src=twsrc%5Etfw">#ittecop&lt;/a> &lt;a href="https://twitter.com/ademe?ref_src=twsrc%5Etfw">@ademe&lt;/a> &lt;a href="https://twitter.com/FRBiodiv?ref_src=twsrc%5Etfw">@FRBiodiv&lt;/a> &lt;a href="https://twitter.com/Min_Ecologie?ref_src=twsrc%5Etfw">@Min_Ecologie&lt;/a> 🤩💪 &lt;a href="https://t.co/3sY0rDIODQ">pic.twitter.com/3sY0rDIODQ&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/970803220355407872?ref_src=twsrc%5Etfw">5 mars 2018&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title><link>https://oliviergimenez.github.io/blog/erc_lynx/</link><pubDate>Tue, 28 Nov 2017 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/erc_lynx/</guid><description>&lt;img style="float:left;margin-right:10px;margin-top:10px;width:200px;margin-bottom:5px" src="https://oliviergimenez.github.io/img/jura.jpg">
 Our project `Avoid, reduce and compensate mortality risks of the Eurasian Lynx by collision with transport vehicles` aims to build on previous works on lynx population viability, collision risks while crossing terrestrial transport infrastructures and mitigation strategies. Our team will develop an operational tool upon which the technical operators will be able to rely on in the decision-making process for land-use planning. More details [here](https://sites.google.com/view/erclynx/) (in French).
-&lt;p&gt;This applied research project gathers a group of various actors (public and private; researchers, wildlife managers and carnivore experts; infrastructure managers and road/transport planning experts) with the following objectives:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Maintaining functional connectivity between favorable lynx habitats and elaborating strategies for avoiding, reducing and compensating collision risks.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Building a tool to reinforce and facilitation the implementation of land-use planning public policies.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To achieve these objectives, we will rely on:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Data on collisions (roads, railways) and external structural factors (ITT presence and their characteristics);&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A predictive statistical model to identify the zones with high probability of collision risks;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A spatially-explicit individual-based population viability model (SEPVA) to predict extinction risks;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A user-friendly computer program implemented in R. We will follow a companion modeling approach to ensure the smooth adoption and use of this program by the actors.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This project will fill a gap between the academic research, the stakes of land planning, the lynx conservation and the needs of ITT managers/operators. We will contribute to the implementation of national public policies (TVB, SRCE/SRADDET, &amp;ldquo;Avoid, Reduce, Compensate&amp;rdquo; doctrine) by testing our approach on pilot sites in the Vosges and Jura areas. This project will benefit from the sharing of experiences and skills from our colleagues in Switzerland and Germany.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Biodiversa grant submission</title>
-      <link>https://oliviergimenez.github.io/blog/biodiversa/</link>
-      <pubDate>Mon, 20 Jul 2015 12:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/biodiversa/</guid>
-      <description>&lt;p&gt;Just submitted a big proposal to the 
-&lt;a href=&#34;http://www.biodiversa.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Biodiversa
-call&lt;/a&gt;. It was great to write this project
-with 
-&lt;a href=&#34;https://lbbe.univ-lyon1.fr/-Fritz-Herve-.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hervé Fritz&lt;/a&gt; who,
+&lt;p>This applied research project gathers a group of various actors (public and private; researchers, wildlife managers and carnivore experts; infrastructure managers and road/transport planning experts) with the following objectives:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Maintaining functional connectivity between favorable lynx habitats and elaborating strategies for avoiding, reducing and compensating collision risks.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Building a tool to reinforce and facilitation the implementation of land-use planning public policies.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>To achieve these objectives, we will rely on:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Data on collisions (roads, railways) and external structural factors (ITT presence and their characteristics);&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>A predictive statistical model to identify the zones with high probability of collision risks;&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>A spatially-explicit individual-based population viability model (SEPVA) to predict extinction risks;&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>A user-friendly computer program implemented in R. We will follow a companion modeling approach to ensure the smooth adoption and use of this program by the actors.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>This project will fill a gap between the academic research, the stakes of land planning, the lynx conservation and the needs of ITT managers/operators. We will contribute to the implementation of national public policies (TVB, SRCE/SRADDET, &amp;ldquo;Avoid, Reduce, Compensate&amp;rdquo; doctrine) by testing our approach on pilot sites in the Vosges and Jura areas. This project will benefit from the sharing of experiences and skills from our colleagues in Switzerland and Germany.&lt;/p></description></item><item><title>Biodiversa grant submission</title><link>https://oliviergimenez.github.io/blog/biodiversa/</link><pubDate>Mon, 20 Jul 2015 12:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/biodiversa/</guid><description>&lt;p>Just submitted a big proposal to the
+&lt;a href="http://www.biodiversa.org/" target="_blank" rel="noopener">Biodiversa
+call&lt;/a>. It was great to write this project
+with
+&lt;a href="https://lbbe.univ-lyon1.fr/-Fritz-Herve-.html" target="_blank" rel="noopener">Hervé Fritz&lt;/a> who,
 without a doubt, knows how to write grant applications! If successful, we&amp;rsquo;ll be
 working on the social and ecological dimensions of connectivity in lynx habitats.
 This is joint work with French, Swiss, German, Norwegian and Swedish colleagues.
-More soon hopefully.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: On May 2016, I received the news that our project was rejected.
+More soon hopefully.&lt;/p>
+&lt;p>&lt;strong>Update&lt;/strong>: On May 2016, I received the news that our project was rejected.
 Big disappointment. But hey, that&amp;rsquo;s life, and this project is awesome,
-we&amp;rsquo;ll find other ways to implement it!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Laetitia Blanc defended her PhD</title>
-      <link>https://oliviergimenez.github.io/blog/laeti_phd_defense/</link>
-      <pubDate>Fri, 06 Feb 2015 12:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/laeti_phd_defense/</guid>
-      <description>&lt;p&gt;Laetitia Blanc succesfully defended her PhD on the conservation of lynx in France.
+we&amp;rsquo;ll find other ways to implement it!&lt;/p></description></item><item><title>Laetitia Blanc defended her PhD</title><link>https://oliviergimenez.github.io/blog/laeti_phd_defense/</link><pubDate>Fri, 06 Feb 2015 12:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/laeti_phd_defense/</guid><description>&lt;p>Laetitia Blanc succesfully defended her PhD on the conservation of lynx in France.
 Congrats Laeti! She had very nice feedbacks by the members of committee (X. Lambin,
 E. Marboutin, J. Linnell, M. Schaub and F. Bonadonna). Laetitia will be working for
 a few months with us on the estimation of lynx abundance in Norway (with J. Linnell)
-and with ONCFS to finish up a chapter of her thesis.&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+and with ONCFS to finish up a chapter of her thesis.&lt;/p></description></item></channel></rss>

@@ -1,38 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>species distribution models | Olivier Gimenez</title>
-    <link>https://oliviergimenez.github.io/tags/species-distribution-models/</link>
-      <atom:link href="https://oliviergimenez.github.io/tags/species-distribution-models/index.xml" rel="self" type="application/rss+xml" />
-    <description>species distribution models</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Wed, 18 Sep 2019 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>species distribution models</title>
-      <link>https://oliviergimenez.github.io/tags/species-distribution-models/</link>
-    </image>
-    
-    <item>
-      <title>New paper on SDMs and data combination</title>
-      <link>https://oliviergimenez.github.io/blog/sdmpaper/</link>
-      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/sdmpaper/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Very happy that our article on fitting species distribution models via combined likelihood to presence-only and occupancy data with lasso penalties and accounting for spatial dependence has been published in MEE! Go team! &lt;a href=&#34;https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw&#34;&gt;@LouvrierJulie&lt;/a&gt; &lt;a href=&#34;https://twitter.com/oaggimenez?ref_src=twsrc%5Etfw&#34;&gt;@oaggimenez&lt;/a&gt; 🇦🇺🇫🇷🧀&lt;a href=&#34;https://t.co/apVUbNb7Fi&#34;&gt;https://t.co/apVUbNb7Fi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ian Renner (@MoonbeamLevels) &lt;a href=&#34;https://twitter.com/MoonbeamLevels/status/1174176044695379969?ref_src=twsrc%5Etfw&#34;&gt;September 1819&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
-    </item>
-    
-    <item>
-      <title>Another visit of Ian Renner</title>
-      <link>https://oliviergimenez.github.io/blog/ian_visit2/</link>
-      <pubDate>Sun, 01 Jan 2017 12:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/ian_visit2/</guid>
-      <description>&lt;p&gt;
-&lt;a href=&#34;https://www.newcastle.edu.au/profile/ian-renner&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ian Renner&lt;/a&gt; from the University of
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>species distribution models | Olivier Gimenez</title><link>https://oliviergimenez.github.io/tags/species-distribution-models/</link><atom:link href="https://oliviergimenez.github.io/tags/species-distribution-models/index.xml" rel="self" type="application/rss+xml"/><description>species distribution models</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Wed, 18 Sep 2019 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>species distribution models</title><link>https://oliviergimenez.github.io/tags/species-distribution-models/</link></image><item><title>New paper on SDMs and data combination</title><link>https://oliviergimenez.github.io/blog/sdmpaper/</link><pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/sdmpaper/</guid><description>&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Very happy that our article on fitting species distribution models via combined likelihood to presence-only and occupancy data with lasso penalties and accounting for spatial dependence has been published in MEE! Go team! &lt;a href="https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw">@LouvrierJulie&lt;/a> &lt;a href="https://twitter.com/oaggimenez?ref_src=twsrc%5Etfw">@oaggimenez&lt;/a> 🇦🇺🇫🇷🧀&lt;a href="https://t.co/apVUbNb7Fi">https://t.co/apVUbNb7Fi&lt;/a>&lt;/p>&amp;mdash; Ian Renner (@MoonbeamLevels) &lt;a href="https://twitter.com/MoonbeamLevels/status/1174176044695379969?ref_src=twsrc%5Etfw">September 1819&lt;/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Another visit of Ian Renner</title><link>https://oliviergimenez.github.io/blog/ian_visit2/</link><pubDate>Sun, 01 Jan 2017 12:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/ian_visit2/</guid><description>&lt;p>
+&lt;a href="https://www.newcastle.edu.au/profile/ian-renner" target="_blank" rel="noopener">Ian Renner&lt;/a> from the University of
 Newcastle in Australia, who visited us back in 2015, is with us again for a short 3-week
-visit.&lt;/p&gt;
-&lt;p&gt;We resumed the work we started one year ago on developing a method to combine
+visit.&lt;/p>
+&lt;p>We resumed the work we started one year ago on developing a method to combine
 sources of information on species distribution. We also started a new project on model
-selection in occupancy and capture-recapture models using the LASSO.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+selection in occupancy and capture-recapture models using the LASSO.&lt;/p></description></item></channel></rss>

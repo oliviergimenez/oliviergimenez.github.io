@@ -1,97 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>brown bear | Olivier Gimenez</title>
-    <link>https://oliviergimenez.github.io/tags/brown-bear/</link>
-      <atom:link href="https://oliviergimenez.github.io/tags/brown-bear/index.xml" rel="self" type="application/rss+xml" />
-    <description>brown bear</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Fri, 05 Jul 2019 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>brown bear</title>
-      <link>https://oliviergimenez.github.io/tags/brown-bear/</link>
-    </image>
-    
-    <item>
-      <title>New paper: Identifying priority conservation areas for a recovering brown bear population in Greece using citizen science data</title>
-      <link>https://oliviergimenez.github.io/blog/paperanneso/</link>
-      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/paperanneso/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🥳🍾 Awesome work by AS Bonnet Lebrun, A Karamanlidis from &lt;a href=&#34;https://twitter.com/Arcturosgr?ref_src=twsrc%5Etfw&#34;&gt;@Arcturosgr&lt;/a&gt; M de Gabriel Hernando and I Renner &lt;a href=&#34;https://twitter.com/MoonbeamLevels?ref_src=twsrc%5Etfw&#34;&gt;@MoonbeamLevels&lt;/a&gt; in which we use Poisson point process models to identify priority conservation areas for brown bears in Greece 🇬🇷🐻📈 &lt;a href=&#34;https://t.co/rDV7h9Zb7C&#34;&gt;https://t.co/rDV7h9Zb7C&lt;/a&gt; &lt;a href=&#34;https://t.co/UmgmynE3Jd&#34;&gt;pic.twitter.com/UmgmynE3Jd&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1147170533739573251?ref_src=twsrc%5Etfw&#34;&gt;5 juillet19&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>New preprint!</title>
-      <link>https://oliviergimenez.github.io/blog/newpreprint/</link>
-      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/newpreprint/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Check out our new preprint by awesome Anne-Sophie Bonnet-Lebrun &amp;quot;Identifying priority conservation areas for recovering large &lt;a href=&#34;https://twitter.com/hashtag/carnivores?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#carnivores&lt;/a&gt; using &lt;a href=&#34;https://twitter.com/hashtag/citizenscience?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#citizenscience&lt;/a&gt; data&amp;quot; w/ 🐟 point-process models to map 🇬🇷 🐻 distribution &lt;a href=&#34;https://t.co/CEUbVKuXRQ&#34;&gt;https://t.co/CEUbVKuXRQ&lt;/a&gt; starring &lt;a href=&#34;https://twitter.com/Arcturosgr?ref_src=twsrc%5Etfw&#34;&gt;@Arcturosgr&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MoonbeamLevels?ref_src=twsrc%5Etfw&#34;&gt;@MoonbeamLevels&lt;/a&gt; &lt;a href=&#34;https://t.co/fb9UAP3Aep&#34;&gt;pic.twitter.com/fb9UAP3Aep&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🚸 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1057018119829495808?ref_src=twsrc%5Etfw&#34;&gt;29 oct8&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Blaise defended his PhD on a socio-ecological approach to Brown bear management in the Pyrenees</title>
-      <link>https://oliviergimenez.github.io/blog/blaise_defense/</link>
-      <pubDate>Mon, 12 Dec 2016 12:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/blaise_defense/</guid>
-      <description>&lt;p&gt;Blaise defended his PhD I co-supervised with Pierre-Yves Quenette from ONCFS (manuscript
-
-&lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/Th%C3%A8se%20Blaise%20Pi%C3%A9dallu.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>brown bear | Olivier Gimenez</title><link>https://oliviergimenez.github.io/tags/brown-bear/</link><atom:link href="https://oliviergimenez.github.io/tags/brown-bear/index.xml" rel="self" type="application/rss+xml"/><description>brown bear</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Fri, 05 Jul 2019 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>brown bear</title><link>https://oliviergimenez.github.io/tags/brown-bear/</link></image><item><title>New paper: Identifying priority conservation areas for a recovering brown bear population in Greece using citizen science data</title><link>https://oliviergimenez.github.io/blog/paperanneso/</link><pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/paperanneso/</guid><description>&lt;blockquote class="twitter-tweet" data-lang="fr">&lt;p lang="en" dir="ltr">🥳🍾 Awesome work by AS Bonnet Lebrun, A Karamanlidis from &lt;a href="https://twitter.com/Arcturosgr?ref_src=twsrc%5Etfw">@Arcturosgr&lt;/a> M de Gabriel Hernando and I Renner &lt;a href="https://twitter.com/MoonbeamLevels?ref_src=twsrc%5Etfw">@MoonbeamLevels&lt;/a> in which we use Poisson point process models to identify priority conservation areas for brown bears in Greece 🇬🇷🐻📈 &lt;a href="https://t.co/rDV7h9Zb7C">https://t.co/rDV7h9Zb7C&lt;/a> &lt;a href="https://t.co/UmgmynE3Jd">pic.twitter.com/UmgmynE3Jd&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1147170533739573251?ref_src=twsrc%5Etfw">5 juillet19&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>New preprint!</title><link>https://oliviergimenez.github.io/blog/newpreprint/</link><pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/newpreprint/</guid><description>&lt;blockquote class="twitter-tweet" data-lang="fr">&lt;p lang="en" dir="ltr">Check out our new preprint by awesome Anne-Sophie Bonnet-Lebrun &amp;quot;Identifying priority conservation areas for recovering large &lt;a href="https://twitter.com/hashtag/carnivores?src=hash&amp;amp;ref_src=twsrc%5Etfw">#carnivores&lt;/a> using &lt;a href="https://twitter.com/hashtag/citizenscience?src=hash&amp;amp;ref_src=twsrc%5Etfw">#citizenscience&lt;/a> data&amp;quot; w/ 🐟 point-process models to map 🇬🇷 🐻 distribution &lt;a href="https://t.co/CEUbVKuXRQ">https://t.co/CEUbVKuXRQ&lt;/a> starring &lt;a href="https://twitter.com/Arcturosgr?ref_src=twsrc%5Etfw">@Arcturosgr&lt;/a> &lt;a href="https://twitter.com/MoonbeamLevels?ref_src=twsrc%5Etfw">@MoonbeamLevels&lt;/a> &lt;a href="https://t.co/fb9UAP3Aep">pic.twitter.com/fb9UAP3Aep&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🚸 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1057018119829495808?ref_src=twsrc%5Etfw">29 oct8&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Blaise defended his PhD on a socio-ecological approach to Brown bear management in the Pyrenees</title><link>https://oliviergimenez.github.io/blog/blaise_defense/</link><pubDate>Mon, 12 Dec 2016 12:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/blaise_defense/</guid><description>&lt;p>Blaise defended his PhD I co-supervised with Pierre-Yves Quenette from ONCFS (manuscript
+&lt;a href="https://dl.dropboxusercontent.com/u/23160641/Th%C3%A8se%20Blaise%20Pi%C3%A9dallu.pdf" target="_blank" rel="noopener">here&lt;/a>).
 Blaise studied the
 attitudes of the public toward brown bear presence and provided sound estimates of abundance and distribution
-for the species in the Pyrenees.&lt;/p&gt;
-&lt;p&gt;We had stimulating discussions with the committee and F. Sarrazin, G. Chapron, C. Mounet,
-D. Grémillet and A. Molinari.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Focus on two Brown bear papers</title>
-      <link>https://oliviergimenez.github.io/blog/papers_bears/</link>
-      <pubDate>Wed, 25 May 2016 12:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/papers_bears/</guid>
-      <description>&lt;p&gt;Among the papers we published lately, I’d like to emphasize two contributions
-on the conservation of brown bears with some eminent colleagues:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Karamanlidis, A.A., M. de Gabriel Hernando, L. Krambokoukis, O. Gimenez (2015).
-&lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-pubs/Karamanlidisetal2015-Arcturos.pdf&#34; target=&#34;_blank&#34;&gt;Evidence
-of a large carnivore population recovery: counting bears in Greece&lt;/a&gt;. Journal for Nature Conservation.
+for the species in the Pyrenees.&lt;/p>
+&lt;p>We had stimulating discussions with the committee and F. Sarrazin, G. Chapron, C. Mounet,
+D. Grémillet and A. Molinari.&lt;/p></description></item><item><title>Focus on two Brown bear papers</title><link>https://oliviergimenez.github.io/blog/papers_bears/</link><pubDate>Wed, 25 May 2016 12:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/papers_bears/</guid><description>&lt;p>Among the papers we published lately, I’d like to emphasize two contributions
+on the conservation of brown bears with some eminent colleagues:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Karamanlidis, A.A., M. de Gabriel Hernando, L. Krambokoukis, O. Gimenez (2015).
+&lt;a href="https://dl.dropboxusercontent.com/u/23160641/my-pubs/Karamanlidisetal2015-Arcturos.pdf" target="_blank">Evidence
+of a large carnivore population recovery: counting bears in Greece&lt;/a>. Journal for Nature Conservation.
 This is a joint venture with
-&lt;a href=&#34;https://www.researchgate.net/profile/Alexandros_Karamanlidis&#34; target=&#34;_blank&#34;&gt;Alex&lt;/a&gt; and the
-Greek &lt;a href=&#34;http://www.arcturos.gr/en/main.php&#34; target=&#34;_blank&#34;&gt;Arcturos NGO&lt;/a&gt; in which
-we provide the first reliable abundance estimates for brown bears in Greece.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Bischof, R., H. Broseth, O. Gimenez (2015).
-&lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/conl.12183/abstract&#34; target=&#34;_blank&#34;&gt;Wildlife
-in a politically divided world: insularism inflates estimates of brown bear abundance&lt;/a&gt;.
-Conservation Letters. &lt;a href=&#34;https://www.nmbu.no/ans/richard.bischof&#34; target=&#34;_blank&#34;&gt;Richard&lt;/a&gt;
+&lt;a href="https://www.researchgate.net/profile/Alexandros_Karamanlidis" target="_blank">Alex&lt;/a> and the
+Greek &lt;a href="http://www.arcturos.gr/en/main.php" target="_blank">Arcturos NGO&lt;/a> in which
+we provide the first reliable abundance estimates for brown bears in Greece.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Bischof, R., H. Broseth, O. Gimenez (2015).
+&lt;a href="http://onlinelibrary.wiley.com/doi/10.1111/conl.12183/abstract" target="_blank">Wildlife
+in a politically divided world: insularism inflates estimates of brown bear abundance&lt;/a>.
+Conservation Letters. &lt;a href="https://www.nmbu.no/ans/richard.bischof" target="_blank">Richard&lt;/a>
 had this very clever idea to use spatially-explicit capture-recapture models to assess to what
 extent abundance estimates are affected by double-counting animals that move across borders -
-see &lt;a href=&#34;http://conservationmagazine.org/2015/05/bears-without-borders/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
-for a nice summary of our work.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Studying attitudes towards large carnivores</title>
-      <link>https://oliviergimenez.github.io/blog/blaise_quest/</link>
-      <pubDate>Fri, 20 Jun 2014 12:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/blaise_quest/</guid>
-      <description>&lt;p&gt;Sending questionnaires for Blaise&amp;rsquo;s PhD to study the local perception of the presence of
+see &lt;a href="http://conservationmagazine.org/2015/05/bears-without-borders/" target="_blank">here&lt;/a>
+for a nice summary of our work.&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>Studying attitudes towards large carnivores</title><link>https://oliviergimenez.github.io/blog/blaise_quest/</link><pubDate>Fri, 20 Jun 2014 12:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/blaise_quest/</guid><description>&lt;p>Sending questionnaires for Blaise&amp;rsquo;s PhD to study the local perception of the presence of
 brown bears in the Pyrénées. First picture, the 3000 questionnaires to be sent; second picture,
 those questionnaires once packed in boxes; third picture, the nice guy from the mail company
-La Poste comes and picks them up. Now the question is how many of them we will we get back?&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/before.jpg&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;https://oliviergimenez.github.io/img/after.jpg&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;https://oliviergimenez.github.io/img/bye.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+La Poste comes and picks them up. Now the question is how many of them we will we get back?&amp;hellip;&lt;/p>
+&lt;p>&lt;img src="https://oliviergimenez.github.io/img/before.jpg" alt="">
+&lt;img src="https://oliviergimenez.github.io/img/after.jpg" alt="">
+&lt;img src="https://oliviergimenez.github.io/img/bye.jpg" alt="">&lt;/p></description></item></channel></rss>

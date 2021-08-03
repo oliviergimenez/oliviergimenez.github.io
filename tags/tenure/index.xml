@@ -1,75 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>tenure | Olivier Gimenez</title>
-    <link>https://oliviergimenez.github.io/tags/tenure/</link>
-      <atom:link href="https://oliviergimenez.github.io/tags/tenure/index.xml" rel="self" type="application/rss+xml" />
-    <description>tenure</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Mon, 14 Aug 2017 12:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>tenure</title>
-      <link>https://oliviergimenez.github.io/tags/tenure/</link>
-    </image>
-    
-    <item>
-      <title>Applying and interviewing for an academic job</title>
-      <link>https://oliviergimenez.github.io/blog/interview_inra/</link>
-      <pubDate>Mon, 14 Aug 2017 12:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/interview_inra/</guid>
-      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;margin-bottom:10px;width: 240px;;height: 230px&#34; src=&#34;https://oliviergimenez.github.io/img/deadliest.jpg&#34;&gt;
-Over the years (age privilege), I sat on several hiring committees for French universities and research institutes. I also have students who are now in the position to apply for such positions. It had me thinking about what works and what doesn&#39;t work in job applications and interviews. Here are my 2 cents suggestions. 
-&lt;p&gt;You can find plenty of more clever and relevant recommendations on the internet (see 
-&lt;a href=&#34;https://www.theguardian.com/higher-education-network/blog/2014/feb/07/prepare-academic-interviews-top-tips&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;, 
-&lt;a href=&#34;http://ecoevoevoeco.blogspot.gr/2015/10/how-to-get-faculty-position-ii.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; or 
-&lt;a href=&#34;https://dynamicecology.wordpress.com/tag/job-interviews/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for example). Also, be aware that these recommendations are specific to the French system, with little relevance for other countries.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Your application&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Read and stick to the guidelines (not that obvious sometimes). The French academic system has some 
-&lt;a href=&#34;http://www.eui.eu/ProgrammesAndFellowships/AcademicCareersObservatory/AcademicCareersbyCountry/France.aspx#RequirementsforPositions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;specific requirements&lt;/a&gt; to apply, in particular for faculty positions. Try to connect your CV with the job profile.&lt;/p&gt;
-&lt;p&gt;Do
-not hesitate to include figures and boxes in the document. Structure does not hurt, well articulated sections are welcome. Be crystal clear on your current position. Synthetic tables summarizing the courses you taught, the talks you gave, the papers you published will help the referees to grab what is important in a minute (they obviously have more than your application to evaluate). Distinguish papers from oral presentations.&lt;/p&gt;
-&lt;p&gt;Submitted papers do not &amp;lsquo;count&amp;rsquo;. Use preprint servers such as 
-&lt;a href=&#34;https://arxiv.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv&lt;/a&gt; or 
-&lt;a href=&#34;http://www.biorxiv.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bioRxiv&lt;/a&gt; so that your referees get a chance to read what you&amp;rsquo;ve been working on lately (and judge the quality by themselves).&lt;/p&gt;
-&lt;p&gt;Project yourself in the team/lab where the researcher will be hosted, and in the job itself. Feel free to get in touch with the host team/lab. Try to meet people beforehand. Visit websites. Get to know your hopefully-soon-to-be new lab. Show you&amp;rsquo;re interested in working with your hopefully-soon-to-be new colleagues. This might also help you find out about the 
-&lt;a href=&#34;https://dynamicecology.wordpress.com/2016/12/07/the-teaching-job-that-slipped-through-my-fingers-and-what-i-learned-from-that-experience/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;lsquo;dismal job that everyone has been avoiding for years&amp;rsquo;&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;For lecturer positions, even though it is not required, write a short project section including research objectives and do not forget your teaching objectives!&lt;/p&gt;
-&lt;p&gt;Have your applications read by one or two colleagues, if possible
-someone who has experience in being on the kind of hiring committee you will have to face.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Your interview&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Be on site the day before (
-&lt;a href=&#34;http://www.nationalstereotype.com/wp-content/uploads/2013/09/Meanwhile-in-France-3.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;strikes in France happen&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;Appearances do matter, whether you like it or not, therefore pick something neutral and comfortable (my opinion).&lt;/p&gt;
-&lt;p&gt;Do not use slides with too much text or complex figures (no tables please!), and point at your slides so that your visual
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tenure | Olivier Gimenez</title><link>https://oliviergimenez.github.io/tags/tenure/</link><atom:link href="https://oliviergimenez.github.io/tags/tenure/index.xml" rel="self" type="application/rss+xml"/><description>tenure</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Mon, 14 Aug 2017 12:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>tenure</title><link>https://oliviergimenez.github.io/tags/tenure/</link></image><item><title>Applying and interviewing for an academic job</title><link>https://oliviergimenez.github.io/blog/interview_inra/</link><pubDate>Mon, 14 Aug 2017 12:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/interview_inra/</guid><description>&lt;img style="float:left;margin-right:10px;margin-top:10px;margin-bottom:10px;width: 240px;;height: 230px" src="https://oliviergimenez.github.io/img/deadliest.jpg">
+Over the years (age privilege), I sat on several hiring committees for French universities and research institutes. I also have students who are now in the position to apply for such positions. It had me thinking about what works and what doesn't work in job applications and interviews. Here are my 2 cents suggestions.
+&lt;p>You can find plenty of more clever and relevant recommendations on the internet (see
+&lt;a href="https://www.theguardian.com/higher-education-network/blog/2014/feb/07/prepare-academic-interviews-top-tips" target="_blank" rel="noopener">here&lt;/a>,
+&lt;a href="http://ecoevoevoeco.blogspot.gr/2015/10/how-to-get-faculty-position-ii.html" target="_blank" rel="noopener">here&lt;/a> or
+&lt;a href="https://dynamicecology.wordpress.com/tag/job-interviews/" target="_blank" rel="noopener">here&lt;/a> for example). Also, be aware that these recommendations are specific to the French system, with little relevance for other countries.&lt;/p>
+&lt;p>&lt;strong>Your application&lt;/strong>&lt;/p>
+&lt;p>Read and stick to the guidelines (not that obvious sometimes). The French academic system has some
+&lt;a href="http://www.eui.eu/ProgrammesAndFellowships/AcademicCareersObservatory/AcademicCareersbyCountry/France.aspx#RequirementsforPositions" target="_blank" rel="noopener">specific requirements&lt;/a> to apply, in particular for faculty positions. Try to connect your CV with the job profile.&lt;/p>
+&lt;p>Do
+not hesitate to include figures and boxes in the document. Structure does not hurt, well articulated sections are welcome. Be crystal clear on your current position. Synthetic tables summarizing the courses you taught, the talks you gave, the papers you published will help the referees to grab what is important in a minute (they obviously have more than your application to evaluate). Distinguish papers from oral presentations.&lt;/p>
+&lt;p>Submitted papers do not &amp;lsquo;count&amp;rsquo;. Use preprint servers such as
+&lt;a href="https://arxiv.org/" target="_blank" rel="noopener">arXiv&lt;/a> or
+&lt;a href="http://www.biorxiv.org/" target="_blank" rel="noopener">bioRxiv&lt;/a> so that your referees get a chance to read what you&amp;rsquo;ve been working on lately (and judge the quality by themselves).&lt;/p>
+&lt;p>Project yourself in the team/lab where the researcher will be hosted, and in the job itself. Feel free to get in touch with the host team/lab. Try to meet people beforehand. Visit websites. Get to know your hopefully-soon-to-be new lab. Show you&amp;rsquo;re interested in working with your hopefully-soon-to-be new colleagues. This might also help you find out about the
+&lt;a href="https://dynamicecology.wordpress.com/2016/12/07/the-teaching-job-that-slipped-through-my-fingers-and-what-i-learned-from-that-experience/" target="_blank" rel="noopener">&amp;lsquo;dismal job that everyone has been avoiding for years&amp;rsquo;&lt;/a>.&lt;/p>
+&lt;p>For lecturer positions, even though it is not required, write a short project section including research objectives and do not forget your teaching objectives!&lt;/p>
+&lt;p>Have your applications read by one or two colleagues, if possible
+someone who has experience in being on the kind of hiring committee you will have to face.&lt;/p>
+&lt;p>&lt;strong>Your interview&lt;/strong>&lt;/p>
+&lt;p>Be on site the day before (
+&lt;a href="http://www.nationalstereotype.com/wp-content/uploads/2013/09/Meanwhile-in-France-3.jpg" target="_blank" rel="noopener">strikes in France happen&lt;/a>).&lt;/p>
+&lt;p>Appearances do matter, whether you like it or not, therefore pick something neutral and comfortable (my opinion).&lt;/p>
+&lt;p>Do not use slides with too much text or complex figures (no tables please!), and point at your slides so that your visual
 support is part of your speech. Don&amp;rsquo;t look at the screen or the walls, try to look at
 the members of the jury. Occupy the space, don&amp;rsquo;t always stay at the same spot, but do not
-move too much (I&amp;rsquo;m useless at that).&lt;/p&gt;
-&lt;p&gt;Do not rush when you talk, and give short answers
+move too much (I&amp;rsquo;m useless at that).&lt;/p>
+&lt;p>Do not rush when you talk, and give short answers
 so that every member of the committee gets a chance to ask you a question. Be honest:
 if you don&amp;rsquo;t know something, or if you don&amp;rsquo;t understand a question (which most likely
 means that members of the hiring committee do not understand this question either),
-say it.&lt;/p&gt;
-&lt;p&gt;Last, but not least: rehearse, rehearse and rehearse again, there will be a
+say it.&lt;/p>
+&lt;p>Last, but not least: rehearse, rehearse and rehearse again, there will be a
 moment where you do no longer sound like you know your text by heart, but rather, like
-saying it has become natural.&lt;/p&gt;
-&lt;p&gt;From my experience, the round of questions is more
+saying it has become natural.&lt;/p>
+&lt;p>From my experience, the round of questions is more
 determinant than the talk itself, but we have very rare opportunities to train on
 how to answer questions. Try to have sessions of questions with your colleagues to
-get better at it; it comes with experience, no secret.&lt;/p&gt;
-&lt;p&gt;For short talks in general, my advice is
+get better at it; it comes with experience, no secret.&lt;/p>
+&lt;p>For short talks in general, my advice is
 to write your text, at least for the first slides so that you&amp;rsquo;re confident you won&amp;rsquo;t
 get stuck when you start giving your speech. Make a video of yourself rehearsing
-and watch it; this is painful (I know by experience), but helpful.&lt;/p&gt;
-&lt;p&gt;Show that you&amp;rsquo;re excited by the job offer, and that you like teaching and doing research.
+and watch it; this is painful (I know by experience), but helpful.&lt;/p>
+&lt;p>Show that you&amp;rsquo;re excited by the job offer, and that you like teaching and doing research.
 At the end of the day, I (sadly) vividly remember only a few candidates, most often those
 who demonstrated interest in the job and pleasure in doing what they do. I wasn&amp;rsquo;t good at
 inspiring that myself, but one thing that helped me was to think hard why I was applying, and
 to convince myself that I wanted the job so badly that I had to convince the committee that they
-should offer the job to me.&lt;/p&gt;
-&lt;p&gt;Last but not least, do not do the job of the committee for the committee. In other words, do not censor
-yourself. Apply, and let the referees do their job.&lt;/p&gt;
-&lt;p&gt;Good luck!&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+should offer the job to me.&lt;/p>
+&lt;p>Last but not least, do not do the job of the committee for the committee. In other words, do not censor
+yourself. Apply, and let the referees do their job.&lt;/p>
+&lt;p>Good luck!&lt;/p></description></item></channel></rss>

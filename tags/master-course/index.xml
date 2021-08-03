@@ -1,25 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Master course | Olivier Gimenez</title>
-    <link>https://oliviergimenez.github.io/tags/master-course/</link>
-      <atom:link href="https://oliviergimenez.github.io/tags/master-course/index.xml" rel="self" type="application/rss+xml" />
-    <description>Master course</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>Master course</title>
-      <link>https://oliviergimenez.github.io/tags/master-course/</link>
-    </image>
-    
-    <item>
-      <title>Master course on statistics for ecologists</title>
-      <link>https://oliviergimenez.github.io/blog/stat-course-2020/</link>
-      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/stat-course-2020/</guid>
-      <description>&lt;p&gt;The material (slides and video) of my course on statistics for ecologists for Master students.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Every year I teach a 12h course on statistics for ecologists for Master students at &lt;a href=&#34;https://twitter.com/umontpellier?ref_src=twsrc%5Etfw&#34;&gt;@umontpellier&lt;/a&gt; covering freq/bayes GLM(M)s. The material of the course is available ➡️ &lt;a href=&#34;https://t.co/Y1CTvkmH8Q&#34;&gt;https://t.co/Y1CTvkmH8Q&lt;/a&gt; w/ slides, practicals &amp;amp; videos (in French).&lt;a href=&#34;https://twitter.com/hashtag/StatisticalEcology?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#StatisticalEcology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ReproducibleTeaching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ReproducibleTeaching&lt;/a&gt; &lt;a href=&#34;https://t.co/A15vndiw49&#34;&gt;pic.twitter.com/A15vndiw49&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1326753364193972225?ref_src=twsrc%5Etfw&#34;&gt;November 12, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Master course | Olivier Gimenez</title><link>https://oliviergimenez.github.io/tags/master-course/</link><atom:link href="https://oliviergimenez.github.io/tags/master-course/index.xml" rel="self" type="application/rss+xml"/><description>Master course</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>Master course</title><link>https://oliviergimenez.github.io/tags/master-course/</link></image><item><title>Master course on statistics for ecologists</title><link>https://oliviergimenez.github.io/blog/stat-course-2020/</link><pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/stat-course-2020/</guid><description>&lt;p>The material (slides and video) of my course on statistics for ecologists for Master students.&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Every year I teach a 12h course on statistics for ecologists for Master students at &lt;a href="https://twitter.com/umontpellier?ref_src=twsrc%5Etfw">@umontpellier&lt;/a> covering freq/bayes GLM(M)s. The material of the course is available ➡️ &lt;a href="https://t.co/Y1CTvkmH8Q">https://t.co/Y1CTvkmH8Q&lt;/a> w/ slides, practicals &amp;amp; videos (in French).&lt;a href="https://twitter.com/hashtag/StatisticalEcology?src=hash&amp;amp;ref_src=twsrc%5Etfw">#StatisticalEcology&lt;/a> &lt;a href="https://twitter.com/hashtag/ReproducibleTeaching?src=hash&amp;amp;ref_src=twsrc%5Etfw">#ReproducibleTeaching&lt;/a> &lt;a href="https://t.co/A15vndiw49">pic.twitter.com/A15vndiw49&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1326753364193972225?ref_src=twsrc%5Etfw">November 12, 2020&lt;/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item></channel></rss>

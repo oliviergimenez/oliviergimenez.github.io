@@ -1,26 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>fitness | Olivier Gimenez</title>
-    <link>https://oliviergimenez.github.io/tags/fitness/</link>
-      <atom:link href="https://oliviergimenez.github.io/tags/fitness/index.xml" rel="self" type="application/rss+xml" />
-    <description>fitness</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Sun, 03 Jun 2018 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>fitness</title>
-      <link>https://oliviergimenez.github.io/tags/fitness/</link>
-    </image>
-    
-    <item>
-      <title>New paper!</title>
-      <link>https://oliviergimenez.github.io/blog/bibi_paper2/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/blog/bibi_paper2/</guid>
-      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Special feature on Evolutionary &lt;a href=&#34;https://twitter.com/hashtag/Demography?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Demography&lt;/a&gt; by Takenori Takada &amp;amp; &lt;a href=&#34;https://twitter.com/Richshefferson?ref_src=twsrc%5Etfw&#34;&gt;@Richshefferson&lt;/a&gt; in &lt;a href=&#34;https://twitter.com/hashtag/Population?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Population&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Ecology?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Ecology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/SpringerJP_LS?ref_src=twsrc%5Etfw&#34;&gt;@SpringerJP_LS&lt;/a&gt; - We wrote &amp;quot;Estimating individual fitness in the wild using capture-recapture data&amp;quot; &lt;a href=&#34;https://t.co/5u7x1UvRr5&#34;&gt;https://t.co/5u7x1UvRr5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; code ➡️ &lt;a href=&#34;https://t.co/l8o7Igydn9&#34;&gt;https://t.co/l8o7Igydn9&lt;/a&gt; &lt;a href=&#34;https://t.co/IUp6egBPUA&#34;&gt;pic.twitter.com/IUp6egBPUA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1003358114425593860?ref_src=twsrc%5Etfw&#34;&gt;3 juin8&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>fitness | Olivier Gimenez</title><link>https://oliviergimenez.github.io/tags/fitness/</link><atom:link href="https://oliviergimenez.github.io/tags/fitness/index.xml" rel="self" type="application/rss+xml"/><description>fitness</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Sun, 03 Jun 2018 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>fitness</title><link>https://oliviergimenez.github.io/tags/fitness/</link></image><item><title>New paper!</title><link>https://oliviergimenez.github.io/blog/bibi_paper2/</link><pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/bibi_paper2/</guid><description>&lt;blockquote class="twitter-tweet" data-lang="fr">&lt;p lang="en" dir="ltr">Special feature on Evolutionary &lt;a href="https://twitter.com/hashtag/Demography?src=hash&amp;amp;ref_src=twsrc%5Etfw">#Demography&lt;/a> by Takenori Takada &amp;amp; &lt;a href="https://twitter.com/Richshefferson?ref_src=twsrc%5Etfw">@Richshefferson&lt;/a> in &lt;a href="https://twitter.com/hashtag/Population?src=hash&amp;amp;ref_src=twsrc%5Etfw">#Population&lt;/a> &lt;a href="https://twitter.com/hashtag/Ecology?src=hash&amp;amp;ref_src=twsrc%5Etfw">#Ecology&lt;/a> &lt;a href="https://twitter.com/SpringerJP_LS?ref_src=twsrc%5Etfw">@SpringerJP_LS&lt;/a> - We wrote &amp;quot;Estimating individual fitness in the wild using capture-recapture data&amp;quot; &lt;a href="https://t.co/5u7x1UvRr5">https://t.co/5u7x1UvRr5&lt;/a> &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw">#rstats&lt;/a> code ➡️ &lt;a href="https://t.co/l8o7Igydn9">https://t.co/l8o7Igydn9&lt;/a> &lt;a href="https://t.co/IUp6egBPUA">pic.twitter.com/IUp6egBPUA&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1003358114425593860?ref_src=twsrc%5Etfw">3 juin8&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item></channel></rss>
