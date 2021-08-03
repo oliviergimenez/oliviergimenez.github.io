@@ -5,12 +5,21 @@
     <link>https://oliviergimenez.github.io/tags/gdr-ecostat/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/gdr-ecostat/index.xml" rel="self" type="application/rss+xml" />
     <description>gdr ecostat</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Mon, 22 Feb 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>gdr ecostat</title>
       <link>https://oliviergimenez.github.io/tags/gdr-ecostat/</link>
     </image>
+    
+    <item>
+      <title>Regard SFEE Images, écologie et deep learning</title>
+      <link>https://oliviergimenez.github.io/blog/sfeeia/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/sfeeia/</guid>
+      <description>&lt;p&gt;Our take on deep learning, computer vision and ecology.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;fr&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Images, écologie et deep learning&amp;quot; co-écrit avec Vincent Miele et Stéphane Dray &lt;a href=&#34;https://twitter.com/LbbeLyon?ref_src=twsrc%5Etfw&#34;&gt;@LbbeLyon&lt;/a&gt; sur les applications du &lt;a href=&#34;https://twitter.com/hashtag/DeepLearning?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DeepLearning&lt;/a&gt; à l&amp;#39;analyse d&amp;#39;images en écologie et difficultés associées. 🙏 &lt;a href=&#34;https://twitter.com/sfecologie?ref_src=twsrc%5Etfw&#34;&gt;@sfecologie&lt;/a&gt; pour l&amp;#39;opportunité &lt;a href=&#34;https://t.co/0cTYbHTb35&#34;&gt;https://t.co/0cTYbHTb35&lt;/a&gt; &lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw&#34;&gt;@cefemontpellier&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1363971047675072516?ref_src=twsrc%5Etfw&#34;&gt;February 22, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
     
     <item>
       <title>Public lecture on statistical ecology</title>

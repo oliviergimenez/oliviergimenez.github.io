@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>conservation biology | Olivier Gimenez</title>
+    <title>Conservation biology | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/conservation-biology/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/conservation-biology/index.xml" rel="self" type="application/rss+xml" />
-    <description>conservation biology</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Tue, 03 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <description>Conservation biology</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>conservation biology</title>
+      <title>Conservation biology</title>
       <link>https://oliviergimenez.github.io/tags/conservation-biology/</link>
     </image>
+    
+    <item>
+      <title>Hélène Labach&#39;s PhD defense on the conservation of Bottlenose dolphins in the French Mediterranean sea</title>
+      <link>https://oliviergimenez.github.io/blog/lnphddefense/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/lnphddefense/</guid>
+      <description>&lt;p&gt;It was awesome!&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Big day today 🥳 Hélène Labach is defending her PhD on the conservation of Bottlenose 🐬 in the French Mediterranean 🌊 &lt;a href=&#34;https://twitter.com/MIRACETI_ceta?ref_src=twsrc%5Etfw&#34;&gt;@MIRACETI_ceta&lt;/a&gt; &lt;a href=&#34;https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw&#34;&gt;@cefemontpellier&lt;/a&gt; &lt;a href=&#34;https://twitter.com/umontpellier?ref_src=twsrc%5Etfw&#34;&gt;@umontpellier&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CollegeDoctoUM?ref_src=twsrc%5Etfw&#34;&gt;@CollegeDoctoUM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/twitthair1?ref_src=twsrc%5Etfw&#34;&gt;@twitthair1&lt;/a&gt; &lt;a href=&#34;https://t.co/RkbHSe415Q&#34;&gt;pic.twitter.com/RkbHSe415Q&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1408037233211461633?ref_src=twsrc%5Etfw&#34;&gt;June 24, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
     
     <item>
       <title>World Marine Mammal Conference</title>
