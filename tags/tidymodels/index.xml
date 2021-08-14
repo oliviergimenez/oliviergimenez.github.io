@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tidymodels | Olivier Gimenez</title><link>https://oliviergimenez.github.io/tags/tidymodels/</link><atom:link href="https://oliviergimenez.github.io/tags/tidymodels/index.xml" rel="self" type="application/rss+xml"/><description>tidymodels</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Fri, 13 Aug 2021 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>tidymodels</title><link>https://oliviergimenez.github.io/tags/tidymodels/</link></image><item><title>Experimenting with machine learning in R with tidymodels and the Kaggle titanic dataset</title><link>https://oliviergimenez.github.io/blog/learning-machine-learning/</link><pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/learning-machine-learning/</guid><description>&lt;p>I would like to familiarize myself with machine learning (ML) techniques in &lt;code>R&lt;/code>. So I have been reading and learning by doing. I thought I&amp;rsquo;d share my experience for others who&amp;rsquo;d like to give it a try.&lt;/p>
+&lt;h1 id="motivation">Motivation&lt;/h1>
+&lt;p>The two great books I&amp;rsquo;m using are:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>
+&lt;a href="https://www.statlearning.com/" target="_blank" rel="noopener">An Introduction to Statistical Learning with Applications in R&lt;/a> by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://www.tmwr.org/" target="_blank" rel="noopener">Tidy models in R&lt;/a> by Max Kuhn and Julia Silge&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>I also recommend checking out the material (codes, screencasts) shared by
+&lt;a href="http://varianceexplained.org/r/sliced-ml/" target="_blank" rel="noopener">David Robinson&lt;/a> and
+&lt;a href="https://juliasilge.com/" target="_blank" rel="noopener">Julia Silge&lt;/a> from whom I picked some useful tricks that I put to use below.&lt;/p>
+&lt;p>To try things, I&amp;rsquo;ve joined the
+&lt;a href="https://en.wikipedia.org/wiki/Kaggle" target="_blank" rel="noopener">Kaggle&lt;/a> online community which gathers folks with lots of experience in ML from whom you can learn. Kaggle also hosts public datasets that can be used for playing around.&lt;/p>
+&lt;p>Let&amp;rsquo;s start with the famous
+&lt;a href="https://www.kaggle.com/c/titanic/overview" target="_blank" rel="noopener">Titanic dataset&lt;/a>. We need to predict if a passenger survived the sinking of the Titanic (1) or not (0). A dataset is provided for training our models (train.csv). Another dataset is provided (test.csv) for which we do not know the answer. We will predict survival for each passenger, submit our answer to Kaggle and see how well we did compared to other folks. The metric for comparison is the percentage of passengers we correctly predict &amp;ndash; aka as accuracy.&lt;/p>
+&lt;p>First things first, let&amp;rsquo;s load some packages to get us started.&lt;/p>
+&lt;pre>&lt;code class="language-r">library(tidymodels) # metapackage for ML
+library(tidyverse) # metapackage for data manipulation and visulaisation
+library(stacks) # stack ML models for better perfomance
+theme_set(theme_light())
+doParallel::registerDoParallel(cores = 4) # parallel computations
+&lt;/code>&lt;/pre>
+&lt;h1 id="data">Data&lt;/h1>
+&lt;p>Read in training data.&lt;/p>
+&lt;pre>&lt;code class="language-r">rawdata &amp;lt;- read_csv(&amp;quot;dat/titanic/train.csv&amp;quot;)
+glimpse(rawdata)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Rows: 891
+## Columns: 12
+## $ PassengerId &amp;lt;dbl&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,…
+## $ Survived &amp;lt;dbl&amp;gt; 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1…
+## $ Pclass &amp;lt;dbl&amp;gt; 3, 1, 3, 1, 3, 3, 1, 3, 3, 2, 3, 1, 3, 3, 3, 2, 3, 2, 3, 3…
+## $ Name &amp;lt;chr&amp;gt; &amp;quot;Braund, Mr. Owen Harris&amp;quot;, &amp;quot;Cumings, Mrs. John Bradley (Fl…
+## $ Sex &amp;lt;chr&amp;gt; &amp;quot;male&amp;quot;, &amp;quot;female&amp;quot;, &amp;quot;female&amp;quot;, &amp;quot;female&amp;quot;, &amp;quot;male&amp;quot;, &amp;quot;male&amp;quot;, &amp;quot;mal…
+## $ Age &amp;lt;dbl&amp;gt; 22, 38, 26, 35, 35, NA, 54, 2, 27, 14, 4, 58, 20, 39, 14, …
+## $ SibSp &amp;lt;dbl&amp;gt; 1, 1, 0, 1, 0, 0, 0, 3, 0, 1, 1, 0, 0, 1, 0, 0, 4, 0, 1, 0…
+## $ Parch &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 1, 0, 0, 5, 0, 0, 1, 0, 0, 0…
+## $ Ticket &amp;lt;chr&amp;gt; &amp;quot;A/5 21171&amp;quot;, &amp;quot;PC 17599&amp;quot;, &amp;quot;STON/O2. 3101282&amp;quot;, &amp;quot;113803&amp;quot;, &amp;quot;37…
+## $ Fare &amp;lt;dbl&amp;gt; 7.2500, 71.2833, 7.9250, 53.1000, 8.0500, 8.4583, 51.8625,…
+## $ Cabin &amp;lt;chr&amp;gt; NA, &amp;quot;C85&amp;quot;, NA, &amp;quot;C123&amp;quot;, NA, NA, &amp;quot;E46&amp;quot;, NA, NA, NA, &amp;quot;G6&amp;quot;, &amp;quot;C…
+## $ Embarked &amp;lt;chr&amp;gt; &amp;quot;S&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;Q&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;…
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r">naniar::miss_var_summary(rawdata)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 12 × 3
+## variable n_miss pct_miss
+## &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 Cabin 687 77.1
+## 2 Age 177 19.9
+## 3 Embarked 2 0.224
+## 4 PassengerId 0 0
+## 5 Survived 0 0
+## 6 Pclass 0 0
+## 7 Name 0 0
+## 8 Sex 0 0
+## 9 SibSp 0 0
+## 10 Parch 0 0
+## 11 Ticket 0 0
+## 12 Fare 0 0
+&lt;/code>&lt;/pre>
+&lt;p>After some data exploration (not shown), I decided to take care of missing values, gather the two family variables in a single variable, and create a variable title.&lt;/p>
+&lt;pre>&lt;code class="language-r"># Get most frequent port of embarkation
+uniqx &amp;lt;- unique(na.omit(rawdata$Embarked))
+mode_embarked &amp;lt;- as.character(fct_drop(uniqx[which.max(tabulate(match(rawdata$Embarked, uniqx)))]))
+# Build function for data cleaning and handling NAs
+process_data &amp;lt;- function(tbl){
+tbl %&amp;gt;%
+mutate(class = case_when(Pclass == 1 ~ &amp;quot;first&amp;quot;,
+Pclass == 2 ~ &amp;quot;second&amp;quot;,
+Pclass == 3 ~ &amp;quot;third&amp;quot;),
+class = as_factor(class),
+gender = factor(Sex),
+fare = Fare,
+age = Age,
+alone = if_else(SibSp + Parch == 0, &amp;quot;yes&amp;quot;, &amp;quot;no&amp;quot;), # alone variable
+alone = as_factor(alone),
+port = factor(Embarked), # rename embarked as port
+title = str_extract(Name, &amp;quot;[A-Za-z]+\\.&amp;quot;), # title variable
+title = fct_lump(title, 4)) %&amp;gt;% # keep only most frequent levels of title
+mutate(port = ifelse(is.na(port), mode_embarked, port), # deal w/ NAs in port (replace by mode)
+port = as_factor(port)) %&amp;gt;%
+group_by(title) %&amp;gt;%
+mutate(median_age_title = median(age, na.rm = T)) %&amp;gt;%
+ungroup() %&amp;gt;%
+mutate(age = if_else(is.na(age), median_age_title, age)) # deal w/ NAs in age (replace by median in title)
+}
+# Process the data
+dataset &amp;lt;- rawdata %&amp;gt;%
+process_data() %&amp;gt;%
+mutate(survived = as_factor(if_else(Survived == 1, &amp;quot;yes&amp;quot;, &amp;quot;no&amp;quot;))) %&amp;gt;%
+select(survived, class, gender, age, alone, fare, port, title)
+# Have a look again
+glimpse(dataset)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Rows: 891
+## Columns: 8
+## $ survived &amp;lt;fct&amp;gt; no, yes, yes, yes, no, no, no, no, yes, yes, yes, yes, no, no…
+## $ class &amp;lt;fct&amp;gt; third, first, third, first, third, third, first, third, third…
+## $ gender &amp;lt;fct&amp;gt; male, female, female, female, male, male, male, male, female,…
+## $ age &amp;lt;dbl&amp;gt; 22, 38, 26, 35, 35, 30, 54, 2, 27, 14, 4, 58, 20, 39, 14, 55,…
+## $ alone &amp;lt;fct&amp;gt; no, no, yes, no, yes, yes, yes, no, no, no, no, yes, yes, no,…
+## $ fare &amp;lt;dbl&amp;gt; 7.2500, 71.2833, 7.9250, 53.1000, 8.0500, 8.4583, 51.8625, 21…
+## $ port &amp;lt;fct&amp;gt; 3, 1, 3, 3, 3, 2, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 2, 3, 3, 1, 3…
+## $ title &amp;lt;fct&amp;gt; Mr., Mrs., Miss., Mrs., Mr., Mr., Mr., Master., Mrs., Mrs., M…
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r">naniar::miss_var_summary(dataset)
+&lt;/code>&lt;/pre>
+&lt;div data-pagedtable="false">
+&lt;script data-pagedtable-source type="application/json">
+{"columns":[{"label":["variable"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n_miss"],"name":[2],"type":["int"],"align":["right"]},{"label":["pct_miss"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"survived","2":"0","3":"0"},{"1":"class","2":"0","3":"0"},{"1":"gender","2":"0","3":"0"},{"1":"age","2":"0","3":"0"},{"1":"alone","2":"0","3":"0"},{"1":"fare","2":"0","3":"0"},{"1":"port","2":"0","3":"0"},{"1":"title","2":"0","3":"0"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+&lt;/script>
+&lt;/div>
+&lt;p>Let&amp;rsquo;s apply the same treatment to the test dataset.&lt;/p>
+&lt;pre>&lt;code class="language-r">rawdata &amp;lt;- read_csv(&amp;quot;dat/titanic/test.csv&amp;quot;)
+holdout &amp;lt;- rawdata %&amp;gt;%
+process_data() %&amp;gt;%
+select(PassengerId, class, gender, age, alone, fare, port, title)
+glimpse(holdout)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Rows: 418
+## Columns: 8
+## $ PassengerId &amp;lt;dbl&amp;gt; 892, 893, 894, 895, 896, 897, 898, 899, 900, 901, 902, 903…
+## $ class &amp;lt;fct&amp;gt; third, third, second, third, third, third, third, second, …
+## $ gender &amp;lt;fct&amp;gt; male, female, male, male, female, male, female, male, fema…
+## $ age &amp;lt;dbl&amp;gt; 34.5, 47.0, 62.0, 27.0, 22.0, 14.0, 30.0, 26.0, 18.0, 21.0…
+## $ alone &amp;lt;fct&amp;gt; yes, no, yes, yes, no, yes, yes, no, yes, no, yes, yes, no…
+## $ fare &amp;lt;dbl&amp;gt; 7.8292, 7.0000, 9.6875, 8.6625, 12.2875, 9.2250, 7.6292, 2…
+## $ port &amp;lt;fct&amp;gt; 2, 3, 2, 3, 3, 3, 2, 3, 1, 3, 3, 3, 3, 3, 3, 1, 2, 1, 3, 1…
+## $ title &amp;lt;fct&amp;gt; Mr., Mrs., Mr., Mr., Mrs., Mr., Miss., Mr., Mrs., Mr., Mr.…
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r">naniar::miss_var_summary(holdout)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 8 × 3
+## variable n_miss pct_miss
+## &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 fare 1 0.239
+## 2 PassengerId 0 0
+## 3 class 0 0
+## 4 gender 0 0
+## 5 age 0 0
+## 6 alone 0 0
+## 7 port 0 0
+## 8 title 0 0
+&lt;/code>&lt;/pre>
+&lt;h1 id="exploratory-data-analysis">Exploratory data analysis&lt;/h1>
+&lt;pre>&lt;code class="language-r">skimr::skim(dataset)
+&lt;/code>&lt;/pre>
+&lt;p>Table: Data summary&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">&lt;/th>
+&lt;th style="text-align:left">&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">Name&lt;/td>
+&lt;td style="text-align:left">dataset&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Number of rows&lt;/td>
+&lt;td style="text-align:left">891&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Number of columns&lt;/td>
+&lt;td style="text-align:left">8&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">_______________________&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Column type frequency:&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">factor&lt;/td>
+&lt;td style="text-align:left">6&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">numeric&lt;/td>
+&lt;td style="text-align:left">2&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">________________________&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Group variables&lt;/td>
+&lt;td style="text-align:left">None&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>Variable type: factor&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">skim_variable&lt;/th>
+&lt;th style="text-align:right">n_missing&lt;/th>
+&lt;th style="text-align:right">complete_rate&lt;/th>
+&lt;th style="text-align:left">ordered&lt;/th>
+&lt;th style="text-align:right">n_unique&lt;/th>
+&lt;th style="text-align:left">top_counts&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">survived&lt;/td>
+&lt;td style="text-align:right">0&lt;/td>
+&lt;td style="text-align:right">1&lt;/td>
+&lt;td style="text-align:left">FALSE&lt;/td>
+&lt;td style="text-align:right">2&lt;/td>
+&lt;td style="text-align:left">no: 549, yes: 342&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">class&lt;/td>
+&lt;td style="text-align:right">0&lt;/td>
+&lt;td style="text-align:right">1&lt;/td>
+&lt;td style="text-align:left">FALSE&lt;/td>
+&lt;td style="text-align:right">3&lt;/td>
+&lt;td style="text-align:left">thi: 491, fir: 216, sec: 184&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">gender&lt;/td>
+&lt;td style="text-align:right">0&lt;/td>
+&lt;td style="text-align:right">1&lt;/td>
+&lt;td style="text-align:left">FALSE&lt;/td>
+&lt;td style="text-align:right">2&lt;/td>
+&lt;td style="text-align:left">mal: 577, fem: 314&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">alone&lt;/td>
+&lt;td style="text-align:right">0&lt;/td>
+&lt;td style="text-align:right">1&lt;/td>
+&lt;td style="text-align:left">FALSE&lt;/td>
+&lt;td style="text-align:right">2&lt;/td>
+&lt;td style="text-align:left">yes: 537, no: 354&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">port&lt;/td>
+&lt;td style="text-align:right">0&lt;/td>
+&lt;td style="text-align:right">1&lt;/td>
+&lt;td style="text-align:left">FALSE&lt;/td>
+&lt;td style="text-align:right">4&lt;/td>
+&lt;td style="text-align:left">3: 644, 1: 168, 2: 77, S: 2&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">title&lt;/td>
+&lt;td style="text-align:right">0&lt;/td>
+&lt;td style="text-align:right">1&lt;/td>
+&lt;td style="text-align:left">FALSE&lt;/td>
+&lt;td style="text-align:right">5&lt;/td>
+&lt;td style="text-align:left">Mr.: 517, Mis: 182, Mrs: 125, Mas: 40&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>Variable type: numeric&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">skim_variable&lt;/th>
+&lt;th style="text-align:right">n_missing&lt;/th>
+&lt;th style="text-align:right">complete_rate&lt;/th>
+&lt;th style="text-align:right">mean&lt;/th>
+&lt;th style="text-align:right">sd&lt;/th>
+&lt;th style="text-align:right">p0&lt;/th>
+&lt;th style="text-align:right">p25&lt;/th>
+&lt;th style="text-align:right">p50&lt;/th>
+&lt;th style="text-align:right">p75&lt;/th>
+&lt;th style="text-align:right">p100&lt;/th>
+&lt;th style="text-align:left">hist&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">age&lt;/td>
+&lt;td style="text-align:right">0&lt;/td>
+&lt;td style="text-align:right">1&lt;/td>
+&lt;td style="text-align:right">29.39&lt;/td>
+&lt;td style="text-align:right">13.26&lt;/td>
+&lt;td style="text-align:right">0.42&lt;/td>
+&lt;td style="text-align:right">21.00&lt;/td>
+&lt;td style="text-align:right">30.00&lt;/td>
+&lt;td style="text-align:right">35&lt;/td>
+&lt;td style="text-align:right">80.00&lt;/td>
+&lt;td style="text-align:left">▂▇▃▁▁&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">fare&lt;/td>
+&lt;td style="text-align:right">0&lt;/td>
+&lt;td style="text-align:right">1&lt;/td>
+&lt;td style="text-align:right">32.20&lt;/td>
+&lt;td style="text-align:right">49.69&lt;/td>
+&lt;td style="text-align:right">0.00&lt;/td>
+&lt;td style="text-align:right">7.91&lt;/td>
+&lt;td style="text-align:right">14.45&lt;/td>
+&lt;td style="text-align:right">31&lt;/td>
+&lt;td style="text-align:right">512.33&lt;/td>
+&lt;td style="text-align:left">▇▁▁▁▁&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;pre>&lt;code class="language-r">dataset %&amp;gt;%
+group_by(gender) %&amp;gt;%
+summarize(n = n(),
+n_surv = sum(survived == &amp;quot;yes&amp;quot;),
+pct_surv = n_surv / n)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 2 × 4
+## gender n n_surv pct_surv
+## &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 female 314 233 0.742
+## 2 male 577 109 0.189
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r">dataset %&amp;gt;%
+group_by(title) %&amp;gt;%
+summarize(n = n(),
+n_surv = sum(survived == &amp;quot;yes&amp;quot;),
+pct_surv = n_surv / n) %&amp;gt;%
+arrange(desc(pct_surv))
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 5 × 4
+## title n n_surv pct_surv
+## &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 Mrs. 125 99 0.792
+## 2 Miss. 182 127 0.698
+## 3 Master. 40 23 0.575
+## 4 Other 27 12 0.444
+## 5 Mr. 517 81 0.157
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r">dataset %&amp;gt;%
+group_by(class, gender) %&amp;gt;%
+summarize(n = n(),
+n_surv = sum(survived == &amp;quot;yes&amp;quot;),
+pct_surv = n_surv / n) %&amp;gt;%
+arrange(desc(pct_surv))
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 6 × 5
+## # Groups: class [3]
+## class gender n n_surv pct_surv
+## &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 first female 94 91 0.968
+## 2 second female 76 70 0.921
+## 3 third female 144 72 0.5
+## 4 first male 122 45 0.369
+## 5 second male 108 17 0.157
+## 6 third male 347 47 0.135
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-r">dataset %&amp;gt;%
+group_by(class, gender) %&amp;gt;%
+summarize(n = n(),
+n_surv = sum(survived == &amp;quot;yes&amp;quot;),
+pct_surv = n_surv / n) %&amp;gt;%
+mutate(class = fct_reorder(class, pct_surv)) %&amp;gt;%
+ggplot(aes(pct_surv, class, fill = class, color = class)) +
+geom_col(position = position_dodge()) +
+scale_x_continuous(labels = percent) +
+labs(x = &amp;quot;% in category that survived&amp;quot;, fill = NULL, color = NULL, y = NULL) +
+facet_wrap(~gender)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-7-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;pre>&lt;code class="language-r">dataset %&amp;gt;%
+mutate(age = cut(age, breaks = c(0, 20, 40, 60, 80))) %&amp;gt;%
+group_by(age, gender) %&amp;gt;%
+summarize(n = n(),
+n_surv = sum(survived == &amp;quot;yes&amp;quot;),
+pct_surv = n_surv / n) %&amp;gt;%
+mutate(age = fct_reorder(age, pct_surv)) %&amp;gt;%
+ggplot(aes(pct_surv, age, fill = age, color = age)) +
+geom_col(position = position_dodge()) +
+scale_x_continuous(labels = percent) +
+labs(x = &amp;quot;% in category that survived&amp;quot;, fill = NULL, color = NULL, y = NULL) +
+facet_wrap(~gender)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-7-2.png" alt="">&lt;!-- -->&lt;/p>
+&lt;pre>&lt;code class="language-r">dataset %&amp;gt;%
+ggplot(aes(fare, group = survived, color = survived, fill = survived)) +
+geom_histogram(alpha = .4, position = position_dodge()) +
+labs(x = &amp;quot;fare&amp;quot;, y = NULL, color = &amp;quot;survived?&amp;quot;, fill = &amp;quot;survived?&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-7-3.png" alt="">&lt;!-- -->&lt;/p>
+&lt;h1 id="gradient-boosting-algorithms">Gradient boosting algorithms&lt;/h1>
+&lt;p>Let&amp;rsquo;s start with
+&lt;a href="https://en.wikipedia.org/wiki/XGBoost" target="_blank" rel="noopener">gradient boosting methods&lt;/a> which are very population in the ML community.&lt;/p>
+&lt;h2 id="trainingtesting-datasets">Training/testing datasets&lt;/h2>
+&lt;p>Split our dataset in two, one dataset for training and the other one for testing. We will use an additionnal splitting step for cross-validation.&lt;/p>
+&lt;pre>&lt;code class="language-r">set.seed(2021)
+spl &amp;lt;- initial_split(dataset)
+train &amp;lt;- training(spl)
+test &amp;lt;- testing(spl)
+train_5fold &amp;lt;- train %&amp;gt;%
+vfold_cv(5)
+&lt;/code>&lt;/pre>
+&lt;h2 id="tuning">Tuning&lt;/h2>
+&lt;p>Set up defaults.&lt;/p>
+&lt;pre>&lt;code class="language-r">mset &amp;lt;- metric_set(accuracy) # metric is accuracy
+control &amp;lt;- control_grid(save_workflow = TRUE,
+save_pred = TRUE,
+extract = extract_model) # grid for tuning
+&lt;/code>&lt;/pre>
+&lt;p>First a recipe.&lt;/p>
+&lt;pre>&lt;code class="language-r">xg_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+&lt;/code>&lt;/pre>
+&lt;p>Then specify a gradient boosting model.&lt;/p>
+&lt;pre>&lt;code class="language-r">xg_model &amp;lt;- boost_tree(mode = &amp;quot;classification&amp;quot;, # binary response
+trees = tune(),
+mtry = tune(),
+tree_depth = tune(),
+learn_rate = tune()) # parameters to be tuned
+&lt;/code>&lt;/pre>
+&lt;p>Now set our workflow.&lt;/p>
+&lt;pre>&lt;code class="language-r">xg_wf &amp;lt;-
+workflow() %&amp;gt;%
+add_model(xg_model) %&amp;gt;%
+add_recipe(xg_rec)
+&lt;/code>&lt;/pre>
+&lt;p>Use cross-validation to evaluate our model with different param config.&lt;/p>
+&lt;pre>&lt;code class="language-r">xg_tune &amp;lt;- xg_wf %&amp;gt;%
+tune_grid(train_5fold,
+metrics = mset,
+control = control,
+grid = crossing(trees = seq(500, 2500, 500),
+mtry = c(3, 5, 8), # finalize(mtry(), train)
+tree_depth = c(5, 10, 15),
+learn_rate = c(0.01, 0.005)))
+&lt;/code>&lt;/pre>
+&lt;p>Visualize the results.&lt;/p>
+&lt;pre>&lt;code class="language-r">autoplot(xg_tune)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-14-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;p>Collect metrics.&lt;/p>
+&lt;pre>&lt;code class="language-r">xg_tune %&amp;gt;%
+collect_metrics() %&amp;gt;%
+arrange(desc(mean))
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 90 × 10
+## mtry trees tree_depth learn_rate .metric .estimator mean n std_err
+## &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 3 2000 5 0.01 accuracy binary 0.849 5 0.0139
+## 2 3 1500 15 0.01 accuracy binary 0.849 5 0.0139
+## 3 3 1500 5 0.01 accuracy binary 0.847 5 0.0131
+## 4 3 2500 5 0.01 accuracy binary 0.847 5 0.0122
+## 5 3 2500 15 0.005 accuracy binary 0.847 5 0.0146
+## 6 3 1500 10 0.01 accuracy binary 0.846 5 0.0147
+## 7 3 2000 10 0.01 accuracy binary 0.846 5 0.0132
+## 8 3 1000 15 0.01 accuracy binary 0.844 5 0.0137
+## 9 3 2000 10 0.005 accuracy binary 0.844 5 0.0139
+## 10 8 1500 5 0.005 accuracy binary 0.844 5 0.0127
+## # … with 80 more rows, and 1 more variable: .config &amp;lt;chr&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;h2 id="fit-model">Fit model&lt;/h2>
+&lt;p>Use best config to fit model to training data.&lt;/p>
+&lt;pre>&lt;code class="language-r">xg_fit &amp;lt;- xg_wf %&amp;gt;%
+finalize_workflow(select_best(xg_tune)) %&amp;gt;%
+fit(train)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## [13:52:45] WARNING: amalgamation/../src/learner.cc:1095: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+&lt;/code>&lt;/pre>
+&lt;p>Check out accuracy on testing dataset to see if we overfitted.&lt;/p>
+&lt;pre>&lt;code class="language-r">xg_fit %&amp;gt;%
+augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+accuracy(survived, .pred_class)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 1 × 3
+## .metric .estimator .estimate
+## &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 accuracy binary 0.798
+&lt;/code>&lt;/pre>
+&lt;p>Check out important features (aka predictors).&lt;/p>
+&lt;pre>&lt;code class="language-r">importances &amp;lt;- xgboost::xgb.importance(model = extract_fit_engine(xg_fit))
+importances %&amp;gt;%
+mutate(Feature = fct_reorder(Feature, Gain)) %&amp;gt;%
+ggplot(aes(Gain, Feature)) +
+geom_col()
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-18-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;h2 id="make-predictions">Make predictions&lt;/h2>
+&lt;p>Now we&amp;rsquo;re ready to predict survival for the holdout dataset and submit to Kaggle.&lt;/p>
+&lt;pre>&lt;code class="language-r">xg_fit %&amp;gt;%
+augment(holdout) %&amp;gt;%
+select(PassengerId, Survived = .pred_class) %&amp;gt;%
+mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+write_csv(&amp;quot;output/titanic/xgboost.csv&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>I got and accuracy of 0.76794. Cool. Let&amp;rsquo;s train a random forest model now.&lt;/p>
+&lt;h1 id="random-forests">Random forests&lt;/h1>
+&lt;p>Let&amp;rsquo;s continue with
+&lt;a href="https://en.wikipedia.org/wiki/Random_forest" target="_blank" rel="noopener">random forest methods&lt;/a>.&lt;/p>
+&lt;h2 id="tuning-1">Tuning&lt;/h2>
+&lt;p>First a recipe.&lt;/p>
+&lt;pre>&lt;code class="language-r">rf_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+&lt;/code>&lt;/pre>
+&lt;p>Then specify a gradient boosting model.&lt;/p>
+&lt;pre>&lt;code class="language-r">rf_model &amp;lt;- rand_forest(mode = &amp;quot;classification&amp;quot;, # binary response
+engine = &amp;quot;ranger&amp;quot;, # by default
+mtry = tune(),
+trees = tune(),
+min_n = tune()) # parameters to be tuned
+&lt;/code>&lt;/pre>
+&lt;p>Now set our workflow.&lt;/p>
+&lt;pre>&lt;code class="language-r">rf_wf &amp;lt;-
+workflow() %&amp;gt;%
+add_model(rf_model) %&amp;gt;%
+add_recipe(rf_rec)
+&lt;/code>&lt;/pre>
+&lt;p>Use cross-validation to evaluate our model with different param config.&lt;/p>
+&lt;pre>&lt;code class="language-r">rf_tune &amp;lt;- rf_wf %&amp;gt;%
+tune_grid(train_5fold,
+metrics = mset,
+control = control,
+grid = crossing(trees = seq(500, 2500, 500),
+mtry = c(3, 5, 8), # finalize(mtry(), train)
+min_n = seq(1, 20, 5)))
+&lt;/code>&lt;/pre>
+&lt;p>Visualize the results.&lt;/p>
+&lt;pre>&lt;code class="language-r">autoplot(rf_tune)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-24-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;p>Collect metrics.&lt;/p>
+&lt;pre>&lt;code class="language-r">rf_tune %&amp;gt;%
+collect_metrics() %&amp;gt;%
+arrange(desc(mean))
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 60 × 9
+## mtry trees min_n .metric .estimator mean n std_err .config
+## &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;
+## 1 8 1000 16 accuracy binary 0.843 5 0.0196 Preprocessor1_Mode…
+## 2 5 2000 1 accuracy binary 0.841 5 0.0172 Preprocessor1_Mode…
+## 3 8 500 16 accuracy binary 0.840 5 0.0176 Preprocessor1_Mode…
+## 4 5 1000 1 accuracy binary 0.840 5 0.0163 Preprocessor1_Mode…
+## 5 5 2500 1 accuracy binary 0.840 5 0.0163 Preprocessor1_Mode…
+## 6 5 500 1 accuracy binary 0.840 5 0.0178 Preprocessor1_Mode…
+## 7 8 1500 16 accuracy binary 0.838 5 0.0168 Preprocessor1_Mode…
+## 8 5 1500 1 accuracy binary 0.838 5 0.0168 Preprocessor1_Mode…
+## 9 3 1000 1 accuracy binary 0.837 5 0.0169 Preprocessor1_Mode…
+## 10 5 500 16 accuracy binary 0.837 5 0.0185 Preprocessor1_Mode…
+## # … with 50 more rows
+&lt;/code>&lt;/pre>
+&lt;h2 id="fit-model-1">Fit model&lt;/h2>
+&lt;p>Use best config to fit model to training data.&lt;/p>
+&lt;pre>&lt;code class="language-r">rf_fit &amp;lt;- rf_wf %&amp;gt;%
+finalize_workflow(select_best(rf_tune)) %&amp;gt;%
+fit(train)
+&lt;/code>&lt;/pre>
+&lt;p>Check out accuracy on testing dataset to see if we overfitted.&lt;/p>
+&lt;pre>&lt;code class="language-r">rf_fit %&amp;gt;%
+augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+accuracy(survived, .pred_class)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 1 × 3
+## .metric .estimator .estimate
+## &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 accuracy binary 0.816
+&lt;/code>&lt;/pre>
+&lt;p>Check out important features (aka predictors).&lt;/p>
+&lt;pre>&lt;code class="language-r">library(vip)
+finalize_model(
+x = rf_model,
+parameters = select_best(rf_tune)) %&amp;gt;%
+set_engine(&amp;quot;ranger&amp;quot;, importance = &amp;quot;permutation&amp;quot;) %&amp;gt;%
+fit(survived ~ ., data = juice(prep(rf_rec))) %&amp;gt;%
+vip(geom = &amp;quot;point&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-28-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;h2 id="make-predictions-1">Make predictions&lt;/h2>
+&lt;p>Now we&amp;rsquo;re ready to predict survival for the holdout dataset and submit to Kaggle.&lt;/p>
+&lt;pre>&lt;code class="language-r">rf_fit %&amp;gt;%
+augment(holdout) %&amp;gt;%
+select(PassengerId, Survived = .pred_class) %&amp;gt;%
+mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+write_csv(&amp;quot;output/titanic/randomforest.csv&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>I got and accuracy of 0.77033, a bit better than gradient boosting.&lt;/p>
+&lt;h1 id="regularization-methods-elastic-net-here">Regularization methods (elastic net here)&lt;/h1>
+&lt;p>Let&amp;rsquo;s continue with
+&lt;a href="https://en.wikipedia.org/wiki/Elastic_net_regularization" target="_blank" rel="noopener">elastic net regularization &lt;/a>.&lt;/p>
+&lt;h2 id="tuning-2">Tuning&lt;/h2>
+&lt;p>First a recipe.&lt;/p>
+&lt;pre>&lt;code class="language-r">en_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+step_dummy(all_nominal_predictors()) %&amp;gt;% # all factors var are split into binary terms (factor disj coding)
+step_normalize(all_predictors()) # normalize
+&lt;/code>&lt;/pre>
+&lt;p>Then specify a gradient boosting model.&lt;/p>
+&lt;pre>&lt;code class="language-r">en_model &amp;lt;- logistic_reg(penalty = tune()) %&amp;gt;% # penalty to be tuned
+set_engine(&amp;quot;glmnet&amp;quot;) %&amp;gt;% # elastic net
+set_mode(&amp;quot;classification&amp;quot;) # binary response
+&lt;/code>&lt;/pre>
+&lt;p>Now set our workflow.&lt;/p>
+&lt;pre>&lt;code class="language-r">en_wf &amp;lt;-
+workflow() %&amp;gt;%
+add_model(en_model) %&amp;gt;%
+add_recipe(en_rec)
+&lt;/code>&lt;/pre>
+&lt;p>Use cross-validation to evaluate our model with different param config.&lt;/p>
+&lt;pre>&lt;code class="language-r">en_tune &amp;lt;- en_wf %&amp;gt;%
+tune_grid(train_5fold,
+metrics = mset,
+control = control,
+grid = crossing(penalty = 10 ^ seq(-8, -.5, .5)))
+&lt;/code>&lt;/pre>
+&lt;p>Visualize the results.&lt;/p>
+&lt;pre>&lt;code class="language-r">autoplot(en_tune)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-34-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;p>Collect metrics.&lt;/p>
+&lt;pre>&lt;code class="language-r">en_tune %&amp;gt;%
+collect_metrics() %&amp;gt;%
+arrange(desc(mean))
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 16 × 7
+## penalty .metric .estimator mean n std_err .config
+## &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;
+## 1 0.000316 accuracy binary 0.807 4 0.0131 Preprocessor1_Model10
+## 2 0.00000001 accuracy binary 0.805 4 0.0143 Preprocessor1_Model01
+## 3 0.0000000316 accuracy binary 0.805 4 0.0143 Preprocessor1_Model02
+## 4 0.0000001 accuracy binary 0.805 4 0.0143 Preprocessor1_Model03
+## 5 0.000000316 accuracy binary 0.805 4 0.0143 Preprocessor1_Model04
+## 6 0.000001 accuracy binary 0.805 4 0.0143 Preprocessor1_Model05
+## 7 0.00000316 accuracy binary 0.805 4 0.0143 Preprocessor1_Model06
+## 8 0.00001 accuracy binary 0.805 4 0.0143 Preprocessor1_Model07
+## 9 0.0000316 accuracy binary 0.805 4 0.0143 Preprocessor1_Model08
+## 10 0.0001 accuracy binary 0.805 4 0.0143 Preprocessor1_Model09
+## 11 0.00316 accuracy binary 0.805 4 0.0174 Preprocessor1_Model12
+## 12 0.001 accuracy binary 0.800 4 0.0164 Preprocessor1_Model11
+## 13 0.01 accuracy binary 0.796 4 0.0190 Preprocessor1_Model13
+## 14 0.0316 accuracy binary 0.781 4 0.0238 Preprocessor1_Model14
+## 15 0.1 accuracy binary 0.777 4 0.0191 Preprocessor1_Model15
+## 16 0.316 accuracy binary 0.599 4 0.0338 Preprocessor1_Model16
+&lt;/code>&lt;/pre>
+&lt;h2 id="fit-model-2">Fit model&lt;/h2>
+&lt;p>Use best config to fit model to training data.&lt;/p>
+&lt;pre>&lt;code class="language-r">en_fit &amp;lt;- en_wf %&amp;gt;%
+finalize_workflow(select_best(en_tune)) %&amp;gt;%
+fit(train)
+&lt;/code>&lt;/pre>
+&lt;p>Check out accuracy on testing dataset to see if we overfitted.&lt;/p>
+&lt;pre>&lt;code class="language-r">en_fit %&amp;gt;%
+augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+accuracy(survived, .pred_class)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 1 × 3
+## .metric .estimator .estimate
+## &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 accuracy binary 0.825
+&lt;/code>&lt;/pre>
+&lt;p>Check out important features (aka predictors).&lt;/p>
+&lt;pre>&lt;code class="language-r">library(broom)
+en_fit$fit$fit$fit %&amp;gt;%
+tidy() %&amp;gt;%
+filter(lambda &amp;gt;= select_best(en_tune)$penalty) %&amp;gt;%
+filter(lambda == min(lambda),
+term != &amp;quot;(Intercept)&amp;quot;) %&amp;gt;%
+mutate(term = fct_reorder(term, estimate)) %&amp;gt;%
+ggplot(aes(estimate, term, fill = estimate &amp;gt; 0)) +
+geom_col() +
+theme(legend.position = &amp;quot;none&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-38-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;h2 id="make-predictions-2">Make predictions&lt;/h2>
+&lt;p>Now we&amp;rsquo;re ready to predict survival for the holdout dataset and submit to Kaggle.&lt;/p>
+&lt;pre>&lt;code class="language-r">en_fit %&amp;gt;%
+augment(holdout) %&amp;gt;%
+select(PassengerId, Survived = .pred_class) %&amp;gt;%
+mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+write_csv(&amp;quot;output/titanic/elasticnet.csv&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>I got and accuracy of 0.76794.&lt;/p>
+&lt;h1 id="stacked-ensemble-modelling">Stacked ensemble modelling&lt;/h1>
+&lt;p>Tune again with a probability-based metric.&lt;/p>
+&lt;pre>&lt;code class="language-r">xg_tune &amp;lt;- xg_wf %&amp;gt;%
+tune_grid(train_5fold,
+metrics = metric_set(roc_auc),
+control = control,
+grid = crossing(trees = seq(500, 2500, 500),
+mtry = c(3, 5, 8), # finalize(mtry(), train)
+tree_depth = c(5, 10, 15),
+learn_rate = c(0.01, 0.005)))
+rf_tune &amp;lt;- rf_wf %&amp;gt;%
+tune_grid(train_5fold,
+metrics = metric_set(roc_auc),
+control = control,
+grid = crossing(trees = seq(500, 2500, 500),
+mtry = c(3, 5, 8), # finalize(mtry(), train)
+min_n = seq(1, 20, 5)))
+en_tune &amp;lt;- en_wf %&amp;gt;%
+tune_grid(train_5fold,
+metrics = metric_set(roc_auc),
+control = control,
+grid = crossing(penalty = 10 ^ seq(-8, -.5, .5)))
+&lt;/code>&lt;/pre>
+&lt;p>Get best config.&lt;/p>
+&lt;pre>&lt;code class="language-r">xg_best &amp;lt;- xg_tune %&amp;gt;% filter_parameters(parameters = select_best(xg_tune))
+rf_best &amp;lt;- rf_tune %&amp;gt;% filter_parameters(parameters = select_best(rf_tune))
+en_best &amp;lt;- en_tune %&amp;gt;% filter_parameters(parameters = select_best(en_tune))
+&lt;/code>&lt;/pre>
+&lt;p>Do the stacked ensemble modelling (for some reasons I didn&amp;rsquo;t understand, I could not stack elastic net).&lt;/p>
+&lt;pre>&lt;code class="language-r">blended &amp;lt;- stacks() %&amp;gt;% # initialize
+add_candidates(xg_best) %&amp;gt;% # add gradient boosting
+add_candidates(rf_best) %&amp;gt;% # add random forest
+# add_candidates(en_best) %&amp;gt;% # add elastic net
+blend_predictions() %&amp;gt;% # fit regularized model
+fit_members() # fit candidate members with non-zero stacking coef with full training dataset
+&lt;/code>&lt;/pre>
+&lt;p>Perf on testing dataset?&lt;/p>
+&lt;pre>&lt;code class="language-r">test %&amp;gt;%
+bind_cols(predict(blended, .)) %&amp;gt;%
+accuracy(survived, .pred_class)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 1 × 3
+## .metric .estimator .estimate
+## &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 accuracy binary 0.803
+&lt;/code>&lt;/pre>
+&lt;p>Now predict.&lt;/p>
+&lt;pre>&lt;code class="language-r">holdout %&amp;gt;%
+bind_cols(predict(blended, .)) %&amp;gt;%
+select(PassengerId, Survived = .pred_class) %&amp;gt;%
+mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+write_csv(&amp;quot;output/titanic/stacked.csv&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>I got an 0.77033 accuracy.&lt;/p>
+&lt;h1 id="logistic-regression">Logistic regression&lt;/h1>
+&lt;p>And what about a good old-fashioned logistic regression (not a ML algo)?&lt;/p>
+&lt;p>First a recipe.&lt;/p>
+&lt;pre>&lt;code class="language-r">logistic_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+step_dummy(all_nominal_predictors()) %&amp;gt;% # all factors var are split into binary terms (factor disj coding)
+step_normalize(all_predictors()) # normalize
+&lt;/code>&lt;/pre>
+&lt;p>Then specify a logistic regression.&lt;/p>
+&lt;pre>&lt;code class="language-r">logistic_model &amp;lt;- logistic_reg() %&amp;gt;% # no param to be tuned
+set_engine(&amp;quot;glm&amp;quot;) %&amp;gt;% # elastic net
+set_mode(&amp;quot;classification&amp;quot;) # binary response
+&lt;/code>&lt;/pre>
+&lt;p>Now set our workflow.&lt;/p>
+&lt;pre>&lt;code class="language-r">logistic_wf &amp;lt;-
+workflow() %&amp;gt;%
+add_model(logistic_model) %&amp;gt;%
+add_recipe(logistic_rec)
+&lt;/code>&lt;/pre>
+&lt;p>Fit model.&lt;/p>
+&lt;pre>&lt;code class="language-r">logistic_fit &amp;lt;- logistic_wf %&amp;gt;%
+fit(train)
+&lt;/code>&lt;/pre>
+&lt;p>Inspect results.&lt;/p>
+&lt;pre>&lt;code class="language-r">tidy(logistic_fit, exponentiate = TRUE) %&amp;gt;%
+filter(p.value &amp;lt; 0.05)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 7 × 5
+## term estimate std.error statistic p.value
+## &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 age 0.712 0.146 -2.33 1.96e- 2
+## 2 class_first 2.88 0.153 6.94 4.06e-12
+## 3 class_second 1.83 0.116 5.20 2.01e- 7
+## 4 alone_yes 1.45 0.135 2.77 5.67e- 3
+## 5 port_X1 1.34 0.109 2.67 7.49e- 3
+## 6 title_Mr. 0.307 0.253 -4.68 2.90e- 6
+## 7 title_Other 0.668 0.141 -2.86 4.21e- 3
+&lt;/code>&lt;/pre>
+&lt;p>Check out accuracy on testing dataset to see if we overfitted.&lt;/p>
+&lt;pre>&lt;code class="language-r">logistic_fit %&amp;gt;%
+augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+accuracy(survived, .pred_class)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 1 × 3
+## .metric .estimator .estimate
+## &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 accuracy binary 0.825
+&lt;/code>&lt;/pre>
+&lt;p>Confusion matrix.&lt;/p>
+&lt;pre>&lt;code class="language-r">logistic_fit %&amp;gt;%
+augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+conf_mat(survived, .pred_class)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Truth
+## Prediction no yes
+## no 133 22
+## yes 17 51
+&lt;/code>&lt;/pre>
+&lt;p>Custom metrics.&lt;/p>
+&lt;pre>&lt;code class="language-r">custom_metrics &amp;lt;- metric_set(sens, precision, recall, f_meas)
+logistic_fit %&amp;gt;%
+augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+custom_metrics(truth = survived, estimate = .pred_class)
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## # A tibble: 4 × 3
+## .metric .estimator .estimate
+## &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 sens binary 0.887
+## 2 precision binary 0.858
+## 3 recall binary 0.887
+## 4 f_meas binary 0.872
+&lt;/code>&lt;/pre>
+&lt;p>ROC curve.&lt;/p>
+&lt;pre>&lt;code class="language-r">logistic_fit %&amp;gt;%
+augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+roc_curve(truth = survived, estimate = .pred_yes, event_level = &amp;quot;second&amp;quot;) %&amp;gt;%
+autoplot()
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-53-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;p>Check out important features (aka predictors).&lt;/p>
+&lt;pre>&lt;code class="language-r">library(broom)
+logistic_fit %&amp;gt;%
+tidy() %&amp;gt;%
+mutate(term = fct_reorder(term, estimate)) %&amp;gt;%
+ggplot(aes(estimate, term, fill = estimate &amp;gt; 0)) +
+geom_col() +
+theme(legend.position = &amp;quot;none&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="unnamed-chunk-54-1.png" alt="">&lt;!-- -->&lt;/p>
+&lt;p>Now we&amp;rsquo;re ready to predict survival for the holdout dataset and submit to Kaggle.&lt;/p>
+&lt;pre>&lt;code class="language-r">logistic_fit %&amp;gt;%
+augment(holdout) %&amp;gt;%
+select(PassengerId, Survived = .pred_class) %&amp;gt;%
+mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+write_csv(&amp;quot;output/titanic/logistic.csv&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;p>I got and accuracy of 0.76555. Oldies but goodies!&lt;/p>
+&lt;h1 id="conclusions">Conclusions&lt;/h1>
+&lt;p>I covered three ML algorithms (gradient boosting, random forest and elastic net) and logistic regression with the awesome &lt;code>tidymodels&lt;/code> metapackage in &lt;code>R&lt;/code>. My scores at predicting Titanic survivors were ok I guess. Some folks on Kaggle got a perfect accuracy, so there is always room for improvement. Maybe better tuning, better features (or predictors) or other algorithms would increase accuracy. Of course, I forgot to use &lt;code>set.seed()&lt;/code> so results are not exactly reproducible.&lt;/p></description></item></channel></rss>
