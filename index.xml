@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Olivier Gimenez</title><link>https://oliviergimenez.github.io/</link><atom:link href="https://oliviergimenez.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Olivier Gimenez</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Fri, 13 Aug 2021 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>Olivier Gimenez</title><link>https://oliviergimenez.github.io/</link></image><item><title>Current lab members</title><link>https://oliviergimenez.github.io/people/current/</link><pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/people/current/</guid><description>&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Olivier Gimenez</title><link>https://oliviergimenez.github.io/</link><atom:link href="https://oliviergimenez.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Olivier Gimenez</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2021</copyright><lastBuildDate>Mon, 27 Sep 2021 00:00:00 +0000</lastBuildDate><image><url>https://oliviergimenez.github.io/img/flyfishing.jpg</url><title>Olivier Gimenez</title><link>https://oliviergimenez.github.io/</link></image><item><title>Current lab members</title><link>https://oliviergimenez.github.io/people/current/</link><pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/people/current/</guid><description>&lt;br>
 &lt;hr>
 &lt;p>&lt;img src="https://oliviergimenez.github.io/img/maelis.jpeg" alt="">
 &lt;strong>Maëlis Kervellec&lt;/strong> (PhD 2021-2024) is developing statistical models for the analysis of camera trap data with applications in large carnivores population ecology. This is joint work with colleagues from the
@@ -201,152 +201,7 @@ biodiversity patterns at large scale and worked in conservation biogeography
 &lt;hr>
 &lt;p>A list of my former Master students is available
 &lt;a href="https://oliviergimenez.github.io/MasterStudents.pdf">here&lt;/a>.&lt;/p>
-&lt;hr></description></item><item><title>Talks</title><link>https://oliviergimenez.github.io/talks/talk/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/talks/talk/</guid><description>&lt;ul>
-&lt;li>
-&lt;p>Deep learning, false negatives/positives and predator-prey interactions: Peregrinations in R. March 31, 2021.
-&lt;a href="https://oliviergimenez.github.io/useR2021/#1" target="_blank" rel="noopener">Slides&lt;/a> (F = full screen and P = transcript) and
-&lt;a href="hhttps://www.youtube.com/watch?v=DOeSu8Qk5Po">video recording&lt;/a> in English. All material
-&lt;a href="https://github.com/oliviergimenez/useR2021" target="_blank" rel="noopener">here&lt;/a>. Rencontres R.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Deep learning, false negatives/positives and predator-prey interactions: Peregrinations in R. March 31, 2021. Slides
-&lt;a href="https://bit.ly/3dqYouK" target="_blank" rel="noopener">here&lt;/a> (F = full screen and P = transcript) and material
-&lt;a href="https://bit.ly/3djZQzm" target="_blank" rel="noopener">there&lt;/a>.
-&lt;a href="https://www.youtube.com/watch?v=frp2eo8GKm4&amp;amp;t=10432s" target="_blank" rel="noopener">Video&lt;/a> in French. Journées Labex Montpellier.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Large carnivores and statistical ecology. Seminar in Lisbon (remotely) Dec 2020.
-&lt;a href="https://www.youtube.com/watch?v=jM5i7vxLcGM&amp;amp;t=0s" target="_blank" rel="noopener">Video&lt;/a> and
-&lt;a href="https://figshare.com/articles/presentation/Large_carnivores_and_statistical_ecology/13337822/4" target="_blank" rel="noopener">slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>First steps in Deep Learning - Species identification and camera traps. Speed talk at
-&lt;a href="https://imaginecology.sciencesconf.org/" target="_blank" rel="noopener">imaginecology&lt;/a>. November 16-17, 2020, Lyon.
-&lt;a href="https://www.youtube.com/watch?v=CAbm9S39y5M&amp;amp;t=0s" target="_blank" rel="noopener">Video&lt;/a>,
-&lt;a href="https://oliviergimenez.github.io/prezimaginecology/#1" target="_blank" rel="noopener">slides&lt;/a> and
-&lt;a href="https://github.com/oliviergimenez/DLcamtrap" target="_blank" rel="noopener">workflow&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Flexible spatio-temporal modelling of occupancy using GAMs: A case study with large carnivores. Speed talk at
-&lt;a href="https://www.isec2020.org/" target="_blank" rel="noopener">ISEC&lt;/a>. 2020, virtual Sydney Australia.
-&lt;a href="https://youtu.be/j1f-p7Cc6Qk?t=1" target="_blank" rel="noopener">Video&lt;/a> and
-&lt;a href="https://figshare.com/articles/Flexible_spatio-temporal_modelling_of_occupancy_using_GAMs_A_case_study_with_large_carnivores_/12443249/1" target="_blank" rel="noopener">slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Grands carnivores et écologie statistique. Séminaire grand public 2020, Rennes France.
-&lt;a href="https://www.youtube.com/watch?v=RHZR-bC-pMQ" target="_blank" rel="noopener">Vidéo&lt;/a> et
-&lt;a href="https://doi.org/10.6084/m9.figshare.11913771.v3" target="_blank" rel="noopener">diapos&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Modélisation spatio-temporelle de l’aire d’occupation : le cas des grands carnivores en France. Annual meeting of the French network in Statistical ecology. 2020, Rennes France.
-&lt;a href="https://doi.org/10.6084/m9.figshare.11918226.v2" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>A review of research in capture-recapture: Ecological questions and methods.
-Wildlife Research and Conservation. 2019, Berlin Germany.
-&lt;a href="https://doi.org/10.6084/m9.figshare.12102420.v1" target="_blank" rel="noopener">Slides&lt;/a>,
-&lt;a href="https://youtu.be/RJiUIqs15ig?t=1" target="_blank" rel="noopener">video&lt;/a> and
-&lt;a href="https://github.com/oliviergimenez/capture-recapture-review" target="_blank" rel="noopener">material&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Le projet INTERACT : Interactions entre dauphins et activités humaines sur le littoral méditerranéen français. Rencontres humains - cétacés. 2019, Nice France.
-&lt;a href="https://figshare.com/articles/Le_projet_INTERACT_Interactions_entre_dauphins_et_activit_s_humaines_sur_le_littoral_m_diterran_en_fran_ais/11474244" target="_blank" rel="noopener">Diapos&lt;/a> et
-&lt;a href="https://youtu.be/zbth8sSpeaw?t=1" target="_blank" rel="noopener">vidéos&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Inferring animal social networks with imperfect detection.
-World Marine Mammal Conference. 2019, Barcelona Spain.
-&lt;a href="https://figshare.com/articles/Inferring_animal_social_networks_with_imperfect_detection/11306948/1" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Variable selection in capture-recapture models using the Lasso. International Statistical Ecology Conference. 2018, St Andrews Scotland.
-&lt;a href="https://figshare.com/articles/Variable_selection_in_capture-recapture_models_using_the_Lasso/6725144" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Humains, cétacés et recherche académique.
-&lt;a href="https://www.gis3m.org/actu/rencontres-hommes-cetaces-mediterranee-programme-conference" target="_blank" rel="noopener">Rencontres sur les Interactions entre Humains et Cétacés&lt;/a>. 2018, Marseille France.
-&lt;a href="https://figshare.com/articles/Interactions_humains_et_c_tac_s_recherche_acad_mique/6686816" target="_blank" rel="noopener">Diapos&lt;/a> et
-&lt;a href="https://youtu.be/2bwI2cvm9kU?t=1" target="_blank" rel="noopener">vidéo&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Le loup dans la presse : approche interdisciplinaire. Séminaire linguistique et écologie. 2018, Montpellier France.
-&lt;a href="https://figshare.com/articles/Le_loup_dans_la_presse_approche_interdisciplinaire/9165239" target="_blank" rel="noopener">Diapos&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Tenter l&amp;rsquo;interdisciplinarité dans le cadre d&amp;rsquo;une thèse sur les conflits humains-ours. Séminaire interdisciplinarité écologie – SHS. 2017, Grenoble France.
-&lt;a href="https://figshare.com/articles/Tenter_l_interdisciplinarit_dans_le_cadre_d_une_th_se_sur_les_conflits_humains-ours/9165176" target="_blank" rel="noopener">Diapos&lt;/a> et
-&lt;a href="https://youtu.be/VwExgy536K4?t=1" target="_blank" rel="noopener">vidéo&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Dealing with many correlated covariates in capture-recapture models. International Statistical Ecology Conference. 2016, Seattle USA.
-&lt;a href="https://figshare.com/articles/GimenezISEC2016_pdf/4833107" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Conservation and management of large carnivores in France: A beneficial collaboration between ONCFS practitioners and CNRS researchers. International Conference of Ecological Sciences. 2016, Marseille France.
-&lt;a href="https://figshare.com/articles/guinotghestem-gimenezsfe2016marseilleweb-161022125305_pdf/4832624" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Abundance of bottlenose dolphins along the French Mediterranean coast.
-&lt;a href="https://www.gdegem.org/international-workshop" target="_blank" rel="noopener">International workshop on Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea&lt;/a>. 2015, Marseille France. Slides
-&lt;a href="https://figshare.com/articles/tursiops_abundance_pdf/4833089" target="_blank" rel="noopener">here&lt;/a> and
-&lt;a href="https://figshare.com/articles/tursiops_workshop_pdf/4833083" target="_blank" rel="noopener">there&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Making sense of citizen science data: A review of methods. International Congress for Conservation Biology. 2014, Montpellier France.
-&lt;a href="https://figshare.com/articles/GimenezICCB2015MontpellierV4_pptx/4833110" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Hidden Markov modelling of occupancy data. International Statistical Ecology Conference. 2014, Montpellier France.
-&lt;a href="https://figshare.com/articles/hmm_occupancy_pptx/4833092" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>All equal, really? Individual variability in capture-recapture models from biological and methodological perspectives. EURING analytical meeting. 2013, Athens USA.
-&lt;a href="https://figshare.com/articles/plenary_euring2013_pptx/4833095" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Estimating fitness in the wild. International Statistical Ecology Conference. 2012, Oslo Norway.
-&lt;a href="https://figshare.com/articles/Estimating_fitness_with_capture-recapture_data/9164753" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Assessing Inter-population Variation in Survival Using Mark-Recapture Data. Seminar at French National Museum of Natural History. 2011, Paris France.
-&lt;a href="https://figshare.com/articles/Assessing_Inter-population_Variation_in_Survival_Using_Mark-Recapture_Data/9165182" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Des modèles de capture-recapture pour l&amp;rsquo;écologie évolutive.
-&lt;a href="https://en.wikipedia.org/wiki/Habilitation" target="_blank" rel="noopener">Habilitation à Diriger des Recherches&lt;/a>. 2010, Montpellier France.
-&lt;a href="https://figshare.com/articles/HDROGimenez-format3_pdf/4833509" target="_blank" rel="noopener">Diapos&lt;/a> et
-&lt;a href="https://figshare.com/articles/Manuscrit_HDR_Des_mod_les_de_capture-recapture_pour_l_cologie_volutive/9169991" target="_blank" rel="noopener">manuscript&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Combining longitudinal data and pedigree information to assess heritability of survival. 2009, Pescara Italy.
-&lt;a href="https://figshare.com/articles/Combining_longitudinal_data_and_pedigree_information_to_assess_heritability_of_survival/9165149" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Importance of accounting for detection heterogeneity when estimating abundance: the case of French wolves (Canis lupus). Seminar. 2009, Berkeley USA.
-&lt;a href="https://figshare.com/articles/Importance_of_accounting_for_detection_heterogeneity_when_estimating_abundance_the_case_of_French_wolves_Canis_lupus_/9165212" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Individual heterogeneity in mortality for incomplete longitudinal data. Workshop in Biodemography. 2009, Stanford USA.
-&lt;a href="https://figshare.com/articles/Individual_heterogeneity_in_mortality_for_incomplete_longitudinal_data/9165209" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Path analysis and structural equation modeling of mark-recapture data. International Statistical Ecology Conference. 2008, St Andrews Scotland.
-&lt;a href="https://figshare.com/articles/Path_analysis_and_structural_equation_modeling_of_mark-recapture_data/9165164" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Nonparametric estimation of survival using penalized splines: Applications in ecology and evolution. EURING analytical meeting 2007 Dunedin New Zealand, International Biometric Conference 2008 Dublin Ireland, Conference of the French Society for Biometry 2005 Paris France.
-&lt;a href="https://figshare.com/articles/Nonparametric_estimation_of_survival_using_penalized_splines_Applications_in_ecology_and_evolution/9165194" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Investigating Parameter-Redundancy by Yourself 2003, Radolfzell Germany.
-&lt;a href="https://figshare.com/articles/Investigate_Parameter-Redundancy_by_Yourself/9165200" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Estimation, inference and goodness-of-fit tests for multistate capture-recapture models. PhD defense. 2003, Montpellier France.
-&lt;a href="https://figshare.com/articles/Slides_of_my_PhD_defense_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169988" target="_blank" rel="noopener">Slides&lt;/a> and
-&lt;a href="https://figshare.com/articles/My_PhD_manuscript_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169994" target="_blank" rel="noopener">manuscript&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;/ul></description></item><item><title>Papers</title><link>https://oliviergimenez.github.io/publication/papers/</link><pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/publication/papers/</guid><description>&lt;hr>
+&lt;hr></description></item><item><title>Papers</title><link>https://oliviergimenez.github.io/publication/papers/</link><pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/publication/papers/</guid><description>&lt;hr>
 &lt;p>&lt;strong>Preprints&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>
@@ -390,7 +245,7 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
 &lt;ol>
 &lt;li>
 &lt;p>Gervasi V., J. Linnell, T. Berce, L. Boitani, B. Cretois, P. Ciucci, C. Duchamp, A. Gastineau, O. Grente, D. Hilfiker, D. Huber, Y. Iliopoulos, A. Karamanlidis, F. Marucco, Y. Mertzanis, P. Mannil, H. Norberg, N. Pagon, L. Pedrotti, P.-Y. Quenette, S. Reljic, V. Salvatori, T. Talvi, M. von Arx, &lt;strong>Gimenez O.&lt;/strong> (2021).
-&lt;a href="https://www.sciencedirect.com/science/article/pii/S2351989421003486" target="_blank" rel="noopener">Ecological correlates of large carnivore depredation on sheep in Europe&lt;/a>. &lt;em>Global Ecology and Conservation&lt;/em> 30: e01798. BioRxiv preprint &lt;a href="https://www.biorxiv.org/content/10.1101/2020.04.14.041160v2">https://www.biorxiv.org/content/10.1101/2020.04.14.041160v2&lt;/a>.&lt;/p>
+&lt;a href="https://oliviergimenez.github.io/pubs/Gervasietal2021GEC.pdf">Ecological correlates of large carnivore depredation on sheep in Europe&lt;/a>. &lt;em>Global Ecology and Conservation&lt;/em> 30: e01798.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Kazakou E., Fried G., Cheptou P.-O., and &lt;strong>Gimenez O.&lt;/strong> (2021).
@@ -398,7 +253,7 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
 &lt;/li>
 &lt;li>
 &lt;p>Maurer G., &lt;strong>Gimenez O.&lt;/strong>, Mulot B., and Lescureux N. (2021).
-&lt;a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1002/pan3.10247" target="_blank" rel="noopener">Under pressure: How human-wild-captive elephant social-ecological system in Laos is teetering due to global forces and sociocultural changes.&lt;/a> &lt;em>People and Nature&lt;/em> 00: 1– 17. &lt;a href="https://doi.org/10.1002/pan3.10247">https://doi.org/10.1002/pan3.10247&lt;/a>&lt;/p>
+&lt;a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1002/pan3.10247" target="_blank" rel="noopener">Under pressure: How human-wild-captive elephant social-ecological system in Laos is teetering due to global forces and sociocultural changes.&lt;/a> &lt;em>People and Nature&lt;/em> 00: 1– 17.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Rounsevell M.D.A., A. Arneth, C. Brown, W.W.L. Cheung, &lt;strong>O. Gimenez&lt;/strong>, I. Holman, P. Leadley, C. Luján, S. Mahevas, I. Maréchaux, R. Pélissier, P. H. Verburg, G. Vieilledent, B.A. Wintle, Y-J Shin (2021).
@@ -421,7 +276,7 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
 &lt;/li>
 &lt;li>
 &lt;p>Lauret V., Labach H., Authier M., &lt;strong>Gimenez O.&lt;/strong> (2021).
-&lt;a href="https://www.biorxiv.org/content/10.1101/848663v1" target="_blank" rel="noopener">Combining single- and repeated-visit occupancy models to make the best of monitoring surveys.&lt;/a> &lt;em>Ecology&lt;/em>. In press.&lt;/p>
+&lt;a href="https://oliviergimenez.github.io/pubs/Lauretetal2021Ecology.pdf">Combining single- and repeated-visit occupancy models to make the best of monitoring surveys.&lt;/a> &lt;em>Ecology&lt;/em>. In press.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Gamelon M, Baubet E., Besnard A., Gaillard J.-M., Lebreton J.-D., Touzot L., Veylit L., &lt;strong>Gimenez O.&lt;/strong> (2021).
@@ -429,7 +284,7 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
 &lt;/li>
 &lt;li>
 &lt;p>Labach H., Azzinari C., Barbier M., Cesarini C., Daniel B., David L., Dhermain F., Di-Méglio N., Guichard B., Jourdan J., Robert N., Roul M., Tomasi N., &lt;strong>Gimenez O.&lt;/strong> (2021).
-&lt;a href="https://www.biorxiv.org/content/10.1101/723569v1" target="_blank" rel="noopener">Distribution and abundance of bottlenose dolphin (Tursiops truncatus) over the French Mediterranean continental shelf.&lt;/a> &lt;em>Marine Mammal Science&lt;/em>. In press.&lt;/p>
+&lt;a href="https://oliviergimenez.github.io/pubs/Labachetal2021MMS.pdf">Distribution and abundance of bottlenose dolphin (Tursiops truncatus) over the French Mediterranean continental shelf.&lt;/a> &lt;em>Marine Mammal Science&lt;/em>. In press.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Barraquand F., &lt;strong>Gimenez O.&lt;/strong> (2021).
@@ -441,7 +296,7 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
 &lt;/li>
 &lt;li>
 &lt;p>Quéroué M., C. Barbraud, F. Barraquand, D. Turek, K. Delord, N. Pacoureau, &lt;strong>Gimenez O.&lt;/strong> (2021).
-&lt;a href="https://www.biorxiv.org/content/10.1101/2020.06.26.174250v2" target="_blank" rel="noopener">Multispecies integrated population model reveals bottom-up dynamics in a seabird predator-prey system&lt;/a> &lt;em>Ecological Monographs&lt;/em> 91: e01459.&lt;/p>
+&lt;a href="https://oliviergimenez.github.io/pubs/Queroueetal2021EM.pdf">Multispecies integrated population model reveals bottom-up dynamics in a seabird predator-prey system&lt;/a> &lt;em>Ecological Monographs&lt;/em> 91: e01459.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Bischof R., C. Milleret, P. Dupont, J. Chipperfield, M. Tourani, A. Ordiz, P. de Valpine, D. Turek, J. A. Royle, &lt;strong>Gimenez O.&lt;/strong>, Ø. Flagstad, M. Åkesson, L. Svensson, H. Brøseth, J. Kindberg (2020).
@@ -1058,7 +913,152 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
 &lt;li>
 &lt;p>Besnard A., &lt;strong>Gimenez O.&lt;/strong> and J.-D. Lebreton (2002). &lt;a href="https://oliviergimenez.github.io/pubs/Besnardetal2002EvolEcol.pdf" target="_blank">A model for the evolution of creching behaviour in gulls&lt;/a>. &lt;em>Evolutionary Ecology&lt;/em> 16: 489-503.&lt;/p>&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Workshops</title><link>https://oliviergimenez.github.io/talks/workshop/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/talks/workshop/</guid><description>&lt;p>June 21-22, 2021. Workshop on individual-based models with R. All material available from
+&lt;/ol></description></item><item><title>Talks</title><link>https://oliviergimenez.github.io/talks/talk/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/talks/talk/</guid><description>&lt;ul>
+&lt;li>
+&lt;p>Deep learning, false negatives/positives and predator-prey interactions: Peregrinations in R. March 31, 2021.
+&lt;a href="https://oliviergimenez.github.io/useR2021/#1" target="_blank" rel="noopener">Slides&lt;/a> (F = full screen and P = transcript) and
+&lt;a href="hhttps://www.youtube.com/watch?v=DOeSu8Qk5Po">video recording&lt;/a> in English. All material
+&lt;a href="https://github.com/oliviergimenez/useR2021" target="_blank" rel="noopener">here&lt;/a>. Rencontres R.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Deep learning, false negatives/positives and predator-prey interactions: Peregrinations in R. March 31, 2021. Slides
+&lt;a href="https://bit.ly/3dqYouK" target="_blank" rel="noopener">here&lt;/a> (F = full screen and P = transcript) and material
+&lt;a href="https://bit.ly/3djZQzm" target="_blank" rel="noopener">there&lt;/a>.
+&lt;a href="https://www.youtube.com/watch?v=frp2eo8GKm4&amp;amp;t=10432s" target="_blank" rel="noopener">Video&lt;/a> in French. Journées Labex Montpellier.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Large carnivores and statistical ecology. Seminar in Lisbon (remotely) Dec 2020.
+&lt;a href="https://www.youtube.com/watch?v=jM5i7vxLcGM&amp;amp;t=0s" target="_blank" rel="noopener">Video&lt;/a> and
+&lt;a href="https://figshare.com/articles/presentation/Large_carnivores_and_statistical_ecology/13337822/4" target="_blank" rel="noopener">slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>First steps in Deep Learning - Species identification and camera traps. Speed talk at
+&lt;a href="https://imaginecology.sciencesconf.org/" target="_blank" rel="noopener">imaginecology&lt;/a>. November 16-17, 2020, Lyon.
+&lt;a href="https://www.youtube.com/watch?v=CAbm9S39y5M&amp;amp;t=0s" target="_blank" rel="noopener">Video&lt;/a>,
+&lt;a href="https://oliviergimenez.github.io/prezimaginecology/#1" target="_blank" rel="noopener">slides&lt;/a> and
+&lt;a href="https://github.com/oliviergimenez/DLcamtrap" target="_blank" rel="noopener">workflow&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Flexible spatio-temporal modelling of occupancy using GAMs: A case study with large carnivores. Speed talk at
+&lt;a href="https://www.isec2020.org/" target="_blank" rel="noopener">ISEC&lt;/a>. 2020, virtual Sydney Australia.
+&lt;a href="https://youtu.be/j1f-p7Cc6Qk?t=1" target="_blank" rel="noopener">Video&lt;/a> and
+&lt;a href="https://figshare.com/articles/Flexible_spatio-temporal_modelling_of_occupancy_using_GAMs_A_case_study_with_large_carnivores_/12443249/1" target="_blank" rel="noopener">slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Grands carnivores et écologie statistique. Séminaire grand public 2020, Rennes France.
+&lt;a href="https://www.youtube.com/watch?v=RHZR-bC-pMQ" target="_blank" rel="noopener">Vidéo&lt;/a> et
+&lt;a href="https://doi.org/10.6084/m9.figshare.11913771.v3" target="_blank" rel="noopener">diapos&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Modélisation spatio-temporelle de l’aire d’occupation : le cas des grands carnivores en France. Annual meeting of the French network in Statistical ecology. 2020, Rennes France.
+&lt;a href="https://doi.org/10.6084/m9.figshare.11918226.v2" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>A review of research in capture-recapture: Ecological questions and methods.
+Wildlife Research and Conservation. 2019, Berlin Germany.
+&lt;a href="https://doi.org/10.6084/m9.figshare.12102420.v1" target="_blank" rel="noopener">Slides&lt;/a>,
+&lt;a href="https://youtu.be/RJiUIqs15ig?t=1" target="_blank" rel="noopener">video&lt;/a> and
+&lt;a href="https://github.com/oliviergimenez/capture-recapture-review" target="_blank" rel="noopener">material&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Le projet INTERACT : Interactions entre dauphins et activités humaines sur le littoral méditerranéen français. Rencontres humains - cétacés. 2019, Nice France.
+&lt;a href="https://figshare.com/articles/Le_projet_INTERACT_Interactions_entre_dauphins_et_activit_s_humaines_sur_le_littoral_m_diterran_en_fran_ais/11474244" target="_blank" rel="noopener">Diapos&lt;/a> et
+&lt;a href="https://youtu.be/zbth8sSpeaw?t=1" target="_blank" rel="noopener">vidéos&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Inferring animal social networks with imperfect detection.
+World Marine Mammal Conference. 2019, Barcelona Spain.
+&lt;a href="https://figshare.com/articles/Inferring_animal_social_networks_with_imperfect_detection/11306948/1" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Variable selection in capture-recapture models using the Lasso. International Statistical Ecology Conference. 2018, St Andrews Scotland.
+&lt;a href="https://figshare.com/articles/Variable_selection_in_capture-recapture_models_using_the_Lasso/6725144" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Humains, cétacés et recherche académique.
+&lt;a href="https://www.gis3m.org/actu/rencontres-hommes-cetaces-mediterranee-programme-conference" target="_blank" rel="noopener">Rencontres sur les Interactions entre Humains et Cétacés&lt;/a>. 2018, Marseille France.
+&lt;a href="https://figshare.com/articles/Interactions_humains_et_c_tac_s_recherche_acad_mique/6686816" target="_blank" rel="noopener">Diapos&lt;/a> et
+&lt;a href="https://youtu.be/2bwI2cvm9kU?t=1" target="_blank" rel="noopener">vidéo&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Le loup dans la presse : approche interdisciplinaire. Séminaire linguistique et écologie. 2018, Montpellier France.
+&lt;a href="https://figshare.com/articles/Le_loup_dans_la_presse_approche_interdisciplinaire/9165239" target="_blank" rel="noopener">Diapos&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Tenter l&amp;rsquo;interdisciplinarité dans le cadre d&amp;rsquo;une thèse sur les conflits humains-ours. Séminaire interdisciplinarité écologie – SHS. 2017, Grenoble France.
+&lt;a href="https://figshare.com/articles/Tenter_l_interdisciplinarit_dans_le_cadre_d_une_th_se_sur_les_conflits_humains-ours/9165176" target="_blank" rel="noopener">Diapos&lt;/a> et
+&lt;a href="https://youtu.be/VwExgy536K4?t=1" target="_blank" rel="noopener">vidéo&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Dealing with many correlated covariates in capture-recapture models. International Statistical Ecology Conference. 2016, Seattle USA.
+&lt;a href="https://figshare.com/articles/GimenezISEC2016_pdf/4833107" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Conservation and management of large carnivores in France: A beneficial collaboration between ONCFS practitioners and CNRS researchers. International Conference of Ecological Sciences. 2016, Marseille France.
+&lt;a href="https://figshare.com/articles/guinotghestem-gimenezsfe2016marseilleweb-161022125305_pdf/4832624" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Abundance of bottlenose dolphins along the French Mediterranean coast.
+&lt;a href="https://www.gdegem.org/international-workshop" target="_blank" rel="noopener">International workshop on Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea&lt;/a>. 2015, Marseille France. Slides
+&lt;a href="https://figshare.com/articles/tursiops_abundance_pdf/4833089" target="_blank" rel="noopener">here&lt;/a> and
+&lt;a href="https://figshare.com/articles/tursiops_workshop_pdf/4833083" target="_blank" rel="noopener">there&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Making sense of citizen science data: A review of methods. International Congress for Conservation Biology. 2014, Montpellier France.
+&lt;a href="https://figshare.com/articles/GimenezICCB2015MontpellierV4_pptx/4833110" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Hidden Markov modelling of occupancy data. International Statistical Ecology Conference. 2014, Montpellier France.
+&lt;a href="https://figshare.com/articles/hmm_occupancy_pptx/4833092" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>All equal, really? Individual variability in capture-recapture models from biological and methodological perspectives. EURING analytical meeting. 2013, Athens USA.
+&lt;a href="https://figshare.com/articles/plenary_euring2013_pptx/4833095" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Estimating fitness in the wild. International Statistical Ecology Conference. 2012, Oslo Norway.
+&lt;a href="https://figshare.com/articles/Estimating_fitness_with_capture-recapture_data/9164753" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Assessing Inter-population Variation in Survival Using Mark-Recapture Data. Seminar at French National Museum of Natural History. 2011, Paris France.
+&lt;a href="https://figshare.com/articles/Assessing_Inter-population_Variation_in_Survival_Using_Mark-Recapture_Data/9165182" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Des modèles de capture-recapture pour l&amp;rsquo;écologie évolutive.
+&lt;a href="https://en.wikipedia.org/wiki/Habilitation" target="_blank" rel="noopener">Habilitation à Diriger des Recherches&lt;/a>. 2010, Montpellier France.
+&lt;a href="https://figshare.com/articles/HDROGimenez-format3_pdf/4833509" target="_blank" rel="noopener">Diapos&lt;/a> et
+&lt;a href="https://figshare.com/articles/Manuscrit_HDR_Des_mod_les_de_capture-recapture_pour_l_cologie_volutive/9169991" target="_blank" rel="noopener">manuscript&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Combining longitudinal data and pedigree information to assess heritability of survival. 2009, Pescara Italy.
+&lt;a href="https://figshare.com/articles/Combining_longitudinal_data_and_pedigree_information_to_assess_heritability_of_survival/9165149" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Importance of accounting for detection heterogeneity when estimating abundance: the case of French wolves (Canis lupus). Seminar. 2009, Berkeley USA.
+&lt;a href="https://figshare.com/articles/Importance_of_accounting_for_detection_heterogeneity_when_estimating_abundance_the_case_of_French_wolves_Canis_lupus_/9165212" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Individual heterogeneity in mortality for incomplete longitudinal data. Workshop in Biodemography. 2009, Stanford USA.
+&lt;a href="https://figshare.com/articles/Individual_heterogeneity_in_mortality_for_incomplete_longitudinal_data/9165209" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Path analysis and structural equation modeling of mark-recapture data. International Statistical Ecology Conference. 2008, St Andrews Scotland.
+&lt;a href="https://figshare.com/articles/Path_analysis_and_structural_equation_modeling_of_mark-recapture_data/9165164" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Nonparametric estimation of survival using penalized splines: Applications in ecology and evolution. EURING analytical meeting 2007 Dunedin New Zealand, International Biometric Conference 2008 Dublin Ireland, Conference of the French Society for Biometry 2005 Paris France.
+&lt;a href="https://figshare.com/articles/Nonparametric_estimation_of_survival_using_penalized_splines_Applications_in_ecology_and_evolution/9165194" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Investigating Parameter-Redundancy by Yourself 2003, Radolfzell Germany.
+&lt;a href="https://figshare.com/articles/Investigate_Parameter-Redundancy_by_Yourself/9165200" target="_blank" rel="noopener">Slides&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Estimation, inference and goodness-of-fit tests for multistate capture-recapture models. PhD defense. 2003, Montpellier France.
+&lt;a href="https://figshare.com/articles/Slides_of_my_PhD_defense_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169988" target="_blank" rel="noopener">Slides&lt;/a> and
+&lt;a href="https://figshare.com/articles/My_PhD_manuscript_Estimation_inference_and_goodness-of-fit_tests_for_multistate_capture-recapture_models/9169994" target="_blank" rel="noopener">manuscript&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>Workshops</title><link>https://oliviergimenez.github.io/talks/workshop/</link><pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/talks/workshop/</guid><description>&lt;p>June 21-22, 2021. Workshop on individual-based models with R. All material available from
 &lt;a href="https://sarahbauduin.github.io/formation_IBM_NetLogoR/" target="_blank" rel="noopener">dedicated website&lt;/a>.&lt;/p>
 &lt;p>May 17-18, 2021. Workshop on Bayesian capture-recapture inference with hidden Markov models in R and Nimble. Slides, worksheets and video recordings freely available from
 &lt;a href="https://oliviergimenez.github.io/bayesian-cr-workshop/" target="_blank" rel="noopener">dedicated website&lt;/a>.&lt;/p>
@@ -1126,7 +1126,8 @@ Lebreton, J.-D., E. Klein, O. Gimenez and F. Rousset (2010). &lt;a href="https:/
 &lt;figcaption>
 Rouan L., S. Cubaynes, C. Duchamp, C. Miquel, A.-.M. Reboulet, O. Gimenez, J.-D. Lebreton, R. Choquet and R. Pradel (2010). &lt;a href="https://oliviergimenez.github.io/pubs/Rouanetal2013.pdf">Modèles de mélange en capture-recapture.&lt;/a> Dans &lt;em>Modèles à variables latentes et modèles de mélange&lt;/em>, Editeurs: G. Saporta, J.J. Droesbeke and C. Thomas-Agnan, Editions Technip, pages 265-272.
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>Experimenting with machine learning in R with tidymodels and the Kaggle titanic dataset</title><link>https://oliviergimenez.github.io/blog/learning-machine-learning/</link><pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/learning-machine-learning/</guid><description>&lt;p>I would like to familiarize myself with machine learning (ML) techniques in &lt;code>R&lt;/code>. So I have been reading and learning by doing. I thought I&amp;rsquo;d share my experience for others who&amp;rsquo;d like to give it a try&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;/figure></description></item><item><title>Draft chapter on Bayes stats and MCMC in R</title><link>https://oliviergimenez.github.io/blog/draft-bayesmcmc/</link><pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/draft-bayesmcmc/</guid><description>&lt;p>I have a draft chapter on Bayes stats and MCMC at &lt;a href="https://oliviergimenez.github.io/banana-book/crashcourse.html">https://oliviergimenez.github.io/banana-book/crashcourse.html&lt;/a> I&amp;rsquo;d love your feedback about what is confusing and what is missing 😇 #rstats&lt;/p></description></item><item><title>Bayesian analysis of capture-recapture data with hidden Markov models - Theory and case studies in R</title><link>https://oliviergimenez.github.io/blog/banana-book/</link><pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/banana-book/</guid><description>&lt;p>So, I&amp;rsquo;m writing a book 🤯 It''&amp;rsquo;s called &amp;ldquo;Bayesian analysis of capture-recapture data with hidden Markov models - Theory and case studies in R&amp;rdquo;.&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">So, I&amp;#39;m writing a book 🤯 It&amp;#39;s called &amp;#39;Bayesian analysis of capture-recapture data w hidden Markov models - Theory and case studies in R&amp;#39;. Online version here &lt;a href="https://t.co/Crgx5NX70s">https://t.co/Crgx5NX70s&lt;/a> to be published w &lt;a href="https://twitter.com/CRCPress?ref_src=twsrc%5Etfw">@CRCPress&lt;/a> Will share chapter drafts 😇 &amp;amp; random thoughts along the way &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw">#rstats&lt;/a> &lt;a href="https://t.co/ms6dIjvY7m">pic.twitter.com/ms6dIjvY7m&lt;/a>&lt;/p>&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href="https://twitter.com/oaggimenez/status/1439664049776644101?ref_src=twsrc%5Etfw">September 19, 2021&lt;/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Experimenting with machine learning in R with tidymodels and the Kaggle titanic dataset</title><link>https://oliviergimenez.github.io/blog/learning-machine-learning/</link><pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate><guid>https://oliviergimenez.github.io/blog/learning-machine-learning/</guid><description>&lt;p>I would like to familiarize myself with machine learning (ML) techniques in &lt;code>R&lt;/code>. So I have been reading and learning by doing. I thought I&amp;rsquo;d share my experience for others who&amp;rsquo;d like to give it a try&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
 &lt;h1 id="first-version-august-13-2021-updated-august-23-2021">First version August 13, 2021, updated August 23, 2021&lt;/h1>
 &lt;p>Since my first post, I’ve been reading notebooks shared by folks who
 ranked high in the challenge, and added two features that they used.
