@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>data wrangling | Olivier Gimenez</title>
+    <title>data-wrangling | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/data-wrangling/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/data-wrangling/index.xml" rel="self" type="application/rss+xml" />
-    <description>data wrangling</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <description>data-wrangling</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2022</copyright><lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>data wrangling</title>
+      <title>data-wrangling</title>
       <link>https://oliviergimenez.github.io/tags/data-wrangling/</link>
     </image>
+    
+    <item>
+      <title>Introduction on data wrangling with R</title>
+      <link>https://oliviergimenez.github.io/blog/2022-05-17-introduction-on-data-wrangling-with-r/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-05-17-introduction-on-data-wrangling-with-r/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🔧🚧 Intro on data wrangling w/ R 📦 dplyr - import data, pipe, pivot, join, filter, count, work w/ columns, dates, char, factors, etc &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt;&lt;br&gt;&lt;br&gt;▶️ &lt;a href=&#34;https://t.co/Vs2TbYhbBj&#34;&gt;https://t.co/Vs2TbYhbBj&lt;/a&gt; ◀️&lt;br&gt;&lt;br&gt;w/ practicals &lt;a href=&#34;https://t.co/9ktKPp9wfW&#34;&gt;https://t.co/9ktKPp9wfW&lt;/a&gt; &amp;amp; solutions &lt;a href=&#34;https://t.co/YPwibL2w31&#34;&gt;https://t.co/YPwibL2w31&lt;/a&gt; &lt;br&gt;&lt;br&gt;Cartoons &lt;a href=&#34;https://twitter.com/allison_horst?ref_src=twsrc%5Etfw&#34;&gt;@allison_horst&lt;/a&gt; 💜 &lt;a href=&#34;https://t.co/ZMSfxYFKWq&#34;&gt;pic.twitter.com/ZMSfxYFKWq&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1526574510392188928?ref_src=twsrc%5Etfw&#34;&gt;May 17, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
     
     <item>
       <title>Introduction to the Tidyverse</title>

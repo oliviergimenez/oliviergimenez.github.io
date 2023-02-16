@@ -5,12 +5,2665 @@
     <link>https://oliviergimenez.github.io/tags/rstats/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     <description>rstats</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2022</copyright><lastBuildDate>Sun, 02 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>rstats</title>
       <link>https://oliviergimenez.github.io/tags/rstats/</link>
     </image>
+    
+    <item>
+      <title>Binary image classification using Keras in R: Using CT scans to predict patients with Covid</title>
+      <link>https://oliviergimenez.github.io/blog/image-classif/</link>
+      <pubDate>Sun, 02 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/image-classif/</guid>
+      <description>&lt;p&gt;Here I illustrate how to train a CNN with Keras in R to predict from patients&#39; CT scans those who will develop severe illness from Covid.&lt;/p&gt;
+&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;
+&lt;p&gt;Michael Blum 
+&lt;a href=&#34;https://twitter.com/mblum_g/status/1475940763716444161?s=20&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tweeted&lt;/a&gt; about the 
+&lt;a href=&#34;https://stoic2021.grand-challenge.org/stoic2021/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;STOIC2021 - COVID-19 AI challenge&lt;/a&gt;. The main goal of this challenge is to predict from the patients&#39; 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/CT_scan&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CT scans&lt;/a&gt; who will develop severe illness from Covid.&lt;/p&gt;
+&lt;p&gt;Given my 
+&lt;a href=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recent interest in machine learning&lt;/a&gt;, this challenge peaked my interest. Although &lt;code&gt;Python&lt;/code&gt; is the machine learning &lt;em&gt;lingua franca&lt;/em&gt;, it is possible to 
+&lt;a href=&#34;https://github.com/oliviergimenez/computo-deeplearning-occupany-lynx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;train a convolutional neural network (CNN) in &lt;code&gt;R&lt;/code&gt;&lt;/a&gt; and perform (binary) image classification.&lt;/p&gt;
+&lt;p&gt;Here, I will use an 
+&lt;a href=&#34;https://keras.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;R&lt;/code&gt; interface to &lt;code&gt;Keras&lt;/code&gt;&lt;/a&gt; that allows training neural networks. Note that the 
+&lt;a href=&#34;https://stoic2021.grand-challenge.org/stoic-db/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dataset shared for the challenge&lt;/a&gt; is big, like 280Go big, and it took me a day to download it. For the sake of illustration, I will use a similar but much lighter dataset from a 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Kaggle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kaggle&lt;/a&gt; repository &lt;a href=&#34;https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset&#34;&gt;https://www.kaggle.com/plameneduardo/sarscov2-ctscan-dataset&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The code is available on GitHub as usual &lt;a href=&#34;https://github.com/oliviergimenez/bin-image-classif&#34;&gt;https://github.com/oliviergimenez/bin-image-classif&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;First things first, load the packages we will need.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tidyverse)
+theme_set(theme_light())
+library(keras)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;read-in-and-process-data&#34;&gt;Read in and process data&lt;/h1&gt;
+&lt;p&gt;We will need a function to process images, I&amp;rsquo;m stealing 
+&lt;a href=&#34;https://rpubs.com/spalladino14/653239&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;that one&lt;/a&gt; written by 
+&lt;a href=&#34;https://www.linkedin.com/in/spencer-palladino/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spencer Palladino&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;process_pix &amp;lt;- function(lsf) {
+  img &amp;lt;- lapply(lsf, image_load, grayscale = TRUE) # grayscale the image
+  arr &amp;lt;- lapply(img, image_to_array) # turns it into an array
+  arr_resized &amp;lt;- lapply(arr, image_array_resize, 
+                        height = 100, 
+                        width = 100) # resize
+  arr_normalized &amp;lt;- normalize(arr_resized, axis = 1) #normalize to make small numbers 
+  return(arr_normalized)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now let&amp;rsquo;s process images for patients with Covid, and do some reshaping. Idem with images for patients without Covid.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# with covid
+lsf &amp;lt;- list.files(&amp;quot;dat/COVID/&amp;quot;, full.names = TRUE) 
+covid &amp;lt;- process_pix(lsf)
+covid &amp;lt;- covid[,,,1] # get rid of last dim
+covid_reshaped &amp;lt;- array_reshape(covid, c(nrow(covid), 100*100))
+# without covid
+lsf &amp;lt;- list.files(&amp;quot;dat/non-COVID/&amp;quot;, full.names = TRUE) 
+ncovid &amp;lt;- process_pix(lsf)
+ncovid &amp;lt;- ncovid[,,,1] # get rid of last dim
+ncovid_reshaped &amp;lt;- array_reshape(ncovid, c(nrow(ncovid), 100*100))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We have 1252 CT scans of patients with Covid, and 1229 without.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s visualise these scans. Let&amp;rsquo;s pick a patient with Covid, and another one without.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;scancovid &amp;lt;- reshape2::melt(covid[10,,])
+plotcovid &amp;lt;- scancovid %&amp;gt;%
+  ggplot() +
+  aes(x = Var1, y = Var2, fill = value) + 
+  geom_raster() +
+  labs(x = NULL, y = NULL, title = &amp;quot;CT scan of a patient with covid&amp;quot;) + 
+  scale_fill_viridis_c() + 
+  theme(legend.position = &amp;quot;none&amp;quot;)
+
+scanncovid &amp;lt;- reshape2::melt(ncovid[10,,])
+plotncovid &amp;lt;- scanncovid %&amp;gt;%
+  ggplot() +
+  aes(x = Var1, y = Var2, fill = value) + 
+  geom_raster() +
+  labs(x = NULL, y = NULL, title = &amp;quot;CT scan of a patient without covid&amp;quot;) + 
+  scale_fill_viridis_c() + 
+  theme(legend.position = &amp;quot;none&amp;quot;)
+
+library(patchwork)
+plotcovid + plotncovid
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-4-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;Put altogether and shuffle.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;df &amp;lt;- rbind(cbind(covid_reshaped, 1), # 1 = covid
+            cbind(ncovid_reshaped, 0)) # 0 = no covid
+set.seed(1234)
+shuffle &amp;lt;- sample(nrow(df), replace = F)
+df &amp;lt;- df[shuffle, ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sounds great. We have everything we need to start training a convolutional neural network model.&lt;/p&gt;
+&lt;h1 id=&#34;convolutional-neural-network-cnn&#34;&gt;Convolutional neural network (CNN)&lt;/h1&gt;
+&lt;p&gt;Let&amp;rsquo;s build our training and testing datasets using a 80/20 split.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(2022)
+split &amp;lt;- sample(2, nrow(df), replace = T, prob = c(0.8, 0.2))
+train &amp;lt;- df[split == 1,]
+test &amp;lt;- df[split == 2,]
+train_target &amp;lt;- df[split == 1, 10001] # label in training dataset
+test_target &amp;lt;- df[split == 2, 10001] # label in testing dataset
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now build our model. I use three layers (&lt;code&gt;layer_dense()&lt;/code&gt; function) that I put one after the other with piping. I also use regularization (&lt;code&gt;layer_dropout()&lt;/code&gt; function) to avoid overfitting.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;model &amp;lt;- keras_model_sequential() %&amp;gt;%
+  layer_dense(units = 512, activation = &amp;quot;relu&amp;quot;) %&amp;gt;% 
+  layer_dropout(0.4) %&amp;gt;%
+  layer_dense(units = 256, activation = &amp;quot;relu&amp;quot;) %&amp;gt;%
+  layer_dropout(0.3) %&amp;gt;%
+  layer_dense(units = 128, activation = &amp;quot;relu&amp;quot;) %&amp;gt;%
+  layer_dropout(0.2) %&amp;gt;%
+  layer_dense(units = 2, activation = &#39;softmax&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Compile the model with defaults specific to binary classification.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;model %&amp;gt;%
+  compile(optimizer = &#39;adam&#39;,
+          loss = &#39;binary_crossentropy&#39;, 
+          metrics = c(&#39;accuracy&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We use one-hot encoding (&lt;code&gt;to_categorical()&lt;/code&gt; function) aka dummy coding in statistics.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;train_label &amp;lt;- to_categorical(train_target)
+test_label &amp;lt;- to_categorical(test_target)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now let&amp;rsquo;s fit our model to the training dataset.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fit_covid &amp;lt;- model %&amp;gt;%
+  fit(x = train,
+      y = train_label, 
+      epochs = 25,
+      batch_size = 512, # try also 128 and 256
+      verbose = 2,
+      validation_split = 0.2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A quick visualization of the performances shows that the algorithm is doing not too bad. No over/under-fitting. Accuracy and loss are fine.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(fit_covid)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-11-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;What about the performances on the testing dataset?&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;model %&amp;gt;%
+  evaluate(test, test_label)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       loss   accuracy 
+## 0.02048795 0.99795920
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s do some predictions on the testing dataset, and compare with ground truth.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;predictedclasses &amp;lt;- model %&amp;gt;%
+  predict_classes(test)
+table(Prediction = predictedclasses, 
+      Actual = test_target)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##           Actual
+## Prediction   0   1
+##          0 243   0
+##          1   1 246
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pretty cool. Only one healthy patient is misclassified as being sick. Let&amp;rsquo;s save our model for further use.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;save_model_tf(model, &amp;quot;model/covidmodel&amp;quot;) # save the model
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I&amp;rsquo;m happy with these results. In general however, we need to find ways to improve the performances. Check out some tips 
+&lt;a href=&#34;https://machinelearningmastery.com/improve-deep-learning-performance/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; with examples implemented in &lt;code&gt;Keras&lt;/code&gt; with &lt;code&gt;R&lt;/code&gt; 
+&lt;a href=&#34;https://keras.rstudio.com/articles/examples/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Draft chapter on Bayes stats and MCMC in R</title>
+      <link>https://oliviergimenez.github.io/blog/draft-bayesmcmc/</link>
+      <pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/draft-bayesmcmc/</guid>
+      <description>&lt;p&gt;I have a draft chapter on Bayes stats and MCMC at &lt;a href=&#34;https://oliviergimenez.github.io/banana-book/crashcourse.html&#34;&gt;https://oliviergimenez.github.io/banana-book/crashcourse.html&lt;/a&gt; I&amp;rsquo;d love your feedback about what is confusing and what is missing 😇 #rstats&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bayesian analysis of capture-recapture data with hidden Markov models - Theory and case studies in R</title>
+      <link>https://oliviergimenez.github.io/blog/banana-book/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/banana-book/</guid>
+      <description>&lt;p&gt;So, I&amp;rsquo;m writing a book 🤯 It&#39;&#39;&amp;rsquo;s called &amp;ldquo;Bayesian analysis of capture-recapture data with hidden Markov models - Theory and case studies in R&amp;rdquo;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;So, I&amp;#39;m writing a book 🤯 It&amp;#39;s called &amp;#39;Bayesian analysis of capture-recapture data w hidden Markov models - Theory and case studies in R&amp;#39;. Online version here &lt;a href=&#34;https://t.co/Crgx5NX70s&#34;&gt;https://t.co/Crgx5NX70s&lt;/a&gt; to be published w &lt;a href=&#34;https://twitter.com/CRCPress?ref_src=twsrc%5Etfw&#34;&gt;@CRCPress&lt;/a&gt; Will share chapter drafts 😇 &amp;amp; random thoughts along the way &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/ms6dIjvY7m&#34;&gt;pic.twitter.com/ms6dIjvY7m&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1439664049776644101?ref_src=twsrc%5Etfw&#34;&gt;September 19, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Experimenting with machine learning in R with tidymodels and the Kaggle titanic dataset</title>
+      <link>https://oliviergimenez.github.io/blog/learning-machine-learning/</link>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/learning-machine-learning/</guid>
+      <description>&lt;p&gt;I would like to familiarize myself with machine learning (ML) techniques in &lt;code&gt;R&lt;/code&gt;. So I have been reading and learning by doing. I thought I&amp;rsquo;d share my experience for others who&amp;rsquo;d like to give it a try&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;first-version-august-13-2021-updated-august-23-2021&#34;&gt;First version August 13, 2021, updated August 23, 2021&lt;/h1&gt;
+&lt;p&gt;Since my first post, I’ve been reading notebooks shared by folks who
+ranked high in the challenge, and added two features that they used.
+Eventually, these new predictors did not help (I must be doing something
+wrong). I also explored some other ML algorithms. Last, I tuned the
+parameters more efficiently with a clever grid-search algorithm. All in
+all, I slightly improved my score, but most importantly, I now have a
+clean template for further use.&lt;/p&gt;
+&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;
+&lt;p&gt;All material available from GitHub at
+&lt;a href=&#34;https://github.com/oliviergimenez/learning-machine-learning&#34;&gt;https://github.com/oliviergimenez/learning-machine-learning&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The two great books I’m using are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.statlearning.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An Introduction to Statistical Learning with Applications in
+R&lt;/a&gt; by Gareth James, Daniela Witten,
+Trevor Hastie and Robert Tibshirani&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.tmwr.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tidy models in R&lt;/a&gt; by Max Kuhn and Julia
+Silge&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I also recommend checking out the material (codes, screencasts) shared
+by 
+&lt;a href=&#34;http://varianceexplained.org/r/sliced-ml/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;David Robinson&lt;/a&gt; and
+
+&lt;a href=&#34;https://juliasilge.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julia Silge&lt;/a&gt; from whom I picked some useful
+tricks that I put to use below.&lt;/p&gt;
+&lt;p&gt;To try things, I’ve joined the
+
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Kaggle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kaggle&lt;/a&gt; online community which
+gathers folks with lots of experience in ML from whom you can learn.
+Kaggle also hosts public datasets that can be used for playing around.&lt;/p&gt;
+&lt;p&gt;I use the &lt;code&gt;tidymodels&lt;/code&gt; metapackage that contains a suite of packages for
+modeling and machine learning using &lt;code&gt;tidyverse&lt;/code&gt; principles. Check out
+all possibilities 
+&lt;a href=&#34;https://www.tidymodels.org/find/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;, and parsnip
+models in particular 
+&lt;a href=&#34;https://www.tidymodels.org/find/parsnip/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s start with the famous 
+&lt;a href=&#34;https://www.kaggle.com/c/titanic/overview&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Titanic
+dataset&lt;/a&gt;. We need to predict
+if a passenger survived the sinking of the Titanic (1) or not (0). A
+dataset is provided for training our models (train.csv). Another dataset
+is provided (test.csv) for which we do not know the answer. We will
+predict survival for each passenger, submit our answer to Kaggle and see
+how well we did compared to other folks. The metric for comparison is
+the percentage of passengers we correctly predict – aka as accuracy.&lt;/p&gt;
+&lt;p&gt;First things first, let’s load some packages to get us started.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(tidymodels) # metapackage for ML 
+library(tidyverse) # metapackage for data manipulation and visulaisation
+library(stacks) # stack ML models for better perfomance
+theme_set(theme_light())
+doParallel::registerDoParallel(cores = 4) # parallel computations
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;data&#34;&gt;Data&lt;/h1&gt;
+&lt;p&gt;Read in training data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rawdata &amp;lt;- read_csv(&amp;quot;dat/titanic/train.csv&amp;quot;)
+glimpse(rawdata)
+
+## Rows: 891
+## Columns: 12
+## $ PassengerId &amp;lt;dbl&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20…
+## $ Survived    &amp;lt;dbl&amp;gt; 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, …
+## $ Pclass      &amp;lt;dbl&amp;gt; 3, 1, 3, 1, 3, 3, 1, 3, 3, 2, 3, 1, 3, 3, 3, 2, 3, 2, 3, 3, 2, 2, 3, …
+## $ Name        &amp;lt;chr&amp;gt; &amp;quot;Braund, Mr. Owen Harris&amp;quot;, &amp;quot;Cumings, Mrs. John Bradley (Florence Brig…
+## $ Sex         &amp;lt;chr&amp;gt; &amp;quot;male&amp;quot;, &amp;quot;female&amp;quot;, &amp;quot;female&amp;quot;, &amp;quot;female&amp;quot;, &amp;quot;male&amp;quot;, &amp;quot;male&amp;quot;, &amp;quot;male&amp;quot;, &amp;quot;male&amp;quot;,…
+## $ Age         &amp;lt;dbl&amp;gt; 22, 38, 26, 35, 35, NA, 54, 2, 27, 14, 4, 58, 20, 39, 14, 55, 2, NA, …
+## $ SibSp       &amp;lt;dbl&amp;gt; 1, 1, 0, 1, 0, 0, 0, 3, 0, 1, 1, 0, 0, 1, 0, 0, 4, 0, 1, 0, 0, 0, 0, …
+## $ Parch       &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 1, 0, 0, 5, 0, 0, 1, 0, 0, 0, 0, 0, 0, …
+## $ Ticket      &amp;lt;chr&amp;gt; &amp;quot;A/5 21171&amp;quot;, &amp;quot;PC 17599&amp;quot;, &amp;quot;STON/O2. 3101282&amp;quot;, &amp;quot;113803&amp;quot;, &amp;quot;373450&amp;quot;, &amp;quot;330…
+## $ Fare        &amp;lt;dbl&amp;gt; 7.2500, 71.2833, 7.9250, 53.1000, 8.0500, 8.4583, 51.8625, 21.0750, 1…
+## $ Cabin       &amp;lt;chr&amp;gt; NA, &amp;quot;C85&amp;quot;, NA, &amp;quot;C123&amp;quot;, NA, NA, &amp;quot;E46&amp;quot;, NA, NA, NA, &amp;quot;G6&amp;quot;, &amp;quot;C103&amp;quot;, NA, N…
+## $ Embarked    &amp;lt;chr&amp;gt; &amp;quot;S&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;Q&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;, &amp;quot;S&amp;quot;,…
+
+naniar::miss_var_summary(rawdata)
+
+## # A tibble: 12 × 3
+##    variable    n_miss pct_miss
+##    &amp;lt;chr&amp;gt;        &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;
+##  1 Cabin          687   77.1  
+##  2 Age            177   19.9  
+##  3 Embarked         2    0.224
+##  4 PassengerId      0    0    
+##  5 Survived         0    0    
+##  6 Pclass           0    0    
+##  7 Name             0    0    
+##  8 Sex              0    0    
+##  9 SibSp            0    0    
+## 10 Parch            0    0    
+## 11 Ticket           0    0    
+## 12 Fare             0    0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After some data exploration (not shown), I decided to take care of
+missing values, gather the two family variables in a single variable,
+and create a variable title.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Get most frequent port of embarkation
+uniqx &amp;lt;- unique(na.omit(rawdata$Embarked))
+mode_embarked &amp;lt;- as.character(fct_drop(uniqx[which.max(tabulate(match(rawdata$Embarked, uniqx)))]))
+
+
+# Build function for data cleaning and handling NAs
+process_data &amp;lt;- function(tbl){
+  
+  tbl %&amp;gt;%
+    mutate(class = case_when(Pclass == 1 ~ &amp;quot;first&amp;quot;,
+                             Pclass == 2 ~ &amp;quot;second&amp;quot;,
+                             Pclass == 3 ~ &amp;quot;third&amp;quot;),
+           class = as_factor(class),
+           gender = factor(Sex),
+           fare = Fare,
+           age = Age,
+           ticket = Ticket,
+           alone = if_else(SibSp + Parch == 0, &amp;quot;yes&amp;quot;, &amp;quot;no&amp;quot;), # alone variable
+           alone = as_factor(alone),
+           port = factor(Embarked), # rename embarked as port
+           title = str_extract(Name, &amp;quot;[A-Za-z]+\\.&amp;quot;), # title variable
+           title = fct_lump(title, 4)) %&amp;gt;% # keep only most frequent levels of title
+    mutate(port = ifelse(is.na(port), mode_embarked, port), # deal w/ NAs in port (replace by mode)
+           port = as_factor(port)) %&amp;gt;%
+    group_by(title) %&amp;gt;%
+    mutate(median_age_title = median(age, na.rm = T)) %&amp;gt;%
+    ungroup() %&amp;gt;%
+    mutate(age = if_else(is.na(age), median_age_title, age)) %&amp;gt;% # deal w/ NAs in age (replace by median in title)
+    mutate(ticketfreq = ave(1:nrow(.), FUN = length),
+           fareadjusted = fare / ticketfreq) %&amp;gt;%
+    mutate(familyage = SibSp + Parch + 1 + age/70)
+    
+}
+
+# Process the data
+dataset &amp;lt;- rawdata %&amp;gt;%
+  process_data() %&amp;gt;%
+  mutate(survived = as_factor(if_else(Survived == 1, &amp;quot;yes&amp;quot;, &amp;quot;no&amp;quot;))) %&amp;gt;%
+  mutate(survived = relevel(survived, ref = &amp;quot;yes&amp;quot;)) %&amp;gt;% # first event is survived = yes
+  select(survived, class, gender, age, alone, port, title, fareadjusted, familyage) 
+
+# Have a look again
+glimpse(dataset)
+
+## Rows: 891
+## Columns: 9
+## $ survived     &amp;lt;fct&amp;gt; no, yes, yes, yes, no, no, no, no, yes, yes, yes, yes, no, no, no, y…
+## $ class        &amp;lt;fct&amp;gt; third, first, third, first, third, third, first, third, third, secon…
+## $ gender       &amp;lt;fct&amp;gt; male, female, female, female, male, male, male, male, female, female…
+## $ age          &amp;lt;dbl&amp;gt; 22, 38, 26, 35, 35, 30, 54, 2, 27, 14, 4, 58, 20, 39, 14, 55, 2, 30,…
+## $ alone        &amp;lt;fct&amp;gt; no, no, yes, no, yes, yes, yes, no, no, no, no, yes, yes, no, yes, y…
+## $ port         &amp;lt;fct&amp;gt; 3, 1, 3, 3, 3, 2, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 2, 3, 3, 1, 3, 3, 2,…
+## $ title        &amp;lt;fct&amp;gt; Mr., Mrs., Miss., Mrs., Mr., Mr., Mr., Master., Mrs., Mrs., Miss., M…
+## $ fareadjusted &amp;lt;dbl&amp;gt; 0.008136925, 0.080003704, 0.008894501, 0.059595960, 0.009034792, 0.0…
+## $ familyage    &amp;lt;dbl&amp;gt; 2.314286, 2.542857, 1.371429, 2.500000, 1.500000, 1.428571, 1.771429…
+
+naniar::miss_var_summary(dataset)
+
+## # A tibble: 9 × 3
+##   variable     n_miss pct_miss
+##   &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1 survived          0        0
+## 2 class             0        0
+## 3 gender            0        0
+## 4 age               0        0
+## 5 alone             0        0
+## 6 port              0        0
+## 7 title             0        0
+## 8 fareadjusted      0        0
+## 9 familyage         0        0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s apply the same treatment to the test dataset.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rawdata &amp;lt;- read_csv(&amp;quot;dat/titanic/test.csv&amp;quot;) 
+holdout &amp;lt;- rawdata %&amp;gt;%
+  process_data() %&amp;gt;%
+  select(PassengerId, class, gender, age, alone, port, title, fareadjusted, familyage) 
+
+glimpse(holdout)
+
+## Rows: 418
+## Columns: 9
+## $ PassengerId  &amp;lt;dbl&amp;gt; 892, 893, 894, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905…
+## $ class        &amp;lt;fct&amp;gt; third, third, second, third, third, third, third, second, third, thi…
+## $ gender       &amp;lt;fct&amp;gt; male, female, male, male, female, male, female, male, female, male, …
+## $ age          &amp;lt;dbl&amp;gt; 34.5, 47.0, 62.0, 27.0, 22.0, 14.0, 30.0, 26.0, 18.0, 21.0, 28.5, 46…
+## $ alone        &amp;lt;fct&amp;gt; yes, no, yes, yes, no, yes, yes, no, yes, no, yes, yes, no, no, no, …
+## $ port         &amp;lt;fct&amp;gt; 2, 3, 2, 3, 3, 3, 2, 3, 1, 3, 3, 3, 3, 3, 3, 1, 2, 1, 3, 1, 1, 3, 3,…
+## $ title        &amp;lt;fct&amp;gt; Mr., Mrs., Mr., Mr., Mrs., Mr., Miss., Mr., Mrs., Mr., Mr., Mr., Mrs…
+## $ fareadjusted &amp;lt;dbl&amp;gt; 0.018730144, 0.016746411, 0.023175837, 0.020723684, 0.029395933, 0.0…
+## $ familyage    &amp;lt;dbl&amp;gt; 1.492857, 2.671429, 1.885714, 1.385714, 3.314286, 1.200000, 1.428571…
+
+naniar::miss_var_summary(holdout)
+
+## # A tibble: 9 × 3
+##   variable     n_miss pct_miss
+##   &amp;lt;chr&amp;gt;         &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1 fareadjusted      1    0.239
+## 2 PassengerId       0    0    
+## 3 class             0    0    
+## 4 gender            0    0    
+## 5 age               0    0    
+## 6 alone             0    0    
+## 7 port              0    0    
+## 8 title             0    0    
+## 9 familyage         0    0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;exploratory-data-analysis&#34;&gt;Exploratory data analysis&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;skimr::skim(dataset)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;caption&gt;Data summary&lt;/caption&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Name&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;dataset&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Number of rows&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;891&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Number of columns&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;_______________________&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Column type frequency:&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;factor&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;numeric&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;________________________&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Group variables&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Data summary&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Variable type: factor&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;skim_variable&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;n_missing&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;complete_rate&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;ordered&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;n_unique&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;top_counts&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;survived&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;no: 549, yes: 342&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;class&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;thi: 491, fir: 216, sec: 184&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;gender&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;mal: 577, fem: 314&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;alone&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;yes: 537, no: 354&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;port&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;3: 644, 1: 168, 2: 77, S: 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;title&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;FALSE&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;Mr.: 517, Mis: 182, Mrs: 125, Mas: 40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Variable type: numeric&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;skim_variable&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;n_missing&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;complete_rate&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;mean&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;sd&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;p0&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;p25&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;p50&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;p75&lt;/th&gt;
+&lt;th style=&#34;text-align: right;&#34;&gt;p100&lt;/th&gt;
+&lt;th style=&#34;text-align: left;&#34;&gt;hist&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;age&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;29.39&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;13.26&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0.42&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;21.00&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;30.00&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;35.00&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;80.00&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;▂▇▃▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;fareadjusted&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0.04&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0.06&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0.00&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0.01&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0.02&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0.03&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0.58&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;▇▁▁▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;familyage&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;2.32&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1.57&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1.07&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1.41&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;1.57&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;2.62&lt;/td&gt;
+&lt;td style=&#34;text-align: right;&#34;&gt;11.43&lt;/td&gt;
+&lt;td style=&#34;text-align: left;&#34;&gt;▇▁▁▁▁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Let’s explore the data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dataset %&amp;gt;%
+  count(survived)
+
+## # A tibble: 2 × 2
+##   survived     n
+##   &amp;lt;fct&amp;gt;    &amp;lt;int&amp;gt;
+## 1 yes        342
+## 2 no         549
+
+dataset %&amp;gt;%
+  group_by(gender) %&amp;gt;%
+  summarize(n = n(),
+            n_surv = sum(survived == &amp;quot;yes&amp;quot;),
+            pct_surv = n_surv / n)
+
+## # A tibble: 2 × 4
+##   gender     n n_surv pct_surv
+##   &amp;lt;fct&amp;gt;  &amp;lt;int&amp;gt;  &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1 female   314    233    0.742
+## 2 male     577    109    0.189
+
+dataset %&amp;gt;%
+  group_by(title) %&amp;gt;%
+  summarize(n = n(),
+            n_surv = sum(survived == &amp;quot;yes&amp;quot;),
+            pct_surv = n_surv / n) %&amp;gt;%
+  arrange(desc(pct_surv))
+
+## # A tibble: 5 × 4
+##   title       n n_surv pct_surv
+##   &amp;lt;fct&amp;gt;   &amp;lt;int&amp;gt;  &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1 Mrs.      125     99    0.792
+## 2 Miss.     182    127    0.698
+## 3 Master.    40     23    0.575
+## 4 Other      27     12    0.444
+## 5 Mr.       517     81    0.157
+
+dataset %&amp;gt;%
+  group_by(class, gender) %&amp;gt;%
+  summarize(n = n(),
+            n_surv = sum(survived == &amp;quot;yes&amp;quot;),
+            pct_surv = n_surv / n) %&amp;gt;%
+  arrange(desc(pct_surv))
+
+## # A tibble: 6 × 5
+## # Groups:   class [3]
+##   class  gender     n n_surv pct_surv
+##   &amp;lt;fct&amp;gt;  &amp;lt;fct&amp;gt;  &amp;lt;int&amp;gt;  &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1 first  female    94     91    0.968
+## 2 second female    76     70    0.921
+## 3 third  female   144     72    0.5  
+## 4 first  male     122     45    0.369
+## 5 second male     108     17    0.157
+## 6 third  male     347     47    0.135
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Some informative graphs.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dataset %&amp;gt;%
+  group_by(class, gender) %&amp;gt;%
+  summarize(n = n(),
+            n_surv = sum(survived == &amp;quot;yes&amp;quot;),
+            pct_surv = n_surv / n) %&amp;gt;%
+    mutate(class = fct_reorder(class, pct_surv)) %&amp;gt;%
+    ggplot(aes(pct_surv, class, fill = class, color = class)) +
+    geom_col(position = position_dodge()) +
+    scale_x_continuous(labels = percent) +
+    labs(x = &amp;quot;% in category that survived&amp;quot;, fill = NULL, color = NULL, y = NULL) +
+  facet_wrap(~gender)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-7-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dataset %&amp;gt;%
+  mutate(age = cut(age, breaks = c(0, 20, 40, 60, 80))) %&amp;gt;%
+  group_by(age, gender) %&amp;gt;%
+  summarize(n = n(),
+            n_surv = sum(survived == &amp;quot;yes&amp;quot;),
+            pct_surv = n_surv / n) %&amp;gt;%
+    mutate(age = fct_reorder(age, pct_surv)) %&amp;gt;%
+    ggplot(aes(pct_surv, age, fill = age, color = age)) +
+    geom_col(position = position_dodge()) +
+    scale_x_continuous(labels = percent) +
+    labs(x = &amp;quot;% in category that survived&amp;quot;, fill = NULL, color = NULL, y = NULL) +
+  facet_wrap(~gender)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-7-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dataset %&amp;gt;%
+    ggplot(aes(fareadjusted, group = survived, color = survived, fill = survived)) +
+    geom_histogram(alpha = .4, position = position_dodge()) +
+    labs(x = &amp;quot;fare&amp;quot;, y = NULL, color = &amp;quot;survived?&amp;quot;, fill = &amp;quot;survived?&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-7-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dataset %&amp;gt;%
+    ggplot(aes(familyage, group = survived, color = survived, fill = survived)) +
+    geom_histogram(alpha = .4, position = position_dodge()) +
+    labs(x = &amp;quot;family aged&amp;quot;, y = NULL, color = &amp;quot;survived?&amp;quot;, fill = &amp;quot;survived?&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-7-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;trainingtesting-datasets&#34;&gt;Training/testing datasets&lt;/h1&gt;
+&lt;p&gt;Split our dataset in two, one dataset for training and the other one for
+testing. We will use an additionnal splitting step for cross-validation.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set.seed(2021)
+spl &amp;lt;- initial_split(dataset, strata = &amp;quot;survived&amp;quot;)
+train &amp;lt;- training(spl)
+test &amp;lt;- testing(spl)
+
+train_5fold &amp;lt;- train %&amp;gt;%
+  vfold_cv(5)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;gradient-boosting-algorithms---xgboost&#34;&gt;Gradient boosting algorithms - xgboost&lt;/h1&gt;
+&lt;p&gt;Let’s start with 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/XGBoost&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gradient boosting
+methods&lt;/a&gt; which are very popular
+in the ML community.&lt;/p&gt;
+&lt;h2 id=&#34;tuning&#34;&gt;Tuning&lt;/h2&gt;
+&lt;p&gt;Set up defaults.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mset &amp;lt;- metric_set(accuracy) # metric is accuracy
+control &amp;lt;- control_grid(save_workflow = TRUE,
+                        save_pred = TRUE,
+                        extract = extract_model) # grid for tuning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First a recipe.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xg_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then specify a gradient boosting model.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xg_model &amp;lt;- boost_tree(mode = &amp;quot;classification&amp;quot;, # binary response
+                       trees = tune(),
+                       mtry = tune(),
+                       tree_depth = tune(),
+                       learn_rate = tune(),
+                       loss_reduction = tune(),
+                       min_n = tune()) # parameters to be tuned
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now set our workflow.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xg_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(xg_model) %&amp;gt;% 
+  add_recipe(xg_rec)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use cross-validation to evaluate our model with different param config.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xg_tune &amp;lt;- xg_wf %&amp;gt;%
+  tune_grid(train_5fold,
+            metrics = mset,
+            control = control,
+            grid = crossing(trees = 1000,
+                            mtry = c(3, 5, 8), # finalize(mtry(), train)
+                            tree_depth = c(5, 10, 15),
+                            learn_rate = c(0.01, 0.005),
+                            loss_reduction = c(0.01, 0.1, 1),
+                            min_n = c(2, 10, 25)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualize the results.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(xg_tune) + theme_light()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-14-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Collect metrics.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xg_tune %&amp;gt;%
+  collect_metrics() %&amp;gt;%
+  arrange(desc(mean))
+
+## # A tibble: 162 × 12
+##     mtry trees min_n tree_depth learn_rate loss_reduction .metric  .estimator  mean     n
+##    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt;
+##  1     3  1000     2          5       0.01           0.01 accuracy binary     0.849     5
+##  2     8  1000     2          5       0.01           0.01 accuracy binary     0.847     5
+##  3     8  1000     2          5       0.01           0.1  accuracy binary     0.846     5
+##  4     3  1000     2         15       0.01           0.1  accuracy binary     0.844     5
+##  5     5  1000     2         10       0.01           1    accuracy binary     0.844     5
+##  6     3  1000     2          5       0.01           0.1  accuracy binary     0.844     5
+##  7     5  1000     2         10       0.01           0.1  accuracy binary     0.843     5
+##  8     3  1000     2         10       0.01           0.1  accuracy binary     0.843     5
+##  9     5  1000     2          5       0.01           0.01 accuracy binary     0.843     5
+## 10     5  1000     2          5       0.01           0.1  accuracy binary     0.843     5
+## # … with 152 more rows, and 2 more variables: std_err &amp;lt;dbl&amp;gt;, .config &amp;lt;chr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The tuning takes some time. There are other ways to explore the
+parameter space more efficiently. For example, we will use the function
+
+&lt;a href=&#34;https://dials.tidymodels.org/reference/grid_max_entropy.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;dials::grid_max_entropy()&lt;/code&gt;&lt;/a&gt;
+in the last section about ensemble modelling. Here, I will use
+
+&lt;a href=&#34;https://search.r-project.org/CRAN/refmans/finetune/html/tune_race_anova.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;finetune::tune_race_anova&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(finetune)
+xg_tune &amp;lt;-
+  xg_wf %&amp;gt;%
+  tune_race_anova(
+    train_5fold,
+    grid = 50,
+    param_info = xg_model %&amp;gt;% parameters(),
+    metrics = metric_set(accuracy),
+    control = control_race(verbose_elim = TRUE))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualize the results.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(xg_tune)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-17-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Collect metrics.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xg_tune %&amp;gt;%
+  collect_metrics() %&amp;gt;%
+  arrange(desc(mean))
+
+## # A tibble: 50 × 12
+##     mtry trees min_n tree_depth learn_rate loss_reduction .metric  .estimator  mean     n
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;      &amp;lt;int&amp;gt;      &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt;
+##  1     6   856     4         13   1.12e- 2       2.49e- 8 accuracy binary     0.837     5
+##  2    10  1952     6          7   3.36e- 2       2.07e+ 0 accuracy binary     0.829     5
+##  3     3   896     2          5   1.73e- 5       6.97e- 8 accuracy binary     0.826     5
+##  4    14  1122     4          6   1.16e- 6       3.44e+ 0 accuracy binary     0.815     4
+##  5     7   939     8          4   2.88e- 5       1.50e- 4 accuracy binary     0.813     4
+##  6     7    17    10          7   4.54e- 6       6.38e- 3 accuracy binary     0.813     4
+##  7     8    92     9         11   3.60e- 3       3.01e-10 accuracy binary     0.811     4
+##  8    13  1407    15          4   1.48e- 2       9.68e- 4 accuracy binary     0.807     3
+##  9     4   658    11          9   9.97e-10       1.27e- 5 accuracy binary     0.805     3
+## 10     2   628    14          9   1.84e- 6       9.44e- 5 accuracy binary     0.798     3
+## # … with 40 more rows, and 2 more variables: std_err &amp;lt;dbl&amp;gt;, .config &amp;lt;chr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;fit-model&#34;&gt;Fit model&lt;/h2&gt;
+&lt;p&gt;Use best config to fit model to training data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xg_fit &amp;lt;- xg_wf %&amp;gt;%
+  finalize_workflow(select_best(xg_tune)) %&amp;gt;%
+  fit(train)
+
+## [23:39:25] WARNING: amalgamation/../src/learner.cc:1095: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective &#39;binary:logistic&#39; was changed from &#39;error&#39; to &#39;logloss&#39;. Explicitly set eval_metric if you&#39;d like to restore the old behavior.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out accuracy on testing dataset to see if we overfitted.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xg_fit %&amp;gt;%
+  augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+  accuracy(survived, .pred_class)
+
+## # A tibble: 1 × 3
+##   .metric  .estimator .estimate
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 accuracy binary         0.812
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out important features (aka predictors).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;importances &amp;lt;- xgboost::xgb.importance(model = extract_fit_engine(xg_fit))
+importances %&amp;gt;%
+  mutate(Feature = fct_reorder(Feature, Gain)) %&amp;gt;%
+  ggplot(aes(Gain, Feature)) +
+  geom_col()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-21-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;make-predictions&#34;&gt;Make predictions&lt;/h2&gt;
+&lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
+to Kaggle. Note that I use the whole dataset, not just the training
+dataset.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xg_wf %&amp;gt;%
+  finalize_workflow(select_best(xg_tune)) %&amp;gt;%
+  fit(dataset) %&amp;gt;%
+  augment(holdout) %&amp;gt;%
+  select(PassengerId, Survived = .pred_class) %&amp;gt;%
+  mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  write_csv(&amp;quot;output/titanic/xgboost.csv&amp;quot;)
+
+## [23:39:28] WARNING: amalgamation/../src/learner.cc:1095: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective &#39;binary:logistic&#39; was changed from &#39;error&#39; to &#39;logloss&#39;. Explicitly set eval_metric if you&#39;d like to restore the old behavior.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I got and accuracy of 0.74162. Cool. Let’s train a random forest model
+now.&lt;/p&gt;
+&lt;h1 id=&#34;random-forests&#34;&gt;Random forests&lt;/h1&gt;
+&lt;p&gt;Let’s continue with 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Random_forest&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;random forest
+methods&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;tuning-1&#34;&gt;Tuning&lt;/h2&gt;
+&lt;p&gt;First a recipe.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rf_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then specify a random forest model.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rf_model &amp;lt;- rand_forest(mode = &amp;quot;classification&amp;quot;, # binary response
+                        engine = &amp;quot;ranger&amp;quot;, # by default
+                        mtry = tune(),
+                        trees = tune(),
+                        min_n = tune()) # parameters to be tuned
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now set our workflow.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rf_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(rf_model) %&amp;gt;% 
+  add_recipe(rf_rec)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use cross-validation to evaluate our model with different param config.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rf_tune &amp;lt;-
+  rf_wf %&amp;gt;%
+  tune_race_anova(
+    train_5fold,
+    grid = 50,
+    param_info = rf_model %&amp;gt;% parameters(),
+    metrics = metric_set(accuracy),
+    control = control_race(verbose_elim = TRUE))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualize the results.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(rf_tune)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-27-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Collect metrics.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rf_tune %&amp;gt;%
+  collect_metrics() %&amp;gt;%
+  arrange(desc(mean))
+
+## # A tibble: 50 × 9
+##     mtry trees min_n .metric  .estimator  mean     n std_err .config              
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;                
+##  1    14  1554     5 accuracy binary     0.837     5 0.00656 Preprocessor1_Model49
+##  2     4   774    18 accuracy binary     0.837     5 0.0133  Preprocessor1_Model50
+##  3     5  1736     8 accuracy binary     0.834     5 0.0111  Preprocessor1_Model46
+##  4     8  1322     5 accuracy binary     0.832     5 0.00713 Preprocessor1_Model41
+##  5     2  1078    30 accuracy binary     0.831     5 0.00727 Preprocessor1_Model12
+##  6     4  1892    14 accuracy binary     0.831     5 0.00886 Preprocessor1_Model39
+##  7     8   962     7 accuracy binary     0.829     5 0.00742 Preprocessor1_Model43
+##  8     7   946     4 accuracy binary     0.826     5 0.00452 Preprocessor1_Model23
+##  9     7  1262     3 accuracy binary     0.826     5 0.00710 Preprocessor1_Model47
+## 10     9   544     9 accuracy binary     0.825     5 0.00673 Preprocessor1_Model11
+## # … with 40 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;fit-model-1&#34;&gt;Fit model&lt;/h2&gt;
+&lt;p&gt;Use best config to fit model to training data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rf_fit &amp;lt;- rf_wf %&amp;gt;%
+  finalize_workflow(select_best(rf_tune)) %&amp;gt;%
+  fit(train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out accuracy on testing dataset to see if we overfitted.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rf_fit %&amp;gt;%
+  augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+  accuracy(survived, .pred_class)
+
+## # A tibble: 1 × 3
+##   .metric  .estimator .estimate
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 accuracy binary         0.786
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out important features (aka predictors).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(vip)
+finalize_model(
+  x = rf_model,
+  parameters = select_best(rf_tune)) %&amp;gt;%
+  set_engine(&amp;quot;ranger&amp;quot;, importance = &amp;quot;permutation&amp;quot;) %&amp;gt;%
+  fit(survived ~ ., data = juice(prep(rf_rec))) %&amp;gt;%
+  vip(geom = &amp;quot;point&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-31-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;make-predictions-1&#34;&gt;Make predictions&lt;/h2&gt;
+&lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
+to Kaggle.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rf_wf %&amp;gt;%
+  finalize_workflow(select_best(rf_tune)) %&amp;gt;%
+  fit(dataset) %&amp;gt;%
+  augment(holdout) %&amp;gt;%
+  select(PassengerId, Survived = .pred_class) %&amp;gt;%
+  mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  write_csv(&amp;quot;output/titanic/randomforest.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I got and accuracy of 0.77990, a bit better than gradient boosting.&lt;/p&gt;
+&lt;p&gt;Let’s continue with 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Catboost&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cat boosting
+methods&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;gradient-boosting-algorithms---catboost&#34;&gt;Gradient boosting algorithms - catboost&lt;/h1&gt;
+&lt;h2 id=&#34;tuning-2&#34;&gt;Tuning&lt;/h2&gt;
+&lt;p&gt;Set up defaults.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mset &amp;lt;- metric_set(accuracy) # metric is accuracy
+control &amp;lt;- control_grid(save_workflow = TRUE,
+                        save_pred = TRUE,
+                        extract = extract_model) # grid for tuning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First a recipe.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cb_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then specify a cat boosting model.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(treesnip)
+cb_model &amp;lt;- boost_tree(mode = &amp;quot;classification&amp;quot;,
+                       engine = &amp;quot;catboost&amp;quot;,
+                       mtry = tune(),
+                       trees = tune(),
+                       min_n = tune(),
+                       tree_depth = tune(),
+                       learn_rate = tune()) # parameters to be tuned
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now set our workflow.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cb_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(cb_model) %&amp;gt;% 
+  add_recipe(cb_rec)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use cross-validation to evaluate our model with different param config.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cb_tune &amp;lt;- cb_wf %&amp;gt;%
+  tune_race_anova(
+    train_5fold,
+    grid = 30,
+    param_info = cb_model %&amp;gt;% parameters(),
+    metrics = metric_set(accuracy),
+    control = control_race(verbose_elim = TRUE))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualize the results.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(cb_tune)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-38-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Collect metrics.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cb_tune %&amp;gt;%
+  collect_metrics() %&amp;gt;%
+  arrange(desc(mean))
+
+## # A tibble: 30 × 11
+##     mtry trees min_n tree_depth learn_rate .metric  .estimator  mean     n std_err .config 
+##    &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt;      &amp;lt;int&amp;gt;      &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;   
+##  1     1  1787    25          7   6.84e- 3 accuracy binary     0.835     5 0.0125  Preproc…
+##  2    12  1885    18         15   2.06e- 3 accuracy binary     0.831     5 0.00602 Preproc…
+##  3    13  1278     5          6   2.10e- 2 accuracy binary     0.826     5 0.00431 Preproc…
+##  4     3  1681    22          5   5.42e- 3 accuracy binary     0.825     5 0.00507 Preproc…
+##  5     9   303     2          8   9.94e- 2 accuracy binary     0.820     4 0.0120  Preproc…
+##  6    11  1201    24         12   3.77e- 2 accuracy binary     0.812     3 0.00868 Preproc…
+##  7    11   634    35         11   1.30e- 3 accuracy binary     0.805     3 0.0242  Preproc…
+##  8     7  1648     4          7   2.38e- 4 accuracy binary     0.737     3 0.0115  Preproc…
+##  9     1  1427    27         10   1.74e- 6 accuracy binary     0.378     3 0.0152  Preproc…
+## 10     2   940    19          3   3.20e-10 accuracy binary     0.378     3 0.0152  Preproc…
+## # … with 20 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;fit-model-2&#34;&gt;Fit model&lt;/h2&gt;
+&lt;p&gt;Use best config to fit model to training data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cb_fit &amp;lt;- cb_wf %&amp;gt;%
+  finalize_workflow(select_best(cb_tune)) %&amp;gt;%
+  fit(train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out accuracy on testing dataset to see if we overfitted.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cb_fit %&amp;gt;%
+  augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+  accuracy(survived, .pred_class)
+
+## # A tibble: 1 × 3
+##   .metric  .estimator .estimate
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 accuracy binary         0.808
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;make-predictions-2&#34;&gt;Make predictions&lt;/h2&gt;
+&lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
+to Kaggle.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cb_wf %&amp;gt;%
+  finalize_workflow(select_best(cb_tune)) %&amp;gt;%
+  fit(dataset) %&amp;gt;%
+  augment(holdout) %&amp;gt;%
+  select(PassengerId, Survived = .pred_class) %&amp;gt;%
+  mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  write_csv(&amp;quot;output/titanic/catboost.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I got and accuracy of 0.76076. Cool.&lt;/p&gt;
+&lt;h1 id=&#34;regularization-methods&#34;&gt;Regularization methods&lt;/h1&gt;
+&lt;p&gt;Let’s continue with 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Elastic_net_regularization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;elastic net
+regularization&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;tuning-3&#34;&gt;Tuning&lt;/h2&gt;
+&lt;p&gt;First a recipe.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;en_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  step_normalize(all_numeric_predictors()) %&amp;gt;% # normalize
+  step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then specify a regularization model. We tune parameter mixture, with
+ridge regression for mixture = 0, and lasso for mixture = 1.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;en_model &amp;lt;- logistic_reg(penalty = tune(), 
+                         mixture = tune()) %&amp;gt;% # param to be tuned
+  set_engine(&amp;quot;glmnet&amp;quot;) %&amp;gt;% # elastic net
+  set_mode(&amp;quot;classification&amp;quot;) # binary response
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now set our workflow.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;en_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(en_model) %&amp;gt;% 
+  add_recipe(en_rec)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use cross-validation to evaluate our model with different param config.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;en_tune &amp;lt;- en_wf %&amp;gt;%
+  tune_grid(train_5fold,
+            metrics = mset,
+            control = control,
+            grid = crossing(penalty = 10 ^ seq(-8, -.5, .5),
+                            mixture = seq(0, 1, length.out = 10)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualize the results.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(en_tune)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-47-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Collect metrics.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;en_tune %&amp;gt;%
+  collect_metrics() %&amp;gt;%
+  arrange(desc(mean))
+
+## # A tibble: 160 × 8
+##         penalty mixture .metric  .estimator  mean     n std_err .config               
+##           &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;                 
+##  1 0.00000001     0.111 accuracy binary     0.831     5  0.0112 Preprocessor1_Model017
+##  2 0.0000000316   0.111 accuracy binary     0.831     5  0.0112 Preprocessor1_Model018
+##  3 0.0000001      0.111 accuracy binary     0.831     5  0.0112 Preprocessor1_Model019
+##  4 0.000000316    0.111 accuracy binary     0.831     5  0.0112 Preprocessor1_Model020
+##  5 0.000001       0.111 accuracy binary     0.831     5  0.0112 Preprocessor1_Model021
+##  6 0.00000316     0.111 accuracy binary     0.831     5  0.0112 Preprocessor1_Model022
+##  7 0.00001        0.111 accuracy binary     0.831     5  0.0112 Preprocessor1_Model023
+##  8 0.0000316      0.111 accuracy binary     0.831     5  0.0112 Preprocessor1_Model024
+##  9 0.0001         0.111 accuracy binary     0.831     5  0.0112 Preprocessor1_Model025
+## 10 0.000316       0.111 accuracy binary     0.831     5  0.0112 Preprocessor1_Model026
+## # … with 150 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;fit-model-3&#34;&gt;Fit model&lt;/h2&gt;
+&lt;p&gt;Use best config to fit model to training data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;en_fit &amp;lt;- en_wf %&amp;gt;%
+  finalize_workflow(select_best(en_tune)) %&amp;gt;%
+  fit(train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out accuracy on testing dataset to see if we overfitted.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;en_fit %&amp;gt;%
+  augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+  accuracy(survived, .pred_class)
+
+## # A tibble: 1 × 3
+##   .metric  .estimator .estimate
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 accuracy binary         0.826
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out important features (aka predictors).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(broom)
+en_fit$fit$fit$fit %&amp;gt;%
+  tidy() %&amp;gt;%
+  filter(lambda &amp;gt;= select_best(en_tune)$penalty) %&amp;gt;%
+  filter(lambda == min(lambda),
+         term != &amp;quot;(Intercept)&amp;quot;) %&amp;gt;%
+  mutate(term = fct_reorder(term, estimate)) %&amp;gt;%
+  ggplot(aes(estimate, term, fill = estimate &amp;gt; 0)) +
+  geom_col() +
+  theme(legend.position = &amp;quot;none&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-51-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;make-predictions-3&#34;&gt;Make predictions&lt;/h2&gt;
+&lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
+to Kaggle.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;en_wf %&amp;gt;%
+  finalize_workflow(select_best(en_tune)) %&amp;gt;%
+  fit(dataset) %&amp;gt;%
+  augment(holdout) %&amp;gt;%
+  select(PassengerId, Survived = .pred_class) %&amp;gt;%
+  mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  write_csv(&amp;quot;output/titanic/regularization.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I got and accuracy of 0.76315.&lt;/p&gt;
+&lt;h1 id=&#34;logistic-regression&#34;&gt;Logistic regression&lt;/h1&gt;
+&lt;p&gt;And what about a good old-fashioned logistic regression (not a ML algo)?&lt;/p&gt;
+&lt;p&gt;First a recipe.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;logistic_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  step_normalize(all_numeric_predictors()) %&amp;gt;% # normalize
+  step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then specify a logistic regression.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;logistic_model &amp;lt;- logistic_reg() %&amp;gt;% # no param to be tuned
+  set_engine(&amp;quot;glm&amp;quot;) %&amp;gt;% # elastic net
+  set_mode(&amp;quot;classification&amp;quot;) # binary response
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now set our workflow.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;logistic_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(logistic_model) %&amp;gt;% 
+  add_recipe(logistic_rec)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Fit model.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;logistic_fit &amp;lt;- logistic_wf %&amp;gt;%
+  fit(train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Inspect significant features (aka predictors).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tidy(logistic_fit, exponentiate = TRUE) %&amp;gt;%
+  filter(p.value &amp;lt; 0.05)
+
+## # A tibble: 6 × 5
+##   term         estimate std.error statistic       p.value
+##   &amp;lt;chr&amp;gt;           &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;         &amp;lt;dbl&amp;gt;
+## 1 age             1.35      0.152      1.98 0.0473       
+## 2 familyage       2.97      0.223      4.88 0.00000105   
+## 3 class_first     0.136     0.367     -5.43 0.0000000559 
+## 4 class_second    0.386     0.298     -3.19 0.00145      
+## 5 title_Mr.      51.0       0.684      5.75 0.00000000912
+## 6 title_Other    54.7       0.991      4.04 0.0000538
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Same thing, but graphically.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(broom)
+logistic_fit %&amp;gt;%
+  tidy() %&amp;gt;%
+  mutate(term = fct_reorder(term, estimate)) %&amp;gt;%
+  ggplot(aes(estimate, term, fill = estimate &amp;gt; 0)) +
+  geom_col() +
+  theme(legend.position = &amp;quot;none&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-58-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Check out accuracy on testing dataset to see if we overfitted.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;logistic_fit %&amp;gt;%
+  augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+  accuracy(survived, .pred_class)
+
+## # A tibble: 1 × 3
+##   .metric  .estimator .estimate
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 accuracy binary         0.821
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Confusion matrix.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;logistic_fit %&amp;gt;%
+  augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+  conf_mat(survived, .pred_class)
+
+##           Truth
+## Prediction yes  no
+##        yes  59  13
+##        no   27 125
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ROC curve.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;logistic_fit %&amp;gt;%
+  augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+  roc_curve(truth = survived, estimate = .pred_yes) %&amp;gt;%
+  autoplot()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-61-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
+to Kaggle.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;logistic_wf %&amp;gt;%
+  fit(dataset) %&amp;gt;%
+  augment(holdout) %&amp;gt;%
+  select(PassengerId, Survived = .pred_class) %&amp;gt;%
+  mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  write_csv(&amp;quot;output/titanic/logistic.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I got and accuracy of 0.76076. Oldies but goodies!&lt;/p&gt;
+&lt;h1 id=&#34;neural-networks&#34;&gt;Neural networks&lt;/h1&gt;
+&lt;p&gt;We go on with 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Artificial_neural_network&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;neural
+networks&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;tuning-4&#34;&gt;Tuning&lt;/h2&gt;
+&lt;p&gt;Set up defaults.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mset &amp;lt;- metric_set(accuracy) # metric is accuracy
+control &amp;lt;- control_grid(save_workflow = TRUE,
+                        save_pred = TRUE,
+                        extract = extract_model) # grid for tuning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First a recipe.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nn_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  step_normalize(all_numeric_predictors()) %&amp;gt;%
+  step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then specify a neural network.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nn_model &amp;lt;- mlp(epochs = tune(), 
+                hidden_units = tune(), 
+                dropout = tune()) %&amp;gt;% # param to be tuned
+  set_mode(&amp;quot;classification&amp;quot;) %&amp;gt;% # binary response var
+  set_engine(&amp;quot;keras&amp;quot;, verbose = 0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now set our workflow.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nn_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(nn_model) %&amp;gt;% 
+  add_recipe(nn_rec)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use cross-validation to evaluate our model with different param config.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nn_tune &amp;lt;- nn_wf %&amp;gt;%
+  tune_race_anova(
+    train_5fold,
+    grid = 30,
+    param_info = nn_model %&amp;gt;% parameters(),
+    metrics = metric_set(accuracy),
+    control = control_race(verbose_elim = TRUE))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualize the results.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(nn_tune)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-68-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Collect metrics.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nn_tune %&amp;gt;%
+  collect_metrics() %&amp;gt;%
+  arrange(desc(mean))
+
+## # A tibble: 30 × 9
+##    hidden_units dropout epochs .metric  .estimator  mean     n std_err .config             
+##           &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;               
+##  1           10 0.484      405 accuracy binary     0.838     5 0.0150  Preprocessor1_Model…
+##  2            7 0.0597     220 accuracy binary     0.834     5 0.00881 Preprocessor1_Model…
+##  3            4 0.536      629 accuracy binary     0.834     5 0.0154  Preprocessor1_Model…
+##  4            9 0.198      768 accuracy binary     0.832     5 0.0146  Preprocessor1_Model…
+##  5            6 0.752      822 accuracy binary     0.832     5 0.0112  Preprocessor1_Model…
+##  6            9 0.406      293 accuracy binary     0.831     5 0.0145  Preprocessor1_Model…
+##  7            4 0.00445    871 accuracy binary     0.831     5 0.0150  Preprocessor1_Model…
+##  8            4 0.293      353 accuracy binary     0.831     5 0.0117  Preprocessor1_Model…
+##  9           10 0.675      935 accuracy binary     0.831     5 0.0141  Preprocessor1_Model…
+## 10            7 0.128      580 accuracy binary     0.831     5 0.0151  Preprocessor1_Model…
+## # … with 20 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;fit-model-4&#34;&gt;Fit model&lt;/h2&gt;
+&lt;p&gt;Use best config to fit model to training data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nn_fit &amp;lt;- nn_wf %&amp;gt;%
+  finalize_workflow(select_best(nn_tune)) %&amp;gt;%
+  fit(train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out accuracy on testing dataset to see if we overfitted.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nn_fit %&amp;gt;%
+  augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+  accuracy(survived, .pred_class)
+
+## # A tibble: 1 × 3
+##   .metric  .estimator .estimate
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 accuracy binary         0.817
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;make-predictions-4&#34;&gt;Make predictions&lt;/h2&gt;
+&lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
+to Kaggle.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nn_wf %&amp;gt;%
+  finalize_workflow(select_best(nn_tune)) %&amp;gt;%
+  fit(train) %&amp;gt;%
+  augment(holdout) %&amp;gt;%
+  select(PassengerId, Survived = .pred_class) %&amp;gt;%
+  mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  write_csv(&amp;quot;output/titanic/nn.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I got and accuracy of 0.78708. My best score so far.&lt;/p&gt;
+&lt;h1 id=&#34;support-vector-machines&#34;&gt;Support vector machines&lt;/h1&gt;
+&lt;p&gt;We go on with 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Support-vector_machine&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;support vector
+machines&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;tuning-5&#34;&gt;Tuning&lt;/h2&gt;
+&lt;p&gt;Set up defaults.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mset &amp;lt;- metric_set(accuracy) # metric is accuracy
+control &amp;lt;- control_grid(save_workflow = TRUE,
+                        save_pred = TRUE,
+                        extract = extract_model) # grid for tuning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First a recipe.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;svm_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  # remove any zero variance predictors
+  step_zv(all_predictors()) %&amp;gt;% 
+  # remove any linear combinations
+  step_lincomb(all_numeric()) %&amp;gt;%
+  step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then specify a svm.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;svm_model &amp;lt;- svm_rbf(cost = tune(), 
+                     rbf_sigma = tune()) %&amp;gt;% # param to be tuned
+  set_mode(&amp;quot;classification&amp;quot;) %&amp;gt;% # binary response var
+  set_engine(&amp;quot;kernlab&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now set our workflow.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;svm_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(svm_model) %&amp;gt;% 
+  add_recipe(svm_rec)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use cross-validation to evaluate our model with different param config.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;svm_tune &amp;lt;- svm_wf %&amp;gt;%
+  tune_race_anova(
+    train_5fold,
+    grid = 30,
+    param_info = svm_model %&amp;gt;% parameters(),
+    metrics = metric_set(accuracy),
+    control = control_race(verbose_elim = TRUE))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualize the results.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(svm_tune)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-78-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Collect metrics.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;svm_tune %&amp;gt;%
+  collect_metrics() %&amp;gt;%
+  arrange(desc(mean))
+
+## # A tibble: 30 × 8
+##        cost    rbf_sigma .metric  .estimator  mean     n std_err .config              
+##       &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;                
+##  1 17.7     0.00183      accuracy binary     0.829     5 0.0101  Preprocessor1_Model05
+##  2  0.741   0.0506       accuracy binary     0.823     5 0.0129  Preprocessor1_Model14
+##  3  1.77    0.0429       accuracy binary     0.820     5 0.0143  Preprocessor1_Model08
+##  4  0.229   0.0197       accuracy binary     0.808     3 0.00626 Preprocessor1_Model23
+##  5  1.15    0.00285      accuracy binary     0.795     3 0.00867 Preprocessor1_Model28
+##  6  0.00182 0.00000203   accuracy binary     0.613     3 0.0171  Preprocessor1_Model01
+##  7  0.0477  0.714        accuracy binary     0.613     3 0.0171  Preprocessor1_Model02
+##  8  6.60    0.0000294    accuracy binary     0.613     3 0.0171  Preprocessor1_Model03
+##  9  0.00254 0.000636     accuracy binary     0.613     3 0.0171  Preprocessor1_Model04
+## 10  0.00544 0.0000000647 accuracy binary     0.613     3 0.0171  Preprocessor1_Model06
+## # … with 20 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;fit-model-5&#34;&gt;Fit model&lt;/h2&gt;
+&lt;p&gt;Use best config to fit model to training data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;svm_fit &amp;lt;- svm_wf %&amp;gt;%
+  finalize_workflow(select_best(svm_tune)) %&amp;gt;%
+  fit(train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out accuracy on testing dataset to see if we overfitted.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;svm_fit %&amp;gt;%
+  augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+  accuracy(survived, .pred_class)
+
+## # A tibble: 1 × 3
+##   .metric  .estimator .estimate
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 accuracy binary         0.826
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;make-predictions-5&#34;&gt;Make predictions&lt;/h2&gt;
+&lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
+to Kaggle.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;svm_wf %&amp;gt;%
+  finalize_workflow(select_best(svm_tune)) %&amp;gt;%
+  fit(dataset) %&amp;gt;%
+  augment(holdout) %&amp;gt;%
+  select(PassengerId, Survived = .pred_class) %&amp;gt;%
+  mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  write_csv(&amp;quot;output/titanic/svm.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I got and accuracy of 0.77511.&lt;/p&gt;
+&lt;h1 id=&#34;decision-trees&#34;&gt;Decision trees&lt;/h1&gt;
+&lt;p&gt;We go on with 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Decision_tree&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;decision
+trees&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;tuning-6&#34;&gt;Tuning&lt;/h2&gt;
+&lt;p&gt;Set up defaults.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mset &amp;lt;- metric_set(accuracy) # metric is accuracy
+control &amp;lt;- control_grid(save_workflow = TRUE,
+                        save_pred = TRUE,
+                        extract = extract_model) # grid for tuning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First a recipe.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dt_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  step_zv(all_predictors()) %&amp;gt;% 
+  step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then specify a decision tree model.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(baguette)
+dt_model &amp;lt;- bag_tree(cost_complexity = tune(),
+                     tree_depth = tune(),
+                     min_n = tune()) %&amp;gt;% # param to be tuned
+  set_engine(&amp;quot;rpart&amp;quot;, times = 25) %&amp;gt;% # nb bootstraps
+  set_mode(&amp;quot;classification&amp;quot;) # binary response var
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now set our workflow.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dt_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(dt_model) %&amp;gt;% 
+  add_recipe(dt_rec)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use cross-validation to evaluate our model with different param config.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dt_tune &amp;lt;- dt_wf %&amp;gt;%
+  tune_race_anova(
+    train_5fold,
+    grid = 30,
+    param_info = dt_model %&amp;gt;% parameters(),
+    metrics = metric_set(accuracy),
+    control = control_race(verbose_elim = TRUE))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualize the results.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(dt_tune)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-88-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Collect metrics.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dt_tune %&amp;gt;%
+  collect_metrics() %&amp;gt;%
+  arrange(desc(mean))
+
+## # A tibble: 30 × 9
+##    cost_complexity tree_depth min_n .metric  .estimator  mean     n std_err .config        
+##              &amp;lt;dbl&amp;gt;      &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt;   &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;          
+##  1        3.02e- 7         13     7 accuracy binary     0.832     5 0.0130  Preprocessor1_…
+##  2        3.43e- 3         14     4 accuracy binary     0.829     5 0.0145  Preprocessor1_…
+##  3        5.75e- 5          5     7 accuracy binary     0.828     5 0.0126  Preprocessor1_…
+##  4        2.13e- 6         14     5 accuracy binary     0.828     5 0.0108  Preprocessor1_…
+##  5        1.34e- 5          5    35 accuracy binary     0.823     5 0.00654 Preprocessor1_…
+##  6        4.47e- 5         13    10 accuracy binary     0.823     5 0.0120  Preprocessor1_…
+##  7        1.42e- 2          4    25 accuracy binary     0.822     5 0.0121  Preprocessor1_…
+##  8        4.54e-10         10    36 accuracy binary     0.822     5 0.0147  Preprocessor1_…
+##  9        8.10e- 8         11    32 accuracy binary     0.822     5 0.0143  Preprocessor1_…
+## 10        3.43e- 4         11    21 accuracy binary     0.820     5 0.0207  Preprocessor1_…
+## # … with 20 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;fit-model-6&#34;&gt;Fit model&lt;/h2&gt;
+&lt;p&gt;Use best config to fit model to training data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dt_fit &amp;lt;- dt_wf %&amp;gt;%
+  finalize_workflow(select_best(dt_tune)) %&amp;gt;%
+  fit(train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check out accuracy on testing dataset to see if we overfitted.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dt_fit %&amp;gt;%
+  augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
+  accuracy(survived, .pred_class)
+
+## # A tibble: 1 × 3
+##   .metric  .estimator .estimate
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 accuracy binary         0.808
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;make-predictions-6&#34;&gt;Make predictions&lt;/h2&gt;
+&lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
+to Kaggle.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dt_wf %&amp;gt;%
+  finalize_workflow(select_best(dt_tune)) %&amp;gt;%
+  fit(dataset) %&amp;gt;%
+  augment(holdout) %&amp;gt;%
+  select(PassengerId, Survived = .pred_class) %&amp;gt;%
+  mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  write_csv(&amp;quot;output/titanic/dt.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I got and accuracy of 0.76794.&lt;/p&gt;
+&lt;h1 id=&#34;stacked-ensemble-modelling&#34;&gt;Stacked ensemble modelling&lt;/h1&gt;
+&lt;p&gt;Let’s do some ensemble modelling with all algo but logistic and
+catboost. Tune again with a probability-based metric. Start with
+xgboost.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(finetune)
+library(stacks)
+# xgboost
+xg_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  step_dummy(all_nominal_predictors()) # all factors var are split into binary terms (factor disj coding)
+xg_model &amp;lt;- boost_tree(mode = &amp;quot;classification&amp;quot;, # binary response
+                       trees = tune(),
+                       mtry = tune(),
+                       tree_depth = tune(),
+                       learn_rate = tune(),
+                       loss_reduction = tune(),
+                       min_n = tune()) # parameters to be tuned
+xg_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(xg_model) %&amp;gt;% 
+  add_recipe(xg_rec)
+xg_grid &amp;lt;- grid_latin_hypercube(
+  trees(),
+  finalize(mtry(), train),
+  tree_depth(),
+  learn_rate(),
+  loss_reduction(),
+  min_n(),
+  size = 30)
+xg_tune &amp;lt;- xg_wf %&amp;gt;%
+  tune_grid(
+    resamples = train_5fold,
+    grid = xg_grid,
+    metrics = metric_set(roc_auc),
+    control = control_stack_grid())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then random forests.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# random forest
+rf_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% 
+  step_dummy(all_nominal_predictors()) 
+rf_model &amp;lt;- rand_forest(mode = &amp;quot;classification&amp;quot;, # binary response
+                        engine = &amp;quot;ranger&amp;quot;, # by default
+                        mtry = tune(),
+                        trees = tune(),
+                        min_n = tune()) # parameters to be tuned
+rf_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(rf_model) %&amp;gt;% 
+  add_recipe(rf_rec)
+rf_grid &amp;lt;- grid_latin_hypercube(
+  finalize(mtry(), train),
+  trees(),
+  min_n(),
+  size = 30)
+rf_tune &amp;lt;- rf_wf %&amp;gt;%
+  tune_grid(
+    resamples = train_5fold,
+    grid = rf_grid,
+    metrics = metric_set(roc_auc),
+    control = control_stack_grid())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Regularisation methods (between ridge and lasso).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# regularization methods
+en_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  step_normalize(all_numeric_predictors()) %&amp;gt;% # normalize
+  step_dummy(all_nominal_predictors()) 
+en_model &amp;lt;- logistic_reg(penalty = tune(), 
+                         mixture = tune()) %&amp;gt;% # param to be tuned
+  set_engine(&amp;quot;glmnet&amp;quot;) %&amp;gt;% # elastic net
+  set_mode(&amp;quot;classification&amp;quot;) # binary response
+en_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(en_model) %&amp;gt;% 
+  add_recipe(en_rec)
+en_grid &amp;lt;- grid_latin_hypercube(
+  penalty(),
+  mixture(),
+  size = 30)
+en_tune &amp;lt;- en_wf %&amp;gt;%
+  tune_grid(
+    resamples = train_5fold,
+    grid = en_grid,
+    metrics = metric_set(roc_auc),
+    control = control_stack_grid())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Neural networks (takes time, so pick only a few values for illustration
+purpose).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# neural networks
+nn_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% # replace missing value by median
+  step_normalize(all_numeric_predictors()) %&amp;gt;%
+  step_dummy(all_nominal_predictors()) 
+nn_model &amp;lt;- mlp(epochs = tune(), 
+                hidden_units = 2, 
+                dropout = tune()) %&amp;gt;% # param to be tuned
+  set_mode(&amp;quot;classification&amp;quot;) %&amp;gt;% # binary response var
+  set_engine(&amp;quot;keras&amp;quot;, verbose = 0)
+nn_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(nn_model) %&amp;gt;% 
+  add_recipe(nn_rec)
+# nn_grid &amp;lt;- grid_latin_hypercube(
+#   epochs(),
+#   hidden_units(),
+#   dropout(),
+#   size = 10)
+nn_tune &amp;lt;- nn_wf %&amp;gt;%
+  tune_grid(
+    resamples = train_5fold,
+    grid = crossing(dropout = c(0.1, 0.2), epochs = c(250, 500, 1000)), # nn_grid
+    metrics = metric_set(roc_auc),
+    control = control_stack_grid())
+#autoplot(nn_tune)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Support vector machines.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# support vector machines
+svm_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% 
+  step_normalize(all_numeric_predictors()) %&amp;gt;%
+  step_dummy(all_nominal_predictors()) 
+svm_model &amp;lt;- svm_rbf(cost = tune(), 
+                     rbf_sigma = tune()) %&amp;gt;% # param to be tuned
+  set_mode(&amp;quot;classification&amp;quot;) %&amp;gt;% # binary response var
+  set_engine(&amp;quot;kernlab&amp;quot;)
+svm_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(svm_model) %&amp;gt;% 
+  add_recipe(svm_rec)
+svm_grid &amp;lt;- grid_latin_hypercube(
+  cost(),
+  rbf_sigma(),
+  size = 30)
+svm_tune &amp;lt;- svm_wf %&amp;gt;%
+  tune_grid(
+    resamples = train_5fold,
+    grid = svm_grid,
+    metrics = metric_set(roc_auc),
+    control = control_stack_grid())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Last, decision trees.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# decision trees
+dt_rec &amp;lt;- recipe(survived ~ ., data = train) %&amp;gt;%
+  step_impute_median(all_numeric()) %&amp;gt;% 
+  step_zv(all_predictors()) %&amp;gt;% 
+  step_dummy(all_nominal_predictors()) 
+library(baguette)
+dt_model &amp;lt;- bag_tree(cost_complexity = tune(),
+                     tree_depth = tune(),
+                     min_n = tune()) %&amp;gt;% # param to be tuned
+  set_engine(&amp;quot;rpart&amp;quot;, times = 25) %&amp;gt;% # nb bootstraps
+  set_mode(&amp;quot;classification&amp;quot;) # binary response var
+dt_wf &amp;lt;- 
+  workflow() %&amp;gt;% 
+  add_model(dt_model) %&amp;gt;% 
+  add_recipe(dt_rec)
+dt_grid &amp;lt;- grid_latin_hypercube(
+  cost_complexity(),
+  tree_depth(),
+  min_n(),
+  size = 30)
+dt_tune &amp;lt;- dt_wf %&amp;gt;%
+  tune_grid(
+    resamples = train_5fold,
+    grid = dt_grid,
+    metrics = metric_set(roc_auc),
+    control = control_stack_grid())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Get best config.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xg_best &amp;lt;- xg_tune %&amp;gt;% filter_parameters(parameters = select_best(xg_tune))
+rf_best &amp;lt;- rf_tune %&amp;gt;% filter_parameters(parameters = select_best(rf_tune))
+en_best &amp;lt;- en_tune %&amp;gt;% filter_parameters(parameters = select_best(en_tune))
+nn_best &amp;lt;- nn_tune %&amp;gt;% filter_parameters(parameters = select_best(nn_tune))
+svm_best &amp;lt;- svm_tune %&amp;gt;% filter_parameters(parameters = select_best(svm_tune))
+dt_best &amp;lt;- dt_tune %&amp;gt;% filter_parameters(parameters = select_best(dt_tune))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Do the stacked ensemble modelling.&lt;/p&gt;
+&lt;p&gt;Pile all models together.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;blended &amp;lt;- stacks() %&amp;gt;% # initialize
+  add_candidates(en_best) %&amp;gt;% # add regularization model
+  add_candidates(xg_best) %&amp;gt;% # add gradient boosting
+  add_candidates(rf_best) %&amp;gt;% # add random forest
+  add_candidates(nn_best) %&amp;gt;% # add neural network
+  add_candidates(svm_best) %&amp;gt;% # add svm
+  add_candidates(dt_best) # add decision trees
+blended
+
+## # A data stack with 6 model definitions and 6 candidate members:
+## #   en_best: 1 model configuration
+## #   xg_best: 1 model configuration
+## #   rf_best: 1 model configuration
+## #   nn_best: 1 model configuration
+## #   svm_best: 1 model configuration
+## #   dt_best: 1 model configuration
+## # Outcome: survived (factor)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Fit regularized model.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;blended_fit &amp;lt;- blended %&amp;gt;%
+  blend_predictions() # fit regularized model
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualise penalized model. Note that neural networks are dropped,
+despite achieving best score when used in isolation. I’ll have to dig
+into that.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(blended_fit)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-102-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(blended_fit, type = &amp;quot;members&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-102-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autoplot(blended_fit, type = &amp;quot;weights&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-102-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Fit candidate members with non-zero stacking coef with full training
+dataset.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;blended_regularized &amp;lt;- blended_fit %&amp;gt;%
+  fit_members() 
+blended_regularized
+
+## # A tibble: 3 × 3
+##   member                type         weight
+##   &amp;lt;chr&amp;gt;                 &amp;lt;chr&amp;gt;         &amp;lt;dbl&amp;gt;
+## 1 .pred_no_en_best_1_12 logistic_reg  2.67 
+## 2 .pred_no_dt_best_1_11 bag_tree      1.95 
+## 3 .pred_no_rf_best_1_05 rand_forest   0.922
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Perf on testing dataset?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;test %&amp;gt;%
+  bind_cols(predict(blended_regularized, .)) %&amp;gt;%
+  accuracy(survived, .pred_class)
+
+## # A tibble: 1 × 3
+##   .metric  .estimator .estimate
+##   &amp;lt;chr&amp;gt;    &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;
+## 1 accuracy binary         0.826
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now predict.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;holdout %&amp;gt;%
+  bind_cols(predict(blended_regularized, .)) %&amp;gt;%
+  select(PassengerId, Survived = .pred_class) %&amp;gt;%
+  mutate(Survived = if_else(Survived == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  write_csv(&amp;quot;output/titanic/stacked.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I got an 0.76076 accuracy.&lt;/p&gt;
+&lt;h1 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h1&gt;
+&lt;p&gt;I covered several ML algorithms and logistic regression with the awesome
+&lt;code&gt;tidymodels&lt;/code&gt; metapackage in &lt;code&gt;R&lt;/code&gt;. My scores at predicting Titanic
+survivors were ok I guess. Some folks on Kaggle got a perfect accuracy,
+so there is always room for improvement. Maybe better tuning, better
+features (or predictors) or other algorithms would increase accuracy. Of
+course, I forgot to use &lt;code&gt;set.seed()&lt;/code&gt; so results are not exactly
+reproducible.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;This post was also published on &lt;a href=&#34;https://www.r-bloggers.com&#34;&gt;https://www.r-bloggers.com&lt;/a&gt;. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quick and dirty analysis of a Twitter social network</title>
+      <link>https://oliviergimenez.github.io/blog/twitter-social-network/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/twitter-social-network/</guid>
+      <description>&lt;p&gt;I use &lt;code&gt;R&lt;/code&gt; to retrieve some data from Twitter, do some exploratory data analysis and visualisation and examine a network of followers.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;I use Twitter to get live updates of what my follow scientists are up to, to communicate about my students&#39; awesome work and to share material that I hope is useful to some people&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Recently, I reached 5,000 followers and I thought I&amp;rsquo;d spend some time trying to know better who they/you are. To do so, I use &lt;code&gt;R&lt;/code&gt; to retrieve some data from Twitter using 
+&lt;a href=&#34;https://docs.ropensci.org/rtweet/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;rtweet&lt;/code&gt;&lt;/a&gt;, do some data exploration and visualisation using the 
+&lt;a href=&#34;https://www.tidyverse.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;tidyverse&lt;/code&gt;&lt;/a&gt; and examine my network of followers with 
+&lt;a href=&#34;https://tidygraph.data-imaginist.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;tidygraph&lt;/code&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://ggraph.data-imaginist.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;ggraph&lt;/code&gt;&lt;/a&gt; and 
+&lt;a href=&#34;https://igraph.org/r/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;igraph&lt;/code&gt;&lt;/a&gt;. Data and codes are available from &lt;a href=&#34;https://github.com/oliviergimenez/sna-twitter&#34;&gt;https://github.com/oliviergimenez/sna-twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To reproduce the analyses below, you will need to access a Twitter API (application programming interface) to retrieve the information about your followers. In brief, an API is an intermediary application that allows applications to talk to each other. To access the Twitter APIs, you need a developer account for which you may apply at &lt;a href=&#34;https://developer.twitter.com/en&#34;&gt;https://developer.twitter.com/en&lt;/a&gt;. There is a short form to fill in, and it takes less than a day to get an answer.&lt;/p&gt;
+&lt;p&gt;Below I rely heavily on the code shared by Joe Cristian through the Algoritma Technical Blog at &lt;a href=&#34;https://algotech.netlify.app/blog/social-network-analysis-in-r/&#34;&gt;https://algotech.netlify.app/blog/social-network-analysis-in-r/&lt;/a&gt;. Kuddos and credits to him.&lt;/p&gt;
+&lt;h2 id=&#34;data-retrieving&#34;&gt;Data retrieving&lt;/h2&gt;
+&lt;p&gt;We load the &lt;code&gt;rtweet&lt;/code&gt; package to work with Twitter from R.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#devtools::install_github(&amp;quot;ropensci/rtweet&amp;quot;)
+library(rtweet)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We also load the &lt;code&gt;tidyverse&lt;/code&gt; for data manipulation and visualisation.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tidyverse)
+theme_set(theme_light(base_size = 14))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First we need to get credentials. The usual &lt;code&gt;rtweet&lt;/code&gt; sequence with &lt;code&gt;rtweet_app&lt;/code&gt;, &lt;code&gt;auth_save&lt;/code&gt; and &lt;code&gt;auth_as&lt;/code&gt; is supposed to work (see 
+&lt;a href=&#34;https://docs.ropensci.org/rtweet/articles/auth.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;), but the Twitter API kept failing (error 401) for me. Tried a few things, in vain. I will use the deprecated &lt;code&gt;create_token&lt;/code&gt; function instead. You might need to change the defaults of your Twitter app from &amp;ldquo;Read only&amp;rdquo; to &amp;ldquo;Read, write and access direct messages&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Enter my API keys and access tokens (not shown), then authenticate.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;token &amp;lt;- create_token(
+  app = &amp;quot;sna-twitter-network-5k&amp;quot;,
+  consumer_key = api_key,
+  consumer_secret = api_secret_key,
+  access_token = access_token,
+  access_secret = access_token_secret)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Get my Twitter info with my description, number of followers, number of likes, etc.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;og &amp;lt;- lookup_users(&amp;quot;oaggimenez&amp;quot;)
+str(og, max = 2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &#39;data.frame&#39;:	1 obs. of  21 variables:
+##  $ id                     : num 7.51e+17
+##  $ id_str                 : chr &amp;quot;750892662224453632&amp;quot;
+##  $ name                   : chr &amp;quot;Olivier Gimenez \U0001f596&amp;quot;
+##  $ screen_name            : chr &amp;quot;oaggimenez&amp;quot;
+##  $ location               : chr &amp;quot;Montpellier, France&amp;quot;
+##  $ description            : chr &amp;quot;Scientist (he/him) @CNRS @cefemontpellier @twitthair1 • Grown statistician • Improvised ecologist • Sociologist&amp;quot;| __truncated__
+##  $ url                    : chr &amp;quot;https://t.co/l7NImYeGdY&amp;quot;
+##  $ protected              : logi FALSE
+##  $ followers_count        : int 5042
+##  $ friends_count          : int 2191
+##  $ listed_count           : int 68
+##  $ created_at             : chr &amp;quot;Thu Jul 07 03:22:16 +0000 2016&amp;quot;
+##  $ favourites_count       : int 18066
+##  $ verified               : logi FALSE
+##  $ statuses_count         : int 5545
+##  $ profile_image_url_https: chr &amp;quot;https://pbs.twimg.com/profile_images/1330619806396067845/mIPmR-x4_normal.jpg&amp;quot;
+##  $ profile_banner_url     : chr &amp;quot;https://pbs.twimg.com/profile_banners/750892662224453632/1602417664&amp;quot;
+##  $ default_profile        : logi FALSE
+##  $ default_profile_image  : logi FALSE
+##  $ withheld_in_countries  :List of 1
+##   ..$ : list()
+##  $ entities               :List of 1
+##   ..$ :List of 2
+##  - attr(*, &amp;quot;tweets&amp;quot;)=&#39;data.frame&#39;:	1 obs. of  36 variables:
+##   ..$ created_at                   : chr &amp;quot;Thu Jul 29 16:15:52 +0000 2021&amp;quot;
+##   ..$ id                           : num 1.42e+18
+##   ..$ id_str                       : chr &amp;quot;1420780122949529601&amp;quot;
+##   ..$ text                         : chr &amp;quot;Looking forward to digging into this paper \U0001f929\U0001f9ee\U0001f60d https://t.co/ddCMraM3kj&amp;quot;
+##   ..$ truncated                    : logi FALSE
+##   ..$ entities                     :List of 1
+##   ..$ source                       : chr &amp;quot;&amp;lt;a href=\&amp;quot;http://twitter.com/download/iphone\&amp;quot; rel=\&amp;quot;nofollow\&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&amp;quot;
+##   ..$ in_reply_to_status_id        : logi NA
+##   ..$ in_reply_to_status_id_str    : logi NA
+##   ..$ in_reply_to_user_id          : logi NA
+##   ..$ in_reply_to_user_id_str      : logi NA
+##   ..$ in_reply_to_screen_name      : logi NA
+##   ..$ geo                          : logi NA
+##   ..$ coordinates                  :List of 1
+##   ..$ place                        :List of 1
+##   ..$ contributors                 : logi NA
+##   ..$ is_quote_status              : logi TRUE
+##   ..$ quoted_status_id             : num 1.42e+18
+##   ..$ quoted_status_id_str         : chr &amp;quot;1420768369620312065&amp;quot;
+##   ..$ retweet_count                : int 0
+##   ..$ favorite_count               : int 8
+##   ..$ favorited                    : logi FALSE
+##   ..$ retweeted                    : logi FALSE
+##   ..$ possibly_sensitive           : logi FALSE
+##   ..$ lang                         : chr &amp;quot;en&amp;quot;
+##   ..$ quoted_status                :List of 1
+##   ..$ display_text_width           : int 70
+##   ..$ user                         :List of 1
+##   ..$ full_text                    : logi NA
+##   ..$ favorited_by                 : logi NA
+##   ..$ display_text_range           : logi NA
+##   ..$ retweeted_status             : logi NA
+##   ..$ quoted_status_permalink      : logi NA
+##   ..$ metadata                     : logi NA
+##   ..$ query                        : logi NA
+##   ..$ possibly_sensitive_appealable: logi NA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now I obtain the id of my followers using &lt;code&gt;get_followers&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;followers &amp;lt;- get_followers(user = &amp;quot;oaggimenez&amp;quot;,
+                           n = og$followers_count,
+                           retryonratelimit = T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From their id, I can get the same details I got on my account using &lt;code&gt;lookup_users&lt;/code&gt;. This function is not vectorized, therefore I use a loop. Takes some time so I saved the results and load them.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers &amp;lt;- NULL
+for (i in 1:length(followers$user_id)){
+  tmp &amp;lt;- try(lookup_users(followers$user_id[i], retryonratelimit = TRUE), silent = TRUE)
+  if (length(tmp) == 1){
+    next
+  } else {
+    tmp$listed_count &amp;lt;- NULL # get rid of this column which raised some format issues, we do not it anyway
+    details_followers &amp;lt;- bind_rows(details_followers, tmp)
+  }
+}
+save(details_followers, file = &amp;quot;details_followers.RData&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What info do we have?&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;load(&amp;quot;dat/details_followers.RData&amp;quot;)
+names(details_followers)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;id&amp;quot;                      &amp;quot;id_str&amp;quot;                 
+##  [3] &amp;quot;name&amp;quot;                    &amp;quot;screen_name&amp;quot;            
+##  [5] &amp;quot;location&amp;quot;                &amp;quot;description&amp;quot;            
+##  [7] &amp;quot;url&amp;quot;                     &amp;quot;protected&amp;quot;              
+##  [9] &amp;quot;followers_count&amp;quot;         &amp;quot;friends_count&amp;quot;          
+## [11] &amp;quot;created_at&amp;quot;              &amp;quot;favourites_count&amp;quot;       
+## [13] &amp;quot;verified&amp;quot;                &amp;quot;statuses_count&amp;quot;         
+## [15] &amp;quot;profile_image_url_https&amp;quot; &amp;quot;profile_banner_url&amp;quot;     
+## [17] &amp;quot;default_profile&amp;quot;         &amp;quot;default_profile_image&amp;quot;  
+## [19] &amp;quot;withheld_in_countries&amp;quot;   &amp;quot;entities&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In more details.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(details_followers, max = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &#39;data.frame&#39;:	5025 obs. of  20 variables:
+##  $ id                     : num  1.03e+18 1.42e+18 1.32e+09 1.42e+18 1.36e+18 ...
+##  $ id_str                 : chr  &amp;quot;1026053171024736258&amp;quot; &amp;quot;1419513064697712640&amp;quot; &amp;quot;1317282258&amp;quot; &amp;quot;1419222504367927296&amp;quot; ...
+##  $ name                   : chr  &amp;quot;Dr. Zoe Nhleko&amp;quot; &amp;quot;akash Shelke&amp;quot; &amp;quot;Rilwan Ugbedeojo&amp;quot; &amp;quot;Thaana Van Dessel&amp;quot; ...
+##  $ screen_name            : chr  &amp;quot;ZoeNhleko&amp;quot; &amp;quot;akashSh88945929&amp;quot; &amp;quot;abuhrilwan&amp;quot; &amp;quot;ThaanaD&amp;quot; ...
+##  $ location               : chr  &amp;quot;United States&amp;quot; &amp;quot;&amp;quot; &amp;quot;Lagos, Nigeria&amp;quot; &amp;quot;France&amp;quot; ...
+##  $ description            : chr  &amp;quot;Wildlife ecologist with experience on African large mammals. PhD from @UF. Looking for job opportunities in eco&amp;quot;| __truncated__ &amp;quot;&amp;quot; &amp;quot;MSc, Plant Ecology | Seeking PhD Position in Community Ecology | Civic Leader | YALI RLC &amp;amp; African Presidential&amp;quot;| __truncated__ &amp;quot;MSc student majoring in Animal Ecology @WURanimal. \nFocused on Conservation Behavior &amp;amp; Human-Wildlife Coexistence.&amp;quot; ...
+##  $ url                    : chr  &amp;quot;https://t.co/uaFY2L8BnL&amp;quot; NA NA NA ...
+##  $ protected              : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+##  $ followers_count        : int  2878 1 244 0 2856 4 112 6 69 476 ...
+##  $ friends_count          : int  1325 223 2030 14 2575 99 344 32 73 1671 ...
+##  $ created_at             : chr  &amp;quot;Sun Aug 05 10:31:53 +0000 2018&amp;quot; &amp;quot;Mon Jul 26 04:21:18 +0000 2021&amp;quot; &amp;quot;Sat Mar 30 22:35:27 +0000 2013&amp;quot; &amp;quot;Sun Jul 25 09:06:36 +0000 2021&amp;quot; ...
+##  $ favourites_count       : int  8003 0 1843 1 12360 0 484 0 83 713 ...
+##  $ verified               : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+##  $ statuses_count         : int  7261 0 670 1 2112 0 141 0 30 926 ...
+##  $ profile_image_url_https: chr  &amp;quot;https://pbs.twimg.com/profile_images/1306353853571280896/rk9qAxoa_normal.jpg&amp;quot; &amp;quot;https://pbs.twimg.com/profile_images/1419513134142738433/erR2XRwf_normal.png&amp;quot; &amp;quot;https://pbs.twimg.com/profile_images/1413368052012433413/EyzbYfWB_normal.jpg&amp;quot; &amp;quot;https://pbs.twimg.com/profile_images/1419222962566217731/TQT96npR_normal.jpg&amp;quot; ...
+##  $ profile_banner_url     : chr  &amp;quot;https://pbs.twimg.com/profile_banners/1026053171024736258/1533465589&amp;quot; NA &amp;quot;https://pbs.twimg.com/profile_banners/1317282258/1624183687&amp;quot; &amp;quot;https://pbs.twimg.com/profile_banners/1419222504367927296/1627205254&amp;quot; ...
+##  $ default_profile        : logi  TRUE TRUE FALSE TRUE TRUE TRUE ...
+##  $ default_profile_image  : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+##  $ withheld_in_countries  :List of 5025
+##  $ entities               :List of 5025
+##  - attr(*, &amp;quot;tweets&amp;quot;)=&#39;data.frame&#39;:	1 obs. of  36 variables:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;data-exploration-and-visualisation&#34;&gt;Data exploration and visualisation&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s display the 100 bigger accounts that follow me. First thing I learned. It is humbling to be followed by influential individuals I admire like @MicrobiomDigest, @nathanpsmad, @FrancoisTaddei, @freakonometrics, @allison_horst, @HugePossum, @apreshill and scientific journals, institutions and societies.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;% 
+  arrange(-followers_count) %&amp;gt;%
+  select(screen_name,
+         followers_count, 
+         friends_count, 
+         favourites_count) %&amp;gt;% 
+  head(n = 100)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##         screen_name followers_count friends_count favourites_count
+## 1     dianefrancis1          230560        132635               70
+## 2    simongerman600          218444        209489            56976
+## 3       WildlifeMag          191613         23995            14697
+## 4     cagrimbakirci          170164          9401            21334
+## 5       BernardMarr          130900         29532            15764
+## 6          ZotovMax          119625        133610              894
+## 7          _atanas_          116717         74266           102899
+## 8   MicrobiomDigest          105825         33779            98199
+## 9          Eliances           97488         94488            15164
+## 10      PLOSBiology           89263          6646             4278
+## 11            IPBES           78086         11797            53957
+## 12           7wData           76131         84155            74609
+## 13    biconnections           63802         52918            91970
+## 14   aydintufekci43           60212         22627            99427
+## 15      AliceVachet           56381          2320           182435
+## 16         Pr_Logos           52482         50520            19852
+## 17     DrJoeNyangon           51296         20858             1413
+## 18   derekantoncich           48823         51449              347
+## 19      Afro_Herper           45215          3392           117693
+## 20       KumarAGarg           43461         47795             4052
+## 21       GatelyMark           41500         37944             1153
+## 22         overleaf           41306          7830            35289
+## 23         figshare           40610         38361            10395
+## 24         mlamons1           40415         29364             2498
+## 25          coraman           40398          2169            16548
+## 26   BritishEcolSoc           37394          1143            11685
+## 27      nathanpsmad           36760          5312            43729
+## 28   WildlifeRescue           34843          7976            61284
+## 29       rudyagovic           34063         28147             3708
+## 30   grp_resilience           34011          7998             3559
+## 31           JNakev           33427         28532            29442
+## 32   FrancoisTaddei           32631         17903            23894
+## 33      RunEducator           31248         19848            17522
+## 34      LarryLLapin           30782         34265              501
+## 35      _Alex_Iaco_           30775         26720             2390
+## 36           owasow           30562         12932            36909
+## 37         JEcology           30534           689             3312
+## 38        valmasdel           28972          4512             4334
+## 39  freakonometrics           28038         15112            31106
+## 40  MethodsEcolEvol           26207         10347             2083
+## 41          mmw_lmw           26014         12157             1068
+## 42  drmichellelarue           25424          6281            56120
+## 43    nicolasberrod           25258          6042            12990
+## 44         DD_NaNa_           24253         11051            39916
+## 45      callin_bull           24106          2831            10572
+## 46        INEE_CNRS           23483          1873             5089
+## 47    Datascience__           22793         10695              216
+## 48    VisualPersist           22779          5599            79872
+## 49     coywolfassoc           22203         19491             9470
+## 50        RBGSydney           20259         16049            13435
+## 51    allison_horst           19289          2865             7725
+## 52         rhskraus           18429         20029             3503
+## 53      fred_sallee           18144         18995             3423
+## 54         thembauk           17748          2066             3260
+## 55     parolesdhist           17257          7136             7497
+## 56   CREAF_ecologia           16654          3201            11899
+## 57    ChamboncelLea           16609          4059             9797
+## 58       HugePossum           16461         12732             7806
+## 59  ScientistFemale           16379          9039             2079
+## 60    sophie_e_hill           16292          5811            10315
+## 61  mohamma64508589           16130         14550            24584
+## 62      SamuelHayat           15999          3068             9767
+## 63    MathieuAvanzi           15890          1604             8526
+## 64          Erky321           15859         16284             4841
+## 65       ConLetters           15482          5547             1489
+## 66   oceansresearch           14969          1759             7599
+## 67      WCSNewsroom           14926         11224             7277
+## 68     CMastication           14687          8091            31769
+## 69        apreshill           14106          1607            32806
+## 70     SumanMalla10           13872         11977            10946
+## 71     umontpellier           13667          1360             8745
+## 72     WriteNThrive           13615         13523             7631
+## 73     abdirashidmd           13586          2389            18417
+## 74      JackKinross           13392         11263              774
+## 75     PaulREhrlich           13383         14208                1
+## 76       teppofelin           13330         12410              264
+## 77  ConservOptimism           13249          4306            15648
+## 78         jepeteso           13137         13595             3420
+## 79         gwintrob           12484          8751            43479
+## 80     SallyR_ISLHE           12411         12477            28924
+## 81         ActuIAFr           12321          8856             2495
+## 82         Booksmag           12282          1785              332
+## 83  jusoneoftoomany           12212         11049             2296
+## 84    galaxyproject           12208          8757              813
+## 85  thepostdoctoral           12186         12802              814
+## 86   FrontMarineSci           11498          5733             5832
+## 87          jobRxiv           11442           872              786
+## 88  EcographyJourna           11381          1465             4938
+## 89  davidghamilton1           11242          2231            16244
+## 90      5amStartups           11170         12370           147062
+## 91   RosmarieKatrin           11079         11159             4060
+## 92   ScienceAndMaps           11043          8679             3596
+## 93       joelgombin           11012         10335            10868
+## 94     SteveLenhert           10990          8328              669
+## 95      Naturevolve           10973         11349             7500
+## 96   cookinforpeace           10655          2861            17519
+## 97     DrPaulEvans1           10537          7927             3131
+## 98          Ibycter           10517          4450            47359
+## 99  Sciencecomptoir           10436          1268            15800
+## 100   SteveAtLogikk           10421          8864            13123
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Where do my followers come from? Second thing I learnt. Followers are folks from France (my home), USA, UK, Canada, Australia, and other European countries. I was happy to realize that I have followers from other parts of the world too, in India, South Africa, Brazil, Peru, Mexico, Nepal, Argentina, Kenya, Bangladesh, etc. and from Greece (my other home).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;% 
+  mutate(location = str_replace(location, &amp;quot;.*France.*&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*England&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*United Kingdom&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*London&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Scotland&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Montpellier&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Canada, BC.*&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*New Caledonia&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Marseille&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Grenoble&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Perú&amp;quot;, &amp;quot;Peru&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Martinique&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*La Rochelle&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Grenoble, Rhône-Alpes&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Avignon&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Paris&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*paris&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*france&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bordeaux&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Mytilene, Lesvos, Greece&amp;quot;, &amp;quot;Greece&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Mytiline, Greece&amp;quot;, &amp;quot;Greece&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Germany.*&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Vienna, Austria&amp;quot;, &amp;quot;Austria&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Arusha, Tanzania&amp;quot;, &amp;quot;Tanzania&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Athens&amp;quot;, &amp;quot;Greece&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bangor, ME&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bangor, Wales&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Baton Rouge, LA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Lisboa, Portugal&amp;quot;, &amp;quot;Portugal&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Oslo&amp;quot;, &amp;quot;Norway&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Islamic Republic of Iran&amp;quot;, &amp;quot;Iran&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Madrid, España&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Madrid&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Madrid, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Rome, Italy&amp;quot;, &amp;quot;Italy&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Santiago, Chile&amp;quot;, &amp;quot;Chile&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Belém, Brazil&amp;quot;, &amp;quot;Brazil&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Belo Horizonte, Brazil&amp;quot;, &amp;quot;Brazil&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Berlin&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Mexico, ME&amp;quot;, &amp;quot;Mexico&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Mexico City&amp;quot;, &amp;quot;Mexico&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Santiago, Chile&amp;quot;, &amp;quot;Chile&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Ontario&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Aberdeen&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Cambridge&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bologna, Emilia Romagna&amp;quot;, &amp;quot;Italy&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bogotá, D.C., Colombia&amp;quot;, &amp;quot;Colombia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Medellín, Colombia&amp;quot;, &amp;quot;Colombia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bruxelles, Belgique&amp;quot;, &amp;quot;Belgium&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Brasil&amp;quot;, &amp;quot;Brazil&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Budweis, Czech Republic&amp;quot;, &amp;quot;Czech Republic&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Calgary, Alberta&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Canada, BC&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Cardiff, Wales&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Brisbane&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Sydney&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Queensland&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Australia&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Germany&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Vancouver&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Ottawa, Ontario&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Québec, Canada&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Winnipeg, Manitoba&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*New South Wales&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Victoria&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*British Columbia&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Norway&amp;quot;, &amp;quot;Norway&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Finland&amp;quot;, &amp;quot;Finland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*South Africa&amp;quot;, &amp;quot;South Africa&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Switzerland&amp;quot;, &amp;quot;Switzerland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*OK&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*KS&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MS&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*WA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MD&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Colorado&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Community of Valencia, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dunedin City, New Zealand&amp;quot;, &amp;quot;New Zealand&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Rio Claro, Brasil&amp;quot;, &amp;quot;Brazil&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Saskatoon, Saskatchewan&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Sherbrooke, Québec&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*United Kingdom.*&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*University of Oxford&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*University of St Andrews&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*ID&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*NE&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*United States of America, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Spain, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Wisconsin, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Florida, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Liege, Belgium&amp;quot;, &amp;quot;Belgium&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Ghent, Belgium&amp;quot;, &amp;quot;Belgium&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Pune, India&amp;quot;, &amp;quot;India&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Hyderabad, India&amp;quot;, &amp;quot;India&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Prague, Czech Republic&amp;quot;, &amp;quot;Czech Republic&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Canada, BC, Canada&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*United States.*&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*DC&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*FL&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*GA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*HI&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*ME&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MI&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*PA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*NC&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*NY&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*NH&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*IL&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*NM&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MT&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*OR&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*WY&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*WI&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MN&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CT&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*TX&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*VA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*OH&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Massachusetts, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*California, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Montréal, Québec&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Edmonton, Alberta&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Toronto, Ontario&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Canada, Canada&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Montreal&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Lisbon, Portugal&amp;quot;, &amp;quot;Portugal&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Coimbra, Portugal&amp;quot;, &amp;quot;Portugal&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Cork, Ireland&amp;quot;, &amp;quot;Ireland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dublin City, Ireland&amp;quot;, &amp;quot;Ireland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Barcelona, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Barcelona&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Leipzig&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Seville, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Seville, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Buenos Aires, Argentina&amp;quot;, &amp;quot;Argentina&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Rio de Janeiro, Brazil&amp;quot;, &amp;quot;Brazil&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Canberra&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_remove(location, &amp;quot;Global&amp;quot;),
+         location = str_remove(location, &amp;quot;Earth&amp;quot;),
+         location = str_remove(location, &amp;quot;Worldwide&amp;quot;),
+         location = str_remove(location, &amp;quot;Europe&amp;quot;),
+         location = str_remove(location, &amp;quot;  &amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dhaka, Bangladesh&amp;quot;, &amp;quot;Bangladesh&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Copenhagen, Denmark&amp;quot;, &amp;quot;Denmark&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Amsterdam, The Netherlands&amp;quot;, &amp;quot;The Netherlands&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Groningen, Nederland&amp;quot;, &amp;quot;The Netherlands&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Wageningen, Nederland&amp;quot;, &amp;quot;The Netherlands&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Aarhus, Denmark&amp;quot;, &amp;quot;Denmark&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Antwerp, Belgium&amp;quot;, &amp;quot;Belgium&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Aveiro, Portugal&amp;quot;, &amp;quot;Portugal&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Australia, AUS&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Australian National University&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Auckland, New Zealand&amp;quot;, &amp;quot;New Zealand&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Belfast, Northern Ireland&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Ireland&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Hobart, Tasmania&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dhaka, Bangladesh&amp;quot;, &amp;quot;Bangladesh&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Nairobi, Kenya&amp;quot;, &amp;quot;Kenya&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dhaka, Bangladesh&amp;quot;, &amp;quot;Bangladesh&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Berlin, Deutschland&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Munich, Bavaria&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dehradun, India&amp;quot;, &amp;quot;India&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bengaluru, India&amp;quot;, &amp;quot;India&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Berlin, Deutschland&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Deutschland&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Edinburgh&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Glasgow&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*New York, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Washington, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*California&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*California&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Christchurch City, New Zealand&amp;quot;, &amp;quot;New Zealand&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Harare, Zimbabwe&amp;quot;, &amp;quot;Zimbabwe&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Islamabad, Pakistan&amp;quot;, &amp;quot;Pakistan&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Kolkata, India&amp;quot;, &amp;quot;India&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Lagos, Nigeria&amp;quot;, &amp;quot;Nigeria&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Lima, Peru&amp;quot;, &amp;quot;Peru&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Valparaíso, Chile&amp;quot;, &amp;quot;Chile&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Uppsala, Sweden&amp;quot;, &amp;quot;Sweden&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Uppsala, Sverige&amp;quot;, &amp;quot;Sweden&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Stockholm, Sweden&amp;quot;, &amp;quot;Sweden&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Stockholm&amp;quot;, &amp;quot;Sweden&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Turin, Piedmont&amp;quot;, &amp;quot;Italy&amp;quot;),
+         location = str_replace(location, &amp;quot;.*University of Iceland&amp;quot;, &amp;quot;Iceland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*University of Helsinki&amp;quot;, &amp;quot;Finland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Tucumán, Argentina&amp;quot;, &amp;quot;Argentina&amp;quot;),
+         location = str_replace(location, &amp;quot;.*The Hague, The Netherlands&amp;quot;, &amp;quot;The Netherlands&amp;quot;),
+         location = str_replace(location, &amp;quot;.*UK&amp;quot;, &amp;quot;United Kingdom&amp;quot;)
+  ) %&amp;gt;%
+  count(location, sort = TRUE) %&amp;gt;%
+  #slice(-40) %&amp;gt;%
+  head(n = 45) -&amp;gt; followers_by_country
+followers_by_country
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                    location    n
+## 1                           1273
+## 2  United States of America  606
+## 3                    France  571
+## 4            United Kingdom  473
+## 5                    Canada  166
+## 6                   Germany  130
+## 7                 Australia  112
+## 8                    Norway   50
+## 9               Switzerland   43
+## 10                    Spain   34
+## 11                    India   33
+## 12             South Africa   32
+## 13                   Brazil   30
+## 14                 Portugal   27
+## 15                  Finland   26
+## 16                   Sweden   18
+## 17                  Belgium   17
+## 18                    Italy   16
+## 19          The Netherlands   14
+## 20              New Zealand   13
+## 21                     Peru   13
+## 22                  Denmark   11
+## 23                   Mexico   11
+## 24                    Nepal   10
+## 25                Argentina    9
+## 26                    Kenya    9
+## 27               Bangladesh    8
+## 28                    Chile    8
+## 29                   Greece    8
+## 30                 Colombia    6
+## 31           Czech Republic    6
+## 32                Singapore    6
+## 33                  Iceland    5
+## 34                  Senegal    5
+## 35                     Iran    4
+## 36                  Nigeria    4
+## 37                 Pakistan    4
+## 38                 Tanzania    4
+## 39                 Zimbabwe    4
+## 40                             3
+## 41                  Austria    3
+## 42                  Ecuador    3
+## 43                Guatemala    3
+## 44                Hong Kong    3
+## 45               Luxembourg    3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s have a look to the same info on a quick and dirty map. White countries do not appear in the 45 countries with most followers, or do not have any followers.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(rworldmap)
+library(classInt)
+spdf &amp;lt;- joinCountryData2Map(followers_by_country, 
+                            joinCode=&amp;quot;NAME&amp;quot;,
+                            nameJoinColumn=&amp;quot;location&amp;quot;,
+                            verbose=TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 43 codes from your data successfully matched countries in the map
+## 2 codes from your data failed to match with a country code in the map
+##      failedCodes failedCountries
+## [1,] &amp;quot;&amp;quot;          &amp;quot;&amp;quot;             
+## [2,] &amp;quot;&amp;quot;          &amp;quot; &amp;quot;            
+## 200 codes from the map weren&#39;t represented in your data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;classInt &amp;lt;- classIntervals(spdf$n,
+                           n=9, 
+                           style = &amp;quot;jenks&amp;quot;)
+catMethod &amp;lt;- classInt[[&amp;quot;brks&amp;quot;]]
+library(RColorBrewer)
+colourPalette &amp;lt;- brewer.pal(9,&#39;RdPu&#39;)
+mapParams &amp;lt;- mapCountryData(spdf,
+                            nameColumnToPlot=&amp;quot;n&amp;quot;,
+                            addLegend=FALSE,
+                            catMethod = catMethod,
+                            colourPalette=colourPalette,
+                            mapTitle=&amp;quot;Number of followers per country&amp;quot;)
+do.call(addMapLegend,
+        c(mapParams,
+          legendLabels=&amp;quot;all&amp;quot;,
+          legendWidth=0.5,
+          legendIntervals=&amp;quot;data&amp;quot;,
+          legendMar = 2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-12-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;How many followers are verified?&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;% 
+  count(verified)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   verified    n
+## 1    FALSE 5009
+## 2     TRUE   16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Who are the verified users? Scientific entities, but also some scientists.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;%
+  filter(verified==TRUE) %&amp;gt;%
+  select(name, screen_name, location, followers_count) %&amp;gt;%
+  arrange(-followers_count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                                          name     screen_name
+## 1                          Çağrı Mert Bakırcı   cagrimbakirci
+## 2                               Elisabeth Bik MicrobiomDigest
+## 3                                       ipbes           IPBES
+## 4  Dr. Earyn McGee, Lizard lassoer \U0001f98e     Afro_Herper
+## 5                                    figshare        figshare
+## 6                       Nathan Peiffer-Smadja     nathanpsmad
+## 7                           Wildlife Alliance  WildlifeRescue
+## 8                          Arthur Charpentier freakonometrics
+## 9                          L&#39;écologie au CNRS       INEE_CNRS
+## 10            The Royal Botanic Garden Sydney       RBGSydney
+## 11                                      CREAF  CREAF_ecologia
+## 12                          Jean-Paul Carrera    JeanCarrPaul
+## 13                                    Deckset      decksetapp
+## 14                           𝙳𝚞𝚌-𝚀𝚞𝚊𝚗𝚐 𝙽𝚐𝚞𝚢𝚎𝚗          duc_qn
+## 15              Christophe Josset  \U0001f4dd         CJosset
+## 16                                 Casey Fung    TheCaseyFung
+##                       location followers_count
+## 1                   Texas, USA          170164
+## 2            San Francisco, CA          105825
+## 3                Bonn, Germany           78086
+## 4                United States           45215
+## 5                       London           40610
+## 6               Paris - London           36760
+## 7         Phnom Penh, Cambodia           34843
+## 8             Montréal, Québec           28038
+## 9                                        23483
+## 10     Sydney, New South Wales           20259
+## 11      Bellaterra (Barcelona)           16654
+## 12             Oxford, England            5744
+## 13                    Your Mac            3884
+## 14       Lausanne, Switzerland            2808
+## 15               Paris, France            2002
+## 16 Bundjalung Country | Mullum            1612
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;How old are my followers, where age is defined as the time elapsed since they created their Twitter account. Twitter was created in 2006. I created my account in July 2016 but started using it only two or three years ago I&amp;rsquo;d say. This dataviz is not too much informative I guess.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;% 
+  mutate(month = created_at %&amp;gt;% str_split(&amp;quot; &amp;quot;) %&amp;gt;% map_chr(2),
+         day = created_at %&amp;gt;% str_split(&amp;quot; &amp;quot;) %&amp;gt;% map_chr(3),
+         year = created_at %&amp;gt;% str_split(&amp;quot; &amp;quot;) %&amp;gt;% map_chr(6),
+         created_at = paste0(month,&amp;quot;-&amp;quot;,year),
+         created_at = lubridate::my(created_at)) %&amp;gt;%
+  group_by(created_at) %&amp;gt;%
+  summarise(counts = n()) %&amp;gt;%
+  ggplot(aes(x = created_at, y = counts)) +
+  geom_line() +
+  labs(x = &amp;quot;date of creation&amp;quot;, y = &amp;quot;how many accounts were created this month-year&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-15-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;What is the distribution of the number of followers and friends. On average, 400 followers and 400 friends.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;foll &amp;lt;- details_followers %&amp;gt;%
+  ggplot() + 
+  aes(x = log(followers_count)) + 
+  geom_histogram(fill=&amp;quot;#69b3a2&amp;quot;, color=&amp;quot;#e9ecef&amp;quot;, alpha=0.9) + 
+  labs(x = &amp;quot;log number of followers&amp;quot;, y = &amp;quot;counts&amp;quot;, title = &amp;quot;followers&amp;quot;)
+
+friends &amp;lt;- details_followers %&amp;gt;%
+  ggplot() + 
+  aes(x = log(friends_count)) + 
+  geom_histogram(fill=&amp;quot;#69b3a2&amp;quot;, color=&amp;quot;#e9ecef&amp;quot;, alpha=0.9) + 
+  labs(x = &amp;quot;log number of friends&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;friends&amp;quot;)
+
+library(patchwork)
+foll + friends
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-16-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;retrieving-social-links&#34;&gt;Retrieving social links&lt;/h2&gt;
+&lt;p&gt;To investigate the social network made of my followers, we need to gather who they follow, and their followers. Unfortunately, the Twitter API imposes some time and quantity constraints in retrieving data.&lt;/p&gt;
+&lt;p&gt;Here, for the sake of illustration, I will focus on some accounts only. To do so, I consider accounts with between 1000 and 1500 followers, and more than 30000 tweets users have liked in their account&amp;rsquo;s lifetime (which denotes some activity). The more followers we consider, the more time it would take to gather info on them: it is approx one minute per follower on average, so one hour for sixty followers, and more than eighty hours for all my followers! With the filters I&amp;rsquo;m using, I end up with 35 followers here, this is very few to say infer meaningful about a network, but it&amp;rsquo;ll do the job for now.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;some_followers &amp;lt;- details_followers %&amp;gt;% 
+  filter((followers_count &amp;gt; 1000 &amp;amp; followers_count &amp;lt; 1500),
+         favourites_count &amp;gt; 30000) # %&amp;gt;% nrow()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Create empty list and name it after their screen name.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;foler &amp;lt;- vector(mode = &#39;list&#39;, length = length(some_followers$screen_name))
+names(foler) &amp;lt;- some_followers$screen_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Get followers of these selected followers. Takes ages, so save and load later.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;for (i in 1:length(some_followers$screen_name)) {
+  message(&amp;quot;Getting followers for user #&amp;quot;, i, &amp;quot;/&amp;quot;, nrow(some_followers))
+  foler[[i]] &amp;lt;- get_followers(some_followers$screen_name[i], 
+                              n = some_followers$followers_count[i], 
+                              retryonratelimit = TRUE)
+  if(i %% 5 == 0){
+    message(&amp;quot;sleep for 5 minutes&amp;quot;)
+    Sys.sleep(5*60)
+    }
+}
+save(foler, file = &amp;quot;foler.RData&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Format the data.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;load(&amp;quot;dat/foler.RData&amp;quot;)
+folerx &amp;lt;- bind_rows(foler, .id = &amp;quot;screen_name&amp;quot;)
+active_fol_x &amp;lt;- some_followers %&amp;gt;% select(id_str, screen_name)
+foler_join &amp;lt;- left_join(folerx, some_followers, by = &amp;quot;screen_name&amp;quot;)
+algo_follower &amp;lt;- foler_join %&amp;gt;% 
+  select(id_str, screen_name) %&amp;gt;%
+  setNames(c(&amp;quot;follower&amp;quot;, &amp;quot;active_user&amp;quot;)) %&amp;gt;% 
+  na.omit()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Get friends of my followers. Takes ages. Again I save and load later.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;friend &amp;lt;- data.frame()
+for (i in seq_along(some_followers$screen_name)) {
+  message(&amp;quot;Getting following for user #&amp;quot;, i ,&amp;quot;/&amp;quot;,nrow(some_followers))
+  kk &amp;lt;- get_friends(some_followers$screen_name[i],
+                    n = some_followers$friends_count[i],
+                    retryonratelimit = TRUE)
+  friend &amp;lt;- rbind(friend, kk)
+  if(i %% 15 == 0){
+    message(&amp;quot;sleep for 15 minutes&amp;quot;)
+    Sys.sleep(15*60+1)
+  }
+}
+save(friend, file = &amp;quot;friend.RData&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Format the data.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;load(&amp;quot;dat/friend.RData&amp;quot;)
+all_friend &amp;lt;- friend %&amp;gt;% setNames(c(&amp;quot;screen_name&amp;quot;, &amp;quot;user_id&amp;quot;))
+all_friendx &amp;lt;- left_join(all_friend, active_fol_x, by=&amp;quot;screen_name&amp;quot;)
+algo_friend &amp;lt;- all_friendx %&amp;gt;% select(user_id, screen_name) %&amp;gt;%
+  setNames(c(&amp;quot;following&amp;quot;,&amp;quot;active_user&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that we have all info on followers and friends, we&amp;rsquo;re gonna build the network of people who follow each other.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;un_active &amp;lt;- unique(algo_friend$active_user) %&amp;gt;% 
+  data.frame(stringsAsFactors = F) %&amp;gt;%
+  setNames(&amp;quot;active_user&amp;quot;)
+algo_mutual &amp;lt;- data.frame()
+for (i in seq_along(un_active$active_user)){
+  aa &amp;lt;- algo_friend %&amp;gt;% 
+    filter(active_user == un_active$active_user[i])
+  bb &amp;lt;- aa %&amp;gt;% filter(aa$following %in% algo_follower$follower) %&amp;gt;%
+    setNames(c(&amp;quot;mutual&amp;quot;,&amp;quot;active_user&amp;quot;))
+  
+  algo_mutual &amp;lt;- rbind(algo_mutual,bb)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Instead of ids, we use screen names.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;detail_friend &amp;lt;- lookup_users(algo_mutual$mutual)
+algo_mutual &amp;lt;- algo_mutual %&amp;gt;% 
+  left_join(detail_friend, by = c(&amp;quot;mutual&amp;quot; = &amp;quot;id_str&amp;quot;)) %&amp;gt;% 
+  na.omit() %&amp;gt;%
+  select(mutual, active_user, screen_name)
+algo_mutual
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 18 × 3
+##    mutual             active_user     screen_name    
+##    &amp;lt;chr&amp;gt;              &amp;lt;chr&amp;gt;           &amp;lt;chr&amp;gt;          
+##  1 824265743575306243 g33k5p34k       robbie_emmet   
+##  2 761735501707567104 g33k5p34k       LauraBlissEco  
+##  3 1439272374         alexnicolharper LeafyEricScott 
+##  4 824265743575306243 alexnicolharper robbie_emmet   
+##  5 21467726           alexnicolharper g33k5p34k      
+##  6 4181949437         LegalizeBrain   EvpokPadding   
+##  7 824265743575306243 Souzam7139      robbie_emmet   
+##  8 888890201673580548 Souzam7139      mellenmartin   
+##  9 824265743575306243 mellenmartin    robbie_emmet   
+## 10 21467726           LauraBlissEco   g33k5p34k      
+## 11 831398755920445440 JosiahParry     RoelandtN42    
+## 12 4181949437         gau             EvpokPadding   
+## 13 21467726           robbie_emmet    g33k5p34k      
+## 14 4159201575         robbie_emmet    alexnicolharper
+## 15 888890201673580548 robbie_emmet    mellenmartin   
+## 16 29538964           EvpokPadding    gau            
+## 17 1439272374         lifedispersing  LeafyEricScott 
+## 18 301687349          RoelandtN42     JosiahParry
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Add my account to the network.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;un_active &amp;lt;- un_active %&amp;gt;% 
+  mutate(mutual = rep(&amp;quot;oaggimenez&amp;quot;))
+un_active &amp;lt;- un_active[,c(2,1)]
+un_active &amp;lt;- un_active %&amp;gt;% 
+  setNames(c(&amp;quot;active_user&amp;quot;,&amp;quot;screen_name&amp;quot;))
+algo_mutual &amp;lt;- bind_rows(algo_mutual %&amp;gt;% select(-mutual), un_active)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For what follows, we will need packages to work with networks.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(igraph)
+library(tidygraph)
+library(ggraph)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we create the edges, nodes and build the network.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;nodes &amp;lt;- data.frame(V = unique(c(algo_mutual$screen_name,algo_mutual$active_user)),
+                    stringsAsFactors = F)
+
+edges &amp;lt;- algo_mutual %&amp;gt;% 
+  setNames(c(&amp;quot;from&amp;quot;,&amp;quot;to&amp;quot;))
+network_ego1 &amp;lt;- graph_from_data_frame(d = edges, vertices = nodes, directed = F) %&amp;gt;%
+  as_tbl_graph()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;network-metrics&#34;&gt;Network metrics&lt;/h2&gt;
+&lt;p&gt;Create communities using &lt;code&gt;group_louvain()&lt;/code&gt; algorithm, and calculate standard metrics using &lt;code&gt;tidygraph&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(123)
+network_ego1 &amp;lt;- network_ego1 %&amp;gt;% 
+  activate(nodes) %&amp;gt;% 
+  mutate(community = as.factor(group_louvain())) %&amp;gt;%
+  mutate(degree_c = centrality_degree()) %&amp;gt;%
+  mutate(betweenness_c = centrality_betweenness(directed = F,normalized = T)) %&amp;gt;%
+  mutate(closeness_c = centrality_closeness(normalized = T)) %&amp;gt;%
+  mutate(eigen = centrality_eigen(directed = F))
+network_ego_df &amp;lt;- as.data.frame(network_ego1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Identify key nodes with respect to network metrics.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;network_ego_df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##               name community degree_c betweenness_c closeness_c     eigen
+## 1     robbie_emmet         2        8  0.0049299720   0.5384615 0.5238676
+## 2    LauraBlissEco         2        3  0.0000000000   0.5147059 0.2717415
+## 3   LeafyEricScott         5        3  0.0008403361   0.5223881 0.2287709
+## 4        g33k5p34k         2        6  0.0024649860   0.5303030 0.4342056
+## 5     EvpokPadding         3        4  0.0011204482   0.5223881 0.2336052
+## 6     mellenmartin         2        4  0.0000000000   0.5223881 0.3371889
+## 7      RoelandtN42         4        3  0.0000000000   0.5147059 0.2050991
+## 8  alexnicolharper         2        5  0.0019607843   0.5303030 0.3942456
+## 9              gau         3        3  0.0000000000   0.5147059 0.2133909
+## 10     JosiahParry         4        3  0.0000000000   0.5147059 0.2050991
+## 11     genius_c137         1        1  0.0000000000   0.5072464 0.1454399
+## 12            Zjbb         1        1  0.0000000000   0.5072464 0.1454399
+## 13       SJRAfloat         1        1  0.0000000000   0.5072464 0.1454399
+## 14 BMPARMA17622540         1        1  0.0000000000   0.5072464 0.1454399
+## 15    maryam_adeli         1        1  0.0000000000   0.5072464 0.1454399
+## 16       waywardaf         1        1  0.0000000000   0.5072464 0.1454399
+## 17         SusyVF6         1        1  0.0000000000   0.5072464 0.1454399
+## 18       Sinalo_NM         1        1  0.0000000000   0.5072464 0.1454399
+## 19      Leila_Lula         1        1  0.0000000000   0.5072464 0.1454399
+## 20       CARThorpe         1        1  0.0000000000   0.5072464 0.1454399
+## 21  j_wilson_white         1        1  0.0000000000   0.5072464 0.1454399
+## 22   LegalizeBrain         3        2  0.0000000000   0.5147059 0.1794154
+## 23    JaishriJuice         1        1  0.0000000000   0.5072464 0.1454399
+## 24     jaguaretepy         1        1  0.0000000000   0.5072464 0.1454399
+## 25      Souzam7139         2        3  0.0000000000   0.5223881 0.2706719
+## 26        LaLince_         1        1  0.0000000000   0.5072464 0.1454399
+## 27      Nina_Ella_         1        1  0.0000000000   0.5072464 0.1454399
+## 28          samcox         1        1  0.0000000000   0.5072464 0.1454399
+## 29     TAdamsBio42         1        1  0.0000000000   0.5072464 0.1454399
+## 30       brubakerl         1        1  0.0000000000   0.5072464 0.1454399
+## 31         robanhk         1        1  0.0000000000   0.5072464 0.1454399
+## 32       InesCCarv         1        1  0.0000000000   0.5072464 0.1454399
+## 33   groundhog0202         1        1  0.0000000000   0.5072464 0.1454399
+## 34         zenmart         1        1  0.0000000000   0.5072464 0.1454399
+## 35  lifedispersing         5        2  0.0000000000   0.5147059 0.1787123
+## 36      oaggimenez         1       35  0.9685154062   1.0000000 1.0000000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Get users with highest values of each metric.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;kp_ego &amp;lt;- data.frame(
+  network_ego_df %&amp;gt;% arrange(-degree_c) %&amp;gt;% select(name),
+  network_ego_df %&amp;gt;% arrange(-betweenness_c) %&amp;gt;% select(name),
+  network_ego_df %&amp;gt;% arrange(-closeness_c) %&amp;gt;% select(name),
+  network_ego_df %&amp;gt;% arrange(-eigen) %&amp;gt;% select(name)) %&amp;gt;% 
+  setNames(c(&amp;quot;degree&amp;quot;,&amp;quot;betweenness&amp;quot;,&amp;quot;closeness&amp;quot;,&amp;quot;eigen&amp;quot;))
+kp_ego[-1,]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##             degree     betweenness       closeness           eigen
+## 2     robbie_emmet    robbie_emmet    robbie_emmet    robbie_emmet
+## 3        g33k5p34k       g33k5p34k       g33k5p34k       g33k5p34k
+## 4  alexnicolharper alexnicolharper alexnicolharper alexnicolharper
+## 5     EvpokPadding    EvpokPadding  LeafyEricScott    mellenmartin
+## 6     mellenmartin  LeafyEricScott    EvpokPadding   LauraBlissEco
+## 7    LauraBlissEco   LauraBlissEco    mellenmartin      Souzam7139
+## 8   LeafyEricScott    mellenmartin      Souzam7139    EvpokPadding
+## 9      RoelandtN42     RoelandtN42   LauraBlissEco  LeafyEricScott
+## 10             gau             gau     RoelandtN42             gau
+## 11     JosiahParry     JosiahParry             gau     RoelandtN42
+## 12      Souzam7139     genius_c137     JosiahParry     JosiahParry
+## 13   LegalizeBrain            Zjbb   LegalizeBrain   LegalizeBrain
+## 14  lifedispersing       SJRAfloat  lifedispersing  lifedispersing
+## 15     genius_c137 BMPARMA17622540     genius_c137         robanhk
+## 16            Zjbb    maryam_adeli            Zjbb       Sinalo_NM
+## 17       SJRAfloat       waywardaf       SJRAfloat          samcox
+## 18 BMPARMA17622540         SusyVF6 BMPARMA17622540     genius_c137
+## 19    maryam_adeli       Sinalo_NM    maryam_adeli            Zjbb
+## 20       waywardaf      Leila_Lula       waywardaf       SJRAfloat
+## 21         SusyVF6       CARThorpe         SusyVF6 BMPARMA17622540
+## 22       Sinalo_NM  j_wilson_white       Sinalo_NM       waywardaf
+## 23      Leila_Lula   LegalizeBrain      Leila_Lula         SusyVF6
+## 24       CARThorpe    JaishriJuice       CARThorpe      Leila_Lula
+## 25  j_wilson_white     jaguaretepy  j_wilson_white  j_wilson_white
+## 26    JaishriJuice      Souzam7139    JaishriJuice    JaishriJuice
+## 27     jaguaretepy        LaLince_     jaguaretepy     jaguaretepy
+## 28        LaLince_      Nina_Ella_        LaLince_        LaLince_
+## 29      Nina_Ella_          samcox      Nina_Ella_      Nina_Ella_
+## 30          samcox     TAdamsBio42          samcox       brubakerl
+## 31     TAdamsBio42       brubakerl     TAdamsBio42   groundhog0202
+## 32       brubakerl         robanhk       brubakerl         zenmart
+## 33         robanhk       InesCCarv         robanhk    maryam_adeli
+## 34       InesCCarv   groundhog0202       InesCCarv       CARThorpe
+## 35   groundhog0202         zenmart   groundhog0202       InesCCarv
+## 36         zenmart  lifedispersing         zenmart     TAdamsBio42
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Robbie Emmet has the highest degree, betweenness, closeness centrality and eigenvector centrality. He has the most relations with the other nodes in the network. He also can spread information the further away and faster than anyone, and is also surrounded by important persons in the network. This is within the network we&amp;rsquo;ve just built.&lt;/p&gt;
+&lt;p&gt;By the way, Robbie has just passed his dissertation defense, congrats! Follow him on Twitter at @robbie_emmet, he is awesome!&lt;/p&gt;
+&lt;h2 id=&#34;visualize-network&#34;&gt;Visualize Network&lt;/h2&gt;
+&lt;p&gt;We visualize the network using clusters or communities (first three only).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;options(ggrepel.max.overlaps = Inf)
+network_viz &amp;lt;- network_ego1 %&amp;gt;%
+  filter(community %in% 1:3) %&amp;gt;%
+  mutate(node_size = ifelse(degree_c &amp;gt;= 50,degree_c,0)) %&amp;gt;%
+  mutate(node_label = ifelse(betweenness_c &amp;gt;= 0.01,name,NA))
+plot_ego &amp;lt;- network_viz %&amp;gt;% 
+  ggraph(layout = &amp;quot;stress&amp;quot;) +
+  geom_edge_fan(alpha = 0.05) +
+  geom_node_point(aes(color = as.factor(community),size = node_size)) +
+  geom_node_label(aes(label = node_label),nudge_y = 0.1,
+                 show.legend = F, fontface = &amp;quot;bold&amp;quot;, fill = &amp;quot;#ffffff66&amp;quot;) +
+  theme_graph() + 
+  theme(legend.position = &amp;quot;none&amp;quot;) +
+  labs(title = &amp;quot;Top 3 communities&amp;quot;)
+plot_ego
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-31-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s use an alternative dataviz to identify the nodes.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;network_viz %&amp;gt;% 
+  mutate(community = group_spinglass()) %&amp;gt;%
+  ggraph(layout = &amp;quot;nicely&amp;quot;) +
+  geom_edge_fan(alpha = 0.25) +
+  geom_node_point(aes(color = factor(community)),size = 5, show.legend = F) +
+  geom_node_text(aes(label = name),repel = T) +
+  theme_graph() + theme(legend.position = &amp;quot;none&amp;quot;) +
+  labs(title = &amp;quot;Network with named nodes&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-32-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;concluding-words&#34;&gt;Concluding words&lt;/h2&gt;
+&lt;p&gt;Not sure what the communities are about. Due to limitation with the Twitter API I did not attempt to retrieve the info on all the 5,000 followers, but I used only 35 of them, which explains why there is not much to say about this network I guess. I might take some time to try and retrieve all the info (will take days), or not. I might also use some information I already have, like how followers describe themselves and do some topic modelling to identify common themes of interest.&lt;/p&gt;
+&lt;p&gt;Here I have simply followed the steps that Joe Cristian illustrated so brillantly in his post at &lt;a href=&#34;https://algotech.netlify.app/blog/social-network-analysis-in-r/&#34;&gt;https://algotech.netlify.app/blog/social-network-analysis-in-r/&lt;/a&gt;. Make sure you read his post for more details on the code and theory. In particular, he illustrates how information spreads through the network.&lt;/p&gt;
+&lt;p&gt;For more about social network analyses and Twitter, see this thread &lt;a href=&#34;https://twitter.com/Mehdi_Moussaid/status/1389174715990876160?s=20&#34;&gt;https://twitter.com/Mehdi_Moussaid/status/1389174715990876160?s=20&lt;/a&gt; and this video &lt;a href=&#34;https://www.youtube.com/watch?v=UX7YQ6m2r_o&#34;&gt;https://www.youtube.com/watch?v=UX7YQ6m2r_o&lt;/a&gt; in French, this is what inspired me to do the analysis. See also this &lt;a href=&#34;https://github.com/eleurent/twitter-graph&#34;&gt;https://github.com/eleurent/twitter-graph&lt;/a&gt; for a much better analysis than what I could do (with Python for data retrieving and manipulation, and 
+&lt;a href=&#34;https://gephi.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gephi&lt;/a&gt; for network visualisation).&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;This post was also published on &lt;a href=&#34;https://www.r-bloggers.com&#34;&gt;https://www.r-bloggers.com&lt;/a&gt;. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on individual-based models with R</title>
+      <link>https://oliviergimenez.github.io/blog/ibmworkshop/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/ibmworkshop/</guid>
+      <description>&lt;p&gt;Slides and codes available from &lt;a href=&#34;https://sarahbauduin.github.io/formation_IBM_NetLogoR/&#34;&gt;https://sarahbauduin.github.io/formation_IBM_NetLogoR/&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Our workshop on individual-based models &lt;a href=&#34;https://twitter.com/hashtag/IBMs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#IBMs&lt;/a&gt; with NetLogoR &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; starts today, led by &lt;a href=&#34;https://twitter.com/hashtag/twitterless?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#twitterless&lt;/a&gt; IBM expert Sarah Bauduin &lt;a href=&#34;https://twitter.com/OFBiodiversite?ref_src=twsrc%5Etfw&#34;&gt;@OFBiodiversite&lt;/a&gt; &lt;a href=&#34;https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw&#34;&gt;@cefemontpellier&lt;/a&gt; w/ &lt;a href=&#34;https://twitter.com/oksanagrente?ref_src=twsrc%5Etfw&#34;&gt;@oksanagrente&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/NSantostasi?ref_src=twsrc%5Etfw&#34;&gt;@NSantostasi&lt;/a&gt;&lt;br&gt;▶️ Slides &amp;amp; codes &lt;a href=&#34;https://t.co/LjCh4AH0UA&#34;&gt;https://t.co/LjCh4AH0UA&lt;/a&gt;&lt;br&gt;▶️ NetLogoR &lt;a href=&#34;https://t.co/KXQxIGwKMh&#34;&gt;https://t.co/KXQxIGwKMh&lt;/a&gt; &lt;a href=&#34;https://t.co/MjvVZxMi7H&#34;&gt;pic.twitter.com/MjvVZxMi7H&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1406879847545290753?ref_src=twsrc%5Etfw&#34;&gt;June 21, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on Bayesian capture-recapture inference</title>
+      <link>https://oliviergimenez.github.io/blog/hmmcrworkshop/</link>
+      <pubDate>Tue, 18 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/hmmcrworkshop/</guid>
+      <description>&lt;p&gt;Everything (including data, slides, codes and video recordings) about the workshop we run on Bayesian capture-recapture inference with hidden Markov models in R and Nimble.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🥳🍻 Had fun running a workshop on Bayesian capture-recapture inference with hidden Markov models in R &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &amp;amp; Nimble w/ &lt;a href=&#34;https://twitter.com/SarahCubaynes?ref_src=twsrc%5Etfw&#34;&gt;@SarahCubaynes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/chloe_nater?ref_src=twsrc%5Etfw&#34;&gt;@chloe_nater&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MaudQueroue?ref_src=twsrc%5Etfw&#34;&gt;@MaudQueroue&lt;/a&gt; &amp;amp; Perry de Valpine &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; &lt;br&gt;✅ Slides, worksheets &amp;amp; video recordings freely available from &lt;a href=&#34;https://t.co/CgVd84MPYN&#34;&gt;https://t.co/CgVd84MPYN&lt;/a&gt; &lt;a href=&#34;https://t.co/WlHzXytVUG&#34;&gt;pic.twitter.com/WlHzXytVUG&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1394770140978466818?ref_src=twsrc%5Etfw&#34;&gt;May 18, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on Bayesian statistics with R</title>
+      <link>https://oliviergimenez.github.io/blog/bayesstatsworkshop/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/bayesstatsworkshop/</guid>
+      <description>&lt;p&gt;Everything (including data, slides and codes) about the workshop on Bayesian statistics I run.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Just finished up a week teaching Bayesian statistics with R &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; for non-stats PhD students &amp;amp; 💜 it &lt;a href=&#34;https://twitter.com/hashtag/bayes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#bayes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/mcmc?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#mcmc&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/jags?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#jags&lt;/a&gt;&lt;br&gt;🌍 Dedicated website &lt;a href=&#34;https://t.co/X7JY3f9eGX&#34;&gt;https://t.co/X7JY3f9eGX&lt;/a&gt;&lt;br&gt;🍳 Material &lt;a href=&#34;https://t.co/agY9CvQLiV&#34;&gt;https://t.co/agY9CvQLiV&lt;/a&gt;&lt;br&gt;📽️ Video recording (in English w/ 👽 accent) &lt;a href=&#34;https://t.co/DHabXmVYsT&#34;&gt;https://t.co/DHabXmVYsT&lt;/a&gt; &lt;a href=&#34;https://t.co/g94nSO3faQ&#34;&gt;pic.twitter.com/g94nSO3faQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1375498491145940992?ref_src=twsrc%5Etfw&#34;&gt;March 26, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on reproducible science in R &amp; RStudio</title>
+      <link>https://oliviergimenez.github.io/blog/rrworkshop/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/rrworkshop/</guid>
+      <description>&lt;p&gt;Everything (including data, slides and codes) about the workshop on reproducible science I run.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Had fun running a 1-day workshop on reproducible science in R &amp;amp; RStudio for our lab &lt;a href=&#34;https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw&#34;&gt;@cefemontpellier&lt;/a&gt;. We covered data manip &amp;amp; visualisation w/ &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt;, version control w/ Git/GitHub and writing dynamic docs w/ R Markdown&lt;br&gt;📝 Slides &amp;amp; practicals &lt;a href=&#34;https://t.co/LJRknr8Kzb&#34;&gt;https://t.co/LJRknr8Kzb&lt;/a&gt; 📽️=🇫🇷 &lt;a href=&#34;https://t.co/uCsm9kH0Hf&#34;&gt;pic.twitter.com/uCsm9kH0Hf&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1373600348879872000?ref_src=twsrc%5Etfw&#34;&gt;March 21, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
     
     <item>
       <title>Bayesian implementation of the robust design</title>

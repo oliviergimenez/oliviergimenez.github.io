@@ -5,12 +5,919 @@
     <link>https://oliviergimenez.github.io/tags/twitter/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
     <description>twitter</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 09 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2022</copyright><lastBuildDate>Wed, 28 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>twitter</title>
       <link>https://oliviergimenez.github.io/tags/twitter/</link>
     </image>
+    
+    <item>
+      <title>Quick and dirty analysis of a Twitter social network</title>
+      <link>https://oliviergimenez.github.io/blog/twitter-social-network/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/twitter-social-network/</guid>
+      <description>&lt;p&gt;I use &lt;code&gt;R&lt;/code&gt; to retrieve some data from Twitter, do some exploratory data analysis and visualisation and examine a network of followers.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;I use Twitter to get live updates of what my follow scientists are up to, to communicate about my students&#39; awesome work and to share material that I hope is useful to some people&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Recently, I reached 5,000 followers and I thought I&amp;rsquo;d spend some time trying to know better who they/you are. To do so, I use &lt;code&gt;R&lt;/code&gt; to retrieve some data from Twitter using 
+&lt;a href=&#34;https://docs.ropensci.org/rtweet/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;rtweet&lt;/code&gt;&lt;/a&gt;, do some data exploration and visualisation using the 
+&lt;a href=&#34;https://www.tidyverse.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;tidyverse&lt;/code&gt;&lt;/a&gt; and examine my network of followers with 
+&lt;a href=&#34;https://tidygraph.data-imaginist.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;tidygraph&lt;/code&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://ggraph.data-imaginist.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;ggraph&lt;/code&gt;&lt;/a&gt; and 
+&lt;a href=&#34;https://igraph.org/r/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;igraph&lt;/code&gt;&lt;/a&gt;. Data and codes are available from &lt;a href=&#34;https://github.com/oliviergimenez/sna-twitter&#34;&gt;https://github.com/oliviergimenez/sna-twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To reproduce the analyses below, you will need to access a Twitter API (application programming interface) to retrieve the information about your followers. In brief, an API is an intermediary application that allows applications to talk to each other. To access the Twitter APIs, you need a developer account for which you may apply at &lt;a href=&#34;https://developer.twitter.com/en&#34;&gt;https://developer.twitter.com/en&lt;/a&gt;. There is a short form to fill in, and it takes less than a day to get an answer.&lt;/p&gt;
+&lt;p&gt;Below I rely heavily on the code shared by Joe Cristian through the Algoritma Technical Blog at &lt;a href=&#34;https://algotech.netlify.app/blog/social-network-analysis-in-r/&#34;&gt;https://algotech.netlify.app/blog/social-network-analysis-in-r/&lt;/a&gt;. Kuddos and credits to him.&lt;/p&gt;
+&lt;h2 id=&#34;data-retrieving&#34;&gt;Data retrieving&lt;/h2&gt;
+&lt;p&gt;We load the &lt;code&gt;rtweet&lt;/code&gt; package to work with Twitter from R.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#devtools::install_github(&amp;quot;ropensci/rtweet&amp;quot;)
+library(rtweet)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We also load the &lt;code&gt;tidyverse&lt;/code&gt; for data manipulation and visualisation.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tidyverse)
+theme_set(theme_light(base_size = 14))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First we need to get credentials. The usual &lt;code&gt;rtweet&lt;/code&gt; sequence with &lt;code&gt;rtweet_app&lt;/code&gt;, &lt;code&gt;auth_save&lt;/code&gt; and &lt;code&gt;auth_as&lt;/code&gt; is supposed to work (see 
+&lt;a href=&#34;https://docs.ropensci.org/rtweet/articles/auth.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;), but the Twitter API kept failing (error 401) for me. Tried a few things, in vain. I will use the deprecated &lt;code&gt;create_token&lt;/code&gt; function instead. You might need to change the defaults of your Twitter app from &amp;ldquo;Read only&amp;rdquo; to &amp;ldquo;Read, write and access direct messages&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Enter my API keys and access tokens (not shown), then authenticate.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;token &amp;lt;- create_token(
+  app = &amp;quot;sna-twitter-network-5k&amp;quot;,
+  consumer_key = api_key,
+  consumer_secret = api_secret_key,
+  access_token = access_token,
+  access_secret = access_token_secret)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Get my Twitter info with my description, number of followers, number of likes, etc.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;og &amp;lt;- lookup_users(&amp;quot;oaggimenez&amp;quot;)
+str(og, max = 2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &#39;data.frame&#39;:	1 obs. of  21 variables:
+##  $ id                     : num 7.51e+17
+##  $ id_str                 : chr &amp;quot;750892662224453632&amp;quot;
+##  $ name                   : chr &amp;quot;Olivier Gimenez \U0001f596&amp;quot;
+##  $ screen_name            : chr &amp;quot;oaggimenez&amp;quot;
+##  $ location               : chr &amp;quot;Montpellier, France&amp;quot;
+##  $ description            : chr &amp;quot;Scientist (he/him) @CNRS @cefemontpellier @twitthair1 • Grown statistician • Improvised ecologist • Sociologist&amp;quot;| __truncated__
+##  $ url                    : chr &amp;quot;https://t.co/l7NImYeGdY&amp;quot;
+##  $ protected              : logi FALSE
+##  $ followers_count        : int 5042
+##  $ friends_count          : int 2191
+##  $ listed_count           : int 68
+##  $ created_at             : chr &amp;quot;Thu Jul 07 03:22:16 +0000 2016&amp;quot;
+##  $ favourites_count       : int 18066
+##  $ verified               : logi FALSE
+##  $ statuses_count         : int 5545
+##  $ profile_image_url_https: chr &amp;quot;https://pbs.twimg.com/profile_images/1330619806396067845/mIPmR-x4_normal.jpg&amp;quot;
+##  $ profile_banner_url     : chr &amp;quot;https://pbs.twimg.com/profile_banners/750892662224453632/1602417664&amp;quot;
+##  $ default_profile        : logi FALSE
+##  $ default_profile_image  : logi FALSE
+##  $ withheld_in_countries  :List of 1
+##   ..$ : list()
+##  $ entities               :List of 1
+##   ..$ :List of 2
+##  - attr(*, &amp;quot;tweets&amp;quot;)=&#39;data.frame&#39;:	1 obs. of  36 variables:
+##   ..$ created_at                   : chr &amp;quot;Thu Jul 29 16:15:52 +0000 2021&amp;quot;
+##   ..$ id                           : num 1.42e+18
+##   ..$ id_str                       : chr &amp;quot;1420780122949529601&amp;quot;
+##   ..$ text                         : chr &amp;quot;Looking forward to digging into this paper \U0001f929\U0001f9ee\U0001f60d https://t.co/ddCMraM3kj&amp;quot;
+##   ..$ truncated                    : logi FALSE
+##   ..$ entities                     :List of 1
+##   ..$ source                       : chr &amp;quot;&amp;lt;a href=\&amp;quot;http://twitter.com/download/iphone\&amp;quot; rel=\&amp;quot;nofollow\&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&amp;quot;
+##   ..$ in_reply_to_status_id        : logi NA
+##   ..$ in_reply_to_status_id_str    : logi NA
+##   ..$ in_reply_to_user_id          : logi NA
+##   ..$ in_reply_to_user_id_str      : logi NA
+##   ..$ in_reply_to_screen_name      : logi NA
+##   ..$ geo                          : logi NA
+##   ..$ coordinates                  :List of 1
+##   ..$ place                        :List of 1
+##   ..$ contributors                 : logi NA
+##   ..$ is_quote_status              : logi TRUE
+##   ..$ quoted_status_id             : num 1.42e+18
+##   ..$ quoted_status_id_str         : chr &amp;quot;1420768369620312065&amp;quot;
+##   ..$ retweet_count                : int 0
+##   ..$ favorite_count               : int 8
+##   ..$ favorited                    : logi FALSE
+##   ..$ retweeted                    : logi FALSE
+##   ..$ possibly_sensitive           : logi FALSE
+##   ..$ lang                         : chr &amp;quot;en&amp;quot;
+##   ..$ quoted_status                :List of 1
+##   ..$ display_text_width           : int 70
+##   ..$ user                         :List of 1
+##   ..$ full_text                    : logi NA
+##   ..$ favorited_by                 : logi NA
+##   ..$ display_text_range           : logi NA
+##   ..$ retweeted_status             : logi NA
+##   ..$ quoted_status_permalink      : logi NA
+##   ..$ metadata                     : logi NA
+##   ..$ query                        : logi NA
+##   ..$ possibly_sensitive_appealable: logi NA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now I obtain the id of my followers using &lt;code&gt;get_followers&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;followers &amp;lt;- get_followers(user = &amp;quot;oaggimenez&amp;quot;,
+                           n = og$followers_count,
+                           retryonratelimit = T)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From their id, I can get the same details I got on my account using &lt;code&gt;lookup_users&lt;/code&gt;. This function is not vectorized, therefore I use a loop. Takes some time so I saved the results and load them.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers &amp;lt;- NULL
+for (i in 1:length(followers$user_id)){
+  tmp &amp;lt;- try(lookup_users(followers$user_id[i], retryonratelimit = TRUE), silent = TRUE)
+  if (length(tmp) == 1){
+    next
+  } else {
+    tmp$listed_count &amp;lt;- NULL # get rid of this column which raised some format issues, we do not it anyway
+    details_followers &amp;lt;- bind_rows(details_followers, tmp)
+  }
+}
+save(details_followers, file = &amp;quot;details_followers.RData&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What info do we have?&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;load(&amp;quot;dat/details_followers.RData&amp;quot;)
+names(details_followers)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;id&amp;quot;                      &amp;quot;id_str&amp;quot;                 
+##  [3] &amp;quot;name&amp;quot;                    &amp;quot;screen_name&amp;quot;            
+##  [5] &amp;quot;location&amp;quot;                &amp;quot;description&amp;quot;            
+##  [7] &amp;quot;url&amp;quot;                     &amp;quot;protected&amp;quot;              
+##  [9] &amp;quot;followers_count&amp;quot;         &amp;quot;friends_count&amp;quot;          
+## [11] &amp;quot;created_at&amp;quot;              &amp;quot;favourites_count&amp;quot;       
+## [13] &amp;quot;verified&amp;quot;                &amp;quot;statuses_count&amp;quot;         
+## [15] &amp;quot;profile_image_url_https&amp;quot; &amp;quot;profile_banner_url&amp;quot;     
+## [17] &amp;quot;default_profile&amp;quot;         &amp;quot;default_profile_image&amp;quot;  
+## [19] &amp;quot;withheld_in_countries&amp;quot;   &amp;quot;entities&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In more details.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;str(details_followers, max = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &#39;data.frame&#39;:	5025 obs. of  20 variables:
+##  $ id                     : num  1.03e+18 1.42e+18 1.32e+09 1.42e+18 1.36e+18 ...
+##  $ id_str                 : chr  &amp;quot;1026053171024736258&amp;quot; &amp;quot;1419513064697712640&amp;quot; &amp;quot;1317282258&amp;quot; &amp;quot;1419222504367927296&amp;quot; ...
+##  $ name                   : chr  &amp;quot;Dr. Zoe Nhleko&amp;quot; &amp;quot;akash Shelke&amp;quot; &amp;quot;Rilwan Ugbedeojo&amp;quot; &amp;quot;Thaana Van Dessel&amp;quot; ...
+##  $ screen_name            : chr  &amp;quot;ZoeNhleko&amp;quot; &amp;quot;akashSh88945929&amp;quot; &amp;quot;abuhrilwan&amp;quot; &amp;quot;ThaanaD&amp;quot; ...
+##  $ location               : chr  &amp;quot;United States&amp;quot; &amp;quot;&amp;quot; &amp;quot;Lagos, Nigeria&amp;quot; &amp;quot;France&amp;quot; ...
+##  $ description            : chr  &amp;quot;Wildlife ecologist with experience on African large mammals. PhD from @UF. Looking for job opportunities in eco&amp;quot;| __truncated__ &amp;quot;&amp;quot; &amp;quot;MSc, Plant Ecology | Seeking PhD Position in Community Ecology | Civic Leader | YALI RLC &amp;amp; African Presidential&amp;quot;| __truncated__ &amp;quot;MSc student majoring in Animal Ecology @WURanimal. \nFocused on Conservation Behavior &amp;amp; Human-Wildlife Coexistence.&amp;quot; ...
+##  $ url                    : chr  &amp;quot;https://t.co/uaFY2L8BnL&amp;quot; NA NA NA ...
+##  $ protected              : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+##  $ followers_count        : int  2878 1 244 0 2856 4 112 6 69 476 ...
+##  $ friends_count          : int  1325 223 2030 14 2575 99 344 32 73 1671 ...
+##  $ created_at             : chr  &amp;quot;Sun Aug 05 10:31:53 +0000 2018&amp;quot; &amp;quot;Mon Jul 26 04:21:18 +0000 2021&amp;quot; &amp;quot;Sat Mar 30 22:35:27 +0000 2013&amp;quot; &amp;quot;Sun Jul 25 09:06:36 +0000 2021&amp;quot; ...
+##  $ favourites_count       : int  8003 0 1843 1 12360 0 484 0 83 713 ...
+##  $ verified               : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+##  $ statuses_count         : int  7261 0 670 1 2112 0 141 0 30 926 ...
+##  $ profile_image_url_https: chr  &amp;quot;https://pbs.twimg.com/profile_images/1306353853571280896/rk9qAxoa_normal.jpg&amp;quot; &amp;quot;https://pbs.twimg.com/profile_images/1419513134142738433/erR2XRwf_normal.png&amp;quot; &amp;quot;https://pbs.twimg.com/profile_images/1413368052012433413/EyzbYfWB_normal.jpg&amp;quot; &amp;quot;https://pbs.twimg.com/profile_images/1419222962566217731/TQT96npR_normal.jpg&amp;quot; ...
+##  $ profile_banner_url     : chr  &amp;quot;https://pbs.twimg.com/profile_banners/1026053171024736258/1533465589&amp;quot; NA &amp;quot;https://pbs.twimg.com/profile_banners/1317282258/1624183687&amp;quot; &amp;quot;https://pbs.twimg.com/profile_banners/1419222504367927296/1627205254&amp;quot; ...
+##  $ default_profile        : logi  TRUE TRUE FALSE TRUE TRUE TRUE ...
+##  $ default_profile_image  : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+##  $ withheld_in_countries  :List of 5025
+##  $ entities               :List of 5025
+##  - attr(*, &amp;quot;tweets&amp;quot;)=&#39;data.frame&#39;:	1 obs. of  36 variables:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;data-exploration-and-visualisation&#34;&gt;Data exploration and visualisation&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s display the 100 bigger accounts that follow me. First thing I learned. It is humbling to be followed by influential individuals I admire like @MicrobiomDigest, @nathanpsmad, @FrancoisTaddei, @freakonometrics, @allison_horst, @HugePossum, @apreshill and scientific journals, institutions and societies.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;% 
+  arrange(-followers_count) %&amp;gt;%
+  select(screen_name,
+         followers_count, 
+         friends_count, 
+         favourites_count) %&amp;gt;% 
+  head(n = 100)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##         screen_name followers_count friends_count favourites_count
+## 1     dianefrancis1          230560        132635               70
+## 2    simongerman600          218444        209489            56976
+## 3       WildlifeMag          191613         23995            14697
+## 4     cagrimbakirci          170164          9401            21334
+## 5       BernardMarr          130900         29532            15764
+## 6          ZotovMax          119625        133610              894
+## 7          _atanas_          116717         74266           102899
+## 8   MicrobiomDigest          105825         33779            98199
+## 9          Eliances           97488         94488            15164
+## 10      PLOSBiology           89263          6646             4278
+## 11            IPBES           78086         11797            53957
+## 12           7wData           76131         84155            74609
+## 13    biconnections           63802         52918            91970
+## 14   aydintufekci43           60212         22627            99427
+## 15      AliceVachet           56381          2320           182435
+## 16         Pr_Logos           52482         50520            19852
+## 17     DrJoeNyangon           51296         20858             1413
+## 18   derekantoncich           48823         51449              347
+## 19      Afro_Herper           45215          3392           117693
+## 20       KumarAGarg           43461         47795             4052
+## 21       GatelyMark           41500         37944             1153
+## 22         overleaf           41306          7830            35289
+## 23         figshare           40610         38361            10395
+## 24         mlamons1           40415         29364             2498
+## 25          coraman           40398          2169            16548
+## 26   BritishEcolSoc           37394          1143            11685
+## 27      nathanpsmad           36760          5312            43729
+## 28   WildlifeRescue           34843          7976            61284
+## 29       rudyagovic           34063         28147             3708
+## 30   grp_resilience           34011          7998             3559
+## 31           JNakev           33427         28532            29442
+## 32   FrancoisTaddei           32631         17903            23894
+## 33      RunEducator           31248         19848            17522
+## 34      LarryLLapin           30782         34265              501
+## 35      _Alex_Iaco_           30775         26720             2390
+## 36           owasow           30562         12932            36909
+## 37         JEcology           30534           689             3312
+## 38        valmasdel           28972          4512             4334
+## 39  freakonometrics           28038         15112            31106
+## 40  MethodsEcolEvol           26207         10347             2083
+## 41          mmw_lmw           26014         12157             1068
+## 42  drmichellelarue           25424          6281            56120
+## 43    nicolasberrod           25258          6042            12990
+## 44         DD_NaNa_           24253         11051            39916
+## 45      callin_bull           24106          2831            10572
+## 46        INEE_CNRS           23483          1873             5089
+## 47    Datascience__           22793         10695              216
+## 48    VisualPersist           22779          5599            79872
+## 49     coywolfassoc           22203         19491             9470
+## 50        RBGSydney           20259         16049            13435
+## 51    allison_horst           19289          2865             7725
+## 52         rhskraus           18429         20029             3503
+## 53      fred_sallee           18144         18995             3423
+## 54         thembauk           17748          2066             3260
+## 55     parolesdhist           17257          7136             7497
+## 56   CREAF_ecologia           16654          3201            11899
+## 57    ChamboncelLea           16609          4059             9797
+## 58       HugePossum           16461         12732             7806
+## 59  ScientistFemale           16379          9039             2079
+## 60    sophie_e_hill           16292          5811            10315
+## 61  mohamma64508589           16130         14550            24584
+## 62      SamuelHayat           15999          3068             9767
+## 63    MathieuAvanzi           15890          1604             8526
+## 64          Erky321           15859         16284             4841
+## 65       ConLetters           15482          5547             1489
+## 66   oceansresearch           14969          1759             7599
+## 67      WCSNewsroom           14926         11224             7277
+## 68     CMastication           14687          8091            31769
+## 69        apreshill           14106          1607            32806
+## 70     SumanMalla10           13872         11977            10946
+## 71     umontpellier           13667          1360             8745
+## 72     WriteNThrive           13615         13523             7631
+## 73     abdirashidmd           13586          2389            18417
+## 74      JackKinross           13392         11263              774
+## 75     PaulREhrlich           13383         14208                1
+## 76       teppofelin           13330         12410              264
+## 77  ConservOptimism           13249          4306            15648
+## 78         jepeteso           13137         13595             3420
+## 79         gwintrob           12484          8751            43479
+## 80     SallyR_ISLHE           12411         12477            28924
+## 81         ActuIAFr           12321          8856             2495
+## 82         Booksmag           12282          1785              332
+## 83  jusoneoftoomany           12212         11049             2296
+## 84    galaxyproject           12208          8757              813
+## 85  thepostdoctoral           12186         12802              814
+## 86   FrontMarineSci           11498          5733             5832
+## 87          jobRxiv           11442           872              786
+## 88  EcographyJourna           11381          1465             4938
+## 89  davidghamilton1           11242          2231            16244
+## 90      5amStartups           11170         12370           147062
+## 91   RosmarieKatrin           11079         11159             4060
+## 92   ScienceAndMaps           11043          8679             3596
+## 93       joelgombin           11012         10335            10868
+## 94     SteveLenhert           10990          8328              669
+## 95      Naturevolve           10973         11349             7500
+## 96   cookinforpeace           10655          2861            17519
+## 97     DrPaulEvans1           10537          7927             3131
+## 98          Ibycter           10517          4450            47359
+## 99  Sciencecomptoir           10436          1268            15800
+## 100   SteveAtLogikk           10421          8864            13123
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Where do my followers come from? Second thing I learnt. Followers are folks from France (my home), USA, UK, Canada, Australia, and other European countries. I was happy to realize that I have followers from other parts of the world too, in India, South Africa, Brazil, Peru, Mexico, Nepal, Argentina, Kenya, Bangladesh, etc. and from Greece (my other home).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;% 
+  mutate(location = str_replace(location, &amp;quot;.*France.*&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*England&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*United Kingdom&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*London&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Scotland&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Montpellier&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Canada, BC.*&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*New Caledonia&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Marseille&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Grenoble&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Perú&amp;quot;, &amp;quot;Peru&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Martinique&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*La Rochelle&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Grenoble, Rhône-Alpes&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Avignon&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Paris&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*paris&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*france&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bordeaux&amp;quot;, &amp;quot;France&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Mytilene, Lesvos, Greece&amp;quot;, &amp;quot;Greece&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Mytiline, Greece&amp;quot;, &amp;quot;Greece&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Germany.*&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Vienna, Austria&amp;quot;, &amp;quot;Austria&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Arusha, Tanzania&amp;quot;, &amp;quot;Tanzania&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Athens&amp;quot;, &amp;quot;Greece&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bangor, ME&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bangor, Wales&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Baton Rouge, LA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Lisboa, Portugal&amp;quot;, &amp;quot;Portugal&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Oslo&amp;quot;, &amp;quot;Norway&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Islamic Republic of Iran&amp;quot;, &amp;quot;Iran&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Madrid, España&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Madrid&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Madrid, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Rome, Italy&amp;quot;, &amp;quot;Italy&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Santiago, Chile&amp;quot;, &amp;quot;Chile&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Belém, Brazil&amp;quot;, &amp;quot;Brazil&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Belo Horizonte, Brazil&amp;quot;, &amp;quot;Brazil&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Berlin&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Mexico, ME&amp;quot;, &amp;quot;Mexico&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Mexico City&amp;quot;, &amp;quot;Mexico&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Santiago, Chile&amp;quot;, &amp;quot;Chile&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Ontario&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Aberdeen&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Cambridge&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bologna, Emilia Romagna&amp;quot;, &amp;quot;Italy&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bogotá, D.C., Colombia&amp;quot;, &amp;quot;Colombia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Medellín, Colombia&amp;quot;, &amp;quot;Colombia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bruxelles, Belgique&amp;quot;, &amp;quot;Belgium&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Brasil&amp;quot;, &amp;quot;Brazil&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Budweis, Czech Republic&amp;quot;, &amp;quot;Czech Republic&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Calgary, Alberta&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Canada, BC&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Cardiff, Wales&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Brisbane&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Sydney&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Queensland&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Australia&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Germany&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Vancouver&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Ottawa, Ontario&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Québec, Canada&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Winnipeg, Manitoba&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*New South Wales&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Victoria&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*British Columbia&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Norway&amp;quot;, &amp;quot;Norway&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Finland&amp;quot;, &amp;quot;Finland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*South Africa&amp;quot;, &amp;quot;South Africa&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Switzerland&amp;quot;, &amp;quot;Switzerland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*OK&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*KS&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MS&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*WA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MD&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Colorado&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Community of Valencia, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dunedin City, New Zealand&amp;quot;, &amp;quot;New Zealand&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Rio Claro, Brasil&amp;quot;, &amp;quot;Brazil&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Saskatoon, Saskatchewan&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Sherbrooke, Québec&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*United Kingdom.*&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*University of Oxford&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*University of St Andrews&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*ID&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*NE&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*United States of America, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Spain, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Wisconsin, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Florida, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Liege, Belgium&amp;quot;, &amp;quot;Belgium&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Ghent, Belgium&amp;quot;, &amp;quot;Belgium&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Pune, India&amp;quot;, &amp;quot;India&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Hyderabad, India&amp;quot;, &amp;quot;India&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Prague, Czech Republic&amp;quot;, &amp;quot;Czech Republic&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Canada, BC, Canada&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*United States.*&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*DC&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*FL&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*GA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*HI&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*ME&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MI&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*PA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*NC&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MO&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*NY&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*NH&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*IL&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*NM&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MT&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*OR&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*WY&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*WI&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*MN&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*CT&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*TX&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*VA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*OH&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Massachusetts, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*California, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Montréal, Québec&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Edmonton, Alberta&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Toronto, Ontario&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Canada, Canada&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Montreal&amp;quot;, &amp;quot;Canada&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Lisbon, Portugal&amp;quot;, &amp;quot;Portugal&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Coimbra, Portugal&amp;quot;, &amp;quot;Portugal&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Cork, Ireland&amp;quot;, &amp;quot;Ireland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dublin City, Ireland&amp;quot;, &amp;quot;Ireland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Barcelona, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Barcelona&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Leipzig&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Seville, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Seville, Spain&amp;quot;, &amp;quot;Spain&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Buenos Aires, Argentina&amp;quot;, &amp;quot;Argentina&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Rio de Janeiro, Brazil&amp;quot;, &amp;quot;Brazil&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Canberra&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_remove(location, &amp;quot;Global&amp;quot;),
+         location = str_remove(location, &amp;quot;Earth&amp;quot;),
+         location = str_remove(location, &amp;quot;Worldwide&amp;quot;),
+         location = str_remove(location, &amp;quot;Europe&amp;quot;),
+         location = str_remove(location, &amp;quot;  &amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dhaka, Bangladesh&amp;quot;, &amp;quot;Bangladesh&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Copenhagen, Denmark&amp;quot;, &amp;quot;Denmark&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Amsterdam, The Netherlands&amp;quot;, &amp;quot;The Netherlands&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Groningen, Nederland&amp;quot;, &amp;quot;The Netherlands&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Wageningen, Nederland&amp;quot;, &amp;quot;The Netherlands&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Aarhus, Denmark&amp;quot;, &amp;quot;Denmark&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Antwerp, Belgium&amp;quot;, &amp;quot;Belgium&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Aveiro, Portugal&amp;quot;, &amp;quot;Portugal&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Australia, AUS&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Australian National University&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Auckland, New Zealand&amp;quot;, &amp;quot;New Zealand&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Belfast, Northern Ireland&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Ireland&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Hobart, Tasmania&amp;quot;, &amp;quot;Australia&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dhaka, Bangladesh&amp;quot;, &amp;quot;Bangladesh&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Nairobi, Kenya&amp;quot;, &amp;quot;Kenya&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dhaka, Bangladesh&amp;quot;, &amp;quot;Bangladesh&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Berlin, Deutschland&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Munich, Bavaria&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Dehradun, India&amp;quot;, &amp;quot;India&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Bengaluru, India&amp;quot;, &amp;quot;India&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Berlin, Deutschland&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Deutschland&amp;quot;, &amp;quot;Germany&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Edinburgh&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Glasgow&amp;quot;, &amp;quot;United Kingdom&amp;quot;),
+         location = str_replace(location, &amp;quot;.*New York, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Washington, USA&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*California&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*California&amp;quot;, &amp;quot;United States of America&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Christchurch City, New Zealand&amp;quot;, &amp;quot;New Zealand&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Harare, Zimbabwe&amp;quot;, &amp;quot;Zimbabwe&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Islamabad, Pakistan&amp;quot;, &amp;quot;Pakistan&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Kolkata, India&amp;quot;, &amp;quot;India&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Lagos, Nigeria&amp;quot;, &amp;quot;Nigeria&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Lima, Peru&amp;quot;, &amp;quot;Peru&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Valparaíso, Chile&amp;quot;, &amp;quot;Chile&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Uppsala, Sweden&amp;quot;, &amp;quot;Sweden&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Uppsala, Sverige&amp;quot;, &amp;quot;Sweden&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Stockholm, Sweden&amp;quot;, &amp;quot;Sweden&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Stockholm&amp;quot;, &amp;quot;Sweden&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Turin, Piedmont&amp;quot;, &amp;quot;Italy&amp;quot;),
+         location = str_replace(location, &amp;quot;.*University of Iceland&amp;quot;, &amp;quot;Iceland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*University of Helsinki&amp;quot;, &amp;quot;Finland&amp;quot;),
+         location = str_replace(location, &amp;quot;.*Tucumán, Argentina&amp;quot;, &amp;quot;Argentina&amp;quot;),
+         location = str_replace(location, &amp;quot;.*The Hague, The Netherlands&amp;quot;, &amp;quot;The Netherlands&amp;quot;),
+         location = str_replace(location, &amp;quot;.*UK&amp;quot;, &amp;quot;United Kingdom&amp;quot;)
+  ) %&amp;gt;%
+  count(location, sort = TRUE) %&amp;gt;%
+  #slice(-40) %&amp;gt;%
+  head(n = 45) -&amp;gt; followers_by_country
+followers_by_country
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                    location    n
+## 1                           1273
+## 2  United States of America  606
+## 3                    France  571
+## 4            United Kingdom  473
+## 5                    Canada  166
+## 6                   Germany  130
+## 7                 Australia  112
+## 8                    Norway   50
+## 9               Switzerland   43
+## 10                    Spain   34
+## 11                    India   33
+## 12             South Africa   32
+## 13                   Brazil   30
+## 14                 Portugal   27
+## 15                  Finland   26
+## 16                   Sweden   18
+## 17                  Belgium   17
+## 18                    Italy   16
+## 19          The Netherlands   14
+## 20              New Zealand   13
+## 21                     Peru   13
+## 22                  Denmark   11
+## 23                   Mexico   11
+## 24                    Nepal   10
+## 25                Argentina    9
+## 26                    Kenya    9
+## 27               Bangladesh    8
+## 28                    Chile    8
+## 29                   Greece    8
+## 30                 Colombia    6
+## 31           Czech Republic    6
+## 32                Singapore    6
+## 33                  Iceland    5
+## 34                  Senegal    5
+## 35                     Iran    4
+## 36                  Nigeria    4
+## 37                 Pakistan    4
+## 38                 Tanzania    4
+## 39                 Zimbabwe    4
+## 40                             3
+## 41                  Austria    3
+## 42                  Ecuador    3
+## 43                Guatemala    3
+## 44                Hong Kong    3
+## 45               Luxembourg    3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s have a look to the same info on a quick and dirty map. White countries do not appear in the 45 countries with most followers, or do not have any followers.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(rworldmap)
+library(classInt)
+spdf &amp;lt;- joinCountryData2Map(followers_by_country, 
+                            joinCode=&amp;quot;NAME&amp;quot;,
+                            nameJoinColumn=&amp;quot;location&amp;quot;,
+                            verbose=TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 43 codes from your data successfully matched countries in the map
+## 2 codes from your data failed to match with a country code in the map
+##      failedCodes failedCountries
+## [1,] &amp;quot;&amp;quot;          &amp;quot;&amp;quot;             
+## [2,] &amp;quot;&amp;quot;          &amp;quot; &amp;quot;            
+## 200 codes from the map weren&#39;t represented in your data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;classInt &amp;lt;- classIntervals(spdf$n,
+                           n=9, 
+                           style = &amp;quot;jenks&amp;quot;)
+catMethod &amp;lt;- classInt[[&amp;quot;brks&amp;quot;]]
+library(RColorBrewer)
+colourPalette &amp;lt;- brewer.pal(9,&#39;RdPu&#39;)
+mapParams &amp;lt;- mapCountryData(spdf,
+                            nameColumnToPlot=&amp;quot;n&amp;quot;,
+                            addLegend=FALSE,
+                            catMethod = catMethod,
+                            colourPalette=colourPalette,
+                            mapTitle=&amp;quot;Number of followers per country&amp;quot;)
+do.call(addMapLegend,
+        c(mapParams,
+          legendLabels=&amp;quot;all&amp;quot;,
+          legendWidth=0.5,
+          legendIntervals=&amp;quot;data&amp;quot;,
+          legendMar = 2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-12-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;How many followers are verified?&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;% 
+  count(verified)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   verified    n
+## 1    FALSE 5009
+## 2     TRUE   16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Who are the verified users? Scientific entities, but also some scientists.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;%
+  filter(verified==TRUE) %&amp;gt;%
+  select(name, screen_name, location, followers_count) %&amp;gt;%
+  arrange(-followers_count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                                          name     screen_name
+## 1                          Çağrı Mert Bakırcı   cagrimbakirci
+## 2                               Elisabeth Bik MicrobiomDigest
+## 3                                       ipbes           IPBES
+## 4  Dr. Earyn McGee, Lizard lassoer \U0001f98e     Afro_Herper
+## 5                                    figshare        figshare
+## 6                       Nathan Peiffer-Smadja     nathanpsmad
+## 7                           Wildlife Alliance  WildlifeRescue
+## 8                          Arthur Charpentier freakonometrics
+## 9                          L&#39;écologie au CNRS       INEE_CNRS
+## 10            The Royal Botanic Garden Sydney       RBGSydney
+## 11                                      CREAF  CREAF_ecologia
+## 12                          Jean-Paul Carrera    JeanCarrPaul
+## 13                                    Deckset      decksetapp
+## 14                           𝙳𝚞𝚌-𝚀𝚞𝚊𝚗𝚐 𝙽𝚐𝚞𝚢𝚎𝚗          duc_qn
+## 15              Christophe Josset  \U0001f4dd         CJosset
+## 16                                 Casey Fung    TheCaseyFung
+##                       location followers_count
+## 1                   Texas, USA          170164
+## 2            San Francisco, CA          105825
+## 3                Bonn, Germany           78086
+## 4                United States           45215
+## 5                       London           40610
+## 6               Paris - London           36760
+## 7         Phnom Penh, Cambodia           34843
+## 8             Montréal, Québec           28038
+## 9                                        23483
+## 10     Sydney, New South Wales           20259
+## 11      Bellaterra (Barcelona)           16654
+## 12             Oxford, England            5744
+## 13                    Your Mac            3884
+## 14       Lausanne, Switzerland            2808
+## 15               Paris, France            2002
+## 16 Bundjalung Country | Mullum            1612
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;How old are my followers, where age is defined as the time elapsed since they created their Twitter account. Twitter was created in 2006. I created my account in July 2016 but started using it only two or three years ago I&amp;rsquo;d say. This dataviz is not too much informative I guess.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;% 
+  mutate(month = created_at %&amp;gt;% str_split(&amp;quot; &amp;quot;) %&amp;gt;% map_chr(2),
+         day = created_at %&amp;gt;% str_split(&amp;quot; &amp;quot;) %&amp;gt;% map_chr(3),
+         year = created_at %&amp;gt;% str_split(&amp;quot; &amp;quot;) %&amp;gt;% map_chr(6),
+         created_at = paste0(month,&amp;quot;-&amp;quot;,year),
+         created_at = lubridate::my(created_at)) %&amp;gt;%
+  group_by(created_at) %&amp;gt;%
+  summarise(counts = n()) %&amp;gt;%
+  ggplot(aes(x = created_at, y = counts)) +
+  geom_line() +
+  labs(x = &amp;quot;date of creation&amp;quot;, y = &amp;quot;how many accounts were created this month-year&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-15-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;What is the distribution of the number of followers and friends. On average, 400 followers and 400 friends.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;foll &amp;lt;- details_followers %&amp;gt;%
+  ggplot() + 
+  aes(x = log(followers_count)) + 
+  geom_histogram(fill=&amp;quot;#69b3a2&amp;quot;, color=&amp;quot;#e9ecef&amp;quot;, alpha=0.9) + 
+  labs(x = &amp;quot;log number of followers&amp;quot;, y = &amp;quot;counts&amp;quot;, title = &amp;quot;followers&amp;quot;)
+
+friends &amp;lt;- details_followers %&amp;gt;%
+  ggplot() + 
+  aes(x = log(friends_count)) + 
+  geom_histogram(fill=&amp;quot;#69b3a2&amp;quot;, color=&amp;quot;#e9ecef&amp;quot;, alpha=0.9) + 
+  labs(x = &amp;quot;log number of friends&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;friends&amp;quot;)
+
+library(patchwork)
+foll + friends
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-16-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;retrieving-social-links&#34;&gt;Retrieving social links&lt;/h2&gt;
+&lt;p&gt;To investigate the social network made of my followers, we need to gather who they follow, and their followers. Unfortunately, the Twitter API imposes some time and quantity constraints in retrieving data.&lt;/p&gt;
+&lt;p&gt;Here, for the sake of illustration, I will focus on some accounts only. To do so, I consider accounts with between 1000 and 1500 followers, and more than 30000 tweets users have liked in their account&amp;rsquo;s lifetime (which denotes some activity). The more followers we consider, the more time it would take to gather info on them: it is approx one minute per follower on average, so one hour for sixty followers, and more than eighty hours for all my followers! With the filters I&amp;rsquo;m using, I end up with 35 followers here, this is very few to say infer meaningful about a network, but it&amp;rsquo;ll do the job for now.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;some_followers &amp;lt;- details_followers %&amp;gt;% 
+  filter((followers_count &amp;gt; 1000 &amp;amp; followers_count &amp;lt; 1500),
+         favourites_count &amp;gt; 30000) # %&amp;gt;% nrow()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Create empty list and name it after their screen name.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;foler &amp;lt;- vector(mode = &#39;list&#39;, length = length(some_followers$screen_name))
+names(foler) &amp;lt;- some_followers$screen_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Get followers of these selected followers. Takes ages, so save and load later.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;for (i in 1:length(some_followers$screen_name)) {
+  message(&amp;quot;Getting followers for user #&amp;quot;, i, &amp;quot;/&amp;quot;, nrow(some_followers))
+  foler[[i]] &amp;lt;- get_followers(some_followers$screen_name[i], 
+                              n = some_followers$followers_count[i], 
+                              retryonratelimit = TRUE)
+  if(i %% 5 == 0){
+    message(&amp;quot;sleep for 5 minutes&amp;quot;)
+    Sys.sleep(5*60)
+    }
+}
+save(foler, file = &amp;quot;foler.RData&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Format the data.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;load(&amp;quot;dat/foler.RData&amp;quot;)
+folerx &amp;lt;- bind_rows(foler, .id = &amp;quot;screen_name&amp;quot;)
+active_fol_x &amp;lt;- some_followers %&amp;gt;% select(id_str, screen_name)
+foler_join &amp;lt;- left_join(folerx, some_followers, by = &amp;quot;screen_name&amp;quot;)
+algo_follower &amp;lt;- foler_join %&amp;gt;% 
+  select(id_str, screen_name) %&amp;gt;%
+  setNames(c(&amp;quot;follower&amp;quot;, &amp;quot;active_user&amp;quot;)) %&amp;gt;% 
+  na.omit()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Get friends of my followers. Takes ages. Again I save and load later.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;friend &amp;lt;- data.frame()
+for (i in seq_along(some_followers$screen_name)) {
+  message(&amp;quot;Getting following for user #&amp;quot;, i ,&amp;quot;/&amp;quot;,nrow(some_followers))
+  kk &amp;lt;- get_friends(some_followers$screen_name[i],
+                    n = some_followers$friends_count[i],
+                    retryonratelimit = TRUE)
+  friend &amp;lt;- rbind(friend, kk)
+  if(i %% 15 == 0){
+    message(&amp;quot;sleep for 15 minutes&amp;quot;)
+    Sys.sleep(15*60+1)
+  }
+}
+save(friend, file = &amp;quot;friend.RData&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Format the data.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;load(&amp;quot;dat/friend.RData&amp;quot;)
+all_friend &amp;lt;- friend %&amp;gt;% setNames(c(&amp;quot;screen_name&amp;quot;, &amp;quot;user_id&amp;quot;))
+all_friendx &amp;lt;- left_join(all_friend, active_fol_x, by=&amp;quot;screen_name&amp;quot;)
+algo_friend &amp;lt;- all_friendx %&amp;gt;% select(user_id, screen_name) %&amp;gt;%
+  setNames(c(&amp;quot;following&amp;quot;,&amp;quot;active_user&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that we have all info on followers and friends, we&amp;rsquo;re gonna build the network of people who follow each other.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;un_active &amp;lt;- unique(algo_friend$active_user) %&amp;gt;% 
+  data.frame(stringsAsFactors = F) %&amp;gt;%
+  setNames(&amp;quot;active_user&amp;quot;)
+algo_mutual &amp;lt;- data.frame()
+for (i in seq_along(un_active$active_user)){
+  aa &amp;lt;- algo_friend %&amp;gt;% 
+    filter(active_user == un_active$active_user[i])
+  bb &amp;lt;- aa %&amp;gt;% filter(aa$following %in% algo_follower$follower) %&amp;gt;%
+    setNames(c(&amp;quot;mutual&amp;quot;,&amp;quot;active_user&amp;quot;))
+  
+  algo_mutual &amp;lt;- rbind(algo_mutual,bb)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Instead of ids, we use screen names.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;detail_friend &amp;lt;- lookup_users(algo_mutual$mutual)
+algo_mutual &amp;lt;- algo_mutual %&amp;gt;% 
+  left_join(detail_friend, by = c(&amp;quot;mutual&amp;quot; = &amp;quot;id_str&amp;quot;)) %&amp;gt;% 
+  na.omit() %&amp;gt;%
+  select(mutual, active_user, screen_name)
+algo_mutual
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 18 × 3
+##    mutual             active_user     screen_name    
+##    &amp;lt;chr&amp;gt;              &amp;lt;chr&amp;gt;           &amp;lt;chr&amp;gt;          
+##  1 824265743575306243 g33k5p34k       robbie_emmet   
+##  2 761735501707567104 g33k5p34k       LauraBlissEco  
+##  3 1439272374         alexnicolharper LeafyEricScott 
+##  4 824265743575306243 alexnicolharper robbie_emmet   
+##  5 21467726           alexnicolharper g33k5p34k      
+##  6 4181949437         LegalizeBrain   EvpokPadding   
+##  7 824265743575306243 Souzam7139      robbie_emmet   
+##  8 888890201673580548 Souzam7139      mellenmartin   
+##  9 824265743575306243 mellenmartin    robbie_emmet   
+## 10 21467726           LauraBlissEco   g33k5p34k      
+## 11 831398755920445440 JosiahParry     RoelandtN42    
+## 12 4181949437         gau             EvpokPadding   
+## 13 21467726           robbie_emmet    g33k5p34k      
+## 14 4159201575         robbie_emmet    alexnicolharper
+## 15 888890201673580548 robbie_emmet    mellenmartin   
+## 16 29538964           EvpokPadding    gau            
+## 17 1439272374         lifedispersing  LeafyEricScott 
+## 18 301687349          RoelandtN42     JosiahParry
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Add my account to the network.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;un_active &amp;lt;- un_active %&amp;gt;% 
+  mutate(mutual = rep(&amp;quot;oaggimenez&amp;quot;))
+un_active &amp;lt;- un_active[,c(2,1)]
+un_active &amp;lt;- un_active %&amp;gt;% 
+  setNames(c(&amp;quot;active_user&amp;quot;,&amp;quot;screen_name&amp;quot;))
+algo_mutual &amp;lt;- bind_rows(algo_mutual %&amp;gt;% select(-mutual), un_active)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For what follows, we will need packages to work with networks.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(igraph)
+library(tidygraph)
+library(ggraph)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we create the edges, nodes and build the network.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;nodes &amp;lt;- data.frame(V = unique(c(algo_mutual$screen_name,algo_mutual$active_user)),
+                    stringsAsFactors = F)
+
+edges &amp;lt;- algo_mutual %&amp;gt;% 
+  setNames(c(&amp;quot;from&amp;quot;,&amp;quot;to&amp;quot;))
+network_ego1 &amp;lt;- graph_from_data_frame(d = edges, vertices = nodes, directed = F) %&amp;gt;%
+  as_tbl_graph()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;network-metrics&#34;&gt;Network metrics&lt;/h2&gt;
+&lt;p&gt;Create communities using &lt;code&gt;group_louvain()&lt;/code&gt; algorithm, and calculate standard metrics using &lt;code&gt;tidygraph&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(123)
+network_ego1 &amp;lt;- network_ego1 %&amp;gt;% 
+  activate(nodes) %&amp;gt;% 
+  mutate(community = as.factor(group_louvain())) %&amp;gt;%
+  mutate(degree_c = centrality_degree()) %&amp;gt;%
+  mutate(betweenness_c = centrality_betweenness(directed = F,normalized = T)) %&amp;gt;%
+  mutate(closeness_c = centrality_closeness(normalized = T)) %&amp;gt;%
+  mutate(eigen = centrality_eigen(directed = F))
+network_ego_df &amp;lt;- as.data.frame(network_ego1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Identify key nodes with respect to network metrics.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;network_ego_df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##               name community degree_c betweenness_c closeness_c     eigen
+## 1     robbie_emmet         2        8  0.0049299720   0.5384615 0.5238676
+## 2    LauraBlissEco         2        3  0.0000000000   0.5147059 0.2717415
+## 3   LeafyEricScott         5        3  0.0008403361   0.5223881 0.2287709
+## 4        g33k5p34k         2        6  0.0024649860   0.5303030 0.4342056
+## 5     EvpokPadding         3        4  0.0011204482   0.5223881 0.2336052
+## 6     mellenmartin         2        4  0.0000000000   0.5223881 0.3371889
+## 7      RoelandtN42         4        3  0.0000000000   0.5147059 0.2050991
+## 8  alexnicolharper         2        5  0.0019607843   0.5303030 0.3942456
+## 9              gau         3        3  0.0000000000   0.5147059 0.2133909
+## 10     JosiahParry         4        3  0.0000000000   0.5147059 0.2050991
+## 11     genius_c137         1        1  0.0000000000   0.5072464 0.1454399
+## 12            Zjbb         1        1  0.0000000000   0.5072464 0.1454399
+## 13       SJRAfloat         1        1  0.0000000000   0.5072464 0.1454399
+## 14 BMPARMA17622540         1        1  0.0000000000   0.5072464 0.1454399
+## 15    maryam_adeli         1        1  0.0000000000   0.5072464 0.1454399
+## 16       waywardaf         1        1  0.0000000000   0.5072464 0.1454399
+## 17         SusyVF6         1        1  0.0000000000   0.5072464 0.1454399
+## 18       Sinalo_NM         1        1  0.0000000000   0.5072464 0.1454399
+## 19      Leila_Lula         1        1  0.0000000000   0.5072464 0.1454399
+## 20       CARThorpe         1        1  0.0000000000   0.5072464 0.1454399
+## 21  j_wilson_white         1        1  0.0000000000   0.5072464 0.1454399
+## 22   LegalizeBrain         3        2  0.0000000000   0.5147059 0.1794154
+## 23    JaishriJuice         1        1  0.0000000000   0.5072464 0.1454399
+## 24     jaguaretepy         1        1  0.0000000000   0.5072464 0.1454399
+## 25      Souzam7139         2        3  0.0000000000   0.5223881 0.2706719
+## 26        LaLince_         1        1  0.0000000000   0.5072464 0.1454399
+## 27      Nina_Ella_         1        1  0.0000000000   0.5072464 0.1454399
+## 28          samcox         1        1  0.0000000000   0.5072464 0.1454399
+## 29     TAdamsBio42         1        1  0.0000000000   0.5072464 0.1454399
+## 30       brubakerl         1        1  0.0000000000   0.5072464 0.1454399
+## 31         robanhk         1        1  0.0000000000   0.5072464 0.1454399
+## 32       InesCCarv         1        1  0.0000000000   0.5072464 0.1454399
+## 33   groundhog0202         1        1  0.0000000000   0.5072464 0.1454399
+## 34         zenmart         1        1  0.0000000000   0.5072464 0.1454399
+## 35  lifedispersing         5        2  0.0000000000   0.5147059 0.1787123
+## 36      oaggimenez         1       35  0.9685154062   1.0000000 1.0000000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Get users with highest values of each metric.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;kp_ego &amp;lt;- data.frame(
+  network_ego_df %&amp;gt;% arrange(-degree_c) %&amp;gt;% select(name),
+  network_ego_df %&amp;gt;% arrange(-betweenness_c) %&amp;gt;% select(name),
+  network_ego_df %&amp;gt;% arrange(-closeness_c) %&amp;gt;% select(name),
+  network_ego_df %&amp;gt;% arrange(-eigen) %&amp;gt;% select(name)) %&amp;gt;% 
+  setNames(c(&amp;quot;degree&amp;quot;,&amp;quot;betweenness&amp;quot;,&amp;quot;closeness&amp;quot;,&amp;quot;eigen&amp;quot;))
+kp_ego[-1,]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##             degree     betweenness       closeness           eigen
+## 2     robbie_emmet    robbie_emmet    robbie_emmet    robbie_emmet
+## 3        g33k5p34k       g33k5p34k       g33k5p34k       g33k5p34k
+## 4  alexnicolharper alexnicolharper alexnicolharper alexnicolharper
+## 5     EvpokPadding    EvpokPadding  LeafyEricScott    mellenmartin
+## 6     mellenmartin  LeafyEricScott    EvpokPadding   LauraBlissEco
+## 7    LauraBlissEco   LauraBlissEco    mellenmartin      Souzam7139
+## 8   LeafyEricScott    mellenmartin      Souzam7139    EvpokPadding
+## 9      RoelandtN42     RoelandtN42   LauraBlissEco  LeafyEricScott
+## 10             gau             gau     RoelandtN42             gau
+## 11     JosiahParry     JosiahParry             gau     RoelandtN42
+## 12      Souzam7139     genius_c137     JosiahParry     JosiahParry
+## 13   LegalizeBrain            Zjbb   LegalizeBrain   LegalizeBrain
+## 14  lifedispersing       SJRAfloat  lifedispersing  lifedispersing
+## 15     genius_c137 BMPARMA17622540     genius_c137         robanhk
+## 16            Zjbb    maryam_adeli            Zjbb       Sinalo_NM
+## 17       SJRAfloat       waywardaf       SJRAfloat          samcox
+## 18 BMPARMA17622540         SusyVF6 BMPARMA17622540     genius_c137
+## 19    maryam_adeli       Sinalo_NM    maryam_adeli            Zjbb
+## 20       waywardaf      Leila_Lula       waywardaf       SJRAfloat
+## 21         SusyVF6       CARThorpe         SusyVF6 BMPARMA17622540
+## 22       Sinalo_NM  j_wilson_white       Sinalo_NM       waywardaf
+## 23      Leila_Lula   LegalizeBrain      Leila_Lula         SusyVF6
+## 24       CARThorpe    JaishriJuice       CARThorpe      Leila_Lula
+## 25  j_wilson_white     jaguaretepy  j_wilson_white  j_wilson_white
+## 26    JaishriJuice      Souzam7139    JaishriJuice    JaishriJuice
+## 27     jaguaretepy        LaLince_     jaguaretepy     jaguaretepy
+## 28        LaLince_      Nina_Ella_        LaLince_        LaLince_
+## 29      Nina_Ella_          samcox      Nina_Ella_      Nina_Ella_
+## 30          samcox     TAdamsBio42          samcox       brubakerl
+## 31     TAdamsBio42       brubakerl     TAdamsBio42   groundhog0202
+## 32       brubakerl         robanhk       brubakerl         zenmart
+## 33         robanhk       InesCCarv         robanhk    maryam_adeli
+## 34       InesCCarv   groundhog0202       InesCCarv       CARThorpe
+## 35   groundhog0202         zenmart   groundhog0202       InesCCarv
+## 36         zenmart  lifedispersing         zenmart     TAdamsBio42
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Robbie Emmet has the highest degree, betweenness, closeness centrality and eigenvector centrality. He has the most relations with the other nodes in the network. He also can spread information the further away and faster than anyone, and is also surrounded by important persons in the network. This is within the network we&amp;rsquo;ve just built.&lt;/p&gt;
+&lt;p&gt;By the way, Robbie has just passed his dissertation defense, congrats! Follow him on Twitter at @robbie_emmet, he is awesome!&lt;/p&gt;
+&lt;h2 id=&#34;visualize-network&#34;&gt;Visualize Network&lt;/h2&gt;
+&lt;p&gt;We visualize the network using clusters or communities (first three only).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;options(ggrepel.max.overlaps = Inf)
+network_viz &amp;lt;- network_ego1 %&amp;gt;%
+  filter(community %in% 1:3) %&amp;gt;%
+  mutate(node_size = ifelse(degree_c &amp;gt;= 50,degree_c,0)) %&amp;gt;%
+  mutate(node_label = ifelse(betweenness_c &amp;gt;= 0.01,name,NA))
+plot_ego &amp;lt;- network_viz %&amp;gt;% 
+  ggraph(layout = &amp;quot;stress&amp;quot;) +
+  geom_edge_fan(alpha = 0.05) +
+  geom_node_point(aes(color = as.factor(community),size = node_size)) +
+  geom_node_label(aes(label = node_label),nudge_y = 0.1,
+                 show.legend = F, fontface = &amp;quot;bold&amp;quot;, fill = &amp;quot;#ffffff66&amp;quot;) +
+  theme_graph() + 
+  theme(legend.position = &amp;quot;none&amp;quot;) +
+  labs(title = &amp;quot;Top 3 communities&amp;quot;)
+plot_ego
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-31-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s use an alternative dataviz to identify the nodes.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;network_viz %&amp;gt;% 
+  mutate(community = group_spinglass()) %&amp;gt;%
+  ggraph(layout = &amp;quot;nicely&amp;quot;) +
+  geom_edge_fan(alpha = 0.25) +
+  geom_node_point(aes(color = factor(community)),size = 5, show.legend = F) +
+  geom_node_text(aes(label = name),repel = T) +
+  theme_graph() + theme(legend.position = &amp;quot;none&amp;quot;) +
+  labs(title = &amp;quot;Network with named nodes&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-32-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;concluding-words&#34;&gt;Concluding words&lt;/h2&gt;
+&lt;p&gt;Not sure what the communities are about. Due to limitation with the Twitter API I did not attempt to retrieve the info on all the 5,000 followers, but I used only 35 of them, which explains why there is not much to say about this network I guess. I might take some time to try and retrieve all the info (will take days), or not. I might also use some information I already have, like how followers describe themselves and do some topic modelling to identify common themes of interest.&lt;/p&gt;
+&lt;p&gt;Here I have simply followed the steps that Joe Cristian illustrated so brillantly in his post at &lt;a href=&#34;https://algotech.netlify.app/blog/social-network-analysis-in-r/&#34;&gt;https://algotech.netlify.app/blog/social-network-analysis-in-r/&lt;/a&gt;. Make sure you read his post for more details on the code and theory. In particular, he illustrates how information spreads through the network.&lt;/p&gt;
+&lt;p&gt;For more about social network analyses and Twitter, see this thread &lt;a href=&#34;https://twitter.com/Mehdi_Moussaid/status/1389174715990876160?s=20&#34;&gt;https://twitter.com/Mehdi_Moussaid/status/1389174715990876160?s=20&lt;/a&gt; and this video &lt;a href=&#34;https://www.youtube.com/watch?v=UX7YQ6m2r_o&#34;&gt;https://www.youtube.com/watch?v=UX7YQ6m2r_o&lt;/a&gt; in French, this is what inspired me to do the analysis. See also this &lt;a href=&#34;https://github.com/eleurent/twitter-graph&#34;&gt;https://github.com/eleurent/twitter-graph&lt;/a&gt; for a much better analysis than what I could do (with Python for data retrieving and manipulation, and 
+&lt;a href=&#34;https://gephi.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gephi&lt;/a&gt; for network visualisation).&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;This post was also published on &lt;a href=&#34;https://www.r-bloggers.com&#34;&gt;https://www.r-bloggers.com&lt;/a&gt;. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;</description>
+    </item>
     
     <item>
       <title>ISEC 2018 tweets analysis</title>

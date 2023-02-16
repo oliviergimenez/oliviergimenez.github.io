@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nimble | Olivier Gimenez</title>
+    <title>nimble | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/nimble/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/nimble/index.xml" rel="self" type="application/rss+xml" />
-    <description>Nimble</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <description>nimble</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2022</copyright><lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>Nimble</title>
+      <title>nimble</title>
       <link>https://oliviergimenez.github.io/tags/nimble/</link>
     </image>
+    
+    <item>
+      <title>Workshop at ISEC2022 on capture-recapture HMMs and Nimble</title>
+      <link>https://oliviergimenez.github.io/blog/2022-07-01-workshop-at-isec2022-on-capture-recapture-hmms-and-nimble/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-07-01-workshop-at-isec2022-on-capture-recapture-hmms-and-nimble/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Would you like to get the most out of your capture-recapture data?&lt;br&gt;&lt;br&gt;We run a workshop on multisite/state/event HMMs models in &lt;a href=&#34;https://twitter.com/hashtag/Rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Rstats&lt;/a&gt; Nimble w/ Daniel Turek &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; at &lt;a href=&#34;https://twitter.com/hashtag/ISEC2022?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ISEC2022&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ISEC_stats_ecol?ref_src=twsrc%5Etfw&#34;&gt;@ISEC_stats_ecol&lt;/a&gt;&lt;br&gt;&lt;br&gt;Website w/ slides &amp;amp; codes: &lt;a href=&#34;https://t.co/gI1ccZO3O9&#34;&gt;https://t.co/gI1ccZO3O9&lt;/a&gt;&lt;br&gt;Video: &lt;a href=&#34;https://t.co/zA6nh6Ttih&#34;&gt;https://t.co/zA6nh6Ttih&lt;/a&gt; &lt;a href=&#34;https://t.co/ejyE2tCw5o&#34;&gt;pic.twitter.com/ejyE2tCw5o&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1542815746752905217?ref_src=twsrc%5Etfw&#34;&gt;July 1, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Introductory workshop on Nimble</title>
+      <link>https://oliviergimenez.github.io/blog/2022-04-08-introductory-workshop-on-nimble/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-04-08-introductory-workshop-on-nimble/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;📢🥳 With &lt;a href=&#34;https://twitter.com/MaudQueroue?ref_src=twsrc%5Etfw&#34;&gt;@MaudQueroue&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/ValentinLauret?ref_src=twsrc%5Etfw&#34;&gt;@ValentinLauret&lt;/a&gt; we gave a short introduction to nimble &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; &lt;br&gt;&lt;br&gt;nimble is a &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; 📦 to fit models in the Bayesian framework w/ MCMC, it&amp;#39;s also a programming environment for using/coding fns/distns/samplers&lt;br&gt;&lt;br&gt;➡️ Check out &lt;a href=&#34;https://t.co/MuUjGc4U8i&#34;&gt;https://t.co/MuUjGc4U8i&lt;/a&gt; &lt;a href=&#34;https://t.co/RBtu07v874&#34;&gt;pic.twitter.com/RBtu07v874&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1512431317593387008?ref_src=twsrc%5Etfw&#34;&gt;April 8, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Workshop on Bayesian capture-recapture inference</title>
+      <link>https://oliviergimenez.github.io/blog/hmmcrworkshop/</link>
+      <pubDate>Tue, 18 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/hmmcrworkshop/</guid>
+      <description>&lt;p&gt;Everything (including data, slides, codes and video recordings) about the workshop we run on Bayesian capture-recapture inference with hidden Markov models in R and Nimble.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🥳🍻 Had fun running a workshop on Bayesian capture-recapture inference with hidden Markov models in R &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &amp;amp; Nimble w/ &lt;a href=&#34;https://twitter.com/SarahCubaynes?ref_src=twsrc%5Etfw&#34;&gt;@SarahCubaynes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/chloe_nater?ref_src=twsrc%5Etfw&#34;&gt;@chloe_nater&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MaudQueroue?ref_src=twsrc%5Etfw&#34;&gt;@MaudQueroue&lt;/a&gt; &amp;amp; Perry de Valpine &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; &lt;br&gt;✅ Slides, worksheets &amp;amp; video recordings freely available from &lt;a href=&#34;https://t.co/CgVd84MPYN&#34;&gt;https://t.co/CgVd84MPYN&lt;/a&gt; &lt;a href=&#34;https://t.co/WlHzXytVUG&#34;&gt;pic.twitter.com/WlHzXytVUG&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1394770140978466818?ref_src=twsrc%5Etfw&#34;&gt;May 18, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
     
     <item>
       <title>Some random piece of code</title>

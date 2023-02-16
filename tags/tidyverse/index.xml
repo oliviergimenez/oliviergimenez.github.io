@@ -5,12 +5,21 @@
     <link>https://oliviergimenez.github.io/tags/tidyverse/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
     <description>tidyverse</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Fri, 18 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2022</copyright><lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>tidyverse</title>
       <link>https://oliviergimenez.github.io/tags/tidyverse/</link>
     </image>
+    
+    <item>
+      <title>Tips and tricks in Tidyverse</title>
+      <link>https://oliviergimenez.github.io/blog/2022-06-01-tips-and-tricks-in-tidyverse/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-06-01-tips-and-tricks-in-tidyverse/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Because of my old age I guess, I&amp;#39;m often asked how I switched from base R &lt;a href=&#34;https://twitter.com/hashtag/RStats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RStats&lt;/a&gt; to &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt;. I learnt by watching &lt;a href=&#34;https://twitter.com/drob?ref_src=twsrc%5Etfw&#34;&gt;@drob&lt;/a&gt; screencasts 🎥 in which he analyses &lt;a href=&#34;https://twitter.com/hashtag/TidyTuesday?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TidyTuesday&lt;/a&gt; data he has never seen before (!). Here is a list of my tips &lt;a href=&#34;https://t.co/VFAaDz8onE&#34;&gt;https://t.co/VFAaDz8onE&lt;/a&gt; in case it&amp;#39;s useful. &lt;a href=&#34;https://t.co/4Emq2J2qQL&#34;&gt;pic.twitter.com/4Emq2J2qQL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1531989180720599046?ref_src=twsrc%5Etfw&#34;&gt;June 1, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
     
     <item>
       <title>Workshop on reproducible science</title>

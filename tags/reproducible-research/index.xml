@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>reproducible research | Olivier Gimenez</title>
+    <title>reproducible-research | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/reproducible-research/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/reproducible-research/index.xml" rel="self" type="application/rss+xml" />
-    <description>reproducible research</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Sun, 10 Jul 2016 12:00:00 +0000</lastBuildDate>
+    <description>reproducible-research</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2022</copyright><lastBuildDate>Thu, 09 Jun 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>reproducible research</title>
+      <title>reproducible-research</title>
       <link>https://oliviergimenez.github.io/tags/reproducible-research/</link>
     </image>
+    
+    <item>
+      <title>Reproducible research and GitHub</title>
+      <link>https://oliviergimenez.github.io/blog/2022-06-09-reproducible-research-and-github/</link>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-06-09-reproducible-research-and-github/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Yesterday I created my 200th repo on &lt;a href=&#34;https://twitter.com/github?ref_src=twsrc%5Etfw&#34;&gt;@github&lt;/a&gt; 😇 It&amp;#39;s been quite an adventure to twist my old habits &amp;amp; switch to &lt;a href=&#34;https://twitter.com/hashtag/ReproducibleResearch?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ReproducibleResearch&lt;/a&gt; but it&amp;#39;s definitely worth it 🤯 &lt;br&gt;&lt;br&gt;Plenty of help out there like &lt;a href=&#34;https://twitter.com/living_norway?ref_src=twsrc%5Etfw&#34;&gt;@living_norway&lt;/a&gt; 🤩 If useful, I also have a 1-day workshop &lt;a href=&#34;https://t.co/7I6rU61nEg&#34;&gt;https://t.co/7I6rU61nEg&lt;/a&gt; &lt;a href=&#34;https://t.co/cGDjaA6iTv&#34;&gt;pic.twitter.com/cGDjaA6iTv&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1534905907896668162?ref_src=twsrc%5Etfw&#34;&gt;June 9, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
     
     <item>
       <title>Self teaching reproducible research</title>

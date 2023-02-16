@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bayesian statistics | Olivier Gimenez</title>
+    <title>bayesian-statistics | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/bayesian-statistics/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/bayesian-statistics/index.xml" rel="self" type="application/rss+xml" />
-    <description>Bayesian statistics</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Wed, 23 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <description>bayesian-statistics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2022</copyright><lastBuildDate>Fri, 08 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>Bayesian statistics</title>
+      <title>bayesian-statistics</title>
       <link>https://oliviergimenez.github.io/tags/bayesian-statistics/</link>
     </image>
+    
+    <item>
+      <title>Introductory workshop on Nimble</title>
+      <link>https://oliviergimenez.github.io/blog/2022-04-08-introductory-workshop-on-nimble/</link>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-04-08-introductory-workshop-on-nimble/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;📢🥳 With &lt;a href=&#34;https://twitter.com/MaudQueroue?ref_src=twsrc%5Etfw&#34;&gt;@MaudQueroue&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/ValentinLauret?ref_src=twsrc%5Etfw&#34;&gt;@ValentinLauret&lt;/a&gt; we gave a short introduction to nimble &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; &lt;br&gt;&lt;br&gt;nimble is a &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; 📦 to fit models in the Bayesian framework w/ MCMC, it&amp;#39;s also a programming environment for using/coding fns/distns/samplers&lt;br&gt;&lt;br&gt;➡️ Check out &lt;a href=&#34;https://t.co/MuUjGc4U8i&#34;&gt;https://t.co/MuUjGc4U8i&lt;/a&gt; &lt;a href=&#34;https://t.co/RBtu07v874&#34;&gt;pic.twitter.com/RBtu07v874&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1512431317593387008?ref_src=twsrc%5Etfw&#34;&gt;April 8, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Draft chapter on Bayes stats and MCMC in R</title>
+      <link>https://oliviergimenez.github.io/blog/draft-bayesmcmc/</link>
+      <pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/draft-bayesmcmc/</guid>
+      <description>&lt;p&gt;I have a draft chapter on Bayes stats and MCMC at &lt;a href=&#34;https://oliviergimenez.github.io/banana-book/crashcourse.html&#34;&gt;https://oliviergimenez.github.io/banana-book/crashcourse.html&lt;/a&gt; I&amp;rsquo;d love your feedback about what is confusing and what is missing 😇 #rstats&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bayesian analysis of capture-recapture data with hidden Markov models - Theory and case studies in R</title>
+      <link>https://oliviergimenez.github.io/blog/banana-book/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/banana-book/</guid>
+      <description>&lt;p&gt;So, I&amp;rsquo;m writing a book 🤯 It&#39;&#39;&amp;rsquo;s called &amp;ldquo;Bayesian analysis of capture-recapture data with hidden Markov models - Theory and case studies in R&amp;rdquo;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;So, I&amp;#39;m writing a book 🤯 It&amp;#39;s called &amp;#39;Bayesian analysis of capture-recapture data w hidden Markov models - Theory and case studies in R&amp;#39;. Online version here &lt;a href=&#34;https://t.co/Crgx5NX70s&#34;&gt;https://t.co/Crgx5NX70s&lt;/a&gt; to be published w &lt;a href=&#34;https://twitter.com/CRCPress?ref_src=twsrc%5Etfw&#34;&gt;@CRCPress&lt;/a&gt; Will share chapter drafts 😇 &amp;amp; random thoughts along the way &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/ms6dIjvY7m&#34;&gt;pic.twitter.com/ms6dIjvY7m&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1439664049776644101?ref_src=twsrc%5Etfw&#34;&gt;September 19, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on Bayesian capture-recapture inference</title>
+      <link>https://oliviergimenez.github.io/blog/hmmcrworkshop/</link>
+      <pubDate>Tue, 18 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/hmmcrworkshop/</guid>
+      <description>&lt;p&gt;Everything (including data, slides, codes and video recordings) about the workshop we run on Bayesian capture-recapture inference with hidden Markov models in R and Nimble.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🥳🍻 Had fun running a workshop on Bayesian capture-recapture inference with hidden Markov models in R &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &amp;amp; Nimble w/ &lt;a href=&#34;https://twitter.com/SarahCubaynes?ref_src=twsrc%5Etfw&#34;&gt;@SarahCubaynes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/chloe_nater?ref_src=twsrc%5Etfw&#34;&gt;@chloe_nater&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MaudQueroue?ref_src=twsrc%5Etfw&#34;&gt;@MaudQueroue&lt;/a&gt; &amp;amp; Perry de Valpine &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; &lt;br&gt;✅ Slides, worksheets &amp;amp; video recordings freely available from &lt;a href=&#34;https://t.co/CgVd84MPYN&#34;&gt;https://t.co/CgVd84MPYN&lt;/a&gt; &lt;a href=&#34;https://t.co/WlHzXytVUG&#34;&gt;pic.twitter.com/WlHzXytVUG&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1394770140978466818?ref_src=twsrc%5Etfw&#34;&gt;May 18, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on Bayesian statistics with R</title>
+      <link>https://oliviergimenez.github.io/blog/bayesstatsworkshop/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/bayesstatsworkshop/</guid>
+      <description>&lt;p&gt;Everything (including data, slides and codes) about the workshop on Bayesian statistics I run.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Just finished up a week teaching Bayesian statistics with R &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; for non-stats PhD students &amp;amp; 💜 it &lt;a href=&#34;https://twitter.com/hashtag/bayes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#bayes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/mcmc?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#mcmc&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/jags?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#jags&lt;/a&gt;&lt;br&gt;🌍 Dedicated website &lt;a href=&#34;https://t.co/X7JY3f9eGX&#34;&gt;https://t.co/X7JY3f9eGX&lt;/a&gt;&lt;br&gt;🍳 Material &lt;a href=&#34;https://t.co/agY9CvQLiV&#34;&gt;https://t.co/agY9CvQLiV&lt;/a&gt;&lt;br&gt;📽️ Video recording (in English w/ 👽 accent) &lt;a href=&#34;https://t.co/DHabXmVYsT&#34;&gt;https://t.co/DHabXmVYsT&lt;/a&gt; &lt;a href=&#34;https://t.co/g94nSO3faQ&#34;&gt;pic.twitter.com/g94nSO3faQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1375498491145940992?ref_src=twsrc%5Etfw&#34;&gt;March 26, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
     
     <item>
       <title>Nimble workshop with Daniel Turek</title>

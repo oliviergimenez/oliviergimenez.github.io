@@ -4,46 +4,651 @@
   
   <url>
     <loc>https://oliviergimenez.github.io/people/current/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://oliviergimenez.github.io/people/alumni/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://oliviergimenez.github.io/publication/papers/</loc>
-    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://oliviergimenez.github.io/talks/talk/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/talks/workshop/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://oliviergimenez.github.io/publication/books/</loc>
-    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/blog/</loc>
-    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/laughter/</loc>
-    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+    <loc>https://oliviergimenez.github.io/talks/workshop/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://oliviergimenez.github.io/</loc>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/people/</loc>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/publication/</loc>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/authors/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/loup/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/authors/2022-07-13-nos-travaux-sur-le-loup/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-07-13-nos-travaux-sur-le-loup/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/talks/</loc>
+    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/anr/</loc>
+    <lastmod>2022-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/package/</loc>
+    <lastmod>2022-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/r2ucare/</loc>
+    <lastmod>2022-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-07-12-r2ucare-back-on-cran/</loc>
+    <lastmod>2022-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/capture-recapture/</loc>
+    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/conference/</loc>
+    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/euring/</loc>
+    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-07-08-save-the-data-euring2023-in-montpellier-april-17-21/</loc>
+    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-07-04-quick-and-dirty-text-mining-analysis-of-isec2022-abstracts/</loc>
+    <lastmod>2022-07-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/hideen-markov-models/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/hmm/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/nimble/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-07-01-workshop-at-isec2022-on-capture-recapture-hmms-and-nimble/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/citizen-science/</loc>
+    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/dynamic-occupancy/</loc>
+    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/monk-seals/</loc>
+    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-06-30-new-paper-on-monk-seal-recovery-in-greece/</loc>
+    <lastmod>2022-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/academic-life/</loc>
+    <lastmod>2022-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-06-29-career-advice-to-early-career-researchers/</loc>
+    <lastmod>2022-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/ecr/</loc>
+    <lastmod>2022-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/hidden-markov-models/</loc>
+    <lastmod>2022-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-06-28-my-plenary-talk-at-isec2022-on-statistical-ecology-hidden-markov-models-and-large-carnivores/</loc>
+    <lastmod>2022-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/git/</loc>
+    <lastmod>2022-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/github/</loc>
+    <lastmod>2022-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-06-09-reproducible-research-and-github/</loc>
+    <lastmod>2022-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/reproducible-research/</loc>
+    <lastmod>2022-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-06-08-a-proposal-for-a-diamond-open-access-journal-in-statistical-ecology/</loc>
+    <lastmod>2022-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/open-access/</loc>
+    <lastmod>2022-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/open-science/</loc>
+    <lastmod>2022-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/statistical-ecology/</loc>
+    <lastmod>2022-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/dplyr/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/ggplot/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/tidyverse/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-06-01-tips-and-tricks-in-tidyverse/</loc>
+    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/cnrs/</loc>
+    <lastmod>2022-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-05-31-semaine-ecologie-environnement-biodiversite-du-cnrs-a-montpellier/</loc>
+    <lastmod>2022-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/latent-variables/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-05-24-our-new-book-on-statistical-approaches-for-hiddens-variables-in-ecology/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/state-space-models/</loc>
+    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/data-visualisation/</loc>
+    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/dataviz/</loc>
+    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-05-23-my-quick-introduction-to-data-visualisation-with-r/</loc>
+    <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/data-wrangling/</loc>
+    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-05-17-introduction-on-data-wrangling-with-r/</loc>
+    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/r/</loc>
+    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/gis/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-05-12-introduction-to-gis-and-mapping-in-r/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/sf/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/sig/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/caswell/</loc>
+    <lastmod>2022-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-05-04-matrix-population-models-lecture-slides-and-r-codes-for-a-workshop/</loc>
+    <lastmod>2022-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/matrix-population-models/</loc>
+    <lastmod>2022-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/glmm/</loc>
+    <lastmod>2022-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-05-03-useful-papers-on-glmms/</loc>
+    <lastmod>2022-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/bayes/</loc>
+    <lastmod>2022-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/glmm-brms/</loc>
+    <lastmod>2022-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/brms/</loc>
+    <lastmod>2022-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/jags/</loc>
+    <lastmod>2022-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-04-12-8emes-journees-du-gdr-ecostat/</loc>
+    <lastmod>2022-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/bayesian-statistics/</loc>
+    <lastmod>2022-04-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-04-08-introductory-workshop-on-nimble/</loc>
+    <lastmod>2022-04-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/deep-learning/</loc>
+    <lastmod>2022-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-04-06-new-paper-on-trade-offs-between-deep-learning-for-species-id-inference-on-predator-prey-co-occurrence/</loc>
+    <lastmod>2022-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-02-25-new-paper-on-wolf-depredation-hotspots-in-france/</loc>
+    <lastmod>2022-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/wolf/</loc>
+    <lastmod>2022-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-02-10-my-open-access-score/</loc>
+    <lastmod>2022-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-02-01-introduction-aux-statistiques-bayesiennes-avec-r/</loc>
+    <lastmod>2022-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/statistiques-bayesiennes/</loc>
+    <lastmod>2022-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/early-career-researchers/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-01-15-new-early-career-researchers-in-the-team/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/mental-health/</loc>
+    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2022-01-08-these-et-sante-mentale/</loc>
+    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/image-classif/</loc>
+    <lastmod>2022-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/keras/</loc>
+    <lastmod>2022-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/rstats/</loc>
+    <lastmod>2022-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2021-12-21-looking-back-to-2021/</loc>
+    <lastmod>2021-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/retrospective/</loc>
+    <lastmod>2021-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/2021-12-19-my-two-cents-on-open-science/</loc>
+    <lastmod>2021-12-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/interview/</loc>
+    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/interview-ecostat-english/</loc>
+    <lastmod>2021-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/interview-ecostat/</loc>
+    <lastmod>2021-11-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/draft-bayesmcmc/</loc>
+    <lastmod>2021-09-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/banana-book/</loc>
+    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/learning-machine-learning/</loc>
+    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/machine-learning/</loc>
+    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/tidymodels/</loc>
+    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/twitter-social-network/</loc>
+    <lastmod>2021-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/social-network/</loc>
+    <lastmod>2021-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/twitter/</loc>
+    <lastmod>2021-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/conservation-biology/</loc>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/lnphddefense/</loc>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/population-ecology/</loc>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/individual-based-models/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/ibmworkshop/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/euring2021/</loc>
+    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/literature-review/</loc>
+    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/poster/</loc>
+    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/car-wildlife-collisions/</loc>
+    <lastmod>2021-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/human-wildlife-conflicts/</loc>
+    <lastmod>2021-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/restitutionerc/</loc>
+    <lastmod>2021-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/lynx-lynx/</loc>
+    <lastmod>2021-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/capture-recapture-models/</loc>
+    <lastmod>2021-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/hmmcrworkshop/</loc>
+    <lastmod>2021-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/bayesstatsworkshop/</loc>
+    <lastmod>2021-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/reproducible-science/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/rstudio/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/rrworkshop/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/commerc/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/scicomm/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/artificial-intelligence/</loc>
+    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/computer-vision/</loc>
+    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/gdr-ecostat/</loc>
+    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/blog/sfeeia/</loc>
+    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://oliviergimenez.github.io/tags/laughter/</loc>
     <lastmod>2020-12-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -53,52 +658,12 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/retrospective/</loc>
-    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/</loc>
-    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/blog/retrospective2020/</loc>
     <lastmod>2020-12-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/publication/</loc>
-    <lastmod>2020-12-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/git/</loc>
-    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/github/</loc>
-    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/r/</loc>
-    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/reproducible-science/</loc>
-    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/tags/rstat/</loc>
-    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/tidyverse/</loc>
     <lastmod>2020-12-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -120,26 +685,6 @@
   <url>
     <loc>https://oliviergimenez.github.io/blog/talklisboa/</loc>
     <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/statistical-ecology/</loc>
-    <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/people/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/talks/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/capture-recapture/</loc>
-    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -183,16 +728,6 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/computer-vision/</loc>
-    <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/deep-learning/</loc>
-    <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/blog/deeplearning/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
   </url>
@@ -223,11 +758,6 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/scicomm/</loc>
-    <lastmod>2020-10-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/tags/the-conversation/</loc>
     <lastmod>2020-10-08T00:00:00+00:00</lastmod>
   </url>
@@ -239,16 +769,6 @@
   
   <url>
     <loc>https://oliviergimenez.github.io/tags/coding/</loc>
-    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/jags/</loc>
-    <lastmod>2020-08-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/nimble/</loc>
     <lastmod>2020-08-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -305,11 +825,6 @@
   <url>
     <loc>https://oliviergimenez.github.io/my-project/external-project/lynx/</loc>
     <lastmod>2020-08-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/bayes/</loc>
-    <lastmod>2020-07-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -453,22 +968,12 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/wolf/</loc>
-    <lastmod>2020-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/blog/rdcmr/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://oliviergimenez.github.io/tags/robust-design/</loc>
-    <lastmod>2020-04-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/rstats/</loc>
     <lastmod>2020-04-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -553,18 +1058,8 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/gdr-ecostat/</loc>
-    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/blog/publiclecture/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/hmm/</loc>
-    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -674,11 +1169,6 @@
   
   <url>
     <loc>https://oliviergimenez.github.io/tags/gestion-des-populations/</loc>
-    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/loup/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -798,11 +1288,6 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/conservation-biology/</loc>
-    <lastmod>2019-12-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/tags/marine-mammal/</loc>
     <lastmod>2019-12-03T00:00:00+00:00</lastmod>
   </url>
@@ -845,11 +1330,6 @@
   <url>
     <loc>https://oliviergimenez.github.io/tags/tursiops/</loc>
     <lastmod>2019-11-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/bayesian-statistics/</loc>
-    <lastmod>2019-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -949,11 +1429,6 @@
   
   <url>
     <loc>https://oliviergimenez.github.io/blog/paper_netlogor/</loc>
-    <lastmod>2019-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/individual-based-models/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -1183,11 +1658,6 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/social-network/</loc>
-    <lastmod>2019-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/blog/commloup/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
@@ -1238,22 +1708,7 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/ggplot/</loc>
-    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/gis/</loc>
-    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/blog/intro_spatial/</loc>
-    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/sf/</loc>
     <lastmod>2019-02-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -1283,11 +1738,6 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/r2ucare/</loc>
-    <lastmod>2019-02-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/blog/paper_nina/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
@@ -1305,11 +1755,6 @@
   <url>
     <loc>https://oliviergimenez.github.io/tags/life-history/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/data-wrangling/</loc>
-    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1400,11 +1845,6 @@
   <url>
     <loc>https://oliviergimenez.github.io/blog/articlesarahetlulu/</loc>
     <lastmod>2018-11-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/human-wildlife-conflicts/</loc>
-    <lastmod>2018-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1623,11 +2063,6 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/twitter/</loc>
-    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/blog/isec2018lm/</loc>
     <lastmod>2018-07-05T00:00:00+00:00</lastmod>
   </url>
@@ -1645,11 +2080,6 @@
   <url>
     <loc>https://oliviergimenez.github.io/blog/isec2018jl/</loc>
     <lastmod>2018-07-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/conference/</loc>
-    <lastmod>2018-06-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1720,11 +2150,6 @@
   <url>
     <loc>https://oliviergimenez.github.io/blog/deb_pardo/</loc>
     <lastmod>2018-05-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/anr/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1929,11 +2354,6 @@
   
   <url>
     <loc>https://oliviergimenez.github.io/blog/interview_inra/</loc>
-    <lastmod>2017-08-14T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/interview/</loc>
     <lastmod>2017-08-14T12:00:00+00:00</lastmod>
   </url>
   
@@ -2153,11 +2573,6 @@
   </url>
   
   <url>
-    <loc>https://oliviergimenez.github.io/tags/reproducible-research/</loc>
-    <lastmod>2016-07-10T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://oliviergimenez.github.io/blog/reproducible_research/</loc>
     <lastmod>2016-07-10T12:00:00+00:00</lastmod>
   </url>
@@ -2225,11 +2640,6 @@
   <url>
     <loc>https://oliviergimenez.github.io/blog/galaxidi/</loc>
     <lastmod>2015-08-12T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/citizen-science/</loc>
-    <lastmod>2015-08-02T12:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -2460,11 +2870,6 @@
   <url>
     <loc>https://oliviergimenez.github.io/blog/euring_2013/</loc>
     <lastmod>2013-05-05T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oliviergimenez.github.io/tags/cnrs/</loc>
-    <lastmod>2012-04-20T12:00:00+00:00</lastmod>
   </url>
   
   <url>

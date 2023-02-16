@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HMM | Olivier Gimenez</title>
+    <title>hmm | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/hmm/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/hmm/index.xml" rel="self" type="application/rss+xml" />
-    <description>HMM</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Wed, 26 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <description>hmm</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2022</copyright><lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>HMM</title>
+      <title>hmm</title>
       <link>https://oliviergimenez.github.io/tags/hmm/</link>
     </image>
+    
+    <item>
+      <title>Workshop at ISEC2022 on capture-recapture HMMs and Nimble</title>
+      <link>https://oliviergimenez.github.io/blog/2022-07-01-workshop-at-isec2022-on-capture-recapture-hmms-and-nimble/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-07-01-workshop-at-isec2022-on-capture-recapture-hmms-and-nimble/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Would you like to get the most out of your capture-recapture data?&lt;br&gt;&lt;br&gt;We run a workshop on multisite/state/event HMMs models in &lt;a href=&#34;https://twitter.com/hashtag/Rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Rstats&lt;/a&gt; Nimble w/ Daniel Turek &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; at &lt;a href=&#34;https://twitter.com/hashtag/ISEC2022?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ISEC2022&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ISEC_stats_ecol?ref_src=twsrc%5Etfw&#34;&gt;@ISEC_stats_ecol&lt;/a&gt;&lt;br&gt;&lt;br&gt;Website w/ slides &amp;amp; codes: &lt;a href=&#34;https://t.co/gI1ccZO3O9&#34;&gt;https://t.co/gI1ccZO3O9&lt;/a&gt;&lt;br&gt;Video: &lt;a href=&#34;https://t.co/zA6nh6Ttih&#34;&gt;https://t.co/zA6nh6Ttih&lt;/a&gt; &lt;a href=&#34;https://t.co/ejyE2tCw5o&#34;&gt;pic.twitter.com/ejyE2tCw5o&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1542815746752905217?ref_src=twsrc%5Etfw&#34;&gt;July 1, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>My plenary talk at ISEC2022 on Statistical ecology, hidden Markov models and large carnivores.</title>
+      <link>https://oliviergimenez.github.io/blog/2022-06-28-my-plenary-talk-at-isec2022-on-statistical-ecology-hidden-markov-models-and-large-carnivores/</link>
+      <pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-06-28-my-plenary-talk-at-isec2022-on-statistical-ecology-hidden-markov-models-and-large-carnivores/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Statistical ecology 🌍📊, hidden Markov models 🛰️ and large carnivores 🐺😺🐻 Soooo happy to share our research in this plenary talk at &lt;a href=&#34;https://twitter.com/hashtag/ISEC2022?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ISEC2022&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ISEC_stats_ecol?ref_src=twsrc%5Etfw&#34;&gt;@ISEC_stats_ecol&lt;/a&gt; 🤩🍾&lt;br&gt;&lt;br&gt;slides and text: &lt;a href=&#34;https://t.co/BOtZHWU56L&#34;&gt;https://t.co/BOtZHWU56L&lt;/a&gt;&lt;br&gt;video: &lt;a href=&#34;https://t.co/6Qn7i05uae&#34;&gt;https://t.co/6Qn7i05uae&lt;/a&gt; &lt;a href=&#34;https://t.co/vrSYeo9HYF&#34;&gt;pic.twitter.com/vrSYeo9HYF&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1541827362052005893?ref_src=twsrc%5Etfw&#34;&gt;June 28, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Our new book on statistical approaches for hiddens variables in ecology</title>
+      <link>https://oliviergimenez.github.io/blog/2022-05-24-our-new-book-on-statistical-approaches-for-hiddens-variables-in-ecology/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-05-24-our-new-book-on-statistical-approaches-for-hiddens-variables-in-ecology/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;It&amp;#39;s real 😇🤩🥳 &lt;a href=&#34;https://t.co/HdWol2H6PJ&#34;&gt;https://t.co/HdWol2H6PJ&lt;/a&gt; &lt;a href=&#34;https://t.co/NUSXtS1fQy&#34;&gt;pic.twitter.com/NUSXtS1fQy&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1529131677947248641?ref_src=twsrc%5Etfw&#34;&gt;May 24, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
     
     <item>
       <title>Review of HMMs in ecology</title>

@@ -5,12 +5,1216 @@
     <link>https://oliviergimenez.github.io/tags/bayes/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/bayes/index.xml" rel="self" type="application/rss+xml" />
     <description>bayes</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2020</copyright><lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2022</copyright><lastBuildDate>Mon, 18 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>bayes</title>
       <link>https://oliviergimenez.github.io/tags/bayes/</link>
     </image>
+    
+    <item>
+      <title>Bayesian analyses made easy: GLMMs in R package brms</title>
+      <link>https://oliviergimenez.github.io/blog/glmm-brms/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/glmm-brms/</guid>
+      <description>&lt;p&gt;Here I illustrate how to fit GLMMs with the R package &lt;code&gt;brms&lt;/code&gt;, and compare to &lt;code&gt;Jags&lt;/code&gt; and &lt;code&gt;lme4&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;
+&lt;p&gt;I regularly give 
+&lt;a href=&#34;https://oliviergimenez.github.io/bayesian-stats-with-R/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a course on Bayesian statistics with &lt;code&gt;R&lt;/code&gt; for non-specialists&lt;/a&gt;. To illustrate the course, we analyse data with 
+&lt;a href=&#34;https://bbolker.github.io/mixedmodels-misc/glmmFAQ.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;generalized linear, often mixed, models or GLMMs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So far, I&amp;rsquo;ve been using &lt;code&gt;Jags&lt;/code&gt; to fit these models. This requires some programming skills, like e.g. coding a loop, to be able to write down the model likelihood. Although students learn a lot from going through that process, it can be daunting.&lt;/p&gt;
+&lt;p&gt;This year, I thought I&amp;rsquo;d show them the 
+&lt;a href=&#34;https://paul-buerkner.github.io/brms/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;R&lt;/code&gt; package &lt;code&gt;brms&lt;/code&gt;&lt;/a&gt; developed by 
+&lt;a href=&#34;https://paul-buerkner.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paul-Christian Bürkner&lt;/a&gt;. In brief, &lt;code&gt;brms&lt;/code&gt; allows fitting GLMMs (but not only) in a &lt;code&gt;lme4&lt;/code&gt;-like syntax within the Bayesian framework and MCMC methods with Stan.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m not a Stan user, but it doesn&amp;rsquo;t matter. The 
+&lt;a href=&#34;https://paul-buerkner.github.io/brms/articles/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vignettes&lt;/a&gt; were more than enough to get me started. I also recommend the 
+&lt;a href=&#34;https://paul-buerkner.github.io/blog/brms-blogposts/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;list of blog posts about &lt;code&gt;brms&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;First things first, we load the packages we will need:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(brms)
+library(posterior) # tools for working with posterior and prior distributions
+library(R2jags) # run Jags from within R
+library(lme4) # fit GLMM in frequentist framework
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;beta-binomial-model&#34;&gt;Beta-Binomial model&lt;/h1&gt;
+&lt;p&gt;The first example is about a survival experiment. We captured, marked and released 57 individuals (&lt;em&gt;total&lt;/em&gt;) out of which 19 made it through the year (&lt;em&gt;alive&lt;/em&gt;).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat &amp;lt;- data.frame(alive = 19, total = 57)
+dat
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div data-pagedtable=&#34;false&#34;&gt;
+  &lt;script data-pagedtable-source type=&#34;application/json&#34;&gt;
+{&#34;columns&#34;:[{&#34;label&#34;:[&#34;alive&#34;],&#34;name&#34;:[1],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;total&#34;],&#34;name&#34;:[2],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]}],&#34;data&#34;:[{&#34;1&#34;:&#34;19&#34;,&#34;2&#34;:&#34;57&#34;}],&#34;options&#34;:{&#34;columns&#34;:{&#34;min&#34;:{},&#34;max&#34;:[10]},&#34;rows&#34;:{&#34;min&#34;:[10],&#34;max&#34;:[10]},&#34;pages&#34;:{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;An obvious estimate of the probability of a binomial is the proportion of cases, $19/57 = 0.3333333$ here, but let&amp;rsquo;s use &lt;code&gt;R&lt;/code&gt; built-in functions for the sake of illustration.&lt;/p&gt;
+&lt;h2 id=&#34;maximum-likelihood-estimation&#34;&gt;Maximum-likelihood estimation&lt;/h2&gt;
+&lt;p&gt;To get an estimate of survival, we fit a logistic regression using the &lt;code&gt;glm()&lt;/code&gt; function. The data are grouped (or aggregated), so we need to specify the number of alive and dead individuals as a two-column matrix on the left hand side of the model formula:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mle &amp;lt;- glm(cbind(alive, total - alive) ~ 1, 
+           family = binomial(&amp;quot;logit&amp;quot;), # family = binomial(&amp;quot;identity&amp;quot;) would be more straightforward
+           data = dat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On the logit scale, survival is estimated at:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;coef(mle) # logit scale
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## (Intercept) 
+##  -0.6931472
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After back-transformation using the reciprocal logit, we obtain:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plogis(coef(mle))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## (Intercept) 
+##   0.3333333
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So far, so good.&lt;/p&gt;
+&lt;h2 id=&#34;bayesian-analysis-with-jags&#34;&gt;Bayesian analysis with &lt;code&gt;Jags&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;Jags&lt;/code&gt;, you can fit this model with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# model
+betabin &amp;lt;- function(){
+  alive ~ dbin(survival, total) # binomial likelihood
+  logit(survival) &amp;lt;- beta # logit link
+  beta ~ dnorm(0, 1/1.5) # prior
+}
+# data
+datax &amp;lt;- list(total = 57,
+              alive = 19)
+# initial values
+inits &amp;lt;- function() list(beta = rnorm(1, 0, sd = 1.5))
+# parameter to monitor
+params &amp;lt;- c(&amp;quot;survival&amp;quot;)
+# run jags
+bayes.jags &amp;lt;- jags(data = datax,
+                      inits = inits,
+                      parameters.to.save = params,
+                      model.file = betabin,
+                      n.chains = 2,
+                      n.iter = 5000,
+                      n.burnin = 1000,
+                      n.thin = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Compiling model graph
+##    Resolving undeclared variables
+##    Allocating nodes
+## Graph information:
+##    Observed stochastic nodes: 1
+##    Unobserved stochastic nodes: 1
+##    Total graph size: 8
+## 
+## Initializing model
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# display results
+bayes.jags
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Bugs model at &amp;quot;/var/folders/r7/j0wqj1k95vz8w44sdxzm986c0000gn/T//RtmpP7MZ1A/modela81d72dd23e2.txt&amp;quot;, fit using jags,
+##  2 chains, each with 5000 iterations (first 1000 discarded)
+##  n.sims = 8000 iterations saved
+##          mu.vect sd.vect  2.5%   25%   50%   75% 97.5%  Rhat n.eff
+## survival   0.342   0.061 0.228 0.300 0.341 0.382 0.466 1.001  2600
+## deviance   5.354   1.390 4.388 4.486 4.819 5.662 9.333 1.001  8000
+## 
+## For each parameter, n.eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor (at convergence, Rhat=1).
+## 
+## DIC info (using the rule, pD = var(deviance)/2)
+## pD = 1.0 and DIC = 6.3
+## DIC is an estimate of expected predictive error (lower deviance is better).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;bayesian-analysis-with-brms&#34;&gt;Bayesian analysis with &lt;code&gt;brms&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;brms&lt;/code&gt;, you write:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bayes.brms &amp;lt;- brm(alive | trials(total) ~ 1, 
+                  family = binomial(&amp;quot;logit&amp;quot;), # binomial(&amp;quot;identity&amp;quot;) would be more straightforward
+                  data = dat,
+                  chains = 2, # nb of chains
+                  iter = 5000, # nb of iterations, including burnin
+                  warmup = 1000, # burnin
+                  thin = 1) # thinning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -mmacosx-version-min=10.13 -I&amp;quot;/Library/Frameworks/R.framework/Resources/include&amp;quot; -DNDEBUG   -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/Rcpp/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/unsupported&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/BH/include&amp;quot; -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/src/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppParallel/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/rstan/include&amp;quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/usr/local/include   -fPIC  -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &amp;lt;complex&amp;gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1
+## 
+## SAMPLING FOR MODEL &#39;782790eabbd10296f779d85fa03cf1e5&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 2e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.2 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 1: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 1: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 1: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 1: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 1: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.010358 seconds (Warm-up)
+## Chain 1:                0.046464 seconds (Sampling)
+## Chain 1:                0.056822 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &#39;782790eabbd10296f779d85fa03cf1e5&#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 1.3e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.13 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 2: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 2: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 2: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 2: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 2: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 2: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.009763 seconds (Warm-up)
+## Chain 2:                0.035949 seconds (Sampling)
+## Chain 2:                0.045712 seconds (Total)
+## Chain 2:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can display the results:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bayes.brms
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  Family: binomial 
+##   Links: mu = logit 
+## Formula: alive | trials(total) ~ 1 
+##    Data: dat (Number of observations: 1) 
+##   Draws: 2 chains, each with iter = 5000; warmup = 1000; thin = 1;
+##          total post-warmup draws = 8000
+## 
+## Population-Level Effects: 
+##           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept    -0.69      0.28    -1.27    -0.14 1.00     3213     3572
+## 
+## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And visualize the posterior density and trace of survival (on the logit scale):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(bayes.brms)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-9-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;To get survival on the $[0,1]$ scale, we extract the MCMC values, then apply the reciprocal logit function to each of these values, and summarize its posterior distribution:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;draws_fit &amp;lt;- as_draws_matrix(bayes.brms)
+draws_fit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A draws_matrix: 4000 iterations, 2 chains, and 2 variables
+##     variable
+## draw b_Intercept lp__
+##   1        -0.70 -4.2
+##   2        -0.67 -4.2
+##   3        -0.86 -4.4
+##   4        -0.80 -4.3
+##   5        -1.32 -6.6
+##   6        -0.57 -4.2
+##   7        -0.51 -4.4
+##   8        -0.56 -4.3
+##   9        -0.69 -4.2
+##   10       -0.41 -4.6
+## # ... with 7990 more draws
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summarize_draws(plogis(draws_fit[,1]))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div data-pagedtable=&#34;false&#34;&gt;
+  &lt;script data-pagedtable-source type=&#34;application/json&#34;&gt;
+{&#34;columns&#34;:[{&#34;label&#34;:[&#34;variable&#34;],&#34;name&#34;:[1],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;mean&#34;],&#34;name&#34;:[2],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;median&#34;],&#34;name&#34;:[3],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;sd&#34;],&#34;name&#34;:[4],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;mad&#34;],&#34;name&#34;:[5],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;q5&#34;],&#34;name&#34;:[6],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;q95&#34;],&#34;name&#34;:[7],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;rhat&#34;],&#34;name&#34;:[8],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;ess_bulk&#34;],&#34;name&#34;:[9],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;ess_tail&#34;],&#34;name&#34;:[10],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]}],&#34;data&#34;:[{&#34;1&#34;:&#34;b_Intercept&#34;,&#34;2&#34;:&#34;0.3372479&#34;,&#34;3&#34;:&#34;0.3346894&#34;,&#34;4&#34;:&#34;0.06186131&#34;,&#34;5&#34;:&#34;0.06164302&#34;,&#34;6&#34;:&#34;0.2388592&#34;,&#34;7&#34;:&#34;0.4422435&#34;,&#34;8&#34;:&#34;1.001294&#34;,&#34;9&#34;:&#34;3212.932&#34;,&#34;10&#34;:&#34;3571.757&#34;}],&#34;options&#34;:{&#34;columns&#34;:{&#34;min&#34;:{},&#34;max&#34;:[10]},&#34;rows&#34;:{&#34;min&#34;:[10],&#34;max&#34;:[10]},&#34;pages&#34;:{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;What is the prior used by default?&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;prior_summary(bayes.brms)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div data-pagedtable=&#34;false&#34;&gt;
+  &lt;script data-pagedtable-source type=&#34;application/json&#34;&gt;
+{&#34;columns&#34;:[{&#34;label&#34;:[&#34;prior&#34;],&#34;name&#34;:[1],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;class&#34;],&#34;name&#34;:[2],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;coef&#34;],&#34;name&#34;:[3],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;group&#34;],&#34;name&#34;:[4],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;resp&#34;],&#34;name&#34;:[5],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;dpar&#34;],&#34;name&#34;:[6],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;nlpar&#34;],&#34;name&#34;:[7],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;bound&#34;],&#34;name&#34;:[8],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;source&#34;],&#34;name&#34;:[9],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]}],&#34;data&#34;:[{&#34;1&#34;:&#34;student_t(3, 0, 2.5)&#34;,&#34;2&#34;:&#34;Intercept&#34;,&#34;3&#34;:&#34;&#34;,&#34;4&#34;:&#34;&#34;,&#34;5&#34;:&#34;&#34;,&#34;6&#34;:&#34;&#34;,&#34;7&#34;:&#34;&#34;,&#34;8&#34;:&#34;&#34;,&#34;9&#34;:&#34;default&#34;}],&#34;options&#34;:{&#34;columns&#34;:{&#34;min&#34;:{},&#34;max&#34;:[10]},&#34;rows&#34;:{&#34;min&#34;:[10],&#34;max&#34;:[10]},&#34;pages&#34;:{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;What if I want to use the same prior as in &lt;code&gt;Jags&lt;/code&gt; instead?&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;nlprior &amp;lt;- prior(normal(0, 1.5), class = &amp;quot;Intercept&amp;quot;) # new prior
+bayes.brms &amp;lt;- brm(alive | trials(total) ~ 1, 
+                  family = binomial(&amp;quot;logit&amp;quot;), 
+                  data = dat, 
+                  prior = nlprior, # set prior by hand
+                  chains = 2, # nb of chains
+                  iter = 5000, # nb of iterations, including burnin
+                  warmup = 1000, # burnin
+                  thin = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -mmacosx-version-min=10.13 -I&amp;quot;/Library/Frameworks/R.framework/Resources/include&amp;quot; -DNDEBUG   -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/Rcpp/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/unsupported&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/BH/include&amp;quot; -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/src/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppParallel/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/rstan/include&amp;quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/usr/local/include   -fPIC  -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &amp;lt;complex&amp;gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1
+## 
+## SAMPLING FOR MODEL &#39;59dcc499a2b4c8a1b2c8f4e80e70fcce&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 1.8e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.18 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 1: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 1: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 1: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 1: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 1: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.00875 seconds (Warm-up)
+## Chain 1:                0.03345 seconds (Sampling)
+## Chain 1:                0.0422 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &#39;59dcc499a2b4c8a1b2c8f4e80e70fcce&#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 5e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.05 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 2: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 2: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 2: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 2: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 2: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 2: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.009788 seconds (Warm-up)
+## Chain 2:                0.036797 seconds (Sampling)
+## Chain 2:                0.046585 seconds (Total)
+## Chain 2:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Double-check the prior that was used:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;prior_summary(bayes.brms)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div data-pagedtable=&#34;false&#34;&gt;
+  &lt;script data-pagedtable-source type=&#34;application/json&#34;&gt;
+{&#34;columns&#34;:[{&#34;label&#34;:[&#34;prior&#34;],&#34;name&#34;:[1],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;class&#34;],&#34;name&#34;:[2],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;coef&#34;],&#34;name&#34;:[3],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;group&#34;],&#34;name&#34;:[4],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;resp&#34;],&#34;name&#34;:[5],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;dpar&#34;],&#34;name&#34;:[6],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;nlpar&#34;],&#34;name&#34;:[7],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;bound&#34;],&#34;name&#34;:[8],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;source&#34;],&#34;name&#34;:[9],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]}],&#34;data&#34;:[{&#34;1&#34;:&#34;normal(0, 1.5)&#34;,&#34;2&#34;:&#34;Intercept&#34;,&#34;3&#34;:&#34;&#34;,&#34;4&#34;:&#34;&#34;,&#34;5&#34;:&#34;&#34;,&#34;6&#34;:&#34;&#34;,&#34;7&#34;:&#34;&#34;,&#34;8&#34;:&#34;&#34;,&#34;9&#34;:&#34;user&#34;}],&#34;options&#34;:{&#34;columns&#34;:{&#34;min&#34;:{},&#34;max&#34;:[10]},&#34;rows&#34;:{&#34;min&#34;:[10],&#34;max&#34;:[10]},&#34;pages&#34;:{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;logistic-regression-with-covariates&#34;&gt;Logistic regression with covariates&lt;/h1&gt;
+&lt;p&gt;In this example, we ask whether annual variation in white stork breeding success can be explained by rainfall in the wintering area. Breeding success is measured by the ratio of the number of chicks over the number of pairs.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;nbchicks &amp;lt;- c(151,105,73,107,113,87,77,108,118,122,112,120,122,89,69,71,53,41,53,31,35,14,18)
+nbpairs &amp;lt;- c(173,164,103,113,122,112,98,121,132,136,133,137,145,117,90,80,67,54,58,39,42,23,23)
+rain &amp;lt;- c(67,52,88,61,32,36,72,43,92,32,86,28,57,55,66,26,28,96,48,90,86,78,87)
+dat &amp;lt;- data.frame(nbchicks = nbchicks, 
+                  nbpairs = nbpairs,
+                  rain = (rain - mean(rain))/sd(rain)) # standardized rainfall
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The data are grouped.&lt;/p&gt;
+&lt;h2 id=&#34;maximum-likelihood-estimation-1&#34;&gt;Maximum-likelihood estimation&lt;/h2&gt;
+&lt;p&gt;You can get maximum likelihood estimates with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mle &amp;lt;- glm(cbind(nbchicks, nbpairs - nbchicks) ~ rain, 
+           family = binomial(&amp;quot;logit&amp;quot;), 
+           data = dat)
+summary(mle)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## glm(formula = cbind(nbchicks, nbpairs - nbchicks) ~ rain, family = binomial(&amp;quot;logit&amp;quot;), 
+##     data = dat)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -5.9630  -1.3354   0.3929   1.6168   3.8800  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&amp;gt;|z|)    
+## (Intercept)  1.55436    0.05565  27.931   &amp;lt;2e-16 ***
+## rain        -0.14857    0.05993  -2.479   0.0132 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 109.25  on 22  degrees of freedom
+## Residual deviance: 103.11  on 21  degrees of freedom
+## AIC: 205.84
+## 
+## Number of Fisher Scoring iterations: 4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There is a negative effect of rainfall on breeding success:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;visreg::visreg(mle, scale = &amp;quot;response&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-16-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bayesian-analysis-with-jags-1&#34;&gt;Bayesian analysis with &lt;code&gt;Jags&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;In Jags, we can fit the same model:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# data 
+dat &amp;lt;- list(N = 23, # nb of years
+            nbchicks = nbchicks, 
+            nbpairs = nbpairs,
+            rain = (rain - mean(rain))/sd(rain)) # standardized rainfall
+
+# define model
+logistic &amp;lt;- function() {
+  # likelihood
+  for(i in 1:N){ # loop over years
+    nbchicks[i] ~ dbin(p[i], nbpairs[i]) # binomial likelihood
+    logit(p[i]) &amp;lt;- a + b.rain * rain[i] # prob success is linear fn of rainfall on logit scale
+  }
+  # priors
+  a ~ dnorm(0,0.01) # intercept
+  b.rain ~ dnorm(0,0.01) # slope for rainfall
+}
+
+# function that generates initial values 
+inits &amp;lt;- function() list(a = rnorm(n = 1, mean = 0, sd = 5), 
+                         b.rain = rnorm(n = 1, mean = 0, sd = 5))
+
+# specify parameters that need to be estimated
+parameters &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;b.rain&amp;quot;)
+
+# run Jags
+bayes.jags &amp;lt;- jags(data = dat,
+               inits = inits,
+               parameters.to.save = parameters,
+               model.file = logistic, 
+               n.chains = 2,
+               n.iter = 5000, # includes burn-in!
+               n.burnin = 1000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Compiling model graph
+##    Resolving undeclared variables
+##    Allocating nodes
+## Graph information:
+##    Observed stochastic nodes: 23
+##    Unobserved stochastic nodes: 2
+##    Total graph size: 134
+## 
+## Initializing model
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# display results
+bayes.jags
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Bugs model at &amp;quot;/var/folders/r7/j0wqj1k95vz8w44sdxzm986c0000gn/T//RtmpP7MZ1A/modela81d1b01bd3f.txt&amp;quot;, fit using jags,
+##  2 chains, each with 5000 iterations (first 1000 discarded), n.thin = 4
+##  n.sims = 2000 iterations saved
+##          mu.vect sd.vect    2.5%     25%     50%     75%   97.5%  Rhat n.eff
+## a          1.546   0.163   1.439   1.514   1.552   1.588   1.657 1.182  2000
+## b.rain    -0.152   0.121  -0.275  -0.190  -0.148  -0.106  -0.033 1.129  2000
+## deviance 213.612 330.910 201.899 202.434 203.197 204.689 209.169 1.121  2000
+## 
+## For each parameter, n.eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor (at convergence, Rhat=1).
+## 
+## DIC info (using the rule, pD = var(deviance)/2)
+## pD = 54753.9 and DIC = 54967.5
+## DIC is an estimate of expected predictive error (lower deviance is better).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;bayesian-analysis-with-brms-1&#34;&gt;Bayesian analysis with &lt;code&gt;brms&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;With &lt;code&gt;brms&lt;/code&gt;, we write:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bayes.brms &amp;lt;- brm(nbchicks | trials(nbpairs) ~ rain, 
+                  family = binomial(&amp;quot;logit&amp;quot;), 
+                  data = dat,
+                  chains = 2, # nb of chains
+                  iter = 5000, # nb of iterations, including burnin
+                  warmup = 1000, # burnin
+                  thin = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -mmacosx-version-min=10.13 -I&amp;quot;/Library/Frameworks/R.framework/Resources/include&amp;quot; -DNDEBUG   -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/Rcpp/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/unsupported&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/BH/include&amp;quot; -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/src/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppParallel/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/rstan/include&amp;quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/usr/local/include   -fPIC  -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &amp;lt;complex&amp;gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1
+## 
+## SAMPLING FOR MODEL &#39;70a68f0c53365768853c2791038e6352&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 4.7e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.47 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 1: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 1: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 1: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 1: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 1: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.035213 seconds (Warm-up)
+## Chain 1:                0.131663 seconds (Sampling)
+## Chain 1:                0.166876 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &#39;70a68f0c53365768853c2791038e6352&#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 1.4e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.14 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 2: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 2: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 2: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 2: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 2: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 2: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.033715 seconds (Warm-up)
+## Chain 2:                0.15264 seconds (Sampling)
+## Chain 2:                0.186355 seconds (Total)
+## Chain 2:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Display results:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bayes.brms
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  Family: binomial 
+##   Links: mu = logit 
+## Formula: nbchicks | trials(nbpairs) ~ rain 
+##    Data: dat (Number of observations: 23) 
+##   Draws: 2 chains, each with iter = 5000; warmup = 1000; thin = 1;
+##          total post-warmup draws = 8000
+## 
+## Population-Level Effects: 
+##           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept     1.56      0.06     1.45     1.67 1.00     6907     5043
+## rain         -0.15      0.06    -0.27    -0.03 1.00     7193     5067
+## 
+## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualize:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(bayes.brms)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-20-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;We can also calculate the posterior probability of the rainfall effect being below zero with the &lt;code&gt;hypothesis()&lt;/code&gt; function:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;hypothesis(bayes.brms, &#39;rain &amp;lt; 0&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Hypothesis Tests for class b:
+##   Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio Post.Prob Star
+## 1 (rain) &amp;lt; 0    -0.15      0.06    -0.25    -0.05     116.65      0.99    *
+## ---
+## &#39;CI&#39;: 90%-CI for one-sided and 95%-CI for two-sided hypotheses.
+## &#39;*&#39;: For one-sided hypotheses, the posterior probability exceeds 95%;
+## for two-sided hypotheses, the value tested against lies outside the 95%-CI.
+## Posterior probabilities of point hypotheses assume equal prior probabilities.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These results confirm the important negative effect of rainfall on breeding success.&lt;/p&gt;
+&lt;h1 id=&#34;linear-mixed-model&#34;&gt;Linear mixed model&lt;/h1&gt;
+&lt;p&gt;In this example, we have several measurements for 33 Mediterranean plant species, specifically number of seeds and biomass. We ask whether there is a linear relationship between these two variables that would hold for all species.&lt;/p&gt;
+&lt;p&gt;Read in data, directly from the course website:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;df &amp;lt;- read_csv2(&amp;quot;https://raw.githubusercontent.com/oliviergimenez/bayesian-stats-with-R/master/slides/dat/VMG.csv&amp;quot;)
+df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div data-pagedtable=&#34;false&#34;&gt;
+  &lt;script data-pagedtable-source type=&#34;application/json&#34;&gt;
+{&#34;columns&#34;:[{&#34;label&#34;:[&#34;Sp&#34;],&#34;name&#34;:[1],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;NGrTotest&#34;],&#34;name&#34;:[2],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Vm&#34;],&#34;name&#34;:[3],&#34;type&#34;:[&#34;chr&#34;],&#34;align&#34;:[&#34;left&#34;]}],&#34;data&#34;:[{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;5.220000e+02&#34;,&#34;3&#34;:&#34;2.7402&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;9.280000e+02&#34;,&#34;3&#34;:&#34;5.7107&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;2.349000e+03&#34;,&#34;3&#34;:&#34;3.7874&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;1.261500e+04&#34;,&#34;3&#34;:&#34;4.208&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;9.135000e+03&#34;,&#34;3&#34;:&#34;4.6764&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;1.189000e+03&#34;,&#34;3&#34;:&#34;4.5658&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;9.280000e+02&#34;,&#34;3&#34;:&#34;5.4989&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;1.232500e+04&#34;,&#34;3&#34;:&#34;6.0688&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;2.044500e+04&#34;,&#34;3&#34;:&#34;5.2587&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;1.145500e+04&#34;,&#34;3&#34;:&#34;5.4009&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;7.395000e+03&#34;,&#34;3&#34;:&#34;2.4289&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;1.812500e+04&#34;,&#34;3&#34;:&#34;5.7908&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;1.116500e+04&#34;,&#34;3&#34;:&#34;4.3584&#34;},{&#34;1&#34;:&#34;AGREUP&#34;,&#34;2&#34;:&#34;8.410000e+02&#34;,&#34;3&#34;:&#34;3.0194&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;9.888138e+06&#34;,&#34;3&#34;:&#34;0.2589&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;7.378453e+14&#34;,&#34;3&#34;:&#34;0.2509&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;5.370114e+14&#34;,&#34;3&#34;:&#34;0.1953&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;8.516877e+14&#34;,&#34;3&#34;:&#34;0.072&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;1.983254e+14&#34;,&#34;3&#34;:&#34;0.0922&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;1.026845e+07&#34;,&#34;3&#34;:&#34;0.0848&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;3.905707e+14&#34;,&#34;3&#34;:&#34;0.0502&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;2.842153e+14&#34;,&#34;3&#34;:&#34;0.03&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;7.697224e+14&#34;,&#34;3&#34;:&#34;0.0929&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;1.269531e+14&#34;,&#34;3&#34;:&#34;0.0288&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;4.860176e+14&#34;,&#34;3&#34;:&#34;0.0539&#34;},{&#34;1&#34;:&#34;ARESER&#34;,&#34;2&#34;:&#34;3.122590e+13&#34;,&#34;3&#34;:&#34;0.0432&#34;},{&#34;1&#34;:&#34;ARIROT&#34;,&#34;2&#34;:&#34;7.740000e+02&#34;,&#34;3&#34;:&#34;2.5837&#34;},{&#34;1&#34;:&#34;ARIROT&#34;,&#34;2&#34;:&#34;7.740000e+02&#34;,&#34;3&#34;:&#34;2.9822&#34;},{&#34;1&#34;:&#34;ARIROT&#34;,&#34;2&#34;:&#34;3.870000e+02&#34;,&#34;3&#34;:&#34;4.8398&#34;},{&#34;1&#34;:&#34;ARIROT&#34;,&#34;2&#34;:&#34;7.740000e+02&#34;,&#34;3&#34;:&#34;3.8271&#34;},{&#34;1&#34;:&#34;ARIROT&#34;,&#34;2&#34;:&#34;1.548000e+03&#34;,&#34;3&#34;:&#34;3.2125&#34;},{&#34;1&#34;:&#34;ARIROT&#34;,&#34;2&#34;:&#34;1.548000e+03&#34;,&#34;3&#34;:&#34;4.0537&#34;},{&#34;1&#34;:&#34;ARIROT&#34;,&#34;2&#34;:&#34;7.740000e+02&#34;,&#34;3&#34;:&#34;3.7995&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;1.885159e+06&#34;,&#34;3&#34;:&#34;0.7485&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;4.497265e+06&#34;,&#34;3&#34;:&#34;0.3794&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;2.679216e+07&#34;,&#34;3&#34;:&#34;0.9408&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;1.534996e+06&#34;,&#34;3&#34;:&#34;1.0311&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;1.396726e+09&#34;,&#34;3&#34;:&#34;6.2405&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;1.540947e+07&#34;,&#34;3&#34;:&#34;6.3843&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;1.851852e+08&#34;,&#34;3&#34;:&#34;0.8972&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;1.545312e+08&#34;,&#34;3&#34;:&#34;1.3303&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;1.908618e+08&#34;,&#34;3&#34;:&#34;12.0858&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;5.312807e+08&#34;,&#34;3&#34;:&#34;1.8016&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;3.087444e+08&#34;,&#34;3&#34;:&#34;3.8879&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;7.085170e+05&#34;,&#34;3&#34;:&#34;0.4081&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;9.622968e+07&#34;,&#34;3&#34;:&#34;0.4865&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;1.956194e+08&#34;,&#34;3&#34;:&#34;1.0913&#34;},{&#34;1&#34;:&#34;AVEBAR&#34;,&#34;2&#34;:&#34;6.710838e+07&#34;,&#34;3&#34;:&#34;0.3691&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;2.500000e+01&#34;,&#34;3&#34;:&#34;1.4411&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;8.000000e+00&#34;,&#34;3&#34;:&#34;3.3895&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;1.200000e+01&#34;,&#34;3&#34;:&#34;8.7321&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;3.200000e+01&#34;,&#34;3&#34;:&#34;0.7551&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;2.700000e+01&#34;,&#34;3&#34;:&#34;2.84&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;1.800000e+01&#34;,&#34;3&#34;:&#34;1.7812&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;4.000000e+00&#34;,&#34;3&#34;:&#34;2.2782&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;7.000000e+00&#34;,&#34;3&#34;:&#34;3.0333&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;2.700000e+01&#34;,&#34;3&#34;:&#34;4.5069&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;3.000000e+00&#34;,&#34;3&#34;:&#34;5.2177&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;1.000000e+00&#34;,&#34;3&#34;:&#34;2.6946&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;1.500000e+01&#34;,&#34;3&#34;:&#34;2.9896&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;1.500000e+01&#34;,&#34;3&#34;:&#34;2.6708&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;5.000000e+00&#34;,&#34;3&#34;:&#34;7.183&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;4.000000e+00&#34;,&#34;3&#34;:&#34;2.3428&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;7.000000e+00&#34;,&#34;3&#34;:&#34;1.0896&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;5.000000e+00&#34;,&#34;3&#34;:&#34;2.6775&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;1.000000e+01&#34;,&#34;3&#34;:&#34;1.7357&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;5.000000e+00&#34;,&#34;3&#34;:&#34;1.3361&#34;},{&#34;1&#34;:&#34;BRAPHO&#34;,&#34;2&#34;:&#34;1.400000e+01&#34;,&#34;3&#34;:&#34;2.0915&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;3.000000e+00&#34;,&#34;3&#34;:&#34;1.4552&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;2.300000e+01&#34;,&#34;3&#34;:&#34;7.0985&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;1.000000e+00&#34;,&#34;3&#34;:&#34;1.8038&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;1.100000e+01&#34;,&#34;3&#34;:&#34;1.165&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;6.800000e+01&#34;,&#34;3&#34;:&#34;3.2737&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;1.800000e+01&#34;,&#34;3&#34;:&#34;1.5305&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;9.000000e+00&#34;,&#34;3&#34;:&#34;2.674&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;1.300000e+01&#34;,&#34;3&#34;:&#34;1.4999&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;1.000000e+00&#34;,&#34;3&#34;:&#34;1.3962&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;1.100000e+01&#34;,&#34;3&#34;:&#34;2.6229&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;7.000000e+00&#34;,&#34;3&#34;:&#34;2.2209&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;1.400000e+01&#34;,&#34;3&#34;:&#34;1.8808&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;1.700000e+01&#34;,&#34;3&#34;:&#34;1.972&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;3.000000e+00&#34;,&#34;3&#34;:&#34;4.6314&#34;},{&#34;1&#34;:&#34;BROERE&#34;,&#34;2&#34;:&#34;1.300000e+01&#34;,&#34;3&#34;:&#34;3.9903&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;8.000000e+00&#34;,&#34;3&#34;:&#34;0.0287&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;1.000000e+01&#34;,&#34;3&#34;:&#34;0.0408&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;2.100000e+01&#34;,&#34;3&#34;:&#34;0.0573&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;2.000000e+01&#34;,&#34;3&#34;:&#34;0.0653&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;1.600000e+01&#34;,&#34;3&#34;:&#34;0.0557&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;1.600000e+01&#34;,&#34;3&#34;:&#34;0.0448&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;2.000000e+01&#34;,&#34;3&#34;:&#34;0.0577&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;2.500000e+01&#34;,&#34;3&#34;:&#34;0.0811&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;3.700000e+01&#34;,&#34;3&#34;:&#34;0.2731&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;1.800000e+01&#34;,&#34;3&#34;:&#34;0.0804&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;3.800000e+01&#34;,&#34;3&#34;:&#34;0.1597&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;8.000000e+00&#34;,&#34;3&#34;:&#34;0.0508&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;5.000000e+00&#34;,&#34;3&#34;:&#34;0.0227&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;1.700000e+01&#34;,&#34;3&#34;:&#34;0.041&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;5.000000e+00&#34;,&#34;3&#34;:&#34;0.0585&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;7.185522e+06&#34;,&#34;3&#34;:&#34;0.3702&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;5.950135e+07&#34;,&#34;3&#34;:&#34;0.3718&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;1.400000e+01&#34;,&#34;3&#34;:&#34;0.094&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;5.000000e+01&#34;,&#34;3&#34;:&#34;0.2454&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;7.000000e+00&#34;,&#34;3&#34;:&#34;0.0322&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;1.100000e+01&#34;,&#34;3&#34;:&#34;0.035&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;2.700000e+01&#34;,&#34;3&#34;:&#34;0.1002&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;1.000000e+01&#34;,&#34;3&#34;:&#34;0.1121&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;4.800000e+01&#34;,&#34;3&#34;:&#34;0.1931&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;3.100000e+01&#34;,&#34;3&#34;:&#34;0.0797&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;5.900000e+01&#34;,&#34;3&#34;:&#34;0.1937&#34;},{&#34;1&#34;:&#34;BROMAD&#34;,&#34;2&#34;:&#34;2.700000e+01&#34;,&#34;3&#34;:&#34;0.0921&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;1.943000e+03&#34;,&#34;3&#34;:&#34;0.6494&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;1.453900e+04&#34;,&#34;3&#34;:&#34;3.5915&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;3.316500e+04&#34;,&#34;3&#34;:&#34;3.8162&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;2.010000e+02&#34;,&#34;3&#34;:&#34;1.3129&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;2.043500e+04&#34;,&#34;3&#34;:&#34;0.8645&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;2.546000e+03&#34;,&#34;3&#34;:&#34;5.0374&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;6.867500e+04&#34;,&#34;3&#34;:&#34;1.3146&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;2.110500e+04&#34;,&#34;3&#34;:&#34;1.4455&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;2.613000e+03&#34;,&#34;3&#34;:&#34;1.5333&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;2.211000e+03&#34;,&#34;3&#34;:&#34;1.879&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;1.641500e+04&#34;,&#34;3&#34;:&#34;1.2037&#34;},{&#34;1&#34;:&#34;CALNEP&#34;,&#34;2&#34;:&#34;1.340000e+02&#34;,&#34;3&#34;:&#34;3.0969&#34;},{&#34;1&#34;:&#34;CENASP&#34;,&#34;2&#34;:&#34;1.055600e+04&#34;,&#34;3&#34;:&#34;1.9068&#34;},{&#34;1&#34;:&#34;CENASP&#34;,&#34;2&#34;:&#34;1.206400e+04&#34;,&#34;3&#34;:&#34;4.2394&#34;},{&#34;1&#34;:&#34;CENASP&#34;,&#34;2&#34;:&#34;1.809600e+04&#34;,&#34;3&#34;:&#34;3.7426&#34;},{&#34;1&#34;:&#34;CENASP&#34;,&#34;2&#34;:&#34;1.658800e+04&#34;,&#34;3&#34;:&#34;2.0106&#34;},{&#34;1&#34;:&#34;CENASP&#34;,&#34;2&#34;:&#34;5.956600e+04&#34;,&#34;3&#34;:&#34;11.937&#34;},{&#34;1&#34;:&#34;CENASP&#34;,&#34;2&#34;:&#34;2.789800e+04&#34;,&#34;3&#34;:&#34;6.6217&#34;},{&#34;1&#34;:&#34;CENASP&#34;,&#34;2&#34;:&#34;1.809600e+04&#34;,&#34;3&#34;:&#34;3.1996&#34;},{&#34;1&#34;:&#34;CENASP&#34;,&#34;2&#34;:&#34;1.131000e+03&#34;,&#34;3&#34;:&#34;2.3526&#34;},{&#34;1&#34;:&#34;CENASP&#34;,&#34;2&#34;:&#34;1.055600e+04&#34;,&#34;3&#34;:&#34;1.3443&#34;},{&#34;1&#34;:&#34;CENASP&#34;,&#34;2&#34;:&#34;1.206400e+04&#34;,&#34;3&#34;:&#34;3.2106&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;6.560000e+02&#34;,&#34;3&#34;:&#34;0.8748&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;2.296000e+03&#34;,&#34;3&#34;:&#34;1.0244&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;6.560000e+02&#34;,&#34;3&#34;:&#34;0.4904&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;9.840000e+02&#34;,&#34;3&#34;:&#34;0.4121&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;3.280000e+02&#34;,&#34;3&#34;:&#34;0.4221&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;1.968000e+03&#34;,&#34;3&#34;:&#34;1.5497&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;2.624000e+03&#34;,&#34;3&#34;:&#34;0.4686&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;3.936000e+03&#34;,&#34;3&#34;:&#34;0.5614&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;4.920000e+02&#34;,&#34;3&#34;:&#34;0.7569&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;5.904000e+03&#34;,&#34;3&#34;:&#34;1.4327&#34;},{&#34;1&#34;:&#34;CONARV&#34;,&#34;2&#34;:&#34;1.312000e+03&#34;,&#34;3&#34;:&#34;0.1692&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.098020e+05&#34;,&#34;3&#34;:&#34;1.823&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.771000e+04&#34;,&#34;3&#34;:&#34;3.965&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.931160e+05&#34;,&#34;3&#34;:&#34;2.929&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.016400e+04&#34;,&#34;3&#34;:&#34;1.879&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;2.882880e+05&#34;,&#34;3&#34;:&#34;4.749&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;2.858240e+05&#34;,&#34;3&#34;:&#34;5.477&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.182720e+05&#34;,&#34;3&#34;:&#34;1.893&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;6.375600e+04&#34;,&#34;3&#34;:&#34;0.605&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;7.068600e+04&#34;,&#34;3&#34;:&#34;0.003&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;8.870400e+04&#34;,&#34;3&#34;:&#34;1.795&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.787940e+05&#34;,&#34;3&#34;:&#34;3.167&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.067220e+05&#34;,&#34;3&#34;:&#34;1.739&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.321320e+05&#34;,&#34;3&#34;:&#34;2.691&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.466080e+05&#34;,&#34;3&#34;:&#34;2.201&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.016400e+04&#34;,&#34;3&#34;:&#34;0.941&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.111110e+05&#34;,&#34;3&#34;:&#34;2.1331&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;3.172785e+06&#34;,&#34;3&#34;:&#34;3.5198&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;1.552320e+05&#34;,&#34;3&#34;:&#34;2.7188&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;3.094245e+06&#34;,&#34;3&#34;:&#34;4.9485&#34;},{&#34;1&#34;:&#34;CONCAN&#34;,&#34;2&#34;:&#34;9.378600e+04&#34;,&#34;3&#34;:&#34;0.9582&#34;},{&#34;1&#34;:&#34;CONSUM&#34;,&#34;2&#34;:&#34;2.793000e+04&#34;,&#34;3&#34;:&#34;7.884&#34;},{&#34;1&#34;:&#34;CONSUM&#34;,&#34;2&#34;:&#34;1.764000e+04&#34;,&#34;3&#34;:&#34;5.827&#34;},{&#34;1&#34;:&#34;CONSUM&#34;,&#34;2&#34;:&#34;1.849260e+05&#34;,&#34;3&#34;:&#34;5.64&#34;},{&#34;1&#34;:&#34;CONSUM&#34;,&#34;2&#34;:&#34;6.585600e+04&#34;,&#34;3&#34;:&#34;14.242&#34;},{&#34;1&#34;:&#34;CONSUM&#34;,&#34;2&#34;:&#34;3.372180e+05&#34;,&#34;3&#34;:&#34;11.624&#34;},{&#34;1&#34;:&#34;CONSUM&#34;,&#34;2&#34;:&#34;6.043050e+11&#34;,&#34;3&#34;:&#34;11.0929&#34;},{&#34;1&#34;:&#34;CONSUM&#34;,&#34;2&#34;:&#34;1.360787e+11&#34;,&#34;3&#34;:&#34;4.6419&#34;},{&#34;1&#34;:&#34;CONSUM&#34;,&#34;2&#34;:&#34;4.655741e+09&#34;,&#34;3&#34;:&#34;9.3029&#34;},{&#34;1&#34;:&#34;CONSUM&#34;,&#34;2&#34;:&#34;2.747341e+11&#34;,&#34;3&#34;:&#34;3.7676&#34;},{&#34;1&#34;:&#34;CONSUM&#34;,&#34;2&#34;:&#34;3.394929e+11&#34;,&#34;3&#34;:&#34;11.7619&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;5.450000e+02&#34;,&#34;3&#34;:&#34;0.8151&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;6.195000e+03&#34;,&#34;3&#34;:&#34;1.2244&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;7.615000e+03&#34;,&#34;3&#34;:&#34;0.9312&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;5.022500e+04&#34;,&#34;3&#34;:&#34;0.5408&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;1.051750e+05&#34;,&#34;3&#34;:&#34;1.5945&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;6.385000e+03&#34;,&#34;3&#34;:&#34;0.8848&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;6.295000e+03&#34;,&#34;3&#34;:&#34;1.0231&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;6.675000e+03&#34;,&#34;3&#34;:&#34;0.6402&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;2.257500e+04&#34;,&#34;3&#34;:&#34;0.4692&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;1.497000e+03&#34;,&#34;3&#34;:&#34;2.4955&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;5.145000e+03&#34;,&#34;3&#34;:&#34;0.8226&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;4.280000e+02&#34;,&#34;3&#34;:&#34;0.43&#34;},{&#34;1&#34;:&#34;CREFOE&#34;,&#34;2&#34;:&#34;6.872500e+04&#34;,&#34;3&#34;:&#34;0.4259&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;6.944858e+14&#34;,&#34;3&#34;:&#34;0.5576&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;2.137188e+14&#34;,&#34;3&#34;:&#34;0.9056&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;1.628894e+14&#34;,&#34;3&#34;:&#34;1.1958&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;9.478765e+14&#34;,&#34;3&#34;:&#34;0.3839&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;3.042291e+14&#34;,&#34;3&#34;:&#34;0.5038&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;1.214020e+14&#34;,&#34;3&#34;:&#34;0.4434&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;3.871472e+14&#34;,&#34;3&#34;:&#34;0.7369&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;1.455768e+14&#34;,&#34;3&#34;:&#34;0.6764&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;4.066404e+14&#34;,&#34;3&#34;:&#34;0.8645&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;1.658677e+14&#34;,&#34;3&#34;:&#34;0.6768&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;9.252856e+14&#34;,&#34;3&#34;:&#34;0.6439&#34;},{&#34;1&#34;:&#34;CYNDAC&#34;,&#34;2&#34;:&#34;7.542087e+13&#34;,&#34;3&#34;:&#34;0.465&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;1.245469e+14&#34;,&#34;3&#34;:&#34;2.822&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;1.917928e+14&#34;,&#34;3&#34;:&#34;5.925&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;8.404472e+14&#34;,&#34;3&#34;:&#34;4.442&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;1.962699e+14&#34;,&#34;3&#34;:&#34;1.322&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;6.064351e+14&#34;,&#34;3&#34;:&#34;1.607&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;4.313892e+14&#34;,&#34;3&#34;:&#34;5.113&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;4.129153e+14&#34;,&#34;3&#34;:&#34;3.258&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;4.774426e+14&#34;,&#34;3&#34;:&#34;2.265&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;1.312217e+13&#34;,&#34;3&#34;:&#34;4.858&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;9.394479e+14&#34;,&#34;3&#34;:&#34;3.5832&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;7.719279e+14&#34;,&#34;3&#34;:&#34;5.422&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;1.296418e+13&#34;,&#34;3&#34;:&#34;3.696&#34;},{&#34;1&#34;:&#34;DACGLO&#34;,&#34;2&#34;:&#34;3.604338e+14&#34;,&#34;3&#34;:&#34;3.893&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;6.974874e+14&#34;,&#34;3&#34;:&#34;2.7065&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;2.789950e+14&#34;,&#34;3&#34;:&#34;7.2954&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;6.277387e+14&#34;,&#34;3&#34;:&#34;6.7922&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;6.974874e+14&#34;,&#34;3&#34;:&#34;5.8217&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;5.579899e+14&#34;,&#34;3&#34;:&#34;5.2203&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;4.882412e+14&#34;,&#34;3&#34;:&#34;4.2592&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;7.672361e+14&#34;,&#34;3&#34;:&#34;3.485&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;3.487437e+14&#34;,&#34;3&#34;:&#34;3.4059&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;4.882412e+14&#34;,&#34;3&#34;:&#34;5.6538&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;2.789950e+14&#34;,&#34;3&#34;:&#34;1.6279&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;4.184924e+13&#34;,&#34;3&#34;:&#34;6.3016&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;2.789950e+14&#34;,&#34;3&#34;:&#34;2.2578&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;1.325226e+14&#34;,&#34;3&#34;:&#34;13.8315&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;2.789950e+14&#34;,&#34;3&#34;:&#34;2.5385&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;4.184924e+13&#34;,&#34;3&#34;:&#34;2.4443&#34;},{&#34;1&#34;:&#34;DAUCAR&#34;,&#34;2&#34;:&#34;2.092462e+14&#34;,&#34;3&#34;:&#34;0.6998&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;5.991644e+13&#34;,&#34;3&#34;:&#34;9.26&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;9.300481e+14&#34;,&#34;3&#34;:&#34;7.963&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;4.492366e+13&#34;,&#34;3&#34;:&#34;7.141&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;2.405171e+14&#34;,&#34;3&#34;:&#34;23.364&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;2.030262e+14&#34;,&#34;3&#34;:&#34;24.003&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;1.657848e+14&#34;,&#34;3&#34;:&#34;14.728&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;7.631866e+14&#34;,&#34;3&#34;:&#34;8.506&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;7.541823e+14&#34;,&#34;3&#34;:&#34;7.253&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;8.924796e+14&#34;,&#34;3&#34;:&#34;12.1349&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;4.966303e+14&#34;,&#34;3&#34;:&#34;38.73&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;3.788564e+14&#34;,&#34;3&#34;:&#34;29.417&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;5.835986e+14&#34;,&#34;3&#34;:&#34;31.51&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;3.260063e+14&#34;,&#34;3&#34;:&#34;4.94&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;3.170862e+14&#34;,&#34;3&#34;:&#34;24.603&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;1.079704e+14&#34;,&#34;3&#34;:&#34;9.922&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;1.039471e+14&#34;,&#34;3&#34;:&#34;9.677&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;3.254672e+14&#34;,&#34;3&#34;:&#34;30.433&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;7.365023e+14&#34;,&#34;3&#34;:&#34;12.038&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;3.825576e+14&#34;,&#34;3&#34;:&#34;29.728&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;2.083637e+14&#34;,&#34;3&#34;:&#34;23.141&#34;},{&#34;1&#34;:&#34;DIPFUL&#34;,&#34;2&#34;:&#34;2.314471e+14&#34;,&#34;3&#34;:&#34;25.903&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;3.600000e+02&#34;,&#34;3&#34;:&#34;2.2693&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;1.035000e+03&#34;,&#34;3&#34;:&#34;13.3441&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;2.400000e+02&#34;,&#34;3&#34;:&#34;2.4296&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;7.300000e+02&#34;,&#34;3&#34;:&#34;8.7793&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;3.150000e+02&#34;,&#34;3&#34;:&#34;3.4946&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;2.000000e+02&#34;,&#34;3&#34;:&#34;1.8299&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;3.350000e+02&#34;,&#34;3&#34;:&#34;4.4712&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;8.200000e+02&#34;,&#34;3&#34;:&#34;8.0342&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;2.800000e+02&#34;,&#34;3&#34;:&#34;2.8258&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;2.650000e+02&#34;,&#34;3&#34;:&#34;1.7212&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;7.050000e+02&#34;,&#34;3&#34;:&#34;5.7427&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;2.050000e+02&#34;,&#34;3&#34;:&#34;1.3254&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;1.750000e+02&#34;,&#34;3&#34;:&#34;0.8842&#34;},{&#34;1&#34;:&#34;EROCIC&#34;,&#34;2&#34;:&#34;1.350000e+02&#34;,&#34;3&#34;:&#34;0.8806&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;3.090000e+02&#34;,&#34;3&#34;:&#34;0.6574&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;1.140000e+02&#34;,&#34;3&#34;:&#34;0.1645&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;9.700000e+01&#34;,&#34;3&#34;:&#34;0.1489&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;1.910000e+02&#34;,&#34;3&#34;:&#34;0.3903&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;2.790000e+02&#34;,&#34;3&#34;:&#34;0.4476&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;3.160000e+02&#34;,&#34;3&#34;:&#34;0.5542&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;2.120000e+02&#34;,&#34;3&#34;:&#34;0.311&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;1.180000e+02&#34;,&#34;3&#34;:&#34;0.1774&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;2.530000e+02&#34;,&#34;3&#34;:&#34;0.3745&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;1.540000e+02&#34;,&#34;3&#34;:&#34;0.1993&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;1.360000e+02&#34;,&#34;3&#34;:&#34;0.268&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;2.490000e+02&#34;,&#34;3&#34;:&#34;0.5365&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;3.800000e+02&#34;,&#34;3&#34;:&#34;0.6972&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;4.750000e+02&#34;,&#34;3&#34;:&#34;0.838&#34;},{&#34;1&#34;:&#34;GERROT&#34;,&#34;2&#34;:&#34;1.760000e+02&#34;,&#34;3&#34;:&#34;0.3191&#34;},{&#34;1&#34;:&#34;INUCON&#34;,&#34;2&#34;:&#34;2.547462e+10&#34;,&#34;3&#34;:&#34;3.4002&#34;},{&#34;1&#34;:&#34;INUCON&#34;,&#34;2&#34;:&#34;8.855462e+10&#34;,&#34;3&#34;:&#34;6.9655&#34;},{&#34;1&#34;:&#34;INUCON&#34;,&#34;2&#34;:&#34;3.093346e+11&#34;,&#34;3&#34;:&#34;3.1757&#34;},{&#34;1&#34;:&#34;INUCON&#34;,&#34;2&#34;:&#34;2.972038e+11&#34;,&#34;3&#34;:&#34;1.5498&#34;},{&#34;1&#34;:&#34;INUCON&#34;,&#34;2&#34;:&#34;2.122885e+11&#34;,&#34;3&#34;:&#34;13.2155&#34;},{&#34;1&#34;:&#34;INUCON&#34;,&#34;2&#34;:&#34;4.912962e+11&#34;,&#34;3&#34;:&#34;5.215&#34;},{&#34;1&#34;:&#34;INUCON&#34;,&#34;2&#34;:&#34;6.429308e+10&#34;,&#34;3&#34;:&#34;6.7267&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;1.370700e+04&#34;,&#34;3&#34;:&#34;0.1732&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;1.370700e+04&#34;,&#34;3&#34;:&#34;0.2786&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;7.234250e+05&#34;,&#34;3&#34;:&#34;1.197&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;2.132200e+04&#34;,&#34;3&#34;:&#34;0.2314&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;1.751450e+05&#34;,&#34;3&#34;:&#34;0.2886&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;7.081950e+05&#34;,&#34;3&#34;:&#34;0.8304&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;6.548900e+04&#34;,&#34;3&#34;:&#34;0.7924&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;3.274450e+05&#34;,&#34;3&#34;:&#34;0.4729&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;3.046000e+03&#34;,&#34;3&#34;:&#34;0.6055&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;2.056050e+05&#34;,&#34;3&#34;:&#34;0.2231&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;6.092000e+03&#34;,&#34;3&#34;:&#34;0.8283&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;4.949750e+05&#34;,&#34;3&#34;:&#34;0.5897&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;7.691150e+05&#34;,&#34;3&#34;:&#34;1.3697&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;3.046000e+03&#34;,&#34;3&#34;:&#34;0.2796&#34;},{&#34;1&#34;:&#34;LOLITA&#34;,&#34;2&#34;:&#34;6.320450e+05&#34;,&#34;3&#34;:&#34;1.3046&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;5.534226e+14&#34;,&#34;3&#34;:&#34;0.2427&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;1.555585e+14&#34;,&#34;3&#34;:&#34;0.0834&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;2.729915e+14&#34;,&#34;3&#34;:&#34;0.1296&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;8.481451e+14&#34;,&#34;3&#34;:&#34;0.4678&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;1.676752e+14&#34;,&#34;3&#34;:&#34;0.8808&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;4.266047e+14&#34;,&#34;3&#34;:&#34;0.1615&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;1.016326e+14&#34;,&#34;3&#34;:&#34;0.4961&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;1.843326e+14&#34;,&#34;3&#34;:&#34;0.1084&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;7.252031e+14&#34;,&#34;3&#34;:&#34;0.0753&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;1.272668e+13&#34;,&#34;3&#34;:&#34;0.0558&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;1.843326e+14&#34;,&#34;3&#34;:&#34;0.0815&#34;},{&#34;1&#34;:&#34;MEDLUP&#34;,&#34;2&#34;:&#34;2.135262e+14&#34;,&#34;3&#34;:&#34;0.0751&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;4.004000e+03&#34;,&#34;3&#34;:&#34;0.6305&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;5.324000e+03&#34;,&#34;3&#34;:&#34;0.7074&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;1.188000e+03&#34;,&#34;3&#34;:&#34;0.1144&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;3.520000e+02&#34;,&#34;3&#34;:&#34;0.029&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;2.552000e+03&#34;,&#34;3&#34;:&#34;0.2778&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;2.464000e+03&#34;,&#34;3&#34;:&#34;0.2053&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;6.160000e+02&#34;,&#34;3&#34;:&#34;0.063&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;1.232000e+03&#34;,&#34;3&#34;:&#34;0.184&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;8.360000e+02&#34;,&#34;3&#34;:&#34;0.1834&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;2.200000e+01&#34;,&#34;3&#34;:&#34;0.0484&#34;},{&#34;1&#34;:&#34;MEDMIN&#34;,&#34;2&#34;:&#34;1.408000e+03&#34;,&#34;3&#34;:&#34;0.3134&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;2.097000e+03&#34;,&#34;3&#34;:&#34;0.3644&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;2.923000e+03&#34;,&#34;3&#34;:&#34;0.4078&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;4.555000e+03&#34;,&#34;3&#34;:&#34;0.945&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;6.168000e+03&#34;,&#34;3&#34;:&#34;1.2278&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;2.800000e+01&#34;,&#34;3&#34;:&#34;0.6491&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;1.001000e+03&#34;,&#34;3&#34;:&#34;1.3631&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;5.400000e+01&#34;,&#34;3&#34;:&#34;1.285&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;3.610000e+02&#34;,&#34;3&#34;:&#34;0.6316&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;1.700000e+01&#34;,&#34;3&#34;:&#34;0.2334&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;3.323000e+03&#34;,&#34;3&#34;:&#34;0.3953&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;1.900000e+01&#34;,&#34;3&#34;:&#34;0.3508&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;2.000000e+01&#34;,&#34;3&#34;:&#34;0.4501&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;8.000000e+00&#34;,&#34;3&#34;:&#34;0.2085&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;2.600000e+01&#34;,&#34;3&#34;:&#34;0.6552&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;2.155000e+03&#34;,&#34;3&#34;:&#34;0.2435&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;5.633000e+03&#34;,&#34;3&#34;:&#34;1.0596&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;1.881000e+03&#34;,&#34;3&#34;:&#34;0.3286&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;3.052000e+03&#34;,&#34;3&#34;:&#34;0.5003&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;1.323100e+04&#34;,&#34;3&#34;:&#34;2.2946&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;2.126000e+03&#34;,&#34;3&#34;:&#34;0.3741&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;3.181000e+03&#34;,&#34;3&#34;:&#34;0.5459&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;2.600000e+01&#34;,&#34;3&#34;:&#34;0.5727&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;2.900000e+01&#34;,&#34;3&#34;:&#34;0.7562&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;1.284000e+03&#34;,&#34;3&#34;:&#34;0.2016&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;1.104900e+04&#34;,&#34;3&#34;:&#34;2.2006&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;7.607000e+03&#34;,&#34;3&#34;:&#34;0.8084&#34;},{&#34;1&#34;:&#34;ORLGRA&#34;,&#34;2&#34;:&#34;5.481000e+03&#34;,&#34;3&#34;:&#34;1.0416&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;3.590440e+05&#34;,&#34;3&#34;:&#34;3.6551&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;8.719640e+05&#34;,&#34;3&#34;:&#34;4.5974&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;7.693800e+04&#34;,&#34;3&#34;:&#34;2.8561&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;1.025840e+05&#34;,&#34;3&#34;:&#34;5.3615&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;8.206720e+05&#34;,&#34;3&#34;:&#34;4.5136&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;1.538760e+05&#34;,&#34;3&#34;:&#34;3.5334&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;1.077132e+06&#34;,&#34;3&#34;:&#34;5.2522&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;3.590440e+05&#34;,&#34;3&#34;:&#34;3.051&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;1.333592e+06&#34;,&#34;3&#34;:&#34;6.1755&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;1.179716e+06&#34;,&#34;3&#34;:&#34;9.8372&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;8.206720e+05&#34;,&#34;3&#34;:&#34;2.902&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;3.077520e+05&#34;,&#34;3&#34;:&#34;4.0246&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;1.025840e+05&#34;,&#34;3&#34;:&#34;7.6592&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;1.538760e+05&#34;,&#34;3&#34;:&#34;1.9749&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;1.846512e+06&#34;,&#34;3&#34;:&#34;7.5188&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;1.025840e+05&#34;,&#34;3&#34;:&#34;4.7883&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;9.232560e+05&#34;,&#34;3&#34;:&#34;3.688&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;4.616280e+05&#34;,&#34;3&#34;:&#34;2.4499&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;4.616280e+05&#34;,&#34;3&#34;:&#34;4.4144&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;2.102972e+06&#34;,&#34;3&#34;:&#34;9.5132&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;4.616280e+05&#34;,&#34;3&#34;:&#34;3.6414&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;2.051680e+05&#34;,&#34;3&#34;:&#34;3.081&#34;},{&#34;1&#34;:&#34;PICHIE&#34;,&#34;2&#34;:&#34;1.692636e+06&#34;,&#34;3&#34;:&#34;10.6821&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;1.000000e+01&#34;,&#34;3&#34;:&#34;0.2655&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;2.000000e+01&#34;,&#34;3&#34;:&#34;0.8077&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;6.044100e+04&#34;,&#34;3&#34;:&#34;0.95&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;3.244100e+04&#34;,&#34;3&#34;:&#34;0.2544&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;2.100000e+01&#34;,&#34;3&#34;:&#34;0.8371&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;2.744100e+04&#34;,&#34;3&#34;:&#34;0.5838&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;6.600000e+01&#34;,&#34;3&#34;:&#34;1.2204&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;2.011124e+14&#34;,&#34;3&#34;:&#34;3.7847&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;3.959632e+14&#34;,&#34;3&#34;:&#34;1.3835&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;5.244100e+04&#34;,&#34;3&#34;:&#34;0.5912&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;3.444100e+04&#34;,&#34;3&#34;:&#34;0.3044&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;3.744100e+04&#34;,&#34;3&#34;:&#34;0.8692&#34;},{&#34;1&#34;:&#34;SANMIN&#34;,&#34;2&#34;:&#34;1.100000e+01&#34;,&#34;3&#34;:&#34;0.6444&#34;},{&#34;1&#34;:&#34;SEDNIC&#34;,&#34;2&#34;:&#34;3.764507e+14&#34;,&#34;3&#34;:&#34;2.3502&#34;},{&#34;1&#34;:&#34;SEDNIC&#34;,&#34;2&#34;:&#34;4.897700e+04&#34;,&#34;3&#34;:&#34;0.3377&#34;},{&#34;1&#34;:&#34;SEDNIC&#34;,&#34;2&#34;:&#34;8.354900e+04&#34;,&#34;3&#34;:&#34;0.5203&#34;},{&#34;1&#34;:&#34;SEDNIC&#34;,&#34;2&#34;:&#34;2.160750e+05&#34;,&#34;3&#34;:&#34;0.139&#34;},{&#34;1&#34;:&#34;SEDNIC&#34;,&#34;2&#34;:&#34;5.473900e+04&#34;,&#34;3&#34;:&#34;0.8127&#34;},{&#34;1&#34;:&#34;SEDNIC&#34;,&#34;2&#34;:&#34;8.354900e+04&#34;,&#34;3&#34;:&#34;0.5362&#34;},{&#34;1&#34;:&#34;SEDNIC&#34;,&#34;2&#34;:&#34;5.617950e+05&#34;,&#34;3&#34;:&#34;0.4823&#34;},{&#34;1&#34;:&#34;SEDNIC&#34;,&#34;2&#34;:&#34;3.457200e+04&#34;,&#34;3&#34;:&#34;0.2996&#34;},{&#34;1&#34;:&#34;SEDNIC&#34;,&#34;2&#34;:&#34;4.177450e+05&#34;,&#34;3&#34;:&#34;0.195&#34;},{&#34;1&#34;:&#34;SEDNIC&#34;,&#34;2&#34;:&#34;5.906050e+05&#34;,&#34;3&#34;:&#34;0.4522&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;9.459805e+14&#34;,&#34;3&#34;:&#34;0.8427&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;5.424562e+14&#34;,&#34;3&#34;:&#34;0.4478&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;1.338922e+14&#34;,&#34;3&#34;:&#34;0.5202&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;1.447315e+14&#34;,&#34;3&#34;:&#34;1.0882&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;3.501219e+14&#34;,&#34;3&#34;:&#34;1.6174&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;1.733331e+14&#34;,&#34;3&#34;:&#34;1.678&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;2.042334e+14&#34;,&#34;3&#34;:&#34;1.2695&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;1.447315e+14&#34;,&#34;3&#34;:&#34;1.2443&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;9.459805e+14&#34;,&#34;3&#34;:&#34;1.3019&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;1.338922e+14&#34;,&#34;3&#34;:&#34;0.1205&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;2.042334e+14&#34;,&#34;3&#34;:&#34;2.19&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;5.511294e+14&#34;,&#34;3&#34;:&#34;0.1373&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;5.511294e+14&#34;,&#34;3&#34;:&#34;0.1748&#34;},{&#34;1&#34;:&#34;TORJAP&#34;,&#34;2&#34;:&#34;3.103686e+14&#34;,&#34;3&#34;:&#34;1.3899&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;3.200000e+02&#34;,&#34;3&#34;:&#34;1.4483&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;5.600000e+02&#34;,&#34;3&#34;:&#34;1.8853&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;3.200000e+02&#34;,&#34;3&#34;:&#34;1.1343&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;1.600000e+02&#34;,&#34;3&#34;:&#34;1.1512&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;8.000000e+02&#34;,&#34;3&#34;:&#34;5.5253&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;4.800000e+02&#34;,&#34;3&#34;:&#34;3.1542&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;8.000000e+01&#34;,&#34;3&#34;:&#34;0.2084&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;3.200000e+02&#34;,&#34;3&#34;:&#34;2.2014&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;9.600000e+02&#34;,&#34;3&#34;:&#34;4.3042&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;8.800000e+02&#34;,&#34;3&#34;:&#34;8.7397&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;1.280000e+03&#34;,&#34;3&#34;:&#34;7.2383&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;2.400000e+02&#34;,&#34;3&#34;:&#34;1.3229&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;4.800000e+02&#34;,&#34;3&#34;:&#34;1.8528&#34;},{&#34;1&#34;:&#34;TORMAX&#34;,&#34;2&#34;:&#34;4.000000e+02&#34;,&#34;3&#34;:&#34;2.9635&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;3.849552e+06&#34;,&#34;3&#34;:&#34;0.6519&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.347343e+07&#34;,&#34;3&#34;:&#34;0.8889&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.058627e+07&#34;,&#34;3&#34;:&#34;0.7121&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.828537e+07&#34;,&#34;3&#34;:&#34;1.3168&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;2.694686e+07&#34;,&#34;3&#34;:&#34;2.1945&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;5.774328e+06&#34;,&#34;3&#34;:&#34;0.3389&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.828537e+07&#34;,&#34;3&#34;:&#34;1.866&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.443582e+06&#34;,&#34;3&#34;:&#34;1.2153&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;4.811940e+05&#34;,&#34;3&#34;:&#34;2.8673&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;2.309731e+07&#34;,&#34;3&#34;:&#34;1.5864&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.347343e+07&#34;,&#34;3&#34;:&#34;1.1809&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;2.887164e+06&#34;,&#34;3&#34;:&#34;0.1957&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.154866e+07&#34;,&#34;3&#34;:&#34;0.8642&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.636060e+07&#34;,&#34;3&#34;:&#34;1.0314&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.443582e+06&#34;,&#34;3&#34;:&#34;1.2785&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;2.790925e+07&#34;,&#34;3&#34;:&#34;1.8897&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.251104e+07&#34;,&#34;3&#34;:&#34;0.5774&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;5.774328e+06&#34;,&#34;3&#34;:&#34;0.5708&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;1.347343e+07&#34;,&#34;3&#34;:&#34;0.7933&#34;},{&#34;1&#34;:&#34;TRIANG&#34;,&#34;2&#34;:&#34;2.598448e+07&#34;,&#34;3&#34;:&#34;1.9167&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;1.822800e+04&#34;,&#34;3&#34;:&#34;0.0665&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;1.380120e+05&#34;,&#34;3&#34;:&#34;0.68153&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;5.294800e+04&#34;,&#34;3&#34;:&#34;0.1755&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;4.860800e+04&#34;,&#34;3&#34;:&#34;0.3186&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;1.649200e+04&#34;,&#34;3&#34;:&#34;0.0568&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;1.388800e+04&#34;,&#34;3&#34;:&#34;0.0475&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;4.340000e+02&#34;,&#34;3&#34;:&#34;0.1655&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;7.378000e+03&#34;,&#34;3&#34;:&#34;0.30694&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;2.343600e+04&#34;,&#34;3&#34;:&#34;0.0845&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;7.551600e+04&#34;,&#34;3&#34;:&#34;0.2706&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;1.475600e+04&#34;,&#34;3&#34;:&#34;0.0436&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;2.083200e+04&#34;,&#34;3&#34;:&#34;0.0795&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;1.484280e+05&#34;,&#34;3&#34;:&#34;0.6652&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;1.562400e+04&#34;,&#34;3&#34;:&#34;0.0662&#34;},{&#34;1&#34;:&#34;VERPER&#34;,&#34;2&#34;:&#34;1.562400e+04&#34;,&#34;3&#34;:&#34;0.0506&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;1.152490e+05&#34;,&#34;3&#34;:&#34;0.5658&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;8.000000e+00&#34;,&#34;3&#34;:&#34;0.5338&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;1.352490e+05&#34;,&#34;3&#34;:&#34;0.7828&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;9.000000e+00&#34;,&#34;3&#34;:&#34;0.7538&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;7.000000e+00&#34;,&#34;3&#34;:&#34;0.4347&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;3.100000e+01&#34;,&#34;3&#34;:&#34;2.2225&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;3.557470e+05&#34;,&#34;3&#34;:&#34;2.3745&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;8.524900e+04&#34;,&#34;3&#34;:&#34;0.2368&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;1.100000e+01&#34;,&#34;3&#34;:&#34;0.693&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;6.000000e+00&#34;,&#34;3&#34;:&#34;0.3571&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;1.100000e+01&#34;,&#34;3&#34;:&#34;0.6245&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;9.000000e+00&#34;,&#34;3&#34;:&#34;0.6065&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;6.524900e+04&#34;,&#34;3&#34;:&#34;0.2&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;2.900000e+01&#34;,&#34;3&#34;:&#34;1.5332&#34;},{&#34;1&#34;:&#34;VICHYB&#34;,&#34;2&#34;:&#34;2.652490e+05&#34;,&#34;3&#34;:&#34;1.2056&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;6.000000e+00&#34;,&#34;3&#34;:&#34;0.0721&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;2.700000e+01&#34;,&#34;3&#34;:&#34;0.3702&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;3.072000e+03&#34;,&#34;3&#34;:&#34;0.2286&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;3.272000e+03&#34;,&#34;3&#34;:&#34;0.3512&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;2.358000e+03&#34;,&#34;3&#34;:&#34;0.1392&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;5.516000e+03&#34;,&#34;3&#34;:&#34;0.3732&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;2.400000e+01&#34;,&#34;3&#34;:&#34;0.2208&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;2.086000e+03&#34;,&#34;3&#34;:&#34;0.1915&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;1.600600e+04&#34;,&#34;3&#34;:&#34;1.2108&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;6.072000e+03&#34;,&#34;3&#34;:&#34;0.7572&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;2.600000e+01&#34;,&#34;3&#34;:&#34;0.4069&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;5.986000e+03&#34;,&#34;3&#34;:&#34;0.396&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;2.944000e+03&#34;,&#34;3&#34;:&#34;0.4301&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;3.030000e+02&#34;,&#34;3&#34;:&#34;0.1504&#34;},{&#34;1&#34;:&#34;VICSAT&#34;,&#34;2&#34;:&#34;3.700000e+01&#34;,&#34;3&#34;:&#34;0.528&#34;}],&#34;options&#34;:{&#34;columns&#34;:{&#34;min&#34;:{},&#34;max&#34;:[10]},&#34;rows&#34;:{&#34;min&#34;:[10],&#34;max&#34;:[10]},&#34;pages&#34;:{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;Use relevant format for columns species Sp and biomass Vm:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;df$Sp &amp;lt;- as_factor(df$Sp)
+df$Vm &amp;lt;- as.numeric(df$Vm)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define numeric vector of species, for nested indexing in &lt;code&gt;Jags&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;species &amp;lt;- as.numeric(df$Sp)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Define response variable, number of seeds:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;y &amp;lt;- log(df$NGrTotest)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Standardize explanatory variable, biomass&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x &amp;lt;- (df$Vm - mean(df$Vm))/sd(df$Vm)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now build dataset:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat &amp;lt;- data.frame(y = y, x = x, species = species)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;maximum-likelihood-estimation-2&#34;&gt;Maximum-likelihood estimation&lt;/h2&gt;
+&lt;p&gt;You can get maximum likelihood estimates for a linear regression of number of seeds on biomass with a species random effect on the intercept (partial pooling):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mle &amp;lt;- lmer(y ~ x + (1 | species), data = dat)
+summary(mle)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: y ~ x + (1 | species)
+##    Data: dat
+## 
+## REML criterion at convergence: 2642.5
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -4.6761 -0.2704 -0.0120  0.2900  7.3163 
+## 
+## Random effects:
+##  Groups   Name        Variance Std.Dev.
+##  species  (Intercept) 113.146  10.637  
+##  Residual               9.373   3.062  
+## Number of obs: 488, groups:  species, 33
+## 
+## Fixed effects:
+##             Estimate Std. Error t value
+## (Intercept)  14.5258     1.8574   7.821
+## x             0.4779     0.2421   1.974
+## 
+## Correlation of Fixed Effects:
+##   (Intr)
+## x 0.002
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;bayesian-analysis-with-jags-2&#34;&gt;Bayesian analysis with &lt;code&gt;Jags&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;Jags&lt;/code&gt;, you would use:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# partial pooling model
+partial_pooling &amp;lt;- function(){
+  # likelihood
+  for(i in 1:n){
+    y[i] ~ dnorm(mu[i], tau.y)
+    mu[i] &amp;lt;- a[species[i]] + b * x[i]
+  }
+  for (j in 1:nbspecies){
+    a[j] ~ dnorm(mu.a, tau.a)
+  }
+  # priors
+  tau.y &amp;lt;- 1 / (sigma.y * sigma.y)
+  sigma.y ~ dunif(0,100)
+  mu.a ~ dnorm(0,0.01)
+  tau.a &amp;lt;- 1 / (sigma.a * sigma.a)
+  sigma.a ~ dunif(0,100)
+  b ~ dnorm(0,0.01)
+}
+
+# data
+mydata &amp;lt;- list(y = y, 
+               x = x, 
+               n = length(y),
+               species = species,
+               nbspecies = length(levels(df$Sp)))
+
+# initial values
+inits &amp;lt;- function() list(mu.a = rnorm(1,0,5), 
+                         sigma.a = runif(0,0,10), 
+                         b = rnorm(1,0,5), 
+                         sigma.y = runif(0,0,10))
+
+# parameters to monitor
+params &amp;lt;- c(&amp;quot;mu.a&amp;quot;, &amp;quot;sigma.a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;sigma.y&amp;quot;)
+
+# call jags to fit model
+bayes.jags &amp;lt;- jags(data = mydata,
+                   inits = inits,
+                   parameters.to.save = params,
+                   model.file = partial_pooling,
+                   n.chains = 2,
+                   n.iter = 5000,
+                   n.burnin = 1000,
+                   n.thin = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Compiling model graph
+##    Resolving undeclared variables
+##    Allocating nodes
+## Graph information:
+##    Observed stochastic nodes: 488
+##    Unobserved stochastic nodes: 37
+##    Total graph size: 2484
+## 
+## Initializing model
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bayes.jags
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Inference for Bugs model at &amp;quot;/var/folders/r7/j0wqj1k95vz8w44sdxzm986c0000gn/T//RtmpP7MZ1A/modela81d7639dc1c.txt&amp;quot;, fit using jags,
+##  2 chains, each with 5000 iterations (first 1000 discarded)
+##  n.sims = 8000 iterations saved
+##           mu.vect sd.vect     2.5%      25%      50%      75%    97.5%  Rhat
+## b           0.476   0.244   -0.005    0.314    0.472    0.638    0.964 1.001
+## mu.a       14.025   1.916   10.146   12.774   14.009   15.299   17.760 1.001
+## sigma.a    11.094   1.465    8.696   10.039   10.934   11.952   14.330 1.001
+## sigma.y     3.072   0.101    2.884    3.002    3.069    3.138    3.277 1.001
+## deviance 2478.206   8.704 2463.096 2472.022 2477.521 2483.650 2497.107 1.001
+##          n.eff
+## b         8000
+## mu.a      8000
+## sigma.a   8000
+## sigma.y   8000
+## deviance  8000
+## 
+## For each parameter, n.eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor (at convergence, Rhat=1).
+## 
+## DIC info (using the rule, pD = var(deviance)/2)
+## pD = 37.9 and DIC = 2516.1
+## DIC is an estimate of expected predictive error (lower deviance is better).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;bayesian-analysis-with-brms-2&#34;&gt;Bayesian analysis with &lt;code&gt;brms&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;brms&lt;/code&gt;, you write:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bayes.brms &amp;lt;- brm(y ~ x + (1 | species), 
+                  data = dat,
+                  chains = 2, # nb of chains
+                  iter = 5000, # nb of iterations, including burnin
+                  warmup = 1000, # burnin
+                  thin = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -mmacosx-version-min=10.13 -I&amp;quot;/Library/Frameworks/R.framework/Resources/include&amp;quot; -DNDEBUG   -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/Rcpp/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/unsupported&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/BH/include&amp;quot; -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/src/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppParallel/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/rstan/include&amp;quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/usr/local/include   -fPIC  -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &amp;lt;complex&amp;gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1
+## 
+## SAMPLING FOR MODEL &#39;c7dcb37f6d55803a5216866e78a4a476&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 0.000102 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.02 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 1: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 1: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 1: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 1: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 1: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.656886 seconds (Warm-up)
+## Chain 1:                3.37389 seconds (Sampling)
+## Chain 1:                4.03077 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &#39;c7dcb37f6d55803a5216866e78a4a476&#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 2.7e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.27 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 2: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 2: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 2: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 2: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 2: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 2: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.593596 seconds (Warm-up)
+## Chain 2:                2.34578 seconds (Sampling)
+## Chain 2:                2.93937 seconds (Total)
+## Chain 2:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Display the results:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bayes.brms
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  Family: gaussian 
+##   Links: mu = identity; sigma = identity 
+## Formula: y ~ x + (1 | species) 
+##    Data: dat (Number of observations: 488) 
+##   Draws: 2 chains, each with iter = 5000; warmup = 1000; thin = 1;
+##          total post-warmup draws = 8000
+## 
+## Group-Level Effects: 
+## ~species (Number of levels: 33) 
+##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)    10.74      1.39     8.45    13.78 1.00      427      943
+## 
+## Population-Level Effects: 
+##           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept    14.13      1.90    10.31    17.86 1.01      331      580
+## x             0.47      0.25    -0.00     0.97 1.00     2317     3382
+## 
+## Family Specific Parameters: 
+##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sigma     3.07      0.10     2.88     3.28 1.00     2667     3408
+## 
+## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can extract a block of fixed effects:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(bayes.brms)$fixed
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div data-pagedtable=&#34;false&#34;&gt;
+  &lt;script data-pagedtable-source type=&#34;application/json&#34;&gt;
+{&#34;columns&#34;:[{&#34;label&#34;:[&#34;&#34;],&#34;name&#34;:[&#34;_rn_&#34;],&#34;type&#34;:[&#34;&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;Estimate&#34;],&#34;name&#34;:[1],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Est.Error&#34;],&#34;name&#34;:[2],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;l-95% CI&#34;],&#34;name&#34;:[3],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;u-95% CI&#34;],&#34;name&#34;:[4],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Rhat&#34;],&#34;name&#34;:[5],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Bulk_ESS&#34;],&#34;name&#34;:[6],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Tail_ESS&#34;],&#34;name&#34;:[7],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]}],&#34;data&#34;:[{&#34;1&#34;:&#34;14.1340226&#34;,&#34;2&#34;:&#34;1.9039258&#34;,&#34;3&#34;:&#34;10.31129978&#34;,&#34;4&#34;:&#34;17.864402&#34;,&#34;5&#34;:&#34;1.005515&#34;,&#34;6&#34;:&#34;330.6591&#34;,&#34;7&#34;:&#34;580.1616&#34;,&#34;_rn_&#34;:&#34;Intercept&#34;},{&#34;1&#34;:&#34;0.4747192&#34;,&#34;2&#34;:&#34;0.2477705&#34;,&#34;3&#34;:&#34;-0.00471696&#34;,&#34;4&#34;:&#34;0.968302&#34;,&#34;5&#34;:&#34;1.000108&#34;,&#34;6&#34;:&#34;2317.4168&#34;,&#34;7&#34;:&#34;3382.0628&#34;,&#34;_rn_&#34;:&#34;x&#34;}],&#34;options&#34;:{&#34;columns&#34;:{&#34;min&#34;:{},&#34;max&#34;:[10]},&#34;rows&#34;:{&#34;min&#34;:[10],&#34;max&#34;:[10]},&#34;pages&#34;:{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;And a block of random effects:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(bayes.brms)$random
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## $species
+##               Estimate Est.Error l-95% CI u-95% CI     Rhat Bulk_ESS Tail_ESS
+## sd(Intercept) 10.74273  1.388061 8.454543   13.776 1.001916 426.9568 943.1178
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And visualize:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(bayes.brms)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-34-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;glmm-with-poisson-distribution&#34;&gt;GLMM with Poisson distribution&lt;/h1&gt;
+&lt;p&gt;This example is from Jason Matthiopoulos&#39; excellent book 
+&lt;a href=&#34;http://greenmaths.st-andrews.ac.uk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;How to be a quantitative ecologist&lt;/em&gt;&lt;/a&gt;.
+A survey of a coral reef uses 10 predefined linear transects covered by divers once every week. The response variable of interest is the abundance of a particular species of anemone as a function of water temperature. Counts of anemones are recorded at 20 regular line segments along the transect.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s simulate some data:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;set.seed(666)
+transects &amp;lt;- 10
+data &amp;lt;- NULL
+for (tr in 1:transects){
+  # random effect (intercept)
+  ref &amp;lt;- rnorm(1,0,.5) 
+  # water temperature gradient
+  t &amp;lt;- runif(1, 18,22) + runif(1,-.2,0.2)*1:20 
+  # Anemone gradient (expected response)
+  ans &amp;lt;- exp(ref -14 + 1.8 * t - 0.045 * t^2) 
+  # actual counts on 20 segments of the current transect
+  an &amp;lt;- rpois(20, ans) 
+  data &amp;lt;- rbind(data, cbind(rep(tr, 20), t, an))
+}
+
+data &amp;lt;- data.frame(Transect = data[,1],
+                   Temperature = data[,2],
+                   Anemones = data[,3])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Standardize temperature:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;boo &amp;lt;- data$Temperature
+data$Temp &amp;lt;- (boo - mean(boo)) / sd(boo)
+head(data)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div data-pagedtable=&#34;false&#34;&gt;
+  &lt;script data-pagedtable-source type=&#34;application/json&#34;&gt;
+{&#34;columns&#34;:[{&#34;label&#34;:[&#34;&#34;],&#34;name&#34;:[&#34;_rn_&#34;],&#34;type&#34;:[&#34;&#34;],&#34;align&#34;:[&#34;left&#34;]},{&#34;label&#34;:[&#34;Transect&#34;],&#34;name&#34;:[1],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Temperature&#34;],&#34;name&#34;:[2],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Anemones&#34;],&#34;name&#34;:[3],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]},{&#34;label&#34;:[&#34;Temp&#34;],&#34;name&#34;:[4],&#34;type&#34;:[&#34;dbl&#34;],&#34;align&#34;:[&#34;right&#34;]}],&#34;data&#34;:[{&#34;1&#34;:&#34;1&#34;,&#34;2&#34;:&#34;21.79259&#34;,&#34;3&#34;:&#34;65&#34;,&#34;4&#34;:&#34;0.8852197&#34;,&#34;_rn_&#34;:&#34;1&#34;},{&#34;1&#34;:&#34;1&#34;,&#34;2&#34;:&#34;21.67312&#34;,&#34;3&#34;:&#34;70&#34;,&#34;4&#34;:&#34;0.8201601&#34;,&#34;_rn_&#34;:&#34;2&#34;},{&#34;1&#34;:&#34;1&#34;,&#34;2&#34;:&#34;21.55365&#34;,&#34;3&#34;:&#34;65&#34;,&#34;4&#34;:&#34;0.7551005&#34;,&#34;_rn_&#34;:&#34;3&#34;},{&#34;1&#34;:&#34;1&#34;,&#34;2&#34;:&#34;21.43418&#34;,&#34;3&#34;:&#34;61&#34;,&#34;4&#34;:&#34;0.6900410&#34;,&#34;_rn_&#34;:&#34;4&#34;},{&#34;1&#34;:&#34;1&#34;,&#34;2&#34;:&#34;21.31471&#34;,&#34;3&#34;:&#34;81&#34;,&#34;4&#34;:&#34;0.6249814&#34;,&#34;_rn_&#34;:&#34;5&#34;},{&#34;1&#34;:&#34;1&#34;,&#34;2&#34;:&#34;21.19524&#34;,&#34;3&#34;:&#34;85&#34;,&#34;4&#34;:&#34;0.5599218&#34;,&#34;_rn_&#34;:&#34;6&#34;}],&#34;options&#34;:{&#34;columns&#34;:{&#34;min&#34;:{},&#34;max&#34;:[10]},&#34;rows&#34;:{&#34;min&#34;:[10],&#34;max&#34;:[10]},&#34;pages&#34;:{}}}
+  &lt;/script&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;maximum-likelihood-estimation-3&#34;&gt;Maximum-likelihood estimation&lt;/h2&gt;
+&lt;p&gt;With &lt;code&gt;lme4&lt;/code&gt;, you write:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;fit_lme4 &amp;lt;- glmer(Anemones ~ Temp + I(Temp^2) + (1 | Transect), 
+                  data = data, 
+                  family = poisson)
+summary(fit_lme4)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Generalized linear mixed model fit by maximum likelihood (Laplace
+##   Approximation) [glmerMod]
+##  Family: poisson  ( log )
+## Formula: Anemones ~ Temp + I(Temp^2) + (1 | Transect)
+##    Data: data
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##   1380.2   1393.4   -686.1   1372.2      196 
+## 
+## Scaled residuals: 
+##      Min       1Q   Median       3Q      Max 
+## -2.32356 -0.66154 -0.03391  0.63964  2.67283 
+## 
+## Random effects:
+##  Groups   Name        Variance Std.Dev.
+##  Transect (Intercept) 0.1497   0.3869  
+## Number of obs: 200, groups:  Transect, 10
+## 
+## Fixed effects:
+##             Estimate Std. Error z value Pr(&amp;gt;|z|)    
+## (Intercept)  3.95436    0.12368  31.971   &amp;lt;2e-16 ***
+## Temp        -0.04608    0.02435  -1.892   0.0584 .  
+## I(Temp^2)   -0.11122    0.01560  -7.130    1e-12 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Correlation of Fixed Effects:
+##           (Intr) Temp  
+## Temp       0.037       
+## I(Temp^2) -0.118 -0.294
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;bayesian-analysis-with-jags-3&#34;&gt;Bayesian analysis with &lt;code&gt;Jags&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;Jags&lt;/code&gt;, we fit the corresponding GLMM with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;model &amp;lt;- function() {
+  for (i in 1:n){
+    count[i] ~ dpois(lambda[i])
+    log(lambda[i]) &amp;lt;- a[transect[i]] + b[1] * x[i] + b[2] * pow(x[i],2)
+  }
+  for (j in 1:nbtransects){
+    a[j] ~ dnorm (mu.a, tau.a)
+  }
+  mu.a ~ dnorm (0, 0.01)
+  tau.a &amp;lt;- pow(sigma.a, -2)
+  sigma.a ~ dunif (0, 100)
+  b[1] ~ dnorm (0, 0.01)
+  b[2] ~ dnorm (0, 0.01)
+}
+
+dat &amp;lt;- list(n = nrow(data), 
+            nbtransects = transects, 
+            x = data$Temp, 
+            count = data$Anemones, 
+            transect = data$Transect)
+
+inits &amp;lt;- function() list(a = rnorm(transects), 
+                         b = rnorm(2), 
+                         mu.a = rnorm(1), 
+                         sigma.a = runif(1))
+
+par &amp;lt;- c (&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;mu.a&amp;quot;, &amp;quot;sigma.a&amp;quot;)
+
+fit &amp;lt;- jags(data = dat, 
+            inits = inits, 
+            parameters.to.save = par, 
+            model.file = model,
+            n.chains = 2, 
+            n.iter = 5000, 
+            n.burn = 1000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Compiling model graph
+##    Resolving undeclared variables
+##    Allocating nodes
+## Graph information:
+##    Observed stochastic nodes: 200
+##    Unobserved stochastic nodes: 14
+##    Total graph size: 1622
+## 
+## Initializing model
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;round(fit$BUGSoutput$summary[, -c(4,6)], 3)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##              mean    sd     2.5%      50%    97.5%  Rhat n.eff
+## a[1]        4.383 0.026    4.332    4.384    4.435 1.001  2000
+## a[2]        3.223 0.050    3.120    3.224    3.322 1.001  2000
+## a[3]        3.584 0.058    3.471    3.584    3.696 1.001  2000
+## a[4]        3.620 0.054    3.513    3.622    3.721 1.001  2000
+## a[5]        4.092 0.050    3.990    4.092    4.190 1.001  2000
+## a[6]        3.848 0.038    3.774    3.849    3.921 1.000  2000
+## a[7]        4.476 0.029    4.419    4.475    4.531 1.002  1300
+## a[8]        4.398 0.055    4.288    4.397    4.499 1.003   550
+## a[9]        3.835 0.033    3.771    3.835    3.900 1.001  1700
+## a[10]       4.076 0.029    4.018    4.076    4.132 1.001  2000
+## b[1]       -0.047 0.024   -0.093   -0.047    0.000 1.001  2000
+## b[2]       -0.111 0.016   -0.142   -0.111   -0.079 1.004   450
+## deviance 1324.697 4.651 1317.432 1324.185 1335.440 1.001  2000
+## mu.a        3.950 0.160    3.617    3.957    4.272 1.005   310
+## sigma.a     0.482 0.140    0.296    0.457    0.826 1.003  1000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;bayesian-analysis-with-brms-3&#34;&gt;Bayesian analysis with &lt;code&gt;brms&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;What about with &lt;code&gt;brms&lt;/code&gt;?&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bayes.brms &amp;lt;- brm(Anemones ~ Temp + I(Temp^2) + (1 | Transect), 
+                  data = data,
+                  family = poisson(&amp;quot;log&amp;quot;),
+                  chains = 2, # nb of chains
+                  iter = 5000, # nb of iterations, including burnin
+                  warmup = 1000, # burnin
+                  thin = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -mmacosx-version-min=10.13 -I&amp;quot;/Library/Frameworks/R.framework/Resources/include&amp;quot; -DNDEBUG   -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/Rcpp/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/unsupported&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/BH/include&amp;quot; -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/src/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppParallel/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/rstan/include&amp;quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/usr/local/include   -fPIC  -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &amp;lt;complex&amp;gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1
+## 
+## SAMPLING FOR MODEL &#39;9326e0aa5a2dca4008c9e5b2ee4e86bf&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 4.5e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.45 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 1: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 1: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 1: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 1: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 1: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.893226 seconds (Warm-up)
+## Chain 1:                4.91683 seconds (Sampling)
+## Chain 1:                5.81006 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &#39;9326e0aa5a2dca4008c9e5b2ee4e86bf&#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 2.4e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.24 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 2: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 2: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 2: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 2: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 2: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 2: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 1.21769 seconds (Warm-up)
+## Chain 2:                4.45281 seconds (Sampling)
+## Chain 2:                5.6705 seconds (Total)
+## Chain 2:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Display results:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bayes.brms
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  Family: poisson 
+##   Links: mu = log 
+## Formula: Anemones ~ Temp + I(Temp^2) + (1 | Transect) 
+##    Data: data (Number of observations: 200) 
+##   Draws: 2 chains, each with iter = 5000; warmup = 1000; thin = 1;
+##          total post-warmup draws = 8000
+## 
+## Group-Level Effects: 
+## ~Transect (Number of levels: 10) 
+##               Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## sd(Intercept)     0.47      0.14     0.29     0.81 1.00     1366     2089
+## 
+## Population-Level Effects: 
+##           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+## Intercept     3.95      0.16     3.63     4.26 1.00     1359     1751
+## Temp         -0.05      0.02    -0.09     0.00 1.00     4126     4490
+## ITempE2      -0.11      0.02    -0.14    -0.08 1.00     4018     4209
+## 
+## Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+## and Tail_ESS are effective sample size measures, and Rhat is the potential
+## scale reduction factor on split chains (at convergence, Rhat = 1).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Visualize:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(bayes.brms)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-41-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;We can assess the quality of fit of this model:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pp_check(bayes.brms, ndraws = 100, type = &#39;ecdf_overlay&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;unnamed-chunk-42-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;As expected, the fit is almost perfect because we simulated data from this very model.&lt;/p&gt;
+&lt;p&gt;What if we&amp;rsquo;d like to test the effect of temperature using WAIC?&lt;/p&gt;
+&lt;p&gt;We fit a model with no effect of temperature:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bayes.brms2 &amp;lt;- brm(Anemones ~ 1 + (1 | Transect), 
+                  data = data,
+                  family = poisson(&amp;quot;log&amp;quot;),
+                  chains = 2, # nb of chains
+                  iter = 5000, # nb of iterations, including burnin
+                  warmup = 1000, # burnin
+                  thin = 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Running /Library/Frameworks/R.framework/Resources/bin/R CMD SHLIB foo.c
+## clang -mmacosx-version-min=10.13 -I&amp;quot;/Library/Frameworks/R.framework/Resources/include&amp;quot; -DNDEBUG   -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/Rcpp/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/unsupported&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/BH/include&amp;quot; -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/src/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppParallel/include/&amp;quot;  -I&amp;quot;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/rstan/include&amp;quot; -DEIGEN_NO_DEBUG  -DBOOST_DISABLE_ASSERTS  -DBOOST_PENDING_INTEGER_LOG2_HPP  -DSTAN_THREADS  -DBOOST_NO_AUTO_PTR  -include &#39;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp&#39;  -D_REENTRANT -DRCPP_PARALLEL_USE_TBB=1   -I/usr/local/include   -fPIC  -Wall -g -O2  -c foo.c -o foo.o
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:88:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:1: error: unknown type name &#39;namespace&#39;
+## namespace Eigen {
+## ^
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/src/Core/util/Macros.h:628:16: error: expected &#39;;&#39; after top level declarator
+## namespace Eigen {
+##                ^
+##                ;
+## In file included from &amp;lt;built-in&amp;gt;:1:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/StanHeaders/include/stan/math/prim/mat/fun/Eigen.hpp:13:
+## In file included from /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Dense:1:
+## /Library/Frameworks/R.framework/Versions/4.1/Resources/library/RcppEigen/include/Eigen/Core:96:10: fatal error: &#39;complex&#39; file not found
+## #include &amp;lt;complex&amp;gt;
+##          ^~~~~~~~~
+## 3 errors generated.
+## make: *** [foo.o] Error 1
+## 
+## SAMPLING FOR MODEL &#39;fd9804091450c044661531e89123d1dc&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 4.4e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.44 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 1: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 1: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 1: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 1: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 1: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.704799 seconds (Warm-up)
+## Chain 1:                2.58736 seconds (Sampling)
+## Chain 1:                3.29216 seconds (Total)
+## Chain 1: 
+## 
+## SAMPLING FOR MODEL &#39;fd9804091450c044661531e89123d1dc&#39; NOW (CHAIN 2).
+## Chain 2: 
+## Chain 2: Gradient evaluation took 1.8e-05 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.18 seconds.
+## Chain 2: Adjust your expectations accordingly!
+## Chain 2: 
+## Chain 2: 
+## Chain 2: Iteration:    1 / 5000 [  0%]  (Warmup)
+## Chain 2: Iteration:  500 / 5000 [ 10%]  (Warmup)
+## Chain 2: Iteration: 1000 / 5000 [ 20%]  (Warmup)
+## Chain 2: Iteration: 1001 / 5000 [ 20%]  (Sampling)
+## Chain 2: Iteration: 1500 / 5000 [ 30%]  (Sampling)
+## Chain 2: Iteration: 2000 / 5000 [ 40%]  (Sampling)
+## Chain 2: Iteration: 2500 / 5000 [ 50%]  (Sampling)
+## Chain 2: Iteration: 3000 / 5000 [ 60%]  (Sampling)
+## Chain 2: Iteration: 3500 / 5000 [ 70%]  (Sampling)
+## Chain 2: Iteration: 4000 / 5000 [ 80%]  (Sampling)
+## Chain 2: Iteration: 4500 / 5000 [ 90%]  (Sampling)
+## Chain 2: Iteration: 5000 / 5000 [100%]  (Sampling)
+## Chain 2: 
+## Chain 2:  Elapsed Time: 0.648008 seconds (Warm-up)
+## Chain 2:                2.85026 seconds (Sampling)
+## Chain 2:                3.49826 seconds (Total)
+## Chain 2:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then we compare both models, by ranking them with their WAIC or using ELPD:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(waic1 &amp;lt;- waic(bayes.brms)) # waic model w/ tempterature
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Computed from 8000 by 200 log-likelihood matrix
+## 
+##           Estimate   SE
+## elpd_waic   -668.2  9.8
+## p_waic        11.0  1.1
+## waic        1336.3 19.7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;(waic2 &amp;lt;- waic(bayes.brms2)) # waic model wo/ tempterature
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Computed from 8000 by 200 log-likelihood matrix
+## 
+##           Estimate   SE
+## elpd_waic   -702.4 13.3
+## p_waic        12.3  1.2
+## waic        1404.9 26.5
+## 
+## 2 (1.0%) p_waic estimates greater than 0.4. We recommend trying loo instead.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;loo_compare(waic1, waic2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##             elpd_diff se_diff
+## bayes.brms    0.0       0.0  
+## bayes.brms2 -34.3       8.9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;In all examples, you can check that i) there is little or no difference between &lt;code&gt;Jags&lt;/code&gt; and &lt;code&gt;brms&lt;/code&gt; numeric summaries of posterior distributions, and ii) maximum likelihood parameter estimates (&lt;code&gt;glm()&lt;/code&gt;, &lt;code&gt;lmer()&lt;/code&gt; and &lt;code&gt;glmer()&lt;/code&gt; functions) and posterior means/medians are very close to each other.&lt;/p&gt;
+&lt;p&gt;In contrast to Jags, Nimble or Stan, you do not need to code the likelihood yourself in &lt;code&gt;brms&lt;/code&gt;, as long as it is available in the package. You can have a look to a list of distributions with &lt;code&gt;?brms::brmsfamily&lt;/code&gt;, and there is also a possibility to define custom distributions with &lt;code&gt;custom_family()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Note I haven&amp;rsquo;t covered diagnostics of convergence, more 
+&lt;a href=&#34;https://www.rensvandeschoot.com/brms-wambs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. You can also integrate &lt;code&gt;brms&lt;/code&gt; outputs in a 
+&lt;a href=&#34;http://mjskay.github.io/tidybayes/articles/tidy-brms.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tidy workflow with &lt;code&gt;tidybayes&lt;/code&gt;&lt;/a&gt;, and use the &lt;code&gt;ggplot()&lt;/code&gt; magic.&lt;/p&gt;
+&lt;p&gt;As usual, the code is on GitHub, visit &lt;a href=&#34;https://github.com/oliviergimenez/fit-glmm-with-brms&#34;&gt;https://github.com/oliviergimenez/fit-glmm-with-brms&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now I guess it&amp;rsquo;s up to the students to pick their favorite Bayesian tool.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Statistical ecology</title>
