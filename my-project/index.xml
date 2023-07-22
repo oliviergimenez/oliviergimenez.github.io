@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My-projects | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/my-project/</link>
+      <atom:link href="https://oliviergimenez.github.io/my-project/index.xml" rel="self" type="application/rss+xml" />
+    <description>My-projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Wed, 03 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>My-projects</title>
+      <link>https://oliviergimenez.github.io/my-project/</link>
+    </image>
+    
+    <item>
+      <title>DISCAR</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/discar/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/discar/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Context&lt;/em&gt;. Conservation and the sustainable use of biodiversity and ecosystem services largely depend on the successful management of ecological populations, which in turn depend on our knowledge and our ability to understand and predict how the structure and dynamics of ecological populations respond to changes in their environments.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Rationale and aim&lt;/em&gt;. Despite its importance, the quantification of the effects of anthropic pressures on biodiversity is difficult and rarely undertaken because of the lack of species-specific ecological data and/or human pressures and activities, and the complexity and lack of transfer of analytical methods needed to evaluate these long-term consequences. The DISCAR (DIS = disturbance, CAR = carnivores) project aims at providing an operational framework with analytical tools for assessing the impacts or population consequences of human pressures, and showcasing it with case studies in applied conservation.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Case study&lt;/em&gt;. In DISCAR, we will use small carnivores in French mainland and overseas territories as a case study to assess the population consequences or impacts of human pressures on animal populations. Why small carnivores? Because these species hold important roles in ecosystems, such as influencing ecosystem structure and providing numerous ecosystem services, including pest/disease control and seed dispersal. Small carnivore species also respond to ecosystem perturbation in a fast, measurable, and interpretable way and therefore can be used as sentinels of global change.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Objectives&lt;/em&gt;. DISCAR will connect the fields of bioenergetics and demographic modeling in an integrated framework to assess human pressures on biodiversity, and to characterize then predict the impacts on small carnivores. DISCAR will identify key parameters underlying coupling between pressures and impacts, and will make recommendations for stakeholders in terms of monitoring and mitigation strategies.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Work packages&lt;/em&gt;. We will i) assemble a unique dataset on small carnivores including their ecology, bioenergetic requirements, demography and human pressures, ii) quantify and characterize the impacts of interacting pressures on populations, and iii) forecast the fate of populations to assess their viability under various scenarios of pressures and mitigation to help devise sound conservation strategies.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Consortium&lt;/em&gt;. To achieve these objectives, we have gathered international experts in ecological modelling and small carnivores who will develop and transfer an analytical framework for quantification, characterization and prediction of the impacts of pressures on populations. These experts are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Olivier Gimenez – CNRS (France)&lt;/li&gt;
+&lt;li&gt;Sandrine Ruette – OFB (France)&lt;/li&gt;
+&lt;li&gt;Courtney Marneweck – Giraffe Conservation Foundation (South Africa)&lt;/li&gt;
+&lt;li&gt;Patrick Giraudoux – Université Bourgogne Franche-Comté (France)&lt;/li&gt;
+&lt;li&gt;Isabel Smallegange - Newcastle University (UK)&lt;/li&gt;
+&lt;li&gt;Sébastien Devillard – Université Claude Bernard Lyon 1 (France)&lt;/li&gt;
+&lt;li&gt;Cara Gallagher - University of Potsdam (Allemagne)&lt;/li&gt;
+&lt;li&gt;Sarah Cubaynes – EPHE (France)&lt;/li&gt;
+&lt;li&gt;John Fryxell – University of Guelph (Canada)&lt;/li&gt;
+&lt;li&gt;Elizabeth McHuron – University of Washington (USA)&lt;/li&gt;
+&lt;li&gt;Rob Salguero-Gomez – University of Oxford (UK)&lt;/li&gt;
+&lt;li&gt;Marie-Lazarine Poulle – Université Reims Champagne Ardenne (France)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Funding&lt;/em&gt;. This project is funded by the French Foundation for Biodiversity Research (FRB) through 
+&lt;a href=&#34;https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cesab&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OtterConnect</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/otters/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/otters/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Large carnivores monitoring</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/carnivores/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/carnivores/</guid>
+      <description>&lt;p&gt;Large carnivores are difficult to monitor in the field: they are elusive and live at low densities over wide areas. With their recent recovery in Europe,
+large carnivores are having increasing interactions with human activities. We contribute to the estimation of their abundance and distribution by applying
+and developing methods that make optimal use of available data. We are also working on applying science-based management using the structured
+decision making framework. Past and ongoing projects were are are mostly led by 
+&lt;a href=&#34;https://oliviergimenez.github.io/#current&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Master students, PhDs and post-docs&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terrestrial transport infrastructures, Lynx population viability and mitigation strategies</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/lynx/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/lynx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistical ecology</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/methods/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/methods/</guid>
+      <description>&lt;p&gt;Trained in mathematics and statistics in particular, I have developed a bottomless taste for questions in 
+&lt;a href=&#34;http://rsbl.royalsocietypublishing.org/content/10/12/20140698&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;statistical ecology&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I often resort to 
+&lt;a href=&#34;https://oliviergimenez.github.io/publication/books/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;state-space models&lt;/a&gt;, and hidden Markov models (e.g., 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Gimenezetal2014.pdf&#34;&gt;here&lt;/a&gt; and 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Gimenezetal2012TPB.pdf&#34;&gt;here&lt;/a&gt;) in particular, to develop statistical methods for capture-recapture, occupancy and integrated population models.&lt;/p&gt;
+&lt;p&gt;In our group, we address questions in conservation biology to assess species viability, in ecology to study the effect of climate change on animal demography, in evolution to examine life-history tactics and individual heterogeneity and in wildlife management to develop strategies for conservation and conflict mitigation. To account for the human dimension inherent to these questions, I went back to the university to study sociology. A nice illustration of this interdisciplinary work is 
+&lt;a href=&#34;https://tel.archives-ouvertes.fr/tel-01834575/document&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gilles Maurer&amp;rsquo;s PhD&lt;/a&gt; combining anthropology, demography, economics and genetics to better understand the interactions between captive and wild population of Asian elephants.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m doing my best to teach statistics (including the Bayesian way) to the students of the 
+&lt;a href=&#34;https://www.masters-biologie-ecologie.com/blog/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ecology and Evolution Master in Montpellier&lt;/a&gt;. We also make efforts to structure the community in France through our 
+&lt;a href=&#34;https://sites.google.com/site/gdrecostat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;national research group in statistical ecology&lt;/a&gt;. Last but not least, every now and then, our group runs 
+&lt;a href=&#34;https://oliviergimenez.github.io/talks/workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;workshops&lt;/a&gt; to diffuse quantitative methods in the ecological community.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Socio-ecological management of large carnivores</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/sciencepolicy/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/sciencepolicy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Human-dolphin interactions</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/interact/</link>
+      <pubDate>Sat, 12 Aug 2017 00:01:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/interact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multispecies demography</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/democom/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/democom/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

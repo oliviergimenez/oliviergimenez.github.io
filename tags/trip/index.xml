@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>trip | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/trip/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/trip/index.xml" rel="self" type="application/rss+xml" />
+    <description>trip</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Wed, 08 Mar 2017 12:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>trip</title>
+      <link>https://oliviergimenez.github.io/tags/trip/</link>
+    </image>
+    
+    <item>
+      <title>Visit to the IZW Leibniz Institute, Berlin</title>
+      <link>https://oliviergimenez.github.io/blog/visit_berlin_2017/</link>
+      <pubDate>Wed, 08 Mar 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/visit_berlin_2017/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/izw.gif&#34;&gt;
+I spent 3 days in Berlin at the [Leibniz Institute for Zoo and Wildlife 
+Research](http://www.leibniz-izw.de/welcome.html) catching up with friends and 
+colleagues (L. Marescot, S. Benhaim, S. Kramer-Schadt, A. Courtiol, H. Hofer). 
+&lt;p&gt;We talked about spotted hyenas and monitoring of large carnivores. I also gave a workshop
+on inferring occupancy using HMM. I even got in touch with an old acquaintance - Steve
+Beissinger - who happens to be in Berlin for the year. Steve will come and visit us
+in Montpellier for a few days in May.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Visiting Tromso, polar bear demography</title>
+      <link>https://oliviergimenez.github.io/blog/polar_bear/</link>
+      <pubDate>Mon, 30 May 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/polar_bear/</guid>
+      <description>&lt;p&gt;My post-doc Sarah Cubaynes and I went to visit our colleague
+&lt;a href=&#34;http://www.npolar.no/en/people/jon.aars/&#34; target=&#34;_blank&#34;&gt;Jon Aars&lt;/a&gt; in
+Tromso, Norway. We are working together on the demography of polar bears using an amazing dataset
+the &lt;a href=&#34;http://www.npolar.no/en/&#34; target=&#34;_blank&#34;&gt;Norwegian Polar Institute&lt;/a&gt; has
+been collecting for decades. It was also the opportunity to catch up with
+&lt;a href=&#34;https://uit.no/om/enhet/ansatte/person?p_document_id=41160&amp;p_dimension_id=88165&#34; target=&#34;_blank&#34;&gt;Nigel (Gilles)
+Yoccoz&lt;/a&gt; who&amp;rsquo;s being very helpful with this project. Jon took us fishing; I was luckier than with fly-fishing ;-)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dolphins, gulf of Corinth, Greece</title>
+      <link>https://oliviergimenez.github.io/blog/galaxidi/</link>
+      <pubDate>Wed, 12 Aug 2015 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/galaxidi/</guid>
+      <description>&lt;p&gt;We visited our colleagues from &lt;a href=&#34;http://www.dolphinbiology.org/&#34; target=&#34;_blank&#34;&gt;Dolphin
+Biology and Conservation&lt;/a&gt; (Giovanni Bearzi, Silvia Bonizzoni, Nina Santostasi ‎and‎‎ Eva Greene).
+Lots of discussions on future projects about the estimation of striped, bottlenose and
+common dolphins abundance, their distribution in the gulf of Corinth (Greece) and their
+interactions with fishermen. Nina will be visiting us in October-March to work on the
+abundance project. We also went out for a survey and spotted several groups of striped
+dolphins, and two common dolphins. Thanks to Giovanni and Silvia for their hospitality
+and kindness. The beginning of a new adventure in Greece!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>camera traps | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/camera-traps/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/camera-traps/index.xml" rel="self" type="application/rss+xml" />
+    <description>camera traps</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Tue, 30 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>camera traps</title>
+      <link>https://oliviergimenez.github.io/tags/camera-traps/</link>
+    </image>
+    
+    <item>
+      <title>New paper alert</title>
+      <link>https://oliviergimenez.github.io/blog/newpaperpat/</link>
+      <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/newpaperpat/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;fr&#34; dir=&#34;ltr&#34;&gt;🚨 New paper 🚨 by &lt;a href=&#34;https://twitter.com/PatriRodrigs?ref_src=twsrc%5Etfw&#34;&gt;@PatriRodrigs&lt;/a&gt; testing the &amp;quot;humans as shield&amp;quot; &amp;amp; &amp;quot;humans as super-predators&amp;quot; hypotheses w/ camp trap data on mammals using multispecies occupancy models à la Rota et al. 🤩😇&lt;a href=&#34;https://t.co/NMlm3loxG8&#34;&gt;https://t.co/NMlm3loxG8&lt;/a&gt; &lt;a href=&#34;https://t.co/P4upBAzb8g&#34;&gt;pic.twitter.com/P4upBAzb8g&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1663488381106503682?ref_src=twsrc%5Etfw&#34;&gt;May 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>Tagging species with deep learning.</title>
+      <link>https://oliviergimenez.github.io/blog/dlcameras/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/dlcameras/</guid>
+      <description>&lt;p&gt;Tagging species with deep learning.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Tagging species w/ &lt;a href=&#34;https://twitter.com/hashtag/Keras?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Keras&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Retinanet?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Retinanet&lt;/a&gt; &lt;a href=&#34;https://t.co/lZRlrDHtfM&#34;&gt;https://t.co/lZRlrDHtfM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/FizyrBV?ref_src=twsrc%5Etfw&#34;&gt;@FizyrBV&lt;/a&gt; Not too bad so far 🤩 green box is truth, blue/orange box is prediction &lt;a href=&#34;https://twitter.com/hashtag/DeepLearning?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DeepLearning&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/CameraTraps?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CameraTraps&lt;/a&gt; More details ➡️ &lt;a href=&#34;https://t.co/HieQfqgVEx&#34;&gt;https://t.co/HieQfqgVEx&lt;/a&gt; &lt;a href=&#34;https://t.co/uhocKDuuGP&#34;&gt;pic.twitter.com/uhocKDuuGP&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1259869148584214528?ref_src=twsrc%5Etfw&#34;&gt;May 11, 220&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

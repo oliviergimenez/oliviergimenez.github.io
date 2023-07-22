@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>review | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/review/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    <description>review</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Wed, 26 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>review</title>
+      <link>https://oliviergimenez.github.io/tags/review/</link>
+    </image>
+    
+    <item>
+      <title>Review of HMMs in ecology</title>
+      <link>https://oliviergimenez.github.io/blog/reviewhmm/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/reviewhmm/</guid>
+      <description>&lt;p&gt;Our new preprint on HMMs for ecology, or how we&amp;rsquo;&#39;&amp;rsquo;ve been using HMMs for ever without even knowing it.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;😎😉 Our new &lt;a href=&#34;https://twitter.com/hashtag/preprint?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#preprint&lt;/a&gt; on &lt;a href=&#34;https://twitter.com/hashtag/HMM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMM&lt;/a&gt; for ecology, or how we&amp;#39;ve been using &lt;a href=&#34;https://twitter.com/hashtag/HMMs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMMs&lt;/a&gt; for ever wo even knowing it - all credit goes to &lt;a href=&#34;https://twitter.com/bt_mcclintock?ref_src=twsrc%5Etfw&#34;&gt;@bt_mcclintock&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/RolandLangrock?ref_src=twsrc%5Etfw&#34;&gt;@RolandLangrock&lt;/a&gt; for the heavy lifting. Written in &lt;a href=&#34;https://twitter.com/overleaf?ref_src=twsrc%5Etfw&#34;&gt;@overleaf&lt;/a&gt; 😉 &lt;a href=&#34;https://twitter.com/EcoHMM?ref_src=twsrc%5Etfw&#34;&gt;@EcoHMM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/twitthair1?ref_src=twsrc%5Etfw&#34;&gt;@twitthair1&lt;/a&gt; &lt;a href=&#34;https://t.co/vSAJF5abH7&#34;&gt;https://t.co/vSAJF5abH7&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1232522350882705409?ref_src=twsrc%5Etfw&#34;&gt;February 26020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

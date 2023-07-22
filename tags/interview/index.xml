@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>interview | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/interview/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <description>interview</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Mon, 06 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>interview</title>
+      <link>https://oliviergimenez.github.io/tags/interview/</link>
+    </image>
+    
+    <item>
+      <title>Why a career in statistical ecology?</title>
+      <link>https://oliviergimenez.github.io/blog/interview-ecostat-english/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/interview-ecostat-english/</guid>
+      <description>&lt;p&gt;I have been interviewed recently by 
+&lt;a href=&#34;http://www.theses.fr/s303020&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lise Viollat&lt;/a&gt; who&amp;rsquo;s preparing a documentary for our national research group in statistical ecology. I have written my two cents answers to her challenging and very relevant questions. Thank you Lise for the interview !&lt;/p&gt;
+&lt;h2 id=&#34;can-you-introduce-yourself-what-is-your-job-about-your-background&#34;&gt;Can you introduce yourself? What is your job about? Your background?&lt;/h2&gt;
+&lt;p&gt;My work is motivated by questions on the ecology of large mammals, and large carnivores in particular (wolves, bears and lynx).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/big-mammals.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What questions ? Very basic questions at first glance: How many animals? Where are they? How to explain trends in population abundance and species distribution?&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=jM5i7vxLcGM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/videolcs.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These questions might seem simple, but the issue is that large carnivores are difficult to see in the field. We need methods to sample these populations, to manage uncertainties in counting, in detecting individuals and species, and to predict as well, where and how many. This is where 
+&lt;a href=&#34;https://royalsocietypublishing.org/doi/full/10.1098/rsbl.2014.0698&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;statistical ecology&lt;/a&gt; comes in.&lt;/p&gt;
+&lt;p&gt;I am what you might call an ecological statistician, and I work for the 
+&lt;a href=&#34;https://www.cnrs.fr/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;National Centre for Scientific Research&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I have a rather standard background. I studied mathematics up to Bachelor&amp;rsquo;s degree. A degree that I repeated, I still had nightmares about it until recently. Then, from the Master&amp;rsquo;s degree onwards, I turned to applied mathematics and statistics. I embarked on a PhD in statistics applied to ecology, and to the dynamics of animal populations, with the estimation of survival and dispersal. As a post-doc, I spent time in England and Scotland to see what it was like elsewhere, to build my own research network, and to learn English.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/pubs_royaume_uni.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Once recruited, I became increasingly interested in evolutionary ecology and conservation issues. I also worked more and more on issues related to large mammals, and species that interact with human activities.&lt;/p&gt;
+&lt;p&gt;To better understand these interactions, we need the human and social sciences. So I went back to studying sociology. I took a few courses, but I couldn&amp;rsquo;t go all the way to the Master&amp;rsquo;s degree. I am still learning on the job.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-ecology-for-you&#34;&gt;What is ecology for you?&lt;/h2&gt;
+&lt;p&gt;I am certainly not the right person to answer this question, I never studied ecology at university. I learned from my students and colleagues, and on the job.&lt;/p&gt;
+&lt;p&gt;I like definitions, so I&amp;rsquo;m going for it. Ecology is the study of the processes that influence the distribution and abundance of species, the interactions between these species, and the interactions between these species and their environment. 
+&lt;a href=&#34;http://www.theses.fr/s210820&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Maud Quéroué&amp;rsquo;s thesis&lt;/a&gt; is an example of the study of these interactions between species using new statistical models.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/ecologie.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s the science of interactions in a nutshell, and that&amp;rsquo;s what I like about this discipline. Between species, between species and their environment. By species, I also mean humans. And here we come back to this idea of mobilising ecology, human and social sciences, and the study of socio-ecosystems in which we mix ecology, politics, economics, sociology and anthropology. 
+&lt;a href=&#34;https://www.theses.fr/2018MONTG011&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gilles Maurer&amp;rsquo;s thesis&lt;/a&gt; is an illustration of this approach, and combines demography, genetics, economics and anthropology to study the relationship between Asian elephants and humans.&lt;/p&gt;
+&lt;p&gt;Finally, when we talk about ecology, we must understand it in a broad sense, with the idea that we are also talking about the evolutionary processes that contribute to explaining variability in biological systems. The theses of 
+&lt;a href=&#34;https://www.theses.fr/2013LYO10253&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marlène Gamelon&lt;/a&gt; and 
+&lt;a href=&#34;http://www.theses.fr/2011MON20135&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mathieu Buoro&lt;/a&gt; are examples of work combining ecology and evolution to better understand the dynamics of animal populations.&lt;/p&gt;
+&lt;h2 id=&#34;how-would-you-define-statistical-ecology-and-modelling&#34;&gt;How would you define statistical ecology? And modelling?&lt;/h2&gt;
+&lt;p&gt;In &lt;em&gt;statistical ecology&lt;/em&gt;, statistical is the adjective that qualifies the noun ecology. It is ecology that motivates, that asks the questions. This does not make statistics a mere toolbox, but you have to accept the statements of ecology to make relevant statistics.&lt;/p&gt;
+&lt;p&gt;Coming from mathematics and statistics, this is something that did not come naturally to me. In statistics, one often sees the data from ecology as the numerical application to show that the statistical method works in the real world (often in addition to simulated data).&lt;/p&gt;
+&lt;p&gt;I learned the importance of motivating statistics by ecological questions from 
+&lt;a href=&#34;https://scholar.google.fr/citations?user=UiSYnjsAAAAJ&amp;amp;hl=fr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jean-Dominique Lebreton&lt;/a&gt;, one of my thesis directors, who himself got it from 
+&lt;a href=&#34;https://www.cairn.info/revue-natures-sciences-societes-2013-1-page-99.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jean-Marie Legay&lt;/a&gt; who thought a lot about the place of modelling in biology, and interdisciplinarity.&lt;/p&gt;
+&lt;p&gt;Statistical ecology therefore means applying and above all developing statistical methods and tools to answer questions in ecology. In France, the scientific community meets on these themes in 
+&lt;a href=&#34;https://sites.google.com/site/gdrecostat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the statistical ecology research group&lt;/a&gt; which we created in 2014.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/logo_gdr_ecostat_rvb_300dpi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Statistics in general is the science of collecting, analysing and drawing conclusions from data. All three are important for ecology. How we collect data to test ecological hypotheses. How we analyse it. And how you interpret the results.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/stats.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It is at the analysis stage that models are mostly used. A model in this context is an abstraction of reality, based on what is known, and is used to extract information using probabilities. An example of a statistical model is a simple linear regression in which we try to pass a line through a scatter plot to explain a trend.&lt;/p&gt;
+&lt;h2 id=&#34;how-is-statistical-ecology-useful&#34;&gt;How is statistical ecology useful?&lt;/h2&gt;
+&lt;p&gt;Why is it important to ask the questions &amp;ldquo;where are the species?&amp;rdquo;, and &amp;ldquo;how many animals are there?&amp;rdquo;? The species we study are in contact with humans and their activities. Fishing activities for bottlenose dolphins in the Mediterranean, for example, or sheep farming for wolves in France, to take another example.&lt;/p&gt;
+&lt;p&gt;In this context, I would say that statistical ecology and modelling serve three main purposes. To understand, to predict, and to help in decision making.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll take the example of the wolf, on which we do a lot of work with colleagues from the 
+&lt;a href=&#34;https://ofb.gouv.fr/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office for Biodiversity&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;First of all, we need to understand. We need to know the factors that explain the distribution of the species, this is information that allows us to establish the conservation status of a species. It was 
+&lt;a href=&#34;https://www.loupfrance.fr/ressources/?Jz8s6w&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julie Louvrier&amp;rsquo;s thesis&lt;/a&gt; that showed that the species is plastic and how it has recolonised the country.&lt;/p&gt;
+&lt;p&gt;Predicting then. Julie also showed that it was possible to predict the short-term dispersal of the species with a mathematical model that was fitted to the data. As another example, 
+&lt;a href=&#34;http://www.theses.fr/2020MONTG017&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nina Santostasi&lt;/a&gt; in her thesis evaluated the effectiveness of different management scenarios for hybridisation between dogs and wolves in Italy.&lt;/p&gt;
+&lt;p&gt;Finally, informing the management decision process. The species is managed by the French state, and it is on the basis of 
+&lt;a href=&#34;https://github.com/oliviergimenez/note-information-nombre-loups/blob/master/note-information-compter-loup-gimenez.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the numbers we produce&lt;/a&gt; thanks to statistical ecology that the maximum number of culls is established each year. This was 
+&lt;a href=&#34;http://www.theses.fr/2012MON20259&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lucile Marescot&amp;rsquo;s thesis&lt;/a&gt;. We also need to know 
+&lt;a href=&#34;https://hal.archives-ouvertes.fr/hal-02992939&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the effect of shooting on wolf predation of domestic livestock&lt;/a&gt;, a complex problem in spatial statistics. This is 
+&lt;a href=&#34;https://www.youtube.com/watch?v=kZcRBGaM9I4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Oksana Grente&amp;rsquo;s&lt;/a&gt; recently defended thesis.&lt;/p&gt;
+&lt;p&gt;To sum up, there is a lot of discussion about biodiversity and ecosystem services, and therefore about the interdependence between humans and nature. A connection that is increasingly forgotten, to quote 
+&lt;a href=&#34;https://www.editions-lepommier.fr/le-lien-naturel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a theme dear to Alix Cosquer&lt;/a&gt; who is part of our team and works in environmental psychology.&lt;/p&gt;
+&lt;p&gt;In this context, statistical ecology is used to understand, predict and inform decision-making on the interactions between species, animals and humans, and their environment.&lt;/p&gt;
+&lt;h2 id=&#34;why-did-you-choose-this-career&#34;&gt;Why did you choose this career?&lt;/h2&gt;
+&lt;p&gt;Several reasons, in no particular order.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is an incredible privilege to be paid to be a researcher, especially as a civil servant. Personally, I did not want to experience the difficult working conditions of my parents. Professionnaly, this status offers good conditions for doing our job. A permanent position allows us to work as a collective. This is an important point because research is an adventure involving several people, a team adventure; you don&amp;rsquo;t achieve anything, or not much, when you work alone (at least for me). You don&amp;rsquo;t do good research by pushing for 
+&lt;a href=&#34;https://www.nature.com/articles/d41586-020-02853-w&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;more competition&lt;/a&gt;.&lt;br&gt;
+Our status also allows us to take a long view, a long view that is essential for quality research, research that also serves society. Our work on the wolf, which I mentioned, began more than 10 years ago! This long time frame is being undermined by the precarization of employment which is hitting the research world hard, with more and more fixed-term contracts, and I am worried about the consequences for the younger generation of course. More competition. More administration. More excellence. Go fast. Quantity. Productivity. Fewer jobs. Fewer resources. Research and teaching are managed like a company, we have to optimise, rationalise, students are customers. It can&amp;rsquo;t work. Sorry, I&amp;rsquo;m going astray&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/knowledge.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Another reason I chose this career is that I wanted to tackle applied problems, which could have concrete applications for people, for society. Or at least to contribute a little bit in that sense. To be useful, basically.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another reason is that it is very (very) rewarding to accompany and support the new generation of scientists. It&amp;rsquo;s exciting, I love to walk the path with those who are embarking on a master&amp;rsquo;s degree, a thesis or a post-doc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Finally, this job allows you to be on the move all the time in your head. You learn all the time. You are constantly intellectually stimulated. I love that.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;do-you-have-to-be-good-at-math-to-do-this-job&#34;&gt;Do you have to be good at math to do this job?&lt;/h2&gt;
+&lt;p&gt;We all have a maths hump. The sense of number, of counting. It is by training this sense that we improve, that we become better at maths. Like with a musical instrument.&lt;/p&gt;
+&lt;p&gt;The main obstacle is surely the language, because maths is also a language. Again like with music. You have to learn it to read it, to write it, and to understand what people who do it say to each other. With some efforts, you can really enjoy yourself.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s important to realise is that you can use maths in ecology at any level. From the simple rule of three, which I have mastered to the use of stochastic differential equations, which I have not understood. Everyone can find what they are looking for, and do relevant research. For statistics I recommend 
+&lt;a href=&#34;https://www.penguin.co.uk/books/294/294857/learning-from-data/9780241258767.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;David Spiegelhalter&amp;rsquo;s book&lt;/a&gt; which introduces the discipline in a very accessible way.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/artofstats.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-do-you-like-about-what-you-do&#34;&gt;What do you like about what you do?&lt;/h2&gt;
+&lt;p&gt;First of all, it&amp;rsquo;s the people I work with. My biggest motivation comes from my students. I want to work with them, to exchange, to interact. It&amp;rsquo;s all about interactions. It&amp;rsquo;s also 
+&lt;a href=&#34;https://human-animal-interactions.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the people in our team&lt;/a&gt;. I&amp;rsquo;m learning all the time. And it&amp;rsquo;s the people in the statistical ecology community in France and abroad. It&amp;rsquo;s a community that doesn&amp;rsquo;t take itself too seriously, but that does serious and exciting research to answer the big questions about the biodiversity crisis. It is also very nice to feel part of a community. By the way, we are organising the next 
+&lt;a href=&#34;https://gdrecostat2022.sciencesconf.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GDR Ecologie Statistique days&lt;/a&gt; in Montpellier at the beginning of April 2022, don&amp;rsquo;t hesitate to join us!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/logo_gdr_ecostat_rvb_300dpi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The second thing, as I have already mentioned, is the fact that you are always on the move intellectually. You learn, you try things out, you explore, you play, you write, you read, you think, all the while feeling useful at your level in the construction of knowledge.&lt;/p&gt;
+&lt;p&gt;The third thing is sharing. Sharing knowledge by accompanying the students first of all, as I mentioned. And teaching too. I don&amp;rsquo;t do much as I&amp;rsquo;m already having trouble keeping my head above water with my job as a researcher. I admire my colleagues at universities who do two jobs, they are researchers and teachers! In sharing, I also include workshops that we offer over several days during which we train folks in statistical ecology methods. These workshops are free and video recorded so that as many people as possible have access to them.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-the-future-challenges-of-ecology&#34;&gt;What are the future challenges of ecology?&lt;/h2&gt;
+&lt;p&gt;I have no idea! I don&amp;rsquo;t really consider myself an ecologist. The only things that come to mind are related to our research topics, of course. I think about biodiversity conservation. How do we find a balance, and a sustainable balance, between our activities and the nature around us? This means understanding better the interactions between human and non-human actors, why these interactions can lead to conflicts and how to resolve them. It also means working on complex systems, the so-called socio-ecosystems, and therefore opening up ecology even more to the human and social sciences.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/interactions.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;and-the-future-challenges-for-statistics-and-modelling&#34;&gt;And the future challenges for statistics and modelling?&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m not necessarily more comfortable talking about future challenges for statistics and modelling, but we&amp;rsquo;ve thought about it a bit with 
+&lt;a href=&#34;https://sites.google.com/site/gdrecostat/organisation/bureau&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;colleagues from the GDR EcoStat&lt;/a&gt;, so I&amp;rsquo;m a bit less dry than for ecology. I see three.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Firstly, the modelling of socio-ecosystems. There is a need to integrate different disciplines in agent-based approaches (economics, geography, ethnology). The question is how to use modelling approaches to estimate the many quantities in these complex models.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We have an explosion of technological means deployed at all scales of organisation. I am thinking of camera traps, environmental DNA, GPS, drones, aerial or satellite photos, etc. We are faced with a huge amount of data from which it is often difficult to extract the relevant information. The second challenge is therefore that of massive data, and the development of approaches that allow us to learn from this data and automate tasks that become impossible for humans to do. I am obviously thinking of machine learning, and 
+&lt;a href=&#34;https://www.sfecologie.org/regard/r95-fev-2021-miele-dray-gimenez-deep-learning/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;deep learning&lt;/a&gt; in particular.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The third issue is predictive ecology. How can we predict ecological phenomena? This requires the manipulation of large-scale systems that couple ecology and physics, for example, or the ocean and the atmosphere, to take another example. It also requires thinking about how to propagate uncertainties throughout the analysis, right up to the prediction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;is-there-a-tool-a-school-of-thought-a-discovery-that-has-changed-everything-for-you-in-your-field&#34;&gt;Is there a tool, a school of thought, a discovery that has changed everything for you in your field?&lt;/h2&gt;
+&lt;p&gt;Yes, clearly! It is the introduction of Bayesian theory in the early 2000s. I discovered this theory as a post-doc in England and then in Scotland with 
+&lt;a href=&#34;https://www.maths.ed.ac.uk/~rking33/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my colleague Ruth King&lt;/a&gt; and others.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/bayes.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What is the Bayesian theory? The idea is to update the a priori knowledge we have of a biological system with the data we accumulate on this system. This a priori knowledge can be seen as the confidence we have in a hypothesis, and the Bayesian theory allows us to update this degree of confidence thanks to the data. The Bayesian theory allows us to formalise the natural way of reasoning, to induce the chances that a hypothesis is true or false.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.explainxkcd.com/wiki/index.php/2545:_Bayes%27_Theorem&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/bayes_theorem.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The Bayesian theory is used everywhere in science, but also in the everyday world, for example in medicine to make a diagnosis, in computer science to calibrate the anti-spam of your e-mail, in finance to manage stock portfolios, and it even allowed Alan Turing to crack the Enigma machine which allowed the Germans to communicate by coded messages.&lt;/p&gt;
+&lt;p&gt;The strength of the Bayesian theory also comes from the fact that it comes with very powerful algorithms to put it into practice. Very powerful in the sense that we can use increasingly complex models that are closer and closer to what we know about the species we are studying, models that we could not dream of using before.&lt;/p&gt;
+&lt;p&gt;To give you a concrete example, I can think of one. In ecology, we often try to model the distribution of species. This requires data on large areas to be sure that we have sampled all the habitats that are favourable or unfavourable to the species. This is difficult to do with a demanding and expensive scientific protocol. We can see that participatory science makes it possible to sample large areas at lower cost. But the data are biased because if we see a lot where there are observers, that doesn&amp;rsquo;t mean that where there is no one, the species isn&amp;rsquo;t there; it simply means that where there are people, the species is detected. Bayesian analysis makes it possible to combine these different types of monitoring to quantify distribution by combining the advantages of both types of monitoring, unbiased data from scientific protocols, and wide spatial coverage from participatory programmes. This is the thesis of 
+&lt;a href=&#34;http://www.theses.fr/s207422&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Valentin Lauret&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t get me started on Bayesian theory, 
+&lt;a href=&#34;https://oliviergimenez.github.io/bayesian-stats-with-R/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;I teach it in our Master&amp;rsquo;s programme and to PhD students in our doctoral school&lt;/a&gt; and I can&amp;rsquo;t get enough of it!&lt;/p&gt;
+&lt;h2 id=&#34;could-you-give-an-example-of-your-work&#34;&gt;Could you give an example of your work?&lt;/h2&gt;
+&lt;p&gt;Recently, we&amp;rsquo;ve been 
+&lt;a href=&#34;https://sites.google.com/view/erclynx/accueil&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;working a lot on the lynx in France&lt;/a&gt;. The main cause of mortality for the lynx is collisions with cars. A major challenge is therefore to find ways of reducing this mortality by collision. We have developed a model that allows us to evaluate scenarios to reduce this mortality. For example, building a wildlife crossing, basically a tunnel or a bridge through which animals can cross the road without risk. We wanted this tool to be used by those involved in the lynx dossier, and in particular by the regional government. We therefore encapsulated all the modelling components in a software that can be used by non-specialists. Everything is done in R, so it is open and reproducible!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/posterERC.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Why did I choose to talk about this project specifically?&lt;/p&gt;
+&lt;p&gt;Firstly because it is a project that mixes different types of modelling, statistical and computer science, different disciplines with ecology and statistics, and sub-disciplines of ecology with landscape ecology, movement ecology, and population dynamics.&lt;/p&gt;
+&lt;p&gt;Secondly, because it was a project in which I questioned myself a lot. We chose to show the modelling to the actors with workshops where we presented the models and where we were put in place. The stakeholders had very high expectations, both in terms of the models, their use, the outputs, the long-term maintenance of the software and the updating of the data. In the end, co-construction enabled us to be much more relevant than if we had done the same modelling work in the laboratory.&lt;/p&gt;
+&lt;p&gt;Also in human terms, it is a project that ended well, since the post-doct who was the link between the different partners and who did most of the work, 
+&lt;a href=&#34;https://www.sarahbauduin.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sarah Bauduin&lt;/a&gt;, was recruited by the French Office for Biodiversity.&lt;/p&gt;
+&lt;p&gt;Finally, it is a project that opens up other research questions, with a focus on connectivity problems due to fragmentation by land transport infrastructures (car and train).  This is 
+&lt;a href=&#34;https://www.theses.fr/s303203&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Maëlis Kervellec&amp;rsquo;s thesis&lt;/a&gt; which she has just started.&lt;/p&gt;
+&lt;h2 id=&#34;any-message-for-young-people-who-might-be-interested-in-this-route&#34;&gt;Any message for young people who might be interested in this route?&lt;/h2&gt;
+&lt;p&gt;You mean the old fart&amp;rsquo;s message to the younger generation? I always find it difficult to give a message, to give advice. Especially because for me it worked, but clearly I was lucky, very lucky. What worked for me will not necessarily work for others. In that sense my message and my advice are not worth much.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m going to cite 
+&lt;a href=&#34;https://www.imdb.com/title/tt10986410/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ted Lasso&lt;/a&gt;, and I&amp;rsquo;m going to say: be interested, read, ask questions, be curious about what other people are doing, and why they are doing it. Don&amp;rsquo;t listen too much to the advice of old people, and make your own way.&lt;/p&gt;
+&lt;p&gt;And have fun, don&amp;rsquo;t take yourself too seriously!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/When-He-Embraces-New-Challenge.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;an-anecdote-to-share&#34;&gt;An anecdote to share?&lt;/h2&gt;
+&lt;p&gt;A rather positive consequence of confinements. It&amp;rsquo;s the story of a training course in population dynamics that we offered in 2006 with about 30 participants at that time. We&amp;rsquo;re going for a reboot next year with two colleagues and friends of the team, 
+&lt;a href=&#34;https://www.cefe.cnrs.fr/fr/actus/44-french/recherche/bc/bev/291-aurelien-besnard&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Aurélien Besnard&lt;/a&gt; and 
+&lt;a href=&#34;https://www.cefe.cnrs.fr/fr/recherche/bc/bbp/1052-ec/3841-sarah-cubaynes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sarah Cubaynes&lt;/a&gt;. One tweet and a few messages to some mailing lists later, we have 2315 subscribers after 15 days! We&amp;rsquo;re not sure how we&amp;rsquo;re going to manage all these people, but it&amp;rsquo;s very exciting! Many of the people who have signed up come from countries where access to knowledge is difficult for many reasons. So we&amp;rsquo;re doing a free, online course, and we&amp;rsquo;re recording it. That&amp;rsquo;s where I&amp;rsquo;d like to go, more knowledge sharing. It sounds a bit grandiloquent, but there is a great need for biodiversity conservation.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;📢👋 Together with &lt;a href=&#34;https://twitter.com/SarahCubaynes?ref_src=twsrc%5Etfw&#34;&gt;@SarahCubaynes&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/abesnardEPHE?ref_src=twsrc%5Etfw&#34;&gt;@abesnardEPHE&lt;/a&gt; we will be giving a 2-day introductory workshop March 21-22 on quantitative methods for population dynamics in R &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; Join us 🥳 It&amp;#39;s online and free of charge 😉 You just need to register &lt;a href=&#34;https://t.co/I5sNS5kDOo&#34;&gt;https://t.co/I5sNS5kDOo&lt;/a&gt; Please RT 😇 &lt;a href=&#34;https://t.co/rkw8JWZBJi&#34;&gt;pic.twitter.com/rkw8JWZBJi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1447543032476225537?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pourquoi une carrière en écologie statistique?</title>
+      <link>https://oliviergimenez.github.io/blog/interview-ecostat/</link>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/interview-ecostat/</guid>
+      <description>&lt;p&gt;Dans le cadre d&amp;rsquo;un documentaire que réalise 
+&lt;a href=&#34;http://www.theses.fr/s303020&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lise Viollat&lt;/a&gt;, celle-ci m&amp;rsquo;a posé des questions sur mon parcours en recherche, et en écologie statistique. Je reproduis mes réponses ici. Merci Lise pour l&amp;rsquo;entretien !&lt;/p&gt;
+&lt;h2 id=&#34;est-ce-que-vous-pouvez-vous-présenter-en-quoi-consiste-votre-travail-votre-parcours-&#34;&gt;Est-ce que vous pouvez vous présenter? En quoi consiste votre travail, votre parcours ?&lt;/h2&gt;
+&lt;p&gt;Mon travail est motivé par des questions sur l’écologie des grands mammifères, et les grands carnivores en particulier (loups, ours et lynx).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/big-mammals.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Quelles questions ? Très basiquement : combien y a-t-il d’animaux, et où sont-ils, et pourquoi ces effectifs et cette distribution.&lt;/p&gt;
+&lt;iframe width=&#34;715&#34; height=&#34;415&#34; src=&#34;https://www.youtube.com/embed/RHZR-bC-pMQ&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Ces questions peuvent paraître très simples, mais le gros problème est qu’on ne peut pas facilement voir ces animaux. Il faut des méthodes pour échantillonner, pour gérer les incertitudes de comptage, de détection des individus et des espèces, et pour prédire aussi, combien et où. Et c’est là que les statistiques entrent en jeu.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://theconversation.com/mieux-connaitre-le-lynx-boreal-grace-a-lecologie-statistique-147241&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/the-conversation.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Je travaille en 
+&lt;a href=&#34;https://archives.cnrs.fr/inee/article/b095&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;écologie statistique&lt;/a&gt;, je suis ce qu’on pourrait appeler un éco-statistien. Et je travaille au CNRS, le 
+&lt;a href=&#34;https://www.cnrs.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Centre National de la Recherche Scientifique&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Pour arriver au CNRS, j’ai eu un parcours plutôt classique. J’ai étudié les mathématiques jusqu’à la licence. Une licence que j’ai redoublée, j’en faisais encore des cauchemars jusqu’à récemment. Puis à partir du Master je me suis orienté vers les mathématiques appliquées avec les statistiques. Je me suis embarqué dans une thèse en statistique appliquée à l’écologie, et à la dynamique des populations d&amp;rsquo;animaux, avec l’estimation de la survie et de la dispersion. Après la thèse à Montpellier, j&amp;rsquo;ai fait un détour par Grenoble, puis je suis parti en Angleterre et en Ecosse pour voir comment c’était ailleurs, me faire mon propre réseau, et surtout apprendre l’anglais.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/pubs_royaume_uni.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Une fois recruté, je me suis de plus en plus intéressé aux questions d’écologie évolutive, et de conservation. J’ai aussi travaillé de plus en plus sur des questions en lien avec les grands mammifères, des espèces en interaction avec les activités humaines.&lt;/p&gt;
+&lt;p&gt;Pour mieux comprendre ces interactions, on fait appel aux sciences humaines et sociales. J’ai donc repris des études en sociologie. J&amp;rsquo;ai suivi quelques cours en licence, mais je n’ai pas pu aller au bout du Master. Je continue de me former sur le tas.&lt;/p&gt;
+&lt;h2 id=&#34;quest-ce-que-pour-vous-lécologie-&#34;&gt;Qu&amp;rsquo;est-ce que pour vous l&amp;rsquo;écologie ?&lt;/h2&gt;
+&lt;p&gt;Je ne suis certainement pas la bonne personne pour répondre à la question, je n’ai jamais étudié l’écologie à l’université. J’ai appris au contact de mes étudiantes, de mes étudiants, et de mes collègues, et sur le tas.&lt;/p&gt;
+&lt;p&gt;J’aime bien les définitions, alors je me lance. L’écologie c’est l’étude des processus qui influencent la distribution et l’abondance des espèces, les interactions entre ces espèces, et les interactions entre ces espèces et leur environnement. La 
+&lt;a href=&#34;http://www.theses.fr/s210820&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;thèse de Maud Quéroué&lt;/a&gt; est un exemple de l&amp;rsquo;étude de ces interactions entre espèces grâce à de nouveaux modèles statistiques.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/ecologie.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;C’est la science des interactions en bref, et c’est ça que j’aime dans cette discipline. Entre les espèces, entre les espèces et leur environnement. Dans les espèces, je mets aussi les humains. Et pour le coup on revient à cette idée de mobiliser écologie et sciences humaines et sociales, et l’étude des socio-écosystèmes dans lesquels on mélange écologie, politique, économie, sociologie et anthropologie. La 
+&lt;a href=&#34;https://www.theses.fr/2018MONTG011&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;thèse de Gilles Maurer&lt;/a&gt; est une illustration de cette démarche, et combine démographie, génétique, économie et anthropologie pour étudier les relations entre éléphant d’Asie et humains.&lt;/p&gt;
+&lt;p&gt;Pour finir, quand on parle d’écologie, il faut l’entendre au sens large, avec l’idée qu’on parle aussi des processus évolutifs qui contribuent à expliquer la variabilité dans les systèmes biologiques. Les thèses de 
+&lt;a href=&#34;https://www.theses.fr/2013LYO10253&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marlène Gamelon&lt;/a&gt; et 
+&lt;a href=&#34;http://www.theses.fr/2011MON20135&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mathieu Buoro&lt;/a&gt; sont des exemples de travaux mêlant écologie et évolution pour mieux comprendre la dynamique des populations animales.&lt;/p&gt;
+&lt;h2 id=&#34;comment-est-ce-que-vous-définiriez-lécologie-statistique--la-modélisation-&#34;&gt;Comment est-ce que vous définiriez l&amp;rsquo;écologie statistique ? La modélisation ?&lt;/h2&gt;
+&lt;p&gt;Dans écologie statistique, l’ordre des mots est important. On ne dit pas statistique pour l’écologie. C’est l’écologie qui motive, qui pose les questions. Les statistiques n&amp;rsquo;en deviennent pas pour autant une simple boîte à outils, mais il faut accepter les énoncés de l’écologie pour faire des statistiques pertinentes.&lt;/p&gt;
+&lt;p&gt;Venant des mathématiques et des statistiques, c’est quelque chose qui ne m’était pas naturel. En statistiques, on voit souvent les données de l’écologie comme l’application numérique pour montrer que la méthode statistique marche avec un exemple de données réelles (en complément aux données simulées souvent).&lt;/p&gt;
+&lt;p&gt;J’ai appris l’importance de motiver les statistiques par les questions écologiques au contact de 
+&lt;a href=&#34;https://fr.wikipedia.org/wiki/Jean-Dominique_Lebreton&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jean-Dominique Lebreton&lt;/a&gt; un de mes directeurs de thèse, qui le tenait lui-même de 
+&lt;a href=&#34;https://www.cairn.info/revue-natures-sciences-societes-2013-1-page-99.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jean-Marie Legay&lt;/a&gt; qui a beaucoup réfléchi sur la place de la modélisation en biologie, et l’interdisciplinarité.&lt;/p&gt;
+&lt;p&gt;L’écologie statistique c’est donc appliquer et surtout développer des méthodes et des outils statistiques pour répondre aux questions de l’écologie. En France, la communauté scientifique se retrouve sur ces thèmes dans 
+&lt;a href=&#34;https://sites.google.com/site/gdrecostat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;le groupement de recherche en écologie statistique&lt;/a&gt; que nous avons créé en 2014.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/logo_gdr_ecostat_rvb_300dpi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;La statistique de manière générale, c’est la science qui permet de collecter, analyser et tirer des conclusions à partir des données. Les trois sont importants pour l’écologie. Comment on récolte des données pour tester des hypothèses écologiques. Comment on les analyse. Et comment on interprète les résultats.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/stats.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;C’est à l’étape d’analyse qu’on utilise surtout des modèles. Un modèle dans ce contexte c’est une abstraction de la réalité, qui se base sur ce qu’on sait, et qu’on utilise pour extraire de l’information en utilisant les probabilités. Un exemple de modèle statistique c’est la régression linéaire simple dans laquelle on essaye de faire passer une droite dans un nuage de point pour expliquer une tendance.&lt;/p&gt;
+&lt;h2 id=&#34;a-quoi-elles-servent-daprès-vous-&#34;&gt;A quoi elles servent d&amp;rsquo;après vous ?&lt;/h2&gt;
+&lt;p&gt;Pourquoi est-il important de poser les questions &amp;ldquo;où sont les espèces?&amp;rdquo;, et &amp;ldquo;combien y a-t-il d’animaux?&amp;rdquo;. Les espèces qu’on étudie sont au contact des humains, et de leurs activités. Les activités de pêche pour le grand dauphin en Méditerranée par exemple, ou l’élévage d’ovins pour les loups en France pour prendre un autre exemple.&lt;/p&gt;
+&lt;p&gt;Dans ce contexte, je dirais que l’écologie statistique et la modélisation servent principalement à trois choses. Comprendre, prédire, et aider à la décision.&lt;/p&gt;
+&lt;p&gt;Je prends l’exemple du loup sur lequel on travaille beaucoup avec les collègues de l’
+&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Office Français de la Biodiversité&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Comprendre d’abord. On a besoin de connaître les facteurs qui expliquent la distribution de l’espèce, ce sont des informations qui permettent d’établir le statut de conservation par exemple, celui de l’UICN. C’était 
+&lt;a href=&#34;https://www.loupfrance.fr/ressources/?Jz8s6w&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;la thèse de Julie Louvrier&lt;/a&gt; qui a permis de montrer que l’espèce est plastique et la façon dont l’espèce a recolonisé le pays.&lt;/p&gt;
+&lt;p&gt;Prédire ensuite. Julie a aussi montré qu’on pouvait prédire à court terme la dispersion de l’espèce avec un modèle mathématique qu’on confrontait aux données. Autre exemple, dans sa thèse, 
+&lt;a href=&#34;http://www.theses.fr/2020MONTG017&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nina Santostasi&lt;/a&gt; a évalué l&amp;rsquo;efficacité de différents scénarios de gestion de l&amp;rsquo;hybridation entre chiens et loups en Italie.&lt;/p&gt;
+&lt;p&gt;Enfin, l’aide à la décision. L’espèce est gérée par l’état français, et c’est entre autres sur la base 
+&lt;a href=&#34;https://github.com/oliviergimenez/note-information-nombre-loups/blob/master/note-information-compter-loup-gimenez.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;d’effectifs que nous produisons&lt;/a&gt; grâce à l’écologie statistique que le nombre maximal de prélèvements est établi chaque année. C’était 
+&lt;a href=&#34;http://www.theses.fr/2012MON20259&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;la thèse de Lucile Marescot&lt;/a&gt;. On a aussi besoin de connaître 
+&lt;a href=&#34;https://hal.archives-ouvertes.fr/hal-02992939&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;l’effet des tirs mis en place sur la prédation par le loup des troupeaux domestiques&lt;/a&gt;, un problème complexe de statistique spatiale. C’est 
+&lt;a href=&#34;https://www.youtube.com/watch?v=kZcRBGaM9I4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;la thèse d’Oksana Grente&lt;/a&gt; qui a soutenu récemment.&lt;/p&gt;
+&lt;p&gt;Pour résumer, on parle beaucoup de biodiversité et de services rendus par les écosystèmes, et donc d’interdépendance entre les humains et la nature. Une connexion qui s’oublie de plus en plus pour reprendre 
+&lt;a href=&#34;https://www.editions-lepommier.fr/le-lien-naturel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;un thème cher à Alix Cosquer&lt;/a&gt; qui travaille dans notre équipe en psychologie de l’environnement.&lt;/p&gt;
+&lt;p&gt;Dans ce contexte, l’écologie statistique sert à comprendre, à prédire et à informer la prise de décision sur les interactions entre les espèces, animaux et humains, et leur environnement.&lt;/p&gt;
+&lt;h2 id=&#34;pourquoi-avoir-choisi-cette-carrière-&#34;&gt;Pourquoi avoir choisi cette carrière ?&lt;/h2&gt;
+&lt;p&gt;Plusieurs raisons, dans le désordre.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C’est un privilège incroyable que d’être payé pour faire le métier de chercheur, qui plus est avec le statut de fonctionnaire. A titre personnel, je ne voulais pas connaître les conditions de travail difficiles de mes parents. A titre professionnel, ce statut offre de bonnes conditions pour faire notre métier. Un poste permanent permet de travailler en collaborant avec les collègues. C’est un point important car la recherche c’est une aventure à plusieurs, une aventure d’équipe ; on n’arrive à rien, ou à pas grand-chose, quand on travaille seul (en tous cas moi). On ne fait pas une bonne recherche en poussant à 
+&lt;a href=&#34;https://www.nature.com/articles/d41586-020-02853-w&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;plus de compétition&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/fonctionnaires.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Notre statut permet aussi de s’inscrire dans un temps long, ce temps long qui est indispensable à une recherche de qualité, une recherche qui sert la société aussi. Nos travaux sur le loup dont je parlais ont commencé il y a plus de 10 ans ! Ce temps long est mis à mal par la précarisation de l’emploi qui touche le monde de la recherche de plein fouet, avec de plus en plus de CDDs, et je m’inquiète des conséquences pour la jeune génération bien sûr. Plus de compétition. Plus d’administratif, plus d’excellence. Aller vite. Quantité. Productivité. Moins de postes. Moins de moyens. On gère la recherche et l’enseignement comme une entreprise, il faut optimiser, rationnaliser, les étudiants sont des clients. Ca ne peut pas marcher. Désolé je m&amp;rsquo;égare&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/knowledge.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Une autre raison pour laquelle j&amp;rsquo;ai choisi cette carrière est que j’avais envie de m’attaquer à des problèmes appliqués, qui pourraient avoir des applications concrètes pour les gens, pour la société. Ou au moins de contribuer un peu en ce sens. Être utile en gros.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Un autre raison est qu&amp;rsquo;il est très (très) gratifiant d’accompagner la nouvelle génération de scientifiques. C’est excitant, j’adore faire un bout de chemin avec celles et ceux qui s&amp;rsquo;embarquent dans un master, une thèse, ou un post-doc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enfin, ce métier permet d’être tout le temps en mouvement dans sa tête. On apprend tout le temps. On est en permanence stimulé intellectuellement. J’adore ça.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;faut-il-être-douer-en-math-pour-faire-ce-métier-&#34;&gt;Faut-il être douer en math pour faire ce métier ?&lt;/h2&gt;
+&lt;p&gt;Ca veut dire quoi « doué en maths » en fait ? Ca fait penser à cette expression « avoir la bosse des maths ». Cette expression vient du 19ème siècle et d’une pseudo-science qui s’appelait la phrénologie. On établissait un lien entre vos capacités ou traits de caractères et les régions du cerveau, avec l’idée que ça se répercutait sur la forme du crâne. Les bons en maths avaient une bosse sur le front qui correspondait à l’endroit supposé du cerveau où se faisait les maths. C&amp;rsquo;est absurde! On a montré depuis que les mathématiques mobilisent différentes zones du cerveau.&lt;/p&gt;
+&lt;p&gt;Il y a un bouquin très chouette de Stanislas Dehaene professeur au collège de France en psychochologie cognitive qui s’appelle justement 
+&lt;a href=&#34;https://www.odilejacob.fr/catalogue/sciences/neurosciences/bosse-des-maths_9782738125248.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;la bosse des maths&lt;/a&gt;. Que dit ce bouquin? On a tous la bosse des maths. Le sens du nombre, du dénombrement. C’est en entrainant ce sens qu’on s’améliore, qu’on devient meilleur en maths. Comme avec un instrument de musique.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/labossedesmaths.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Le principal obstacle est sûrement le langage, car les maths c’est aussi un langage. A nouveau comme en musique. Ca demande de l’apprendre pour la lire, l’écrire, et comprendre ce que se disent les gens qui en font. Une fois qu’on a fait nos gammes, on peut vraiment s’amuser, se faire plaisir.&lt;/p&gt;
+&lt;p&gt;Ce qui est important de réaliser, c’est qu’on peut utiliser les maths en écologie quel que soit son niveau. De la simple règle de trois que je maitrise à peu près, jusqu’à l’utilisation des équations différentielles stochastiques auxquelles je n’ai rien compris. Chacun et chacune peut y trouver son bonheur, et faire une recherche tout à fait pertinente. Pour les statistiques je conseille 
+&lt;a href=&#34;https://www.penguin.co.uk/books/294/294857/learning-from-data/9780241258767.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;le livre de David Spiegelhalter&lt;/a&gt; qui introduit la discipline de façon très abordable.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/artofstats.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;quest-ce-qui-vous-plait-dans-ce-que-vous-faite-&#34;&gt;Qu&amp;rsquo;est ce qui vous plait dans ce que vous faite ?&lt;/h2&gt;
+&lt;p&gt;C&amp;rsquo;est d&amp;rsquo;abord les personnes avec qui je travaille. Ma plus grosse motivation vient de mes étudiantes et de mes étudiants. J’ai envie de travailler avec eux, d’échanger, d’interagir. On en revient aux interactions. Ce sont aussi 
+&lt;a href=&#34;https://human-animal-interactions.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;les gens de mon équipe&lt;/a&gt;. J’apprends tout le temps. Et ce sont les gens de la communauté en écologie statistique en France et à l’étranger. C’est une communauté qui ne se prend pas trop au sérieux, mais qui fait une recherche sérieuse et excitante pour répondre aux grandes questions qu’on se pose sur la crise de la biodiversité. C’est aussi très agréable de se sentir appartenir à une communauté. A ce propos, nous organisons les prochaines 
+&lt;a href=&#34;https://gdrecostat2022.sciencesconf.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;journées du GDR Ecologie Statistique&lt;/a&gt; à Montpellier début avril 2022, n&amp;rsquo;hésitez pas à nous rejoindre !&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/logo_gdr_ecostat_rvb_300dpi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;La deuxième chose, je l’ai déjà mentionné, c’est le fait d’exercer un métier dans lequel on est toujours en mouvement intellectuellement. On apprend, on essaye, on tente des choses, on explore, on joue, on écrit, on lit, on réfléchit, tout en se sentant utile à son niveau à la construction des connaissances.&lt;/p&gt;
+&lt;p&gt;La troisième chose c’est le partage. Le partage des connaissances via l’accompagnement des étudiantes et des étudiants d’abord, j’en ai parlé. Et l’enseignement aussi. J’en fais peu quand on compare aux collègues de l’enseignement supérieur qui forcent le respect. J’ai déjà du mal à garder la tête hors de l’eau avec mon métier de chercheur, eux en font deux, ils sont chercheurs et enseignants ! Dans le partage, je mets aussi des ateliers que nous proposons sur plusieurs jours au cours desquels on forme aux méthodes de l’écologie statistique. Ce sont des formations gratuites et filmées pour que le plus grand nombre y ait accès.&lt;/p&gt;
+&lt;h2 id=&#34;quels-sont-les-futurs-enjeux-de-lécologie-&#34;&gt;Quels sont les futurs enjeux de l&amp;rsquo;écologie ?&lt;/h2&gt;
+&lt;p&gt;Je n&amp;rsquo;en sais rien du tout! Je ne me considère pas vraiment comme un écologue. Les seules choses qui me viennent à l’esprit sont en lien avec nos thématiques de recherche évidemment. Je pense à la conservation de la biodiversité. Comment trouver un équilibre, et un équilibre durable entre nos activités et la nature qui nous entoure? Ca sous-entend mieux comprendre les interactions entre les acteurs humains et non-humains, pourquoi ces interactions peuvent mener à des conflits et comment les résoudre. Ca veut dire aussi travailler sur des systèmes complexes, ces fameux socio-écosystèmes, et donc encore plus d’ouverture de l’écologie aux sciences humaines et sociales.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/interactions.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;des-statistiques-et-de-la-modélisation-&#34;&gt;Des statistiques et de la modélisation ?&lt;/h2&gt;
+&lt;p&gt;Je suis pas forcément plus à l’aise pour parler des enjeux en statistiques, mais on y a un peu réfléchi avec 
+&lt;a href=&#34;https://sites.google.com/site/gdrecostat/organisation/bureau&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;les collègues du GDR EcoStat&lt;/a&gt;, et je suis donc un peu moins sec que pour l’écologie. J’en vois trois.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;La modélisation des socio-écosystèmes d’abord. Il y a besoin d’intégrer différentes disciplines dans des approches multi-agents (économie, géographie, ethnologie). On se demande comment utiliser les approches de modélisation pour estimer les quantités importantes de ces modèles complexes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On a une explosion des moyens technologiques déployés à toutes les échelles d’organisation. Je pense aux pièges photos, à l&amp;rsquo;ADN environnemental, aux GPS, aux drones, aux photos aériennes ou satellites, etc. Nous sommes face à une masse conséquente de données dont il est souvent difficile d’extraire l’information pertinente. Le deuxième enjeu est donc celui des données massives, et du développement d’approches qui permettent d’apprendre de ces données, et d’automatiser des tâches qui deviennent impossibles à faire par des humains. Je pense évidemment au machine learning, et au 
+&lt;a href=&#34;https://www.sfecologie.org/regard/r95-fev-2021-miele-dray-gimenez-deep-learning/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;deep learning&lt;/a&gt; en particulier.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Le troisième enjeu est celui de l’écologie prédictive. Comment prédire les phénomènes écologiques? Ca demande de manipuler des systèmes de grandes dimensions qui couplent écologie et physique par exemple, ou océan et atmosphère pour prendre un autre exemple. Ca demande aussi de réfléchir à comment propager les incertitudes d’estimation et d’échantillonnage tout le long de l’analyse, jusqu’à la prédiction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;y-a-t-il-un-outil-un-courant-de-pensée-une-découverte-qui-pour-vous-a-tout-changé-dans-votre-domaine-&#34;&gt;Y a-t-il un outil, un courant de pensée, une découverte qui pour vous a tout changé dans votre domaine ?&lt;/h2&gt;
+&lt;p&gt;Oui, clairement! C’est l’introduction de la théorie bayésienne au début des années 2000. J’ai découvert cette théorie en post-doc en Angleterre puis en Ecosse avec 
+&lt;a href=&#34;https://www.maths.ed.ac.uk/~rking33/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ma collègue Ruth King&lt;/a&gt; et d’autres.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/bayes.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Qu’est-ce que le bayésien ? L’idée est de mettre à jour la connaissance a priori qu’on a d’un système qu’on étudie grâce à l’expérimentation, avec les données qu’on accumule sur ce système. Cette connaissance a priori, on peut la voir comme la confiance qu’on a en une hypothèse, et le bayésien permet alors de mettre à jour ce degré de confiance grâce aux données. Le bayésien permet de formaliser la façon naturelle qu’on a de raisonner, d’induire les chances qu’une hypothèse soit vraie ou fausse.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.explainxkcd.com/wiki/index.php/2545:_Bayes%27_Theorem&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/bayes_theorem.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;La théorie bayésienne est utilisée un peu partout en sciences, mais aussi dans le monde de tous les jours par exemple en médecine pour faire un diagnostic, en informatique pour calibrer l’anti-spam de votre boîte électronique, en finance pour gérer des portfolios d’actions, et elle a même permis à Alan Turing de craquer la machine Enigma qui permettait aux allemands de communiquer par messages codés.&lt;/p&gt;
+&lt;p&gt;La force de la théorie bayésienne vient aussi du fait qu’elle vient avec des algorithmes pour la mettre en pratique qui sont très puissants. Très puissants au sens où on peut utiliser des modèles de plus en plus complexes et de plus en plus proches de ce qu’on sait des espèces qu’on étudie, des modèles qu’on ne pouvait pas rêver d’utiliser avant.&lt;/p&gt;
+&lt;p&gt;Pour vous donner du concret, je pense à un exemple. En écologie on cherche souvent à modéliser la distribution des espèces. Ca demande d’avoir des données sur des grandes surfaces pour être sûr qu’on a échantillonné tous les habitats favorables ou pas à l’espèce. C’est difficile à faire avec un protocole scientifique exigeant et coûteux. On voit que les sciences participatives permettent d’échantillonner à moindre coût sur de grandes surfaces. Mais les données sont biaisées car si on voit beaucoup là où il y a des observateurs et observatrices, ça ne veut pas dire que là où il n’y a personne, il n’y a pas l’espèce ; ça veut simplement dire que là où on a des gens, l’espèce est détectée. L’analyse bayésienne permet de combiner ces différents suivis pour quantifier la distribution en combinant les avantages des deux types de suivi, des données non-biaisées par les protocoles scientifiques, et une grande couverture spatiale par les programmes participatifs. C&amp;rsquo;est la thèse de 
+&lt;a href=&#34;http://www.theses.fr/s207422&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Valentin Lauret&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Il ne faut pas me lancer sur la théorie bayésienne, 
+&lt;a href=&#34;https://oliviergimenez.github.io/bayesian-stats-with-R/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;je l&amp;rsquo;enseigne en Master et pour les doctorants et doctorantes de notre école doctorale&lt;/a&gt; et je ne m&amp;rsquo;en lasse pas!&lt;/p&gt;
+&lt;h2 id=&#34;pourriez-vous-donnez-un-exemple-dun-de-vos-travaux-&#34;&gt;Pourriez vous donnez un exemple d&amp;rsquo;un de vos travaux ?&lt;/h2&gt;
+&lt;p&gt;C’est 
+&lt;a href=&#34;https://sites.google.com/view/erclynx/accueil&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;un travail sur le lynx en France&lt;/a&gt;. La première cause de mortalité du lynx sont les collisions avec les voitures. Un gros enjeu consiste donc à trouver des moyens de réduire cette mortalité par collision. On a développé un modèle qui permet d’évaluer des scénarios pour réduire cette mortalité. Par exemple construire un passage à faune, en gros un tunnel ou un pont par lequel les animaux peuvent traverser la route sans risque. On a voulu que cet outil puisse être utilisé par les acteurs du dossier lynx, et en particulier par l’état en région via les DREAL (Direction régionale de l&amp;rsquo;Environnement, de l&amp;rsquo;Aménagement et du Logement). On a donc encapsulé toutes les composantes modélisation dans un logiciel utilisable par des non-spécialistes. Tout est fait dans le logiciel R, donc le tout est ouvert et reproductible !&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/posterERC.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pourquoi j’ai choisi ce projet ?&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;abord parce que c&amp;rsquo;est un projet qui mélange différents types de modélisation, statistique et informatique, différentes disciplines avec écologie et statistique, et sous-disciplines de l’écologie avec écologie du paysage, écologie du déplacement, et la dynamique des populations.&lt;/p&gt;
+&lt;p&gt;Ensuite parce qu&amp;rsquo;humainement c’est un projet au cours duquel je me suis beaucoup remis en question. On a choisi de montrer la modélisation aux acteurs avec des ateliers où on a présenté les modèles, et où on s’est fait remettre en place. Les acteurs avaient un niveau d’exigence très élevé, à la fois sur les modèles, sur leur utilisation, les sorties, le maintien à long terme du logiciel et la mise à jour des données. Au final, la co-construction nous a permis d’être beaucoup plus pertinents que si on avait fait le même travail de modélisation au laboratoire.&lt;/p&gt;
+&lt;p&gt;Toujours humainement, c’est un projet qui finit bien, puisque la post-doctorante qui a été le trait d’union entre les différents partenaires, et qui a fait l’essentiel du travail, 
+&lt;a href=&#34;https://www.sarahbauduin.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sarah Bauduin&lt;/a&gt;, a été recrutée à l’Office Français de la Biodiversité.&lt;/p&gt;
+&lt;p&gt;Enfin, c’est un projet qui ouvre sur d’autres questions de recherche, avec un focus sur les problèmes de connectivité dus à la fragmentation par les infrastructures de transports terrestres (voiture et train).  C’est 
+&lt;a href=&#34;https://www.theses.fr/s303203&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;la thèse de Maëlis Kervellec&lt;/a&gt; qu’elle vient tout juste de démarrer.&lt;/p&gt;
+&lt;h2 id=&#34;un-message-pour-les-jeunes-qui-pourrait-être-intéresser-par-cette-voie-&#34;&gt;Un message pour les jeunes qui pourrait être intéresser par cette voie ?&lt;/h2&gt;
+&lt;p&gt;Vous voulez dire le message du vieux con à la jeune génération? Je trouve toujours difficile de passer un message, de donner un conseil. D’autant que pour moi ça a marché, mais clairement j’ai eu de la chance, beaucoup de chance. Ce qui a marché pour moi ne marchera pas forcément pour d’autres. En ce sens mon message et mes conseils ne valent pas grand-chose.&lt;/p&gt;
+&lt;p&gt;Je vais vous faire du 
+&lt;a href=&#34;https://www.allocine.fr/series/ficheserie_gen_cserie=25762.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ted Lasso&lt;/a&gt;, et je dirais : intéressez-vous, lisez, posez des questions, soyez curieux de ce que font les autres, et pourquoi ils le font. N’écoutez pas trop les conseils des vieux, et faites votre propre chemin.&lt;/p&gt;
+&lt;p&gt;Et rigolez, ne vous prenez pas trop au sérieux !&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/pix-interview/When-He-Embraces-New-Challenge.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;une-anecdote-à-partager-&#34;&gt;Une anecdote à partager ?&lt;/h2&gt;
+&lt;p&gt;Une conséquence plutôt positive des confinements. C’est l’histoire d’une formation en dynamique des populations que nous avons proposée en 2006 avec une 30aine de participants à l’époque. J’ai relancé ça avec deux collègues et amis de l’équipe, 
+&lt;a href=&#34;https://www.cefe.cnrs.fr/fr/actus/44-french/recherche/bc/bev/291-aurelien-besnard&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Aurélien Besnard&lt;/a&gt; et 
+&lt;a href=&#34;https://www.cefe.cnrs.fr/fr/recherche/bc/bbp/1052-ec/3841-sarah-cubaynes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sarah Cubaynes&lt;/a&gt;. Un tweet et deux messages à des mailing lists plus tard, on en est à 2315 inscrits au bout de 15 jours ! On ne sait pas trop comment on va gérer tous ces gens, mais c’est très excitant ! Beaucoup de personnes inscrites viennent de pays où l&amp;rsquo;accès à la connaissance est difficile pour des tas de raisons. On fait donc une formation gratuite et en ligne, et on l’enregistre. C’est vers là que j’aimerais aller, plus de partage de la connaissance. Ça fait un peu grandiloquent, mais les besoins sont criants pour la conservation de la biodiversité.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;📢👋 Together with &lt;a href=&#34;https://twitter.com/SarahCubaynes?ref_src=twsrc%5Etfw&#34;&gt;@SarahCubaynes&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/abesnardEPHE?ref_src=twsrc%5Etfw&#34;&gt;@abesnardEPHE&lt;/a&gt; we will be giving a 2-day introductory workshop March 21-22 on quantitative methods for population dynamics in R &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; Join us 🥳 It&amp;#39;s online and free of charge 😉 You just need to register &lt;a href=&#34;https://t.co/I5sNS5kDOo&#34;&gt;https://t.co/I5sNS5kDOo&lt;/a&gt; Please RT 😇 &lt;a href=&#34;https://t.co/rkw8JWZBJi&#34;&gt;pic.twitter.com/rkw8JWZBJi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1447543032476225537?ref_src=twsrc%5Etfw&#34;&gt;October 11, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Applying and interviewing for an academic job</title>
+      <link>https://oliviergimenez.github.io/blog/interview_inra/</link>
+      <pubDate>Mon, 14 Aug 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/interview_inra/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;margin-bottom:10px;width: 240px;;height: 230px&#34; src=&#34;https://oliviergimenez.github.io/img/deadliest.jpg&#34;&gt;
+Over the years (age privilege), I sat on several hiring committees for French universities and research institutes. I also have students who are now in the position to apply for such positions. It had me thinking about what works and what doesn&#39;t work in job applications and interviews. Here are my 2 cents suggestions. 
+&lt;p&gt;You can find plenty of more clever and relevant recommendations on the internet (see 
+&lt;a href=&#34;https://www.theguardian.com/higher-education-network/blog/2014/feb/07/prepare-academic-interviews-top-tips&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;, 
+&lt;a href=&#34;http://ecoevoevoeco.blogspot.gr/2015/10/how-to-get-faculty-position-ii.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; or 
+&lt;a href=&#34;https://dynamicecology.wordpress.com/tag/job-interviews/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for example). Also, be aware that these recommendations are specific to the French system, with little relevance for other countries.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your application&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Read and stick to the guidelines (not that obvious sometimes). The French academic system has some 
+&lt;a href=&#34;http://www.eui.eu/ProgrammesAndFellowships/AcademicCareersObservatory/AcademicCareersbyCountry/France.aspx#RequirementsforPositions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;specific requirements&lt;/a&gt; to apply, in particular for faculty positions. Try to connect your CV with the job profile.&lt;/p&gt;
+&lt;p&gt;Do
+not hesitate to include figures and boxes in the document. Structure does not hurt, well articulated sections are welcome. Be crystal clear on your current position. Synthetic tables summarizing the courses you taught, the talks you gave, the papers you published will help the referees to grab what is important in a minute (they obviously have more than your application to evaluate). Distinguish papers from oral presentations.&lt;/p&gt;
+&lt;p&gt;Submitted papers do not &amp;lsquo;count&amp;rsquo;. Use preprint servers such as 
+&lt;a href=&#34;https://arxiv.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv&lt;/a&gt; or 
+&lt;a href=&#34;http://www.biorxiv.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bioRxiv&lt;/a&gt; so that your referees get a chance to read what you&amp;rsquo;ve been working on lately (and judge the quality by themselves).&lt;/p&gt;
+&lt;p&gt;Project yourself in the team/lab where the researcher will be hosted, and in the job itself. Feel free to get in touch with the host team/lab. Try to meet people beforehand. Visit websites. Get to know your hopefully-soon-to-be new lab. Show you&amp;rsquo;re interested in working with your hopefully-soon-to-be new colleagues. This might also help you find out about the 
+&lt;a href=&#34;https://dynamicecology.wordpress.com/2016/12/07/the-teaching-job-that-slipped-through-my-fingers-and-what-i-learned-from-that-experience/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;lsquo;dismal job that everyone has been avoiding for years&amp;rsquo;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For lecturer positions, even though it is not required, write a short project section including research objectives and do not forget your teaching objectives!&lt;/p&gt;
+&lt;p&gt;Have your applications read by one or two colleagues, if possible
+someone who has experience in being on the kind of hiring committee you will have to face.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your interview&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Be on site the day before (
+&lt;a href=&#34;http://www.nationalstereotype.com/wp-content/uploads/2013/09/Meanwhile-in-France-3.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;strikes in France happen&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Appearances do matter, whether you like it or not, therefore pick something neutral and comfortable (my opinion).&lt;/p&gt;
+&lt;p&gt;Do not use slides with too much text or complex figures (no tables please!), and point at your slides so that your visual
+support is part of your speech. Don&amp;rsquo;t look at the screen or the walls, try to look at
+the members of the jury. Occupy the space, don&amp;rsquo;t always stay at the same spot, but do not
+move too much (I&amp;rsquo;m useless at that).&lt;/p&gt;
+&lt;p&gt;Do not rush when you talk, and give short answers
+so that every member of the committee gets a chance to ask you a question. Be honest:
+if you don&amp;rsquo;t know something, or if you don&amp;rsquo;t understand a question (which most likely
+means that members of the hiring committee do not understand this question either),
+say it.&lt;/p&gt;
+&lt;p&gt;Last, but not least: rehearse, rehearse and rehearse again, there will be a
+moment where you do no longer sound like you know your text by heart, but rather, like
+saying it has become natural.&lt;/p&gt;
+&lt;p&gt;From my experience, the round of questions is more
+determinant than the talk itself, but we have very rare opportunities to train on
+how to answer questions. Try to have sessions of questions with your colleagues to
+get better at it; it comes with experience, no secret.&lt;/p&gt;
+&lt;p&gt;For short talks in general, my advice is
+to write your text, at least for the first slides so that you&amp;rsquo;re confident you won&amp;rsquo;t
+get stuck when you start giving your speech. Make a video of yourself rehearsing
+and watch it; this is painful (I know by experience), but helpful.&lt;/p&gt;
+&lt;p&gt;Show that you&amp;rsquo;re excited by the job offer, and that you like teaching and doing research.
+At the end of the day, I (sadly) vividly remember only a few candidates, most often those
+who demonstrated interest in the job and pleasure in doing what they do. I wasn&amp;rsquo;t good at
+inspiring that myself, but one thing that helped me was to think hard why I was applying, and
+to convince myself that I wanted the job so badly that I had to convince the committee that they
+should offer the job to me.&lt;/p&gt;
+&lt;p&gt;Last but not least, do not do the job of the committee for the committee. In other words, do not censor
+yourself. Apply, and let the referees do their job.&lt;/p&gt;
+&lt;p&gt;Good luck!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My CNRS interview for a senior scientist position</title>
+      <link>https://oliviergimenez.github.io/blog/cnrs_interview/</link>
+      <pubDate>Fri, 20 Apr 2012 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/cnrs_interview/</guid>
+      <description>&lt;p&gt;Here are the slides of my interview for a CNRS senior scientist position (DR2). Note that
+CNRS offers interdisciplinary positions, which is sadly not true for all of our research
+institutes.&lt;/p&gt;
+&lt;iframe src=&#34;https://widgets.figshare.com/articles/4833104/embed?show_title=1&#34; width=&#34;568&#34; height=&#34;426&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>capture-recapture | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/capture-recapture/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/capture-recapture/index.xml" rel="self" type="application/rss+xml" />
+    <description>capture-recapture</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>capture-recapture</title>
+      <link>https://oliviergimenez.github.io/tags/capture-recapture/</link>
+    </image>
+    
+    <item>
+      <title>Workshop on Bayesian analysis of capture-recapture data with hidden Markov models</title>
+      <link>https://oliviergimenez.github.io/blog/vibassworkshop/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/vibassworkshop/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Excited to be running a workshop on Bayesian capture-recapture inference w hidden Markov models, &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; 🥳&lt;br&gt;&lt;br&gt;Thanks for the invitation &lt;a href=&#34;https://twitter.com/vibass7?ref_src=twsrc%5Etfw&#34;&gt;@vibass7&lt;/a&gt; 🥰&lt;br&gt;&lt;br&gt;Website is up and running w slides, code &amp;amp; data &lt;a href=&#34;https://t.co/X7MYs8ec5X&#34;&gt;https://t.co/X7MYs8ec5X&lt;/a&gt; &lt;a href=&#34;https://t.co/UDzIVeVhuZ&#34;&gt;pic.twitter.com/UDzIVeVhuZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1678320808379154432?ref_src=twsrc%5Etfw&#34;&gt;July 10, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>VIBASS and Bayesian capture-recapture workshop</title>
+      <link>https://oliviergimenez.github.io/blog/annoncevibass/</link>
+      <pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/annoncevibass/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Ey! VIBASS 6 is announced online now &lt;a href=&#34;https://t.co/VS8cLR8ocK&#34;&gt;https://t.co/VS8cLR8ocK&lt;/a&gt;&lt;br&gt;🗓️ July 10-14 2023&lt;br&gt;🚩Faculty of Mathematics &lt;a href=&#34;https://twitter.com/FMatemaUV_EG?ref_src=twsrc%5Etfw&#34;&gt;@FMatemaUV_EG&lt;/a&gt;, Valencia, Spain &lt;br&gt;&lt;br&gt;Be aware that the registration would start really really soon and we just have few spots. Don&amp;#39;t miss it. &lt;a href=&#34;https://t.co/5M61dbuxuF&#34;&gt;pic.twitter.com/5M61dbuxuF&lt;/a&gt;&lt;/p&gt;&amp;mdash; VIBASS 6 (@vibass7) &lt;a href=&#34;https://twitter.com/vibass7/status/1613928870192742401?ref_src=twsrc%5Etfw&#34;&gt;January 13, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Brown bear abundance in the Pyrenees mountains</title>
+      <link>https://oliviergimenez.github.io/blog/bearsize/</link>
+      <pubDate>Mon, 21 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/bearsize/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;So proud of our latest paper on estimating abundance of Brown bear in the Pyrenees 🐻📈 in &lt;a href=&#34;https://twitter.com/PeerComJournal?ref_src=twsrc%5Etfw&#34;&gt;@PeerComJournal&lt;/a&gt; led by C Vanpé 😇&lt;a href=&#34;https://t.co/aBZtWmO1UW&#34;&gt;https://t.co/aBZtWmO1UW&lt;/a&gt;&lt;br&gt;&lt;br&gt;Yet another example of our collaboration w/ &lt;a href=&#34;https://twitter.com/OFBiodiversite?ref_src=twsrc%5Etfw&#34;&gt;@OFBiodiversite&lt;/a&gt; 🤩&lt;br&gt;&lt;br&gt;Data &amp;amp; code &lt;a href=&#34;https://t.co/uZGQ3Fy2Iq&#34;&gt;https://t.co/uZGQ3Fy2Iq&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/DiamondOpenAccess?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DiamondOpenAccess&lt;/a&gt; &lt;a href=&#34;https://t.co/H0PfGWFFxD&#34;&gt;pic.twitter.com/H0PfGWFFxD&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1594643276354707456?ref_src=twsrc%5Etfw&#34;&gt;November 21, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Save the data: EURING2023 in Montpellier April 17-21</title>
+      <link>https://oliviergimenez.github.io/blog/2022-07-08-save-the-data-euring2023-in-montpellier-april-17-21/</link>
+      <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-07-08-save-the-data-euring2023-in-montpellier-april-17-21/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🥳 Save the date 🥳&lt;br&gt;&lt;br&gt;The 2023 Euring Analytical Conference will be held in Montpellier (France), on April 17-21, 2023.&lt;br&gt;&lt;br&gt;Check out &lt;a href=&#34;https://t.co/t04XJGbW8k&#34;&gt;https://t.co/t04XJGbW8k&lt;/a&gt; for info. &lt;br&gt;&lt;br&gt; 🤗🤩We look forward to welcoming you all 🤗🤩&lt;a href=&#34;https://twitter.com/_EURING?ref_src=twsrc%5Etfw&#34;&gt;@_EURING&lt;/a&gt; &lt;a href=&#34;https://twitter.com/abesnardEPHE?ref_src=twsrc%5Etfw&#34;&gt;@abesnardEPHE&lt;/a&gt; &lt;a href=&#34;https://t.co/KAe46wOaze&#34;&gt;pic.twitter.com/KAe46wOaze&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1545299282927943680?ref_src=twsrc%5Etfw&#34;&gt;July 8, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>Workshop at ISEC2022 on capture-recapture HMMs and Nimble</title>
+      <link>https://oliviergimenez.github.io/blog/2022-07-01-workshop-at-isec2022-on-capture-recapture-hmms-and-nimble/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-07-01-workshop-at-isec2022-on-capture-recapture-hmms-and-nimble/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Would you like to get the most out of your capture-recapture data?&lt;br&gt;&lt;br&gt;We run a workshop on multisite/state/event HMMs models in &lt;a href=&#34;https://twitter.com/hashtag/Rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Rstats&lt;/a&gt; Nimble w/ Daniel Turek &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; at &lt;a href=&#34;https://twitter.com/hashtag/ISEC2022?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ISEC2022&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ISEC_stats_ecol?ref_src=twsrc%5Etfw&#34;&gt;@ISEC_stats_ecol&lt;/a&gt;&lt;br&gt;&lt;br&gt;Website w/ slides &amp;amp; codes: &lt;a href=&#34;https://t.co/gI1ccZO3O9&#34;&gt;https://t.co/gI1ccZO3O9&lt;/a&gt;&lt;br&gt;Video: &lt;a href=&#34;https://t.co/zA6nh6Ttih&#34;&gt;https://t.co/zA6nh6Ttih&lt;/a&gt; &lt;a href=&#34;https://t.co/ejyE2tCw5o&#34;&gt;pic.twitter.com/ejyE2tCw5o&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1542815746752905217?ref_src=twsrc%5Etfw&#34;&gt;July 1, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>My plenary talk at ISEC2022 on Statistical ecology, hidden Markov models and large carnivores.</title>
+      <link>https://oliviergimenez.github.io/blog/2022-06-28-my-plenary-talk-at-isec2022-on-statistical-ecology-hidden-markov-models-and-large-carnivores/</link>
+      <pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-06-28-my-plenary-talk-at-isec2022-on-statistical-ecology-hidden-markov-models-and-large-carnivores/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Statistical ecology 🌍📊, hidden Markov models 🛰️ and large carnivores 🐺😺🐻 Soooo happy to share our research in this plenary talk at &lt;a href=&#34;https://twitter.com/hashtag/ISEC2022?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ISEC2022&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ISEC_stats_ecol?ref_src=twsrc%5Etfw&#34;&gt;@ISEC_stats_ecol&lt;/a&gt; 🤩🍾&lt;br&gt;&lt;br&gt;slides and text: &lt;a href=&#34;https://t.co/BOtZHWU56L&#34;&gt;https://t.co/BOtZHWU56L&lt;/a&gt;&lt;br&gt;video: &lt;a href=&#34;https://t.co/6Qn7i05uae&#34;&gt;https://t.co/6Qn7i05uae&lt;/a&gt; &lt;a href=&#34;https://t.co/vrSYeo9HYF&#34;&gt;pic.twitter.com/vrSYeo9HYF&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1541827362052005893?ref_src=twsrc%5Etfw&#34;&gt;June 28, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Draft chapter on Bayes stats and MCMC in R</title>
+      <link>https://oliviergimenez.github.io/blog/draft-bayesmcmc/</link>
+      <pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/draft-bayesmcmc/</guid>
+      <description>&lt;p&gt;I have a draft chapter on Bayes stats and MCMC at 
+&lt;a href=&#34;https://oliviergimenez.github.io/banana-book/crashcourse.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://oliviergimenez.github.io/banana-book/crashcourse.html&lt;/a&gt; I&amp;rsquo;d love your feedback about what is confusing and what is missing 😇 #rstats&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bayesian analysis of capture-recapture data with hidden Markov models - Theory and case studies in R</title>
+      <link>https://oliviergimenez.github.io/blog/banana-book/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/banana-book/</guid>
+      <description>&lt;p&gt;So, I&amp;rsquo;m writing a book 🤯 It&amp;rsquo;&#39;&amp;rsquo;s called &amp;ldquo;Bayesian analysis of capture-recapture data with hidden Markov models - Theory and case studies in R&amp;rdquo;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;So, I&amp;#39;m writing a book 🤯 It&amp;#39;s called &amp;#39;Bayesian analysis of capture-recapture data w hidden Markov models - Theory and case studies in R&amp;#39;. Online version here &lt;a href=&#34;https://t.co/Crgx5NX70s&#34;&gt;https://t.co/Crgx5NX70s&lt;/a&gt; to be published w &lt;a href=&#34;https://twitter.com/CRCPress?ref_src=twsrc%5Etfw&#34;&gt;@CRCPress&lt;/a&gt; Will share chapter drafts 😇 &amp;amp; random thoughts along the way &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/ms6dIjvY7m&#34;&gt;pic.twitter.com/ms6dIjvY7m&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1439664049776644101?ref_src=twsrc%5Etfw&#34;&gt;September 19, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>A review of the capture-recapture literature over the last decade</title>
+      <link>https://oliviergimenez.github.io/blog/euring2021/</link>
+      <pubDate>Tue, 08 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/euring2021/</guid>
+      <description>&lt;p&gt;Our poster with Ruth King and Rachel McCrea for the 2021 Euring conference.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Poster session at &lt;a href=&#34;https://twitter.com/_EURING?ref_src=twsrc%5Etfw&#34;&gt;@_EURING&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/euring2021?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#euring2021&lt;/a&gt; feels like a video game from back in the days &lt;a href=&#34;https://twitter.com/gather_town?ref_src=twsrc%5Etfw&#34;&gt;@gather_town&lt;/a&gt; 🥳 Sadly, couldn&amp;#39;t stay as I was on 🧇 duty 😋 Btw our poster w/ &lt;a href=&#34;https://twitter.com/BayesRuth?ref_src=twsrc%5Etfw&#34;&gt;@BayesRuth&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/RSMcCrea?ref_src=twsrc%5Etfw&#34;&gt;@RSMcCrea&lt;/a&gt; is a review of the capture-recapture literature over the last decade, check out ⤵️ &lt;a href=&#34;https://t.co/B2Gal2Sj6I&#34;&gt;pic.twitter.com/B2Gal2Sj6I&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1402321242514935814?ref_src=twsrc%5Etfw&#34;&gt;June 8, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on integrated population models</title>
+      <link>https://oliviergimenez.github.io/blog/ipmworkshop_thread/</link>
+      <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/ipmworkshop_thread/</guid>
+      <description>&lt;p&gt;Just finished a workshop on integrated population models.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;And it&amp;#39;s oooooooooooon ! &lt;a href=&#34;https://t.co/sEy70RCORN&#34;&gt;https://t.co/sEy70RCORN&lt;/a&gt; &lt;a href=&#34;https://t.co/nNBCvIonjV&#34;&gt;pic.twitter.com/nNBCvIonjV&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1330785278328401922?ref_src=twsrc%5Etfw&#34;&gt;November 23, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Statistical ecology</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/methods/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/methods/</guid>
+      <description>&lt;p&gt;Trained in mathematics and statistics in particular, I have developed a bottomless taste for questions in 
+&lt;a href=&#34;http://rsbl.royalsocietypublishing.org/content/10/12/20140698&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;statistical ecology&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I often resort to 
+&lt;a href=&#34;https://oliviergimenez.github.io/publication/books/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;state-space models&lt;/a&gt;, and hidden Markov models (e.g., 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Gimenezetal2014.pdf&#34;&gt;here&lt;/a&gt; and 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Gimenezetal2012TPB.pdf&#34;&gt;here&lt;/a&gt;) in particular, to develop statistical methods for capture-recapture, occupancy and integrated population models.&lt;/p&gt;
+&lt;p&gt;In our group, we address questions in conservation biology to assess species viability, in ecology to study the effect of climate change on animal demography, in evolution to examine life-history tactics and individual heterogeneity and in wildlife management to develop strategies for conservation and conflict mitigation. To account for the human dimension inherent to these questions, I went back to the university to study sociology. A nice illustration of this interdisciplinary work is 
+&lt;a href=&#34;https://tel.archives-ouvertes.fr/tel-01834575/document&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gilles Maurer&amp;rsquo;s PhD&lt;/a&gt; combining anthropology, demography, economics and genetics to better understand the interactions between captive and wild population of Asian elephants.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m doing my best to teach statistics (including the Bayesian way) to the students of the 
+&lt;a href=&#34;https://www.masters-biologie-ecologie.com/blog/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ecology and Evolution Master in Montpellier&lt;/a&gt;. We also make efforts to structure the community in France through our 
+&lt;a href=&#34;https://sites.google.com/site/gdrecostat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;national research group in statistical ecology&lt;/a&gt;. Last but not least, every now and then, our group runs 
+&lt;a href=&#34;https://oliviergimenez.github.io/talks/workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;workshops&lt;/a&gt; to diffuse quantitative methods in the ecological community.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bayesian implementation of the robust design</title>
+      <link>https://oliviergimenez.github.io/blog/rdcmr/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/rdcmr/</guid>
+      <description>&lt;p&gt;Bayesian implementation of Pollock&amp;rsquo;s robust design capture-recapture models w/ Jags.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Bayesian implementation of Pollock&amp;#39;s &lt;a href=&#34;https://twitter.com/kpollock48?ref_src=twsrc%5Etfw&#34;&gt;@kpollock48&lt;/a&gt; robust design capture-recapture models w/ &lt;a href=&#34;https://twitter.com/hashtag/jags?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#jags&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; from a &lt;a href=&#34;https://twitter.com/MethodsEcolEvol?ref_src=twsrc%5Etfw&#34;&gt;@MethodsEcolEvol&lt;/a&gt; paper by T. Riecke and colleagues ➡️ &lt;a href=&#34;https://t.co/nE7N8kHPiR&#34;&gt;https://t.co/nE7N8kHPiR&lt;/a&gt; &lt;a href=&#34;https://t.co/ZToHY3luZR&#34;&gt;pic.twitter.com/ZToHY3luZR&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1247098841771409408?ref_src=twsrc%5Etfw&#34;&gt;April 6, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bayesian SEM capture-recapture models</title>
+      <link>https://oliviergimenez.github.io/blog/semjags/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/semjags/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;We had to dig out some &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/jags?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#jags&lt;/a&gt; code to fit a structural equation capture-recapture model we developed w/ &lt;a href=&#34;https://twitter.com/SCubi25?ref_src=twsrc%5Etfw&#34;&gt;@SCubi25&lt;/a&gt; in a 8-year old &lt;a href=&#34;https://twitter.com/ESAEcology?ref_src=twsrc%5Etfw&#34;&gt;@ESAEcology&lt;/a&gt; paper (!), and it runs like a charm 🥳🍾&lt;a href=&#34;https://twitter.com/hashtag/reproducibility?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#reproducibility&lt;/a&gt; ➡️ &lt;a href=&#34;https://t.co/Te6BKnxgMF&#34;&gt;https://t.co/Te6BKnxgMF&lt;/a&gt; &lt;a href=&#34;https://t.co/78tWbOhqZD&#34;&gt;pic.twitter.com/78tWbOhqZD&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1225417314474090499?ref_src=twsrc%5Etfw&#34;&gt;February 6, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Nimble and HMM</title>
+      <link>https://oliviergimenez.github.io/blog/nimblehmm/</link>
+      <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/nimblehmm/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Playing around w/ awesome &lt;a href=&#34;https://twitter.com/R_nimble?ref_src=twsrc%5Etfw&#34;&gt;@R_nimble&lt;/a&gt; to fit multievent &lt;a href=&#34;https://twitter.com/hashtag/HMM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMM&lt;/a&gt; capture-recapture models to data - Code and data here &lt;a href=&#34;https://t.co/2oHvsplahv&#34;&gt;https://t.co/2oHvsplahv&lt;/a&gt; Comments welcome 🤗 &lt;a href=&#34;https://t.co/tA89r80YYV&#34;&gt;pic.twitter.com/tA89r80YYV&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1207959690744881152?ref_src=twsrc%5Etfw&#34;&gt;December 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>A review on the last decade of research on capture-recapture</title>
+      <link>https://oliviergimenez.github.io/blog/crreview/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/crreview/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;A thread on my review of the capture-recapture literature for the conference Wildlife Research and Conservation 2019 &lt;a href=&#34;https://t.co/dqz8kbLdym&#34;&gt;https://t.co/dqz8kbLdym&lt;/a&gt; in Berlin 🇩🇪. Slides, analyses, data &amp;amp; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; codes available from &lt;a href=&#34;https://t.co/s9sFbkZG4k&#34;&gt;https://t.co/s9sFbkZG4k&lt;/a&gt; 1/23 &lt;a href=&#34;https://t.co/crGkVqYzov&#34;&gt;pic.twitter.com/crGkVqYzov&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1178044240036876289?ref_src=twsrc%5Etfw&#34;&gt;September 28, /a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>New preprint: Distribution and abundance of bottlenose dolphin (Tursiops truncatus) over the French Mediterranean continental shelf</title>
+      <link>https://oliviergimenez.github.io/blog/paper_hlabach/</link>
+      <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/paper_hlabach/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New &lt;a href=&#34;https://twitter.com/hashtag/preprint?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#preprint&lt;/a&gt; w/ &lt;a href=&#34;https://twitter.com/GIS_3M?ref_src=twsrc%5Etfw&#34;&gt;@GIS_3M&lt;/a&gt; on Distribution and abundance of bottlenose dolphin (Tursiops truncatus) over the French Mediterranean continental shelf &lt;a href=&#34;https://t.co/eNfgLCT4k4&#34;&gt;https://t.co/eNfgLCT4k4&lt;/a&gt; - Soooo impressed by the huge collective field effort to collect photo-id on this iconic species! &lt;a href=&#34;https://t.co/gRqpzkg6UK&#34;&gt;pic.twitter.com/gRqpzkg6UK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1157513971076927488?ref_src=twsrc%5Etfw&#34;&gt;August 3, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>New paper: Accounting for heterogeneity when estimating stopover duration, timing and population size of red knots along the Luannan Coast of Bohai Bay, China</title>
+      <link>https://oliviergimenez.github.io/blog/papertamar/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/papertamar/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New paper by &lt;a href=&#34;https://twitter.com/TamarLok?ref_src=twsrc%5Etfw&#34;&gt;@TamarLok&lt;/a&gt; 🤩👏 using integrated modelling of 8 years of resighting and count data and accouting for heterogeneity to show the key importance of the Luannan Coast of Bohai Bay (China) as a spring &lt;a href=&#34;https://twitter.com/hashtag/stopover?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#stopover&lt;/a&gt; area for red knots &lt;a href=&#34;https://t.co/EgOA6yM4Dp&#34;&gt;https://t.co/EgOA6yM4Dp&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#WomenInSTEM&lt;/a&gt; &lt;a href=&#34;https://t.co/05qVXhyXVt&#34;&gt;pic.twitter.com/05qVXhyXVt&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1144557881779511296?ref_src=twsrc%5Etfw&#34;&gt;28 juin 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Local minima and multistate capture-recapture models</title>
+      <link>https://oliviergimenez.github.io/blog/localminima_reboot/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/localminima_reboot/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I thought I&amp;#39;d share some &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; code about local minima in &lt;a href=&#34;https://twitter.com/hashtag/multistate?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#multistate&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/capturerecapture?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#capturerecapture&lt;/a&gt; models &lt;a href=&#34;https://t.co/aJE33dBtdO&#34;&gt;https://t.co/aJE33dBtdO&lt;/a&gt; using &lt;a href=&#34;https://twitter.com/hashtag/Mark?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Mark&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Admb?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Admb&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Jags?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Jags&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Stan?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Stan&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/hashtag/Nimble?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Nimble&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/hashtag/TMB?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TMB&lt;/a&gt; to come). Largely inspired by Chapter 9 of the &amp;quot;Gentle introduction to Mark&amp;quot; by Cooch &amp;amp; White 😉 &lt;a href=&#34;https://t.co/NxzG6w0Bzq&#34;&gt;pic.twitter.com/NxzG6w0Bzq&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1127680025568993281?ref_src=twsrc%5Etfw&#34;&gt;12 mai 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New paper!</title>
+      <link>https://oliviergimenez.github.io/blog/sarahlulu_paper/</link>
+      <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/sarahlulu_paper/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New paper by &lt;a href=&#34;https://twitter.com/hashtag/SarahBenhaiem?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SarahBenhaiem&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/LMarescot?ref_src=twsrc%5Etfw&#34;&gt;@LMarescot&lt;/a&gt; 🤩👏 &amp;quot;Robustness of Eco-Epidemiological Capture-Recapture Parameter Estimates to Variation in Infection State Uncertainty&amp;quot; &lt;a href=&#34;https://t.co/ZvNghUHUUY&#34;&gt;https://t.co/ZvNghUHUUY&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HMM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/multievent?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#multievent&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/TMB?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TMB&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#WomenInSTEM&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/carnivorepapersbywomen?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#carnivorepapersbywomen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/heynas?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#heynas&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/serengeti?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#serengeti&lt;/a&gt; &lt;a href=&#34;https://t.co/VT6iStk5UW&#34;&gt;pic.twitter.com/VT6iStk5UW&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1034490461304619010?ref_src=twsrc%5Etfw&#34;&gt;28 août 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New paper!</title>
+      <link>https://oliviergimenez.github.io/blog/bibi_paper2/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/bibi_paper2/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Special feature on Evolutionary &lt;a href=&#34;https://twitter.com/hashtag/Demography?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Demography&lt;/a&gt; by Takenori Takada &amp;amp; &lt;a href=&#34;https://twitter.com/Richshefferson?ref_src=twsrc%5Etfw&#34;&gt;@Richshefferson&lt;/a&gt; in &lt;a href=&#34;https://twitter.com/hashtag/Population?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Population&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Ecology?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Ecology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/SpringerJP_LS?ref_src=twsrc%5Etfw&#34;&gt;@SpringerJP_LS&lt;/a&gt; - We wrote &amp;quot;Estimating individual fitness in the wild using capture-recapture data&amp;quot; &lt;a href=&#34;https://t.co/5u7x1UvRr5&#34;&gt;https://t.co/5u7x1UvRr5&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; code ➡️ &lt;a href=&#34;https://t.co/l8o7Igydn9&#34;&gt;https://t.co/l8o7Igydn9&lt;/a&gt; &lt;a href=&#34;https://t.co/IUp6egBPUA&#34;&gt;pic.twitter.com/IUp6egBPUA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1003358114425593860?ref_src=twsrc%5Etfw&#34;&gt;3 juin8&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New paper!</title>
+      <link>https://oliviergimenez.github.io/blog/bibi_paper/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/bibi_paper/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&amp;quot;R2ucare: An R &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; package to perform goodness‐of‐fit tests for capture‐recapture models&amp;quot; in &lt;a href=&#34;https://twitter.com/MethodsEcolEvol?ref_src=twsrc%5Etfw&#34;&gt;@MethodsEcolEvol&lt;/a&gt; &lt;a href=&#34;https://t.co/ieQohrn3jA&#34;&gt;https://t.co/ieQohrn3jA&lt;/a&gt; 🤓😎 - paper entirely written w/ &lt;a href=&#34;https://twitter.com/hashtag/rmarkdown?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rmarkdown&lt;/a&gt; thx &lt;a href=&#34;https://twitter.com/stevenvmiller?ref_src=twsrc%5Etfw&#34;&gt;@stevenvmiller&lt;/a&gt; &lt;a href=&#34;https://t.co/9FapGe3oGV&#34;&gt;https://t.co/9FapGe3oGV&lt;/a&gt; 💯 - replication files ➡️ &lt;a href=&#34;https://t.co/h9F6sKbcpI&#34;&gt;https://t.co/h9F6sKbcpI&lt;/a&gt; &lt;a href=&#34;https://t.co/JyzQ33Wrl3&#34;&gt;pic.twitter.com/JyzQ33Wrl3&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/987622130455142401?ref_src=twsrc%5Etfw&#34;&gt;21 avril 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2018 capture-recapture workshop</title>
+      <link>https://oliviergimenez.github.io/blog/capturerecapture_workshop2018/</link>
+      <pubDate>Tue, 20 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/capturerecapture_workshop2018/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/multievent?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#multievent&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/capturerecapture?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#capturerecapture&lt;/a&gt; workshop - Intro by &lt;a href=&#34;https://twitter.com/hashtag/RogerPradel?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RogerPradel&lt;/a&gt; 😍📈 Check out the comments for a few relevant papers on the topic &lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw&#34;&gt;@CNRSenLR&lt;/a&gt; &lt;a href=&#34;https://t.co/4nHrXBakgf&#34;&gt;pic.twitter.com/4nHrXBakgf&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/976018194547789825?ref_src=twsrc%5Etfw&#34;&gt;20 mars 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New paper!</title>
+      <link>https://oliviergimenez.github.io/blog/lulu_paper/</link>
+      <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/lulu_paper/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New paper 🎉🎉 &amp;quot;Social status mediates the fitness costs of infection with canine distemper virus in Serengeti spotted hyenas&amp;quot; &lt;a href=&#34;https://t.co/LdWNAWFWum&#34;&gt;https://t.co/LdWNAWFWum&lt;/a&gt; &lt;a href=&#34;https://twitter.com/BritishEcolSoc?ref_src=twsrc%5Etfw&#34;&gt;@BritishEcolSoc&lt;/a&gt; by L. Marescot and S. Benhaiem &lt;a href=&#34;https://twitter.com/hashtag/teamboulet?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#teamboulet&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/multievent?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#multievent&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/hmm?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#hmm&lt;/a&gt; 😎😊 &lt;a href=&#34;https://t.co/JKpN1scRTx&#34;&gt;https://t.co/JKpN1scRTx&lt;/a&gt; &lt;a href=&#34;https://t.co/pD7yHGnhZ5&#34;&gt;pic.twitter.com/pD7yHGnhZ5&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/971368706445135872?ref_src=twsrc%5Etfw&#34;&gt;7 mars 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fitting HMM/multievent capture-recapture models with TMB</title>
+      <link>https://oliviergimenez.github.io/blog/multievent_in_tmb/</link>
+      <pubDate>Mon, 21 Aug 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/multievent_in_tmb/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/tmb.png&#34;&gt;
+Following my attempts to fit a HMM model to [capture-recapture data with Rcpp](http://localhost:1313/post/multievent_in_rcpp/) and to [occupancy data with ADMB](http://localhost:1313/post/occupancy_in_admb/), a few colleagues suggested TMB as a potential alternative for several reasons (fast, allows for parallel computations, works with R, accomodates spatial stuff, easy implementation of random effects, and probably other reasons that I don&#39;t know).
+&lt;p&gt;I found materials on the internet to teach myself TMB, at least what I needed to implement a simple HMM model. See 
+&lt;a href=&#34;http://seananderson.ca/2014/10/17/tmb.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for a linear regression and a Gompertz state space model examples, 
+&lt;a href=&#34;https://www.youtube.com/watch?v=A5CLrhzNzVU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for the same linear regression example on Youtube (that&amp;rsquo;s awesome!) and many other examples 
+&lt;a href=&#34;http://kaskr.github.io/adcomp/examples.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. However, I got stuck and posted my desperate request for help on the 
+&lt;a href=&#34;https://groups.google.com/forum/#!forum/tmb-users&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TMB forum&lt;/a&gt;. Guess what, I got an answer less than a few hours after - thank you Mollie Brooks!&lt;/p&gt;
+&lt;p&gt;The R code is available on my GitHub 
+&lt;a href=&#34;https://github.com/oliviergimenez/hmm_tmb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Minimizing the deviance coded with TMB was&amp;hellip; wait for it&amp;hellip; &amp;gt; 300 times faster than using the deviance coded in standard R.&lt;/p&gt;
+&lt;p&gt;Hope this is useful.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fitting multievent capture-recapture models with Rcpp</title>
+      <link>https://oliviergimenez.github.io/blog/multievent_in_rcpp/</link>
+      <pubDate>Fri, 11 Aug 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/multievent_in_rcpp/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/seamless.png&#34;&gt;
+Following my previous post on [using ADMB to fit hidden Markov models](https://oliviergimenez.github.io/post/occupancy_in_admb/), I took some time to learn how to use Rcpp ([Eddelbuettel &amp; Francois 2011](https://www.jstatsoft.org/article/view/v040i08); [Eddelbuettel 2013](http://www.springer.com/us/book/9781461468677)), a package that gives friendly access to the power of C++ and increase the speed of your R programs. Kudos to Dirk Eddelbuettel, Romain Francois and their colleagues, Rcpp is awesome! 
+&lt;p&gt;I started with the excellent 
+&lt;a href=&#34;http://adv-r.had.co.nz/Rcpp.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rcpp chapter&lt;/a&gt; in the 
+&lt;a href=&#34;http://adv-r.had.co.nz/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Advanced R&lt;/a&gt; book by Hadley Wickham which I complemented with the various 
+&lt;a href=&#34;https://cran.r-project.org/web/packages/Rcpp/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vignettes&lt;/a&gt; that come with the package. As always, I googled the problems I had and often ended up finding the solution on 
+&lt;a href=&#34;https://stackoverflow.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;stackoverflow&lt;/a&gt;. The 
+&lt;a href=&#34;http://lists.r-forge.r-project.org/mailman/listinfo/rcpp-devel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rcpp-devel discussion list&lt;/a&gt; is the place where questions should be asked about Rcpp.&lt;/p&gt;
+&lt;p&gt;My objective was to implement the likelihood of a relatively simple multievent capture-recapture model (
+&lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1111/j.1541-0420.2005.00318.x/abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pradel 2005&lt;/a&gt;) with Rcpp. I recycled some R code I had and a dataset on shearwaters I used in a paper (
+&lt;a href=&#34;https://dl.dropboxusercontent.com/u/23160641/my-pubs/Gimenezetal2012TPB.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gimenez et al. 2012&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The R code is available on my GitHub 
+&lt;a href=&#34;https://github.com/oliviergimenez/multieventRcpp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. To run it, you just need to type Rcpp::sourceCpp(&amp;lsquo;multi event.cpp&amp;rsquo;) in the console. I&amp;rsquo;m convinced that the code can be improved, but this simple exercise showed that minimizing the deviance coded with Rcpp and calculating the Hessian was 10 times faster than using the deviance coded in standard R.&lt;/p&gt;
+&lt;p&gt;Next steps will be to go for RcppArmadillo for matrix computations and RcppNumerical for optimisation (and numerical integration for random effects).&lt;/p&gt;
+&lt;p&gt;Hope this is useful.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Following an advice from Romain Francois and Dirk Eddelbuettel (the Rcpp gurus), I have switched to 
+&lt;a href=&#34;https://cran.r-project.org/web/packages/RcppArmadillo/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RcppArmadillo&lt;/a&gt; to rely on the code developed by professionals and decades of testing. Now the RcppArmadillo code is 50 times faster than basic R! The code is available on 
+&lt;a href=&#34;https://github.com/oliviergimenez/multieventRcpp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my GitHub&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Review on individual heterogeneity in capture-recapture models</title>
+      <link>https://oliviergimenez.github.io/blog/paper_idh/</link>
+      <pubDate>Mon, 27 Mar 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/paper_idh/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;margin-bottom:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/idh.png&#34;&gt;
+I just submitted to Oikos a paper entitled &#34;Individual heterogeneity and 
+capture-recapture models: what, why and how?&#34;. A pre-print is available 
+[here](http://biorxiv.org/content/early/2017/03/26/120683). I also provide R codes 
+on GitHub [there](http://bit.ly/2nqWzoZ).  
+&lt;p&gt;This is joint work with Emmanuelle Cam and
+Jean-Michel Gaillard. This work was greatly inspired by my HDR I defended back in 2010
+(!) and the ANR project I got over the period 2008-2011 (re-!).&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Capture-recapture workshop in Montpellier</title>
+      <link>https://oliviergimenez.github.io/blog/cr_workshop_2017/</link>
+      <pubDate>Mon, 20 Mar 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/cr_workshop_2017/</guid>
+      <description>&lt;img style=&#34;float:left;margin-right:10px;margin-top:10px;&#34; src=&#34;https://oliviergimenez.github.io/img/cmr.png&#34;&gt;
+We held our annual 5-day [capture-recapture workshop](https://multievent.sciencesconf.org/) 
+in Montpellier. As always, the attendees had challenging questions and stimulating datasets 
+to analyse! Looking forward to next year.
+</description>
+    </item>
+    
+    <item>
+      <title>GDEGeM workshop on bottlenose dolphin conservation in the North-Western Mediterranean Sea</title>
+      <link>https://oliviergimenez.github.io/blog/gdegem_restitution/</link>
+      <pubDate>Thu, 10 Nov 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/gdegem_restitution/</guid>
+      <description>&lt;p&gt;During the period 2013-2015, the 
+&lt;a href=&#34;https://www.gis3m.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NGO GIS3M&lt;/a&gt; led the
+
+&lt;a href=&#34;https://www.gdegem.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GDEGeM project&lt;/a&gt; in which tons of data (on abundance
+and distribution among others) were collected on bottlenose dolphins.&lt;/p&gt;
+&lt;p&gt;We had a 1-day
+seminar gathering participants to the project, local authorities, lay persons who came to
+listen to the results of the projects. The talks can be seen
+
+&lt;a href=&#34;https://www.gdegem.org/presentations-restitution-resultats-projet-gdegem&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. I
+contributed by presenting our
+abundance estimates&lt;/p&gt;
+&lt;iframe src=&#34;https://widgets.figshare.com/articles/4833089/embed?show_title=1&#34; width=&#34;568&#34; height=&#34;351&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt; 
+and our new project on the 
+coexistence between dolphins and human activities
+&lt;iframe src=&#34;https://widgets.figshare.com/articles/4833086/embed?show_title=1&#34; width=&#34;568&#34; height=&#34;351&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;</description>
+    </item>
+    
+    <item>
+      <title>Another visit of Raluca Bancila</title>
+      <link>https://oliviergimenez.github.io/blog/raluca_visit2/</link>
+      <pubDate>Sat, 01 Oct 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/raluca_visit2/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://www.researchgate.net/profile/Raluca_Bancila&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Raluca Bancila&lt;/a&gt;, who visited us
+back in 2015, is with us again for a short 2-week visit. We will resume a project we
+started one year ago on the evaluation of demographic parameters of two related species
+of spadefoot toads (Pelobates syriacus and P. fuscus) from the 
+&lt;a href=&#34;http://whc.unesco.org/en/list/588&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Danube Delta
+Biosphere Reserve&lt;/a&gt;, Romania, using capture-recapture models.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>International workshop on Bottlenose dolphin conservation and monitoring</title>
+      <link>https://oliviergimenez.github.io/blog/gis3m/</link>
+      <pubDate>Tue, 01 Dec 2015 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/gis3m/</guid>
+      <description>&lt;p&gt;The GIS3M held an &lt;a href=&#34;http://www.gdegem.org/international-workshop&#34; target=&#34;_blank&#34;&gt;international
+workshop&lt;/a&gt; in Marseille on the conservation of Bottlenose dolphin conservation and monitoring
+in the North-Western Mediterranean Sea. This was the opportunity to discuss the results of
+the &lt;a href=&#34;http://www.gdegem.org/rapports&#34; target=&#34;_blank&#34;&gt;GDEGeM project&lt;/a&gt; on the
+same topic. I mostly contributed by analysing the tons of photo-IDs that were
+collected during the program to estimate abundance and analyze the social structure.
+The slides of my talk:&lt;/p&gt;
+&lt;iframe src=&#34;https://widgets.figshare.com/articles/4833083/embed?show_title=1&#34; width=&#34;568&#34; height=&#34;351&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Raluca Bancila&#39;s visit</title>
+      <link>https://oliviergimenez.github.io/blog/raluca_visit1/</link>
+      <pubDate>Thu, 01 Oct 2015 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/raluca_visit1/</guid>
+      <description>&lt;p&gt;I had the visit of  &lt;a href=&#34;https://www.researchgate.net/profile/Raluca_Bancila&#34; target=&#34;_blank&#34;&gt;Raluca
+Bancila&lt;/a&gt; a research scientist from Romania. We investigated spatio-temporal environmental variation
+in and individual heterogeneity on emigration/immigration rates of the
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Troglofauna&#34; target=&#34;_blank&#34;&gt;troglophile harvestmen
+species&lt;/a&gt; Paranemastoma silli with capture-recapture models. We used two P. silli populations
+inhabiting two caves, Closani and Lazului Caves, located in the Mehedinti Mountains in southwestern
+Romania. Yes, we do not only work on big emblematic mammal species ;-)
+On a personal side, Raluca is always smiling and laughing – ‘la banane’ like we say in French,
+it was so good to have her in the team. I’m looking forward to hosting her again!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Capture-recapture workshop</title>
+      <link>https://oliviergimenez.github.io/blog/workshop_cmr_2014/</link>
+      <pubDate>Thu, 20 Mar 2014 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/workshop_cmr_2014/</guid>
+      <description>&lt;p&gt;The team run two 1-week workshops on &lt;a href=&#34;http://multievent.sciencesconf.org/&#34; target=&#34;_blank&#34;&gt;capture-recapture
+models&lt;/a&gt; and &lt;a href=&#34;http://matrixmodels.sciencesconf.org/&#34; target=&#34;_blank&#34;&gt;matrix models&lt;/a&gt;.
+We&amp;rsquo;re grateful to all the attendees who came, with fascinating research topics and stimulating
+questions. No need to say that your presence means a lot to us! We hope to see again many
+people next year! Warm and special thanks to &lt;a href=&#34;http://www.cnr.usu.edu/htm/facstaff/koons-page&#34; target=&#34;_blank&#34;&gt;Dave
+Koons&lt;/a&gt;, &lt;a href=&#34;http://liseaubry.webs.com/&#34; target=&#34;_blank&#34;&gt;Lise Aubry&lt;/a&gt; and Pamela
+Lagrange!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

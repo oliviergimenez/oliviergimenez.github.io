@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>working group | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/working-group/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/working-group/index.xml" rel="self" type="application/rss+xml" />
+    <description>working group</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Thu, 26 Jan 2017 12:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>working group</title>
+      <link>https://oliviergimenez.github.io/tags/working-group/</link>
+    </image>
+    
+    <item>
+      <title>Working group on animal/human demography</title>
+      <link>https://oliviergimenez.github.io/blog/working_group_demo/</link>
+      <pubDate>Thu, 26 Jan 2017 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/working_group_demo/</guid>
+      <description>&lt;p&gt;We organised a 2-day workshop on the metrics of longevity used in human and
+animal demography. The idea is to explore potential bridges between the two fields.
+Next meeting in April. The group is led by S. Cubaynes, a former PhD student of mine,
+who now holds a lecturer position at Montpellier University.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Workshop on issues in fitting hierarchical models in ecology</title>
+      <link>https://oliviergimenez.github.io/blog/working_group_hm/</link>
+      <pubDate>Mon, 28 Nov 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/working_group_hm/</guid>
+      <description>&lt;p&gt;Frederic Gosselin, Etienne Rivot and I organised a 2-day workshop on issues in
+fitting hierarchical models in ecology. I gave a talk on &amp;ldquo;Local minima and multistate
+capture-recapture models&amp;rdquo;, slides and R code available on
+
+&lt;a href=&#34;https://github.com/oliviergimenez/multistate_local_minima&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe src=&#34;https://widgets.figshare.com/articles/4833524/embed?show_title=1&#34; width=&#34;568&#34; height=&#34;351&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;The idea is to consider several problematic case studies and explore the issues using
+several computing platforms (R, Jags, Nimble, Stan, Admb). Next meeting in May.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Working group in demography</title>
+      <link>https://oliviergimenez.github.io/blog/gdr_demography/</link>
+      <pubDate>Thu, 02 Apr 2015 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/gdr_demography/</guid>
+      <description>&lt;p&gt;As part of the &lt;a href=&#34;https://sites.google.com/site/gdrecostat/themes&#34; target=&#34;_blank&#34;&gt;GdR
+EcoStat and our evolutionary demography group&lt;/a&gt;, we had a stimulating workshop on the
+quantification of individual heterogeneity in survival of wild populations
+using &lt;a href=&#34;http://www.demographic-research.org/volumes/vol31/19/&#34; target=&#34;_blank&#34;&gt;an
+approach recently developed by Hal Caswell&lt;/a&gt;. Hal attended the workshop with Lotte de
+Vries her new PhD student who will be leading the study.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

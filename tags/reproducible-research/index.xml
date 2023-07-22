@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reproducible-research | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/reproducible-research/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/reproducible-research/index.xml" rel="self" type="application/rss+xml" />
+    <description>reproducible-research</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Thu, 09 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>reproducible-research</title>
+      <link>https://oliviergimenez.github.io/tags/reproducible-research/</link>
+    </image>
+    
+    <item>
+      <title>Reproducible research and GitHub</title>
+      <link>https://oliviergimenez.github.io/blog/2022-06-09-reproducible-research-and-github/</link>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-06-09-reproducible-research-and-github/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Yesterday I created my 200th repo on &lt;a href=&#34;https://twitter.com/github?ref_src=twsrc%5Etfw&#34;&gt;@github&lt;/a&gt; 😇 It&amp;#39;s been quite an adventure to twist my old habits &amp;amp; switch to &lt;a href=&#34;https://twitter.com/hashtag/ReproducibleResearch?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ReproducibleResearch&lt;/a&gt; but it&amp;#39;s definitely worth it 🤯 &lt;br&gt;&lt;br&gt;Plenty of help out there like &lt;a href=&#34;https://twitter.com/living_norway?ref_src=twsrc%5Etfw&#34;&gt;@living_norway&lt;/a&gt; 🤩 If useful, I also have a 1-day workshop &lt;a href=&#34;https://t.co/7I6rU61nEg&#34;&gt;https://t.co/7I6rU61nEg&lt;/a&gt; &lt;a href=&#34;https://t.co/cGDjaA6iTv&#34;&gt;pic.twitter.com/cGDjaA6iTv&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1534905907896668162?ref_src=twsrc%5Etfw&#34;&gt;June 9, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Self teaching reproducible research</title>
+      <link>https://oliviergimenez.github.io/blog/reproducible_research/</link>
+      <pubDate>Sun, 10 Jul 2016 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/reproducible_research/</guid>
+      <description>&lt;p&gt;I decided to teach myself how to do proper reproducible research. Many reasons to
+that: save time on the mid/long term, make my analyses open and criticizable, share with others, &amp;hellip;&lt;/p&gt;
+&lt;p&gt;There are tons of resources on  the web. I use the 
+&lt;a href=&#34;http://kbroman.org/pages/tutorials.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tutorials&lt;/a&gt;
+cooked by guru 
+&lt;a href=&#34;http://kbroman.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Karl Broman&lt;/a&gt;.
+For people like me who learned S-plus, he has some 
+&lt;a href=&#34;http://kbroman.org/hipsteR/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;advice&lt;/a&gt; to switch to modern tools.
+Among others, I try and use more and more RStudio in connection with KnitR and R Markdown and
+share my codes on 
+&lt;a href=&#34;https://github.com/oliviergimenez&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. I am more a Fortran guy,
+but Rcpp makes me wonder about C++.  Version control, piping and the tidy universe are
+not yet entirely familiar to me, I’m making baby steps (or grandpa steps I should say). Let’s see how it goes.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

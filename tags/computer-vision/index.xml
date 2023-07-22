@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>computer vision | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/computer-vision/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/computer-vision/index.xml" rel="self" type="application/rss+xml" />
+    <description>computer vision</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Mon, 22 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>computer vision</title>
+      <link>https://oliviergimenez.github.io/tags/computer-vision/</link>
+    </image>
+    
+    <item>
+      <title>Nine tips for ecologists using machine learning</title>
+      <link>https://oliviergimenez.github.io/blog/preprintml/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/preprintml/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New preprint led by Marine Desprez w/ Vincent Miele on &amp;quot;Nine tips for ecologists using machine learning&amp;quot; 🤩&lt;a href=&#34;https://twitter.com/hashtag/MachineLearning?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#MachineLearning&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Ecology?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Ecology&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/RStats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RStats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/preprint?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#preprint&lt;/a&gt;&lt;a href=&#34;https://t.co/KvXTmhABtF&#34;&gt;https://t.co/KvXTmhABtF&lt;/a&gt;&lt;a href=&#34;https://twitter.com/LbbeLyon?ref_src=twsrc%5Etfw&#34;&gt;@LbbeLyon&lt;/a&gt; &lt;a href=&#34;https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw&#34;&gt;@cefemontpellier&lt;/a&gt; &lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw&#34;&gt;@CNRS_OccitaniE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/umontpellier?ref_src=twsrc%5Etfw&#34;&gt;@umontpellier&lt;/a&gt; &lt;a href=&#34;https://t.co/CbiFOIjXhX&#34;&gt;pic.twitter.com/CbiFOIjXhX&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1660576083538788353?ref_src=twsrc%5Etfw&#34;&gt;May 22, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; </description>
+    </item>
+    
+    <item>
+      <title>Regard SFEE Images, écologie et deep learning</title>
+      <link>https://oliviergimenez.github.io/blog/sfeeia/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/sfeeia/</guid>
+      <description>&lt;p&gt;Our take on deep learning, computer vision and ecology.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;fr&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Images, écologie et deep learning&amp;quot; co-écrit avec Vincent Miele et Stéphane Dray &lt;a href=&#34;https://twitter.com/LbbeLyon?ref_src=twsrc%5Etfw&#34;&gt;@LbbeLyon&lt;/a&gt; sur les applications du &lt;a href=&#34;https://twitter.com/hashtag/DeepLearning?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DeepLearning&lt;/a&gt; à l&amp;#39;analyse d&amp;#39;images en écologie et difficultés associées. 🙏 &lt;a href=&#34;https://twitter.com/sfecologie?ref_src=twsrc%5Etfw&#34;&gt;@sfecologie&lt;/a&gt; pour l&amp;#39;opportunité &lt;a href=&#34;https://t.co/0cTYbHTb35&#34;&gt;https://t.co/0cTYbHTb35&lt;/a&gt; &lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw&#34;&gt;@cefemontpellier&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1363971047675072516?ref_src=twsrc%5Etfw&#34;&gt;February 22, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workshop on Deep Learning and Ecology</title>
+      <link>https://oliviergimenez.github.io/blog/deeplearning/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/deeplearning/</guid>
+      <description>&lt;p&gt;Co-organised a workshop on deep learning applications in ecology. Thread below and my notes 
+&lt;a href=&#34;https://twitter.com/oaggimenez/status/1329091540082257924?s=20&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🥁🤩 Our workshop on &lt;a href=&#34;https://twitter.com/hashtag/DeepLearning?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DeepLearning&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/hashtag/Ecology?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Ecology&lt;/a&gt; is about to begin. We&amp;#39;ll be talking about how to process and analyse images 📸 and sounds 🎙️ &lt;br&gt;&lt;br&gt;Program: &lt;a href=&#34;https://t.co/gUXD0tMCW1&#34;&gt;https://t.co/gUXD0tMCW1&lt;/a&gt;&lt;br&gt;Curated list of resources for ecologists: &lt;a href=&#34;https://t.co/HieQfqgVEx&#34;&gt;https://t.co/HieQfqgVEx&lt;/a&gt; &lt;br&gt;GDR EcoStat: &lt;a href=&#34;https://t.co/kTXpjJXlya&#34;&gt;https://t.co/kTXpjJXlya&lt;/a&gt; &lt;a href=&#34;https://t.co/nfjVke9ETU&#34;&gt;pic.twitter.com/nfjVke9ETU&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1328238117049012224?ref_src=twsrc%5Etfw&#34;&gt;November 16, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

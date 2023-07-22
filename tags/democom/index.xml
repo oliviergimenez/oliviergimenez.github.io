@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>democom | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/democom/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/democom/index.xml" rel="self" type="application/rss+xml" />
+    <description>democom</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Thu, 04 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>democom</title>
+      <link>https://oliviergimenez.github.io/tags/democom/</link>
+    </image>
+    
+    <item>
+      <title>Fitting stochastic predator-prey models using both population density and kill rate data</title>
+      <link>https://oliviergimenez.github.io/blog/preprintfred2/</link>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/preprintfred2/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/FredBarraquand?ref_src=twsrc%5Etfw&#34;&gt;@FredBarraquand&lt;/a&gt; is on 🔥 - check out his new &lt;a href=&#34;https://twitter.com/hashtag/arXiv?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#arXiv&lt;/a&gt; preprint &amp;quot;Fitting stochastic predator-prey models using both population density and kill rate data&amp;quot; &lt;a href=&#34;https://t.co/u23GoSoo81&#34;&gt;https://t.co/u23GoSoo81&lt;/a&gt; &lt;a href=&#34;https://t.co/0YwHWbNepb&#34;&gt;pic.twitter.com/0YwHWbNepb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1113717110277005313?ref_src=twsrc%5Etfw&#34;&gt;4 avril 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/wits.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Integrating multiple data sources to fit matrix population models for interacting species</title>
+      <link>https://oliviergimenez.github.io/blog/preprintfred1/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/preprintfred1/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🥳🧐 New preprint w/ &lt;a href=&#34;https://twitter.com/FredBarraquand?ref_src=twsrc%5Etfw&#34;&gt;@FredBarraquand&lt;/a&gt; &amp;quot;Integrating multiple data sources to fit matrix population models for interacting species&amp;quot; &lt;a href=&#34;https://t.co/LSSqOcj0Ca&#34;&gt;https://t.co/LSSqOcj0Ca&lt;/a&gt; w/ codes &lt;a href=&#34;https://t.co/Msn8XnChu6&#34;&gt;https://t.co/Msn8XnChu6&lt;/a&gt;; check out our &lt;a href=&#34;https://twitter.com/hashtag/democom?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#democom&lt;/a&gt; project for more &lt;a href=&#34;https://t.co/eNFOzrPgWR&#34;&gt;https://t.co/eNFOzrPgWR&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/IPMs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#IPMs&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/predatorprey?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#predatorprey&lt;/a&gt; &lt;a href=&#34;https://t.co/kJdX16rbU6&#34;&gt;pic.twitter.com/kJdX16rbU6&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1113011793784397824?ref_src=twsrc%5Etfw&#34;&gt;2 avril 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;httpsdgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to estimate the prevalence of hybrids</title>
+      <link>https://oliviergimenez.github.io/blog/paper_nina/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/paper_nina/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;How many 🐺🐶 hybrids are there?! &lt;a href=&#34;https://twitter.com/NSantostasi?ref_src=twsrc%5Etfw&#34;&gt;@NSantostasi&lt;/a&gt; shows how to estimate prevalence w/ &lt;a href=&#34;https://twitter.com/hashtag/HMM?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMM&lt;/a&gt; imperfect detection in her &lt;a href=&#34;https://twitter.com/Ecol_Evol?ref_src=twsrc%5Etfw&#34;&gt;@Ecol_Evol&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Euring17?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Euring17&lt;/a&gt; paper &lt;a href=&#34;https://t.co/KwiHB2ZBpX&#34;&gt;https://t.co/KwiHB2ZBpX&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/openaccess?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#openaccess&lt;/a&gt; 🤝 work w/ &lt;a href=&#34;https://twitter.com/SapienzaRoma?ref_src=twsrc%5Etfw&#34;&gt;@SapienzaRoma&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ISPRA_Press?ref_src=twsrc%5Etfw&#34;&gt;@ISPRA_Press&lt;/a&gt; &lt;a href=&#34;https://twitter.com/wolfappcenter?ref_src=twsrc%5Etfw&#34;&gt;@wolfappcenter&lt;/a&gt; &lt;a href=&#34;https://twitter.com/umontpellier?ref_src=twsrc%5Etfw&#34;&gt;@umontpellier&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw&#34;&gt;@CNRS_OccitaniE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt; 🇮🇹🇫🇷 &lt;a href=&#34;https://t.co/jQJtBwNOZn&#34;&gt;pic.twitter.com/jQJtBwNOZn&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1092882275828748288?ref_src=twsrc%5Etfw&#34;&gt;5 février 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;cript async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Inferring wildlife poaching in Southeast Asia with multispecies dynamic occupancy models</title>
+      <link>https://oliviergimenez.github.io/blog/preprint_poaching/</link>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/preprint_poaching/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Check out our new &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/preprint?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#preprint&lt;/a&gt; &amp;quot;Inferring &lt;a href=&#34;https://twitter.com/hashtag/wildlife?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#wildlife&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/poaching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#poaching&lt;/a&gt; in Southeast Asia with multispecies dynamic &lt;a href=&#34;https://twitter.com/hashtag/occupancy?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#occupancy&lt;/a&gt; models&amp;quot; led by &lt;a href=&#34;https://twitter.com/LMarescot?ref_src=twsrc%5Etfw&#34;&gt;@LMarescot&lt;/a&gt; 🐯 &lt;a href=&#34;https://t.co/g4NAQnUODw&#34;&gt;https://t.co/g4NAQnUODw&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HMMs?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HMMs&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ArnaudLyet?ref_src=twsrc%5Etfw&#34;&gt;@ArnaudLyet&lt;/a&gt; &lt;a href=&#34;https://twitter.com/rhohits?ref_src=twsrc%5Etfw&#34;&gt;@rhohits&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/NeilCarter?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#NeilCarter&lt;/a&gt; &lt;a href=&#34;https://twitter.com/SMARTCnsvTools?ref_src=twsrc%5Etfw&#34;&gt;@SMARTCnsvTools&lt;/a&gt; &lt;a href=&#34;https://twitter.com/AgenceRecherche?ref_src=twsrc%5Etfw&#34;&gt;@AgenceRecherche&lt;/a&gt; &lt;a href=&#34;https://t.co/5EttLyY1S9&#34;&gt;pic.twitter.com/5EttLyY1S9&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1085275914563448832?ref_src=twsrc%5Etfw&#34;&gt;15 janvier 2019&lt;/a&gt;&lt;/blocquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Project meeting on multispecies demography</title>
+      <link>https://oliviergimenez.github.io/blog/anr_meeting2/</link>
+      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/anr_meeting2/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Had a stimulating &lt;a href=&#34;https://twitter.com/AgenceRecherche?ref_src=twsrc%5Etfw&#34;&gt;@AgenceRecherche&lt;/a&gt; meeting working on &lt;a href=&#34;https://twitter.com/hashtag/multispecies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#multispecies&lt;/a&gt;  &lt;a href=&#34;https://twitter.com/hashtag/demographic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#demographic&lt;/a&gt; models to study structure &amp;amp; dynamics of 🐺🐦🐟🌱  &lt;a href=&#34;https://twitter.com/hashtag/communities?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#communities&lt;/a&gt; Check out &lt;a href=&#34;https://t.co/eNFOzrPgWR&#34;&gt;https://t.co/eNFOzrPgWR&lt;/a&gt; w/  &lt;a href=&#34;https://twitter.com/UMR_MECADEV?ref_src=twsrc%5Etfw&#34;&gt;@UMR_MECADEV&lt;/a&gt; &lt;a href=&#34;https://twitter.com/isemevol?ref_src=twsrc%5Etfw&#34;&gt;@isemevol&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/CESCO?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CESCO&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/CEFE?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CEFE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ONCFS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ONCFS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/MARBEC_MicMac?ref_src=twsrc%5Etfw&#34;&gt;@MARBEC_MicMac&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/CEBC?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CEBC&lt;/a&gt;  &lt;a href=&#34;https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw&#34;&gt;@CNRSenLR&lt;/a&gt; &lt;a href=&#34;https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw&#34;&gt;@INEE_CNRS&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/teamboulet?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#teamboulet&lt;/a&gt; &lt;a href=&#34;https://t.co/XcfVCBWq8L&#34;&gt;pic.twitter.com/XcfVCBWq8L&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🍉 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/999751209711034370?ref_src=twsrc%5Etfw&#34;&gt;24 mai18&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

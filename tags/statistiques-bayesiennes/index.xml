@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>statistiques-bayésiennes | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/statistiques-bayesiennes/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/statistiques-bayesiennes/index.xml" rel="self" type="application/rss+xml" />
+    <description>statistiques-bayésiennes</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Tue, 01 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>statistiques-bayésiennes</title>
+      <link>https://oliviergimenez.github.io/tags/statistiques-bayesiennes/</link>
+    </image>
+    
+    <item>
+      <title>Introduction aux statistiques bayésiennes avec R</title>
+      <link>https://oliviergimenez.github.io/blog/2022-02-01-introduction-aux-statistiques-bayesiennes-avec-r/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-02-01-introduction-aux-statistiques-bayesiennes-avec-r/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;fr&#34; dir=&#34;ltr&#34;&gt;Je fais une introduction aux statistiques bayésiennes avec R les 11-12 avril pour les doctorantes et doctorants &lt;a href=&#34;https://twitter.com/umontpellier?ref_src=twsrc%5Etfw&#34;&gt;@umontpellier&lt;/a&gt; du &lt;a href=&#34;https://twitter.com/CollegeDoctoUM?ref_src=twsrc%5Etfw&#34;&gt;@CollegeDoctoUM&lt;/a&gt; 😇&lt;br&gt;&lt;br&gt;Inscription ➡️ &lt;a href=&#34;https://t.co/w5PFBGyHSz&#34;&gt;https://t.co/w5PFBGyHSz&lt;/a&gt;&lt;br&gt;&lt;br&gt;Diapos &amp;amp; vidéos ➡️ &lt;a href=&#34;https://t.co/O5rAQTSksE&#34;&gt;https://t.co/O5rAQTSksE&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/BayesianStatistics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#BayesianStatistics&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/VqIUcSLQja&#34;&gt;pic.twitter.com/VqIUcSLQja&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1488446021638184965?ref_src=twsrc%5Etfw&#34;&gt;February 1, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+  </channel>
+</rss>

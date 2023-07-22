@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>music | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/music/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <description>music</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Mon, 28 Apr 2014 12:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>music</title>
+      <link>https://oliviergimenez.github.io/tags/music/</link>
+    </image>
+    
+    <item>
+      <title>Post grant submission relaxing</title>
+      <link>https://oliviergimenez.github.io/blog/relax_concert/</link>
+      <pubDate>Mon, 28 Apr 2014 12:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/relax_concert/</guid>
+      <description>&lt;p&gt;Relaxing after finishing up writing a big grant proposal. Tedeschi and
+Truck concert at the mytic Olympia Paris with Jonny Lang as the opening act.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Eva4h0MVss8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

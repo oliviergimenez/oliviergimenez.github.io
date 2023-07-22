@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dataviz | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/dataviz/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
+    <description>dataviz</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Mon, 23 May 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>dataviz</title>
+      <link>https://oliviergimenez.github.io/tags/dataviz/</link>
+    </image>
+    
+    <item>
+      <title>My quick introduction to data visualisation with R</title>
+      <link>https://oliviergimenez.github.io/blog/2022-05-23-my-quick-introduction-to-data-visualisation-with-r/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/2022-05-23-my-quick-introduction-to-data-visualisation-with-r/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🔧🚧 I have updated my quick introduction to data visualisation w/ R 📦 ggplot2 🥳&lt;br&gt;&lt;br&gt;In case it&amp;#39;s useful 😉▶️ &lt;a href=&#34;https://t.co/IWNesVjwqq&#34;&gt;https://t.co/IWNesVjwqq&lt;/a&gt; ◀️&lt;br&gt;&lt;br&gt;w/ practicals &lt;a href=&#34;https://t.co/YYkykGeWf1&#34;&gt;https://t.co/YYkykGeWf1&lt;/a&gt; &amp;amp; solutions &lt;a href=&#34;https://t.co/NCQYsw8QCg&#34;&gt;https://t.co/NCQYsw8QCg&lt;/a&gt; &lt;br&gt;&lt;br&gt;Cartoons &lt;a href=&#34;https://twitter.com/allison_horst?ref_src=twsrc%5Etfw&#34;&gt;@allison_horst&lt;/a&gt; 💜&lt;a href=&#34;https://twitter.com/hashtag/ggplot?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ggplot&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/dataviz?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#dataviz&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/RStats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RStats&lt;/a&gt; &lt;a href=&#34;https://t.co/RlXFT9F0Tw&#34;&gt;pic.twitter.com/RlXFT9F0Tw&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1528752864222380036?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2022&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+  </channel>
+</rss>

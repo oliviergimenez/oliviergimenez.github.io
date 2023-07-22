@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ordinary differential equations | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/ordinary-differential-equations/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/ordinary-differential-equations/index.xml" rel="self" type="application/rss+xml" />
+    <description>ordinary differential equations</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>ordinary differential equations</title>
+      <link>https://oliviergimenez.github.io/tags/ordinary-differential-equations/</link>
+    </image>
+    
+    <item>
+      <title>Tutorial on fitting a system of Ordinary Differential Equations to time-series data using OpenBUGS</title>
+      <link>https://oliviergimenez.github.io/blog/fitodedata/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/fitodedata/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;fr&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Just wrote a short &lt;a href=&#34;https://twitter.com/hashtag/tutorial?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tutorial&lt;/a&gt; on fitting a system of Ordinary Differential Equations to time-series data using &lt;a href=&#34;https://twitter.com/hashtag/OpenBUGS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#OpenBUGS&lt;/a&gt; in &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/7luj8XVgP6&#34;&gt;https://t.co/7luj8XVgP6&lt;/a&gt; - Data and model are from &lt;a href=&#34;https://t.co/X9CwX7dW83&#34;&gt;https://t.co/X9CwX7dW83&lt;/a&gt; in which &lt;a href=&#34;https://twitter.com/hashtag/zombie?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#zombie&lt;/a&gt; movies are used for illustration &lt;a href=&#34;https://twitter.com/hashtag/shaunofthedead?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#shaunofthedead&lt;/a&gt; &lt;a href=&#34;https://t.co/MHmiGhH7Ri&#34;&gt;pic.twitter.com/MHmiGhH7Ri&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1126568687396433920?ref_src=twsrc%5Etfw&#34;&gt;9 mai 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

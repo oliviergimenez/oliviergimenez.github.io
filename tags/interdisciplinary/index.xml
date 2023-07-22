@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>interdisciplinary | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/interdisciplinary/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/interdisciplinary/index.xml" rel="self" type="application/rss+xml" />
+    <description>interdisciplinary</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Sat, 12 Aug 2017 00:01:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>interdisciplinary</title>
+      <link>https://oliviergimenez.github.io/tags/interdisciplinary/</link>
+    </image>
+    
+    <item>
+      <title>Human-dolphin interactions</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/interact/</link>
+      <pubDate>Sat, 12 Aug 2017 00:01:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/interact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
