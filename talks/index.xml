@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/talks/</link>
       <atom:link href="https://oliviergimenez.github.io/talks/index.xml" rel="self" type="application/rss+xml" />
     <description>Talks and workshops</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Sat, 22 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Mon, 11 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Talks and workshops</title>
@@ -15,9 +15,18 @@
     <item>
       <title>Talks</title>
       <link>https://oliviergimenez.github.io/talks/talk/</link>
-      <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/talk/</guid>
       <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Loutre, Lez, connectivité écologique et médiation scientifique. December 2023. Talk at a meeting between Montpellier city/metropolis and our lab. You can download the slides 
+&lt;a href=&#34;https://figshare.com/articles/presentation/Loutre_Lez_connectivit_cologique_et_m_diation_scientifique_/24781776/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and video recording 
+&lt;a href=&#34;https://figshare.com/articles/presentation/Loutre_Lez_connectivit_cologique_et_m_diation_scientifique_/24781776/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;there&lt;/a&gt; in French.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tour d&amp;rsquo;horizon des modèles et de leurs applications. November 2023. Talk a conference co-organised by Cerema, OFB, and centre de ressources TVB et ITTECOP. You can download the slides 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.24633762.v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; in French.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Statistical ecology, hidden Markov models and the management of large carnivores in Europe. June 28, 2022. Plenary talk for the 
 &lt;a href=&#34;https://www.isec2022.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ISEC2022 conference&lt;/a&gt;. You can download the 

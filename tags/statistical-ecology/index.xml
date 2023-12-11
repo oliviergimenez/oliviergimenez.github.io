@@ -5,12 +5,30 @@
     <link>https://oliviergimenez.github.io/tags/statistical-ecology/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/statistical-ecology/index.xml" rel="self" type="application/rss+xml" />
     <description>statistical-ecology</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Tue, 16 May 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2023</copyright><lastBuildDate>Sat, 09 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>statistical-ecology</title>
       <link>https://oliviergimenez.github.io/tags/statistical-ecology/</link>
     </image>
+    
+    <item>
+      <title>Update on our Otter projects</title>
+      <link>https://oliviergimenez.github.io/blog/updateotterconnect/</link>
+      <pubDate>Sat, 09 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/updateotterconnect/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;fr&#34; dir=&#34;ltr&#34;&gt;Un point d&amp;#39;étape sur nos projets sur la loutre d&amp;#39;Europe. J&amp;#39;y parle de connectivité, trame turquoise, pièges photos, ADN env, cacas, représentations des usagers et médiation scientifique. Et de caca, j&amp;#39;ai déjà dit caca? 🦦💩🧬📸&lt;br&gt;&lt;br&gt;Photos : Yann Raulet&lt;a href=&#34;https://t.co/5CakMhkggi&#34;&gt;https://t.co/5CakMhkggi&lt;/a&gt; &lt;a href=&#34;https://t.co/pkhaVQwPOV&#34;&gt;pic.twitter.com/pkhaVQwPOV&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1733494233686835543?ref_src=twsrc%5Etfw&#34;&gt;December 9, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
+    
+    <item>
+      <title>Models and applications in ecology</title>
+      <link>https://oliviergimenez.github.io/blog/modelscerema/</link>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/modelscerema/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;fr&#34; dir=&#34;ltr&#34;&gt;Petit exposé sur les modèles et leurs applications en écologie à l&amp;#39;occasion d&amp;#39;un atelier d&amp;#39;échanges Modélisations « Biodiversité et Infrastructures Linéaires de Transport » organisé par &lt;a href=&#34;https://twitter.com/CeremaCom?ref_src=twsrc%5Etfw&#34;&gt;@CeremaCom&lt;/a&gt; &lt;a href=&#34;https://twitter.com/OFBiodiversite?ref_src=twsrc%5Etfw&#34;&gt;@OFBiodiversite&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CentreTVB?ref_src=twsrc%5Etfw&#34;&gt;@CentreTVB&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Ecologie_Gouv?ref_src=twsrc%5Etfw&#34;&gt;@Ecologie_Gouv&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ITTECOP?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ITTECOP&lt;/a&gt; &lt;a href=&#34;https://t.co/tLOWezfc69&#34;&gt;https://t.co/tLOWezfc69&lt;/a&gt; &lt;a href=&#34;https://t.co/QjlOelYSMU&#34;&gt;pic.twitter.com/QjlOelYSMU&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1729475416761499945?ref_src=twsrc%5Etfw&#34;&gt;November 28, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt; 
+</description>
+    </item>
     
     <item>
       <title>Workshop on estimating occupancy in R</title>
