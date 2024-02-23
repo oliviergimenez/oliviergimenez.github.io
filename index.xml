@@ -5,12 +5,60 @@
     <link>https://oliviergimenez.github.io/</link>
       <atom:link href="https://oliviergimenez.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Olivier Gimenez</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Mon, 11 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Fri, 23 Feb 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Olivier Gimenez</title>
       <link>https://oliviergimenez.github.io/</link>
     </image>
+    
+    <item>
+      <title>Current lab members</title>
+      <link>https://oliviergimenez.github.io/people/current/</link>
+      <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/people/current/</guid>
+      <description>&lt;br&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/adelaide.jpeg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;Célian Monchy&lt;/strong&gt; (PhD 2022-2025) is working on the propagation of uncertainties related to the automatic processing of sensor data in different models in ecology. He is co-supervised by 
+&lt;a href=&#34;https://marieetienne.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marie-Pierre Etienne&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/lea.jpg&#34; width=&#34;130&#34;&gt; &lt;strong&gt;Léa Pautrel&lt;/strong&gt; (PhD 2022-2025) is investigating the use of deep learning coupled with continuous-time models to exploit sensor data, in particular cam traps. She is co-supervised by 
+&lt;a href=&#34;https://marieetienne.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marie-Pierre Etienne&lt;/a&gt; and Sylvain Moulherat from 
+&lt;a href=&#34;https://www.terroiko.fr/fr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TerrOïko&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/maelis.jpeg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Maëlis Kervellec&lt;/strong&gt; (PhD 2021-2024) is developing statistical models for the analysis of camera trap data with applications in large carnivores population ecology. This is joint work with colleagues from the 
+&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/marwan.jpg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Marwan Naciri&lt;/strong&gt; (PhD 2021-2024) is studying the demography of polar bears. He is co-supervised by Sarah Cubaynes and Jon Aars.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/oksana.png&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Oksana Grente&lt;/strong&gt; (PhD 2018-2021, post-doc 2023-2024) works at evaluating the impact of lethal control on the French wolf population, with a special interest in social structure and livestock depredation. This is joint work with Sarah Bauduin, Christophe Duchamp and Nolwenn Hoguet-Drouet from 
+&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/simon.jpeg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Simon Lacombe&lt;/strong&gt; (PhD 2023-2026) is a quantitative ecologists who&amp;rsquo;s determining the drivers of European otter recolonization in France using non-invasive sampling and statistical ecology. He is co-supervised by Sébastien Devillard.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/javi.png&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Javi Fernández-López&lt;/strong&gt; (post-doc 2022-2023) is interested in conservation biology and phylogeography. He is modelling the distribution of mammals in Europe by integrating various sources of data. Check out his website 
+&lt;a href=&#34;https://allthiswasfield.blogspot.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://allthiswasfield.blogspot.com&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/monia.jpg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Mónia Nakamura Mercier Real&lt;/strong&gt; (PhD 2019-2024) is investigating the impacts of anthropogenic factors on large carnivores persistence in human-dominated landscapes. She uses wolf in Spain and Portugal as a model species to address how different humanization levels can influence habitat selection and land use, and ultimately affect its demography, status and viability. The thesis is co-supervised with 
+&lt;a href=&#34;https://scholar.google.es/citations?user=mWcf6MsAAAAJ&amp;amp;hl=es&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;José Vicente López-Bao&lt;/a&gt; and 
+&lt;a href=&#34;https://scholar.google.com/citations?user=2ulB-8QAAAAJ&amp;amp;hl=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pedro Monterroso&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/bea.jpg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Béatrice Chataigner&lt;/strong&gt; (EPHE diploma 2020-2022) is working on locally-based monitoring programs in Kenya. Her research project aims at exploring the performances of current ecological monitoring program of Kenyan conservanciesin addressing their needs in terms of adaptive management at local level as well as ecosystem level. Béatrice works for IUCN in the 
+&lt;a href=&#34;https://papaco.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Program on African Protected Areas and Conservation&lt;/a&gt;. Her work is jointly supervised by 
+&lt;a href=&#34;https://institute.sandiegozoo.org/staff/nicholas-pilfold-phd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nicholas Pilfold&lt;/a&gt; and 
+&lt;a href=&#34;https://www.cefe.cnrs.fr/fr/actus/44-french/recherche/bc/bev/291-aurelien-besnard&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Aurélien Besnard&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/patricia.jpg&#34; alt=&#34;&#34;&gt; &lt;strong&gt;Patrícia Rodrigues&lt;/strong&gt; (post-doc 2021-2023) is interested in the social-ecological dynamics underpinning environmental problems in Africa. Her current project aims to characterize landscapes within Africa’s Great Green Wall in terms of their social-ecological properties and restoration initiatives. More 
+&lt;a href=&#34;https://rodriguespatri.wixsite.com/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Former lab members</title>

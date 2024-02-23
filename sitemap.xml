@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://oliviergimenez.github.io/people/current/</loc>
+    <lastmod>2024-02-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://oliviergimenez.github.io/people/alumni/</loc>
     <lastmod>2023-07-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -18,7 +21,10 @@
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://oliviergimenez.github.io/</loc>
-    <lastmod>2023-12-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://oliviergimenez.github.io/people/</loc>
+    <lastmod>2024-02-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://oliviergimenez.github.io/talks/</loc>
     <lastmod>2023-12-11T00:00:00+00:00</lastmod>
@@ -61,9 +67,6 @@
   </url><url>
     <loc>https://oliviergimenez.github.io/publication/</loc>
     <lastmod>2023-10-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://oliviergimenez.github.io/people/</loc>
-    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://oliviergimenez.github.io/tags/bayes/</loc>
     <lastmod>2023-07-10T00:00:00+00:00</lastmod>
