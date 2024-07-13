@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Europe | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/europe/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/europe/index.xml" rel="self" type="application/rss+xml" />
+    <description>Europe</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>Europe</title>
+      <link>https://oliviergimenez.github.io/tags/europe/</link>
+    </image>
+    
+    <item>
+      <title>BIG PICTURE</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/bigpicture/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/bigpicture/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

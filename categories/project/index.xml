@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/categories/project/</link>
       <atom:link href="https://oliviergimenez.github.io/categories/project/index.xml" rel="self" type="application/rss+xml" />
     <description>project</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Wed, 03 May 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Fri, 05 Jul 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>project</title>
@@ -13,9 +13,47 @@
     </image>
     
     <item>
+      <title>PEP-BIOccIA</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/diat/</link>
+      <pubDate>Fri, 05 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/diat/</guid>
+      <description>&lt;p&gt;&lt;em&gt;En bref :&lt;/em&gt; Le projet BIOccIA vise à utiliser l&amp;rsquo;intelligence artificielle pour cartographier les milieux naturels et prédire la présence d&amp;rsquo;espèces (faune/flore). Les données seront accessibles et utilisées librement pour suivre les politiques publiques en faveur de la biodiversité et s’adresseront à plusieurs types d’acteurs (aménageurs, chercheurs, acteurs institutionnels, etc.). L’objectif est de planifier la préservation de la biodiversité d’Occitanie à moyen et long terme, en lien avec les échelles européenne, nationale et régionale.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Contexte :&lt;/em&gt; Porté par La Région Occitanie / Pyrénées-Méditerranée et baptisé PEP-BIOccIA, notre projet fait partie des huit projets lauréats qui ont été retenus dans le cadre de l’appel à projets &amp;ldquo;Démonstrateurs d’IA frugale pour la transition écologique des territoires&amp;rdquo;, piloté par l’Ecolab - Greentech Innovation, le Ministère Écologie Territoires et la Banque des Territoires.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Objectif :&lt;/em&gt; L&amp;rsquo;objectif de PEP-BIOccIA est de cartographier les milieux naturels et prédire la présence d&amp;rsquo;espèces sur l’ensemble du territoire de l’Occitanie, pour mieux planifier la préservation de la biodiversité à moyen et long terme.&lt;/p&gt;
+&lt;p&gt;Outre le CEFE, il associe OPenIG (plateforme de l’information géographique en Occitanie), TerrOïko et Data Terra (infrastructure de recherche dédiée aux données d’observation de la terre).&lt;/p&gt;
+&lt;p&gt;Le projet part d’un constat : les données sur les milieux naturels et sur la répartition des espèces à l’échelle de la région sont hétérogènes, incomplètes, insuffisamment mises à jour et souvent inadaptées aux besoins pour la planification et la mise en œuvre des politiques publiques de protection de la biodiversité.&lt;/p&gt;
+&lt;p&gt;Les travaux qui vont être menés visent donc à s’appuyer sur l&amp;rsquo;IA pour produire :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;la carte régionale des milieux naturels, qui sera actualisée chaque année, notamment grâce à l’analyse d’images satellites ;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;les cartes de présence probable des espèces dans les différents milieux naturels de la région (y compris dans les &amp;ldquo;zones blanches&amp;rdquo; où aucune donnée d’observation de terrain n’est disponible), aujourd’hui mais aussi à l’horizon 2050 (en prenant en compte les effets attendus du changement climatique sur les milieux naturels).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PEPR SOLU-BIOD</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/solubiod/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/solubiod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BIG PICTURE</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/bigpicture/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/bigpicture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>DISCAR</title>
       <link>https://oliviergimenez.github.io/my-project/external-project/discar/</link>
-      <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/my-project/external-project/discar/</guid>
       <description>&lt;p&gt;&lt;em&gt;Context&lt;/em&gt;. Conservation and the sustainable use of biodiversity and ecosystem services largely depend on the successful management of ecological populations, which in turn depend on our knowledge and our ability to understand and predict how the structure and dynamics of ecological populations respond to changes in their environments.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Rationale and aim&lt;/em&gt;. Despite its importance, the quantification of the effects of anthropic pressures on biodiversity is difficult and rarely undertaken because of the lack of species-specific ecological data and/or human pressures and activities, and the complexity and lack of transfer of analytical methods needed to evaluate these long-term consequences. The DISCAR (DIS = disturbance, CAR = carnivores) project aims at providing an operational framework with analytical tools for assessing the impacts or population consequences of human pressures, and showcasing it with case studies in applied conservation.&lt;/p&gt;
@@ -26,6 +64,7 @@
 &lt;ul&gt;
 &lt;li&gt;Olivier Gimenez – CNRS (France)&lt;/li&gt;
 &lt;li&gt;Sandrine Ruette – OFB (France)&lt;/li&gt;
+&lt;li&gt;Cassie Speakman – CESAB/FRB (Australia)&lt;/li&gt;
 &lt;li&gt;Courtney Marneweck – Giraffe Conservation Foundation (South Africa)&lt;/li&gt;
 &lt;li&gt;Patrick Giraudoux – Université Bourgogne Franche-Comté (France)&lt;/li&gt;
 &lt;li&gt;Isabel Smallegange - Newcastle University (UK)&lt;/li&gt;
@@ -35,10 +74,16 @@
 &lt;li&gt;John Fryxell – University of Guelph (Canada)&lt;/li&gt;
 &lt;li&gt;Elizabeth McHuron – University of Washington (USA)&lt;/li&gt;
 &lt;li&gt;Rob Salguero-Gomez – University of Oxford (UK)&lt;/li&gt;
+&lt;li&gt;Katrinas Davis – University of Oxford (UK)&lt;/li&gt;
 &lt;li&gt;Marie-Lazarine Poulle – Université Reims Champagne Ardenne (France)&lt;/li&gt;
+&lt;li&gt;Christophe Duchamp – OFB (France)&lt;/li&gt;
+&lt;li&gt;Kévan Rastello – University of Victoria (Canada)&lt;/li&gt;
+&lt;li&gt;Sarah Bull – University of Oxford (UK)&lt;/li&gt;
+&lt;li&gt;Simon Lacombe – University of Montpellier (France)&lt;/li&gt;
+&lt;li&gt;Maëlis Kervellec – University of Montpellier (France)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Funding&lt;/em&gt;. This project is funded by the French Foundation for Biodiversity Research (FRB) through 
-&lt;a href=&#34;https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cesab&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/discar/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cesab&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

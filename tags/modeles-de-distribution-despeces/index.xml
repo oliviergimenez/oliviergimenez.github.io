@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>modèles de distribution d&#39;espèces | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/modeles-de-distribution-despeces/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/modeles-de-distribution-despeces/index.xml" rel="self" type="application/rss+xml" />
+    <description>modèles de distribution d&#39;espèces</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Fri, 05 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>modèles de distribution d&#39;espèces</title>
+      <link>https://oliviergimenez.github.io/tags/modeles-de-distribution-despeces/</link>
+    </image>
+    
+    <item>
+      <title>PEP-BIOccIA</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/diat/</link>
+      <pubDate>Fri, 05 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/diat/</guid>
+      <description>&lt;p&gt;&lt;em&gt;En bref :&lt;/em&gt; Le projet BIOccIA vise à utiliser l&amp;rsquo;intelligence artificielle pour cartographier les milieux naturels et prédire la présence d&amp;rsquo;espèces (faune/flore). Les données seront accessibles et utilisées librement pour suivre les politiques publiques en faveur de la biodiversité et s’adresseront à plusieurs types d’acteurs (aménageurs, chercheurs, acteurs institutionnels, etc.). L’objectif est de planifier la préservation de la biodiversité d’Occitanie à moyen et long terme, en lien avec les échelles européenne, nationale et régionale.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Contexte :&lt;/em&gt; Porté par La Région Occitanie / Pyrénées-Méditerranée et baptisé PEP-BIOccIA, notre projet fait partie des huit projets lauréats qui ont été retenus dans le cadre de l’appel à projets &amp;ldquo;Démonstrateurs d’IA frugale pour la transition écologique des territoires&amp;rdquo;, piloté par l’Ecolab - Greentech Innovation, le Ministère Écologie Territoires et la Banque des Territoires.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Objectif :&lt;/em&gt; L&amp;rsquo;objectif de PEP-BIOccIA est de cartographier les milieux naturels et prédire la présence d&amp;rsquo;espèces sur l’ensemble du territoire de l’Occitanie, pour mieux planifier la préservation de la biodiversité à moyen et long terme.&lt;/p&gt;
+&lt;p&gt;Outre le CEFE, il associe OPenIG (plateforme de l’information géographique en Occitanie), TerrOïko et Data Terra (infrastructure de recherche dédiée aux données d’observation de la terre).&lt;/p&gt;
+&lt;p&gt;Le projet part d’un constat : les données sur les milieux naturels et sur la répartition des espèces à l’échelle de la région sont hétérogènes, incomplètes, insuffisamment mises à jour et souvent inadaptées aux besoins pour la planification et la mise en œuvre des politiques publiques de protection de la biodiversité.&lt;/p&gt;
+&lt;p&gt;Les travaux qui vont être menés visent donc à s’appuyer sur l&amp;rsquo;IA pour produire :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;la carte régionale des milieux naturels, qui sera actualisée chaque année, notamment grâce à l’analyse d’images satellites ;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;les cartes de présence probable des espèces dans les différents milieux naturels de la région (y compris dans les &amp;ldquo;zones blanches&amp;rdquo; où aucune donnée d’observation de terrain n’est disponible), aujourd’hui mais aussi à l’horizon 2050 (en prenant en compte les effets attendus du changement climatique sur les milieux naturels).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

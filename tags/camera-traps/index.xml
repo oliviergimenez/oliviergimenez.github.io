@@ -5,12 +5,20 @@
     <link>https://oliviergimenez.github.io/tags/camera-traps/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/camera-traps/index.xml" rel="self" type="application/rss+xml" />
     <description>camera traps</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Tue, 30 May 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>camera traps</title>
       <link>https://oliviergimenez.github.io/tags/camera-traps/</link>
     </image>
+    
+    <item>
+      <title>BIG PICTURE</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/bigpicture/</link>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/bigpicture/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>New paper alert</title>
