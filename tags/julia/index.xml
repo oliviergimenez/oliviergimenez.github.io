@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>julia | Olivier Gimenez</title>
+    <link>https://oliviergimenez.github.io/tags/julia/</link>
+      <atom:link href="https://oliviergimenez.github.io/tags/julia/index.xml" rel="self" type="application/rss+xml" />
+    <description>julia</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Mon, 30 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
+      <title>julia</title>
+      <link>https://oliviergimenez.github.io/tags/julia/</link>
+    </image>
+    
+    <item>
+      <title>Learning Julia</title>
+      <link>https://oliviergimenez.github.io/blog/julia/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/julia/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I’m learning &lt;a href=&#34;https://twitter.com/JuliaLanguage?ref_src=twsrc%5Etfw&#34;&gt;@JuliaLanguage&lt;/a&gt; and oh my it is a mighty tool for all scientists! I&amp;#39;m dealing w/ diff eqns to fit mechanistic-statistical models to noisy data. I&amp;#39;ve gathered examples from others incl logistic, Lotka-Volterra &amp;amp; reaction-diffusion (fisher-KPP).&lt;a href=&#34;https://t.co/vcGBzGjuwF&#34;&gt;https://t.co/vcGBzGjuwF&lt;/a&gt; &lt;a href=&#34;https://t.co/Mb894VL3FW&#34;&gt;pic.twitter.com/Mb894VL3FW&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1741098482771870173?ref_src=twsrc%5Etfw&#34;&gt;December 30, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

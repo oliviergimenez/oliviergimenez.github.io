@@ -5,12 +5,20 @@
     <link>https://oliviergimenez.github.io/tags/hidden-markov-models/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/hidden-markov-models/index.xml" rel="self" type="application/rss+xml" />
     <description>hidden-markov-models</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Tue, 28 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Thu, 27 Jun 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>hidden-markov-models</title>
       <link>https://oliviergimenez.github.io/tags/hidden-markov-models/</link>
     </image>
+    
+    <item>
+      <title>New paper!</title>
+      <link>https://oliviergimenez.github.io/blog/ninapaper/</link>
+      <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/ninapaper/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🐺In this article, Santostasi et al discuss demographic projections from an individual-based model inform management to mitigate wolf–dog introgressive &lt;a href=&#34;https://twitter.com/hashtag/hybridization?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#hybridization&lt;/a&gt;.🐺🐶 Read more at &lt;a href=&#34;https://t.co/1G52Rb8rXl&#34;&gt;https://t.co/1G52Rb8rXl&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/conservation?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#conservation&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/science?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#science&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/wolf?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#wolf&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/dog?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#dog&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/wordoftheweek?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#wordoftheweek&lt;/a&gt; &lt;a href=&#34;https://t.co/OhkxF3i1XW&#34;&gt;pic.twitter.com/OhkxF3i1XW&lt;/a&gt;&lt;/p&gt;&amp;mdash; Conservation Biology (@ConBiology) &lt;a href=&#34;https://twitter.com/ConBiology/status/1806296419399000558?ref_src=twsrc%5Etfw&#34;&gt;June 27, 2024&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
     
     <item>
       <title>My plenary talk at ISEC2022 on Statistical ecology, hidden Markov models and large carnivores.</title>

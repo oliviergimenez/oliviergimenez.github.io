@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hair team | Olivier Gimenez</title>
+    <title>hair team | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/hair-team/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/hair-team/index.xml" rel="self" type="application/rss+xml" />
-    <description>Hair team</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Tue, 25 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <description>hair team</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>Hair team</title>
+      <title>hair team</title>
       <link>https://oliviergimenez.github.io/tags/hair-team/</link>
     </image>
+    
+    <item>
+      <title>2023 retrospective</title>
+      <link>https://oliviergimenez.github.io/blog/retro2023/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/blog/retro2023/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Our team on human-animal interactions has had a fantastic 2023 year! Below is a thread w/ some highlights. &lt;br&gt;&lt;br&gt;Follow us via &lt;a href=&#34;https://twitter.com/twitthair1?ref_src=twsrc%5Etfw&#34;&gt;@twitthair1&lt;/a&gt; and check out our work at &lt;a href=&#34;https://t.co/ewjuiCHJtm&#34;&gt;https://t.co/ewjuiCHJtm&lt;/a&gt;&lt;a href=&#34;https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw&#34;&gt;@cefemontpellier&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CNRSecologie?ref_src=twsrc%5Etfw&#34;&gt;@CNRSecologie&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw&#34;&gt;@CNRS_OccitaniE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/umontpellier?ref_src=twsrc%5Etfw&#34;&gt;@umontpellier&lt;/a&gt; &lt;a href=&#34;https://twitter.com/EPHE_PSL?ref_src=twsrc%5Etfw&#34;&gt;@EPHE_PSL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ird_fr?ref_src=twsrc%5Etfw&#34;&gt;@ird_fr&lt;/a&gt; &lt;a href=&#34;https://t.co/07fi3Mnazt&#34;&gt;pic.twitter.com/07fi3Mnazt&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) &lt;a href=&#34;https://twitter.com/oaggimenez/status/1741482034223034710?ref_src=twsrc%5Etfw&#34;&gt;December 31, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
     
     <item>
       <title>Team lunch!</title>
