@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/</link>
       <atom:link href="https://oliviergimenez.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Olivier Gimenez</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Tue, 08 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Mon, 23 Dec 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Olivier Gimenez</title>
@@ -256,38 +256,62 @@ biodiversity patterns at large scale and worked in conservation biogeography
     <item>
       <title>Papers</title>
       <link>https://oliviergimenez.github.io/publication/papers/</link>
-      <pubDate>Tue, 08 Oct 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/publication/papers/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Preprints&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Gimenez O. (2024) 
-&lt;a href=&#34;https://arxiv.org/abs/2409.10017&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spatial occupancy models for data collected on stream networks&lt;/a&gt; arXiv preprint.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Monchy C., M.-P. Etienne, O. Gimenez (2024) 
-&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2024.05.07.592917v1.full&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Using informative priors to account for identifiability issues in occupancy models with identification errors&lt;/a&gt; bioRxiv preprint&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Moulherat S., L. Pautrel, G. Debat, M.-P. Etienne, L. Gendron, N. Hautière, J.-P. Tarel, G. Testud, O. Gimenez (2023). 
-&lt;a href=&#34;https://doi.org/10.3897/arphapreprints.e110040&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Biodiversity Monitoring with Intelligent Sensors: An Integrated Pipeline for Mitigating Animal-Vehicle Collisions&lt;/a&gt;. Arpha Preprint.&lt;/p&gt;
-&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Bauduin S., Germain E., Zimmermann F., Idelberger S., Herdtfelder M., Heurich M., Kramer-Schadt S., Duchamp C., Drouet-Hoguet N., Morand A., Blanc L., Charbonnel A., Gimenez O. (2022). 
 &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2021.10.22.465393v2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eurasian lynx populations in Western Europe: What prospects for the next 50 years?&lt;/a&gt; bioRxiv preprint.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Desprez M., V. Miele, O. Gimenez (2023). 
-&lt;a href=&#34;https://arxiv.org/abs/2305.10472&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nine tips for ecologists using machine learning.&lt;/a&gt; arXiv preprint.&lt;/p&gt;
+&lt;a href=&#34;https://arxiv.org/abs/2305.10472&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nine tips for ecologists using machine learning&lt;/a&gt; arXiv preprint.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gimenez O., A. Royle, M. Kéry, C. Nater (2024). 
+&lt;a href=&#34;https://hal.science/hal-04731240/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ten quick tips to get you started with Bayesian statistics&lt;/a&gt; submitted to &lt;em&gt;Plos Computational Biology&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gimenez O. and colleagues (2024). 
+&lt;a href=&#34;https://hal.science/hal-04725018/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Étude du retour de la Loutre d&amp;rsquo;Europe Lutra lutra (Linnaeus, 1758) sur le fleuve Lez (fleuve côtier, Hérault, France) grâce aux méthodes non-invasives de suivi des populations et une collaboration étroite entre structures académiques et territoriales&lt;/a&gt; submitted to &lt;em&gt;Naturae&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Louvrier J., M. Fidino, J.V. Stuardo, O. Gimenez (2024). 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2024.10.29.620848v1.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How reliably can species co-occurrence be inferred from occupancy models?&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Grente O., T. Opitz, C. Duchamp, N. Drouet-Hoguet, S. Chamaillé-Jammes, O. Gimenez (2024). 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2024.07.18.604079v1.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spatio-temporal dynamics of attacks around deaths of wolves: A statistical assessment of lethal control efficiency in France&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Published&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
+&lt;p&gt;Gimenez O. (2024) 
+&lt;a href=&#34;https://onlinelibrary.wiley.com/doi/full/10.1002/aqc.70013&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spatial occupancy models for data collected on stream networks&lt;/a&gt; &lt;em&gt;Aquatic Conservation: Marine and Freshwater Ecosystems&lt;/em&gt; 34: e70013.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Monchy C., M.-P. Etienne, O. Gimenez (2024) 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2024.05.07.592917v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Using informative priors to account for identifiability issues in occupancy models with identification errors&lt;/a&gt; &lt;em&gt;Peer Community Journal&lt;/em&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Carpentier C.A.E., M. Heurich, O. Gimenez, O. Devineau, J.D.C. Linnell (2024) 
+&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S2351989424005225&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cumulative mortality effects on roe deer population dynamics in the boreal forest: Searching for pathways of population persistence&lt;/a&gt; &lt;em&gt;Global Ecology and Conservation&lt;/em&gt; 56: e03318.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fernández-López J. P. Acevedo, S. Illanas, J.A. Blanco-Aguiar, J. Vicente, O. Gimenez (2024). 
+&lt;a href=&#34;https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14458&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Game target-group: Implementing inhomogeneous Poisson point process to estimate animal abundance from harvest data&lt;/a&gt; &lt;em&gt;Methods in Ecology and Evolution&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Moulherat S., L. Pautrel, G. Debat, M.-P. Etienne, L. Gendron, N. Hautière, J.-P. Tarel, G. Testud, O. Gimenez (2024). 
+&lt;a href=&#34;https://natureconservation.pensoft.net/article/108950&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Biodiversity Monitoring with Intelligent Sensors: An Integrated Pipeline for Mitigating Animal-Vehicle Collisions&lt;/a&gt;. &lt;em&gt;Nature Conservation&lt;/em&gt; 57:103-124.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;Grente O., S. Bauduin, N. L. Santostasi, S. Chamaillé-Jammes, C. Duchamp, N. Drouet-Hoguet, O. Gimenez (2024). 
-&lt;a href=&#34;https://nsojournals.onlinelibrary.wiley.com/doi/10.1002/wlb3.01227&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evaluating the effects of wolf culling on livestock predation when considering wolf population dynamics in an individual-based model.&lt;/a&gt; &lt;em&gt;Wildlife Biology&lt;/em&gt; e01227.&lt;/p&gt;
+&lt;a href=&#34;https://nsojournals.onlinelibrary.wiley.com/doi/10.1002/wlb3.01227&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evaluating the effects of wolf culling on livestock predation when considering wolf population dynamics in an individual-based model&lt;/a&gt; &lt;em&gt;Wildlife Biology&lt;/em&gt; e01227.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Morin A., O. Gimenez, L. L. Sousa, J. Seymour-Smith, H. O&amp;rsquo;Donnell, M.-L. Delignette-Muller, D. Madhlamoto, A. J. Loveridge, M. Valeix (2024). 
@@ -296,11 +320,11 @@ biodiversity patterns at large scale and worked in conservation biogeography
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Lauret V., O. Gimenez, H. Labach, N. Lescureux (2024). 
-&lt;a href=&#34;https://doi.org/10.1016/j.marpol.2024.106383&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Smokescreen or groundwork? The paradox of ecological monitoring in the management of Marine Protected Areas.&lt;/a&gt; &lt;em&gt;Marine Policy&lt;/em&gt; 170:106383.&lt;/p&gt;
+&lt;a href=&#34;https://doi.org/10.1016/j.marpol.2024.106383&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Smokescreen or groundwork? The paradox of ecological monitoring in the management of Marine Protected Areas&lt;/a&gt; &lt;em&gt;Marine Policy&lt;/em&gt; 170:106383.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Kervellec K., T. Couturier, S. Bauduin, D. Chenesseau, P. Defos du Rau, N. Drouet-Hoguet, C. Duchamp, J. Steinmetz, J.-M. Vandel, O. Gimenez (2024) 
-&lt;a href=&#34;https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14418&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bringing circuit theory into spatial occupancy models to assess landscape connectivity&lt;/a&gt; &lt;em&gt;Methods in Ecology and Evolution&lt;/em&gt; in press.&lt;/p&gt;
+&lt;a href=&#34;https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14418&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bringing circuit theory into spatial occupancy models to assess landscape connectivity&lt;/a&gt; &lt;em&gt;Methods in Ecology and Evolution&lt;/em&gt; 15: 2141-2152.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Santostasi N.L., S. Bauduin, O. Grente, O. Gimenez, P. Ciucci (2024). 
