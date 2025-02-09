@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/talks/</link>
       <atom:link href="https://oliviergimenez.github.io/talks/index.xml" rel="self" type="application/rss+xml" />
     <description>Talks and workshops</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Sat, 13 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Talks and workshops</title>
@@ -15,9 +15,14 @@
     <item>
       <title>Talks</title>
       <link>https://oliviergimenez.github.io/talks/talk/</link>
-      <pubDate>Sat, 13 Jul 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/talk/</guid>
       <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Conférence grand public au Gazette Café organisée par l&amp;rsquo;association &amp;ldquo;Addict aux Sciences&amp;rdquo;&amp;quot; : 
+&lt;a href=&#34;https://oreme.org/evenements/la-loutre-du-lez/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;« Au fil de l’eau du Lez : à la découverte de la loutre d’Europe sur la métropole de Montpellier »&lt;/a&gt;. 21 janvier 2025. La présentation est disponible 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.26297149.v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Conférence grand public dans le cadre des 8 jours de la biodiversité organisés par l&amp;rsquo;inter-assos ARBORESCENCE : « Au fil de l’eau du Lez : à la découverte de la loutre d’Europe sur la métropole de Montpellier ». 29 février 2024. La présentation est disponible 
 &lt;a href=&#34;https://doi.org/10.6084/m9.figshare.26297149.v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
@@ -188,9 +193,10 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
     <item>
       <title>Workshops</title>
       <link>https://oliviergimenez.github.io/talks/workshop/</link>
-      <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/workshop/</guid>
-      <description>&lt;p&gt;July 12-13, 2023. Workshop on Bayesian capture-recapture inference with hidden Markov models in R and Nimble for the 
+      <description>&lt;p&gt;March 20, 2025. 1-day workshop Introduction to Bayesian statistics with R and Nimble.&lt;/p&gt;
+&lt;p&gt;July 12-13, 2023. Workshop on Bayesian capture-recapture inference with hidden Markov models in R and Nimble for the 
 &lt;a href=&#34;http://vabar.es/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;València International Bayesian Analysis Summer School&lt;/a&gt;. Slides, worksheets and video recordings freely available from 
 &lt;a href=&#34;https://oliviergimenez.github.io/bayesian-hmm-cr-workshop-valencia/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;June 1-2, 2023. Quantitative methods for population dynamics: A two-day workshop with R. All material available from 

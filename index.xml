@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/</link>
       <atom:link href="https://oliviergimenez.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Olivier Gimenez</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2024</copyright><lastBuildDate>Mon, 23 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Olivier Gimenez</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Current lab members</title>
       <link>https://oliviergimenez.github.io/people/current/</link>
-      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/current/</guid>
       <description>&lt;br&gt;
 &lt;hr&gt; 
@@ -26,9 +26,9 @@
 &lt;a href=&#34;https://marieetienne.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marie-Pierre Etienne&lt;/a&gt; and Sylvain Moulherat from 
 &lt;a href=&#34;https://www.terroiko.fr/fr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TerrOïko&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt; 
-&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/maelis.jpeg&#34; alt=&#34;&#34;&gt;
-&lt;strong&gt;Maëlis Kervellec&lt;/strong&gt; (PhD 2021-2024) is developing statistical models for the analysis of camera trap data with applications in large carnivores population ecology. This is joint work with colleagues from the 
-&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/alix.jpg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Alix Cosquer&lt;/strong&gt; (post-doc 2025-2026) is an environmental psychologist. She works on a framework for assessing scientific outreach actions. This is joint work with Charlotte Francesiaz from the 
+&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt; and colleagues from the city and metropolis of Montpellier.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/oksana.png&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Oksana Grente&lt;/strong&gt; (PhD 2018-2021, post-doc 2023-2025) works at evaluating the impact of lethal control on the French wolf population, with a special interest in social structure and livestock depredation. This is joint work with Sarah Bauduin, Christophe Duchamp and Nolwenn Hoguet-Drouet from 
@@ -48,7 +48,7 @@
     <item>
       <title>Former lab members</title>
       <link>https://oliviergimenez.github.io/people/alumni/</link>
-      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/alumni/</guid>
       <description>&lt;br&gt;
 &lt;hr&gt;
@@ -56,6 +56,10 @@
 &lt;a href=&#34;https://oliviergimenez.github.io/MasterStudents.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/maelis.jpeg&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;Maëlis Kervellec&lt;/strong&gt; (PhD 2021-2024) developed statistical models for the analysis of camera trap data with applications in large carnivores population ecology. This was joint work with colleagues from the 
+&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;. Maëlis was co-supervised with Cyril Milleret.&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/javi.png&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Javi Fernández-López&lt;/strong&gt; (post-doc 2022-2023) is interested in conservation biology and phylogeography. He is modelling the distribution of mammals in Europe by integrating various sources of data. Check out his website 
 &lt;a href=&#34;https://allthiswasfield.blogspot.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://allthiswasfield.blogspot.com&lt;/a&gt;.&lt;/p&gt;
@@ -256,7 +260,7 @@ biodiversity patterns at large scale and worked in conservation biogeography
     <item>
       <title>Papers</title>
       <link>https://oliviergimenez.github.io/publication/papers/</link>
-      <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/publication/papers/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Preprints&lt;/strong&gt;&lt;/p&gt;
@@ -285,17 +289,30 @@ biodiversity patterns at large scale and worked in conservation biogeography
 &lt;p&gt;Grente O., T. Opitz, C. Duchamp, N. Drouet-Hoguet, S. Chamaillé-Jammes, O. Gimenez (2024). 
 &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2024.07.18.604079v1.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spatio-temporal dynamics of attacks around deaths of wolves: A statistical assessment of lethal control efficiency in France&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gimenez O. (2025). 
+&lt;a href=&#34;https://arxiv.org/abs/2501.01809&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Estimating invasive rodent abundance using removal data and hierarchical models&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Published&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Santostasi N.L., S. Bauduin, O. Grente, O. Gimenez, P. Ciucci (2025). 
+&lt;a href=&#34;https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/cobi.14312&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Simulating the efficacy of wolf–dog hybridization management with individual‐based modeling&lt;/a&gt; &lt;em&gt;Conservation Biology&lt;/em&gt; 39:e14312.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cosquer A., O. Gimenez, A. Grégoire, V. Girard, T. Noell, T. Wasella (2025). 
+&lt;a href=&#34;https://digitalcommons.lmu.edu/cate/vol17/iss2/8/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Ecoformative and Transformative Issues of Nature in the Schoolyard: An Exploration of the Relationship Between Everyday Experiences of Nature and Well-being at School&lt;/a&gt; &lt;em&gt;Cities and the Environment&lt;/em&gt; 17:8.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Gimenez O. (2024) 
 &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/full/10.1002/aqc.70013&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spatial occupancy models for data collected on stream networks&lt;/a&gt; &lt;em&gt;Aquatic Conservation: Marine and Freshwater Ecosystems&lt;/em&gt; 34: e70013.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Monchy C., M.-P. Etienne, O. Gimenez (2024) 
-&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2024.05.07.592917v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Using informative priors to account for identifiability issues in occupancy models with identification errors&lt;/a&gt; &lt;em&gt;Peer Community Journal&lt;/em&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://peercommunityjournal.org/articles/10.24072/pcjournal.511/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Using informative priors to account for identifiability issues in occupancy models with identification errors&lt;/a&gt; &lt;em&gt;Peer Community Journal&lt;/em&gt; Volume 5 (2025), article no. e8. doi: 10.24072/pcjournal.511. 
+&lt;a href=&#34;https://peercommunityjournal.org/articles/10.24072/pcjournal.511/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://peercommunityjournal.org/articles/10.24072/pcjournal.511/&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Carpentier C.A.E., M. Heurich, O. Gimenez, O. Devineau, J.D.C. Linnell (2024) 
@@ -308,7 +325,7 @@ biodiversity patterns at large scale and worked in conservation biogeography
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Fernández-López J. P. Acevedo, S. Illanas, J.A. Blanco-Aguiar, J. Vicente, O. Gimenez (2024). 
-&lt;a href=&#34;https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14458&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Game target-group: Implementing inhomogeneous Poisson point process to estimate animal abundance from harvest data&lt;/a&gt; &lt;em&gt;Methods in Ecology and Evolution&lt;/em&gt;&lt;/p&gt;
+&lt;a href=&#34;https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14458&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Game target-group: Implementing inhomogeneous Poisson point process to estimate animal abundance from harvest data&lt;/a&gt; &lt;em&gt;Methods in Ecology and Evolution&lt;/em&gt; 6: 170-182.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Moulherat S., L. Pautrel, G. Debat, M.-P. Etienne, L. Gendron, N. Hautière, J.-P. Tarel, G. Testud, O. Gimenez (2024). 
@@ -1140,9 +1157,14 @@ biodiversity patterns at large scale and worked in conservation biogeography
     <item>
       <title>Talks</title>
       <link>https://oliviergimenez.github.io/talks/talk/</link>
-      <pubDate>Sat, 13 Jul 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/talk/</guid>
       <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Conférence grand public au Gazette Café organisée par l&amp;rsquo;association &amp;ldquo;Addict aux Sciences&amp;rdquo;&amp;quot; : 
+&lt;a href=&#34;https://oreme.org/evenements/la-loutre-du-lez/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;« Au fil de l’eau du Lez : à la découverte de la loutre d’Europe sur la métropole de Montpellier »&lt;/a&gt;. 21 janvier 2025. La présentation est disponible 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.26297149.v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Conférence grand public dans le cadre des 8 jours de la biodiversité organisés par l&amp;rsquo;inter-assos ARBORESCENCE : « Au fil de l’eau du Lez : à la découverte de la loutre d’Europe sur la métropole de Montpellier ». 29 février 2024. La présentation est disponible 
 &lt;a href=&#34;https://doi.org/10.6084/m9.figshare.26297149.v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
@@ -1313,9 +1335,10 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
     <item>
       <title>Workshops</title>
       <link>https://oliviergimenez.github.io/talks/workshop/</link>
-      <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/workshop/</guid>
-      <description>&lt;p&gt;July 12-13, 2023. Workshop on Bayesian capture-recapture inference with hidden Markov models in R and Nimble for the 
+      <description>&lt;p&gt;March 20, 2025. 1-day workshop Introduction to Bayesian statistics with R and Nimble.&lt;/p&gt;
+&lt;p&gt;July 12-13, 2023. Workshop on Bayesian capture-recapture inference with hidden Markov models in R and Nimble for the 
 &lt;a href=&#34;http://vabar.es/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;València International Bayesian Analysis Summer School&lt;/a&gt;. Slides, worksheets and video recordings freely available from 
 &lt;a href=&#34;https://oliviergimenez.github.io/bayesian-hmm-cr-workshop-valencia/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;June 1-2, 2023. Quantitative methods for population dynamics: A two-day workshop with R. All material available from 
