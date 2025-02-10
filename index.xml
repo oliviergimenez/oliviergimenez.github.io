@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/</link>
       <atom:link href="https://oliviergimenez.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Olivier Gimenez</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Sun, 09 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Olivier Gimenez</title>
@@ -1637,6 +1637,22 @@ Modèles de mélange en capture-recapture. Dans Modèles à variables latentes e
 &lt;/figure&gt;
 
 </description>
+    </item>
+    
+    <item>
+      <title>MEDLEZ</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/medlez/</link>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/medlez/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RIVIERE</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/riviere/</link>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/riviere/</guid>
+      <description></description>
     </item>
     
     <item>
