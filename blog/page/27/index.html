@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -481,26 +450,6 @@
 
         <li class="nav-item">
           <a class="nav-link " href="/coding"><span>Codes</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
         </li>
 
         
@@ -922,7 +871,13 @@ French littoral&rdquo; will be funded by
 
     
     <div class="article-style">
-      My post-doc Sarah Cubaynes and I went to visit our colleague Jon Aars in Tromso, Norway. We are working together on the demography of polar bears using an amazing dataset the Norwegian Polar Institute has been collecting for decades.
+      <p>My post-doc Sarah Cubaynes and I went to visit our colleague
+<a href="http://www.npolar.no/en/people/jon.aars/" target="_blank">Jon Aars</a> in
+Tromso, Norway. We are working together on the demography of polar bears using an amazing dataset
+the <a href="http://www.npolar.no/en/" target="_blank">Norwegian Polar Institute</a> has
+been collecting for decades. It was also the opportunity to catch up with
+<a href="https://uit.no/om/enhet/ansatte/person?p_document_id=41160&p_dimension_id=88165" target="_blank">Nigel (Gilles)
+Yoccoz</a> who&rsquo;s being very helpful with this project. Jon took us fishing; I was luckier than with fly-fishing ;-)</p>
     </div>
     
 
@@ -1002,7 +957,13 @@ French littoral&rdquo; will be funded by
 
     
     <div class="article-style">
-      We organised the second conference of the GdR EcoStat. We spent two lovely days in Montpellier talking about ecological statistics with the hundred people who attended. The talks are available here.
+      <p>We organised the second conference of the GdR EcoStat.
+We spent two lovely days in Montpellier talking about ecological statistics
+with the hundred people who attended. The talks are available
+<a href="https://gdrecostat2016.sciencesconf.org/resource/page/id/2" target="_blank">here</a>.
+If you&rsquo;d like to know more about our acitivities in the GdR, check
+out <a href="https://sites.google.com/site/gdrecostat/" target="_blank">our
+website</a>.</p>
     </div>
     
 
@@ -1082,8 +1043,17 @@ French littoral&rdquo; will be funded by
 
     
     <div class="article-style">
-      Among the papers we published lately, I’d like to emphasize two contributions on the conservation of brown bears with some eminent colleagues:
-Karamanlidis, A.A., M. de Gabriel Hernando, L. Krambokoukis, O.
+      <p>Among the papers we published lately, I’d like to emphasize two contributions
+on the conservation of brown bears with some eminent colleagues:</p>
+<ul>
+<li>
+<p>Karamanlidis, A.A., M. de Gabriel Hernando, L. Krambokoukis, O. Gimenez (2015).
+<a href="https://dl.dropboxusercontent.com/u/23160641/my-pubs/Karamanlidisetal2015-Arcturos.pdf" target="_blank">Evidence
+of a large carnivore population recovery: counting bears in Greece</a>. Journal for Nature Conservation.
+This is a joint venture with
+<a href="https://www.researchgate.net/profile/Alexandros_Karamanlidis" target="_blank">Alex</a> and the
+Greek <a href="http://www.arcturos.gr/en/main.php" target="_blank">Arcturos NGO</a> in which
+we provide the first reliable abundance estimates for brown bears in Greece.</p>
     </div>
     
 
@@ -1237,7 +1207,13 @@ Karamanlidis, A.A., M. de Gabriel Hernando, L. Krambokoukis, O.
 
     
     <div class="article-style">
-      The GIS3M held an international workshop in Marseille on the conservation of Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea. This was the opportunity to discuss the results of the GDEGeM project on the same topic.
+      <p>The GIS3M held an <a href="http://www.gdegem.org/international-workshop" target="_blank">international
+workshop</a> in Marseille on the conservation of Bottlenose dolphin conservation and monitoring
+in the North-Western Mediterranean Sea. This was the opportunity to discuss the results of
+the <a href="http://www.gdegem.org/rapports" target="_blank">GDEGeM project</a> on the
+same topic. I mostly contributed by analysing the tons of photo-IDs that were
+collected during the program to estimate abundance and analyze the social structure.
+The slides of my talk:</p>
     </div>
     
 
@@ -1317,7 +1293,17 @@ Karamanlidis, A.A., M. de Gabriel Hernando, L. Krambokoukis, O.
 
     
     <div class="article-style">
-      Jean-Dominique Lebreton went on retirement, and we could not let him go without organizing something in his honor. Jean-Do had a tremendous influence in the field of statistical ecology with important contributions in (among others) multivariate analyses, software developments, population dynamics, and capture-recapture methods.
+      <p><a href="http://www.cefe.cnrs.fr/fr/recherche/bc/bbp/843-c/256-jean-dominique-lebreton" target="_blank">Jean-Dominique
+Lebreton</a> went on retirement, and we could not let him go without organizing
+something in his honor. Jean-Do had a tremendous influence in the field
+of statistical ecology with important contributions in (among others)
+multivariate analyses, software developments, population dynamics, and
+capture-recapture methods. On a personal side, I would simply not be here
+in science without him. Many friends and colleagues came or sent a message for the occasion.
+These interventions were filmed,
+see 
+<a href="https://sites.google.com/site/gdrecostat/jubilejdl" target="_blank" rel="noopener">here</a> and
+enjoy.</p>
     </div>
     
 
@@ -1488,7 +1474,7 @@ Karamanlidis, A.A., M. de Gabriel Hernando, L. Krambokoukis, O.
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

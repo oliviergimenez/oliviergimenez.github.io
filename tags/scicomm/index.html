@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/scicomm/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/scicomm/">
-  <meta property="og:title" content="SciComm | Olivier Gimenez">
+  <meta property="og:title" content="Scicomm | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>SciComm | Olivier Gimenez</title>
+  <title>Scicomm | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>SciComm</h1>
+  <h1>Scicomm</h1>
 
   
 
@@ -597,7 +546,8 @@
       <h2><a href="/blog/ours_faunesauvage/" >Sciences sociales et ours brun dans les Pyrénées</a></h2>
       <div class="article-style">
         
-          &quot;Tenir compte de la dimension humaine dans la gestion des #conflits hommes-grands #carnivores : le cas de l’#ours brun dans les #Pyrenees&quot; https://t.co/OJYC7Lje9L paru dans Faune Sauvage @ONCFS_officiel reprenant nos résultats publiés dans Biol.
+          &quot;Tenir compte de la dimension humaine dans la gestion des #conflits hommes-grands #carnivores : le cas de l’#ours brun dans les #Pyrenees&quot; https://t.co/OJYC7Lje9L paru dans Faune Sauvage @ONCFS_officiel reprenant nos résultats publiés dans Biol. Cons. https://t.co/UgPsN37NSA pic.twitter.com/oRU7kLyd7Y
+
         
       </div>
     </div>
@@ -636,6 +586,7 @@
       <div class="article-style">
         
           Ma thèse en 180 secondes (2018) - Des loups et des crottes 🐺💩 - Julie Louvrier https://t.co/DZMwANiEYD ou comment vulgariser son travail de #thèse sur la modélisation #statistique de la distribution des grands #carnivores #occupancy #SDM #MT180
+
         
       </div>
     </div>
@@ -745,7 +696,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

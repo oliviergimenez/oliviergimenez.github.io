@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -251,8 +220,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/twitter-social-network/">
 
@@ -489,26 +458,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -617,7 +566,7 @@
 
 <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 514px;">
   <div style="position: relative">
-    <img src="/blog/twitter-social-network/featured_hu4419af2178497071c5259f5686bee4d8_327757_720x0_resize_lanczos_3.png" alt="" class="featured-image">
+    <img src="/blog/twitter-social-network/featured_hu_4cf0f445f438614f.png" alt="" class="featured-image">
     
   </div>
 </div>
@@ -1183,7 +1132,7 @@ do.call(addMapLegend,
           legendIntervals=&quot;data&quot;,
           legendMar = 2))
 </code></pre>
-<p><img src="unnamed-chunk-12-1.png" alt=""><!-- --></p>
+<p><img src="/blog/twitter-social-network/unnamed-chunk-12-1.png" alt=""><!-- --></p>
 <p>How many followers are verified?</p>
 <pre><code class="language-r">details_followers %&gt;% 
   count(verified)
@@ -1246,7 +1195,7 @@ do.call(addMapLegend,
   geom_line() +
   labs(x = &quot;date of creation&quot;, y = &quot;how many accounts were created this month-year&quot;)
 </code></pre>
-<p><img src="unnamed-chunk-15-1.png" alt=""><!-- --></p>
+<p><img src="/blog/twitter-social-network/unnamed-chunk-15-1.png" alt=""><!-- --></p>
 <p>What is the distribution of the number of followers and friends. On average, 400 followers and 400 friends.</p>
 <pre><code class="language-r">foll &lt;- details_followers %&gt;%
   ggplot() + 
@@ -1263,7 +1212,7 @@ friends &lt;- details_followers %&gt;%
 library(patchwork)
 foll + friends
 </code></pre>
-<p><img src="unnamed-chunk-16-1.png" alt=""><!-- --></p>
+<p><img src="/blog/twitter-social-network/unnamed-chunk-16-1.png" alt=""><!-- --></p>
 <h2 id="retrieving-social-links">Retrieving social links</h2>
 <p>To investigate the social network made of my followers, we need to gather who they follow, and their followers. Unfortunately, the Twitter API imposes some time and quantity constraints in retrieving data.</p>
 <p>Here, for the sake of illustration, I will focus on some accounts only. To do so, I consider accounts with between 1000 and 1500 followers, and more than 30000 tweets users have liked in their account&rsquo;s lifetime (which denotes some activity). The more followers we consider, the more time it would take to gather info on them: it is approx one minute per follower on average, so one hour for sixty followers, and more than eighty hours for all my followers! With the filters I&rsquo;m using, I end up with 35 followers here, this is very few to say infer meaningful about a network, but it&rsquo;ll do the job for now.</p>
@@ -1505,7 +1454,7 @@ plot_ego &lt;- network_viz %&gt;%
   labs(title = &quot;Top 3 communities&quot;)
 plot_ego
 </code></pre>
-<p><img src="unnamed-chunk-31-1.png" alt=""><!-- --></p>
+<p><img src="/blog/twitter-social-network/unnamed-chunk-31-1.png" alt=""><!-- --></p>
 <p>Let&rsquo;s use an alternative dataviz to identify the nodes.</p>
 <pre><code class="language-r">network_viz %&gt;% 
   mutate(community = group_spinglass()) %&gt;%
@@ -1516,7 +1465,7 @@ plot_ego
   theme_graph() + theme(legend.position = &quot;none&quot;) +
   labs(title = &quot;Network with named nodes&quot;)
 </code></pre>
-<p><img src="unnamed-chunk-32-1.png" alt=""><!-- --></p>
+<p><img src="/blog/twitter-social-network/unnamed-chunk-32-1.png" alt=""><!-- --></p>
 <h2 id="concluding-words">Concluding words</h2>
 <p>Not sure what the communities are about. Due to limitation with the Twitter API I did not attempt to retrieve the info on all the 5,000 followers, but I used only 35 of them, which explains why there is not much to say about this network I guess. I might take some time to try and retrieve all the info (will take days), or not. I might also use some information I already have, like how followers describe themselves and do some topic modelling to identify common themes of interest.</p>
 <p>Here I have simply followed the steps that Joe Cristian illustrated so brillantly in his post at 
@@ -1586,11 +1535,11 @@ plot_ego
     <div class="media author-card content-widget-hr">
       
         
-        <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu2cb62cde7ffbf991a23ad99f81001b35_47904_270x270_fill_q90_lanczos_center.jpg" alt="">
+        <img class="avatar mr-3 avatar-circle" src="/authors/authors/avatar_hu_6b27bb3302803439.jpg" alt="">
       
 
       <div class="media-body">
-        <h5 class="card-title"><a href="https://oliviergimenez.github.io"></a></h5>
+        <h5 class="card-title"><a href="https://oliviergimenez.github.io/"></a></h5>
         <h6 class="card-subtitle">Statistics, ecology &amp; social sciences</h6>
         <p class="card-text">I&rsquo;m a scientist working at the interface of animal ecology, statistical modeling and social sciences.</p>
         <ul class="network-icon" aria-hidden="true">
@@ -1863,7 +1812,7 @@ plot_ego
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

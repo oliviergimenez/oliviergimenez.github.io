@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -593,8 +542,7 @@
 
     
     <div class="article-style">
-      Thrilled to see our work on Mediterranean monk seal out in @AnimalConserv 🦭
-We show a significant range recovery of the species in Greece 🇬🇷 using #CitizenScience &amp; occupancy modelshttps://t.co/ILYdzArZq7
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thrilled to see our work on Mediterranean monk seal out in <a href="https://twitter.com/AnimalConserv?ref_src=twsrc%5Etfw">@AnimalConserv</a> 🦭<br><br>We show a significant range recovery of the species in Greece 🇬🇷 using <a href="https://twitter.com/hashtag/CitizenScience?src=hash&amp;ref_src=twsrc%5Etfw">#CitizenScience</a> &amp; occupancy models<a href="https://t.co/ILYdzArZq7">https://t.co/ILYdzArZq7</a><br><br>Check out NGO MOm amazing work <a href="https://t.co/hM8BhfRQ7w">https://t.co/hM8BhfRQ7w</a><br><br>DM ➡️ PDF 😉 <a href="https://t.co/ILqnFvMypL">pic.twitter.com/ILqnFvMypL</a></p>
     </div>
     
 
@@ -645,7 +593,7 @@ We show a significant range recovery of the species in Greece 🇬🇷 using #Ci
     
     
     <a href="/blog/2022-06-30-new-paper-on-monk-seal-recovery-in-greece/" >
-      <img src="/blog/2022-06-30-new-paper-on-monk-seal-recovery-in-greece/featured_hu9c76641ec01c7f73ef2f8cee3309a41a_73817_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-06-30-new-paper-on-monk-seal-recovery-in-greece/featured_hu_327f78102d90eeb.jpg" alt="">
     </a>
     
   </div>
@@ -679,7 +627,7 @@ We show a significant range recovery of the species in Greece 🇬🇷 using #Ci
 
     
     <div class="article-style">
-      I&#39;m always reluctant to give career advice, cause what worked for me won&#39;t work for others, and there is obviously a survivorship bias. For what it&#39;s worth, my 10 pieces of advice to early career researchers in statistical ecology #ISEC2022 🙏 @BayesRuth for the Q 😉
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m always reluctant to give career advice, cause what worked for me won&#39;t work for others, and there is obviously a survivorship bias. <br><br>For what it&#39;s worth, my 10 pieces of advice to early career researchers in statistical ecology <a href="https://twitter.com/hashtag/ISEC2022?src=hash&amp;ref_src=twsrc%5Etfw">#ISEC2022</a> <br><br>🙏 <a href="https://twitter.com/BayesRuth?ref_src=twsrc%5Etfw">@BayesRuth</a> for the Q 😉<br><br>🧵👇 <a href="https://t.co/JJEHFFOAc9">https://t.co/JJEHFFOAc9</a></p>
     </div>
     
 
@@ -730,7 +678,7 @@ We show a significant range recovery of the species in Greece 🇬🇷 using #Ci
     
     
     <a href="/blog/2022-06-29-career-advice-to-early-career-researchers/" >
-      <img src="/blog/2022-06-29-career-advice-to-early-career-researchers/featured_hu9b1e1982bcbd9c5693a43fb708111db0_36543_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-06-29-career-advice-to-early-career-researchers/featured_hu_84f8c16b0fe5776f.jpg" alt="">
     </a>
     
   </div>
@@ -764,9 +712,7 @@ We show a significant range recovery of the species in Greece 🇬🇷 using #Ci
 
     
     <div class="article-style">
-      Statistical ecology 🌍📊, hidden Markov models 🛰️ and large carnivores 🐺😺🐻 Soooo happy to share our research in this plenary talk at #ISEC2022 @ISEC_stats_ecol 🤩🍾
-slides and text: https://t.co/BOtZHWU56L
-video: https://t.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Statistical ecology 🌍📊, hidden Markov models 🛰️ and large carnivores 🐺😺🐻 Soooo happy to share our research in this plenary talk at <a href="https://twitter.com/hashtag/ISEC2022?src=hash&amp;ref_src=twsrc%5Etfw">#ISEC2022</a> <a href="https://twitter.com/ISEC_stats_ecol?ref_src=twsrc%5Etfw">@ISEC_stats_ecol</a> 🤩🍾<br><br>slides and text: <a href="https://t.co/BOtZHWU56L">https://t.co/BOtZHWU56L</a><br>video: <a href="https://t.co/6Qn7i05uae">https://t.co/6Qn7i05uae</a> <a href="https://t.co/vrSYeo9HYF">pic.twitter.com/vrSYeo9HYF</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1541827362052005893?ref_src=twsrc%5Etfw">June 28, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -817,7 +763,7 @@ video: https://t.
     
     
     <a href="/blog/2022-06-28-my-plenary-talk-at-isec2022-on-statistical-ecology-hidden-markov-models-and-large-carnivores/" >
-      <img src="/blog/2022-06-28-my-plenary-talk-at-isec2022-on-statistical-ecology-hidden-markov-models-and-large-carnivores/featured_hucac0eb48501488e320b165eff7c602a6_42437_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-06-28-my-plenary-talk-at-isec2022-on-statistical-ecology-hidden-markov-models-and-large-carnivores/featured_hu_8d30ddebc9308b1c.jpg" alt="">
     </a>
     
   </div>
@@ -851,7 +797,7 @@ video: https://t.
 
     
     <div class="article-style">
-      Yesterday I created my 200th repo on @github 😇 It&#39;s been quite an adventure to twist my old habits &amp; switch to #ReproducibleResearch but it&#39;s definitely worth it 🤯 Plenty of help out there like @living_norway 🤩 If useful, I also have a 1-day workshop https://t.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Yesterday I created my 200th repo on <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a> 😇 It&#39;s been quite an adventure to twist my old habits &amp; switch to <a href="https://twitter.com/hashtag/ReproducibleResearch?src=hash&amp;ref_src=twsrc%5Etfw">#ReproducibleResearch</a> but it&#39;s definitely worth it 🤯 <br><br>Plenty of help out there like <a href="https://twitter.com/living_norway?ref_src=twsrc%5Etfw">@living_norway</a> 🤩 If useful, I also have a 1-day workshop <a href="https://t.co/7I6rU61nEg">https://t.co/7I6rU61nEg</a> <a href="https://t.co/cGDjaA6iTv">pic.twitter.com/cGDjaA6iTv</a></p>
     </div>
     
 
@@ -902,7 +848,7 @@ video: https://t.
     
     
     <a href="/blog/2022-06-09-reproducible-research-and-github/" >
-      <img src="/blog/2022-06-09-reproducible-research-and-github/featured_hu118f5dedabaff0d7c6a189c1e391d0ca_114927_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-06-09-reproducible-research-and-github/featured_hu_dd90c191c9d795d3.jpg" alt="">
     </a>
     
   </div>
@@ -936,7 +882,7 @@ video: https://t.
 
     
     <div class="article-style">
-      Check it out, this is huge 🤯 Awesome initiative led by @FredBarraquand Let&#39;s get ourselves a 💎 #OpenAccess journal in #StatisticalEcology 🤩 Free for readers and for authors https://t.co/HmDhrCLsaN https://t.co/AI7Jjunoek pic.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Check it out, this is huge 🤯 Awesome initiative led by <a href="https://twitter.com/FredBarraquand?ref_src=twsrc%5Etfw">@FredBarraquand</a> Let&#39;s get ourselves a 💎 <a href="https://twitter.com/hashtag/OpenAccess?src=hash&amp;ref_src=twsrc%5Etfw">#OpenAccess</a> journal in <a href="https://twitter.com/hashtag/StatisticalEcology?src=hash&amp;ref_src=twsrc%5Etfw">#StatisticalEcology</a> 🤩 Free for readers and for authors <a href="https://t.co/HmDhrCLsaN">https://t.co/HmDhrCLsaN</a> <a href="https://t.co/AI7Jjunoek">https://t.co/AI7Jjunoek</a> <a href="https://t.co/Aywk2ucusQ">pic.twitter.com/Aywk2ucusQ</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1534627621035704321?ref_src=twsrc%5Etfw">June 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -987,7 +933,7 @@ video: https://t.
     
     
     <a href="/blog/2022-06-08-a-proposal-for-a-diamond-open-access-journal-in-statistical-ecology/" >
-      <img src="/blog/2022-06-08-a-proposal-for-a-diamond-open-access-journal-in-statistical-ecology/featured_hu7471ef35c875a556e5fbf08fd03f756b_65089_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/2022-06-08-a-proposal-for-a-diamond-open-access-journal-in-statistical-ecology/featured_hu_53905cbed2ff1306.png" alt="">
     </a>
     
   </div>
@@ -1021,7 +967,7 @@ video: https://t.
 
     
     <div class="article-style">
-      Because of my old age I guess, I&#39;m often asked how I switched from base R #RStats to #tidyverse. I learnt by watching @drob screencasts 🎥 in which he analyses #TidyTuesday data he has never seen before (!
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Because of my old age I guess, I&#39;m often asked how I switched from base R <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> to <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a>. I learnt by watching <a href="https://twitter.com/drob?ref_src=twsrc%5Etfw">@drob</a> screencasts 🎥 in which he analyses <a href="https://twitter.com/hashtag/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#TidyTuesday</a> data he has never seen before (!). Here is a list of my tips <a href="https://t.co/VFAaDz8onE">https://t.co/VFAaDz8onE</a> in case it&#39;s useful. <a href="https://t.co/4Emq2J2qQL">pic.twitter.com/4Emq2J2qQL</a></p>
     </div>
     
 
@@ -1072,7 +1018,7 @@ video: https://t.
     
     
     <a href="/blog/2022-06-01-tips-and-tricks-in-tidyverse/" >
-      <img src="/blog/2022-06-01-tips-and-tricks-in-tidyverse/featured_hub94f594312cda2170c533ce8e35042a5_188290_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-06-01-tips-and-tricks-in-tidyverse/featured_hu_f6ef69ed0c944640.jpg" alt="">
     </a>
     
   </div>
@@ -1106,7 +1052,7 @@ video: https://t.
 
     
     <div class="article-style">
-      A Montpellier, @oaggimenez présente le fonctionnement du DIPEE Occitanie-Est qui rassemble plusieurs laboratoires @UmrAmap @cefemontpellier @criobe_pf @isemevol @umrMARBEC @MIVEGEC @ihpe_lab @EcotronCNRS Pour en savoir plus sur ce DIPEE 👇https://t.co/QvGniMkjg2 pic.twitter.com/7ekUx3vwu5
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">A Montpellier, <a href="https://twitter.com/oaggimenez?ref_src=twsrc%5Etfw">@oaggimenez</a> présente le fonctionnement du DIPEE Occitanie-Est qui rassemble plusieurs laboratoires <a href="https://twitter.com/UmrAmap?ref_src=twsrc%5Etfw">@UmrAmap</a> <a href="https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw">@cefemontpellier</a> <a href="https://twitter.com/criobe_pf?ref_src=twsrc%5Etfw">@criobe_pf</a> <a href="https://twitter.com/isemevol?ref_src=twsrc%5Etfw">@isemevol</a> <a href="https://twitter.com/umrMARBEC?ref_src=twsrc%5Etfw">@umrMARBEC</a> <a href="https://twitter.com/MIVEGEC?ref_src=twsrc%5Etfw">@MIVEGEC</a> <a href="https://twitter.com/ihpe_lab?ref_src=twsrc%5Etfw">@ihpe_lab</a> <a href="https://twitter.com/EcotronCNRS?ref_src=twsrc%5Etfw">@EcotronCNRS</a> <br><br>Pour en savoir plus sur ce DIPEE 👇<a href="https://t.co/QvGniMkjg2">https://t.co/QvGniMkjg2</a> <a href="https://t.co/7ekUx3vwu5">pic.twitter.com/7ekUx3vwu5</a></p>&mdash; L&#39;écologie au CNRS (@INEE_CNRS) <a href="https://twitter.com/INEE_CNRS/status/1531538094297579522?ref_src=twsrc%5Etfw">May 31, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1157,7 +1103,7 @@ video: https://t.
     
     
     <a href="/blog/2022-05-31-semaine-ecologie-environnement-biodiversite-du-cnrs-a-montpellier/" >
-      <img src="/blog/2022-05-31-semaine-ecologie-environnement-biodiversite-du-cnrs-a-montpellier/featured_hu6c0119b7e1c514f8aaadc14ae23fc40a_124186_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/2022-05-31-semaine-ecologie-environnement-biodiversite-du-cnrs-a-montpellier/featured_hu_6c2002c4542f8360.png" alt="">
     </a>
     
   </div>
@@ -1191,8 +1137,7 @@ video: https://t.
 
     
     <div class="article-style">
-      It&#39;s real 😇🤩🥳 https://t.co/HdWol2H6PJ pic.twitter.com/NUSXtS1fQy
-&mdash; Olivier Gimenez 🖖 (@oaggimenez) May 24, 2022 
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It&#39;s real 😇🤩🥳 <a href="https://t.co/HdWol2H6PJ">https://t.co/HdWol2H6PJ</a> <a href="https://t.co/NUSXtS1fQy">pic.twitter.com/NUSXtS1fQy</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1529131677947248641?ref_src=twsrc%5Etfw">May 24, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1243,7 +1188,7 @@ video: https://t.
     
     
     <a href="/blog/2022-05-24-our-new-book-on-statistical-approaches-for-hiddens-variables-in-ecology/" >
-      <img src="/blog/2022-05-24-our-new-book-on-statistical-approaches-for-hiddens-variables-in-ecology/featured_hu8e0f5114953916766d9a7eace5d3b881_427254_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-05-24-our-new-book-on-statistical-approaches-for-hiddens-variables-in-ecology/featured_hu_7db892335b4e85b5.jpg" alt="">
     </a>
     
   </div>
@@ -1277,9 +1222,7 @@ video: https://t.
 
     
     <div class="article-style">
-      🔧🚧 I have updated my quick introduction to data visualisation w/ R 📦 ggplot2 🥳
-In case it&#39;s useful 😉▶️ https://t.co/IWNesVjwqq ◀️
-w/ practicals https://t.co/YYkykGeWf1 &amp; solutions https://t.co/NCQYsw8QCg Cartoons @allison_horst 💜#ggplot #tidyverse #dataviz #RStats pic.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🔧🚧 I have updated my quick introduction to data visualisation w/ R 📦 ggplot2 🥳<br><br>In case it&#39;s useful 😉▶️ <a href="https://t.co/IWNesVjwqq">https://t.co/IWNesVjwqq</a> ◀️<br><br>w/ practicals <a href="https://t.co/YYkykGeWf1">https://t.co/YYkykGeWf1</a> &amp; solutions <a href="https://t.co/NCQYsw8QCg">https://t.co/NCQYsw8QCg</a> <br><br>Cartoons <a href="https://twitter.com/allison_horst?ref_src=twsrc%5Etfw">@allison_horst</a> 💜<a href="https://twitter.com/hashtag/ggplot?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot</a> <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://t.co/RlXFT9F0Tw">pic.twitter.com/RlXFT9F0Tw</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1528752864222380036?ref_src=twsrc%5Etfw">May 23, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1330,7 +1273,7 @@ w/ practicals https://t.co/YYkykGeWf1 &amp; solutions https://t.co/NCQYsw8QCg Ca
     
     
     <a href="/blog/2022-05-23-my-quick-introduction-to-data-visualisation-with-r/" >
-      <img src="/blog/2022-05-23-my-quick-introduction-to-data-visualisation-with-r/featured_hue8e9244ba2354234ba5b98b9c9cdab6e_102865_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-05-23-my-quick-introduction-to-data-visualisation-with-r/featured_hu_7414a5063dc0c360.jpg" alt="">
     </a>
     
   </div>
@@ -1364,9 +1307,7 @@ w/ practicals https://t.co/YYkykGeWf1 &amp; solutions https://t.co/NCQYsw8QCg Ca
 
     
     <div class="article-style">
-      🔧🚧 Intro on data wrangling w/ R 📦 dplyr - import data, pipe, pivot, join, filter, count, work w/ columns, dates, char, factors, etc #tidyverse
-▶️ https://t.co/Vs2TbYhbBj ◀️
-w/ practicals https://t.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🔧🚧 Intro on data wrangling w/ R 📦 dplyr - import data, pipe, pivot, join, filter, count, work w/ columns, dates, char, factors, etc <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a><br><br>▶️ <a href="https://t.co/Vs2TbYhbBj">https://t.co/Vs2TbYhbBj</a> ◀️<br><br>w/ practicals <a href="https://t.co/9ktKPp9wfW">https://t.co/9ktKPp9wfW</a> &amp; solutions <a href="https://t.co/YPwibL2w31">https://t.co/YPwibL2w31</a> <br><br>Cartoons <a href="https://twitter.com/allison_horst?ref_src=twsrc%5Etfw">@allison_horst</a> 💜 <a href="https://t.co/ZMSfxYFKWq">pic.twitter.com/ZMSfxYFKWq</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1526574510392188928?ref_src=twsrc%5Etfw">May 17, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1417,7 +1358,7 @@ w/ practicals https://t.
     
     
     <a href="/blog/2022-05-17-introduction-on-data-wrangling-with-r/" >
-      <img src="/blog/2022-05-17-introduction-on-data-wrangling-with-r/featured_huc3b6fc61ec1ef50e7a51ce311a645fd2_70516_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-05-17-introduction-on-data-wrangling-with-r/featured_hu_8a3ce7025e6be63c.jpg" alt="">
     </a>
     
   </div>
@@ -1542,7 +1483,7 @@ w/ practicals https://t.
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/hmm/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/hmm/">
-  <meta property="og:title" content="hmm | Olivier Gimenez">
+  <meta property="og:title" content="HMM | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>hmm | Olivier Gimenez</title>
+  <title>HMM | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>hmm</h1>
+  <h1>HMM</h1>
 
   
 
@@ -573,7 +522,8 @@
         
           Ey! VIBASS 6 is announced online now https://t.co/VS8cLR8ocK
 🗓️ July 10-14 2023
-🚩Faculty of Mathematics @FMatemaUV_EG, Valencia, Spain Be aware that the registration would start really really soon and we just have few spots.
+🚩Faculty of Mathematics @FMatemaUV_EG, Valencia, Spain Be aware that the registration would start really really soon and we just have few spots. Don&#39;t miss it. pic.twitter.com/5M61dbuxuF
+
         
       </div>
     </div>
@@ -587,6 +537,9 @@
         
           Would you like to get the most out of your capture-recapture data?
 We run a workshop on multisite/state/event HMMs models in #Rstats Nimble w/ Daniel Turek @R_nimble at #ISEC2022 @ISEC_stats_ecol
+Website w/ slides &amp; codes: https://t.co/gI1ccZO3O9
+Video: https://t.co/zA6nh6Ttih pic.twitter.com/ejyE2tCw5o
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) July 1, 2022 
         
       </div>
     </div>
@@ -600,7 +553,8 @@ We run a workshop on multisite/state/event HMMs models in #Rstats Nimble w/ Dani
         
           Statistical ecology 🌍📊, hidden Markov models 🛰️ and large carnivores 🐺😺🐻 Soooo happy to share our research in this plenary talk at #ISEC2022 @ISEC_stats_ecol 🤩🍾
 slides and text: https://t.co/BOtZHWU56L
-video: https://t.
+video: https://t.co/6Qn7i05uae pic.twitter.com/vrSYeo9HYF
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) June 28, 2022 
         
       </div>
     </div>
@@ -677,7 +631,8 @@ video: https://t.
       <h2><a href="/blog/paperog/" >New paper on Inferring animal social networks with imperfect detection</a></h2>
       <div class="article-style">
         
-          New paper on &quot;Inferring animal social networks with imperfect detection&quot; w/ colleagues from 🇦🇷 and #LorenaMansilla our 🇨🇱 PhD student #SocialNetworks #CaptureRecapture #StateSpaceModel #rstats #BayesianStatistics - Download PDF freely here https://t.
+          New paper on &quot;Inferring animal social networks with imperfect detection&quot; w/ colleagues from 🇦🇷 and #LorenaMansilla our 🇨🇱 PhD student #SocialNetworks #CaptureRecapture #StateSpaceModel #rstats #BayesianStatistics - Download PDF freely here https://t.co/heixxmRdFH pic.twitter.com/dZbRLvFbjT
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) 10 avril 2019 
         
       </div>
     </div>
@@ -689,7 +644,8 @@ video: https://t.
       <h2><a href="/blog/preprintsarah/" >Modeling the demography of species providing extended parental care: A capturerecapture approach with a case study on Polar Bears</a></h2>
       <div class="article-style">
         
-          New preprint by awesome #SarahCubaynes &quot;Modeling the demography of species providing extended parental care: A #capturerecapture approach with a case study on #Polar Bears&quot; https://t.co/x1H0X7GyKn #demography #rstats #multistate #WomenInSTEM #WomenInScience pic.
+          New preprint by awesome #SarahCubaynes &quot;Modeling the demography of species providing extended parental care: A #capturerecapture approach with a case study on #Polar Bears&quot; https://t.co/x1H0X7GyKn #demography #rstats #multistate #WomenInSTEM #WomenInScience pic.twitter.com/rYEwOUobEn
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) 2 avril 2019 
         
       </div>
     </div>
@@ -808,7 +764,7 @@ video: https://t.
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/conference/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/conference/">
-  <meta property="og:title" content="conference | Olivier Gimenez">
+  <meta property="og:title" content="Conference | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>conference | Olivier Gimenez</title>
+  <title>Conference | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>conference</h1>
+  <h1>Conference</h1>
 
   
 
@@ -563,31 +512,6 @@
   
 
   
-  
-    
-    
-    
-    <div>
-      <h2><a href="/blog/anne_loison/" >Determinants of gender gaps in science</a></h2>
-      <div class="article-style">
-        
-          We&#39;re lucky to have Anne Loison on June 18 at #CEFE who&#39;ll tell us about the determinants of gender gaps in career trajectories #WomenInSTEM @INEE_CNRS @CNRSenLR @CNRS @FemmesCNRS #EgaliteFH @FemmesSciences @umontpellier @IsiteMUSE pic.twitter.com/u82uloqoIJ
-&mdash; Olivier Gimenez 🍉 (@oaggimenez) 19 mai 20> 
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/blog/interact_media2/" >La mer monte, quel littoral pour demain</a></h2>
-      <div class="article-style">
-        
-          Aux journées de la @Fondationfrance @univpaulvalery &quot;La mer monte, quel littoral pour demain&quot; à la belle ville d&#39;#Agde pour présenter notre programme #Interact 🐬⛵🎣 avec @GIS_3M https://t.co/72YF9gxCeE pic.twitter.com/HbRf40p6PX &mdash; Olivier Gimenez 🍉 (@oaggimenez) 31 mai 2018ockquote> 
-        
-      </div>
-    </div>
   
     
     
@@ -660,7 +584,8 @@
       <h2><a href="/blog/gdr_ecostat_journee2/" >GDR EcoStat meeting</a></h2>
       <div class="article-style">
         
-          We organised the second conference of the GdR EcoStat. We spent two lovely days in Montpellier talking about ecological statistics with the hundred people who attended. The talks are available here.
+          We organised the second conference of the GdR EcoStat. We spent two lovely days in Montpellier talking about ecological statistics with the hundred people who attended. The talks are available here. If you&rsquo;d like to know more about our acitivities in the GdR, check out our website.
+
         
       </div>
     </div>
@@ -672,7 +597,8 @@
       <h2><a href="/blog/gis3m/" >International workshop on Bottlenose dolphin conservation and monitoring</a></h2>
       <div class="article-style">
         
-          The GIS3M held an international workshop in Marseille on the conservation of Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea. This was the opportunity to discuss the results of the GDEGeM project on the same topic.
+          The GIS3M held an international workshop in Marseille on the conservation of Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea. This was the opportunity to discuss the results of the GDEGeM project on the same topic. I mostly contributed by analysing the tons of photo-IDs that were collected during the program to estimate abundance and analyze the social structure. The slides of my talk:
+
         
       </div>
     </div>
@@ -684,7 +610,34 @@
       <h2><a href="/blog/jdl/" >Tribute to Jean-Dominique Lebreton</a></h2>
       <div class="article-style">
         
-          Jean-Dominique Lebreton went on retirement, and we could not let him go without organizing something in his honor. Jean-Do had a tremendous influence in the field of statistical ecology with important contributions in (among others) multivariate analyses, software developments, population dynamics, and capture-recapture methods.
+          Jean-Dominique Lebreton went on retirement, and we could not let him go without organizing something in his honor. Jean-Do had a tremendous influence in the field of statistical ecology with important contributions in (among others) multivariate analyses, software developments, population dynamics, and capture-recapture methods. On a personal side, I would simply not be here in science without him. Many friends and colleagues came or sent a message for the occasion. These interventions were filmed, see here and enjoy.
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/blog/sdm_day/" >Species distribution model day</a></h2>
+      <div class="article-style">
+        
+          Taking the opportunity of Ian Renner’s visit, we organized thanks to the GdR EcoStat a conference on the recent advances in the modeling of species distribution. We were lucky to have the cream of researchers in the domain with Julien Papaïx, Joseph Chipperfield, Ian Renner, Joern Pagel, Bob O’Hara, Laura Pollock and Damaris Zurell. The talks are available here.
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/blog/iccb2014/" >International Congress on Biological Conservation</a></h2>
+      <div class="article-style">
+        
+          I attended the International Congress on Biological Conservation that was held in my home town Montpellier. The students of our team were on fire and talked about their exciting work. Gilles presented a bio-economic model to study the population dynamics of Asian captive elephants, a nice example of how to explicitly incorporate interactions between captive and wild populations in species management.
+
         
       </div>
     </div>
@@ -805,7 +758,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

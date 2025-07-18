@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -251,8 +220,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/project_landing/">
 
@@ -489,26 +458,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -636,6 +585,188 @@
 
 
 
+<div class="col-lg-12 project-item isotope-item js-id-science-citoyenne js-id-pièges-photos">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-6">
+      <h3 class="article-title mb-0 mt-0"><a href="https://objectif-lez.netlify.app/" target="_blank" rel="noopener">Objectif-Lez</a></h3>
+
+      
+      <div class="article-style">
+        Un projet de science citoyenne pour mieux connaître la biodiversité du Lez.
+      </div>
+      
+
+      <div class="btn-links">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="col-12 col-md-6 order-first ">
+      
+      
+      
+      <a href="https://objectif-lez.netlify.app/" target="_blank" rel="noopener">
+        <img src="/my-project/external-project/objectiflez/featured_hu_29c53397425ca192.png" alt="">
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+        
+
+      
+
+        
+        
+        
+          
+          
+        
+
+        
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+<div class="col-lg-12 project-item isotope-item js-id-écologie-de-la-santé js-id-leptospirose js-id-ragondins">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-6">
+      <h3 class="article-title mb-0 mt-0"><a href="https://leptonex.netlify.app/" target="_blank" rel="noopener">LeptoNex</a></h3>
+
+      
+      <div class="article-style">
+        Risques infectieux en ville - Ecologie de la santé appliquée aux interactions entre ragondins et humains.
+      </div>
+      
+
+      <div class="btn-links">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+    <div class="col-12 col-md-6 order-first order-md-2">
+      
+      
+      
+      <a href="https://leptonex.netlify.app/" target="_blank" rel="noopener">
+        <img src="/my-project/external-project/riviere/featured_hu_1f77d8fb45295f95.png" alt="">
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+        
+
+      
+
+        
+        
+        
+          
+          
+        
+
+        
+          
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
 <div class="col-lg-12 project-item isotope-item js-id-médiation-scientifique js-id-loutre-d&#39;Europe js-id-écologie-urbaine">
   <div class="row align-items-center">
     <div class="col-12 col-md-6">
@@ -685,99 +816,7 @@
       
       
       <a href="/prez/prez-medlez.pdf" target="_blank" rel="noopener">
-        <img src="/my-project/external-project/medlez/featured_hu71dfb3fd68d22fa6b563b6d3e55eb030_165794_540x0_resize_lanczos_3.png" alt="">
-      </a>
-      
-    </div>
-  </div>
-</div>
-
-        
-
-      
-
-        
-        
-        
-          
-          
-        
-
-        
-          
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-<div class="col-lg-12 project-item isotope-item js-id-écologie-de-la-santé js-id-leptospirose js-id-ragondins">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <h3 class="article-title mb-0 mt-0"><a href="/prez/prez-riviere.pdf" target="_blank" rel="noopener">RIVIERE</a></h3>
-
-      
-      <div class="article-style">
-        Risques Infectieux en VIlle - Ecologie de la santé appliquée aux inteRactions entrE ragondins et humains.
-      </div>
-      
-
-      <div class="btn-links">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first order-md-2">
-      
-      
-      
-      <a href="/prez/prez-riviere.pdf" target="_blank" rel="noopener">
-        <img src="/my-project/external-project/riviere/featured_hu07293f6dc50a846a1f7ea31539477ffb_492032_540x0_resize_lanczos_3.png" alt="">
+        <img src="/my-project/external-project/medlez/featured_hu_c74d507e2e91dad.png" alt="">
       </a>
       
     </div>
@@ -811,6 +850,8 @@
 
 
 
+
+  
 
 
 
@@ -859,12 +900,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first ">
+    <div class="col-12 col-md-6 order-first order-md-2">
       
       
       
       <a href="/my-project/external-project/diat/" >
-        <img src="/my-project/external-project/diat/featured_hu62dc09a702e432cb2f17d8d90ef686ca_184062_540x0_resize_q90_lanczos.jpg" alt="">
+        <img src="/my-project/external-project/diat/featured_hu_19f2cdae4bf4c25f.jpg" alt="">
       </a>
       
     </div>
@@ -901,8 +942,6 @@
 
 
 
-
-  
 
 
 
@@ -951,12 +990,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first order-md-2">
+    <div class="col-12 col-md-6 order-first ">
       
       
       
       <a href="https://www.pepr-solubiod.fr/projet/action-8-scenarios-et-modeles/" target="_blank" rel="noopener">
-        <img src="/my-project/external-project/solubiod/featured_hu193b0f227eb97d8057e893d8eb6db259_4284005_540x0_resize_lanczos_3.png" alt="">
+        <img src="/my-project/external-project/solubiod/featured_hu_66f5fb00ef240ac8.png" alt="">
       </a>
       
     </div>
@@ -993,6 +1032,8 @@
 
 
 
+
+  
 
 
 
@@ -1041,12 +1082,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first ">
+    <div class="col-12 col-md-6 order-first order-md-2">
       
       
       
       <a href="https://www.biodiversa.eu/2024/04/15/big_picture/" target="_blank" rel="noopener">
-        <img src="/my-project/external-project/bigpicture/featured_hud9c34b0bb2935f903a6a547d66abdcc1_3063192_540x0_resize_lanczos_3.png" alt="">
+        <img src="/my-project/external-project/bigpicture/featured_hu_2c7fddb3af83d560.png" alt="">
       </a>
       
     </div>
@@ -1080,8 +1121,6 @@
 
 
 
-
-  
 
 
 
@@ -1130,12 +1169,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first order-md-2">
+    <div class="col-12 col-md-6 order-first ">
       
       
       
       <a href="/my-project/external-project/discar/" >
-        <img src="/my-project/external-project/discar/featured_hu7fba9da1679ce4a56c592454604cb9c1_283100_540x0_resize_q90_lanczos.jpg" alt="">
+        <img src="/my-project/external-project/discar/featured_hu_3b7f10a7240a4ebd.jpg" alt="">
       </a>
       
     </div>
@@ -1172,6 +1211,8 @@
 
 
 
+
+  
 
 
 
@@ -1220,12 +1261,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first ">
+    <div class="col-12 col-md-6 order-first order-md-2">
       
       
       
       <a href="https://otterconnect.netlify.app/en/" target="_blank" rel="noopener">
-        <img src="/my-project/external-project/otters/featured_huf5569ea21a9db4189455c4179f5c788c_788784_540x0_resize_q90_lanczos.jpg" alt="">
+        <img src="/my-project/external-project/otters/featured_hu_48be889a8fd54613.jpg" alt="">
       </a>
       
     </div>
@@ -1259,8 +1300,6 @@
 
 
 
-
-  
 
 
 
@@ -1309,12 +1348,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first order-md-2">
+    <div class="col-12 col-md-6 order-first ">
       
       
       
       <a href="/my-project/external-project/carnivores/" >
-        <img src="/my-project/external-project/carnivores/featured_hu118946ef16d555cdcfa2f3f13206c6cf_128079_540x0_resize_q90_lanczos.jpg" alt="">
+        <img src="/my-project/external-project/carnivores/featured_hu_86f07e5ff9ac6688.jpg" alt="">
       </a>
       
     </div>
@@ -1351,6 +1390,8 @@
 
 
 
+
+  
 
 
 
@@ -1399,12 +1440,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first ">
+    <div class="col-12 col-md-6 order-first order-md-2">
       
       
       
       <a href="https://sites.google.com/view/erclynx/" target="_blank" rel="noopener">
-        <img src="/my-project/external-project/lynx/featured_hudc48d50f22de7d390124a7030766a96e_8217_540x0_resize_q90_lanczos.jpg" alt="">
+        <img src="/my-project/external-project/lynx/featured_hu_d4dff840f4935669.jpg" alt="">
       </a>
       
     </div>
@@ -1438,8 +1479,6 @@
 
 
 
-
-  
 
 
 
@@ -1488,12 +1527,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first order-md-2">
+    <div class="col-12 col-md-6 order-first ">
       
       
       
       <a href="/my-project/external-project/methods/" >
-        <img src="/my-project/external-project/methods/featured_hu8fbb63ac871171277918a33a9bc65514_98266_540x0_resize_q90_lanczos.jpg" alt="">
+        <img src="/my-project/external-project/methods/featured_hu_e888bfdfb5cd9ba9.jpg" alt="">
       </a>
       
     </div>
@@ -1530,6 +1569,8 @@
 
 
 
+
+  
 
 
 
@@ -1578,12 +1619,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first ">
+    <div class="col-12 col-md-6 order-first order-md-2">
       
       
       
       <a href="https://sites.google.com/view/ecosocar/" target="_blank" rel="noopener">
-        <img src="/my-project/external-project/sciencepolicy/featured_huee93093944160462694bb1044d7a2a55_337432_540x0_resize_q90_lanczos.jpg" alt="">
+        <img src="/my-project/external-project/sciencepolicy/featured_hu_adfeb1a526dc6bbb.jpg" alt="">
       </a>
       
     </div>
@@ -1620,8 +1661,6 @@
 
 
 
-
-  
 
 
 
@@ -1670,12 +1709,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first order-md-2">
+    <div class="col-12 col-md-6 order-first ">
       
       
       
       <a href="https://sites.google.com/view/f2finteract/" target="_blank" rel="noopener">
-        <img src="/my-project/external-project/interact/featured_hubfd5c0d066ba3d6b9692e3c03f34e2f4_157631_540x0_resize_q90_lanczos.jpg" alt="">
+        <img src="/my-project/external-project/interact/featured_hu_ee5b41b7847c6e87.jpg" alt="">
       </a>
       
     </div>
@@ -1712,6 +1751,8 @@
 
 
 
+
+  
 
 
 
@@ -1760,12 +1801,12 @@
       </div>
 
     </div>
-    <div class="col-12 col-md-6 order-first ">
+    <div class="col-12 col-md-6 order-first order-md-2">
       
       
       
       <a href="https://sites.google.com/view/democom/" target="_blank" rel="noopener">
-        <img src="/my-project/external-project/democom/featured_hufc02b4484a0b504d4754265170a9aa07_743027_540x0_resize_q90_lanczos.jpg" alt="">
+        <img src="/my-project/external-project/democom/featured_hu_3ca774e21ded71bb.jpg" alt="">
       </a>
       
     </div>
@@ -1885,7 +1926,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

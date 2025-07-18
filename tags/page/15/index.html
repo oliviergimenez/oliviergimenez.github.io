@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/">
 
@@ -279,7 +248,7 @@
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2025-02-10T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2025-07-18T00:00:00&#43;00:00">
   
 
   
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -568,7 +517,37 @@
     
     
     <div>
-      <h2><a href="/tags/reproducible-science/" >reproducible science</a></h2>
+      <h2><a href="/tags/human-wildlife-conflicts/" >Human-Wildlife Conflicts</a></h2>
+      <div class="article-style">
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/tags/lynx-lynx/" >Lynx Lynx</a></h2>
+      <div class="article-style">
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/tags/capture-recapture-models/" >Capture-Recapture Models</a></h2>
+      <div class="article-style">
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div>
+      <h2><a href="/tags/reproducible-science/" >Reproducible Science</a></h2>
       <div class="article-style">
         
       </div>
@@ -588,7 +567,7 @@
     
     
     <div>
-      <h2><a href="/tags/scicomm/" >SciComm</a></h2>
+      <h2><a href="/tags/scicomm/" >Scicomm</a></h2>
       <div class="article-style">
         
       </div>
@@ -598,7 +577,7 @@
     
     
     <div>
-      <h2><a href="/tags/gdr-ecostat/" >gdr ecostat</a></h2>
+      <h2><a href="/tags/gdr-ecostat/" >GDR EcoStat</a></h2>
       <div class="article-style">
         
       </div>
@@ -608,7 +587,7 @@
     
     
     <div>
-      <h2><a href="/tags/laughter/" >laughter</a></h2>
+      <h2><a href="/tags/laughter/" >Laughter</a></h2>
       <div class="article-style">
         
       </div>
@@ -618,7 +597,7 @@
     
     
     <div>
-      <h2><a href="/tags/research-group/" >research group</a></h2>
+      <h2><a href="/tags/research-group/" >Research Group</a></h2>
       <div class="article-style">
         
       </div>
@@ -628,37 +607,7 @@
     
     
     <div>
-      <h2><a href="/tags/rstat/" >rstat</a></h2>
-      <div class="article-style">
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/tags/large-carnivores/" >large carnivores</a></h2>
-      <div class="article-style">
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/tags/seminar/" >seminar</a></h2>
-      <div class="article-style">
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/tags/integrated-population-models/" >integrated population models</a></h2>
+      <h2><a href="/tags/rstat/" >Rstat</a></h2>
       <div class="article-style">
         
       </div>
@@ -780,7 +729,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

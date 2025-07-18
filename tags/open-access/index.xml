@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>open-access | Olivier Gimenez</title>
+    <title>Open-Access | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/open-access/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/open-access/index.xml" rel="self" type="application/rss+xml" />
-    <description>open-access</description>
+    <description>Open-Access</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Wed, 08 Jun 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>open-access</title>
+      <title>Open-Access</title>
       <link>https://oliviergimenez.github.io/tags/open-access/</link>
     </image>
     

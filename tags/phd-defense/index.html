@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/phd-defense/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/phd-defense/">
-  <meta property="og:title" content="PhD defense | Olivier Gimenez">
+  <meta property="og:title" content="PhD Defense | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>PhD defense | Olivier Gimenez</title>
+  <title>PhD Defense | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>PhD defense</h1>
+  <h1>PhD Defense</h1>
 
   
 
@@ -571,7 +520,8 @@
       <h2><a href="/blog/phd_defense/" >PhD defense on historical ecology</a></h2>
       <div class="article-style">
         
-          I acted as the &ldquo;president&rdquo; on the PhD committee of Sophie Monsarrat who, with her supervisor Ana Rodrigues, kindly invited me. It was about the reconstruction of marine mammal’s historical distribution and abundance using historical data.
+          I acted as the &ldquo;president&rdquo; on the PhD committee of Sophie Monsarrat who, with her supervisor Ana Rodrigues, kindly invited me. It was about the reconstruction of marine mammal’s historical distribution and abundance using historical data. Sophie did an amazing job during her PhD, have a look to her recent paper on the topic. Her presentation was just awesome, I wish I could give such vivid and fascinating talks, irrespective of the topic. Otherwise, her work reminded me of my current work on monk seals with Alex Karamanlidis from the MoM NGO and the talk I&rsquo;m supposed to give at the ICCB2015 on the analysis of citizen science data. More soon.
+
         
       </div>
     </div>
@@ -583,7 +533,8 @@
       <h2><a href="/blog/phd_defense_pam/" >Pamela Lagrange&#39;s PhD defense</a></h2>
       <div class="article-style">
         
-          Paméla Lagrange successfully defended her PhD co-supervised with M. Bélisle from the University of Sherbrooke on the &lsquo;Drivers of survival and breeding dispersal using a capture-recapture framework in Tree Swallows - Québec&rsquo;.
+          Paméla Lagrange successfully defended her PhD co-supervised with M. Bélisle from the University of Sherbrooke on the &lsquo;Drivers of survival and breeding dispersal using a capture-recapture framework in Tree Swallows - Québec&rsquo;. The members of the committee (M. Festa-Bianchet, G. Gauthier, C. Barbraud, E. Cam) were unanimously amazed by both the ecological and methodological contributions of Paméla to the field. Congrats Pam!
+
         
       </div>
     </div>
@@ -595,7 +546,8 @@
       <h2><a href="/blog/laeti_phd_defense/" >Laetitia Blanc defended her PhD</a></h2>
       <div class="article-style">
         
-          Laetitia Blanc succesfully defended her PhD on the conservation of lynx in France. Congrats Laeti! She had very nice feedbacks by the members of committee (X. Lambin, E. Marboutin, J. Linnell, M.
+          Laetitia Blanc succesfully defended her PhD on the conservation of lynx in France. Congrats Laeti! She had very nice feedbacks by the members of committee (X. Lambin, E. Marboutin, J. Linnell, M. Schaub and F. Bonadonna). Laetitia will be working for a few months with us on the estimation of lynx abundance in Norway (with J. Linnell) and with ONCFS to finish up a chapter of her thesis.
+
         
       </div>
     </div>
@@ -607,7 +559,8 @@
       <h2><a href="/blog/sarah_calba/" >Sarah Calba&#39;s PhD defense</a></h2>
       <div class="article-style">
         
-          I acted as president of the examining committee of Sarah Calba who defended her PhD in epistemology of sciences with the predictions in community ecology as a case study. The thesis was supervised by two clever colleagues of mine, Virginie Maris and Vincent Devictor.
+          I acted as president of the examining committee of Sarah Calba who defended her PhD in epistemology of sciences with the predictions in community ecology as a case study. The thesis was supervised by two clever colleagues of mine, Virginie Maris and Vincent Devictor. Sarah did more than well, and the discussions were lively and the debate vivid. As a general comment, I wish we, as ecologists, had more time as part of our training to think of why and how we conduct our scientific activities. Sarah has a nice paper showing that the identification of patterns and processes linking species diversity to functional or phylogenetic diversity depends on the methodological choices we make as analysts. This reminds me of the discussion about &ldquo;Researcher Degrees of Freedom&rdquo; on Gelman’s blog.
+
         
       </div>
     </div>
@@ -717,7 +670,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

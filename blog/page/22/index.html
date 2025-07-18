@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -593,8 +542,8 @@
 
     
     <div class="article-style">
-      Building w/ stakeholders an interface to assess lynx viability in 🇫🇷 Sarah Bauduin gives a crash course on spatially-explicit individual-based models (aka PacMan) #rstats #shiny #leaflet https://t.co/v9e865t2ib #teamboulet pic.twitter.com/1oTtRQRG1j
-&mdash; Olivier Gimenez 🍉 (@oaggimenez) 6 juin 2018 
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Building w/ stakeholders an interface to assess lynx viability in 🇫🇷 Sarah Bauduin gives a crash course on spatially-explicit individual-based models (aka PacMan) <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/shiny?src=hash&amp;ref_src=twsrc%5Etfw">#shiny</a> <a href="https://twitter.com/hashtag/leaflet?src=hash&amp;ref_src=twsrc%5Etfw">#leaflet</a> <a href="https://t.co/v9e865t2ib">https://t.co/v9e865t2ib</a> <a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;ref_src=twsrc%5Etfw">#teamboulet</a> <a href="https://t.co/1oTtRQRG1j">pic.twitter.com/1oTtRQRG1j</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1004270684405628928rc=twsrc%5Etfw">6 juin 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -674,7 +623,8 @@
 
     
     <div class="article-style">
-      Special feature on Evolutionary #Demography by Takenori Takada &amp; @Richshefferson in #Population #Ecology @SpringerJP_LS - We wrote &quot;Estimating individual fitness in the wild using capture-recapture data&quot; https://t.co/5u7x1UvRr5 #rstats code ➡️ https://t.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Special feature on Evolutionary <a href="https://twitter.com/hashtag/Demography?src=hash&amp;ref_src=twsrc%5Etfw">#Demography</a> by Takenori Takada &amp; <a href="https://twitter.com/Richshefferson?ref_src=twsrc%5Etfw">@Richshefferson</a> in <a href="https://twitter.com/hashtag/Population?src=hash&amp;ref_src=twsrc%5Etfw">#Population</a> <a href="https://twitter.com/hashtag/Ecology?src=hash&amp;ref_src=twsrc%5Etfw">#Ecology</a> <a href="https://twitter.com/SpringerJP_LS?ref_src=twsrc%5Etfw">@SpringerJP_LS</a> - We wrote &quot;Estimating individual fitness in the wild using capture-recapture data&quot; <a href="https://t.co/5u7x1UvRr5">https://t.co/5u7x1UvRr5</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> code ➡️ <a href="https://t.co/l8o7Igydn9">https://t.co/l8o7Igydn9</a> <a href="https://t.co/IUp6egBPUA">pic.twitter.com/IUp6egBPUA</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1003358114425593860?ref_src=twsrc%5Etfw">3 juin8</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -754,8 +704,8 @@
 
     
     <div class="article-style">
-      Aux journées de la @Fondationfrance @univpaulvalery &quot;La mer monte, quel littoral pour demain&quot; à la belle ville d&#39;#Agde pour présenter notre programme #Interact 🐬⛵🎣 avec @GIS_3M https://t.co/72YF9gxCeE pic.twitter.com/HbRf40p6PX
-&mdash; Olivier Gimenez 🍉 (@oaggimenez) 31 mai 2018ockquote> 
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Aux journées de la <a href="https://twitter.com/Fondationfrance?ref_src=twsrc%5Etfw">@Fondationfrance</a> <a href="https://twitter.com/univpaulvalery?ref_src=twsrc%5Etfw">@univpaulvalery</a> &quot;La mer monte, quel littoral pour demain&quot; à la belle ville d&#39;<a href="https://twitter.com/hashtag/Agde?src=hash&amp;ref_src=twsrc%5Etfw">#Agde</a> pour présenter notre programme <a href="https://twitter.com/hashtag/Interact?src=hash&amp;ref_src=twsrc%5Etfw">#Interact</a> 🐬⛵🎣 avec <a href="https://twitter.com/GIS_3M?ref_src=twsrc%5Etfw">@GIS_3M</a> <a href="https://t.co/72YF9gxCeE">https://t.co/72YF9gxCeE</a> <a href="https://t.co/HbRf40p6PX">pic.twitter.com/HbRf40p6PX</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1002182868003639298?ref_src=twsrc%5Etfw">31 mai 2018</a>ockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -835,8 +785,9 @@
 
     
     <div class="article-style">
-      Thrilled to have @pardo_deborah for our #teamboulet 🤩👩 🔬 Freelance scientist and coordinator @PureOceanFund @HomewardBound16 #WomenInSTEM #womeninscience #worklife balance #Marseille #networking #scicomm #howtohavefivejobsatonce #outreach pic.twitter.com/t8OX4miuDB
-&mdash; Olivier Gimenez 🍉 (@oaggimenez) 29 mai 2018
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Thrilled to have <a href="https://twitter.com/pardo_deborah?ref_src=twsrc%5Etfw">@pardo_deborah</a> for our <a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;ref_src=twsrc%5Etfw">#teamboulet</a> 🤩👩
+🔬 Freelance scientist and coordinator <a href="https://twitter.com/PureOceanFund?ref_src=twsrc%5Etfw">@PureOceanFund</a> <a href="https://twitter.com/HomewardBound16?ref_src=twsrc%5Etfw">@HomewardBound16</a> <a href="https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;ref_src=twsrc%5Etfw">#WomenInSTEM</a> <a href="https://twitter.com/hashtag/womeninscience?src=hash&amp;ref_src=twsrc%5Etfw">#womeninscience</a> <a href="https://twitter.com/hashtag/worklife?src=hash&amp;ref_src=twsrc%5Etfw">#worklife</a> balance <a href="https://twitter.com/hashtag/Marseille?src=hash&amp;ref_src=twsrc%5Etfw">#Marseille</a> <a href="https://twitter.com/hashtag/networking?src=hash&amp;ref_src=twsrc%5Etfw">#networking</a> <a href="https://twitter.com/hashtag/scicomm?src=hash&amp;ref_src=twsrc%5Etfw">#scicomm</a> <a href="https://twitter.com/hashtag/howtohavefivejobsatonce?src=hash&amp;ref_src=twsrc%5Etfw">#howtohavefivejobsatonce</a> <a href="https://twitter.com/hashtag/outreach?src=hash&amp;ref_src=twsrc%5Etfw">#outreach</a> <a href="https://t.co/t8OX4miuDB">pic.twitter.com/t8OX4miuDB</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1001394126187913216?ref_src=twsrc%5Etfw">29 mai 2018</a</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -916,7 +867,8 @@
 
     
     <div class="article-style">
-      Had a stimulating @AgenceRecherche meeting working on #multispecies #demographic models to study structure &amp; dynamics of 🐺🐦🐟🌱 #communities Check out https://t.co/eNFOzrPgWR w/ @UMR_MECADEV @isemevol #CESCO #CEFE #ONCFS @MARBEC_MicMac #CEBC @CNRSenLR @INEE_CNRS #teamboulet pic.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Had a stimulating <a href="https://twitter.com/AgenceRecherche?ref_src=twsrc%5Etfw">@AgenceRecherche</a> meeting working on <a href="https://twitter.com/hashtag/multispecies?src=hash&amp;ref_src=twsrc%5Etfw">#multispecies</a>  <a href="https://twitter.com/hashtag/demographic?src=hash&amp;ref_src=twsrc%5Etfw">#demographic</a> models to study structure &amp; dynamics of 🐺🐦🐟🌱  <a href="https://twitter.com/hashtag/communities?src=hash&amp;ref_src=twsrc%5Etfw">#communities</a> Check out <a href="https://t.co/eNFOzrPgWR">https://t.co/eNFOzrPgWR</a> w/  <a href="https://twitter.com/UMR_MECADEV?ref_src=twsrc%5Etfw">@UMR_MECADEV</a> <a href="https://twitter.com/isemevol?ref_src=twsrc%5Etfw">@isemevol</a> <a href="https://twitter.com/hashtag/CESCO?src=hash&amp;ref_src=twsrc%5Etfw">#CESCO</a> <a href="https://twitter.com/hashtag/CEFE?src=hash&amp;ref_src=twsrc%5Etfw">#CEFE</a> <a href="https://twitter.com/hashtag/ONCFS?src=hash&amp;ref_src=twsrc%5Etfw">#ONCFS</a> <a href="https://twitter.com/MARBEC_MicMac?ref_src=twsrc%5Etfw">@MARBEC_MicMac</a> <a href="https://twitter.com/hashtag/CEBC?src=hash&amp;ref_src=twsrc%5Etfw">#CEBC</a>  <a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR</a> <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a> <a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;ref_src=twsrc%5Etfw">#teamboulet</a> <a href="https://t.co/XcfVCBWq8L">pic.twitter.com/XcfVCBWq8L</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/999751209711034370?ref_src=twsrc%5Etfw">24 mai18</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -996,7 +948,8 @@
 
     
     <div class="article-style">
-      We had a stimulating #teamboulet meeting this morning, w/ #decocom https://t.co/eNFOzrPgWR post-doc #LucileMarescot giving a crash course on how to make optimal decisions under #uncertainty using stochastic dynamic programming #SDP #decisionmaking @AgenceRecherche @CNRSenLR pic.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">We had a stimulating <a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;ref_src=twsrc%5Etfw">#teamboulet</a> meeting this morning, w/ <a href="https://twitter.com/hashtag/decocom?src=hash&amp;ref_src=twsrc%5Etfw">#decocom</a> <a href="https://t.co/eNFOzrPgWR">https://t.co/eNFOzrPgWR</a> post-doc <a href="https://twitter.com/hashtag/LucileMarescot?src=hash&amp;ref_src=twsrc%5Etfw">#LucileMarescot</a> giving a crash course on how to make optimal decisions under <a href="https://twitter.com/hashtag/uncertainty?src=hash&amp;ref_src=twsrc%5Etfw">#uncertainty</a> using stochastic dynamic programming <a href="https://twitter.com/hashtag/SDP?src=hash&amp;ref_src=twsrc%5Etfw">#SDP</a> <a href="https://twitter.com/hashtag/decisionmaking?src=hash&amp;ref_src=twsrc%5Etfw">#decisionmaking</a> <a href="https://twitter.com/AgenceRecherche?ref_src=twsrc%5Etfw">@AgenceRecherche</a> <a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR</a> <a href="https://t.co/XkdSYjFGrL">pic.twitter.com/XkdSYjFGrL</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/998991930313854976?ref_src=twsrc%5Etfw">22 mai 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1076,7 +1029,8 @@
 
     
     <div class="article-style">
-      Awesome #teamboulet weekly meeting last Friday with #ReginaBestbier &amp; @AmandaVincent1 @projectseahorse @UBC on communicating science 👩‍🔬👨‍🔬 &quot;1/ Who is your audience 2/ What is your message 3/ Keep it simple and easy&quot; #scicomm #WomenInSTEM @CNRSenLR pic.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Awesome <a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;ref_src=twsrc%5Etfw">#teamboulet</a> weekly meeting last Friday with <a href="https://twitter.com/hashtag/ReginaBestbier?src=hash&amp;ref_src=twsrc%5Etfw">#ReginaBestbier</a> &amp; <a href="https://twitter.com/AmandaVincent1?ref_src=twsrc%5Etfw">@AmandaVincent1</a> <a href="https://twitter.com/projectseahorse?ref_src=twsrc%5Etfw">@projectseahorse</a> <a href="https://twitter.com/UBC?ref_src=twsrc%5Etfw">@UBC</a> on communicating science 👩‍🔬👨‍🔬 &quot;1/ Who is your audience 2/ What is your message 3/ Keep it simple and easy&quot; <a href="https://twitter.com/hashtag/scicomm?src=hash&amp;ref_src=twsrc%5Etfw">#scicomm</a> <a href="https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;ref_src=twsrc%5Etfw">#WomenInSTEM</a> <a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR</a> <a href="https://t.co/vl1x8X4IjM">pic.twitter.com/vl1x8X4IjM</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/998641128747433985?ref_src=twsrc%5Etfw">21 mai 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1156,7 +1110,8 @@
 
     
     <div class="article-style">
-      Very honored and pleased 🤩 to serve as an Associate Editor for the new @BritishEcolSoc journal &#39;People and Nature&#39; 🎉🍾 Looking forward to handling my first submission 👀 #SocialSciences #ecology #nature #humanities https://t.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Very honored and pleased 🤩 to serve as an Associate Editor for the new <a href="https://twitter.com/BritishEcolSoc?ref_src=twsrc%5Etfw">@BritishEcolSoc</a> journal &#39;People and Nature&#39; 🎉🍾 Looking forward to handling my first submission 👀 <a href="https://twitter.com/hashtag/SocialSciences?src=hash&amp;ref_src=twsrc%5Etfw">#SocialSciences</a> <a href="https://twitter.com/hashtag/ecology?src=hash&amp;ref_src=twsrc%5Etfw">#ecology</a> <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a href="https://twitter.com/hashtag/humanities?src=hash&amp;ref_src=twsrc%5Etfw">#humanities</a> <a href="https://t.co/2jl8FDdNqc">https://t.co/2jl8FDdNqc</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/995008025906831360?ref_src=twsrc%5Etfw">11 mai 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1236,7 +1191,8 @@
 
     
     <div class="article-style">
-      Séminaire interfaces #linguistique et #écologie organisé par @Praxiling et #CEFE 14/05 @montpellier_ On y parlera de notre article récent sur le traitement médiatique du 🐺 dans la 🗞️ https://t.co/D8R2tzt3D0 @CNRSenLR @univpaulvalery @lemondefr @lemonde_science @Nice_Matin pic.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Séminaire interfaces <a href="https://twitter.com/hashtag/linguistique?src=hash&amp;ref_src=twsrc%5Etfw">#linguistique</a> et <a href="https://twitter.com/hashtag/%C3%A9cologie?src=hash&amp;ref_src=twsrc%5Etfw">#écologie</a> organisé par <a href="https://twitter.com/Praxiling?ref_src=twsrc%5Etfw">@Praxiling</a> et <a href="https://twitter.com/hashtag/CEFE?src=hash&amp;ref_src=twsrc%5Etfw">#CEFE</a> 14/05 <a href="https://twitter.com/montpellier_?ref_src=twsrc%5Etfw">@montpellier_</a> On y parlera de notre article récent sur le traitement médiatique du 🐺 dans la 🗞️ <a href="https://t.co/D8R2tzt3D0">https://t.co/D8R2tzt3D0</a> <a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR</a> <a href="https://twitter.com/univpaulvalery?ref_src=twsrc%5Etfw">@univpaulvalery</a> <a href="https://twitter.com/lemondefr?ref_src=twsrc%5Etfw">@lemondefr</a> <a href="https://twitter.com/lemonde_science?ref_src=twsrc%5Etfw">@lemonde_science</a> <a href="https://twitter.com/Nice_Matin?ref_src=twsrc%5Etfw">@Nice_Matin</a> <a href="https://t.co/k8RfAfOzQF">pic.twitter.com/k8RfAfOzQF</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/994129384645779457?ref_src=twsrc%5Etfw">9 mai 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1316,7 +1272,8 @@
 
     
     <div class="article-style">
-      Science 🌉 policy: Inspiring meeting this morning w/ Sarah Fowler @saveourseas scientific adviser and @AmandaVincent1 &quot;How scientists can influence policy? One person can make a difference&quot; #teamboulet #CEFE @INEE_CNRS @CNRSenLR @umontpellier pic.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Science 🌉 policy: Inspiring meeting this morning w/ Sarah Fowler <a href="https://twitter.com/saveourseas?ref_src=twsrc%5Etfw">@saveourseas</a> scientific adviser and <a href="https://twitter.com/AmandaVincent1?ref_src=twsrc%5Etfw">@AmandaVincent1</a> &quot;How scientists can influence policy? One person can make a difference&quot; <a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;ref_src=twsrc%5Etfw">#teamboulet</a> <a href="https://twitter.com/hashtag/CEFE?src=hash&amp;ref_src=twsrc%5Etfw">#CEFE</a> <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a> <a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR</a> <a href="https://twitter.com/umontpellier?ref_src=twsrc%5Etfw">@umontpellier</a> <a href="https://t.co/S3J8jmz75d">pic.twitter.com/S3J8jmz75d</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/993555796985307136?ref_src=twsrc%5Etfw">7 mai 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1487,7 +1444,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

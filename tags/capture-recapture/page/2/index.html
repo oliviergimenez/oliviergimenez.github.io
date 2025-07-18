@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/capture-recapture/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/capture-recapture/">
-  <meta property="og:title" content="capture-recapture | Olivier Gimenez">
+  <meta property="og:title" content="Capture-Recapture | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>capture-recapture | Olivier Gimenez</title>
+  <title>Capture-Recapture | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>capture-recapture</h1>
+  <h1>Capture-Recapture</h1>
 
   
 
@@ -596,7 +545,8 @@
       <h2><a href="/blog/semjags/" >Bayesian SEM capture-recapture models</a></h2>
       <div class="article-style">
         
-          We had to dig out some #rstats #jags code to fit a structural equation capture-recapture model we developed w/ @SCubi25 in a 8-year old @ESAEcology paper (!), and it runs like a charm 🥳🍾#reproducibility ➡️ https://t.
+          We had to dig out some #rstats #jags code to fit a structural equation capture-recapture model we developed w/ @SCubi25 in a 8-year old @ESAEcology paper (!), and it runs like a charm 🥳🍾#reproducibility ➡️ https://t.co/Te6BKnxgMF pic.twitter.com/78tWbOhqZD
+
         
       </div>
     </div>
@@ -621,7 +571,8 @@
       <h2><a href="/blog/crreview/" >A review on the last decade of research on capture-recapture</a></h2>
       <div class="article-style">
         
-          A thread on my review of the capture-recapture literature for the conference Wildlife Research and Conservation 2019 https://t.co/dqz8kbLdym in Berlin 🇩🇪. Slides, analyses, data &amp; #rstats codes available from https://t.co/s9sFbkZG4k 1/23 pic.
+          A thread on my review of the capture-recapture literature for the conference Wildlife Research and Conservation 2019 https://t.co/dqz8kbLdym in Berlin 🇩🇪. Slides, analyses, data &amp; #rstats codes available from https://t.co/s9sFbkZG4k 1/23 pic.twitter.com/crGkVqYzov
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) September 28, /a> 
         
       </div>
     </div>
@@ -633,7 +584,8 @@
       <h2><a href="/blog/paper_hlabach/" >New preprint: Distribution and abundance of bottlenose dolphin (Tursiops truncatus) over the French Mediterranean continental shelf</a></h2>
       <div class="article-style">
         
-          New #preprint w/ @GIS_3M on Distribution and abundance of bottlenose dolphin (Tursiops truncatus) over the French Mediterranean continental shelf https://t.co/eNfgLCT4k4 - Soooo impressed by the huge collective field effort to collect photo-id on this iconic species!
+          New #preprint w/ @GIS_3M on Distribution and abundance of bottlenose dolphin (Tursiops truncatus) over the French Mediterranean continental shelf https://t.co/eNfgLCT4k4 - Soooo impressed by the huge collective field effort to collect photo-id on this iconic species! pic.twitter.com/gRqpzkg6UK
+
         
       </div>
     </div>
@@ -645,7 +597,8 @@
       <h2><a href="/blog/papertamar/" >New paper: Accounting for heterogeneity when estimating stopover duration, timing and population size of red knots along the Luannan Coast of Bohai Bay, China</a></h2>
       <div class="article-style">
         
-          New paper by @TamarLok 🤩👏 using integrated modelling of 8 years of resighting and count data and accouting for heterogeneity to show the key importance of the Luannan Coast of Bohai Bay (China) as a spring #stopover area for red knots https://t.
+          New paper by @TamarLok 🤩👏 using integrated modelling of 8 years of resighting and count data and accouting for heterogeneity to show the key importance of the Luannan Coast of Bohai Bay (China) as a spring #stopover area for red knots https://t.co/EgOA6yM4Dp #WomenInSTEM pic.twitter.com/05qVXhyXVt
+
         
       </div>
     </div>
@@ -657,7 +610,8 @@
       <h2><a href="/blog/localminima_reboot/" >Local minima and multistate capture-recapture models</a></h2>
       <div class="article-style">
         
-          I thought I&#39;d share some #rstats code about local minima in #multistate #capturerecapture models https://t.co/aJE33dBtdO using #Mark #Admb #Jags #Stan (#Nimble &amp; #TMB to come). Largely inspired by Chapter 9 of the &quot;Gentle introduction to Mark&quot; by Cooch &amp; White 😉 pic.
+          I thought I&#39;d share some #rstats code about local minima in #multistate #capturerecapture models https://t.co/aJE33dBtdO using #Mark #Admb #Jags #Stan (#Nimble &amp; #TMB to come). Largely inspired by Chapter 9 of the &quot;Gentle introduction to Mark&quot; by Cooch &amp; White 😉 pic.twitter.com/NxzG6w0Bzq
+
         
       </div>
     </div>
@@ -682,7 +636,8 @@
       <h2><a href="/blog/bibi_paper2/" >New paper!</a></h2>
       <div class="article-style">
         
-          Special feature on Evolutionary #Demography by Takenori Takada &amp; @Richshefferson in #Population #Ecology @SpringerJP_LS - We wrote &quot;Estimating individual fitness in the wild using capture-recapture data&quot; https://t.co/5u7x1UvRr5 #rstats code ➡️ https://t.
+          Special feature on Evolutionary #Demography by Takenori Takada &amp; @Richshefferson in #Population #Ecology @SpringerJP_LS - We wrote &quot;Estimating individual fitness in the wild using capture-recapture data&quot; https://t.co/5u7x1UvRr5 #rstats code ➡️ https://t.co/l8o7Igydn9 pic.twitter.com/IUp6egBPUA
+&mdash; Olivier Gimenez 🍉 (@oaggimenez) 3 juin8 
         
       </div>
     </div>
@@ -803,7 +758,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

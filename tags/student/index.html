@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/student/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/student/">
-  <meta property="og:title" content="student | Olivier Gimenez">
+  <meta property="og:title" content="Student | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>student | Olivier Gimenez</title>
+  <title>Student | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>student</h1>
+  <h1>Student</h1>
 
   
 
@@ -571,7 +520,8 @@
       <h2><a href="/blog/grant_julie/" >New PhD student on large carnivore monitoring</a></h2>
       <div class="article-style">
         
-          I&rsquo;m so delighted to announce that Julie will start a PhD in October with me, jointly working with Eric Marboutin and Christophe Duchamp from ONCFS. There will be also collaborations with John Linnell from NINA.
+          I&rsquo;m so delighted to announce that Julie will start a PhD in October with me, jointly working with Eric Marboutin and Christophe Duchamp from ONCFS. There will be also collaborations with John Linnell from NINA. She&rsquo;ll be studying the various ways to assess the distribution of large carnivores and methods to optimise the associated monitoring protocols.
+
         
       </div>
     </div>
@@ -583,7 +533,8 @@
       <h2><a href="/blog/master_2015/" >Awesome master students</a></h2>
       <div class="article-style">
         
-          My 2 master students finished their internships. I was so lucky to have them and work with them. Iago worked on the estimation of abundance using bilateral photo-identification capture-recapture data, with an application to bottlenose dolphins.
+          My 2 master students finished their internships. I was so lucky to have them and work with them. Iago worked on the estimation of abundance using bilateral photo-identification capture-recapture data, with an application to bottlenose dolphins. He made a very neat contribution to the field by greatly improving existing algorithms (here and here) to fit capture-recapture models to these non-standard data. Julie worked on inferring the distribution of wolves in France from the beginning of its recolonization in the early 90’s. Her main contribution was to show that by carefully describing observers’ characteristics and properly quantify the prospection effort, citizen science data can be used to map the range dynamics of species with large dispersal distances and home ranges. Iago will spend next year improving his (already largely above the average) skills in informatics, AI, programming, agent-based modeling&hellip; Hopefully, we’ll work again together. Julie is applying for PhD grants, more soon.
+
         
       </div>
     </div>
@@ -693,7 +644,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

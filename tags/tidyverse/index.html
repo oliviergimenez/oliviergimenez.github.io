@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/tidyverse/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/tidyverse/">
-  <meta property="og:title" content="tidyverse | Olivier Gimenez">
+  <meta property="og:title" content="Tidyverse | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>tidyverse | Olivier Gimenez</title>
+  <title>Tidyverse | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>tidyverse</h1>
+  <h1>Tidyverse</h1>
 
   
 
@@ -571,7 +520,8 @@
       <h2><a href="/blog/2022-06-01-tips-and-tricks-in-tidyverse/" >Tips and tricks in Tidyverse</a></h2>
       <div class="article-style">
         
-          Because of my old age I guess, I&#39;m often asked how I switched from base R #RStats to #tidyverse. I learnt by watching @drob screencasts 🎥 in which he analyses #TidyTuesday data he has never seen before (!
+          Because of my old age I guess, I&#39;m often asked how I switched from base R #RStats to #tidyverse. I learnt by watching @drob screencasts 🎥 in which he analyses #TidyTuesday data he has never seen before (!). Here is a list of my tips https://t.co/VFAaDz8onE in case it&#39;s useful. pic.twitter.com/4Emq2J2qQL
+
         
       </div>
     </div>
@@ -622,7 +572,8 @@
       <h2><a href="/blog/procrastination_coulmont/" >Mortalité en France et tidyverse</a></h2>
       <div class="article-style">
         
-          Procrastination... Je me suis &quot;amusé&quot; à reproduire cette géniale figure de @coulmont sur le jour des décès en 🇫🇷 en fonction de l&#39;âge et du temps avec #rstats et le #tidyverse https://t.
+          Procrastination... Je me suis &quot;amusé&quot; à reproduire cette géniale figure de @coulmont sur le jour des décès en 🇫🇷 en fonction de l&#39;âge et du temps avec #rstats et le #tidyverse https://t.co/W8QNBX5WlT #ggplot2 #dplyr #lubridate https://t.co/wOthJOBzBd
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) December 23, 2019 
         
       </div>
     </div>
@@ -634,7 +585,8 @@
       <h2><a href="/blog/cesabworkshop/" >Workshop on reproducible science</a></h2>
       <div class="article-style">
         
-          This week we host our first winter school on «Reproducible Research in Numerical Ecology » co-organised by #GDR_Ecostat &amp; #CESAB @FRBiodiv. Many thanks to our incredible list of speakers : Nicolas Casajus, Stéphane Dray, @GueryLorelei, @oaggimenez, @FGuilhaumon &amp; @NinaSchiett !
+          This week we host our first winter school on «Reproducible Research in Numerical Ecology » co-organised by #GDR_Ecostat &amp; #CESAB @FRBiodiv. Many thanks to our incredible list of speakers : Nicolas Casajus, Stéphane Dray, @GueryLorelei, @oaggimenez, @FGuilhaumon &amp; @NinaSchiett !! pic.twitter.com/lRKlVXtYym
+
         
       </div>
     </div>
@@ -646,7 +598,8 @@
       <h2><a href="/blog/intro_spatial/" >Introduction to spatial analyses in R</a></h2>
       <div class="article-style">
         
-          👩 💻🗺️👨 💻 The slides of my introduction to #GIS and #mapping in #rstats using the #sf 📦 and brown 🐻 distribution in the #pyrenees as a case study https://t.co/SKQOCzbxHn - raw material on #github https://t.
+          👩 💻🗺️👨 💻 The slides of my introduction to #GIS and #mapping in #rstats using the #sf 📦 and brown 🐻 distribution in the #pyrenees as a case study https://t.co/SKQOCzbxHn - raw material on #github https://t.co/dHoMz6I2Kp #rspatial #spatial #ggplot2 #tidyverse #dataviz pic.twitter.com/22eD1Y55d3
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) 8 février 2019 
         
       </div>
     </div>
@@ -658,7 +611,8 @@
       <h2><a href="/blog/intro_tidyverse/" >Introduction to the Tidyverse</a></h2>
       <div class="article-style">
         
-          My introduction to the #tidyverse for our lab meeting to manipulate and visualise data in #rstat https://t.co/As9bkXY9GZ. Feel free to steal and modify this material for your own use. Be advised, this is work in progress &amp; a mix of 🇬🇧/🇫🇷😋 Comments welcome!
+          My introduction to the #tidyverse for our lab meeting to manipulate and visualise data in #rstat https://t.co/As9bkXY9GZ. Feel free to steal and modify this material for your own use. Be advised, this is work in progress &amp; a mix of 🇬🇧/🇫🇷😋 Comments welcome! #datascience #davaviz pic.twitter.com/2vrrdbzuWh
+
         
       </div>
     </div>
@@ -781,7 +735,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

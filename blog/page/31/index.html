@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -593,7 +542,8 @@
 
     
     <div class="article-style">
-      Rachel Guénon successfully defended her Master internship on the Dalmatian pelican and life-history tradeoffs (from Greece!). This is joint work with Alain Crivelli from Tour du Valat.
+      <p>Rachel Guénon successfully defended her Master internship on the Dalmatian pelican
+and life-history tradeoffs (from Greece!). This is joint work with Alain Crivelli from Tour du Valat.</p>
     </div>
     
 
@@ -673,7 +623,10 @@
 
     
     <div class="article-style">
-      Sending questionnaires for Blaise&rsquo;s PhD to study the local perception of the presence of brown bears in the Pyrénées. First picture, the 3000 questionnaires to be sent; second picture, those questionnaires once packed in boxes; third picture, the nice guy from the mail company La Poste comes and picks them up.
+      <p>Sending questionnaires for Blaise&rsquo;s PhD to study the local perception of the presence of
+brown bears in the Pyrénées. First picture, the 3000 questionnaires to be sent; second picture,
+those questionnaires once packed in boxes; third picture, the nice guy from the mail company
+La Poste comes and picks them up. Now the question is how many of them we will we get back?&hellip;</p>
     </div>
     
 
@@ -753,7 +706,12 @@
 
     
     <div class="article-style">
-      The team is leading the organisation of ISEC2014. We&rsquo;re getting ready by, among many other things, preparing the delegates&rsquo; packs. Of course, these efforts cannot go without some relaxing time.
+      <p>The team is leading the organisation of <a href="http://isec2014.sciencesconf.org/" target="_blank">ISEC2014</a>.
+We&rsquo;re getting ready by, among many other things, preparing the delegates&rsquo; packs. Of
+course, these efforts cannot go without some relaxing time.</p>
+<p><img src="/img/preparing-delegate-pack.jpg" alt="">
+<img src="/img/relaxing-planche-de-la-mer.jpg" alt="">
+<img src="/img/relaxing.jpg" alt=""></p>
     </div>
     
 
@@ -833,7 +791,11 @@
 
     
     <div class="article-style">
-      Relaxing after finishing up writing a big grant proposal. Tedeschi and Truck concert at the mytic Olympia Paris with Jonny Lang as the opening act.
+      <p>Relaxing after finishing up writing a big grant proposal. Tedeschi and
+Truck concert at the mytic Olympia Paris with Jonny Lang as the opening act.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Eva4h0MVss8?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
     </div>
     
 
@@ -913,7 +875,10 @@
 
     
     <div class="article-style">
-      Dave and Lise are going back home to the US after a 6-month sabbatical with us. It&rsquo;s been awesome to have you here!
+      <p><a href="http://www.cnr.usu.edu/htm/facstaff/koons-page" target="_blank">Dave</a>
+and <a href="http://liseaubry.webs.com/" target="_blank">Lise </a>are going
+back home to the US after a 6-month sabbatical with us. It&rsquo;s been awesome to
+have you here!</p>
     </div>
     
 
@@ -993,7 +958,13 @@
 
     
     <div class="article-style">
-      The team run two 1-week workshops on capture-recapture models and matrix models. We&rsquo;re grateful to all the attendees who came, with fascinating research topics and stimulating questions. No need to say that your presence means a lot to us!
+      <p>The team run two 1-week workshops on <a href="http://multievent.sciencesconf.org/" target="_blank">capture-recapture
+models</a> and <a href="http://matrixmodels.sciencesconf.org/" target="_blank">matrix models</a>.
+We&rsquo;re grateful to all the attendees who came, with fascinating research topics and stimulating
+questions. No need to say that your presence means a lot to us! We hope to see again many
+people next year! Warm and special thanks to <a href="http://www.cnr.usu.edu/htm/facstaff/koons-page" target="_blank">Dave
+Koons</a>, <a href="http://liseaubry.webs.com/" target="_blank">Lise Aubry</a> and Pamela
+Lagrange!</p>
     </div>
     
 
@@ -1073,7 +1044,12 @@
 
     
     <div class="article-style">
-      The French research group in Statistical Ecology (GDR EcoStat) is born. Funded by CNRS, the objective is to structure the research in statistical ecology at a national (French) level. Check out our website, and sign up for our mailing list!
+      <p><a href="https://sites.google.com/site/gdrecostat/" target="_blank">The French
+research group in Statistical Ecology (GDR EcoStat)</a> is born. Funded by CNRS, the objective
+is to structure the research in statistical ecology at a national (French) level. Check
+out <a href="https://sites.google.com/site/gdrecostat/" target="_blank">our website</a>,
+and sign up for <a href="https://listes.services.cnrs.fr/wws/info/ecostat" target="_blank">our
+mailing list</a>!</p>
     </div>
     
 
@@ -1153,7 +1129,10 @@
 
     
     <div class="article-style">
-      Below are the slides of my plenary talk at the 2013 EURING meeting on individual variability in capture-recapture models. I couldn’t attend, but the organizers were kind enough to run my presentation to the audience.
+      <p>Below are the slides of my plenary talk at the 2013 EURING
+meeting on individual variability in capture-recapture models. I couldn’t attend,
+but the organizers were kind enough to run my presentation to the audience. I had to
+be a bit imaginative for the attendees not to fall asleep&hellip;</p>
     </div>
     
 
@@ -1233,7 +1212,9 @@
 
     
     <div class="article-style">
-      Here are the slides of my interview for a CNRS senior scientist position (DR2). Note that CNRS offers interdisciplinary positions, which is sadly not true for all of our research institutes.
+      <p>Here are the slides of my interview for a CNRS senior scientist position (DR2). Note that
+CNRS offers interdisciplinary positions, which is sadly not true for all of our research
+institutes.</p>
     </div>
     
 
@@ -1313,7 +1294,11 @@
 
     
     <div class="article-style">
-      Here are the slides of my HDR defense. This is a necessary step in France (and in other countries) to be authorized to supervise (officially) PhD students.
+      <p>Here are the slides of my HDR defense. This is a necessary step in France
+(and 
+<a href="https://en.wikipedia.org/wiki/Habilitation" target="_blank" rel="noopener">in other countries</a>) to be authorized
+to supervise (officially) PhD students.</p>
+<iframe src="https://widgets.figshare.com/articles/4833509/embed?show_title=1" width="568" height="351" frameborder="0"></iframe>
     </div>
     
 
@@ -1482,7 +1467,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

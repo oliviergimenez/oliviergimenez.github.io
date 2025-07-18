@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -644,7 +593,7 @@
     
     
     <a href="/blog/otterconnect/" >
-      <img src="/blog/otterconnect/featured_huf5569ea21a9db4189455c4179f5c788c_796329_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/otterconnect/featured_hu_8d93cb14fc6c3ce9.jpg" alt="">
     </a>
     
   </div>
@@ -678,7 +627,7 @@
 
     
     <div class="article-style">
-      How to assess landscape connectivity with spatial capture-recapture models? @oSCR_package to the rescue ! Some code to reproduce results from a great paper by Dana Morin @Fuller_Lab @andyroyle_pwrc &amp; @chrissuthy Post: https://t.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">How to assess landscape connectivity with spatial capture-recapture models? <a href="https://twitter.com/oSCR_package?ref_src=twsrc%5Etfw">@oSCR_package</a> to the rescue ! Some code to reproduce results from a great paper by Dana Morin <a href="https://twitter.com/Fuller_Lab?ref_src=twsrc%5Etfw">@Fuller_Lab</a> <a href="https://twitter.com/andyroyle_pwrc?ref_src=twsrc%5Etfw">@andyroyle_pwrc</a> &amp; <a href="https://twitter.com/chrissuthy?ref_src=twsrc%5Etfw">@chrissuthy</a> <br><br>Post: <a href="https://t.co/FVwBzMnqA9">https://t.co/FVwBzMnqA9</a><br><br>Code: <a href="https://t.co/FMMyF0s22x">https://t.co/FMMyF0s22x</a> <a href="https://t.co/QUlOjlGnPf">pic.twitter.com/QUlOjlGnPf</a></p>&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1640272014505127936?ref_src=twsrc%5Etfw">March 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -729,7 +678,7 @@
     
     
     <a href="/blog/connectoscr/" >
-      <img src="/blog/connectoscr/featured_hub9dd3be6237acd871f47c28e6ec77a2d_110394_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/connectoscr/featured_hu_37d85a5ae394d8d8.jpg" alt="">
     </a>
     
   </div>
@@ -763,7 +712,7 @@
 
     
     <div class="article-style">
-      📢👋 Together with @SarahCubaynes &amp; @abesnardEPHE we will give a 2-day introductory workshop June 1-2 on quantitative methods for population dynamics in R #rstats Join us 🥳 It&#39;s online and free of charge 😉 You just need to register via https://t.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">📢👋 Together with <a href="https://twitter.com/SarahCubaynes?ref_src=twsrc%5Etfw">@SarahCubaynes</a> &amp; <a href="https://twitter.com/abesnardEPHE?ref_src=twsrc%5Etfw">@abesnardEPHE</a> we will give a 2-day introductory workshop June 1-2 on quantitative methods for population dynamics in R <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <br><br>Join us 🥳 It&#39;s online and free of charge 😉 You just need to register via <a href="https://t.co/otguiSMTY0">https://t.co/otguiSMTY0</a><br><br>Please RT 😇 <a href="https://t.co/6ghDHE92SJ">pic.twitter.com/6ghDHE92SJ</a></p>
     </div>
     
 
@@ -814,7 +763,7 @@
     
     
     <a href="/blog/annonceworkshoppopdyn/" >
-      <img src="/blog/annonceworkshoppopdyn/featured_hu6c97db67df2a339e437c83acf09e880f_200535_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/annonceworkshoppopdyn/featured_hu_28dd7a6fad7b2709.jpg" alt="">
     </a>
     
   </div>
@@ -848,9 +797,7 @@
 
     
     <div class="article-style">
-      Ey! VIBASS 6 is announced online now https://t.co/VS8cLR8ocK
-🗓️ July 10-14 2023
-🚩Faculty of Mathematics @FMatemaUV_EG, Valencia, Spain Be aware that the registration would start really really soon and we just have few spots.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ey! VIBASS 6 is announced online now <a href="https://t.co/VS8cLR8ocK">https://t.co/VS8cLR8ocK</a><br>🗓️ July 10-14 2023<br>🚩Faculty of Mathematics <a href="https://twitter.com/FMatemaUV_EG?ref_src=twsrc%5Etfw">@FMatemaUV_EG</a>, Valencia, Spain <br><br>Be aware that the registration would start really really soon and we just have few spots. Don&#39;t miss it. <a href="https://t.co/5M61dbuxuF">pic.twitter.com/5M61dbuxuF</a></p>
     </div>
     
 
@@ -901,7 +848,7 @@
     
     
     <a href="/blog/annoncevibass/" >
-      <img src="/blog/annoncevibass/featured_hu5438825b9b6d1014226d20d231e650c2_150583_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/annoncevibass/featured_hu_3ca28654440adbef.jpg" alt="">
     </a>
     
   </div>
@@ -935,7 +882,7 @@
 
     
     <div class="article-style">
-      Check it out, this is a cool ++++ paper by @MaelisKervellec 🤩🤩 So glad for her that she got her first PhD paper published #OpenAccess @OFBiodiversite @CNRS_OccitaniE @INEE_CNRS @umontpellier @twitthair1 @cefemontpellier https://t.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Check it out, this is a cool ++++ paper by <a href="https://twitter.com/MaelisKervellec?ref_src=twsrc%5Etfw">@MaelisKervellec</a> 🤩🤩 So glad for her that she got her first PhD paper published <a href="https://twitter.com/hashtag/OpenAccess?src=hash&amp;ref_src=twsrc%5Etfw">#OpenAccess</a> <a href="https://twitter.com/OFBiodiversite?ref_src=twsrc%5Etfw">@OFBiodiversite</a> <a href="https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw">@CNRS_OccitaniE</a> <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a> <a href="https://twitter.com/umontpellier?ref_src=twsrc%5Etfw">@umontpellier</a> <a href="https://twitter.com/twitthair1?ref_src=twsrc%5Etfw">@twitthair1</a> <a href="https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw">@cefemontpellier</a> <a href="https://t.co/sVdXl40DyU">https://t.co/sVdXl40DyU</a></p>&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1613268327970775058?ref_src=twsrc%5Etfw">January 11, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -986,7 +933,7 @@
     
     
     <a href="/blog/papiermaelis/" >
-      <img src="/blog/papiermaelis/featured_hu0b85fc06c45fa18df8bf32f1ed90561a_89805_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/papiermaelis/featured_hu_a2a9cc2ec99c9f30.jpg" alt="">
     </a>
     
   </div>
@@ -1020,7 +967,7 @@
 
     
     <div class="article-style">
-      This morning we&#39;ll have a panorama of the math/stat/info models we use/develop at @cefemontpellier to address questions in ecology &amp; evolution 🤩😇 Program below. This is an internal seminar to get to know each other better, but @Master_RAINET students will be live tweeting 😍🙏 https://t.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This morning we&#39;ll have a panorama of the math/stat/info models we use/develop at <a href="https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw">@cefemontpellier</a> to address questions in ecology &amp; evolution 🤩😇 Program below. This is an internal seminar to get to know each other better, but <a href="https://twitter.com/Master_RAINET?ref_src=twsrc%5Etfw">@Master_RAINET</a> students will be live tweeting 😍🙏 <a href="https://t.co/qp6qYMGlOh">https://t.co/qp6qYMGlOh</a> <a href="https://t.co/xrSXIIBZhm">pic.twitter.com/xrSXIIBZhm</a></p>
     </div>
     
 
@@ -1071,7 +1018,7 @@
     
     
     <a href="/blog/modelocefe/" >
-      <img src="/blog/modelocefe/featured_hu5367464c512cc521cc083a47bb30e65a_23303_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/modelocefe/featured_hu_15bfd4981073859e.jpg" alt="">
     </a>
     
   </div>
@@ -1105,8 +1052,7 @@
 
     
     <div class="article-style">
-      So proud of our latest paper on estimating abundance of Brown bear in the Pyrenees 🐻📈 in @PeerComJournal led by C Vanpé 😇https://t.co/aBZtWmO1UW
-Yet another example of our collaboration w/ @OFBiodiversite 🤩
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">So proud of our latest paper on estimating abundance of Brown bear in the Pyrenees 🐻📈 in <a href="https://twitter.com/PeerComJournal?ref_src=twsrc%5Etfw">@PeerComJournal</a> led by C Vanpé 😇<a href="https://t.co/aBZtWmO1UW">https://t.co/aBZtWmO1UW</a><br><br>Yet another example of our collaboration w/ <a href="https://twitter.com/OFBiodiversite?ref_src=twsrc%5Etfw">@OFBiodiversite</a> 🤩<br><br>Data &amp; code <a href="https://t.co/uZGQ3Fy2Iq">https://t.co/uZGQ3Fy2Iq</a><a href="https://twitter.com/hashtag/DiamondOpenAccess?src=hash&amp;ref_src=twsrc%5Etfw">#DiamondOpenAccess</a> <a href="https://t.co/H0PfGWFFxD">pic.twitter.com/H0PfGWFFxD</a></p>
     </div>
     
 
@@ -1157,7 +1103,7 @@ Yet another example of our collaboration w/ @OFBiodiversite 🤩
     
     
     <a href="/blog/bearsize/" >
-      <img src="/blog/bearsize/featured_hu3e4207cc0ee1665c27414692d9cfc892_263965_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/bearsize/featured_hu_3f98989b6327c278.jpg" alt="">
     </a>
     
   </div>
@@ -1191,7 +1137,7 @@ Yet another example of our collaboration w/ @OFBiodiversite 🤩
 
     
     <div class="article-style">
-      Conditions de travail et santé mentale des jeunes chercheur.e.s : constats et solutions. La vidéo de la conf d&#39;Adèle Combes @Vies_de_these et de la table ronde qui a suivi est dispo sur https://t.
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Conditions de travail et santé mentale des jeunes chercheur.e.s : constats et solutions. La vidéo de la conf d&#39;Adèle Combes @Vies_de_these et de la table ronde qui a suivi est dispo sur <a href="https://t.co/Sv4nT7zMmE">https://t.co/Sv4nT7zMmE</a>. <a href="https://t.co/A9UH0aX5Un">https://t.co/A9UH0aX5Un</a></p>
     </div>
     
 
@@ -1242,7 +1188,7 @@ Yet another example of our collaboration w/ @OFBiodiversite 🤩
     
     
     <a href="/blog/adele/" >
-      <img src="/blog/adele/featured_hu256fdbd418985d8ef2116079091fbfa1_50762_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/adele/featured_hu_7c3ac8a416011725.jpg" alt="">
     </a>
     
   </div>
@@ -1276,8 +1222,7 @@ Yet another example of our collaboration w/ @OFBiodiversite 🤩
 
     
     <div class="article-style">
-      .@LouvrierJulie reçoit le prix jeune chercheuse 2020 de la @sfecologie au @Salon_AdNatura #AdNatura 🥳 pour son travail de thèse sur le loup 🐺🗺 @cefemontpellier @CNRS_OccitaniE @INEE_CNRS @umontpellier @OFBiodiversite pic.twitter.com/T2dNxeuaA9
-&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) October 29, 2022 
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">.<a href="https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw">@LouvrierJulie</a> reçoit le prix jeune chercheuse 2020 de la <a href="https://twitter.com/sfecologie?ref_src=twsrc%5Etfw">@sfecologie</a> au <a href="https://twitter.com/Salon_AdNatura?ref_src=twsrc%5Etfw">@Salon_AdNatura</a> <a href="https://twitter.com/hashtag/AdNatura?src=hash&amp;ref_src=twsrc%5Etfw">#AdNatura</a> 🥳 pour son travail de thèse sur le loup 🐺🗺 <a href="https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw">@cefemontpellier</a> <a href="https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw">@CNRS_OccitaniE</a> <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a> <a href="https://twitter.com/umontpellier?ref_src=twsrc%5Etfw">@umontpellier</a> <a href="https://twitter.com/OFBiodiversite?ref_src=twsrc%5Etfw">@OFBiodiversite</a> <a href="https://t.co/T2dNxeuaA9">pic.twitter.com/T2dNxeuaA9</a></p>&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1586303048884031490?ref_src=twsrc%5Etfw">October 29, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1328,7 +1273,7 @@ Yet another example of our collaboration w/ @OFBiodiversite 🤩
     
     
     <a href="/blog/juliesfe/" >
-      <img src="/blog/juliesfe/featured_hu5ac0f510d1ec4ee6843dc6be5ff957bb_141942_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/juliesfe/featured_hu_a3bf3495c067c03c.jpg" alt="">
     </a>
     
   </div>
@@ -1362,8 +1307,7 @@ Yet another example of our collaboration w/ @OFBiodiversite 🤩
 
     
     <div class="article-style">
-      💜💜💜 https://t.co/YWC2qSepIr
-&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) October 25, 2022 
+      <blockquote class="twitter-tweet"><p lang="art" dir="ltr">💜💜💜 <a href="https://t.co/YWC2qSepIr">https://t.co/YWC2qSepIr</a></p>&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1585011089737412609?ref_src=twsrc%5Etfw">October 25, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1414,7 +1358,7 @@ Yet another example of our collaboration w/ @OFBiodiversite 🤩
     
     
     <a href="/blog/teamlunch/" >
-      <img src="/blog/teamlunch/featured_hu100606a3b7c09abb3cd3b64b1129e1ba_345475_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/teamlunch/featured_hu_a86dfb581c179755.jpg" alt="">
     </a>
     
   </div>
@@ -1539,7 +1483,7 @@ Yet another example of our collaboration w/ @OFBiodiversite 🤩
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

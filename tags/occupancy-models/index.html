@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/occupancy-models/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/occupancy-models/">
-  <meta property="og:title" content="occupancy models | Olivier Gimenez">
+  <meta property="og:title" content="Occupancy Models | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>occupancy models | Olivier Gimenez</title>
+  <title>Occupancy Models | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>occupancy models</h1>
+  <h1>Occupancy Models</h1>
 
   
 
@@ -571,7 +520,8 @@
       <h2><a href="/blog/lea-first-paper/" >New paper!</a></h2>
       <div class="article-style">
         
-          📢📸 Awesome new paper by Léa Pautrel in @MethodsEcolEvol in which we ask whether we should use discrete- or continuous-time occupancy models for data collected in continuous time. Check it out at https://t.
+          📢📸 Awesome new paper by Léa Pautrel in @MethodsEcolEvol in which we ask whether we should use discrete- or continuous-time occupancy models for data collected in continuous time. Check it out at https://t.co/EN3sEq9ZRO #OpenAccess 😉#Terroiko @Marie_Etienne @CNRSecologie pic.twitter.com/2YrLGZtrkB
+
         
       </div>
     </div>
@@ -596,7 +546,8 @@
       <h2><a href="/blog/comm_balkanlynx/" >Identifying conservation priorities for the critically endangered Balkan lynx</a></h2>
       <div class="article-style">
         
-          &quot;Identifying conservation priorities for the critically endangered Balkanlynx&quot; https://t.co/EDx0hUUT7v a nice article by #DimeMelovski on our recent @OryxTheJournal paper https://t.co/sVeTwbDlOc (15 days free access) w/ #rstat #OccupancyModels #GIS #maps https://t.co/Uv9uhsAPuY pic.
+          &quot;Identifying conservation priorities for the critically endangered Balkanlynx&quot; https://t.co/EDx0hUUT7v a nice article by #DimeMelovski on our recent @OryxTheJournal paper https://t.co/sVeTwbDlOc (15 days free access) w/ #rstat #OccupancyModels #GIS #maps https://t.co/Uv9uhsAPuY pic.twitter.com/c3iMLOChU3
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) 14 janvier 2019kquote> 
         
       </div>
     </div>
@@ -609,7 +560,8 @@
       <div class="article-style">
         
           Pretty proud of my modest contribution: data and #rstats code https://t.co/EUG4IgPdKR 🤓
-&mdash; Olivier Gimenez 💤 (@oaggimenez) 3 décembre 2018 Out now: The Balkan #lynx is one of the rarest, most threatened &amp; least-studied large carnivores.
+&mdash; Olivier Gimenez 💤 (@oaggimenez) 3 décembre 2018 Out now: The Balkan #lynx is one of the rarest, most threatened &amp; least-studied large carnivores. Melovski et al. used questionnaire surveys &amp; occupancy modelling to identify conservation priorities for this Critically Endangered subspecies.https://t.co/asollm8Ior pic.twitter.com/af6jTFd9EI
+
         
       </div>
     </div>
@@ -719,7 +671,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

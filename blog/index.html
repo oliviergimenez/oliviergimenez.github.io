@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -593,8 +542,7 @@
 
     
     <div class="article-style">
-      I&#39;m looking forward to next week and the International Statistical Ecology Conference 😍 Catching up w/ friends, colleagues and awesome science 🥳 @ISEC_stats_ecol https://t.co/sgrZWfrigR
-We&#39;ll be presenting our latest work 😇 Check it out 🧵👇#ISEC_2024_Swansea #ISEC2024 pic.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m looking forward to next week and the International Statistical Ecology Conference 😍 Catching up w/ friends, colleagues and awesome science 🥳 <a href="https://twitter.com/ISEC_stats_ecol?ref_src=twsrc%5Etfw">@ISEC_stats_ecol</a> <a href="https://t.co/sgrZWfrigR">https://t.co/sgrZWfrigR</a><br><br>We&#39;ll be presenting our latest work 😇 Check it out 🧵👇<a href="https://twitter.com/hashtag/ISEC_2024_Swansea?src=hash&amp;ref_src=twsrc%5Etfw">#ISEC_2024_Swansea</a> <a href="https://twitter.com/hashtag/ISEC2024?src=hash&amp;ref_src=twsrc%5Etfw">#ISEC2024</a> <a href="https://t.co/A0SYhtG03N">pic.twitter.com/A0SYhtG03N</a></p>
     </div>
     
 
@@ -645,7 +593,7 @@ We&#39;ll be presenting our latest work 😇 Check it out 🧵👇#ISEC_2024_Swa
     
     
     <a href="/blog/isec2024/" >
-      <img src="/blog/isec2024/featured_hu6430ec7cd639d530ea7dd08c26430352_2230537_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/isec2024/featured_hu_58e6997b4f173f78.jpg" alt="">
     </a>
     
   </div>
@@ -679,8 +627,7 @@ We&#39;ll be presenting our latest work 😇 Check it out 🧵👇#ISEC_2024_Swa
 
     
     <div class="article-style">
-      Merci à la Gazette pour la mise en lumière de nos recherches sur la loutre 😇🦦💩📸🧬 🙏 Simon Challier pour l&#39;article, et Yann Raulet pour les photos
-➡️ + infos https://t.
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Merci à la Gazette pour la mise en lumière de nos recherches sur la loutre 😇🦦💩📸🧬 <br><br>🙏 Simon Challier pour l&#39;article, et Yann Raulet pour les photos<br><br>➡️ + infos <a href="https://t.co/CHEJnrW9KE">https://t.co/CHEJnrW9KE</a><br>➡️ vidéos <a href="https://t.co/Ni6A2jJIS2">https://t.co/Ni6A2jJIS2</a> <a href="https://t.co/4z4zr5SZwb">https://t.co/4z4zr5SZwb</a></p>&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1808837832183603397?ref_src=twsrc%5Etfw">July 4, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -731,7 +678,7 @@ We&#39;ll be presenting our latest work 😇 Check it out 🧵👇#ISEC_2024_Swa
     
     
     <a href="/blog/gazette/" >
-      <img src="/blog/gazette/featured_huf35224596c73b2f574462c296ae3ef2d_82795_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/gazette/featured_hu_6184b704da435945.jpg" alt="">
     </a>
     
   </div>
@@ -765,8 +712,7 @@ We&#39;ll be presenting our latest work 😇 Check it out 🧵👇#ISEC_2024_Swa
 
     
     <div class="article-style">
-      🐺In this article, Santostasi et al discuss demographic projections from an individual-based model inform management to mitigate wolf–dog introgressive #hybridization.🐺🐶 Read more at https://t.co/1G52Rb8rXl#conservation #science #wolf #dog #wordoftheweek pic.twitter.com/OhkxF3i1XW
-&mdash; Conservation Biology (@ConBiology) June 27, 2024 
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🐺In this article, Santostasi et al discuss demographic projections from an individual-based model inform management to mitigate wolf–dog introgressive <a href="https://twitter.com/hashtag/hybridization?src=hash&amp;ref_src=twsrc%5Etfw">#hybridization</a>.🐺🐶 Read more at <a href="https://t.co/1G52Rb8rXl">https://t.co/1G52Rb8rXl</a><a href="https://twitter.com/hashtag/conservation?src=hash&amp;ref_src=twsrc%5Etfw">#conservation</a> <a href="https://twitter.com/hashtag/science?src=hash&amp;ref_src=twsrc%5Etfw">#science</a> <a href="https://twitter.com/hashtag/wolf?src=hash&amp;ref_src=twsrc%5Etfw">#wolf</a> <a href="https://twitter.com/hashtag/dog?src=hash&amp;ref_src=twsrc%5Etfw">#dog</a> <a href="https://twitter.com/hashtag/wordoftheweek?src=hash&amp;ref_src=twsrc%5Etfw">#wordoftheweek</a> <a href="https://t.co/OhkxF3i1XW">pic.twitter.com/OhkxF3i1XW</a></p>&mdash; Conservation Biology (@ConBiology) <a href="https://twitter.com/ConBiology/status/1806296419399000558?ref_src=twsrc%5Etfw">June 27, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -817,7 +763,7 @@ We&#39;ll be presenting our latest work 😇 Check it out 🧵👇#ISEC_2024_Swa
     
     
     <a href="/blog/ninapaper/" >
-      <img src="/blog/ninapaper/featured_hu3ea14491b49ad3e9b8aeaceb94b160bf_122714_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/ninapaper/featured_hu_de43dfeec1ae2578.jpg" alt="">
     </a>
     
   </div>
@@ -851,8 +797,7 @@ We&#39;ll be presenting our latest work 😇 Check it out 🧵👇#ISEC_2024_Swa
 
     
     <div class="article-style">
-      🚨New paper !
-Very happy to share our work (and my first paper🙌) on the effect of inter-specific interactions and environmental conditions on the demography of south polar skua, Adélie penguin and emperor penguin, in Antarctica, using multi-species IPM🐧https://t.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚨New paper !<br>Very happy to share our work (and my first paper🙌) on the effect of inter-specific interactions and environmental conditions on the demography of south polar skua, Adélie penguin and emperor penguin, in Antarctica, using multi-species IPM🐧<a href="https://t.co/Btaq6wXlgK">https://t.co/Btaq6wXlgK</a></p>
     </div>
     
 
@@ -903,7 +848,7 @@ Very happy to share our work (and my first paper🙌) on the effect of inter-spe
     
     
     <a href="/blog/lise/" >
-      <img src="/blog/lise/featured_hucb55fdb55be730ce23dde996ac3582df_126452_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/lise/featured_hu_c54abf3d5182a829.png" alt="">
     </a>
     
   </div>
@@ -937,9 +882,7 @@ Very happy to share our work (and my first paper🙌) on the effect of inter-spe
 
     
     <div class="article-style">
-      Fête de la nature au Zoo de Montpellier ce samedi 25 mai !
-Le programme à découvrir sur le site web du Zoo : https://t.co/hAskTCuleK
-Avec une animation par notre équipe @twitthair1 sur comment faire le suivi faune/flore 📸🎧🧬🦦
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Fête de la nature au Zoo de Montpellier ce samedi 25 mai !<br><br>Le programme à découvrir sur le site web du Zoo : <a href="https://t.co/hAskTCuleK">https://t.co/hAskTCuleK</a><br><br>Avec une animation par notre équipe <a href="https://twitter.com/twitthair1?ref_src=twsrc%5Etfw">@twitthair1</a> sur comment faire le suivi faune/flore 📸🎧🧬🦦<br><br>(on y parlera de la loutre 😇🦦) <a href="https://t.co/dgnMCpEWD4">pic.twitter.com/dgnMCpEWD4</a></p>
     </div>
     
 
@@ -990,7 +933,7 @@ Avec une animation par notre équipe @twitthair1 sur comment faire le suivi faun
     
     
     <a href="/blog/fete-nature/" >
-      <img src="/blog/fete-nature/featured_hu557517160471a238aa7706a069c107ad_77047_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/fete-nature/featured_hu_2bb8339ed0d61bce.png" alt="">
     </a>
     
   </div>
@@ -1024,9 +967,7 @@ Avec une animation par notre équipe @twitthair1 sur comment faire le suivi faun
 
     
     <div class="article-style">
-      Les 10èmes journées du GdR EcoStat ont eu lieu les 29-30 avril à Montpellier https://t.co/qR7ymhYWvo Les vidéos des journées et des ateliers sont ici https://t.co/Uiy9ugNOkB
-A l’année prochaine !
-&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) May 7, 2024 
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Les 10èmes journées du GdR EcoStat ont eu lieu les 29-30 avril à Montpellier <a href="https://t.co/qR7ymhYWvo">https://t.co/qR7ymhYWvo</a> <br> <br>Les vidéos des journées et des ateliers sont ici <a href="https://t.co/Uiy9ugNOkB">https://t.co/Uiy9ugNOkB</a><br> <br>A l’année prochaine !</p>&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1787744913334956160?ref_src=twsrc%5Etfw">May 7, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1077,7 +1018,7 @@ A l’année prochaine !
     
     
     <a href="/blog/gdrecostat2024/" >
-      <img src="/blog/gdrecostat2024/featured_hud54027aa4c5a1c5844935da878e1febc_95505_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/gdrecostat2024/featured_hu_e2f57ad3f1b556a7.jpg" alt="">
     </a>
     
   </div>
@@ -1111,8 +1052,7 @@ A l’année prochaine !
 
     
     <div class="article-style">
-      A PhD finishes when you celebrate it with all those that matter! Thank you all! @twitthair1 @oaggimenez @CIBIO_InBIO @cefemontpellier pic.twitter.com/JIyJj3gbl7
-&mdash; Mónia Nakamura (@MoniaNakamura) April 29, 2024 
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A PhD finishes when you celebrate it with all those that matter! Thank you all! <a href="https://twitter.com/twitthair1?ref_src=twsrc%5Etfw">@twitthair1</a> <a href="https://twitter.com/oaggimenez?ref_src=twsrc%5Etfw">@oaggimenez</a> <a href="https://twitter.com/CIBIO_InBIO?ref_src=twsrc%5Etfw">@CIBIO_InBIO</a> <a href="https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw">@cefemontpellier</a> <a href="https://t.co/JIyJj3gbl7">pic.twitter.com/JIyJj3gbl7</a></p>&mdash; Mónia Nakamura (@MoniaNakamura) <a href="https://twitter.com/MoniaNakamura/status/1784920778141569088?ref_src=twsrc%5Etfw">April 29, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1163,7 +1103,7 @@ A l’année prochaine !
     
     
     <a href="/blog/monia/" >
-      <img src="/blog/monia/featured_hu379d86d229ead9acb09a705df160e154_350520_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/monia/featured_hu_679c8556d3000d1.jpg" alt="">
     </a>
     
   </div>
@@ -1197,7 +1137,7 @@ A l’année prochaine !
 
     
     <div class="article-style">
-      📢📸 Awesome new paper by Léa Pautrel in @MethodsEcolEvol in which we ask whether we should use discrete- or continuous-time occupancy models for data collected in continuous time. Check it out at https://t.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">📢📸 Awesome new paper by Léa Pautrel in <a href="https://twitter.com/MethodsEcolEvol?ref_src=twsrc%5Etfw">@MethodsEcolEvol</a> in which we ask whether we should use discrete- or continuous-time occupancy models for data collected in continuous time. Check it out at <a href="https://t.co/EN3sEq9ZRO">https://t.co/EN3sEq9ZRO</a> <a href="https://twitter.com/hashtag/OpenAccess?src=hash&amp;ref_src=twsrc%5Etfw">#OpenAccess</a> 😉<a href="https://twitter.com/hashtag/Terroiko?src=hash&amp;ref_src=twsrc%5Etfw">#Terroiko</a> <a href="https://twitter.com/Marie_Etienne?ref_src=twsrc%5Etfw">@Marie_Etienne</a> <a href="https://twitter.com/CNRSecologie?ref_src=twsrc%5Etfw">@CNRSecologie</a> <a href="https://t.co/2YrLGZtrkB">pic.twitter.com/2YrLGZtrkB</a></p>
     </div>
     
 
@@ -1248,7 +1188,7 @@ A l’année prochaine !
     
     
     <a href="/blog/lea-first-paper/" >
-      <img src="/blog/lea-first-paper/featured_huacd1bc7304d97f09204758a42d1a44cb_278650_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/lea-first-paper/featured_hu_a271f1be813b0eb4.jpg" alt="">
     </a>
     
   </div>
@@ -1282,8 +1222,7 @@ A l’année prochaine !
 
     
     <div class="article-style">
-      Ma première conf grand public dans le cadre des 8 jours de la biodiversité organisés par l&#39;inter-assos ARBORESCENCE 😜
-« Au fil de l’eau du Lez : à la découverte de la loutre d’Europe sur la métropole de Montpellier » 29 février à 18h.
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Ma première conf grand public dans le cadre des 8 jours de la biodiversité organisés par l&#39;inter-assos ARBORESCENCE 😜<br><br>« Au fil de l’eau du Lez : à la découverte de la loutre d’Europe sur la métropole de Montpellier » 29 février à 18h.<br><br>🦦💩📸🧬 <a href="https://t.co/BD6rCmsNoc">pic.twitter.com/BD6rCmsNoc</a></p>
     </div>
     
 
@@ -1334,7 +1273,7 @@ A l’année prochaine !
     
     
     <a href="/blog/confgrandpublic/" >
-      <img src="/blog/confgrandpublic/featured_hu4b81f41628ad9c860c2c72412fd5c168_169424_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/confgrandpublic/featured_hu_1fd1e486d593ccc9.jpg" alt="">
     </a>
     
   </div>
@@ -1368,7 +1307,7 @@ A l’année prochaine !
 
     
     <div class="article-style">
-      Our team on human-animal interactions has had a fantastic 2023 year! Below is a thread w/ some highlights. Follow us via @twitthair1 and check out our work at https://t.co/ewjuiCHJtm@cefemontpellier @CNRSecologie @CNRS_OccitaniE @umontpellier @EPHE_PSL @ird_fr pic.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our team on human-animal interactions has had a fantastic 2023 year! Below is a thread w/ some highlights. <br><br>Follow us via <a href="https://twitter.com/twitthair1?ref_src=twsrc%5Etfw">@twitthair1</a> and check out our work at <a href="https://t.co/ewjuiCHJtm">https://t.co/ewjuiCHJtm</a><a href="https://twitter.com/cefemontpellier?ref_src=twsrc%5Etfw">@cefemontpellier</a> <a href="https://twitter.com/CNRSecologie?ref_src=twsrc%5Etfw">@CNRSecologie</a> <a href="https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw">@CNRS_OccitaniE</a> <a href="https://twitter.com/umontpellier?ref_src=twsrc%5Etfw">@umontpellier</a> <a href="https://twitter.com/EPHE_PSL?ref_src=twsrc%5Etfw">@EPHE_PSL</a> <a href="https://twitter.com/ird_fr?ref_src=twsrc%5Etfw">@ird_fr</a> <a href="https://t.co/07fi3Mnazt">pic.twitter.com/07fi3Mnazt</a></p>&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1741482034223034710?ref_src=twsrc%5Etfw">December 31, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1419,7 +1358,7 @@ A l’année prochaine !
     
     
     <a href="/blog/retro2023/" >
-      <img src="/blog/retro2023/featured_hu3929deef44b60081a7e5e326a8eab871_284850_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/retro2023/featured_hu_9454f3d41b1cb273.png" alt="">
     </a>
     
   </div>
@@ -1542,7 +1481,7 @@ A l’année prochaine !
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -644,7 +593,7 @@
     
     
     <a href="/blog/textminingisec/" >
-      <img src="/blog/textminingisec/featured_hu642b91350856fc5507f49ec3e4bcad44_222048_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/textminingisec/featured_hu_78532e25f360fd8f.jpg" alt="">
     </a>
     
   </div>
@@ -729,7 +678,7 @@
     
     
     <a href="/blog/byron/" >
-      <img src="/blog/byron/featured_hu5e4cc42c5e6082d32779d3e30429b7ae_271722_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/byron/featured_hu_e4e2093c4d3747d1.jpg" alt="">
     </a>
     
   </div>
@@ -814,7 +763,7 @@
     
     
     <a href="/blog/publiclecture2/" >
-      <img src="/blog/publiclecture2/featured_huc3cc1867e5fd848387e205a150306501_56444_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/publiclecture2/featured_hu_a56a28159f1b783c.jpg" alt="">
     </a>
     
   </div>
@@ -899,7 +848,7 @@
     
     
     <a href="/blog/dlcameras/" >
-      <img src="/blog/dlcameras/featured_hu28a3f66947fc7734809577947c89a59c_1342424_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/dlcameras/featured_hu_8e72c5e5125c5c1f.png" alt="">
     </a>
     
   </div>
@@ -984,7 +933,7 @@
     
     
     <a href="/blog/odenimble/" >
-      <img src="/blog/odenimble/featured_hu3667b8b8610cd3133da5651ff5380a68_318638_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/odenimble/featured_hu_2cb938842e0a115d.jpg" alt="">
     </a>
     
   </div>
@@ -1069,7 +1018,7 @@
     
     
     <a href="/blog/interactiveocc/" >
-      <img src="/blog/interactiveocc/featured_hua7e6e3eab8ffc25637fae26e11993b4c_358600_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/interactiveocc/featured_hu_17e6ec553e10f309.jpg" alt="">
     </a>
     
   </div>
@@ -1154,7 +1103,7 @@
     
     
     <a href="/blog/rota/" >
-      <img src="/blog/rota/featured_hue6a1381bcb66b0ed8854d983835b44fe_134075_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/rota/featured_hu_8b3fa4cae02d29c5.jpg" alt="">
     </a>
     
   </div>
@@ -1239,7 +1188,7 @@
     
     
     <a href="/blog/occusimu/" >
-      <img src="/blog/occusimu/featured_hu400e1072bb1c0b670e7e85175d852514_460595_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/occusimu/featured_hu_f57d0c7399869dde.jpg" alt="">
     </a>
     
   </div>
@@ -1324,7 +1273,7 @@
     
     
     <a href="/blog/coadapht/" >
-      <img src="/blog/coadapht/featured_hu9d3794e3189142f6ede6a7e2d4e17a51_188036_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/coadapht/featured_hu_a61371efbbed11c7.jpg" alt="">
     </a>
     
   </div>
@@ -1409,7 +1358,7 @@
     
     
     <a href="/blog/rdcmr/" >
-      <img src="/blog/rdcmr/featured_hue75ffca175de1cbcb69e5c35bf39defb_63545_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/rdcmr/featured_hu_f72fad1d653cd1ae.jpg" alt="">
     </a>
     
   </div>
@@ -1534,7 +1483,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

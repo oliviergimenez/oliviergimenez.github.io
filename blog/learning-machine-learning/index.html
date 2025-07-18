@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -251,8 +220,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/learning-machine-learning/">
 
@@ -489,26 +458,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -617,7 +566,7 @@
 
 <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 514px;">
   <div style="position: relative">
-    <img src="/blog/learning-machine-learning/featured_hua4f5c3d28a526db8b584e76e872902ed_685757_720x0_resize_lanczos_3.png" alt="" class="featured-image">
+    <img src="/blog/learning-machine-learning/featured_hu_58555903faca55ec.png" alt="" class="featured-image">
     
   </div>
 </div>
@@ -1070,7 +1019,7 @@ dataset %&gt;%
     labs(x = &quot;% in category that survived&quot;, fill = NULL, color = NULL, y = NULL) +
   facet_wrap(~gender)
 </code></pre>
-<p><img src="unnamed-chunk-7-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-7-1.png" alt=""></p>
 <pre><code>dataset %&gt;%
   mutate(age = cut(age, breaks = c(0, 20, 40, 60, 80))) %&gt;%
   group_by(age, gender) %&gt;%
@@ -1084,19 +1033,19 @@ dataset %&gt;%
     labs(x = &quot;% in category that survived&quot;, fill = NULL, color = NULL, y = NULL) +
   facet_wrap(~gender)
 </code></pre>
-<p><img src="unnamed-chunk-7-2.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-7-2.png" alt=""></p>
 <pre><code>dataset %&gt;%
     ggplot(aes(fareadjusted, group = survived, color = survived, fill = survived)) +
     geom_histogram(alpha = .4, position = position_dodge()) +
     labs(x = &quot;fare&quot;, y = NULL, color = &quot;survived?&quot;, fill = &quot;survived?&quot;)
 </code></pre>
-<p><img src="unnamed-chunk-7-3.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-7-3.png" alt=""></p>
 <pre><code>dataset %&gt;%
     ggplot(aes(familyage, group = survived, color = survived, fill = survived)) +
     geom_histogram(alpha = .4, position = position_dodge()) +
     labs(x = &quot;family aged&quot;, y = NULL, color = &quot;survived?&quot;, fill = &quot;survived?&quot;)
 </code></pre>
-<p><img src="unnamed-chunk-7-4.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-7-4.png" alt=""></p>
 <h1 id="trainingtesting-datasets">Training/testing datasets</h1>
 <p>Split our dataset in two, one dataset for training and the other one for
 testing. We will use an additionnal splitting step for cross-validation.</p>
@@ -1155,7 +1104,7 @@ control &lt;- control_grid(save_workflow = TRUE,
 <p>Visualize the results.</p>
 <pre><code>autoplot(xg_tune) + theme_light()
 </code></pre>
-<p><img src="unnamed-chunk-14-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-14-1.png" alt=""></p>
 <p>Collect metrics.</p>
 <pre><code>xg_tune %&gt;%
   collect_metrics() %&gt;%
@@ -1196,7 +1145,7 @@ xg_tune &lt;-
 <p>Visualize the results.</p>
 <pre><code>autoplot(xg_tune)
 </code></pre>
-<p><img src="unnamed-chunk-17-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-17-1.png" alt=""></p>
 <p>Collect metrics.</p>
 <pre><code>xg_tune %&gt;%
   collect_metrics() %&gt;%
@@ -1242,7 +1191,7 @@ importances %&gt;%
   ggplot(aes(Gain, Feature)) +
   geom_col()
 </code></pre>
-<p><img src="unnamed-chunk-21-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-21-1.png" alt=""></p>
 <h2 id="make-predictions">Make predictions</h2>
 <p>Now we’re ready to predict survival for the holdout dataset and submit
 to Kaggle. Note that I use the whole dataset, not just the training
@@ -1295,7 +1244,7 @@ methods</a>.</p>
 <p>Visualize the results.</p>
 <pre><code>autoplot(rf_tune)
 </code></pre>
-<p><img src="unnamed-chunk-27-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-27-1.png" alt=""></p>
 <p>Collect metrics.</p>
 <pre><code>rf_tune %&gt;%
   collect_metrics() %&gt;%
@@ -1341,7 +1290,7 @@ finalize_model(
   fit(survived ~ ., data = juice(prep(rf_rec))) %&gt;%
   vip(geom = &quot;point&quot;)
 </code></pre>
-<p><img src="unnamed-chunk-31-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-31-1.png" alt=""></p>
 <h2 id="make-predictions-1">Make predictions</h2>
 <p>Now we’re ready to predict survival for the holdout dataset and submit
 to Kaggle.</p>
@@ -1398,7 +1347,7 @@ cb_model &lt;- boost_tree(mode = &quot;classification&quot;,
 <p>Visualize the results.</p>
 <pre><code>autoplot(cb_tune)
 </code></pre>
-<p><img src="unnamed-chunk-38-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-38-1.png" alt=""></p>
 <p>Collect metrics.</p>
 <pre><code>cb_tune %&gt;%
   collect_metrics() %&gt;%
@@ -1482,7 +1431,7 @@ ridge regression for mixture = 0, and lasso for mixture = 1.</p>
 <p>Visualize the results.</p>
 <pre><code>autoplot(en_tune)
 </code></pre>
-<p><img src="unnamed-chunk-47-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-47-1.png" alt=""></p>
 <p>Collect metrics.</p>
 <pre><code>en_tune %&gt;%
   collect_metrics() %&gt;%
@@ -1531,7 +1480,7 @@ en_fit$fit$fit$fit %&gt;%
   geom_col() +
   theme(legend.position = &quot;none&quot;)
 </code></pre>
-<p><img src="unnamed-chunk-51-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-51-1.png" alt=""></p>
 <h2 id="make-predictions-3">Make predictions</h2>
 <p>Now we’re ready to predict survival for the holdout dataset and submit
 to Kaggle.</p>
@@ -1590,7 +1539,7 @@ logistic_fit %&gt;%
   geom_col() +
   theme(legend.position = &quot;none&quot;)
 </code></pre>
-<p><img src="unnamed-chunk-58-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-58-1.png" alt=""></p>
 <p>Check out accuracy on testing dataset to see if we overfitted.</p>
 <pre><code>logistic_fit %&gt;%
   augment(test, type.predict = &quot;response&quot;) %&gt;%
@@ -1617,7 +1566,7 @@ logistic_fit %&gt;%
   roc_curve(truth = survived, estimate = .pred_yes) %&gt;%
   autoplot()
 </code></pre>
-<p><img src="unnamed-chunk-61-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-61-1.png" alt=""></p>
 <p>Now we’re ready to predict survival for the holdout dataset and submit
 to Kaggle.</p>
 <pre><code>logistic_wf %&gt;%
@@ -1670,7 +1619,7 @@ control &lt;- control_grid(save_workflow = TRUE,
 <p>Visualize the results.</p>
 <pre><code>autoplot(nn_tune)
 </code></pre>
-<p><img src="unnamed-chunk-68-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-68-1.png" alt=""></p>
 <p>Collect metrics.</p>
 <pre><code>nn_tune %&gt;%
   collect_metrics() %&gt;%
@@ -1763,7 +1712,7 @@ control &lt;- control_grid(save_workflow = TRUE,
 <p>Visualize the results.</p>
 <pre><code>autoplot(svm_tune)
 </code></pre>
-<p><img src="unnamed-chunk-78-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-78-1.png" alt=""></p>
 <p>Collect metrics.</p>
 <pre><code>svm_tune %&gt;%
   collect_metrics() %&gt;%
@@ -1855,7 +1804,7 @@ dt_model &lt;- bag_tree(cost_complexity = tune(),
 <p>Visualize the results.</p>
 <pre><code>autoplot(dt_tune)
 </code></pre>
-<p><img src="unnamed-chunk-88-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-88-1.png" alt=""></p>
 <p>Collect metrics.</p>
 <pre><code>dt_tune %&gt;%
   collect_metrics() %&gt;%
@@ -2110,13 +2059,13 @@ despite achieving best score when used in isolation. I’ll have to dig
 into that.</p>
 <pre><code>autoplot(blended_fit)
 </code></pre>
-<p><img src="unnamed-chunk-102-1.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-102-1.png" alt=""></p>
 <pre><code>autoplot(blended_fit, type = &quot;members&quot;)
 </code></pre>
-<p><img src="unnamed-chunk-102-2.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-102-2.png" alt=""></p>
 <pre><code>autoplot(blended_fit, type = &quot;weights&quot;)
 </code></pre>
-<p><img src="unnamed-chunk-102-3.png" alt=""></p>
+<p><img src="/blog/learning-machine-learning/unnamed-chunk-102-3.png" alt=""></p>
 <p>Fit candidate members with non-zero stacking coef with full training
 dataset.</p>
 <pre><code>blended_regularized &lt;- blended_fit %&gt;%
@@ -2216,11 +2165,11 @@ reproducible.</p>
     <div class="media author-card content-widget-hr">
       
         
-        <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu2cb62cde7ffbf991a23ad99f81001b35_47904_270x270_fill_q90_lanczos_center.jpg" alt="">
+        <img class="avatar mr-3 avatar-circle" src="/authors/authors/avatar_hu_6b27bb3302803439.jpg" alt="">
       
 
       <div class="media-body">
-        <h5 class="card-title"><a href="https://oliviergimenez.github.io"></a></h5>
+        <h5 class="card-title"><a href="https://oliviergimenez.github.io/"></a></h5>
         <h6 class="card-subtitle">Statistics, ecology &amp; social sciences</h6>
         <p class="card-text">I&rsquo;m a scientist working at the interface of animal ecology, statistical modeling and social sciences.</p>
         <ul class="network-icon" aria-hidden="true">
@@ -2493,7 +2442,7 @@ reproducible.</p>
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

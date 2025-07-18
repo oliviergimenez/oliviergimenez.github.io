@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/visitor/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/visitor/">
-  <meta property="og:title" content="visitor | Olivier Gimenez">
+  <meta property="og:title" content="Visitor | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>visitor | Olivier Gimenez</title>
+  <title>Visitor | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>visitor</h1>
+  <h1>Visitor</h1>
 
   
 
@@ -584,7 +533,8 @@
       <h2><a href="/blog/raluca_visit2/" >Another visit of Raluca Bancila</a></h2>
       <div class="article-style">
         
-          Raluca Bancila, who visited us back in 2015, is with us again for a short 2-week visit. We will resume a project we started one year ago on the evaluation of demographic parameters of two related species of spadefoot toads (Pelobates syriacus and P.
+           Raluca Bancila, who visited us back in 2015, is with us again for a short 2-week visit. We will resume a project we started one year ago on the evaluation of demographic parameters of two related species of spadefoot toads (Pelobates syriacus and P. fuscus) from the Danube Delta Biosphere Reserve, Romania, using capture-recapture models.
+
         
       </div>
     </div>
@@ -596,7 +546,8 @@
       <h2><a href="/blog/laura_cowen/" >Laura Cowen&#39;s sabbatical</a></h2>
       <div class="article-style">
         
-          Laura Cowen from the Department of Math and Stat at University of Victoria (Canada) will be on a sabbatical with us for 3 months. We will be working on the applications of hidden Markov models to capture-recapture data.
+           Laura Cowen from the Department of Math and Stat at University of Victoria (Canada) will be on a sabbatical with us for 3 months. We will be working on the applications of hidden Markov models to capture-recapture data.
+
         
       </div>
     </div>
@@ -608,7 +559,8 @@
       <h2><a href="/blog/ian_first_visit/" >Ian Renner&#39;s visit</a></h2>
       <div class="article-style">
         
-          Ian Renner from the University of Newcastle in Australia spent some time with us while on a sabbatical. We worked together on developing a method to combine sources of information on species distribution.
+          Ian Renner from the University of Newcastle in Australia spent some time with us while on a sabbatical. We worked together on developing a method to combine sources of information on species distribution. Ian brought his sound expertise on the Lasso for covariate selection and point processes that provide a nice integrated framework. It was fun to program in R in parallel. I wish I could do that more often. We even managed (credit goes to Ian) to present something at the International Statistical Ecology Conference.
+
         
       </div>
     </div>
@@ -620,7 +572,8 @@
       <h2><a href="/blog/raluca_visit1/" >Raluca Bancila&#39;s visit</a></h2>
       <div class="article-style">
         
-          I had the visit of Raluca Bancila a research scientist from Romania. We investigated spatio-temporal environmental variation in and individual heterogeneity on emigration/immigration rates of the troglophile harvestmen species Paranemastoma silli with capture-recapture models.
+          I had the visit of Raluca Bancila a research scientist from Romania. We investigated spatio-temporal environmental variation in and individual heterogeneity on emigration/immigration rates of the troglophile harvestmen species Paranemastoma silli with capture-recapture models. We used two P. silli populations inhabiting two caves, Closani and Lazului Caves, located in the Mehedinti Mountains in southwestern Romania. Yes, we do not only work on big emblematic mammal species ;-) On a personal side, Raluca is always smiling and laughing – ‘la banane’ like we say in French, it was so good to have her in the team. I’m looking forward to hosting her again!
+
         
       </div>
     </div>
@@ -632,7 +585,8 @@
       <h2><a href="/blog/visit_from_izw/" >Visitors from Berlin</a></h2>
       <div class="article-style">
         
-          I had the visit of Sarah Benhaim and Lucile Marescot (a former PhD student of mine), both post-doc at the Leibniz Institute in Berlin supervised by Stephanie Kramer-Schadt. It was an exciting week that we spent discussing and analyzing data on the spotted hyenas from the Serengeti National Park with questions at the interface of demography, sociality and epidemiology.
+          I had the visit of Sarah Benhaim and Lucile Marescot (a former PhD student of mine), both post-doc at the Leibniz Institute in Berlin supervised by Stephanie Kramer-Schadt. It was an exciting week that we spent discussing and analyzing data on the spotted hyenas from the Serengeti National Park with questions at the interface of demography, sociality and epidemiology. This is joint work with Heribert Hofer and Marion East.
+
         
       </div>
     </div>
@@ -644,7 +598,8 @@
       <h2><a href="/blog/nina_visit/" >Nina Santostasi&#39;s visit</a></h2>
       <div class="article-style">
         
-          I had the visit of Nina Santostasi from Italy to work for a few days on the estimation of striped dolphin abundance in the gulf of Corinth (in Greece). Nina is working with Giovanni Bearzi and Silvia Bonizzoni from the NGO Dolphin Biology and Conservation.
+          I had the visit of Nina Santostasi from Italy to work for a few days on the estimation of striped dolphin abundance in the gulf of Corinth (in Greece). Nina is working with Giovanni Bearzi and Silvia Bonizzoni from the NGO Dolphin Biology and Conservation. Hopefully our collaboration will provide elements for the conservation of the species.
+
         
       </div>
     </div>
@@ -656,7 +611,8 @@
       <h2><a href="/blog/jim_sedinger/" >Jim Sedinger&#39;s sabbatical</a></h2>
       <div class="article-style">
         
-          Jim Sedinger, professor at the University of Nevada (Reno), said goodbye to the team after 3 months with us on a sabbatical. It’s been great to have Jim here analyzing data collected as part of the amazing Black Brant monitoring initiated in the 40s.
+          Jim Sedinger, professor at the University of Nevada (Reno), said goodbye to the team after 3 months with us on a sabbatical. It’s been great to have Jim here analyzing data collected as part of the amazing Black Brant monitoring initiated in the 40s. More soon on our joint project on senescence and individual heterogeneity.
+
         
       </div>
     </div>
@@ -669,6 +625,7 @@
       <div class="article-style">
         
           Ben Rashford and Thomas Foulke from the University of Wyoming visited us. They gave a great talk on &ldquo;Wolf Re-Introduction in the Northern Rockies, USA: From Population and Predation Trends to Policy and Economics&rdquo;.
+
         
       </div>
     </div>
@@ -681,6 +638,7 @@
       <div class="article-style">
         
           Dave and Lise are going back home to the US after a 6-month sabbatical with us. It&rsquo;s been awesome to have you here!
+
         
       </div>
     </div>
@@ -790,7 +748,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

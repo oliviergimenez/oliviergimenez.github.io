@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>glmm | Olivier Gimenez</title>
+    <title>GLMM | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/glmm/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/glmm/index.xml" rel="self" type="application/rss+xml" />
-    <description>glmm</description>
+    <description>GLMM</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Tue, 03 May 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>glmm</title>
+      <title>GLMM</title>
       <link>https://oliviergimenez.github.io/tags/glmm/</link>
     </image>
     
@@ -229,7 +229,7 @@ bayes.jags
 &lt;p&gt;And visualize the posterior density and trace of survival (on the logit scale):&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(bayes.brms)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-9-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/glmm-brms/unnamed-chunk-9-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;To get survival on the $[0,1]$ scale, we extract the MCMC values, then apply the reciprocal logit function to each of these values, and summarize its posterior distribution:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;draws_fit &amp;lt;- as_draws_matrix(bayes.brms)
 draws_fit
@@ -399,7 +399,7 @@ summary(mle)
 &lt;p&gt;There is a negative effect of rainfall on breeding success:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;visreg::visreg(mle, scale = &amp;quot;response&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-16-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/glmm-brms/unnamed-chunk-16-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;h2 id=&#34;bayesian-analysis-with-jags-1&#34;&gt;Bayesian analysis with &lt;code&gt;Jags&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;In Jags, we can fit the same model:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# data 
@@ -568,7 +568,7 @@ bayes.jags
 &lt;p&gt;Visualize:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(bayes.brms)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-20-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/glmm-brms/unnamed-chunk-20-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;We can also calculate the posterior probability of the rainfall effect being below zero with the &lt;code&gt;hypothesis()&lt;/code&gt; function:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;hypothesis(bayes.brms, &#39;rain &amp;lt; 0&#39;)
 &lt;/code&gt;&lt;/pre&gt;
@@ -848,7 +848,7 @@ bayes.jags &amp;lt;- jags(data = mydata,
 &lt;p&gt;And visualize:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(bayes.brms)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-34-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/glmm-brms/unnamed-chunk-34-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;h1 id=&#34;glmm-with-poisson-distribution&#34;&gt;GLMM with Poisson distribution&lt;/h1&gt;
 &lt;p&gt;This example is from Jason Matthiopoulos&amp;rsquo; excellent book 
 &lt;a href=&#34;http://greenmaths.st-andrews.ac.uk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;How to be a quantitative ecologist&lt;/em&gt;&lt;/a&gt;.
@@ -1098,11 +1098,11 @@ fit &amp;lt;- jags(data = dat,
 &lt;p&gt;Visualize:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(bayes.brms)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-41-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/glmm-brms/unnamed-chunk-41-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;We can assess the quality of fit of this model:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;pp_check(bayes.brms, ndraws = 100, type = &#39;ecdf_overlay&#39;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-42-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/glmm-brms/unnamed-chunk-42-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;As expected, the fit is almost perfect because we simulated data from this very model.&lt;/p&gt;
 &lt;p&gt;What if we&amp;rsquo;d like to test the effect of temperature using WAIC?&lt;/p&gt;
 &lt;p&gt;We fit a model with no effect of temperature:&lt;/p&gt;

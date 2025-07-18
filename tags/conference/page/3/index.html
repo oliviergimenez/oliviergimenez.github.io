@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/conference/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/conference/">
-  <meta property="og:title" content="conference | Olivier Gimenez">
+  <meta property="og:title" content="Conference | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>conference | Olivier Gimenez</title>
+  <title>Conference | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>conference</h1>
+  <h1>Conference</h1>
 
   
 
@@ -568,34 +517,11 @@
     
     
     <div>
-      <h2><a href="/blog/sdm_day/" >Species distribution model day</a></h2>
-      <div class="article-style">
-        
-          Taking the opportunity of Ian Renner’s visit, we organized thanks to the GdR EcoStat a conference on the recent advances in the modeling of species distribution. We were lucky to have the cream of researchers in the domain with Julien Papaïx, Joseph Chipperfield, Ian Renner, Joern Pagel, Bob O’Hara, Laura Pollock and Damaris Zurell.
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/blog/iccb2014/" >International Congress on Biological Conservation</a></h2>
-      <div class="article-style">
-        
-          I attended the International Congress on Biological Conservation that was held in my home town Montpellier. The students of our team were on fire and talked about their exciting work. Gilles presented a bio-economic model to study the population dynamics of Asian captive elephants, a nice example of how to explicitly incorporate interactions between captive and wild populations in species management.
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
       <h2><a href="/blog/gdr_ecostat_conf/" >GDR EcoStat first conference</a></h2>
       <div class="article-style">
         
-          We organised the first conference of the GdR EcoStat. We spent two lovely days in Lyon talking about ecological statistics with the hundred people who attended. The talks are available here.
+          We organised the first conference of the GdR EcoStat. We spent two lovely days in Lyon talking about ecological statistics with the hundred people who attended. The talks are available here. If you&rsquo;d like to know more about our activities in the GdR, check out our website.
+
         
       </div>
     </div>
@@ -607,7 +533,8 @@
       <h2><a href="/blog/applibugs_montpellier/" >AppliBugs and applications of Bayesian theory</a></h2>
       <div class="article-style">
         
-          We held AppliBugs in Montpellier, with the idea to stimulate exchanges and to share information on Bayesian methods and applications ( program here). The day went well despite a rainstorm falling on Montpellier.
+          We held AppliBugs in Montpellier, with the idea to stimulate exchanges and to share information on Bayesian methods and applications ( program here). The day went well despite a rainstorm falling on Montpellier. All talks were great, and I was particularly interested in Adrien Todeschini&rsquo;s presentation of Biips, a software allowing the implementation of state-space models using particle filtering and a R/BUGS-like syntax.
+
         
       </div>
     </div>
@@ -619,7 +546,8 @@
       <h2><a href="/blog/nimble/" >New kids on the Bayesian block</a></h2>
       <div class="article-style">
         
-          I attended Daniel Turek&rsquo;s talk at ISEC about NIMBLE a neat alternative to WinBUGS and JAGS. It is developed by Perry de Valpine&rsquo;s group at Berkeley and &lsquo;lets you use BUGS models natively in R, program functions that use them, and compile everything via C++ for faster computing&rsquo;.
+          I attended Daniel Turek&rsquo;s talk at ISEC about NIMBLE a neat alternative to WinBUGS and JAGS. It is developed by Perry de Valpine&rsquo;s group at Berkeley and &lsquo;lets you use BUGS models natively in R, program functions that use them, and compile everything via C++ for faster computing&rsquo;. I played around with NIMBLE a bit, here is an example of fitting a classic capture-recapture model to simulated data - thanks to Perry and Daniel for their help! NIMBLE seems a lot faster than its competitors, and much more flexible. I&rsquo;ll continue my investigations with more complex models - stay tuned.
+
         
       </div>
     </div>
@@ -632,6 +560,7 @@
       <div class="article-style">
         
           ISEC 2014 is now closed. Organising this conference has been a fantastic adventure; hopefully the participants liked it.
+
         
       </div>
     </div>
@@ -644,6 +573,7 @@
       <div class="article-style">
         
           I gave a talk at ISEC 2014 on fitting occupancy models with hidden-Markov models using E-SURGE:
+
         
       </div>
     </div>
@@ -656,6 +586,7 @@
       <div class="article-style">
         
           The team is leading the organisation of ISEC2014. We&rsquo;re getting ready by, among many other things, preparing the delegates&rsquo; packs. Of course, these efforts cannot go without some relaxing time.
+
         
       </div>
     </div>
@@ -667,7 +598,8 @@
       <h2><a href="/blog/euring_2013/" >Individual heterogeneity and capture-recapture at EURING 2013</a></h2>
       <div class="article-style">
         
-          Below are the slides of my plenary talk at the 2013 EURING meeting on individual variability in capture-recapture models. I couldn’t attend, but the organizers were kind enough to run my presentation to the audience.
+          Below are the slides of my plenary talk at the 2013 EURING meeting on individual variability in capture-recapture models. I couldn’t attend, but the organizers were kind enough to run my presentation to the audience. I had to be a bit imaginative for the attendees not to fall asleep&hellip;
+
         
       </div>
     </div>
@@ -786,7 +718,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

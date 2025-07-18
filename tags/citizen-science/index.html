@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/citizen-science/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/citizen-science/">
-  <meta property="og:title" content="citizen-science | Olivier Gimenez">
+  <meta property="og:title" content="Citizen Science | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>citizen-science | Olivier Gimenez</title>
+  <title>Citizen Science | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>citizen-science</h1>
+  <h1>Citizen Science</h1>
 
   
 
@@ -586,6 +535,9 @@
         
           Thrilled to see our work on Mediterranean monk seal out in @AnimalConserv 🦭
 We show a significant range recovery of the species in Greece 🇬🇷 using #CitizenScience &amp; occupancy modelshttps://t.co/ILYdzArZq7
+Check out NGO MOm amazing work https://t.co/hM8BhfRQ7w
+DM ➡️ PDF 😉 pic.twitter.com/ILqnFvMypL
+
         
       </div>
     </div>
@@ -598,6 +550,7 @@ We show a significant range recovery of the species in Greece 🇬🇷 using #Ci
       <div class="article-style">
         
           I attended the International Congress on Biological Conservation that was held in my home town Montpellier. The students of our team were on fire and talked about their exciting work. Gilles presented a bio-economic model to study the population dynamics of Asian captive elephants, a nice example of how to explicitly incorporate interactions between captive and wild populations in species management.
+
         
       </div>
     </div>
@@ -609,7 +562,8 @@ We show a significant range recovery of the species in Greece 🇬🇷 using #Ci
       <h2><a href="/blog/cs_meeting/" >Workshop on citizen science and statistics</a></h2>
       <div class="article-style">
         
-          After a month off, I’m back to work starting with a 2-day workshop on citizen sciences I’ve co-organised with Romain Julliard and Pascal Monestiez ( program) as part of our group on Statistical Ecology and on citizen sciences CiSStats.
+          After a month off, I’m back to work starting with a 2-day workshop on citizen sciences I’ve co-organised with Romain Julliard and Pascal Monestiez ( program) as part of our group on Statistical Ecology and on citizen sciences CiSStats. The discussions were stimulating with a nice balance between talks given by data providers on the first day and modelers on the second day. I gave a talk based on Anne-Sophie’s work on mapping brown bear distribution in Greece using opportunistic data. Slides below:
+
         
       </div>
     </div>
@@ -719,7 +673,7 @@ We show a significant range recovery of the species in Greece 🇬🇷 using #Ci
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

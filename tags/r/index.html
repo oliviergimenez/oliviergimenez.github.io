@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/r/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -571,7 +520,9 @@
       <h2><a href="/blog/connectoscr/" >How to assess landscape connectivity with spatial capture-recapture models?</a></h2>
       <div class="article-style">
         
-          How to assess landscape connectivity with spatial capture-recapture models? @oSCR_package to the rescue ! Some code to reproduce results from a great paper by Dana Morin @Fuller_Lab @andyroyle_pwrc &amp; @chrissuthy Post: https://t.
+          How to assess landscape connectivity with spatial capture-recapture models? @oSCR_package to the rescue ! Some code to reproduce results from a great paper by Dana Morin @Fuller_Lab @andyroyle_pwrc &amp; @chrissuthy Post: https://t.co/FVwBzMnqA9
+Code: https://t.co/FMMyF0s22x pic.twitter.com/QUlOjlGnPf
+&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) March 27, 2023 
         
       </div>
     </div>
@@ -583,7 +534,9 @@
       <h2><a href="/blog/annonceworkshoppopdyn/" >Workshop on quantitative methods for population dynamics in R</a></h2>
       <div class="article-style">
         
-          📢👋 Together with @SarahCubaynes &amp; @abesnardEPHE we will give a 2-day introductory workshop June 1-2 on quantitative methods for population dynamics in R #rstats Join us 🥳 It&#39;s online and free of charge 😉 You just need to register via https://t.
+          📢👋 Together with @SarahCubaynes &amp; @abesnardEPHE we will give a 2-day introductory workshop June 1-2 on quantitative methods for population dynamics in R #rstats Join us 🥳 It&#39;s online and free of charge 😉 You just need to register via https://t.co/otguiSMTY0
+Please RT 😇 pic.twitter.com/6ghDHE92SJ
+
         
       </div>
     </div>
@@ -597,7 +550,8 @@
         
           Ey! VIBASS 6 is announced online now https://t.co/VS8cLR8ocK
 🗓️ July 10-14 2023
-🚩Faculty of Mathematics @FMatemaUV_EG, Valencia, Spain Be aware that the registration would start really really soon and we just have few spots.
+🚩Faculty of Mathematics @FMatemaUV_EG, Valencia, Spain Be aware that the registration would start really really soon and we just have few spots. Don&#39;t miss it. pic.twitter.com/5M61dbuxuF
+
         
       </div>
     </div>
@@ -611,7 +565,8 @@
         
           🔧🚧 Intro on data wrangling w/ R 📦 dplyr - import data, pipe, pivot, join, filter, count, work w/ columns, dates, char, factors, etc #tidyverse
 ▶️ https://t.co/Vs2TbYhbBj ◀️
-w/ practicals https://t.
+w/ practicals https://t.co/9ktKPp9wfW &amp; solutions https://t.co/YPwibL2w31 Cartoons @allison_horst 💜 pic.twitter.com/ZMSfxYFKWq
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) May 17, 2022 
         
       </div>
     </div>
@@ -624,7 +579,8 @@ w/ practicals https://t.
       <div class="article-style">
         
           😇 I updated the slides of my introduction to #GIS and #mapping in #rstats using the #sf package and 🐻 🗺️ in the #pyrenees 🏔️ 🧑‍🏫 Slides: https://t.co/mO4Dg8l1H5
-🧑‍💻 Code: https://t.
+🧑‍💻 Code: https://t.co/X8fDKcrbFR#rspatial #spatial #ggplot2 #tidyverse #dataviz pic.twitter.com/mSsL6Qt7IS
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) May 12, 2022 
         
       </div>
     </div>
@@ -636,7 +592,8 @@ w/ practicals https://t.
       <h2><a href="/blog/2022-05-04-matrix-population-models-lecture-slides-and-r-codes-for-a-workshop/" >Matrix population models: Lecture slides and R codes for a workshop</a></h2>
       <div class="article-style">
         
-          Happy to share lecture slides &amp; R codes of an earlier version of the workshop 👇 we ran back in 2014 🤯 w JD Lebreton &amp; @KoonsLab ➡️ https://t.co/XdcCQ560Pz #RStats For video 📽️📺, check out our workshop on pop dynamics https://t.
+          Happy to share lecture slides &amp; R codes of an earlier version of the workshop 👇 we ran back in 2014 🤯 w JD Lebreton &amp; @KoonsLab ➡️ https://t.co/XdcCQ560Pz #RStats For video 📽️📺, check out our workshop on pop dynamics https://t.co/jlTE4iF5zk w @SarahCubaynes &amp; @abesnardEPHE https://t.co/JFgS1GOU0V
+
         
       </div>
     </div>
@@ -662,6 +619,8 @@ w/ practicals https://t.
       <div class="article-style">
         
           📢🥳 With @MaudQueroue and @ValentinLauret we gave a short introduction to nimble @R_nimble nimble is a #rstats 📦 to fit models in the Bayesian framework w/ MCMC, it&#39;s also a programming environment for using/coding fns/distns/samplers
+➡️ Check out https://t.co/MuUjGc4U8i pic.twitter.com/RBtu07v874
+
         
       </div>
     </div>
@@ -673,7 +632,8 @@ w/ practicals https://t.
       <h2><a href="/blog/2022-04-06-new-paper-on-trade-offs-between-deep-learning-for-species-id-inference-on-predator-prey-co-occurrence/" >New paper on trade-offs between Deep Learning for species id inference on predator-prey co-occurrence</a></h2>
       <div class="article-style">
         
-          A pleasure to work w/ #ComputoJournal @Computo85445972 for our paper on trade-offs bw #DeepLearning for species id &amp; inference on predator-prey co-occurrence, which comes w/ a reproducible R workflow 😇https://t.co/Tgo6OJs7r0#OpenAccess #ReproducibleResearch #RStats 🧵⬇️ https://t.
+          A pleasure to work w/ #ComputoJournal @Computo85445972 for our paper on trade-offs bw #DeepLearning for species id &amp; inference on predator-prey co-occurrence, which comes w/ a reproducible R workflow 😇https://t.co/Tgo6OJs7r0#OpenAccess #ReproducibleResearch #RStats 🧵⬇️ https://t.co/x2w73ezAcs
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) April 6, 2022 
         
       </div>
     </div>
@@ -805,7 +765,7 @@ w/ practicals https://t.
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

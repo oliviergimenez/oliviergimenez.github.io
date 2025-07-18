@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>nimble | Olivier Gimenez</title>
+    <title>Nimble | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/nimble/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/nimble/index.xml" rel="self" type="application/rss+xml" />
-    <description>nimble</description>
+    <description>Nimble</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>nimble</title>
+      <title>Nimble</title>
       <link>https://oliviergimenez.github.io/tags/nimble/</link>
     </image>
     

@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -644,7 +593,7 @@
     
     
     <a href="/blog/retrospective2020/" >
-      <img src="/blog/retrospective2020/featured_huff0570b109ba86710888d08126ddeee1_25567_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/retrospective2020/featured_hu_751d718b3904fdef.jpg" alt="">
     </a>
     
   </div>
@@ -729,7 +678,7 @@
     
     
     <a href="/blog/reproscience2020/" >
-      <img src="/blog/reproscience2020/featured_hudbed15b0b0a6d39de80b0b751d9a48bb_80137_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/reproscience2020/featured_hu_b021d5ee6722c1cc.jpg" alt="">
     </a>
     
   </div>
@@ -814,7 +763,7 @@
     
     
     <a href="/blog/talklisboa/" >
-      <img src="/blog/talklisboa/featured_hue3d878c4afd8f0e9958fd75cfd7a25c4_1008115_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/talklisboa/featured_hu_5651048bbd416de4.png" alt="">
     </a>
     
   </div>
@@ -899,7 +848,7 @@
     
     
     <a href="/blog/ipmworkshop_thread/" >
-      <img src="/blog/ipmworkshop_thread/featured_hu52bbca01d87df61777cf6e449dc47ced_177669_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/ipmworkshop_thread/featured_hu_ce834e9cf000e636.jpg" alt="">
     </a>
     
   </div>
@@ -984,7 +933,7 @@
     
     
     <a href="/blog/mateshs/" >
-      <img src="/blog/mateshs/featured_hub6487b6895d5dd2f588e360bacb84d13_135061_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/mateshs/featured_hu_cd25639e9177683d.jpg" alt="">
     </a>
     
   </div>
@@ -1070,7 +1019,7 @@
     
     
     <a href="/blog/deeplearning/" >
-      <img src="/blog/deeplearning/featured_hu448cf620d0ab2b2f5421aa250d980d7e_87925_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/deeplearning/featured_hu_33316ca075e122f1.png" alt="">
     </a>
     
   </div>
@@ -1155,7 +1104,7 @@
     
     
     <a href="/blog/stat-course-2020/" >
-      <img src="/blog/stat-course-2020/featured_hu666567339b12fca241ddaff004d784a7_118604_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/stat-course-2020/featured_hu_78822e48492c9ee6.jpg" alt="">
     </a>
     
   </div>
@@ -1241,7 +1190,7 @@
     
     
     <a href="/blog/theconversation/" >
-      <img src="/blog/theconversation/featured_hudf1125c97fb779dd2df1ef9e686fa62b_120411_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/theconversation/featured_hu_78c60ebecc329c08.jpg" alt="">
     </a>
     
   </div>
@@ -1326,7 +1275,7 @@
     
     
     <a href="/blog/pieceofcode/" >
-      <img src="/blog/pieceofcode/featured_hucad3c556943f689504ed223851f8eb17_948895_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/pieceofcode/featured_hu_37a790630d832090.png" alt="">
     </a>
     
   </div>
@@ -1411,7 +1360,7 @@
     
     
     <a href="/blog/bayesworkshop/" >
-      <img src="/blog/bayesworkshop/featured_huff83ab05f182033fcc3ba709bcc44c19_251287_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/bayesworkshop/featured_hu_7b5641127ee2dff4.jpg" alt="">
     </a>
     
   </div>
@@ -1536,7 +1485,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

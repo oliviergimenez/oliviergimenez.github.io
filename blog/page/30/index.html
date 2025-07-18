@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -593,7 +542,9 @@
 
     
     <div class="article-style">
-      Our meeting report on ISEC2014 has appeared in Biology Letters just before Christmas eve, nice gift! Check it out, it&rsquo;s in open access.
+      <p>Our meeting report on ISEC2014 has appeared in Biology Letters just before Christmas
+eve, nice gift! <a href="http://rsbl.royalsocietypublishing.org/content/10/12/20140698" 
+target="_blank">Check it out</a>, it&rsquo;s in open access.</p>
     </div>
     
 
@@ -673,7 +624,11 @@
 
     
     <div class="article-style">
-      Jim Sedinger, professor at the University of Nevada (Reno), said goodbye to the team after 3 months with us on a sabbatical. It’s been great to have Jim here analyzing data collected as part of the amazing Black Brant monitoring initiated in the 40s.
+      <p><a href="http://www.ag.unr.edu/sedinger/" target="_blank">Jim Sedinger</a>, professor
+at the University of Nevada (Reno), said goodbye to the team after 3 months with us
+on a sabbatical. It’s been great to have Jim here analyzing data collected as part
+of the amazing Black Brant monitoring initiated in the 40s. More soon on our joint
+project on senescence and individual heterogeneity.</p>
     </div>
     
 
@@ -753,7 +708,20 @@
 
     
     <div class="article-style">
-      I acted as president of the examining committee of Sarah Calba who defended her PhD in epistemology of sciences with the predictions in community ecology as a case study. The thesis was supervised by two clever colleagues of mine, Virginie Maris and Vincent Devictor.
+      <p>I acted as president of the examining committee of
+<a href="http://www.eec.univ-montp2.fr/people/sarah-calba/" target="_blank">Sarah
+Calba</a> who defended her PhD in epistemology of sciences with the predictions in
+community ecology as a case study. The thesis was supervised by two clever colleagues
+of mine, Virginie Maris and Vincent Devictor. Sarah did more than well, and the
+discussions were lively and the debate vivid. As a general comment, I wish we, as
+ecologists, had more time as part of our training to think of why and how we conduct
+our scientific activities. Sarah has
+a <a href="http://onlinelibrary.wiley.com/doi/10.1111/geb.12148/abstract" target="_blank">nice
+paper</a> showing that the identification of patterns and processes linking species
+diversity to functional or phylogenetic diversity depends on the methodological choices
+we make as analysts. This reminds me of
+the <a href="http://andrewgelman.com/2012/11/01/researcher-degrees-of-freedom/" target="_blank">discussion
+about &ldquo;Researcher Degrees of Freedom&rdquo;</a> on Gelman’s blog.</p>
     </div>
     
 
@@ -833,7 +801,16 @@
 
     
     <div class="article-style">
-      We held AppliBugs in Montpellier, with the idea to stimulate exchanges and to share information on Bayesian methods and applications ( program here). The day went well despite a rainstorm falling on Montpellier.
+      <p>We held AppliBugs in Montpellier, with the idea to stimulate exchanges and to share
+information on Bayesian methods and applications
+(
+<a href="https://dl.dropboxusercontent.com/u/23160641/my-pubs/annonceAppliBugs-28novembre-Montpellier.pdf" target="_blank" rel="noopener">program here</a>).
+The day went well despite a rainstorm falling on Montpellier. All talks were
+great, and I was particularly interested in Adrien Todeschini&rsquo;s presentation of
+
+<a href="http://https://alea.bordeaux.inria.fr/biips/doku.php" target="_blank" rel="noopener">Biips</a>,
+a software allowing the implementation of state-space models using particle filtering and
+a R/BUGS-like syntax.</p>
     </div>
     
 
@@ -913,7 +890,13 @@
 
     
     <div class="article-style">
-      We had a lovely 2-day workshop in Lyon on individual heterogeneity in demography as part of our research group on Statistical Ecology. I gave a short talk providing an overview of heterogeneous capture-recapture models.
+      <p>We had a lovely 2-day workshop in Lyon on individual heterogeneity in demography as part
+of <a href="https://sites.google.com/site/gdrecostat/" target="_blank">our research group
+on Statistical Ecology</a>. I gave a short
+talk providing an overview of heterogeneous capture-recapture models. We agreed on
+meeting again early April 2015 to carry out a comparative analysis of individual heterogeneity
+using the datasets shared by the group and the method developed by Hal Caswell (check it
+out <a href="http://www.demographic-research.org/volumes/vol31/19/">here</a>).</p>
     </div>
     
 
@@ -993,7 +976,17 @@
 
     
     <div class="article-style">
-      After a month off, I’m back to work starting with a 2-day workshop on citizen sciences I’ve co-organised with Romain Julliard and Pascal Monestiez ( program) as part of our group on Statistical Ecology and on citizen sciences CiSStats.
+      <p>After a month off, I’m back to work starting with a 2-day workshop on citizen sciences
+I’ve co-organised with Romain Julliard and Pascal Monestiez
+(
+<a href="https://dl.dropboxusercontent.com/u/23160641/my-pubs/prog_16_17_octobre_v4.pdf" target="_blank" rel="noopener">program</a>)
+as part of 
+<a href="https://sites.google.com/site/gdrecostat/" target="_blank" rel="noopener">our group on Statistical Ecology</a>
+and on citizen sciences 
+<a href="http://ciam.inra.fr/cisstats/accueil" target="_blank" rel="noopener">CiSStats</a>. The discussions
+were stimulating with a nice balance between talks given by data providers on the first
+day and modelers on the second day. I gave a talk based on Anne-Sophie’s work on
+mapping brown bear distribution in Greece using opportunistic data. Slides below:</p>
     </div>
     
 
@@ -1073,7 +1066,15 @@
 
     
     <div class="article-style">
-      I attended Daniel Turek&rsquo;s talk at ISEC about NIMBLE a neat alternative to WinBUGS and JAGS. It is developed by Perry de Valpine&rsquo;s group at Berkeley and &lsquo;lets you use BUGS models natively in R, program functions that use them, and compile everything via C++ for faster computing&rsquo;.
+      <p>I attended Daniel Turek&rsquo;s talk at ISEC about <a href="http://r-nimble.org/" target="_blank">NIMBLE</a>
+a neat alternative to WinBUGS and JAGS. It is developed by
+<a href="http://nature.berkeley.edu/~pdevalpine/" target="_blank">Perry de Valpine&rsquo;s
+group</a> at Berkeley and <em>&lsquo;lets you use BUGS models natively in R, program functions
+that use them, and compile everything via C++ for faster computing&rsquo;.</em> I played around
+with NIMBLE a bit, <a href="https://dl.dropboxusercontent.com/u/23160641/my-codes/cjs-nimble.R" target="_blank">here</a>
+is an example of fitting a classic capture-recapture model to simulated data - thanks to Perry
+and Daniel for their help! NIMBLE seems a lot faster than its competitors, and much more flexible.
+I&rsquo;ll continue my investigations with more complex models - stay tuned.</p>
     </div>
     
 
@@ -1153,7 +1154,9 @@
 
     
     <div class="article-style">
-      ISEC 2014 is now closed. Organising this conference has been a fantastic adventure; hopefully the participants liked it.
+      <p><a href="http://isec2014.sciencesconf.org/" target="_blank">ISEC 2014</a> is now closed.
+Organising this conference has been a fantastic adventure; hopefully the participants
+liked it.</p>
     </div>
     
 
@@ -1233,7 +1236,9 @@
 
     
     <div class="article-style">
-      I gave a talk at ISEC 2014 on fitting occupancy models with hidden-Markov models using E-SURGE:
+      <p>I gave a talk at ISEC 2014 on
+fitting occupancy models with hidden-Markov models using E-SURGE:</p>
+<iframe src="https://widgets.figshare.com/articles/4833092/embed?show_title=1" width="568" height="426" frameborder="0"></iframe>
     </div>
     
 
@@ -1313,7 +1318,11 @@
 
     
     <div class="article-style">
-      Ben Rashford and Thomas Foulke from the University of Wyoming visited us. They gave a great talk on &ldquo;Wolf Re-Introduction in the Northern Rockies, USA: From Population and Predation Trends to Policy and Economics&rdquo;.
+      <p><a href="http://www.uwyo.edu/agecon/about%20us/facultystaff/faculty%20pages/benjamin%20rashford.html" target="_blank">Ben
+Rashford</a> and <a href="http://www.uwyo.edu/agecon/about%20us/facultystaff/faculty%20pages/thomas%20foulke.html" 
+target="_blank">Thomas Foulke</a> from the University of Wyoming visited us. They gave a great
+talk on &ldquo;Wolf Re-Introduction in the Northern Rockies, USA: From Population and Predation
+Trends to Policy and Economics&rdquo;.</p>
     </div>
     
 
@@ -1484,7 +1493,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

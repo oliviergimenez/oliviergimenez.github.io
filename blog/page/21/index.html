@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -593,7 +542,7 @@
 
     
     <div class="article-style">
-      Following @JamesGrecian&#39;s tracks (who helped me to get the tweets), I did some analyses of the #isec2018 tweets largely inspired (if not copy and pasted) by previous analyses from @brenborbon, @_ColinFay and @bryangoodrich - Data &amp; #rstats codes https://t.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Following <a href="https://twitter.com/JamesGrecian?ref_src=twsrc%5Etfw">@JamesGrecian</a>&#39;s tracks (who helped me to get the tweets), I did some analyses of the <a href="https://twitter.com/hashtag/isec2018?src=hash&amp;ref_src=twsrc%5Etfw">#isec2018</a> tweets largely inspired (if not copy and pasted) by previous analyses from <a href="https://twitter.com/brenborbon?ref_src=twsrc%5Etfw">@brenborbon</a>, <a href="https://twitter.com/_ColinFay?ref_src=twsrc%5Etfw">@_ColinFay</a> and <a href="https://twitter.com/bryangoodrich?ref_src=twsrc%5Etfw">@bryangoodrich</a> - Data &amp; <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> codes <a href="https://t.co/ZCv4DAeS5S">https://t.co/ZCv4DAeS5S</a> <a href="https://t.co/YmU2QBsyp2">pic.twitter.com/YmU2QBsyp2</a></p>
     </div>
     
 
@@ -673,8 +622,8 @@
 
     
     <div class="article-style">
-      And nooooooow, ladies and gentlemen, @LMarescot presents her work on multispecies occupancy models to infer poaching #ISEC2018 @CNRSenLR @INEE_CNRS #teamboulet @WWF @SMARTCnsvTools pic.twitter.com/FUiATuATNJ
-&mdash; Olivier Gimenez 🍉 (@oaggimenez) 5et 2018 
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">And nooooooow, ladies and gentlemen, <a href="https://twitter.com/LMarescot?ref_src=twsrc%5Etfw">@LMarescot</a> presents her work on multispecies occupancy models to infer poaching <a href="https://twitter.com/hashtag/ISEC2018?src=hash&amp;ref_src=twsrc%5Etfw">#ISEC2018</a> <a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR</a> <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a> <a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;ref_src=twsrc%5Etfw">#teamboulet</a> <a href="https://twitter.com/WWF?ref_src=twsrc%5Etfw">@WWF</a> <a href="https://twitter.com/SMARTCnsvTools?ref_src=twsrc%5Etfw">@SMARTCnsvTools</a> <a href="https://t.co/FUiATuATNJ">pic.twitter.com/FUiATuATNJ</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1014866238445621254?ref_src=twsrc%5Etfw">5et 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -754,7 +703,8 @@
 
     
     <div class="article-style">
-      Aaaaaaaaaaaaaaaaaaaand now, ladies and gentlemen, @NSantostasi on stage to present her work on estimating prevalence of hybrids in 🇮🇹 wolves using #HMMs and capture-recapture data #teamboulet @CNRSenLR @INEE_CNRS @romolocaniglia @umontpellier #CEFE pic.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Aaaaaaaaaaaaaaaaaaaand now, ladies and gentlemen, <a href="https://twitter.com/NSantostasi?ref_src=twsrc%5Etfw">@NSantostasi</a> on stage to present her work on estimating prevalence of hybrids in 🇮🇹 wolves using <a href="https://twitter.com/hashtag/HMMs?src=hash&amp;ref_src=twsrc%5Etfw">#HMMs</a> and capture-recapture data <a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;ref_src=twsrc%5Etfw">#teamboulet</a> <a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR</a> <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a>  <a href="https://twitter.com/romolocaniglia?ref_src=twsrc%5Etfw">@romolocaniglia</a> <a href="https://twitter.com/umontpellier?ref_src=twsrc%5Etfw">@umontpellier</a> <a href="https://twitter.com/hashtag/CEFE?src=hash&amp;ref_src=twsrc%5Etfw">#CEFE</a> <a href="https://t.co/vDXH9NDX2H">pic.twitter.com/vDXH9NDX2H</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1014801043517997056?ref_src=twsrc%5Etfw">5 juillet 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -834,8 +784,8 @@
 
     
     <div class="article-style">
-      Are you ready for an awesome talk by @oaggimenez on regularization techniques for covariate selection in #caprecapt studies with Ian Renner @MoonbeamLevels ? #ISEC2018 @ISECStatEcol 😍💪🎉 pic.twitter.com/XD4IRPgoL8
-&mdash; Julie Louvrier 🐱🐺 (@LouvrierJulie) 3 juillet 2018 
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Are you ready for an awesome talk by <a href="https://twitter.com/oaggimenez?ref_src=twsrc%5Etfw">@oaggimenez</a> on regularization  techniques for covariate selection in <a href="https://twitter.com/hashtag/caprecapt?src=hash&amp;ref_src=twsrc%5Etfw">#caprecapt</a> studies with Ian Renner <a href="https://twitter.com/MoonbeamLevels?ref_src=twsrc%5Etfw">@MoonbeamLevels</a> ? <a href="https://twitter.com/hashtag/ISEC2018?src=hash&amp;ref_src=twsrc%5Etfw">#ISEC2018</a> <a href="https://twitter.com/ISECStatEcol?ref_src=twsrc%5Etfw">@ISECStatEcol</a> 😍💪🎉 <a href="https://t.co/XD4IRPgoL8">pic.twitter.com/XD4IRPgoL8</a></p>&mdash; Julie Louvrier 🐱🐺 (@LouvrierJulie) <a href="https://twitter.com/LouvrierJulie/status/1014098321038856193?ref_src=twsrc%5Etfw">3 juillet 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -915,8 +865,9 @@
 
     
     <div class="article-style">
-      And now, ladies and gentlemen, the amazing @LouvrierJulie 👏 who tells us about mechanistic #SDMs to study 🐺 colonization in 🇫🇷 #ISEC2018 #teamboulet @ONCFS_officiel @CNRSenLR @INEE_CNRS @umontpellier pic.twitter.com/JUTayPLTSu
-&mdash; Olivier Gimenez 🍉 (@oaggimenez) 2 juillet 2018 This is the end.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">And now, ladies and gentlemen, the amazing <a href="https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw">@LouvrierJulie</a> 👏 who tells us about mechanistic <a href="https://twitter.com/hashtag/SDMs?src=hash&amp;ref_src=twsrc%5Etfw">#SDMs</a> to study 🐺 colonization in 🇫🇷 <a href="https://twitter.com/hashtag/ISEC2018?src=hash&amp;ref_src=twsrc%5Etfw">#ISEC2018</a> <a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;ref_src=twsrc%5Etfw">#teamboulet</a> <a href="https://twitter.com/ONCFS_officiel?ref_src=twsrc%5Etfw">@ONCFS_officiel</a> <a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR</a> <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a> <a href="https://twitter.com/umontpellier?ref_src=twsrc%5Etfw">@umontpellier</a> <a href="https://t.co/JUTayPLTSu">pic.twitter.com/JUTayPLTSu</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1013803043433926656?ref_src=twsrc%5Etfw">2 juillet 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">This is the end... <a href="https://t.co/2FNCT8yxib">pic.twitter.com/2FNCT8yxib</a></p>
     </div>
     
 
@@ -996,8 +947,8 @@
 
     
     <div class="article-style">
-      Ma présentation aux Rencontres Humains &amp; Cétacés en Méditerranée https://t.co/rkEhfC7TPu du 27 Juin 👧👦🤝🐋🐬 à #Marseille sur l&#39;apport de la recherche académique https://t.co/MEZtmisGPJ @GIS_3M #teamboulet #CEFE @CNRSenLR @INEE_CNRS
-&mdash; Olivier Gimenez 🍉 (@oaggimenez) 2uin 2018 
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Ma présentation aux Rencontres Humains &amp; Cétacés en Méditerranée <a href="https://t.co/rkEhfC7TPu">https://t.co/rkEhfC7TPu</a> du 27 Juin 👧👦🤝🐋🐬 à <a href="https://twitter.com/hashtag/Marseille?src=hash&amp;ref_src=twsrc%5Etfw">#Marseille</a> sur l&#39;apport de la recherche académique <a href="https://t.co/MEZtmisGPJ">https://t.co/MEZtmisGPJ</a> <a href="https://twitter.com/GIS_3M?ref_src=twsrc%5Etfw">@GIS_3M</a> <a href="https://twitter.com/hashtag/teamboulet?src=hash&amp;ref_src=twsrc%5Etfw">#teamboulet</a> <a href="https://twitter.com/hashtag/CEFE?src=hash&amp;ref_src=twsrc%5Etfw">#CEFE</a> <a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR</a> <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1011712026283008000?ref_src=twsrc%5Etfw">2uin 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1077,8 +1028,8 @@
 
     
     <div class="article-style">
-      What future for 🐘 in Laos: adaptation or transformation. pic.twitter.com/RIbcPg4svz
-&mdash; Olivier Gimenez 🍉 (@oaggimenez) 19 juin 2018 
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">What future for 🐘 in Laos: adaptation or transformation. <a href="https://t.co/RIbcPg4svz">pic.twitter.com/RIbcPg4svz</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1008981222360518656?ref_src=twsrc%5Etfw">19 juin 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1239,7 +1190,8 @@
 
     
     <div class="article-style">
-      Linking organismal functions, life history strategies and population performance @BritishEcolSoc cross-journal special feature by the flamboyant @DRobcito w/ @dylan_childs #CyrilleViolle &amp; I https://t.co/qoNviB84ux w/ contribs by @HalCaswell @djm_MEEG @benjaminblonder &amp; others 🤩 pic.
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">Linking organismal functions, life history strategies and population performance <a href="https://twitter.com/BritishEcolSoc?ref_src=twsrc%5Etfw">@BritishEcolSoc</a> cross-journal special feature by the flamboyant <a href="https://twitter.com/DRobcito?ref_src=twsrc%5Etfw">@DRobcito</a> w/ <a href="https://twitter.com/dylan_childs?ref_src=twsrc%5Etfw">@dylan_childs</a> <a href="https://twitter.com/hashtag/CyrilleViolle?src=hash&amp;ref_src=twsrc%5Etfw">#CyrilleViolle</a> &amp; I <a href="https://t.co/qoNviB84ux">https://t.co/qoNviB84ux</a> w/ contribs by <a href="https://twitter.com/HalCaswell?ref_src=twsrc%5Etfw">@HalCaswell</a> <a href="https://twitter.com/djm_MEEG?ref_src=twsrc%5Etfw">@djm_MEEG</a> <a href="https://twitter.com/benjaminblonder?ref_src=twsrc%5Etfw">@benjaminblonder</a> &amp; others 🤩 <a href="https://t.co/fqd6FvBrPz">pic.twitter.com/fqd6FvBrPz</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1008784207747969024?ref_src=twsrc%5Etfw">18 juin8</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1319,8 +1271,9 @@
 
     
     <div class="article-style">
-      Au siège du @CNRS pour présenter notre projet combinant #shs et #écologie pour la gestion des grands prédateurs 🐺🐻🐱 en 🇫🇷 &quot;Osez l&#39;#interdisciplinarité&quot; 🤞😓 @CNRSenLR @INEE_CNRS pic.twitter.com/yxUFWj5cWB
-&mdash; Olivier Gimenez 🍉 (@oaggimenez) 11 juin 2018 Et la réponse vient de tomber, ça maaaaaaaaaaaarche!
+      <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Au siège du <a href="https://twitter.com/CNRS?ref_src=twsrc%5Etfw">@CNRS</a> pour présenter notre projet combinant <a href="https://twitter.com/hashtag/shs?src=hash&amp;ref_src=twsrc%5Etfw">#shs</a> et <a href="https://twitter.com/hashtag/%C3%A9cologie?src=hash&amp;ref_src=twsrc%5Etfw">#écologie</a> pour la gestion des grands prédateurs 🐺🐻🐱 en 🇫🇷 &quot;Osez l&#39;<a href="https://twitter.com/hashtag/interdisciplinarit%C3%A9?src=hash&amp;ref_src=twsrc%5Etfw">#interdisciplinarité</a>&quot; 🤞😓 <a href="https://twitter.com/CNRSenLR?ref_src=twsrc%5Etfw">@CNRSenLR</a>  <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a> <a href="https://t.co/yxUFWj5cWB">pic.twitter.com/yxUFWj5cWB</a></p>&mdash; Olivier Gimenez 🍉 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1006098460867813376?ref_src=twsrc%5Etfw">11 juin 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Et la réponse vient de tomber, ça maaaaaaaaaaaarche! 💥🎉😎🥳 <a href="https://t.co/g8lI7l1kJW">pic.twitter.com/g8lI7l1kJW</a></p>
     </div>
     
 
@@ -1491,7 +1444,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

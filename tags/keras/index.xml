@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>keras | Olivier Gimenez</title>
+    <title>Keras | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/keras/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/keras/index.xml" rel="self" type="application/rss+xml" />
-    <description>keras</description>
+    <description>Keras</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Sun, 02 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>keras</title>
+      <title>Keras</title>
       <link>https://oliviergimenez.github.io/tags/keras/</link>
     </image>
     
@@ -87,7 +87,7 @@ plotncovid &amp;lt;- scanncovid %&amp;gt;%
 library(patchwork)
 plotcovid + plotncovid
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-4-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/image-classif/unnamed-chunk-4-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;Put altogether and shuffle.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;df &amp;lt;- rbind(cbind(covid_reshaped, 1), # 1 = covid
             cbind(ncovid_reshaped, 0)) # 0 = no covid
@@ -137,7 +137,7 @@ test_label &amp;lt;- to_categorical(test_target)
 &lt;p&gt;A quick visualization of the performances shows that the algorithm is doing not too bad. No over/under-fitting. Accuracy and loss are fine.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(fit_covid)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-11-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/image-classif/unnamed-chunk-11-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;What about the performances on the testing dataset?&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;model %&amp;gt;%
   evaluate(test, test_label)

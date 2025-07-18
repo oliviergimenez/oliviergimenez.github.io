@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -644,7 +593,7 @@
     
     
     <a href="/blog/twitter-social-network/" >
-      <img src="/blog/twitter-social-network/featured_hu4419af2178497071c5259f5686bee4d8_327757_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/twitter-social-network/featured_hu_ca34099d19e0e39d.png" alt="">
     </a>
     
   </div>
@@ -729,7 +678,7 @@
     
     
     <a href="/blog/lnphddefense/" >
-      <img src="/blog/lnphddefense/featured_hu6485f23e60e2e8e9568294bae27898e8_208020_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/lnphddefense/featured_hu_d57d1f8db1442dd6.jpg" alt="">
     </a>
     
   </div>
@@ -815,7 +764,7 @@
     
     
     <a href="/blog/ibmworkshop/" >
-      <img src="/blog/ibmworkshop/featured_huc543b6a4a9fb4658a2a0775bd7ec74ee_92219_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/ibmworkshop/featured_hu_5753b8e7f621cf3f.jpg" alt="">
     </a>
     
   </div>
@@ -900,7 +849,7 @@
     
     
     <a href="/blog/euring2021/" >
-      <img src="/blog/euring2021/featured_hub37412eb2608cbe59184a22395b82573_773081_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/euring2021/featured_hu_c211fbe7d3b14f37.jpg" alt="">
     </a>
     
   </div>
@@ -986,7 +935,7 @@
     
     
     <a href="/blog/restitutionerc/" >
-      <img src="/blog/restitutionerc/featured_hu9f07f4bbf0e39e9e1b93d100b584c70c_297394_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/restitutionerc/featured_hu_a45c45db21acad7f.jpg" alt="">
     </a>
     
   </div>
@@ -1071,7 +1020,7 @@
     
     
     <a href="/blog/hmmcrworkshop/" >
-      <img src="/blog/hmmcrworkshop/featured_hu6f56f42f1f6dde8f17bcfac3d4743cc3_351394_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/hmmcrworkshop/featured_hu_a6e7729c8aeb5e5.jpg" alt="">
     </a>
     
   </div>
@@ -1156,7 +1105,7 @@
     
     
     <a href="/blog/bayesstatsworkshop/" >
-      <img src="/blog/bayesstatsworkshop/featured_hu843806921279b80f055931ee9477f44c_302941_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/bayesstatsworkshop/featured_hu_78fa3589b1f5a43f.jpg" alt="">
     </a>
     
   </div>
@@ -1241,7 +1190,7 @@
     
     
     <a href="/blog/rrworkshop/" >
-      <img src="/blog/rrworkshop/featured_hu56f67dbd29fe384a085fcceb5592098f_275209_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/rrworkshop/featured_hu_8cbc3509f3817492.jpg" alt="">
     </a>
     
   </div>
@@ -1326,7 +1275,7 @@
     
     
     <a href="/blog/commerc/" >
-      <img src="/blog/commerc/featured_hudf1125c97fb779dd2df1ef9e686fa62b_120411_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/commerc/featured_hu_78c60ebecc329c08.jpg" alt="">
     </a>
     
   </div>
@@ -1411,7 +1360,7 @@
     
     
     <a href="/blog/sfeeia/" >
-      <img src="/blog/sfeeia/featured_hu976f75eb64cec322f9b98ac583620e73_47301_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/sfeeia/featured_hu_5a23ab112ab7ea35.jpg" alt="">
     </a>
     
   </div>
@@ -1536,7 +1485,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

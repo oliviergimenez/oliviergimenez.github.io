@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>twitter | Olivier Gimenez</title>
+    <title>Twitter | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/twitter/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
-    <description>twitter</description>
+    <description>Twitter</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Wed, 28 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>twitter</title>
+      <title>Twitter</title>
       <link>https://oliviergimenez.github.io/tags/twitter/</link>
     </image>
     
@@ -573,7 +573,7 @@ do.call(addMapLegend,
           legendIntervals=&amp;quot;data&amp;quot;,
           legendMar = 2))
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-12-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/twitter-social-network/unnamed-chunk-12-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;How many followers are verified?&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;details_followers %&amp;gt;% 
   count(verified)
@@ -636,7 +636,7 @@ do.call(addMapLegend,
   geom_line() +
   labs(x = &amp;quot;date of creation&amp;quot;, y = &amp;quot;how many accounts were created this month-year&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-15-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/twitter-social-network/unnamed-chunk-15-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;What is the distribution of the number of followers and friends. On average, 400 followers and 400 friends.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;foll &amp;lt;- details_followers %&amp;gt;%
   ggplot() + 
@@ -653,7 +653,7 @@ friends &amp;lt;- details_followers %&amp;gt;%
 library(patchwork)
 foll + friends
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-16-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/twitter-social-network/unnamed-chunk-16-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;h2 id=&#34;retrieving-social-links&#34;&gt;Retrieving social links&lt;/h2&gt;
 &lt;p&gt;To investigate the social network made of my followers, we need to gather who they follow, and their followers. Unfortunately, the Twitter API imposes some time and quantity constraints in retrieving data.&lt;/p&gt;
 &lt;p&gt;Here, for the sake of illustration, I will focus on some accounts only. To do so, I consider accounts with between 1000 and 1500 followers, and more than 30000 tweets users have liked in their account&amp;rsquo;s lifetime (which denotes some activity). The more followers we consider, the more time it would take to gather info on them: it is approx one minute per follower on average, so one hour for sixty followers, and more than eighty hours for all my followers! With the filters I&amp;rsquo;m using, I end up with 35 followers here, this is very few to say infer meaningful about a network, but it&amp;rsquo;ll do the job for now.&lt;/p&gt;
@@ -895,7 +895,7 @@ plot_ego &amp;lt;- network_viz %&amp;gt;%
   labs(title = &amp;quot;Top 3 communities&amp;quot;)
 plot_ego
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-31-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/twitter-social-network/unnamed-chunk-31-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;p&gt;Let&amp;rsquo;s use an alternative dataviz to identify the nodes.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;network_viz %&amp;gt;% 
   mutate(community = group_spinglass()) %&amp;gt;%
@@ -906,7 +906,7 @@ plot_ego
   theme_graph() + theme(legend.position = &amp;quot;none&amp;quot;) +
   labs(title = &amp;quot;Network with named nodes&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-32-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/twitter-social-network/unnamed-chunk-32-1.png&#34; alt=&#34;&#34;&gt;&lt;!-- --&gt;&lt;/p&gt;
 &lt;h2 id=&#34;concluding-words&#34;&gt;Concluding words&lt;/h2&gt;
 &lt;p&gt;Not sure what the communities are about. Due to limitation with the Twitter API I did not attempt to retrieve the info on all the 5,000 followers, but I used only 35 of them, which explains why there is not much to say about this network I guess. I might take some time to try and retrieve all the info (will take days), or not. I might also use some information I already have, like how followers describe themselves and do some topic modelling to identify common themes of interest.&lt;/p&gt;
 &lt;p&gt;Here I have simply followed the steps that Joe Cristian illustrated so brillantly in his post at 

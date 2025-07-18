@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/demography/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/demography/">
-  <meta property="og:title" content="demography | Olivier Gimenez">
+  <meta property="og:title" content="Demography | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>demography | Olivier Gimenez</title>
+  <title>Demography | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>demography</h1>
+  <h1>Demography</h1>
 
   
 
@@ -571,7 +520,8 @@
       <h2><a href="/blog/papertamar/" >New paper: Accounting for heterogeneity when estimating stopover duration, timing and population size of red knots along the Luannan Coast of Bohai Bay, China</a></h2>
       <div class="article-style">
         
-          New paper by @TamarLok 🤩👏 using integrated modelling of 8 years of resighting and count data and accouting for heterogeneity to show the key importance of the Luannan Coast of Bohai Bay (China) as a spring #stopover area for red knots https://t.
+          New paper by @TamarLok 🤩👏 using integrated modelling of 8 years of resighting and count data and accouting for heterogeneity to show the key importance of the Luannan Coast of Bohai Bay (China) as a spring #stopover area for red knots https://t.co/EgOA6yM4Dp #WomenInSTEM pic.twitter.com/05qVXhyXVt
+
         
       </div>
     </div>
@@ -583,7 +533,8 @@
       <h2><a href="/blog/paperdorinda/" >New paper: How many cubs can a mum nurse? Maternal age and size influence litter size in polar bears</a></h2>
       <div class="article-style">
         
-          New paper on &#39;How many cubs can a mum nurse? Maternal age and size influence litter size in polar bears&#39; https://t.co/Utu4VZ0Ms3 w/ #DorindaFolio (former Master student 👏🤩) and #SarahCubaynes in control #WomenInSTEM - PDF on request 😉 pic.
+          New paper on &#39;How many cubs can a mum nurse? Maternal age and size influence litter size in polar bears&#39; https://t.co/Utu4VZ0Ms3 w/ #DorindaFolio (former Master student 👏🤩) and #SarahCubaynes in control #WomenInSTEM - PDF on request 😉 pic.twitter.com/QABpoQxmHQ
+
         
       </div>
     </div>
@@ -595,7 +546,8 @@
       <h2><a href="/blog/preprintsarah/" >Modeling the demography of species providing extended parental care: A capturerecapture approach with a case study on Polar Bears</a></h2>
       <div class="article-style">
         
-          New preprint by awesome #SarahCubaynes &quot;Modeling the demography of species providing extended parental care: A #capturerecapture approach with a case study on #Polar Bears&quot; https://t.co/x1H0X7GyKn #demography #rstats #multistate #WomenInSTEM #WomenInScience pic.
+          New preprint by awesome #SarahCubaynes &quot;Modeling the demography of species providing extended parental care: A #capturerecapture approach with a case study on #Polar Bears&quot; https://t.co/x1H0X7GyKn #demography #rstats #multistate #WomenInSTEM #WomenInScience pic.twitter.com/rYEwOUobEn
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) 2 avril 2019 
         
       </div>
     </div>
@@ -607,7 +559,8 @@
       <h2><a href="/blog/papervincenzo/" >New paper: Failure to coordinate management in transboundary populations hinders the achievement of national management goals: The case of wolverines in Scandinavia</a></h2>
       <div class="article-style">
         
-          New paper by #VincenzoGervasi &quot;Failure to coordinate management in transboundary populations hinders the achievement of national management goals: The case of wolverines in Scandinavia&quot; w/ @johnlinnell #HenrikBroseth #LabexCemeb @CNRS_OccitaniE @NINAforskning @umontpellier pic.
+          New paper by #VincenzoGervasi &quot;Failure to coordinate management in transboundary populations hinders the achievement of national management goals: The case of wolverines in Scandinavia&quot; w/ @johnlinnell #HenrikBroseth #LabexCemeb @CNRS_OccitaniE @NINAforskning @umontpellier pic.twitter.com/gzkANotqry
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) 2 avril 2019 
         
       </div>
     </div>
@@ -619,7 +572,8 @@
       <h2><a href="/blog/bibi3_paper/" >New paper!</a></h2>
       <div class="article-style">
         
-          Linking organismal functions, life history strategies and population performance @BritishEcolSoc cross-journal special feature by the flamboyant @DRobcito w/ @dylan_childs #CyrilleViolle &amp; I https://t.co/qoNviB84ux w/ contribs by @HalCaswell @djm_MEEG @benjaminblonder &amp; others 🤩 pic.
+          Linking organismal functions, life history strategies and population performance @BritishEcolSoc cross-journal special feature by the flamboyant @DRobcito w/ @dylan_childs #CyrilleViolle &amp; I https://t.co/qoNviB84ux w/ contribs by @HalCaswell @djm_MEEG @benjaminblonder &amp; others 🤩 pic.twitter.com/fqd6FvBrPz
+&mdash; Olivier Gimenez 🍉 (@oaggimenez) 18 juin8 
         
       </div>
     </div>
@@ -647,6 +601,7 @@
       <div class="article-style">
         
           We had our first meeting for the project &ldquo;Climate and management effects on COMmunity dynamics – Developing multi-species DEMOgraphy&quot;funded by ANR. The website is operational and running, check it out here.
+
         
       </div>
     </div>
@@ -658,7 +613,8 @@
       <h2><a href="/blog/working_group_demo/" >Working group on animal/human demography</a></h2>
       <div class="article-style">
         
-          We organised a 2-day workshop on the metrics of longevity used in human and animal demography. The idea is to explore potential bridges between the two fields. Next meeting in April.
+          We organised a 2-day workshop on the metrics of longevity used in human and animal demography. The idea is to explore potential bridges between the two fields. Next meeting in April. The group is led by S. Cubaynes, a former PhD student of mine, who now holds a lecturer position at Montpellier University.
+
         
       </div>
     </div>
@@ -683,7 +639,8 @@
       <h2><a href="/blog/polar_bear/" >Visiting Tromso, polar bear demography</a></h2>
       <div class="article-style">
         
-          My post-doc Sarah Cubaynes and I went to visit our colleague Jon Aars in Tromso, Norway. We are working together on the demography of polar bears using an amazing dataset the Norwegian Polar Institute has been collecting for decades.
+          My post-doc Sarah Cubaynes and I went to visit our colleague Jon Aars in Tromso, Norway. We are working together on the demography of polar bears using an amazing dataset the Norwegian Polar Institute has been collecting for decades. It was also the opportunity to catch up with Nigel (Gilles) Yoccoz who&rsquo;s being very helpful with this project. Jon took us fishing; I was luckier than with fly-fishing ;-)
+
         
       </div>
     </div>
@@ -802,7 +759,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

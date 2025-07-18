@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>writing | Olivier Gimenez</title>
+    <title>Writing | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/writing/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/writing/index.xml" rel="self" type="application/rss+xml" />
-    <description>writing</description>
+    <description>Writing</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Wed, 27 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>writing</title>
+      <title>Writing</title>
       <link>https://oliviergimenez.github.io/tags/writing/</link>
     </image>
     

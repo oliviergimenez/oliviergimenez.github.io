@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My-projects | Olivier Gimenez</title>
+    <title>My-Projects | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/my-project/</link>
       <atom:link href="https://oliviergimenez.github.io/my-project/index.xml" rel="self" type="application/rss+xml" />
-    <description>My-projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <description>My-Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Fri, 18 Jul 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>My-projects</title>
+      <title>My-Projects</title>
       <link>https://oliviergimenez.github.io/my-project/</link>
     </image>
+    
+    <item>
+      <title>Objectif-Lez</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/objectiflez/</link>
+      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/objectiflez/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LeptoNex</title>
+      <link>https://oliviergimenez.github.io/my-project/external-project/riviere/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/my-project/external-project/riviere/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>MEDLEZ</title>
       <link>https://oliviergimenez.github.io/my-project/external-project/medlez/</link>
       <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/my-project/external-project/medlez/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RIVIERE</title>
-      <link>https://oliviergimenez.github.io/my-project/external-project/riviere/</link>
-      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/my-project/external-project/riviere/</guid>
       <description></description>
     </item>
     

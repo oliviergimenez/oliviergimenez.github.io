@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ecology | Olivier Gimenez</title>
+    <title>Ecology | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/ecology/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/ecology/index.xml" rel="self" type="application/rss+xml" />
-    <description>ecology</description>
+    <description>Ecology</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>ecology</title>
+      <title>Ecology</title>
       <link>https://oliviergimenez.github.io/tags/ecology/</link>
     </image>
     
@@ -207,7 +207,7 @@ colleagues who were part of several phD commitees.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# save
 ggsave(filename = &amp;quot;ecology_network.pdf&amp;quot;,width=30,height = 20)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I played around the defaults Coulmont used to build and plot the network. It helps in getting a better understanding of the network and the links between colleagues working in ecology. Overall, I indeed feel very much connected to my colleagues in Montpellier, Lyon and Grenoble. I should probably go out of my comfort zone and interact even more with my colleagues from La Rochelle, Marseille and Aix-en-Provence 😃&lt;/p&gt;
+&lt;p&gt;I played around the defaults Coulmont used to build and plot the network. It helps in getting a better understanding of the network and the links between colleagues working in ecology. Overall, I indeed feel very much connected to my colleagues in Montpellier, Lyon and Grenoble. I should probably go out of my comfort zone and interact even more with my colleagues from La Rochelle, Marseille and Aix-en-Provence &amp;#x1f603;&lt;/p&gt;
 &lt;p&gt;As always, data and code are available from 
 &lt;a href=&#34;https://github.com/oliviergimenez/phd-in-ecology-network/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</description>
     </item>

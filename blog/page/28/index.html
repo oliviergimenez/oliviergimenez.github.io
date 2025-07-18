@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -593,7 +542,13 @@
 
     
     <div class="article-style">
-      Taking the opportunity of Ian Renner’s visit, we organized thanks to the GdR EcoStat a conference on the recent advances in the modeling of species distribution. We were lucky to have the cream of researchers in the domain with Julien Papaïx, Joseph Chipperfield, Ian Renner, Joern Pagel, Bob O’Hara, Laura Pollock and Damaris Zurell.
+      <p>Taking the opportunity of Ian Renner’s visit, we organized thanks to
+the <a href="https://sites.google.com/site/gdrecostat/" target="_blank">GdR
+EcoStat</a> a conference on the recent advances in the modeling of species
+distribution. We were lucky to have the cream of researchers in the domain with
+Julien Papaïx, Joseph Chipperfield, Ian Renner, Joern Pagel, Bob O’Hara, Laura
+Pollock and Damaris Zurell. The talks are
+available <a href="https://sites.google.com/site/gdrecostat/reunions/sdm-day" target="_blank">here</a>.</p>
     </div>
     
 
@@ -673,7 +628,14 @@
 
     
     <div class="article-style">
-      Ian Renner from the University of Newcastle in Australia spent some time with us while on a sabbatical. We worked together on developing a method to combine sources of information on species distribution.
+      <p><a href="https://www.newcastle.edu.au/profile/ian-renner" target="_blank">Ian Renner</a> from
+the University of Newcastle in Australia spent some time with us while on a sabbatical.
+We worked together on developing a method to combine sources of information on species
+distribution. Ian brought his sound expertise on the Lasso for covariate selection and
+point processes that provide a nice integrated framework. It was fun to program in R
+in parallel. I wish I could do that more often. We even managed (credit goes to Ian)
+to present something at the
+International Statistical Ecology Conference.</p>
     </div>
     
 
@@ -753,7 +715,15 @@
 
     
     <div class="article-style">
-      I had the visit of Raluca Bancila a research scientist from Romania. We investigated spatio-temporal environmental variation in and individual heterogeneity on emigration/immigration rates of the troglophile harvestmen species Paranemastoma silli with capture-recapture models.
+      <p>I had the visit of  <a href="https://www.researchgate.net/profile/Raluca_Bancila" target="_blank">Raluca
+Bancila</a> a research scientist from Romania. We investigated spatio-temporal environmental variation
+in and individual heterogeneity on emigration/immigration rates of the
+<a href="https://en.wikipedia.org/wiki/Troglofauna" target="_blank">troglophile harvestmen
+species</a> Paranemastoma silli with capture-recapture models. We used two P. silli populations
+inhabiting two caves, Closani and Lazului Caves, located in the Mehedinti Mountains in southwestern
+Romania. Yes, we do not only work on big emblematic mammal species ;-)
+On a personal side, Raluca is always smiling and laughing – ‘la banane’ like we say in French,
+it was so good to have her in the team. I’m looking forward to hosting her again!</p>
     </div>
     
 
@@ -833,7 +803,14 @@
 
     
     <div class="article-style">
-      We visited our colleagues from Dolphin Biology and Conservation (Giovanni Bearzi, Silvia Bonizzoni, Nina Santostasi ‎and‎‎ Eva Greene). Lots of discussions on future projects about the estimation of striped, bottlenose and common dolphins abundance, their distribution in the gulf of Corinth (Greece) and their interactions with fishermen.
+      <p>We visited our colleagues from <a href="http://www.dolphinbiology.org/" target="_blank">Dolphin
+Biology and Conservation</a> (Giovanni Bearzi, Silvia Bonizzoni, Nina Santostasi ‎and‎‎ Eva Greene).
+Lots of discussions on future projects about the estimation of striped, bottlenose and
+common dolphins abundance, their distribution in the gulf of Corinth (Greece) and their
+interactions with fishermen. Nina will be visiting us in October-March to work on the
+abundance project. We also went out for a survey and spotted several groups of striped
+dolphins, and two common dolphins. Thanks to Giovanni and Silvia for their hospitality
+and kindness. The beginning of a new adventure in Greece!</p>
     </div>
     
 
@@ -913,7 +890,13 @@
 
     
     <div class="article-style">
-      I attended the International Congress on Biological Conservation that was held in my home town Montpellier. The students of our team were on fire and talked about their exciting work. Gilles presented a bio-economic model to study the population dynamics of Asian captive elephants, a nice example of how to explicitly incorporate interactions between captive and wild populations in species management.
+      <p>I attended the <a href="http://www.iccb-eccb2015.org/" target="_blank">International
+Congress on Biological Conservation</a> that was held in my home town Montpellier.
+The students of our team were on fire and talked about their exciting work. Gilles
+presented a
+bio-economic model to study the population dynamics of Asian captive elephants,
+a nice example of how to explicitly incorporate interactions between captive and wild
+populations in species management.</p>
     </div>
     
 
@@ -993,7 +976,15 @@
 
     
     <div class="article-style">
-      Just submitted a big proposal to the Biodiversa call. It was great to write this project with Hervé Fritz who, without a doubt, knows how to write grant applications! If successful, we&rsquo;ll be working on the social and ecological dimensions of connectivity in lynx habitats.
+      <p>Just submitted a big proposal to the 
+<a href="http://www.biodiversa.org/" target="_blank" rel="noopener">Biodiversa
+call</a>. It was great to write this project
+with 
+<a href="https://lbbe.univ-lyon1.fr/-Fritz-Herve-.html" target="_blank" rel="noopener">Hervé Fritz</a> who,
+without a doubt, knows how to write grant applications! If successful, we&rsquo;ll be
+working on the social and ecological dimensions of connectivity in lynx habitats.
+This is joint work with French, Swiss, German, Norwegian and Swedish colleagues.
+More soon hopefully.</p>
     </div>
     
 
@@ -1073,7 +1064,13 @@
 
     
     <div class="article-style">
-      I had the visit of Sarah Benhaim and Lucile Marescot (a former PhD student of mine), both post-doc at the Leibniz Institute in Berlin supervised by Stephanie Kramer-Schadt. It was an exciting week that we spent discussing and analyzing data on the spotted hyenas from the Serengeti National Park with questions at the interface of demography, sociality and epidemiology.
+      <p>I had the visit of Sarah Benhaim and Lucile Marescot (a former PhD student of mine),
+both post-doc at the Leibniz Institute in Berlin supervised
+by <a href="http://www.izw-berlin.de/kramer-schadt-stefanie.html" target="_blank">Stephanie
+Kramer-Schadt</a>. It was an exciting week that we spent discussing and analyzing
+data on the spotted hyenas from the Serengeti National Park with questions at the
+interface of demography, sociality and epidemiology. This is joint work with Heribert
+Hofer and Marion East.</p>
     </div>
     
 
@@ -1153,7 +1150,13 @@
 
     
     <div class="article-style">
-      I&rsquo;m so delighted to announce that Julie will start a PhD in October with me, jointly working with Eric Marboutin and Christophe Duchamp from ONCFS. There will be also collaborations with John Linnell from NINA.
+      <p>I&rsquo;m so delighted to announce that Julie will start a PhD in October with me, jointly
+working with Eric Marboutin and Christophe Duchamp from
+<a href="http://www.oncfs.gouv.fr/" target="_blank">ONCFS</a>. There will be
+also collaborations with
+<a href="http://www.nina.no/english/Contact/Employees/Employee-info/AnsattID/12310" target="_blank">John
+Linnell </a>from NINA. She&rsquo;ll be studying the various ways to assess the distribution of
+large carnivores and methods to optimise the associated monitoring protocols.</p>
     </div>
     
 
@@ -1233,7 +1236,21 @@
 
     
     <div class="article-style">
-      My 2 master students finished their internships. I was so lucky to have them and work with them. Iago worked on the estimation of abundance using bilateral photo-identification capture-recapture data, with an application to bottlenose dolphins.
+      <p>My 2 master students finished their internships. I was
+so lucky to have them and work with them. Iago worked on the estimation of abundance
+using bilateral photo-identification capture-recapture data, with an application to
+bottlenose dolphins. He made a very neat contribution to the field by greatly
+improving existing algorithms
+(<a href="http://onlinelibrary.wiley.com/doi/10.1111/biom.12045/abstract" target="_blank">here</a> and
+<a href="http://www.esajournals.org/doi/abs/10.1890/12-1613.1" target="_blank">here</a>) to
+fit capture-recapture models to these non-standard data. Julie worked on inferring the
+distribution of wolves in France from the beginning of its recolonization in the early 90’s.
+Her main contribution was to show that by carefully describing observers’ characteristics
+and properly quantify the prospection effort, citizen science data can be used to map the
+range dynamics of species with large dispersal distances and home ranges. Iago will
+spend next year improving his (already largely above the average) skills in informatics,
+AI, programming, agent-based modeling&hellip; Hopefully, we’ll work again together. Julie is
+applying for PhD grants, more soon.</p>
     </div>
     
 
@@ -1313,7 +1330,21 @@
 
     
     <div class="article-style">
-      We had our annual department day; for the occasion, we invited Anne-Caroline Prévot. Anne-Caro is having a fascinating scientific pathway, as she started with a PhD in bird population dynamics and now she’s working on topics requiring skills in environmental psychology.
+      <p>We had our annual department day; for the occasion, we invited Anne-Caroline
+Prévot. Anne-Caro is having a fascinating scientific pathway, as she started with a
+PhD in bird population dynamics and now she’s working on topics requiring skills in
+environmental psychology. Google her, you’ll see for yourself, her work is awesome.
+For this special day, we opted for a particular format, with less science than usual,
+the idea being to show what’s going on behind the scenes. We had a roundtable on the
+link between research, managers and citizens. We also had several short unorthodox
+talks where we tried to analyse why some of our papers/projects were successful,
+but also why we failed at being read or funded. Interestingly,
+<a href="https://sites.google.com/site/robresearchsite/" target="_blank">Rob
+Salguero-Gomez</a>, a colleague of ours, wrote a nice piece on the topic
+<a href="http://decision-point.com.au/?article=why-academics-should-communicate-failure&lang=fr" target="_blank">here</a>.
+Last, we gathered several persons with various professional profiles so that our students
+could ask them all the questions they wanted. Overall, I think it went amazingly well,
+and all the attendees found something to take home with them.</p>
     </div>
     
 
@@ -1484,7 +1515,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

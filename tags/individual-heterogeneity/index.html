@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/individual-heterogeneity/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/individual-heterogeneity/">
-  <meta property="og:title" content="individual heterogeneity | Olivier Gimenez">
+  <meta property="og:title" content="Individual Heterogeneity | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>individual heterogeneity | Olivier Gimenez</title>
+  <title>Individual Heterogeneity | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>individual heterogeneity</h1>
+  <h1>Individual Heterogeneity</h1>
 
   
 
@@ -583,7 +532,8 @@
       <h2><a href="/blog/raluca_visit1/" >Raluca Bancila&#39;s visit</a></h2>
       <div class="article-style">
         
-          I had the visit of Raluca Bancila a research scientist from Romania. We investigated spatio-temporal environmental variation in and individual heterogeneity on emigration/immigration rates of the troglophile harvestmen species Paranemastoma silli with capture-recapture models.
+          I had the visit of Raluca Bancila a research scientist from Romania. We investigated spatio-temporal environmental variation in and individual heterogeneity on emigration/immigration rates of the troglophile harvestmen species Paranemastoma silli with capture-recapture models. We used two P. silli populations inhabiting two caves, Closani and Lazului Caves, located in the Mehedinti Mountains in southwestern Romania. Yes, we do not only work on big emblematic mammal species ;-) On a personal side, Raluca is always smiling and laughing – ‘la banane’ like we say in French, it was so good to have her in the team. I’m looking forward to hosting her again!
+
         
       </div>
     </div>
@@ -595,7 +545,8 @@
       <h2><a href="/blog/gdr_demography/" >Working group in demography</a></h2>
       <div class="article-style">
         
-          As part of the GdR EcoStat and our evolutionary demography group, we had a stimulating workshop on the quantification of individual heterogeneity in survival of wild populations using an approach recently developed by Hal Caswell.
+          As part of the GdR EcoStat and our evolutionary demography group, we had a stimulating workshop on the quantification of individual heterogeneity in survival of wild populations using an approach recently developed by Hal Caswell. Hal attended the workshop with Lotte de Vries her new PhD student who will be leading the study.
+
         
       </div>
     </div>
@@ -607,7 +558,8 @@
       <h2><a href="/blog/idh_meeting/" >Workshop on individual heterogeneity</a></h2>
       <div class="article-style">
         
-          We had a lovely 2-day workshop in Lyon on individual heterogeneity in demography as part of our research group on Statistical Ecology. I gave a short talk providing an overview of heterogeneous capture-recapture models.
+          We had a lovely 2-day workshop in Lyon on individual heterogeneity in demography as part of our research group on Statistical Ecology. I gave a short talk providing an overview of heterogeneous capture-recapture models. We agreed on meeting again early April 2015 to carry out a comparative analysis of individual heterogeneity using the datasets shared by the group and the method developed by Hal Caswell (check it out here).
+
         
       </div>
     </div>
@@ -619,7 +571,8 @@
       <h2><a href="/blog/euring_2013/" >Individual heterogeneity and capture-recapture at EURING 2013</a></h2>
       <div class="article-style">
         
-          Below are the slides of my plenary talk at the 2013 EURING meeting on individual variability in capture-recapture models. I couldn’t attend, but the organizers were kind enough to run my presentation to the audience.
+          Below are the slides of my plenary talk at the 2013 EURING meeting on individual variability in capture-recapture models. I couldn’t attend, but the organizers were kind enough to run my presentation to the audience. I had to be a bit imaginative for the attendees not to fall asleep&hellip;
+
         
       </div>
     </div>
@@ -729,7 +682,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/capture-recapture/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/capture-recapture/">
-  <meta property="og:title" content="capture-recapture | Olivier Gimenez">
+  <meta property="og:title" content="Capture-Recapture | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>capture-recapture | Olivier Gimenez</title>
+  <title>Capture-Recapture | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>capture-recapture</h1>
+  <h1>Capture-Recapture</h1>
 
   
 
@@ -571,7 +520,8 @@
       <h2><a href="/blog/bibi_paper/" >New paper!</a></h2>
       <div class="article-style">
         
-          &quot;R2ucare: An R #rstats package to perform goodness‐of‐fit tests for capture‐recapture models&quot; in @MethodsEcolEvol https://t.co/ieQohrn3jA 🤓😎 - paper entirely written w/ #rmarkdown thx @stevenvmiller https://t.co/9FapGe3oGV 💯 - replication files ➡️ https://t.
+          &quot;R2ucare: An R #rstats package to perform goodness‐of‐fit tests for capture‐recapture models&quot; in @MethodsEcolEvol https://t.co/ieQohrn3jA 🤓😎 - paper entirely written w/ #rmarkdown thx @stevenvmiller https://t.co/9FapGe3oGV 💯 - replication files ➡️ https://t.co/h9F6sKbcpI pic.twitter.com/JyzQ33Wrl3
+&mdash; Olivier Gimenez 🍉 (@oaggimenez) 21 avril 2018 
         
       </div>
     </div>
@@ -596,7 +546,8 @@
       <h2><a href="/blog/lulu_paper/" >New paper!</a></h2>
       <div class="article-style">
         
-          New paper 🎉🎉 &quot;Social status mediates the fitness costs of infection with canine distemper virus in Serengeti spotted hyenas&quot; https://t.co/LdWNAWFWum @BritishEcolSoc by L. Marescot and S. Benhaiem #teamboulet #multievent #hmm 😎😊 https://t.
+          New paper 🎉🎉 &quot;Social status mediates the fitness costs of infection with canine distemper virus in Serengeti spotted hyenas&quot; https://t.co/LdWNAWFWum @BritishEcolSoc by L. Marescot and S. Benhaiem #teamboulet #multievent #hmm 😎😊 https://t.co/JKpN1scRTx pic.twitter.com/pD7yHGnhZ5
+&mdash; Olivier Gimenez 🍉 (@oaggimenez) 7 mars 2018 
         
       </div>
     </div>
@@ -644,7 +595,7 @@
       <h2><a href="/blog/cr_workshop_2017/" >Capture-recapture workshop in Montpellier</a></h2>
       <div class="article-style">
         
-           We held our annual 5-day [capture-recapture workshop](https://multievent.sciencesconf.org/) in Montpellier. As always, the attendees had challenging questions and stimulating datasets to analyse! Looking forward to next year. 
+           We held our annual 5-day [capture-recapture workshop](https://multievent.sciencesconf.org/) in Montpellier. As always, the attendees had challenging questions and stimulating datasets to analyse! Looking forward to next year.
         
       </div>
     </div>
@@ -669,7 +620,8 @@
       <h2><a href="/blog/raluca_visit2/" >Another visit of Raluca Bancila</a></h2>
       <div class="article-style">
         
-          Raluca Bancila, who visited us back in 2015, is with us again for a short 2-week visit. We will resume a project we started one year ago on the evaluation of demographic parameters of two related species of spadefoot toads (Pelobates syriacus and P.
+           Raluca Bancila, who visited us back in 2015, is with us again for a short 2-week visit. We will resume a project we started one year ago on the evaluation of demographic parameters of two related species of spadefoot toads (Pelobates syriacus and P. fuscus) from the Danube Delta Biosphere Reserve, Romania, using capture-recapture models.
+
         
       </div>
     </div>
@@ -681,7 +633,8 @@
       <h2><a href="/blog/gis3m/" >International workshop on Bottlenose dolphin conservation and monitoring</a></h2>
       <div class="article-style">
         
-          The GIS3M held an international workshop in Marseille on the conservation of Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea. This was the opportunity to discuss the results of the GDEGeM project on the same topic.
+          The GIS3M held an international workshop in Marseille on the conservation of Bottlenose dolphin conservation and monitoring in the North-Western Mediterranean Sea. This was the opportunity to discuss the results of the GDEGeM project on the same topic. I mostly contributed by analysing the tons of photo-IDs that were collected during the program to estimate abundance and analyze the social structure. The slides of my talk:
+
         
       </div>
     </div>
@@ -802,7 +755,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

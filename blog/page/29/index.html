@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -593,7 +542,16 @@
 
     
     <div class="article-style">
-      As one of our always excellent department seminar, we had the chance to welcome Heath Smith from University of Washington, Center for Conservation Biology. Heath, together with his dog Chester with whom I became friend during the talk, is working with detection dogs on all sorts of important questions and organisms in conservation biology.
+      <p>As one of our always excellent department seminar, we had the chance to welcome
+<a href="http://conservationbiology.uw.edu/conservation-canines/conservation-canines-staff/" target="_blank">Heath
+Smith from University of Washington, Center for Conservation Biology</a>. Heath, together
+with his dog Chester with whom I became friend during the talk, is working with detection
+dogs on all sorts of important questions and organisms in conservation biology. Heath then
+headed to the Pyrénées with Nathalie Espuno to meet with our colleagues from the ONCFS
+bear (dream)team with whom we&rsquo;re working
+on Blaise Piédallu&rsquo;s
+PhD. They&rsquo;re gonna try this technique there, no doubt the results will be of
+interest for our work on large carnivores!</p>
     </div>
     
 
@@ -673,7 +631,16 @@
 
     
     <div class="article-style">
-      I acted as the &ldquo;president&rdquo; on the PhD committee of Sophie Monsarrat who, with her supervisor Ana Rodrigues, kindly invited me. It was about the reconstruction of marine mammal’s historical distribution and abundance using historical data.
+      <p>I acted as the &ldquo;president&rdquo; on the PhD committee of Sophie Monsarrat who, with her
+supervisor Ana Rodrigues, kindly invited me. It was about the reconstruction of marine
+mammal’s historical distribution and abundance using historical data. Sophie did an
+amazing job during her PhD, have a look
+to <a href="https://www.researchgate.net/publication/270506527_Historical_summer_distribution_of_the_endangered_North_Atlantic_right_whale_%28Eubalaena_glacialis%29_a_hypothesis_based_on_environmental_preferences_of_a_congeneric_species" target="_blank">her
+recent paper</a> on the topic. Her presentation was just awesome, I wish I could
+give such vivid and fascinating talks, irrespective of the topic. Otherwise, her
+work reminded me of my current work on monk seals with Alex Karamanlidis from the
+MoM NGO and the talk I&rsquo;m supposed to give at the ICCB2015 on the analysis of citizen
+science data. More soon.</p>
     </div>
     
 
@@ -753,7 +720,11 @@
 
     
     <div class="article-style">
-      Great news! Gilles Maurer will soon start his PhD on the links between wild and captive populations of Asian elephants using an interdisciplinary approach. This is a joint venture with the Beauval zoo and B.
+      <p>Great news! Gilles Maurer will soon start his PhD on the links between wild and captive
+populations of Asian elephants using an interdisciplinary approach. This is a joint
+venture with the <a href="https://www.zoobeauval.com/" target="_blank">Beauval zoo</a>
+and B. Mulot through the <a href="http://www.anrt.asso.fr/fr/espace_cifre/mode_emploi.jsp#.VS6EqGZGFpk" target="_blank">CIFRE
+framework</a> that funds applied PhDs with non-academic partners.</p>
     </div>
     
 
@@ -833,7 +804,11 @@
 
     
     <div class="article-style">
-      Paméla Lagrange successfully defended her PhD co-supervised with M. Bélisle from the University of Sherbrooke on the &lsquo;Drivers of survival and breeding dispersal using a capture-recapture framework in Tree Swallows - Québec&rsquo;.
+      <p>Paméla Lagrange successfully defended her PhD co-supervised with M. Bélisle from the
+University of Sherbrooke on the &lsquo;Drivers of survival and breeding dispersal using a
+capture-recapture framework in Tree Swallows - Québec&rsquo;. The members of the committee
+(M. Festa-Bianchet, G. Gauthier, C. Barbraud, E. Cam) were unanimously amazed by both
+the ecological and methodological contributions of Paméla to the field. Congrats Pam!</p>
     </div>
     
 
@@ -913,7 +888,11 @@
 
     
     <div class="article-style">
-      I had the visit of Nina Santostasi from Italy to work for a few days on the estimation of striped dolphin abundance in the gulf of Corinth (in Greece). Nina is working with Giovanni Bearzi and Silvia Bonizzoni from the NGO Dolphin Biology and Conservation.
+      <p>I had the visit of Nina Santostasi from Italy to work for a few days on the estimation
+of striped dolphin abundance in the gulf of Corinth (in Greece). Nina is working with
+Giovanni Bearzi and Silvia Bonizzoni from the <a href="http://www.dolphinbiology.org/about.htm" target="_blank">NGO
+Dolphin Biology</a> and Conservation. Hopefully our collaboration will provide elements
+for the conservation of the species.</p>
     </div>
     
 
@@ -993,7 +972,12 @@
 
     
     <div class="article-style">
-      As part of the GdR EcoStat and our evolutionary demography group, we had a stimulating workshop on the quantification of individual heterogeneity in survival of wild populations using an approach recently developed by Hal Caswell.
+      <p>As part of the <a href="https://sites.google.com/site/gdrecostat/themes" target="_blank">GdR
+EcoStat and our evolutionary demography group</a>, we had a stimulating workshop on the
+quantification of individual heterogeneity in survival of wild populations
+using <a href="http://www.demographic-research.org/volumes/vol31/19/" target="_blank">an
+approach recently developed by Hal Caswell</a>. Hal attended the workshop with Lotte de
+Vries her new PhD student who will be leading the study.</p>
     </div>
     
 
@@ -1073,7 +1057,12 @@
 
     
     <div class="article-style">
-      We organised the first conference of the GdR EcoStat. We spent two lovely days in Lyon talking about ecological statistics with the hundred people who attended. The talks are available here.
+      <p>We organised the first conference of the GdR EcoStat. We spent two lovely days in Lyon talking about
+ecological statistics with the hundred people who attended. The talks are available
+<a href="http://gdrecostat2015.sciencesconf.org/resource/page/id/2" target="_blank">here</a>.
+If you&rsquo;d like to know more about our activities in the GdR, check
+out <a href="https://sites.google.com/site/gdrecostat/" target="_blank">our
+website</a>.</p>
     </div>
     
 
@@ -1153,7 +1142,11 @@
 
     
     <div class="article-style">
-      Laetitia Blanc succesfully defended her PhD on the conservation of lynx in France. Congrats Laeti! She had very nice feedbacks by the members of committee (X. Lambin, E. Marboutin, J. Linnell, M.
+      <p>Laetitia Blanc succesfully defended her PhD on the conservation of lynx in France.
+Congrats Laeti! She had very nice feedbacks by the members of committee (X. Lambin,
+E. Marboutin, J. Linnell, M. Schaub and F. Bonadonna). Laetitia will be working for
+a few months with us on the estimation of lynx abundance in Norway (with J. Linnell)
+and with ONCFS to finish up a chapter of her thesis.</p>
     </div>
     
 
@@ -1233,7 +1226,8 @@
 
     
     <div class="article-style">
-      Welcome to our new master students Iago Bonnici and Julie Louvrier and Tamar Lok our new post-doc.
+      <p>Welcome to our new master students Iago Bonnici and Julie Louvrier
+and Tamar Lok our new post-doc.</p>
     </div>
     
 
@@ -1313,7 +1307,12 @@
 
     
     <div class="article-style">
-      Our team has recently joined the department Biodiversity &amp; Conservation at CEFE, a department that I have the pleasure to head now. We have moved offices and are now on the second floor.
+      <p>Our team has recently joined the department Biodiversity &amp; Conservation at CEFE, a
+department that I have the pleasure to head now. We have moved offices and are now
+on the second floor. I have an office with a brand new parquet floor and red walls
+(that I chose and installed/painted myself, can you believe it?!). We had our
+office-warming party early March. Do not hesitate to come by and visit our new
+offices!</p>
     </div>
     
 
@@ -1484,7 +1483,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/statistical-ecology/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/statistical-ecology/">
-  <meta property="og:title" content="statistical-ecology | Olivier Gimenez">
+  <meta property="og:title" content="Statistical Ecology | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>statistical-ecology | Olivier Gimenez</title>
+  <title>Statistical Ecology | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>statistical-ecology</h1>
+  <h1>Statistical Ecology</h1>
 
   
 
@@ -610,7 +559,8 @@
       <h2><a href="/blog/tweetisec2018/" >ISEC 2018 tweets analysis</a></h2>
       <div class="article-style">
         
-          Following @JamesGrecian&#39;s tracks (who helped me to get the tweets), I did some analyses of the #isec2018 tweets largely inspired (if not copy and pasted) by previous analyses from @brenborbon, @_ColinFay and @bryangoodrich - Data &amp; #rstats codes https://t.
+          Following @JamesGrecian&#39;s tracks (who helped me to get the tweets), I did some analyses of the #isec2018 tweets largely inspired (if not copy and pasted) by previous analyses from @brenborbon, @_ColinFay and @bryangoodrich - Data &amp; #rstats codes https://t.co/ZCv4DAeS5S pic.twitter.com/YmU2QBsyp2
+
         
       </div>
     </div>
@@ -635,7 +585,8 @@
       <h2><a href="/blog/isec2018ns/" >International Statistical Ecology Conference 2018 (3/4) - Nina Santostasi</a></h2>
       <div class="article-style">
         
-          Aaaaaaaaaaaaaaaaaaaand now, ladies and gentlemen, @NSantostasi on stage to present her work on estimating prevalence of hybrids in 🇮🇹 wolves using #HMMs and capture-recapture data #teamboulet @CNRSenLR @INEE_CNRS @romolocaniglia @umontpellier #CEFE pic.
+          Aaaaaaaaaaaaaaaaaaaand now, ladies and gentlemen, @NSantostasi on stage to present her work on estimating prevalence of hybrids in 🇮🇹 wolves using #HMMs and capture-recapture data #teamboulet @CNRSenLR @INEE_CNRS @romolocaniglia @umontpellier #CEFE pic.twitter.com/vDXH9NDX2H
+&mdash; Olivier Gimenez 🍉 (@oaggimenez) 5 juillet 2018 
         
       </div>
     </div>
@@ -661,7 +612,8 @@
       <div class="article-style">
         
           And now, ladies and gentlemen, the amazing @LouvrierJulie 👏 who tells us about mechanistic #SDMs to study 🐺 colonization in 🇫🇷 #ISEC2018 #teamboulet @ONCFS_officiel @CNRSenLR @INEE_CNRS @umontpellier pic.twitter.com/JUTayPLTSu
-&mdash; Olivier Gimenez 🍉 (@oaggimenez) 2 juillet 2018 This is the end.
+&mdash; Olivier Gimenez 🍉 (@oaggimenez) 2 juillet 2018 This is the end... pic.twitter.com/2FNCT8yxib
+
         
       </div>
     </div>
@@ -673,7 +625,8 @@
       <h2><a href="/blog/gdr_ecostat_journee2/" >GDR EcoStat meeting</a></h2>
       <div class="article-style">
         
-          We organised the second conference of the GdR EcoStat. We spent two lovely days in Montpellier talking about ecological statistics with the hundred people who attended. The talks are available here.
+          We organised the second conference of the GdR EcoStat. We spent two lovely days in Montpellier talking about ecological statistics with the hundred people who attended. The talks are available here. If you&rsquo;d like to know more about our acitivities in the GdR, check out our website.
+
         
       </div>
     </div>
@@ -685,7 +638,8 @@
       <h2><a href="/blog/jdl/" >Tribute to Jean-Dominique Lebreton</a></h2>
       <div class="article-style">
         
-          Jean-Dominique Lebreton went on retirement, and we could not let him go without organizing something in his honor. Jean-Do had a tremendous influence in the field of statistical ecology with important contributions in (among others) multivariate analyses, software developments, population dynamics, and capture-recapture methods.
+          Jean-Dominique Lebreton went on retirement, and we could not let him go without organizing something in his honor. Jean-Do had a tremendous influence in the field of statistical ecology with important contributions in (among others) multivariate analyses, software developments, population dynamics, and capture-recapture methods. On a personal side, I would simply not be here in science without him. Many friends and colleagues came or sent a message for the occasion. These interventions were filmed, see here and enjoy.
+
         
       </div>
     </div>
@@ -806,7 +760,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

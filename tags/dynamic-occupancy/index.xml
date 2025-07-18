@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dynamic-occupancy | Olivier Gimenez</title>
+    <title>Dynamic-Occupancy | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/dynamic-occupancy/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/dynamic-occupancy/index.xml" rel="self" type="application/rss+xml" />
-    <description>dynamic-occupancy</description>
+    <description>Dynamic-Occupancy</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>dynamic-occupancy</title>
+      <title>Dynamic-Occupancy</title>
       <link>https://oliviergimenez.github.io/tags/dynamic-occupancy/</link>
     </image>
     

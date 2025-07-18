@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/point-process/">
 
@@ -275,7 +244,7 @@
   
   <meta property="og:site_name" content="Olivier Gimenez">
   <meta property="og:url" content="https://oliviergimenez.github.io/tags/point-process/">
-  <meta property="og:title" content="point process | Olivier Gimenez">
+  <meta property="og:title" content="Point Process | Olivier Gimenez">
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
@@ -296,7 +265,7 @@
 
 
 
-  <title>point process | Olivier Gimenez</title>
+  <title>Point Process | Olivier Gimenez</title>
 
 </head>
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -550,7 +499,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>point process</h1>
+  <h1>Point Process</h1>
 
   
 
@@ -571,7 +520,8 @@
       <h2><a href="/blog/paperanneso/" >New paper: Identifying priority conservation areas for a recovering brown bear population in Greece using citizen science data</a></h2>
       <div class="article-style">
         
-          🥳🍾 Awesome work by AS Bonnet Lebrun, A Karamanlidis from @Arcturosgr M de Gabriel Hernando and I Renner @MoonbeamLevels in which we use Poisson point process models to identify priority conservation areas for brown bears in Greece 🇬🇷🐻📈 https://t.
+          🥳🍾 Awesome work by AS Bonnet Lebrun, A Karamanlidis from @Arcturosgr M de Gabriel Hernando and I Renner @MoonbeamLevels in which we use Poisson point process models to identify priority conservation areas for brown bears in Greece 🇬🇷🐻📈 https://t.co/rDV7h9Zb7C pic.twitter.com/UmgmynE3Jd
+
         
       </div>
     </div>
@@ -583,7 +533,8 @@
       <h2><a href="/blog/preprintian/" >Combining multiple data sources in species distribution models while accounting for spatial dependence and overfitting with penalised likelihood maximisation</a></h2>
       <div class="article-style">
         
-          New #preprint on &quot;Combining multiple data sources in species distribution models while accounting for spatial dependence and overfitting with penalised likelihood maximisation&quot; https://t.co/7GLRrgpo4D w/ @MoonbeamLevels &amp; @LouvrierJulie #SDM #MachineLearning #PointProcess pic.
+          New #preprint on &quot;Combining multiple data sources in species distribution models while accounting for spatial dependence and overfitting with penalised likelihood maximisation&quot; https://t.co/7GLRrgpo4D w/ @MoonbeamLevels &amp; @LouvrierJulie #SDM #MachineLearning #PointProcess pic.twitter.com/6xzAlARV9E
+&mdash; Olivier Gimenez 🖖 (@oaggimenez) 24 avri 2019 
         
       </div>
     </div>
@@ -608,7 +559,8 @@
       <h2><a href="/blog/newpreprint/" >New preprint!</a></h2>
       <div class="article-style">
         
-          Check out our new preprint by awesome Anne-Sophie Bonnet-Lebrun &quot;Identifying priority conservation areas for recovering large #carnivores using #citizenscience data&quot; w/ 🐟 point-process models to map 🇬🇷 🐻 distribution https://t.co/CEUbVKuXRQ starring @Arcturosgr @MoonbeamLevels pic.
+          Check out our new preprint by awesome Anne-Sophie Bonnet-Lebrun &quot;Identifying priority conservation areas for recovering large #carnivores using #citizenscience data&quot; w/ 🐟 point-process models to map 🇬🇷 🐻 distribution https://t.co/CEUbVKuXRQ starring @Arcturosgr @MoonbeamLevels pic.twitter.com/fb9UAP3Aep
+&mdash; Olivier Gimenez 🚸 (@oaggimenez) 29 oct8 
         
       </div>
     </div>
@@ -718,7 +670,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

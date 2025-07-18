@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tidymodels | Olivier Gimenez</title>
+    <title>Tidymodels | Olivier Gimenez</title>
     <link>https://oliviergimenez.github.io/tags/tidymodels/</link>
       <atom:link href="https://oliviergimenez.github.io/tags/tidymodels/index.xml" rel="self" type="application/rss+xml" />
-    <description>tidymodels</description>
+    <description>Tidymodels</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Fri, 13 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
-      <title>tidymodels</title>
+      <title>Tidymodels</title>
       <link>https://oliviergimenez.github.io/tags/tidymodels/</link>
     </image>
     
@@ -460,7 +460,7 @@ dataset %&amp;gt;%
     labs(x = &amp;quot;% in category that survived&amp;quot;, fill = NULL, color = NULL, y = NULL) +
   facet_wrap(~gender)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-7-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-7-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;dataset %&amp;gt;%
   mutate(age = cut(age, breaks = c(0, 20, 40, 60, 80))) %&amp;gt;%
   group_by(age, gender) %&amp;gt;%
@@ -474,19 +474,19 @@ dataset %&amp;gt;%
     labs(x = &amp;quot;% in category that survived&amp;quot;, fill = NULL, color = NULL, y = NULL) +
   facet_wrap(~gender)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-7-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-7-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;dataset %&amp;gt;%
     ggplot(aes(fareadjusted, group = survived, color = survived, fill = survived)) +
     geom_histogram(alpha = .4, position = position_dodge()) +
     labs(x = &amp;quot;fare&amp;quot;, y = NULL, color = &amp;quot;survived?&amp;quot;, fill = &amp;quot;survived?&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-7-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-7-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;dataset %&amp;gt;%
     ggplot(aes(familyage, group = survived, color = survived, fill = survived)) +
     geom_histogram(alpha = .4, position = position_dodge()) +
     labs(x = &amp;quot;family aged&amp;quot;, y = NULL, color = &amp;quot;survived?&amp;quot;, fill = &amp;quot;survived?&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-7-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-7-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;trainingtesting-datasets&#34;&gt;Training/testing datasets&lt;/h1&gt;
 &lt;p&gt;Split our dataset in two, one dataset for training and the other one for
 testing. We will use an additionnal splitting step for cross-validation.&lt;/p&gt;
@@ -545,7 +545,7 @@ control &amp;lt;- control_grid(save_workflow = TRUE,
 &lt;p&gt;Visualize the results.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(xg_tune) + theme_light()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-14-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-14-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Collect metrics.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;xg_tune %&amp;gt;%
   collect_metrics() %&amp;gt;%
@@ -586,7 +586,7 @@ xg_tune &amp;lt;-
 &lt;p&gt;Visualize the results.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(xg_tune)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-17-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-17-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Collect metrics.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;xg_tune %&amp;gt;%
   collect_metrics() %&amp;gt;%
@@ -632,7 +632,7 @@ importances %&amp;gt;%
   ggplot(aes(Gain, Feature)) +
   geom_col()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-21-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-21-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;make-predictions&#34;&gt;Make predictions&lt;/h2&gt;
 &lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
 to Kaggle. Note that I use the whole dataset, not just the training
@@ -685,7 +685,7 @@ methods&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Visualize the results.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(rf_tune)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-27-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-27-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Collect metrics.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;rf_tune %&amp;gt;%
   collect_metrics() %&amp;gt;%
@@ -731,7 +731,7 @@ finalize_model(
   fit(survived ~ ., data = juice(prep(rf_rec))) %&amp;gt;%
   vip(geom = &amp;quot;point&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-31-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-31-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;make-predictions-1&#34;&gt;Make predictions&lt;/h2&gt;
 &lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
 to Kaggle.&lt;/p&gt;
@@ -788,7 +788,7 @@ cb_model &amp;lt;- boost_tree(mode = &amp;quot;classification&amp;quot;,
 &lt;p&gt;Visualize the results.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(cb_tune)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-38-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-38-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Collect metrics.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cb_tune %&amp;gt;%
   collect_metrics() %&amp;gt;%
@@ -872,7 +872,7 @@ ridge regression for mixture = 0, and lasso for mixture = 1.&lt;/p&gt;
 &lt;p&gt;Visualize the results.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(en_tune)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-47-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-47-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Collect metrics.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;en_tune %&amp;gt;%
   collect_metrics() %&amp;gt;%
@@ -921,7 +921,7 @@ en_fit$fit$fit$fit %&amp;gt;%
   geom_col() +
   theme(legend.position = &amp;quot;none&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-51-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-51-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;make-predictions-3&#34;&gt;Make predictions&lt;/h2&gt;
 &lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
 to Kaggle.&lt;/p&gt;
@@ -980,7 +980,7 @@ logistic_fit %&amp;gt;%
   geom_col() +
   theme(legend.position = &amp;quot;none&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-58-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-58-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Check out accuracy on testing dataset to see if we overfitted.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;logistic_fit %&amp;gt;%
   augment(test, type.predict = &amp;quot;response&amp;quot;) %&amp;gt;%
@@ -1007,7 +1007,7 @@ logistic_fit %&amp;gt;%
   roc_curve(truth = survived, estimate = .pred_yes) %&amp;gt;%
   autoplot()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-61-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-61-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Now we’re ready to predict survival for the holdout dataset and submit
 to Kaggle.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;logistic_wf %&amp;gt;%
@@ -1060,7 +1060,7 @@ control &amp;lt;- control_grid(save_workflow = TRUE,
 &lt;p&gt;Visualize the results.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(nn_tune)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-68-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-68-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Collect metrics.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;nn_tune %&amp;gt;%
   collect_metrics() %&amp;gt;%
@@ -1153,7 +1153,7 @@ control &amp;lt;- control_grid(save_workflow = TRUE,
 &lt;p&gt;Visualize the results.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(svm_tune)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-78-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-78-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Collect metrics.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;svm_tune %&amp;gt;%
   collect_metrics() %&amp;gt;%
@@ -1245,7 +1245,7 @@ dt_model &amp;lt;- bag_tree(cost_complexity = tune(),
 &lt;p&gt;Visualize the results.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(dt_tune)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-88-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-88-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Collect metrics.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;dt_tune %&amp;gt;%
   collect_metrics() %&amp;gt;%
@@ -1500,13 +1500,13 @@ despite achieving best score when used in isolation. I’ll have to dig
 into that.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(blended_fit)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-102-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-102-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(blended_fit, type = &amp;quot;members&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-102-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-102-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;autoplot(blended_fit, type = &amp;quot;weights&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;unnamed-chunk-102-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/blog/learning-machine-learning/unnamed-chunk-102-3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Fit candidate members with non-zero stacking coef with full training
 dataset.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;blended_regularized &amp;lt;- blended_fit %&amp;gt;%

@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -255,8 +224,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/">
 
@@ -281,7 +250,7 @@
   <meta property="og:description" content="A site on statistics, ecology and social sciences by Olivier Gimenez"><meta property="og:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg">
   <meta property="twitter:image" content="https://oliviergimenez.github.io/img/flyfishing.jpg"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2025-02-10T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2025-07-18T00:00:00&#43;00:00">
   
 
   
@@ -292,10 +261,10 @@
   "@type": "WebSite",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://oliviergimenez.github.io?q={search_term_string}",
+    "target": "https://oliviergimenez.github.io/?q={search_term_string}",
     "query-input": "required name=search_term_string"
   },
-  "url": "https://oliviergimenez.github.io"
+  "url": "https://oliviergimenez.github.io/"
 }
 </script>
 
@@ -502,26 +471,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -681,7 +630,7 @@
 
       
       
-      <img class="avatar avatar-circle" src="/authors/admin/avatar_hu2cb62cde7ffbf991a23ad99f81001b35_47904_270x270_fill_q90_lanczos_center.jpg" alt="">
+      <img class="avatar avatar-circle" src="/authors/admin/avatar_hu_6b27bb3302803439.jpg" alt="">
       
 
       <div class="portrait-title">
@@ -812,7 +761,7 @@ approaches may contribute to the coexistence of humans and animals.</p>
 <a href="mailto:olivier.gimenez@cefe.cnrs.fr">contact me</a>, and check out 
 <a href="/pubs/boulet-publi2012AnCons.pdf">this paper</a> which gives the spirit of how we enjoy doing science. For news and chat, you may find me on 
 <a href="https://bsky.app/profile/oaggimenez.bsky.social" target="_blank" rel="noopener">BlueSky</a> and 
-<a href="https://github.com/oliviergimenez" target="_blank" rel="noopener">GitHub</a> 😄. When time allows, I write 
+<a href="https://github.com/oliviergimenez" target="_blank" rel="noopener">GitHub</a> &#x1f604;. When time allows, I write 
 <a href="https://oliviergimenez.github.io/blog/" target="_blank" rel="noopener">R posts</a> which are also published on 
 <a href="https://rweekly.org" target="_blank" rel="noopener">rweekly</a> and 
 <a href="https://www.r-bloggers.com/" target="_blank" rel="noopener">r-bloggers</a>.</p>
@@ -1003,7 +952,7 @@ approaches may contribute to the coexistence of humans and animals.</p>
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

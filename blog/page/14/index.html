@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -673,7 +622,7 @@
 
     
     <div class="article-style">
-      Procrastination... Je me suis &quot;amusé&quot; à reproduire cette géniale figure de @coulmont sur le jour des décès en 🇫🇷 en fonction de l&#39;âge et du temps avec #rstats et le #tidyverse https://t.
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Procrastination... Je me suis &quot;amusé&quot; à reproduire cette géniale figure de <a href="https://twitter.com/coulmont?ref_src=twsrc%5Etfw">@coulmont</a> sur le jour des décès en 🇫🇷 en fonction de l&#39;âge et du temps avec <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> et le <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> <a href="https://t.co/W8QNBX5WlT">https://t.co/W8QNBX5WlT</a> <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a> <a href="https://twitter.com/hashtag/dplyr?src=hash&amp;ref_src=twsrc%5Etfw">#dplyr</a> <a href="https://twitter.com/hashtag/lubridate?src=hash&amp;ref_src=twsrc%5Etfw">#lubridate</a> <a href="https://t.co/wOthJOBzBd">https://t.co/wOthJOBzBd</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1209172238009864193_src=twsrc%5Etfw">December 23, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -753,7 +702,7 @@
 
     
     <div class="article-style">
-      We&#39;ve been thinking a lot about #predictions in ecology lately. Here&#39;s our modest crack at it https://t.co/NU7ROWLFWF led by @LouvrierJulie w/ a mechanistic-statistical #SpeciesDistributionModel to #forecast 🇫🇷🐺 expansion #ImperfectDetection #WomenInSTEM #ODEs #Bayes pic.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;ve been thinking a lot about <a href="https://twitter.com/hashtag/predictions?src=hash&amp;ref_src=twsrc%5Etfw">#predictions</a> in ecology lately. Here&#39;s our modest crack at it <a href="https://t.co/NU7ROWLFWF">https://t.co/NU7ROWLFWF</a> led by <a href="https://twitter.com/LouvrierJulie?ref_src=twsrc%5Etfw">@LouvrierJulie</a> w/ a mechanistic-statistical <a href="https://twitter.com/hashtag/SpeciesDistributionModel?src=hash&amp;ref_src=twsrc%5Etfw">#SpeciesDistributionModel</a> to <a href="https://twitter.com/hashtag/forecast?src=hash&amp;ref_src=twsrc%5Etfw">#forecast</a> 🇫🇷🐺 expansion <a href="https://twitter.com/hashtag/ImperfectDetection?src=hash&amp;ref_src=twsrc%5Etfw">#ImperfectDetection</a> <a href="https://twitter.com/hashtag/WomenInSTEM?src=hash&amp;ref_src=twsrc%5Etfw">#WomenInSTEM</a> <a href="https://twitter.com/hashtag/ODEs?src=hash&amp;ref_src=twsrc%5Etfw">#ODEs</a> <a href="https://twitter.com/hashtag/Bayes?src=hash&amp;ref_src=twsrc%5Etfw">#Bayes</a> <a href="https://t.co/D1n38edpDd">pic.twitter.com/D1n38edpDd</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1209009946743980032?ref_src=twsrc%5Etfw">December 23, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -833,8 +782,7 @@
 
     
     <div class="article-style">
-      Playing around w/ awesome @R_nimble to fit multievent #HMM capture-recapture models to data - Code and data here https://t.co/2oHvsplahv Comments welcome 🤗 pic.twitter.com/tA89r80YYV
-&mdash; Olivier Gimenez 🖖 (@oaggimenez) December 2019 
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Playing around w/ awesome <a href="https://twitter.com/R_nimble?ref_src=twsrc%5Etfw">@R_nimble</a> to fit multievent <a href="https://twitter.com/hashtag/HMM?src=hash&amp;ref_src=twsrc%5Etfw">#HMM</a> capture-recapture models to data - Code and data here <a href="https://t.co/2oHvsplahv">https://t.co/2oHvsplahv</a> Comments welcome 🤗 <a href="https://t.co/tA89r80YYV">pic.twitter.com/tA89r80YYV</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1207959690744881152?ref_src=twsrc%5Etfw">December 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -914,7 +862,7 @@
 
     
     <div class="article-style">
-      Our team will be at the World Marine Mammal Conference in Barcelona @VisitBCN_FR 🐬📊🤩 @ValentinLauret @NSantostasi @GIS_3M #WMMC19 @wmmc2019 #MarineMammals - check out the who, what, when and where below pic.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our team will be at the World Marine Mammal Conference in Barcelona <a href="https://twitter.com/VisitBCN_FR?ref_src=twsrc%5Etfw">@VisitBCN_FR</a> 🐬📊🤩 <a href="https://twitter.com/ValentinLauret?ref_src=twsrc%5Etfw">@ValentinLauret</a> <a href="https://twitter.com/NSantostasi?ref_src=twsrc%5Etfw">@NSantostasi</a> <a href="https://twitter.com/GIS_3M?ref_src=twsrc%5Etfw">@GIS_3M</a> <a href="https://twitter.com/hashtag/WMMC19?src=hash&amp;ref_src=twsrc%5Etfw">#WMMC19</a> <a href="https://twitter.com/wmmc2019?ref_src=twsrc%5Etfw">@wmmc2019</a> <a href="https://twitter.com/hashtag/MarineMammals?src=hash&amp;ref_src=twsrc%5Etfw">#MarineMammals</a> - check out the who, what, when and where below <a href="https://t.co/eaG36U4e9g">pic.twitter.com/eaG36U4e9g</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1201789014027710464?ref_src=twsrc%5Etfw">December 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -994,7 +942,7 @@
 
     
     <div class="article-style">
-      This week we host our first winter school on «Reproducible Research in Numerical Ecology » co-organised by #GDR_Ecostat &amp; #CESAB @FRBiodiv. Many thanks to our incredible list of speakers : Nicolas Casajus, Stéphane Dray, @GueryLorelei, @oaggimenez, @FGuilhaumon &amp; @NinaSchiett !
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This week we host our first winter school on «Reproducible Research in Numerical Ecology » co-organised by <a href="https://twitter.com/hashtag/GDR_Ecostat?src=hash&amp;ref_src=twsrc%5Etfw">#GDR_Ecostat</a> &amp; <a href="https://twitter.com/hashtag/CESAB?src=hash&amp;ref_src=twsrc%5Etfw">#CESAB</a> <a href="https://twitter.com/FRBiodiv?ref_src=twsrc%5Etfw">@FRBiodiv</a>. Many thanks to our incredible list of speakers : Nicolas Casajus, Stéphane Dray, <a href="https://twitter.com/GueryLorelei?ref_src=twsrc%5Etfw">@GueryLorelei</a>, <a href="https://twitter.com/oaggimenez?ref_src=twsrc%5Etfw">@oaggimenez</a>, <a href="https://twitter.com/FGuilhaumon?ref_src=twsrc%5Etfw">@FGuilhaumon</a> &amp; <a href="https://twitter.com/NinaSchiett?ref_src=twsrc%5Etfw">@NinaSchiett</a> !! <a href="https://t.co/lRKlVXtYym">pic.twitter.com/lRKlVXtYym</a></p>
     </div>
     
 
@@ -1074,7 +1022,7 @@
 
     
     <div class="article-style">
-      New @biorxivpreprint #preprint in which @ValentinLauret combines aerial &amp; boat surveys in #SDM for bottlenose dolphins w/ #occupancy models (single and repeated visits) - w/ H. Labach &amp; M. Authier https://t.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">New <a href="https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw">@biorxivpreprint</a> <a href="https://twitter.com/hashtag/preprint?src=hash&amp;ref_src=twsrc%5Etfw">#preprint</a> in which <a href="https://twitter.com/ValentinLauret?ref_src=twsrc%5Etfw">@ValentinLauret</a> combines aerial &amp; boat surveys in <a href="https://twitter.com/hashtag/SDM?src=hash&amp;ref_src=twsrc%5Etfw">#SDM</a> for bottlenose dolphins w/ <a href="https://twitter.com/hashtag/occupancy?src=hash&amp;ref_src=twsrc%5Etfw">#occupancy</a> models (single and repeated visits) - w/ H. Labach &amp; M. Authier <a href="https://t.co/t2IJMTbUf8">https://t.co/t2IJMTbUf8</a> <a href="https://t.co/F2ftXu0DtK">pic.twitter.com/F2ftXu0DtK</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1197428792588984320?ref_src=twsrc%5Etfw">November 21 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1154,8 +1102,7 @@
 
     
     <div class="article-style">
-      Awesome Nimble @R_nimble workshop given by Daniel Turek from @WilliamsCollege #Bayes #StatisticalEcology at @CNRS_OccitaniE @INEE_CNRS @umontpellier w/ @oksanagrente @ValentinLauret @MaudQueroue @roques_seb @GSouchay @DavidVallecill_ @LoBacon1 pic.twitter.com/7zjQWKeF9P
-&mdash; Olivier Gimenez 🖖 (@oaggimenez) October 23, 2019 
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Awesome Nimble <a href="https://twitter.com/R_nimble?ref_src=twsrc%5Etfw">@R_nimble</a> workshop given by Daniel Turek from <a href="https://twitter.com/WilliamsCollege?ref_src=twsrc%5Etfw">@WilliamsCollege</a> <a href="https://twitter.com/hashtag/Bayes?src=hash&amp;ref_src=twsrc%5Etfw">#Bayes</a> <a href="https://twitter.com/hashtag/StatisticalEcology?src=hash&amp;ref_src=twsrc%5Etfw">#StatisticalEcology</a> at <a href="https://twitter.com/CNRS_OccitaniE?ref_src=twsrc%5Etfw">@CNRS_OccitaniE</a> <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a> <a href="https://twitter.com/umontpellier?ref_src=twsrc%5Etfw">@umontpellier</a> w/ <a href="https://twitter.com/oksanagrente?ref_src=twsrc%5Etfw">@oksanagrente</a> <a href="https://twitter.com/ValentinLauret?ref_src=twsrc%5Etfw">@ValentinLauret</a> <a href="https://twitter.com/MaudQueroue?ref_src=twsrc%5Etfw">@MaudQueroue</a> <a href="https://twitter.com/roques_seb?ref_src=twsrc%5Etfw">@roques_seb</a> <a href="https://twitter.com/GSouchay?ref_src=twsrc%5Etfw">@GSouchay</a> <a href="https://twitter.com/DavidVallecill_?ref_src=twsrc%5Etfw">@DavidVallecill_</a> <a href="https://twitter.com/LoBacon1?ref_src=twsrc%5Etfw">@LoBacon1</a> <a href="https://t.co/7zjQWKeF9P">pic.twitter.com/7zjQWKeF9P</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1186915378489909249?ref_src=twsrc%5Etfw">October 23, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1235,8 +1182,7 @@
 
     
     <div class="article-style">
-      Formation #CESAB / GDR EcoStat: Bonnes pratiques pour une recherche reproductible en écologie numérique, 2-6/12/2019, Montpellier. Par Nicolas Casajus, Stéphane Dray, @GueryLorelei, @oaggimenez @FGuilhaumon &amp; @NinaSchiett
-➡https://t.co/P0HVLMEf7f@FRBiodiv @INEE_CNRS @Ifremer_fr pic.twitter.com/F9jCllLw6X
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Formation <a href="https://twitter.com/hashtag/CESAB?src=hash&amp;ref_src=twsrc%5Etfw">#CESAB</a> / GDR EcoStat: Bonnes pratiques pour une recherche reproductible en écologie numérique, 2-6/12/2019, Montpellier. Par Nicolas Casajus, Stéphane Dray, <a href="https://twitter.com/GueryLorelei?ref_src=twsrc%5Etfw">@GueryLorelei</a>, <a href="https://twitter.com/oaggimenez?ref_src=twsrc%5Etfw">@oaggimenez</a> <a href="https://twitter.com/FGuilhaumon?ref_src=twsrc%5Etfw">@FGuilhaumon</a> &amp; <a href="https://twitter.com/NinaSchiett?ref_src=twsrc%5Etfw">@NinaSchiett</a><br>➡<a href="https://t.co/P0HVLMEf7f">https://t.co/P0HVLMEf7f</a><a href="https://twitter.com/FRBiodiv?ref_src=twsrc%5Etfw">@FRBiodiv</a> <a href="https://twitter.com/INEE_CNRS?ref_src=twsrc%5Etfw">@INEE_CNRS</a> <a href="https://twitter.com/Ifremer_fr?ref_src=twsrc%5Etfw">@Ifremer_fr</a> <a href="https://t.co/F9jCllLw6X">pic.twitter.com/F9jCllLw6X</a></p>&mdash; Nicolas Mouquet (@NicolasMouquet) <a href="https://twitter.com/NicolasMouquet/status/1184053147112792065?ref_src=twsrc%5Etfw">October 15, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1316,7 +1262,7 @@
 
     
     <div class="article-style">
-      A thread on my review of the capture-recapture literature for the conference Wildlife Research and Conservation 2019 https://t.co/dqz8kbLdym in Berlin 🇩🇪. Slides, analyses, data &amp; #rstats codes available from https://t.co/s9sFbkZG4k 1/23 pic.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A thread on my review of the capture-recapture literature for the conference Wildlife Research and Conservation 2019 <a href="https://t.co/dqz8kbLdym">https://t.co/dqz8kbLdym</a> in Berlin 🇩🇪. Slides, analyses, data &amp; <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> codes available from <a href="https://t.co/s9sFbkZG4k">https://t.co/s9sFbkZG4k</a> 1/23 <a href="https://t.co/crGkVqYzov">pic.twitter.com/crGkVqYzov</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1178044240036876289?ref_src=twsrc%5Etfw">September 28, /a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1487,7 +1433,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

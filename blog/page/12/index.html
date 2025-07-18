@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -593,7 +542,7 @@
 
     
     <div class="article-style">
-      In our weekly group meeting this morning, I introduced R Markdown a great #rstats tool to write reproducible documents (reports, articles, slides, websites) smoothly mixing text, code, figures and equations in html, word or pdf format.
+      <p>In our weekly group meeting this morning, I introduced R Markdown a great #rstats tool to write reproducible documents (reports, articles, slides, websites) smoothly mixing text, code, figures and equations in html, word or pdf format.</p>
     </div>
     
 
@@ -644,7 +593,7 @@
     
     
     <a href="/blog/rmarkdown/" >
-      <img src="/blog/rmarkdown/featured_hudeeba41033b559d6b512b0c337599388_228153_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/rmarkdown/featured_hu_d39c8fb433b66dcc.jpg" alt="">
     </a>
     
   </div>
@@ -678,7 +627,7 @@
 
     
     <div class="article-style">
-      In a recent seminar, S. Gandon (w/ S. Lion and T. Day) used SIR models to illustrate the effect of diff strategies of #SocialDistancing on the #COVID19 epidemic. What better way to learn than to reproduce their results in R?
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">In a recent seminar, S. Gandon (w/ S. Lion and T. Day) used SIR models to illustrate the effect of diff strategies of <a href="https://twitter.com/hashtag/SocialDistancing?src=hash&amp;ref_src=twsrc%5Etfw">#SocialDistancing</a> on the <a href="https://twitter.com/hashtag/COVID19?src=hash&amp;ref_src=twsrc%5Etfw">#COVID19</a> epidemic. What better way to learn than to reproduce their results in R? My two cents <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> code ➡️ <a href="https://t.co/oJVQHJ6HqO">https://t.co/oJVQHJ6HqO</a> 🤓 <a href="https://t.co/dqSIcjbhqq">pic.twitter.com/dqSIcjbhqq</a></p>
     </div>
     
 
@@ -729,7 +678,7 @@
     
     
     <a href="/blog/sirstats/" >
-      <img src="/blog/sirstats/featured_hu4ab7d65ef202247a85a40ff3aff610fc_296598_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/sirstats/featured_hu_17fc2c7311744ee.jpg" alt="">
     </a>
     
   </div>
@@ -814,7 +763,7 @@
     
     
     <a href="/blog/gamoccupancy/" >
-      <img src="/blog/gamoccupancy/featured_hu92b898b810d2ddbc8f9ff8c5c6f22048_574641_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/gamoccupancy/featured_hu_a8f4f97c33622a94.png" alt="">
     </a>
     
   </div>
@@ -899,7 +848,7 @@
     
     
     <a href="/blog/gdrecostat/" >
-      <img src="/blog/gdrecostat/featured_hu5a36adb1403adbde82fe155f4ef392b9_12330_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/gdrecostat/featured_hu_dd78ad3a166fa728.jpg" alt="">
     </a>
     
   </div>
@@ -933,7 +882,7 @@
 
     
     <div class="article-style">
-      It was so great to have you @ZipkinLab w/ us, it was too short though, come back soon 😋🚀 Monarch 🦋 are fascinating, data integration is the way to go! @twitthair1 pic.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It was so great to have you <a href="https://twitter.com/ZipkinLab?ref_src=twsrc%5Etfw">@ZipkinLab</a> w/ us, it was too short though, come back soon 😋🚀 Monarch 🦋 are fascinating, data integration is the way to go! <a href="https://twitter.com/twitthair1?ref_src=twsrc%5Etfw">@twitthair1</a> <a href="https://t.co/9ud1ycPZvE">pic.twitter.com/9ud1ycPZvE</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1235967374890799109?ref_src=twsrc%5Etfw">March 6, 2/a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -984,7 +933,7 @@
     
     
     <a href="/blog/elisevisit/" >
-      <img src="/blog/elisevisit/featured_hud73935d0c86b08c13d96856ba15a4968_2119518_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/elisevisit/featured_hu_cc0a47d3519a9b13.jpg" alt="">
     </a>
     
   </div>
@@ -1069,7 +1018,7 @@
     
     
     <a href="/blog/ipmworkshop/" >
-      <img src="/blog/ipmworkshop/featured_hu7d2e21484cfdd9a902782733f24a458c_36882_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/ipmworkshop/featured_hu_7a7d50364b6b98e.jpg" alt="">
     </a>
     
   </div>
@@ -1154,7 +1103,7 @@
     
     
     <a href="/blog/manif/" >
-      <img src="/blog/manif/featured_huc65d921b9c4f43f8586c0c4382e4ae98_86094_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/manif/featured_hu_68d5698f00d89047.jpg" alt="">
     </a>
     
   </div>
@@ -1239,7 +1188,7 @@
     
     
     <a href="/blog/publiclecture/" >
-      <img src="/blog/publiclecture/featured_hu16fcdb0c905b12dee89da8eacb037567_1463174_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/publiclecture/featured_hu_d0ab14e5a16794bd.jpg" alt="">
     </a>
     
   </div>
@@ -1324,7 +1273,7 @@
     
     
     <a href="/blog/reviewhmm/" >
-      <img src="/blog/reviewhmm/featured_hud1f6828be5e65eea2b0dffbde087e580_99739_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/reviewhmm/featured_hu_137dd68a98e50629.png" alt="">
     </a>
     
   </div>
@@ -1358,7 +1307,8 @@
 
     
     <div class="article-style">
-      Landing in Norway to meet w/ Bischof&#39;s group @andyroyle_pwrc @R_nimble and brainstorm about large carnivores and spatially-explicit capture-recapture models #SCR @TouraniMa @PierreDupont47 @Milleret_Cyril the 20 degrees difference w Montpellier is... vivifying 😎🤧 pic.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Landing in Norway to meet w/ Bischof&#39;s group <a href="https://twitter.com/andyroyle_pwrc?ref_src=twsrc%5Etfw">@andyroyle_pwrc</a> <a href="https://twitter.com/R_nimble?ref_src=twsrc%5Etfw">@R_nimble</a> and brainstorm about large carnivores and spatially-explicit capture-recapture models <a href="https://twitter.com/hashtag/SCR?src=hash&amp;ref_src=twsrc%5Etfw">#SCR</a> <a href="https://twitter.com/TouraniMa?ref_src=twsrc%5Etfw">@TouraniMa</a> <a href="https://twitter.com/PierreDupont47?ref_src=twsrc%5Etfw">@PierreDupont47</a> <a href="https://twitter.com/Milleret_Cyril?ref_src=twsrc%5Etfw">@Milleret_Cyril</a> the 20 degrees difference w Montpellier is... vivifying 😎🤧 <a href="https://t.co/sy0ZUCoae7">pic.twitter.com/sy0ZUCoae7</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1232620089012367360?ref_src=twsrc%5Etfw">February 26, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">WildMap happy hour with c/w from top left <a href="https://twitter.com/eMoqanaki?ref_src=twsrc%5Etfw">@eMoqanaki</a> <a href="https://twitter.com/TouraniMa?ref_src=twsrc%5Etfw">@TouraniMa</a> Daniel Turek <a href="https://twitter.com/PDupont17?ref_src=twsrc%5Etfw">@PDupont17</a> <a href="https://twitter.com/soumendey_tweet?ref_src=twsrc%5Etfw">@soumendey_tweet</a> <a href="https://twitter.com/oaggimenez?ref_src=twsrc%5Etfw">@oaggimenez</a> R. Bischof <a href="https://twitter.com/Milleret_Cyril?ref_src=twsrc%5Etfw">@Milleret_Cyril</a> Henrik Broseth, yours truly, Jonas Kindberg, <a href="https://twitter.com/R_nimble?ref_src=twsrc%5Etfw">@R_nimble</a> De Valpine talking huge-scale monitoring of carnivores, SCR, Nimble, <a href="https://twitter.com/hashtag/priceybeer?src=hash&amp;ref_src=twsrc%5Etfw">#priceybeer</a> <a href="https://t.co/AQqmTeI0Aa">pic.twitter.com/AQqmTeI0Aa</a></p>
     </div>
     
 
@@ -1529,7 +1479,7 @@
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

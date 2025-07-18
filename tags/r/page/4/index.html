@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/tags/r/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -583,7 +532,8 @@
       <h2><a href="/blog/working_group_demo/" >Working group on animal/human demography</a></h2>
       <div class="article-style">
         
-          We organised a 2-day workshop on the metrics of longevity used in human and animal demography. The idea is to explore potential bridges between the two fields. Next meeting in April.
+          We organised a 2-day workshop on the metrics of longevity used in human and animal demography. The idea is to explore potential bridges between the two fields. Next meeting in April. The group is led by S. Cubaynes, a former PhD student of mine, who now holds a lecturer position at Montpellier University.
+
         
       </div>
     </div>
@@ -610,6 +560,7 @@
         
           This is a free adaptation of two (very) clever analyses made by others:
 The Star Wars Social Network by Evelina Gabasov in which program F# was mostly used to analyse the Star wars social networks
+
         
       </div>
     </div>
@@ -634,7 +585,8 @@ The Star Wars Social Network by Evelina Gabasov in which program F# was mostly u
       <h2><a href="/blog/nimble/" >New kids on the Bayesian block</a></h2>
       <div class="article-style">
         
-          I attended Daniel Turek&rsquo;s talk at ISEC about NIMBLE a neat alternative to WinBUGS and JAGS. It is developed by Perry de Valpine&rsquo;s group at Berkeley and &lsquo;lets you use BUGS models natively in R, program functions that use them, and compile everything via C++ for faster computing&rsquo;.
+          I attended Daniel Turek&rsquo;s talk at ISEC about NIMBLE a neat alternative to WinBUGS and JAGS. It is developed by Perry de Valpine&rsquo;s group at Berkeley and &lsquo;lets you use BUGS models natively in R, program functions that use them, and compile everything via C++ for faster computing&rsquo;. I played around with NIMBLE a bit, here is an example of fitting a classic capture-recapture model to simulated data - thanks to Perry and Daniel for their help! NIMBLE seems a lot faster than its competitors, and much more flexible. I&rsquo;ll continue my investigations with more complex models - stay tuned.
+
         
       </div>
     </div>
@@ -753,7 +705,7 @@ The Star Wars Social Network by Evelina Gabasov in which program F# was mostly u
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 

@@ -202,43 +202,12 @@
   
 
 
-
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96999184-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-96999184-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
+  gtag('config', 'UA-96999184-1');
 </script>
 
 
@@ -253,8 +222,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub63230815190acd33b27a0f36ae996e9_48855_192x192_fill_lanczos_center_3.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu_a98e7b6589a8d25.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu_ceadb92754828f6f.png">
 
   <link rel="canonical" href="https://oliviergimenez.github.io/blog/">
 
@@ -486,26 +455,6 @@
         
         
 
-        
-
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link  active" href="/blog"><span>News</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -593,8 +542,7 @@
 
     
     <div class="article-style">
-      Check it out 😉🥳 https://t.co/mqyuMSm8QF
-&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) September 22, 2022 
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Check it out 😉🥳 <a href="https://t.co/mqyuMSm8QF">https://t.co/mqyuMSm8QF</a></p>&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1573018211758780417?ref_src=twsrc%5Etfw">September 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -645,7 +593,7 @@
     
     
     <a href="/blog/valpaper/" >
-      <img src="/blog/valpaper/featured_hu30cda10544715993dc48f854b850f8c5_271541_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/valpaper/featured_hu_e43887d24b1c072f.jpg" alt="">
     </a>
     
   </div>
@@ -679,8 +627,7 @@
 
     
     <div class="article-style">
-      Looking for free images or icons for your talk, website, video, etc. A few pointers that I find useful 😉https://t.co/oTioaam8Y1https://t.co/pueZRTCONFhttps://t.co/nhx3wlPHhvhttps://t.co/6XT1z2jgg5https://t.co/2KCJU3xCAPhttps://t.co/QGnYaLsSjmhttps://t.co/TVlAtmlVDz pic.twitter.com/SoUshEWAgM
-&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) August 18, 2022 
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Looking for free images or icons for your talk, website, video, etc. A few pointers that I find useful 😉<a href="https://t.co/oTioaam8Y1">https://t.co/oTioaam8Y1</a><a href="https://t.co/pueZRTCONF">https://t.co/pueZRTCONF</a><a href="https://t.co/nhx3wlPHhv">https://t.co/nhx3wlPHhv</a><a href="https://t.co/6XT1z2jgg5">https://t.co/6XT1z2jgg5</a><a href="https://t.co/2KCJU3xCAP">https://t.co/2KCJU3xCAP</a><a href="https://t.co/QGnYaLsSjm">https://t.co/QGnYaLsSjm</a><a href="https://t.co/TVlAtmlVDz">https://t.co/TVlAtmlVDz</a> <a href="https://t.co/SoUshEWAgM">pic.twitter.com/SoUshEWAgM</a></p>&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1560279336304795648?ref_src=twsrc%5Etfw">August 18, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -731,7 +678,7 @@
     
     
     <a href="/blog/icons/" >
-      <img src="/blog/icons/featured_hu7fba9da1679ce4a56c592454604cb9c1_138840_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/icons/featured_hu_aba227a9ed9cd3f.jpg" alt="">
     </a>
     
   </div>
@@ -765,7 +712,7 @@
 
     
     <div class="article-style">
-      How do neural networks work 🤔 What&#39;s under the hood 🤯 A few pointers in the thread below with a R/statistian bias 😇 #MachineLearning #DeepLearning #NeuralNetworks #CNN #RStats 🧵⬇️ pic.twitter.com/4QF1vKoFc8
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">How do neural networks work 🤔 What&#39;s under the hood 🤯 A few pointers in the thread below with a R/statistian bias 😇 <a href="https://twitter.com/hashtag/MachineLearning?src=hash&amp;ref_src=twsrc%5Etfw">#MachineLearning</a> <a href="https://twitter.com/hashtag/DeepLearning?src=hash&amp;ref_src=twsrc%5Etfw">#DeepLearning</a> <a href="https://twitter.com/hashtag/NeuralNetworks?src=hash&amp;ref_src=twsrc%5Etfw">#NeuralNetworks</a> <a href="https://twitter.com/hashtag/CNN?src=hash&amp;ref_src=twsrc%5Etfw">#CNN</a> <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <br><br>🧵⬇️ <a href="https://t.co/4QF1vKoFc8">pic.twitter.com/4QF1vKoFc8</a></p>&mdash; Olivier Gimenez 🖖🦦 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1556559752938885120?ref_src=twsrc%5Etfw">August 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -816,7 +763,7 @@
     
     
     <a href="/blog/neuralnetworks/" >
-      <img src="/blog/neuralnetworks/featured_huceb1dd996aafd866855a5e16825f69d3_22886_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/neuralnetworks/featured_hu_c1f58990ee3c56d.jpg" alt="">
     </a>
     
   </div>
@@ -850,7 +797,7 @@
 
     
     <div class="article-style">
-      I’m writing a lot over summer. Writing does not come easily to me. Experience helps of course, but I find it useful to follow some rules, like how to write an intro.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I’m writing a lot over summer. Writing does not come easily to me. Experience helps of course, but I find it useful to follow some rules, like how to write an intro. Fortunately, the best writing tips are out there 😉<br><br>My fav 🧵👇<a href="https://twitter.com/OpenAcademics?ref_src=twsrc%5Etfw">@OpenAcademics</a><a href="https://twitter.com/hashtag/AcademicTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#AcademicTwitter</a><a href="https://twitter.com/hashtag/AcademicChatter?src=hash&amp;ref_src=twsrc%5Etfw">#AcademicChatter</a> <a href="https://t.co/v2CeZKF6jx">pic.twitter.com/v2CeZKF6jx</a></p>
     </div>
     
 
@@ -901,7 +848,7 @@
     
     
     <a href="/blog/write/" >
-      <img src="/blog/write/featured_hu7fa1b9373114511a091670b1ef392c9c_87477_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/write/featured_hu_150735f062cb1509.jpg" alt="">
     </a>
     
   </div>
@@ -935,7 +882,7 @@
 
     
     <div class="article-style">
-      C&#39;est la période de rédaction de thèse pour bcp de jeunes chercheuses/chercheurs. Une étape pas facile à passer. Un fil sur comment on s&#39;y prend dans l&#39;équipe. Ça vaut ce que ça vaut, c&#39;est pas original, mais si ça peut aider, tant mieux.
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">C&#39;est la période de rédaction de thèse pour bcp de jeunes chercheuses/chercheurs. Une étape pas facile à passer. Un fil sur comment on s&#39;y prend dans l&#39;équipe. Ça vaut ce que ça vaut, c&#39;est pas original, mais si ça peut aider, tant mieux.<br><br>Et vous, quels sont vos conseils?<br><br>🧵⬇️ <a href="https://t.co/p8qw4ZoDuQ">pic.twitter.com/p8qw4ZoDuQ</a></p>
     </div>
     
 
@@ -986,7 +933,7 @@
     
     
     <a href="/blog/advicephdwriting/" >
-      <img src="/blog/advicephdwriting/featured_hu7fba9da1679ce4a56c592454604cb9c1_147965_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/advicephdwriting/featured_hu_b86456ade320920d.jpg" alt="">
     </a>
     
   </div>
@@ -1020,7 +967,7 @@
 
     
     <div class="article-style">
-      Notre équipe @twitthair1 travaille bcp sur les questions en lien avec la gestion du loup en France 🐺🇫🇷 Voici qqs pointeurs sur nos travaux, en privilégiant les productions en français. Plusieurs de ces résultats ont été obtenus avec les collègues @OFBiodiversite 🧵⬇️
+      <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Notre équipe <a href="https://twitter.com/twitthair1?ref_src=twsrc%5Etfw">@twitthair1</a> travaille bcp sur les questions en lien avec la gestion du loup en France 🐺🇫🇷 Voici qqs pointeurs sur nos travaux, en privilégiant les productions en français. Plusieurs de ces résultats ont été obtenus avec les collègues <a href="https://twitter.com/OFBiodiversite?ref_src=twsrc%5Etfw">@OFBiodiversite</a> <br><br>🧵⬇️</p>
     </div>
     
 
@@ -1071,7 +1018,7 @@
     
     
     <a href="/blog/2022-07-13-nos-travaux-sur-le-loup/" >
-      <img src="/blog/2022-07-13-nos-travaux-sur-le-loup/featured_hu955a3f744391431f9e3495f5812a67cf_693630_150x0_resize_lanczos_3.png" alt="">
+      <img src="/blog/2022-07-13-nos-travaux-sur-le-loup/featured_hu_15518c4cd2cddfff.png" alt="">
     </a>
     
   </div>
@@ -1105,7 +1052,7 @@
 
     
     <div class="article-style">
-      If you need to test the goodness-of-fit of your open capture-recapture models, good news, our #RStats R2ucare is back on CRAN thanks to the amazing work of Murray Efford and @bc_stevenson 🙏🤩
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If you need to test the goodness-of-fit of your open capture-recapture models, good news, our <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> R2ucare is back on CRAN thanks to the amazing work of Murray Efford and <a href="https://twitter.com/bc_stevenson?ref_src=twsrc%5Etfw">@bc_stevenson</a> 🙏🤩<br><br>website: <a href="https://t.co/SbGrQm9XS2">https://t.co/SbGrQm9XS2</a> <br>paper: <a href="https://t.co/W38nqsEHPa">https://t.co/W38nqsEHPa</a> <a href="https://t.co/KelIzsB8Xf">pic.twitter.com/KelIzsB8Xf</a></p>
     </div>
     
 
@@ -1156,7 +1103,7 @@
     
     
     <a href="/blog/2022-07-12-r2ucare-back-on-cran/" >
-      <img src="/blog/2022-07-12-r2ucare-back-on-cran/featured_hu694a0dc51abab4503112f480db5313ca_65501_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-07-12-r2ucare-back-on-cran/featured_hu_5d14539fa4c0401f.jpg" alt="">
     </a>
     
   </div>
@@ -1190,9 +1137,7 @@
 
     
     <div class="article-style">
-      🥳 Save the date 🥳
-The 2023 Euring Analytical Conference will be held in Montpellier (France), on April 17-21, 2023.
-Check out https://t.co/t04XJGbW8k for info. 🤗🤩We look forward to welcoming you all 🤗🤩@_EURING @abesnardEPHE pic.
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🥳 Save the date 🥳<br><br>The 2023 Euring Analytical Conference will be held in Montpellier (France), on April 17-21, 2023.<br><br>Check out <a href="https://t.co/t04XJGbW8k">https://t.co/t04XJGbW8k</a> for info. <br><br> 🤗🤩We look forward to welcoming you all 🤗🤩<a href="https://twitter.com/_EURING?ref_src=twsrc%5Etfw">@_EURING</a> <a href="https://twitter.com/abesnardEPHE?ref_src=twsrc%5Etfw">@abesnardEPHE</a> <a href="https://t.co/KAe46wOaze">pic.twitter.com/KAe46wOaze</a></p>
     </div>
     
 
@@ -1243,7 +1188,7 @@ Check out https://t.co/t04XJGbW8k for info. 🤗🤩We look forward to welcoming
     
     
     <a href="/blog/2022-07-08-save-the-data-euring2023-in-montpellier-april-17-21/" >
-      <img src="/blog/2022-07-08-save-the-data-euring2023-in-montpellier-april-17-21/featured_hu66babfc5612d4f6bf3d8cf89c53acc5c_103799_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-07-08-save-the-data-euring2023-in-montpellier-april-17-21/featured_hu_d24ef3c09023560.jpg" alt="">
     </a>
     
   </div>
@@ -1277,7 +1222,7 @@ Check out https://t.co/t04XJGbW8k for info. 🤗🤩We look forward to welcoming
 
     
     <div class="article-style">
-      Quick &amp; dirty text mining analysis of #ISEC2022 abstracts using topic modelling. Nothing out of the ordinary. Would be curious to assess time trends in topics w/ longitudinal analysis @chrissuthy 😇😉
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Quick &amp; dirty text mining analysis of <a href="https://twitter.com/hashtag/ISEC2022?src=hash&amp;ref_src=twsrc%5Etfw">#ISEC2022</a> abstracts using topic modelling. Nothing out of the ordinary. <br><br>Would be curious to assess time trends in topics w/ longitudinal analysis <a href="https://twitter.com/chrissuthy?ref_src=twsrc%5Etfw">@chrissuthy</a> 😇😉<br><br>Data and code: <a href="https://t.co/E2x7avw0E1">https://t.co/E2x7avw0E1</a><br><br>Paper: <a href="https://t.co/l3ChAIa6Vi">https://t.co/l3ChAIa6Vi</a> <a href="https://t.co/NUF1FGm3Lv">pic.twitter.com/NUF1FGm3Lv</a></p>
     </div>
     
 
@@ -1328,7 +1273,7 @@ Check out https://t.co/t04XJGbW8k for info. 🤗🤩We look forward to welcoming
     
     
     <a href="/blog/2022-07-04-quick-and-dirty-text-mining-analysis-of-isec2022-abstracts/" >
-      <img src="/blog/2022-07-04-quick-and-dirty-text-mining-analysis-of-isec2022-abstracts/featured_hud0114b778f5661de098299aecb973d97_85775_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-07-04-quick-and-dirty-text-mining-analysis-of-isec2022-abstracts/featured_hu_54882be1c6d9a225.jpg" alt="">
     </a>
     
   </div>
@@ -1362,8 +1307,7 @@ Check out https://t.co/t04XJGbW8k for info. 🤗🤩We look forward to welcoming
 
     
     <div class="article-style">
-      Would you like to get the most out of your capture-recapture data?
-We run a workshop on multisite/state/event HMMs models in #Rstats Nimble w/ Daniel Turek @R_nimble at #ISEC2022 @ISEC_stats_ecol
+      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Would you like to get the most out of your capture-recapture data?<br><br>We run a workshop on multisite/state/event HMMs models in <a href="https://twitter.com/hashtag/Rstats?src=hash&amp;ref_src=twsrc%5Etfw">#Rstats</a> Nimble w/ Daniel Turek <a href="https://twitter.com/R_nimble?ref_src=twsrc%5Etfw">@R_nimble</a> at <a href="https://twitter.com/hashtag/ISEC2022?src=hash&amp;ref_src=twsrc%5Etfw">#ISEC2022</a> <a href="https://twitter.com/ISEC_stats_ecol?ref_src=twsrc%5Etfw">@ISEC_stats_ecol</a><br><br>Website w/ slides &amp; codes: <a href="https://t.co/gI1ccZO3O9">https://t.co/gI1ccZO3O9</a><br>Video: <a href="https://t.co/zA6nh6Ttih">https://t.co/zA6nh6Ttih</a> <a href="https://t.co/ejyE2tCw5o">pic.twitter.com/ejyE2tCw5o</a></p>&mdash; Olivier Gimenez 🖖 (@oaggimenez) <a href="https://twitter.com/oaggimenez/status/1542815746752905217?ref_src=twsrc%5Etfw">July 1, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
 
@@ -1414,7 +1358,7 @@ We run a workshop on multisite/state/event HMMs models in #Rstats Nimble w/ Dani
     
     
     <a href="/blog/2022-07-01-workshop-at-isec2022-on-capture-recapture-hmms-and-nimble/" >
-      <img src="/blog/2022-07-01-workshop-at-isec2022-on-capture-recapture-hmms-and-nimble/featured_hua1b97978f85193995ba5f4cbb739491a_31266_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/blog/2022-07-01-workshop-at-isec2022-on-capture-recapture-hmms-and-nimble/featured_hu_98ddf674df79c31e.jpg" alt="">
     </a>
     
   </div>
@@ -1539,7 +1483,7 @@ We run a workshop on multisite/state/event HMMs models in #Rstats Nimble w/ Dani
     
     
     
-    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
+    <script src="/js/academic.min.625093851a77bbf06d06d7f8a6cf3f7b.js"></script>
 
     
 
