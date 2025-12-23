@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/publication/</link>
       <atom:link href="https://oliviergimenez.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Publications</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Papers</title>
       <link>https://oliviergimenez.github.io/publication/papers/</link>
-      <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/publication/papers/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Preprints&lt;/strong&gt;&lt;/p&gt;
@@ -25,10 +25,6 @@
 &lt;a href=&#34;http://arxiv.org/abs/2508.12434&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Estimating wolf population size in France using non-invasive genetic sampling and spatial capture recapture models&lt;/a&gt; arXiv preprint.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Milleret C., C. Duchamp, O. Gimenez (2025). 
-&lt;a href=&#34;https://hal.science/hal-05016361/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mise à jour des estimations démographiques et des effectifs de la population de loups en France lors de l&amp;rsquo;hiver 2023/2024&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;p&gt;Desprez M., V. Miele, O. Gimenez (2023). 
 &lt;a href=&#34;https://arxiv.org/abs/2305.10472&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nine tips for ecologists using machine learning&lt;/a&gt; arXiv preprint.&lt;/p&gt;
 &lt;/li&gt;
@@ -36,14 +32,18 @@
 &lt;p&gt;Louvrier J., M. Fidino, J.V. Stuardo, O. Gimenez (2024). 
 &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2024.10.29.620848v1.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How reliably can species co-occurrence be inferred from occupancy models?&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Grente O., T. Opitz, C. Duchamp, N. Drouet-Hoguet, S. Chamaillé-Jammes, O. Gimenez (2024). 
-&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2024.07.18.604079v1.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spatio-temporal dynamics of attacks around deaths of wolves: A statistical assessment of lethal control efficiency in France&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Published&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Bauduin, S., Gimenez, O., Drouet-Hoguet, N., Louvrier, J., &amp;amp; Duchamp, C. (2025). 
+&lt;a href=&#34;https://besjournals.onlinelibrary.wiley.com/doi/full/10.1002/2688-8319.70165&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Calibrating an occupancy metric to monitor elusive territorial species at large scale: Application to the grey wolf population in France&lt;/a&gt; &lt;em&gt;Ecological Solutions and Evidence&lt;/em&gt; 6: e70165.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Grente O., T. Opitz, C. Duchamp, N. Drouet-Hoguet, S. Chamaillé-Jammes, O. Gimenez (2025). 
+&lt;a href=&#34;https://peercommunityjournal.org/articles/10.24072/pcjournal.652/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spatio-temporal dynamics of attacks around deaths of wolves: A statistical assessment of lethal control efficiency in France&lt;/a&gt; &lt;em&gt;Peer Community Journal&lt;/em&gt; 5: e128.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Speakman C., S. Bull, S. Cuybaynes, K. Davis, S. Devillard, J. Fryxell, C. Gallagher, E. McHuron, K. Rastello, I. Smallegange, R. Salguero-Gomez, E. Bonnaud, C. Duchamp, P. Giraudoux, S. Lacombe, C. Marneweck, L. Schroll, A. Tableau, S. Ruette, O. Gimenez (2025). 
 &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/10.1111/ele.70198&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Understanding and predicting population response to anthropogenic disturbance: Current approaches and novel opportunities&lt;/a&gt;. &lt;em&gt;Ecology Letters&lt;/em&gt; 28: e70198.&lt;/p&gt;
@@ -942,9 +942,45 @@ Grosset S., Michaux J., Beaumariage A., André A. &amp;amp; Devillard S. 2025.
     <item>
       <title>Books and book chapters</title>
       <link>https://oliviergimenez.github.io/publication/books/</link>
-      <pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/publication/books/</guid>
       <description>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-barnagaud-j-y-and-gimenez-o-2025-analyse-de-données-en-écologie---introduction-aux-outils-statistiques-avec-rhttpswwwbiotope-editionsfrproduitanalyse-de-donnees-en-ecologie&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://oliviergimenez.github.io/img/anaylsedonneeecologie_siteBiotopeEd.png&#34; data-caption=&#34;Barnagaud J.-Y. and Gimenez O. (2025). 
+Analyse de données en écologie - Introduction aux outils statistiques avec R.&#34;&gt;
+
+
+  &lt;img src=&#34;https://oliviergimenez.github.io/img/anaylsedonneeecologie_siteBiotopeEd.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Barnagaud J.-Y. and Gimenez O. (2025). 
+&lt;a href=&#34;https://www.biotope-editions.fr/produit/analyse-de-donnees-en-ecologie/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Analyse de données en écologie - Introduction aux outils statistiques avec R.&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
 
 
 

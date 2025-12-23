@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/</link>
       <atom:link href="https://oliviergimenez.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Olivier Gimenez</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Olivier Gimenez</title>
@@ -15,34 +15,29 @@
     <item>
       <title>Current lab members</title>
       <link>https://oliviergimenez.github.io/people/current/</link>
-      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/current/</guid>
       <description>&lt;br&gt;
 &lt;hr&gt; 
-&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/adelaide.jpeg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;
-&lt;a href=&#34;https://www.researchgate.net/profile/Celian-Monchy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Célian Monchy&lt;/a&gt;&lt;/strong&gt; (PhD 2022-2025) is working on the propagation of uncertainties related to the automatic processing of sensor data in different models in ecology. He is co-supervised by 
-&lt;a href=&#34;https://marieetienne.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marie-Pierre Etienne&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/camille.jpg&#34; width=&#34;130&#34;&gt; &lt;strong&gt;Camille Mottier&lt;/strong&gt; (PhD 2025-2029) is modelling the spatial dynamics of coypus at multiple scales. She is co-supervised by 
+&lt;a href=&#34;https://hqueffel.pages.math.cnrs.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hoel Queffelec&lt;/a&gt; and 
+&lt;a href=&#34;https://sites.google.com/view/guerand/accueil&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jessica Guérand&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/cyrielle.jpg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;Cyrielle Ballester&lt;/strong&gt; (engineer 2026) is working on a citizen science program to monitor animal communities along the Lez river in Montpellier.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/lea.jpg&#34; width=&#34;130&#34;&gt; &lt;strong&gt;
-&lt;a href=&#34;https://www.terroiko.fr/fr/lea-pautrel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Léa Pautrel&lt;/a&gt;&lt;/strong&gt; (PhD 2022-2025) is investigating the use of deep learning coupled with continuous-time models to exploit sensor data, in particular cam traps. She is co-supervised by 
-&lt;a href=&#34;https://marieetienne.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marie-Pierre Etienne&lt;/a&gt; and Sylvain Moulherat from 
-&lt;a href=&#34;https://www.terroiko.fr/fr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TerrOïko&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://www.terroiko.fr/fr/lea-pautrel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Léa Pautrel&lt;/a&gt;&lt;/strong&gt; (post-doc 2026-2027) is investigating the use of deep learning coupled with species distribution models to map animal populations in Occitanie.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/alix.jpg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;
-&lt;a href=&#34;https://alixcosquer.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Alix Cosquer&lt;/a&gt;&lt;/strong&gt; (post-doc 2025-2027) is an environmental psychologist. She works on a framework for assessing scientific outreach actions. This is joint work with Charlotte Francesiaz from the 
+&lt;a href=&#34;https://alixcosquer.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Alix Cosquer&lt;/a&gt;&lt;/strong&gt; (post-doc 2025-2027) works on a framework for assessing scientific outreach actions. This is joint work with Charlotte Francesiaz from the 
 &lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt; and colleagues from the city and metropolis of Montpellier.&lt;/p&gt;
-&lt;hr&gt; 
-&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/oksana.png&#34; alt=&#34;&#34;&gt;
-&lt;strong&gt;
-&lt;a href=&#34;https://www.researchgate.net/profile/Oksana-Grente&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Oksana Grente&lt;/a&gt;&lt;/strong&gt; (PhD 2018-2021, post-doc 2023-2025) works at evaluating the impact of lethal control on the French wolf population, with a special interest in social structure and livestock depredation. This is joint work with Sarah Bauduin, Christophe Duchamp and Nolwenn Hoguet-Drouet from 
-&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;.&lt;/p&gt;
-&lt;hr&gt; 
+&lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/simon.jpeg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;
-&lt;a href=&#34;https://www.researchgate.net/profile/Simon-Lacombe-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Simon Lacombe&lt;/a&gt;&lt;/strong&gt; (PhD 2023-2026) is a quantitative ecologists who&amp;rsquo;s determining the drivers of European otter recolonization in France using non-invasive sampling and statistical ecology. He is co-supervised by Sébastien Devillard.&lt;/p&gt;
+&lt;a href=&#34;https://www.researchgate.net/profile/Simon-Lacombe-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Simon Lacombe&lt;/a&gt;&lt;/strong&gt; (PhD 2023-2026) is studying the drivers of European otter recolonization in France using non-invasive sampling and statistical ecology. He is co-supervised by Sébastien Devillard.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/cyril.jpg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;
-&lt;a href=&#34;http://cyrilmilleret.info/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cyril Milleret&lt;/a&gt;&lt;/strong&gt; (post-doc 2024-2027) works on spatial explicit capture-recapture models for the French wolf population. This is joint work with Christophe Duchamp and Jean-Michel Vandel from 
+&lt;a href=&#34;http://cyrilmilleret.info/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cyril Milleret&lt;/a&gt;&lt;/strong&gt; (post-doc 2024-2027) works on spatial explicit capture-recapture models for estimating the abundance of wolf in France. This is joint work with Christophe Duchamp and Jean-Michel Vandel from 
 &lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/cassie.jpg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;
@@ -58,7 +53,7 @@
     <item>
       <title>Former lab members</title>
       <link>https://oliviergimenez.github.io/people/alumni/</link>
-      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/alumni/</guid>
       <description>&lt;br&gt;
 &lt;hr&gt;
@@ -68,8 +63,20 @@
 &lt;br&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/maelis.jpeg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Maëlis Kervellec&lt;/strong&gt; (PhD 2021-2024) developed statistical models for the analysis of camera trap data with applications in large carnivores population ecology. This was joint work with colleagues from the 
-&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;. Maëlis was co-supervised with Cyril Milleret.&lt;/p&gt;
+&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;. Maëlis was co-supervised by Cyril Milleret.&lt;/p&gt;
 &lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/oksana.png&#34; alt=&#34;&#34;&gt;
+&lt;strong&gt;
+&lt;a href=&#34;https://www.researchgate.net/profile/Oksana-Grente&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Oksana Grente&lt;/a&gt;&lt;/strong&gt; (PhD 2018-2021, post-doc 2023-2025) worked at evaluating the impact of lethal control on the French wolf population, with a special interest in social structure and livestock depredation. This was joint work with Sarah Bauduin, Christophe Duchamp and Nolwenn Hoguet-Drouet from 
+&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/adelaide.jpeg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;Célian Monchy&lt;/strong&gt; (PhD 2022-2025) worked on the propagation of uncertainties related to the automatic processing of sensor data in different models in ecology. Célian was co-supervised by 
+&lt;a href=&#34;https://marieetienne.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marie-Pierre Etienne&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/lea.jpg&#34; width=&#34;130&#34;&gt; &lt;strong&gt;Léa Pautrel&lt;/strong&gt; (PhD 2022-2025) investigated the use of deep learning coupled with continuous-time models to exploit sensor data, in particular cam traps. She was co-supervised by 
+&lt;a href=&#34;https://marieetienne.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marie-Pierre Etienne&lt;/a&gt; and Sylvain Moulherat from 
+&lt;a href=&#34;https://www.terroiko.fr/fr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TerrOïko&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/javi.png&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Javi Fernández-López&lt;/strong&gt; (post-doc 2022-2023) is interested in conservation biology and phylogeography. He is modelling the distribution of mammals in Europe by integrating various sources of data. Check out his website 
 &lt;a href=&#34;https://allthiswasfield.blogspot.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://allthiswasfield.blogspot.com&lt;/a&gt;.&lt;/p&gt;
@@ -270,7 +277,7 @@ biodiversity patterns at large scale and worked in conservation biogeography
     <item>
       <title>Papers</title>
       <link>https://oliviergimenez.github.io/publication/papers/</link>
-      <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/publication/papers/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Preprints&lt;/strong&gt;&lt;/p&gt;
@@ -280,10 +287,6 @@ biodiversity patterns at large scale and worked in conservation biogeography
 &lt;a href=&#34;http://arxiv.org/abs/2508.12434&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Estimating wolf population size in France using non-invasive genetic sampling and spatial capture recapture models&lt;/a&gt; arXiv preprint.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Milleret C., C. Duchamp, O. Gimenez (2025). 
-&lt;a href=&#34;https://hal.science/hal-05016361/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mise à jour des estimations démographiques et des effectifs de la population de loups en France lors de l&amp;rsquo;hiver 2023/2024&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
 &lt;p&gt;Desprez M., V. Miele, O. Gimenez (2023). 
 &lt;a href=&#34;https://arxiv.org/abs/2305.10472&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nine tips for ecologists using machine learning&lt;/a&gt; arXiv preprint.&lt;/p&gt;
 &lt;/li&gt;
@@ -291,14 +294,18 @@ biodiversity patterns at large scale and worked in conservation biogeography
 &lt;p&gt;Louvrier J., M. Fidino, J.V. Stuardo, O. Gimenez (2024). 
 &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2024.10.29.620848v1.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How reliably can species co-occurrence be inferred from occupancy models?&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Grente O., T. Opitz, C. Duchamp, N. Drouet-Hoguet, S. Chamaillé-Jammes, O. Gimenez (2024). 
-&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2024.07.18.604079v1.abstract&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spatio-temporal dynamics of attacks around deaths of wolves: A statistical assessment of lethal control efficiency in France&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Published&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Bauduin, S., Gimenez, O., Drouet-Hoguet, N., Louvrier, J., &amp;amp; Duchamp, C. (2025). 
+&lt;a href=&#34;https://besjournals.onlinelibrary.wiley.com/doi/full/10.1002/2688-8319.70165&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Calibrating an occupancy metric to monitor elusive territorial species at large scale: Application to the grey wolf population in France&lt;/a&gt; &lt;em&gt;Ecological Solutions and Evidence&lt;/em&gt; 6: e70165.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Grente O., T. Opitz, C. Duchamp, N. Drouet-Hoguet, S. Chamaillé-Jammes, O. Gimenez (2025). 
+&lt;a href=&#34;https://peercommunityjournal.org/articles/10.24072/pcjournal.652/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Spatio-temporal dynamics of attacks around deaths of wolves: A statistical assessment of lethal control efficiency in France&lt;/a&gt; &lt;em&gt;Peer Community Journal&lt;/em&gt; 5: e128.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Speakman C., S. Bull, S. Cuybaynes, K. Davis, S. Devillard, J. Fryxell, C. Gallagher, E. McHuron, K. Rastello, I. Smallegange, R. Salguero-Gomez, E. Bonnaud, C. Duchamp, P. Giraudoux, S. Lacombe, C. Marneweck, L. Schroll, A. Tableau, S. Ruette, O. Gimenez (2025). 
 &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/10.1111/ele.70198&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Understanding and predicting population response to anthropogenic disturbance: Current approaches and novel opportunities&lt;/a&gt;. &lt;em&gt;Ecology Letters&lt;/em&gt; 28: e70198.&lt;/p&gt;
@@ -1197,9 +1204,20 @@ Grosset S., Michaux J., Beaumariage A., André A. &amp;amp; Devillard S. 2025.
     <item>
       <title>Talks</title>
       <link>https://oliviergimenez.github.io/talks/talk/</link>
-      <pubDate>Sat, 19 Jul 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/talks/talk/</guid>
       <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Présentation du projet LeptoNex à D’abord le 13 novembre à la 13ème réunion du 
+&lt;a href=&#34;https://especes-exotiques-envahissantes.fr/reseau-dexpertise-scientifique-et-technique/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Réseau d&amp;rsquo;expertise scientifique et technique sur les espèces exotiques envahissantes&lt;/a&gt; et à l&amp;rsquo;assemblée générale de la 
+&lt;a href=&#34;https://www.zacam.cnrs.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zone atelier santé environnement Camargue&lt;/a&gt; du CNRS. 13-14 novembre 2025. Les diapos de la présentation sont 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.30939089&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Conférence avec Stéphanie Grosset sur la biodiversité du Lez dans le cadre d&amp;rsquo;une journée Science et Société de l&amp;rsquo;OSU OREME. 13 novembre 2025. La vidéo de la présentation est disponible 
+&lt;a href=&#34;https://www.youtube.com/watch?v=woOTTC2E_hw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt; et les diapos 
+&lt;a href=&#34;https://doi.org/10.6084/m9.figshare.30940874&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;là&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Conférence Pint of Science &amp;ldquo;Au fil de l’eau du Lez : à la découverte de la loutre d’Europe sur Montpellier&amp;rdquo;. 20 mai 2025. La présentation est disponible 
 &lt;a href=&#34;https://doi.org/10.6084/m9.figshare.29603153.v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
@@ -1387,56 +1405,47 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
     </item>
     
     <item>
-      <title>Workshops</title>
-      <link>https://oliviergimenez.github.io/talks/workshop/</link>
-      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://oliviergimenez.github.io/talks/workshop/</guid>
-      <description>&lt;p&gt;March 20, 2025. 1-day workshop Introduction to Bayesian statistics with R and Nimble.&lt;/p&gt;
-&lt;p&gt;July 12-13, 2023. Workshop on Bayesian capture-recapture inference with hidden Markov models in R and Nimble for the 
-&lt;a href=&#34;http://vabar.es/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;València International Bayesian Analysis Summer School&lt;/a&gt;. Slides, worksheets and video recordings freely available from 
-&lt;a href=&#34;https://oliviergimenez.github.io/bayesian-hmm-cr-workshop-valencia/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;June 1-2, 2023. Quantitative methods for population dynamics: A two-day workshop with R. All material available from 
-&lt;a href=&#34;https://oliviergimenez.github.io/popdyn-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;May 16, 2023. Workshop on estimating (wolf) occupancy with R for the 
-&lt;a href=&#34;https://www.wolvesacrossborders.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wolves Across Borders conference&lt;/a&gt;. All material available from 
-&lt;a href=&#34;https://oliviergimenez.github.io/occupancy-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;June 26, 2022. Workshop on Bayesian capture-recapture inference with hidden Markov models, R and Nimble for the 
-&lt;a href=&#34;https://www.isec2022.org/workshop-4/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ISEC2022 conference&lt;/a&gt;. All material available from 
-&lt;a href=&#34;https://oliviergimenez.github.io/hmm-cr-nimble-isec2022-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;March 21-22, 2022. Quantitative methods for population dynamics: A two-day workshop with R. All material available from 
-&lt;a href=&#34;https://oliviergimenez.github.io/popdyn-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;March 19, 2022. Workshop on NIMBLE. All material available from 
-&lt;a href=&#34;https://oliviergimenez.github.io/nimble-workshop/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;June 21-22, 2021. Workshop on individual-based models with R. All material available from 
-&lt;a href=&#34;https://sarahbauduin.github.io/formation_IBM_NetLogoR/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;May 17-18, 2021. Workshop on Bayesian capture-recapture inference with hidden Markov models in R and Nimble. Slides, worksheets and video recordings freely available from 
-&lt;a href=&#34;https://oliviergimenez.github.io/bayesian-cr-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;March 22-26, 2021. Bayesian statistics with R for non-stats PhD students. Slides and videos 
-&lt;a href=&#34;https://oliviergimenez.github.io/bayesian-stats-with-R/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;March 18, 2021. Workshop on reproducible science in R and RStudio. Remotely via Zoom. Slides and videos
-&lt;a href=&#34;https://oliviergimenez.github.io/reproducible-science-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;November 23-27, 2020. 
-&lt;a href=&#34;http://www.phidot.org/forum/viewtopic.php?f=8&amp;amp;t=3968&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Integrated population models&lt;/a&gt;. Remotely via Zoom. Slides and videos on capture-recapture models 
-&lt;a href=&#34;https://github.com/oliviergimenez/IPMworkshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;November 2020. 
-&lt;a href=&#34;https://www.fondationbiodiversite.fr/evenement/frb-cesab-formation-reproductibilite-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bonnes pratiques pour une recherche reproductible en écologie numérique&lt;/a&gt;. Montpellier, France.&lt;/p&gt;
-&lt;p&gt;October 2020. 
-&lt;a href=&#34;https://github.com/oliviergimenez/statistics-for-ecologists-Master-courses&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistics for ecologists&lt;/a&gt; Master course.&lt;/p&gt;
-&lt;p&gt;July 2020. 
-&lt;a href=&#34;https://github.com/oliviergimenez/Bayesian_Workshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian statistics with R and Jags&lt;/a&gt;. Remotely via Zoom.&lt;/p&gt;
-&lt;p&gt;Décembre 2019. 
-&lt;a href=&#34;https://frbcesab.github.io/datatoolbox/index.html#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bonnes pratiques pour une recherche reproductible en écologie numérique&lt;/a&gt;. Montpellier, France.&lt;/p&gt;
-&lt;p&gt;2010-2018. 
-&lt;a href=&#34;http://www.phidot.org/forum/viewtopic.php?f=8&amp;amp;t=3553&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multievent capture-recapture models&lt;/a&gt;. Montpellier, France.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Books and book chapters</title>
       <link>https://oliviergimenez.github.io/publication/books/</link>
-      <pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/publication/books/</guid>
       <description>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-barnagaud-j-y-and-gimenez-o-2025-analyse-de-données-en-écologie---introduction-aux-outils-statistiques-avec-rhttpswwwbiotope-editionsfrproduitanalyse-de-donnees-en-ecologie&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://oliviergimenez.github.io/img/anaylsedonneeecologie_siteBiotopeEd.png&#34; data-caption=&#34;Barnagaud J.-Y. and Gimenez O. (2025). 
+Analyse de données en écologie - Introduction aux outils statistiques avec R.&#34;&gt;
+
+
+  &lt;img src=&#34;https://oliviergimenez.github.io/img/anaylsedonneeecologie_siteBiotopeEd.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Barnagaud J.-Y. and Gimenez O. (2025). 
+&lt;a href=&#34;https://www.biotope-editions.fr/produit/analyse-de-donnees-en-ecologie/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Analyse de données en écologie - Introduction aux outils statistiques avec R.&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
 
 
 
@@ -1694,6 +1703,53 @@ Modèles de mélange en capture-recapture. Dans Modèles à variables latentes e
     </item>
     
     <item>
+      <title>Workshops</title>
+      <link>https://oliviergimenez.github.io/talks/workshop/</link>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://oliviergimenez.github.io/talks/workshop/</guid>
+      <description>&lt;p&gt;Nov-Dec, 2025. Bayesian statistics with R for Master and PhD students. Slides and videos 
+&lt;a href=&#34;https://oliviergimenez.github.io/bayesian-stats-with-R/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;March 20, 2025. 1-day workshop Introduction to Bayesian statistics with R and Nimble.&lt;/p&gt;
+&lt;p&gt;July 12-13, 2023. Workshop on Bayesian capture-recapture inference with hidden Markov models in R and Nimble for the 
+&lt;a href=&#34;http://vabar.es/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;València International Bayesian Analysis Summer School&lt;/a&gt;. Slides, worksheets and video recordings freely available from 
+&lt;a href=&#34;https://oliviergimenez.github.io/bayesian-hmm-cr-workshop-valencia/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;June 1-2, 2023. Quantitative methods for population dynamics: A two-day workshop with R. All material available from 
+&lt;a href=&#34;https://oliviergimenez.github.io/popdyn-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;May 16, 2023. Workshop on estimating (wolf) occupancy with R for the 
+&lt;a href=&#34;https://www.wolvesacrossborders.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wolves Across Borders conference&lt;/a&gt;. All material available from 
+&lt;a href=&#34;https://oliviergimenez.github.io/occupancy-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;June 26, 2022. Workshop on Bayesian capture-recapture inference with hidden Markov models, R and Nimble for the 
+&lt;a href=&#34;https://www.isec2022.org/workshop-4/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ISEC2022 conference&lt;/a&gt;. All material available from 
+&lt;a href=&#34;https://oliviergimenez.github.io/hmm-cr-nimble-isec2022-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;March 21-22, 2022. Quantitative methods for population dynamics: A two-day workshop with R. All material available from 
+&lt;a href=&#34;https://oliviergimenez.github.io/popdyn-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;March 19, 2022. Workshop on NIMBLE. All material available from 
+&lt;a href=&#34;https://oliviergimenez.github.io/nimble-workshop/#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;June 21-22, 2021. Workshop on individual-based models with R. All material available from 
+&lt;a href=&#34;https://sarahbauduin.github.io/formation_IBM_NetLogoR/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;May 17-18, 2021. Workshop on Bayesian capture-recapture inference with hidden Markov models in R and Nimble. Slides, worksheets and video recordings freely available from 
+&lt;a href=&#34;https://oliviergimenez.github.io/bayesian-cr-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dedicated website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;March 22-26, 2021. Bayesian statistics with R for non-stats PhD students. Slides and videos 
+&lt;a href=&#34;https://oliviergimenez.github.io/bayesian-stats-with-R/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;March 18, 2021. Workshop on reproducible science in R and RStudio. Remotely via Zoom. Slides and videos
+&lt;a href=&#34;https://oliviergimenez.github.io/reproducible-science-workshop/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;November 23-27, 2020. 
+&lt;a href=&#34;http://www.phidot.org/forum/viewtopic.php?f=8&amp;amp;t=3968&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Integrated population models&lt;/a&gt;. Remotely via Zoom. Slides and videos on capture-recapture models 
+&lt;a href=&#34;https://github.com/oliviergimenez/IPMworkshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;November 2020. 
+&lt;a href=&#34;https://www.fondationbiodiversite.fr/evenement/frb-cesab-formation-reproductibilite-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bonnes pratiques pour une recherche reproductible en écologie numérique&lt;/a&gt;. Montpellier, France.&lt;/p&gt;
+&lt;p&gt;October 2020. 
+&lt;a href=&#34;https://github.com/oliviergimenez/statistics-for-ecologists-Master-courses&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Statistics for ecologists&lt;/a&gt; Master course.&lt;/p&gt;
+&lt;p&gt;July 2020. 
+&lt;a href=&#34;https://github.com/oliviergimenez/Bayesian_Workshop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian statistics with R and Jags&lt;/a&gt;. Remotely via Zoom.&lt;/p&gt;
+&lt;p&gt;Décembre 2019. 
+&lt;a href=&#34;https://frbcesab.github.io/datatoolbox/index.html#1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bonnes pratiques pour une recherche reproductible en écologie numérique&lt;/a&gt;. Montpellier, France.&lt;/p&gt;
+&lt;p&gt;2010-2018. 
+&lt;a href=&#34;http://www.phidot.org/forum/viewtopic.php?f=8&amp;amp;t=3553&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multievent capture-recapture models&lt;/a&gt;. Montpellier, France.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Objectif-Lez</title>
       <link>https://oliviergimenez.github.io/my-project/external-project/objectiflez/</link>
       <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
@@ -1726,13 +1782,13 @@ Modèles de mélange en capture-recapture. Dans Modèles à variables latentes e
     </item>
     
     <item>
-      <title>PEP-BIOccIA</title>
+      <title>Gaia Predict</title>
       <link>https://oliviergimenez.github.io/my-project/external-project/diat/</link>
       <pubDate>Fri, 05 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/my-project/external-project/diat/</guid>
-      <description>&lt;p&gt;&lt;em&gt;En bref :&lt;/em&gt; Le projet BIOccIA vise à utiliser l&amp;rsquo;intelligence artificielle pour cartographier les milieux naturels et prédire la présence d&amp;rsquo;espèces (faune/flore). Les données seront accessibles et utilisées librement pour suivre les politiques publiques en faveur de la biodiversité et s’adresseront à plusieurs types d’acteurs (aménageurs, chercheurs, acteurs institutionnels, etc.). L’objectif est de planifier la préservation de la biodiversité d’Occitanie à moyen et long terme, en lien avec les échelles européenne, nationale et régionale.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Contexte :&lt;/em&gt; Porté par La Région Occitanie / Pyrénées-Méditerranée et baptisé PEP-BIOccIA, notre projet fait partie des huit projets lauréats qui ont été retenus dans le cadre de l’appel à projets &amp;ldquo;Démonstrateurs d’IA frugale pour la transition écologique des territoires&amp;rdquo;, piloté par l’Ecolab - Greentech Innovation, le Ministère Écologie Territoires et la Banque des Territoires.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Objectif :&lt;/em&gt; L&amp;rsquo;objectif de PEP-BIOccIA est de cartographier les milieux naturels et prédire la présence d&amp;rsquo;espèces sur l’ensemble du territoire de l’Occitanie, pour mieux planifier la préservation de la biodiversité à moyen et long terme.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;em&gt;En bref :&lt;/em&gt; Le projet Gaia Predict vise à utiliser l&amp;rsquo;intelligence artificielle pour cartographier les milieux naturels et prédire la présence d&amp;rsquo;espèces (faune/flore). Les données seront accessibles et utilisées librement pour suivre les politiques publiques en faveur de la biodiversité et s’adresseront à plusieurs types d’acteurs (aménageurs, chercheurs, acteurs institutionnels, etc.). L’objectif est de planifier la préservation de la biodiversité d’Occitanie à moyen et long terme, en lien avec les échelles européenne, nationale et régionale.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Contexte :&lt;/em&gt; Porté par La Région Occitanie / Pyrénées-Méditerranée et baptisé Gaia Predict, notre projet fait partie des huit projets lauréats qui ont été retenus dans le cadre de l’appel à projets &amp;ldquo;Démonstrateurs d’IA frugale pour la transition écologique des territoires&amp;rdquo;, piloté par l’Ecolab - Greentech Innovation, le Ministère Écologie Territoires et la Banque des Territoires.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Objectif :&lt;/em&gt; L&amp;rsquo;objectif de Gaia Predict est de cartographier les milieux naturels et prédire la présence d&amp;rsquo;espèces sur l’ensemble du territoire de l’Occitanie, pour mieux planifier la préservation de la biodiversité à moyen et long terme.&lt;/p&gt;
 &lt;p&gt;Outre le CEFE, il associe OPenIG (plateforme de l’information géographique en Occitanie), TerrOïko et Data Terra (infrastructure de recherche dédiée aux données d’observation de la terre).&lt;/p&gt;
 &lt;p&gt;Le projet part d’un constat : les données sur les milieux naturels et sur la répartition des espèces à l’échelle de la région sont hétérogènes, incomplètes, insuffisamment mises à jour et souvent inadaptées aux besoins pour la planification et la mise en œuvre des politiques publiques de protection de la biodiversité.&lt;/p&gt;
 &lt;p&gt;Les travaux qui vont être menés visent donc à s’appuyer sur l&amp;rsquo;IA pour produire :&lt;/p&gt;
