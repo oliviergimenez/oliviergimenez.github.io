@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/</link>
       <atom:link href="https://oliviergimenez.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Olivier Gimenez</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2025</copyright><lastBuildDate>Sun, 28 Dec 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Olivier Gimenez</title>
@@ -1411,9 +1411,81 @@ World Marine Mammal Conference. 2019, Barcelona Spain.
     <item>
       <title>Books and book chapters</title>
       <link>https://oliviergimenez.github.io/publication/books/</link>
-      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/publication/books/</guid>
       <description>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-gimenez-o-2026-introduction-à-la-statistique-bayésienne-avec-le-logiciel-rhttpsoliviergimenezgithubiostatistique-bayes-quae&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://oliviergimenez.github.io/img/cover-quae-book.png&#34; data-caption=&#34;Gimenez O. (2026). 
+Introduction à la statistique bayésienne avec le logiciel R.&#34;&gt;
+
+
+  &lt;img src=&#34;https://oliviergimenez.github.io/img/cover-quae-book.png&#34; alt=&#34;&#34; width=&#34;60%&#34; &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Gimenez O. (2026). 
+&lt;a href=&#34;https://oliviergimenez.github.io/statistique-bayes-quae/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction à la statistique bayésienne avec le logiciel R.&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-gimenez-o-2026--bayesian-analysis-of-capture-recapture-data-with-hidden-markov-models-theory-and-case-studies-in-r-and-nimblehttpsoliviergimenezgithubiobanana-book&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://oliviergimenez.github.io/img/cover-banana-book.png&#34; data-caption=&#34;Gimenez O. (2026). 
+ Bayesian analysis of capture-recapture data with hidden Markov models: Theory and case studies in R and NIMBLE.&#34;&gt;
+
+
+  &lt;img src=&#34;https://oliviergimenez.github.io/img/cover-banana-book.png&#34; alt=&#34;&#34; width=&#34;60%&#34; &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Gimenez O. (2026). 
+&lt;a href=&#34;https://oliviergimenez.github.io/banana-book/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt; Bayesian analysis of capture-recapture data with hidden Markov models: Theory and case studies in R and NIMBLE.&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
 
 
 
