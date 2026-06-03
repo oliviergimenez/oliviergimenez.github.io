@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/</link>
       <atom:link href="https://oliviergimenez.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Olivier Gimenez</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2026</copyright><lastBuildDate>Fri, 06 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2026</copyright><lastBuildDate>Wed, 03 Jun 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>Olivier Gimenez</title>
@@ -277,14 +277,21 @@ biodiversity patterns at large scale and worked in conservation biogeography
     <item>
       <title>Papers</title>
       <link>https://oliviergimenez.github.io/publication/papers/</link>
-      <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/publication/papers/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Preprints&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Cosquer, A., O. Gimenez, V. de Saint Vaulry, C. Francesiaz (2026). 
-&lt;a href=&#34;https://osf.io/preprints/socarxiv/kpa7f_v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evaluating Education for Biodiversity: A Scoping Review of Practices and Frameworks&lt;/a&gt; SocArXiv preprint.&lt;/p&gt;
+&lt;p&gt;Gimenez, O., A. Keller, C. Milleret (2026). 
+&lt;a href=&#34;https://arxiv.org/abs/2605.09064v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian decision theory for wildlife management under uncertainty: from inference to action&lt;/a&gt; arXiv preprint&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gimenez, O., C. Mottier, C. Giacomel, J. Blanchet, S. Perret, A. Lucas, C. de Franceschi, N. Vazzoler, M. Lecouturier, R. Duda, K. Berthier, T. Le Brun, N. Lescureux, F. Rosell, C. A. Robstad, E. Artige, S. Piry, M. Cianchetti-Benedetti, N. Charbonnel (2026). A rapid glue-on GPS tagging protocol for coypu (Myocastor coypus)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lacombe, S., S. Devillard, C. Kauffmann, O. Gimenez (2026). 
+&lt;a href=&#34;https://arxiv.org/abs/2605.04807&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A process-based dynamic occupancy model to study range dynamics under non-equilibrium conditions&lt;/a&gt; arXiv preprint&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Desprez M., V. Miele, O. Gimenez (2023). 
@@ -298,6 +305,18 @@ biodiversity patterns at large scale and worked in conservation biogeography
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Published&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Lacombe, S., S. Devillard, L. D&amp;rsquo;Hollande, Y. Raulet, V. Sablain, L. Barbu, G. Didier, R. Mathevet, C. Miaud, C. Oyon, E. le Pommelet, S. Richarte, S. Rouvière, A. Valentini, N. Vazzoler-Antoine, O. Gimenez (2026). 
+&lt;a href=&#34;https://oliviergimenez.github.io/pubs/lacombe2026ancons.pdf&#34;&gt;Comparative efficiency of eDNA, camera traps and scat surveys to detect a semi-aquatic mammal across multiple catchments&lt;/a&gt; &lt;em&gt;Animal Conservation&lt;/em&gt; in press&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Carpentier, C.A.E., M. Heurich, O. Devineau, O. Gimenez, J. D. C. Linnell (2026). 
+&lt;a href=&#34;https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1002/wlb3.01628&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adaptive harvesting of two trophic levels stabilises predator–prey dynamics. Simulations with Eurasian lynx and European roe deer&lt;/a&gt; &lt;em&gt;Wildlife Biology&lt;/em&gt; e01628&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cosquer, A., O. Gimenez, V. de Saint Vaulry, C. Francesiaz (2026). 
+&lt;a href=&#34;https://osf.io/preprints/socarxiv/kpa7f_v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Evaluating Education for Biodiversity: A Scoping Review of Practices and Frameworks&lt;/a&gt; &lt;em&gt;Biological Conservation&lt;/em&gt; in press.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Le Coeur C., J. Perret, A. Besnard, S. Cubaynes, C. Monchy, M. Naciri, M. Nakamura, O. Gimenez (2026). 
 &lt;a href=&#34;https://oliviergimenez.github.io/pubs/lecoeuretal2026.pdf&#34;&gt;Contribution and applications of demographic concepts to conservation&lt;/a&gt; &lt;em&gt;Biological Conservation&lt;/em&gt; 316: 111776.&lt;/p&gt;
@@ -339,8 +358,7 @@ Grosset S., Michaux J., Beaumariage A., André A. &amp;amp; Devillard S. 2025.
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Gimenez O. (2025). 
-&lt;a href=&#34;https://oliviergimenez.github.io/pubs/Gimenez2025NeoBiotaproofs.pdf&#34;&gt;Estimating invasive rodent abundance using removal data and hierarchical models&lt;/a&gt; &lt;em&gt;NeoBiota&lt;/em&gt; in press. 
-&lt;a href=&#34;https://arxiv.org/abs/2501.01809&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Preprint&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://doi.org/10.3897/neobiota.103.145876&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Estimating invasive rodent abundance using removal data and hierarchical models&lt;/a&gt; &lt;em&gt;NeoBiota&lt;/em&gt; 103: 249-265.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Altwegg R., Salau S., Abadi F., Cervantes F., Clark A.E., Distiller G., Gimenez O., Henry D.A.W., Johnston A., Joo R., Karenyi N., Kuiper T., Marques T.A., Ngwenya M., Oosthuizen W.C., Photopoulou T., Slingsby J., Sutherland C., V. Visser (2025). 
