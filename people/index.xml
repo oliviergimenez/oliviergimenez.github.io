@@ -5,7 +5,7 @@
     <link>https://oliviergimenez.github.io/people/</link>
       <atom:link href="https://oliviergimenez.github.io/people/index.xml" rel="self" type="application/rss+xml" />
     <description>People</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2026</copyright><lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Olivier Gimenez 2026</copyright><lastBuildDate>Sun, 16 Aug 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://oliviergimenez.github.io/img/flyfishing.jpg</url>
       <title>People</title>
@@ -15,13 +15,28 @@
     <item>
       <title>Current lab members</title>
       <link>https://oliviergimenez.github.io/people/current/</link>
-      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/current/</guid>
       <description>&lt;br&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/camille.jpg&#34; width=&#34;130&#34;&gt; &lt;strong&gt;Camille Mottier&lt;/strong&gt; (PhD 2025-2029) is modelling the spatial dynamics of coypus at multiple scales. She is co-supervised by 
-&lt;a href=&#34;https://hqueffel.pages.math.cnrs.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hoel Queffelec&lt;/a&gt; and 
+&lt;a href=&#34;https://imag.umontpellier.fr/~peyhardi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jean Peyhardi&lt;/a&gt;, 
+&lt;a href=&#34;https://sites.google.com/view/guerand/accueil&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jessica Guérand&lt;/a&gt; and 
+&lt;a href=&#34;https://seguin.perso.math.cnrs.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nicolas Seguin&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/berenice.jpg&#34; width=&#34;130&#34;&gt; &lt;strong&gt;Bérénice Givord-Coupeau&lt;/strong&gt; (PhD 2026-2029) is studying the ecology and management of aquatic invasive alien rodents in France. She is co-supervised by 
+&lt;a href=&#34;https://www.univ-angers.fr/fr/acces-directs/annuaire-2/p/a/uduser-olivier-pays-fr.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Olivier Pays-Volard&lt;/a&gt; and 
+&lt;a href=&#34;https://scholar.google.com/citations?user=i9CrTMoAAAAJ&amp;amp;hl=fr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Anne Mimet&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/paul.jpg&#34; width=&#34;130&#34;&gt; &lt;strong&gt;Paul Méry&lt;/strong&gt; (PhD 2025-2028) is modelling the spatio-temporal dynamics of predator-prey systems. He is co-supervised by 
+&lt;a href=&#34;https://hillairet.perso.math.cnrs.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Matthieu Hillairet&lt;/a&gt; and 
 &lt;a href=&#34;https://sites.google.com/view/guerand/accueil&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jessica Guérand&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt; 
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/louiss.jpg&#34; width=&#34;130&#34;&gt; &lt;strong&gt;Louis Schroll&lt;/strong&gt; (PhD 2026-2029) is integrating predator-prey interactions and adaptive decision-making for the management of species of socio-ecological concern. He is co-supervised by 
+&lt;a href=&#34;https://www.cefe.cnrs.fr/fr/recherche/bc/bbp/1052-ec/3841-sarah-cubaynes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sarah Cubaynes&lt;/a&gt;, 
+&lt;a href=&#34;https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/devillard-sebastien&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sébastien Devillard&lt;/a&gt;, 
+&lt;a href=&#34;https://cv.hal.science/sandrine-ruette&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sandrine Ruette&lt;/a&gt; and 
+&lt;a href=&#34;https://cv.hal.science/guillaume-souchay&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Guillaume Souchay&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/cyrielle.jpg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;Cyrielle Ballester&lt;/strong&gt; (engineer 2026) is working on a citizen science program to monitor animal communities along the Lez river in Montpellier.&lt;/p&gt;
 &lt;hr&gt; 
@@ -40,10 +55,6 @@
 &lt;a href=&#34;http://cyrilmilleret.info/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cyril Milleret&lt;/a&gt;&lt;/strong&gt; (post-doc 2024-2027) works on spatial explicit capture-recapture models for estimating the abundance of wolf in France. This is joint work with Christophe Duchamp and Jean-Michel Vandel from 
 &lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt; 
-&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/cassie.jpg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;
-&lt;a href=&#34;https://cassiespeakman.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cassie Speakman&lt;/a&gt;&lt;/strong&gt; (post-doc 2024-2026) works on the population consequences of human disturbance on small carnivores. This is joint work with Sandrine Ruette from 
-&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;.&lt;/p&gt;
-&lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/carolina.jpg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;
 &lt;a href=&#34;https://www.cibio.up.pt/en/people/details/carolina-nogueira/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Carolina Nogueira&lt;/a&gt;&lt;/strong&gt; (PhD 2025-2028) works on the large-scale assessment of wildlife translocations success across Africa. This is joint work with Pedro Monterroso, Angela Gaylard from 
 &lt;a href=&#34;https://www.cibio.up.pt/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CIBIO&lt;/a&gt; at the university of Porto.&lt;/p&gt;
@@ -53,7 +64,7 @@
     <item>
       <title>Former lab members</title>
       <link>https://oliviergimenez.github.io/people/alumni/</link>
-      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
       <guid>https://oliviergimenez.github.io/people/alumni/</guid>
       <description>&lt;br&gt;
 &lt;hr&gt;
@@ -61,53 +72,57 @@
 &lt;a href=&#34;https://oliviergimenez.github.io/MasterStudents.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/cassie.jpg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;
+&lt;a href=&#34;https://cassiespeakman.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cassie Speakman&lt;/a&gt;&lt;/strong&gt; (post-doc 2024-2026) works on the population consequences of human disturbance on small carnivores. This is joint work with Sandrine Ruette from 
+&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;. Cassie is now a post-doc at RMIT university in Melbourne, Australia.&lt;/p&gt;
+&lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/maelis.jpeg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Maëlis Kervellec&lt;/strong&gt; (PhD 2021-2024) developed statistical models for the analysis of camera trap data with applications in large carnivores population ecology. This was joint work with colleagues from the 
-&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;. Maëlis was co-supervised by Cyril Milleret.&lt;/p&gt;
+&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;. Maëlis was co-supervised by Cyril Milleret. She is now a post-doc at Cornell, USA.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/oksana.png&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;
 &lt;a href=&#34;https://www.researchgate.net/profile/Oksana-Grente&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Oksana Grente&lt;/a&gt;&lt;/strong&gt; (PhD 2018-2021, post-doc 2023-2025) worked at evaluating the impact of lethal control on the French wolf population, with a special interest in social structure and livestock depredation. This was joint work with Sarah Bauduin, Christophe Duchamp and Nolwenn Hoguet-Drouet from 
-&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://ofb.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;French Office of Biodiversity&lt;/a&gt;. Oksana is now a post-doc at UMR BIOSP in Avignon, France.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/adelaide.jpeg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;Célian Monchy&lt;/strong&gt; (PhD 2022-2025) worked on the propagation of uncertainties related to the automatic processing of sensor data in different models in ecology. Célian was co-supervised by 
-&lt;a href=&#34;https://marieetienne.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marie-Pierre Etienne&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://marieetienne.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marie-Pierre Etienne&lt;/a&gt;. Célian is now a post-doc at UMR MARBEC in Montpellier, France.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/lea.jpg&#34; width=&#34;130&#34;&gt; &lt;strong&gt;Léa Pautrel&lt;/strong&gt; (PhD 2022-2025) investigated the use of deep learning coupled with continuous-time models to exploit sensor data, in particular cam traps. She was co-supervised by 
 &lt;a href=&#34;https://marieetienne.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marie-Pierre Etienne&lt;/a&gt; and Sylvain Moulherat from 
-&lt;a href=&#34;https://www.terroiko.fr/fr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TerrOïko&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://www.terroiko.fr/fr&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TerrOïko&lt;/a&gt;. Léa is now a post-doc at UMR CEFE in Montpellier, France.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/javi.png&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Javi Fernández-López&lt;/strong&gt; (post-doc 2022-2023) is interested in conservation biology and phylogeography. He is modelling the distribution of mammals in Europe by integrating various sources of data. Check out his website 
-&lt;a href=&#34;https://allthiswasfield.blogspot.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://allthiswasfield.blogspot.com&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://allthiswasfield.blogspot.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://allthiswasfield.blogspot.com&lt;/a&gt;. Javi is now Profesor ayudante at Universidad Complutense de Madrid, Spain.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/monia.jpg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Mónia Nakamura Mercier Real&lt;/strong&gt; (PhD 2019-2024) is investigating the impacts of anthropogenic factors on large carnivores persistence in human-dominated landscapes. She used wolf in Spain and Portugal as a model species to address how different humanization levels can influence habitat selection and land use, and ultimately affect its demography, status and viability. The thesis was co-supervised with 
 &lt;a href=&#34;https://scholar.google.es/citations?user=mWcf6MsAAAAJ&amp;amp;hl=es&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;José Vicente López-Bao&lt;/a&gt; and 
-&lt;a href=&#34;https://scholar.google.com/citations?user=2ulB-8QAAAAJ&amp;amp;hl=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pedro Monterroso&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://scholar.google.com/citations?user=2ulB-8QAAAAJ&amp;amp;hl=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pedro Monterroso&lt;/a&gt;. She is now a post-doc at CIBIO in Porto, Portugal.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/bea.jpg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Béatrice Chataigner&lt;/strong&gt; (EPHE diploma 2020-2022) is working on locally-based monitoring programs in Kenya. Her research project aimed at exploring the performances of current ecological monitoring program of Kenyan conservanciesin addressing their needs in terms of adaptive management at local level as well as ecosystem level. Béatrice works for IUCN in the 
 &lt;a href=&#34;https://papaco.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Program on African Protected Areas and Conservation&lt;/a&gt;. Her work was jointly supervised by 
 &lt;a href=&#34;https://institute.sandiegozoo.org/staff/nicholas-pilfold-phd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nicholas Pilfold&lt;/a&gt; and 
-&lt;a href=&#34;https://www.cefe.cnrs.fr/fr/actus/44-french/recherche/bc/bev/291-aurelien-besnard&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Aurélien Besnard&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://www.cefe.cnrs.fr/fr/actus/44-french/recherche/bc/bev/291-aurelien-besnard&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Aurélien Besnard&lt;/a&gt;. She is now doing a PhD with Julie Louvrier at UMR ASTRE in Montpellier, France.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/patricia.jpg&#34; alt=&#34;&#34;&gt; &lt;strong&gt;Patrícia Rodrigues&lt;/strong&gt; (post-doc 2021-2023) is interested in the social-ecological dynamics underpinning environmental problems in Africa. Her project aimed to characterize landscapes within Africa&amp;rsquo;s Great Green Wall in terms of their social-ecological properties and restoration initiatives. More 
 &lt;a href=&#34;https://rodriguespatri.wixsite.com/home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt; 
-&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/matt.jpg&#34; alt=&#34;&#34;&gt; &lt;strong&gt;Matthew Silk&lt;/strong&gt; (post-doc 2022-2023) is a behavioural and disease ecologist researching the links between population dynamics and social structure by developing new social network and demographic models. Matt was a MCSA research fellow. He is now a research fellow in Edinburgh.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/matt.jpg&#34; alt=&#34;&#34;&gt; &lt;strong&gt;Matthew Silk&lt;/strong&gt; (post-doc 2022-2023) is a behavioural and disease ecologist researching the links between population dynamics and social structure by developing new social network and demographic models. Matt was a MCSA research fellow. He is now a research fellow in Edinburgh, Scotland.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/louis.jpg&#34; width=&#34;150&#34;&gt; &lt;strong&gt;Louis Barbu&lt;/strong&gt; (intern 2022) was a second year student of 
-&lt;a href=&#34;https://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/btsa-gestion-et-protection-de-la-nature&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BTSA GPN&lt;/a&gt;. Louis conducted a study on the functionality of ecological corridors through the European otter in the Hérault department.&lt;/p&gt;
+&lt;a href=&#34;https://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/btsa-gestion-et-protection-de-la-nature&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BTSA GPN&lt;/a&gt;. Louis conducted a study on the functionality of ecological corridors through the European otter in the Hérault department. He is now a research technician at INRAE in Castanet-Tolosan, France.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/juju2.png&#34; alt=&#34;&#34;&gt;
-&lt;strong&gt;Julie Louvrier&lt;/strong&gt; (post-doc 2022) is an ecologist with strong quantitative skills. She worked on the interactions between large carnivores using occupancy models.&lt;/p&gt;
+&lt;strong&gt;Julie Louvrier&lt;/strong&gt; (post-doc 2022) is an ecologist with strong quantitative skills. She worked on the interactions between large carnivores using occupancy models. She is now an INRAE researcher at UMR ASTRE in Montpellier, France.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/marined.jpg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Marine Desprez&lt;/strong&gt; (post-doc 2022) worked on machine learning methods for classification problems in ecology. This was joint work with Vincent Miele.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/alix.jpg&#34; alt=&#34;&#34;&gt;
-&lt;strong&gt;Alix Cosquer&lt;/strong&gt; (post-doc 2019-2022) is an environmental psychologist. She studied how to favor connections between nature and children using educative marine areas, and worked on children&amp;rsquo;s relationships with nature in schools.&lt;/p&gt;
+&lt;strong&gt;Alix Cosquer&lt;/strong&gt; (post-doc 2019-2022) is an environmental psychologist. She studied how to favor connections between nature and children using educative marine areas, and worked on children&amp;rsquo;s relationships with nature in schools. She is now a post-doc at UMR CEFE in Montpellier, France.&lt;/p&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/maud.png&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Maud Quéroué&lt;/strong&gt; (PhD 2018-2021) developed multispecies demographic models to study predator-prey interactions in seabirds and competition/coexistence in passerines. This was joint work with 
@@ -117,7 +132,7 @@
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/valentin.png&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Valentin Lauret&lt;/strong&gt; (PhD 2018-2021) developed integrated models for monitoring of bottlenose dolphins in the network of marine protected areas in the French Mediterranean Sea. This was joint work with Hélène Labach from the 
-&lt;a href=&#34;https://www.facebook.com/miraceticetaces/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIRACETI&lt;/a&gt; NGO. Valentin is now a post-doc with Aurélien Besnard.&lt;/p&gt;
+&lt;a href=&#34;https://www.facebook.com/miraceticetaces/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIRACETI&lt;/a&gt; NGO. Valentin is now a CNRS researcher at UMR CEFE in Montpellier, France.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/helene.jpg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Hélène Labach&lt;/strong&gt; (PhD 2017-2021) from 
@@ -132,7 +147,7 @@ for studying hybridization in the wild. As case studies, she considered dolphins
 Conservation&lt;/a&gt;) and wolves in Italy (with 
 &lt;a href=&#34;https://www.researchgate.net/profile/Paolo_Ciucci&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paolo
 Ciucci&lt;/a&gt; from University of Rome -
-La Sapienza). Nina is now a post-doc with Paolo Ciucci working on estimating population abundance of brown bears.&lt;/p&gt;
+La Sapienza). Nina is now a post-doc at La Sapienza university in Rome, Italy.&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/SarahBauduin.jpg&#34; alt=&#34;&#34;&gt;
@@ -159,7 +174,7 @@ between large carnivores and human activities in Europe. This was joint work wit
 Linnell&lt;/a&gt; from NINA (Norway) and
 
 &lt;a href=&#34;http://bbcd.bio.uniroma1.it/bbcd/en/users/boitani-luigi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Luigi Boitani&lt;/a&gt; from
-University of Rome - La Sapienza. Vincenzo is now a post-doc with ISPRA back in Italy working on the African swine fever epidemics in wild boar.&lt;/p&gt;
+University of Rome - La Sapienza. Vincenzo is now a permanent researcher with ISPRA back in Italy working on the African swine fever epidemics in wild boar.&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/julie.jpg&#34; alt=&#34;&#34;&gt;
@@ -167,8 +182,7 @@ University of Rome - La Sapienza. Vincenzo is now a post-doc with ISPRA back in 
 distribution of large carnivores (wolf, lynx) in Europe. This was joint work with
 Christophe Duchamp, Nolwenn Hoguet-Drouet and Eric Marboutin from 
 &lt;a href=&#34;http://www.oncfs.gouv.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ONCFS&lt;/a&gt;.
-Julie is now a post-doc at the 
-&lt;a href=&#34;http://www.leibniz-izw.de/en/joulie-louvrier-en.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leibniz Institute for Zoo and Wildlife Research&lt;/a&gt;.&lt;/p&gt;
+Julie is now an INRAE researcher at UMR ASTRE in Montpellier, France.&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/lorelei.jpg&#34; alt=&#34;&#34;&gt;
@@ -249,14 +263,14 @@ recolonization of wolves in France (joint work with Eric Marboutin and Guillaume
 
 &lt;a href=&#34;https://www.worldwildlife.org/pages/arnaud-lyet-ph-d&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WWF-US&lt;/a&gt;. After working as a freelance 
 &lt;a href=&#34;https://lucilemarescot.wordpress.com/a-propos/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;data scientist in conservation biology&lt;/a&gt;, Lucile got a permanent position as a 
-&lt;a href=&#34;https://www6.montpellier.inrae.fr/cbgp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;researcher at CIRAD&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://www6.montpellier.inrae.fr/cbgp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;researcher at CIRAD&lt;/a&gt; at UMR CBGP in Montpellier, France.&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/cubaynes_s.jpg&#34; alt=&#34;&#34;&gt;
 &lt;strong&gt;Sarah Cubaynes&lt;/strong&gt; (PhD 2009-2011, post-doc 2017) developed capture-recapture
 mixed models (joint work with Christian Lavergne). After a post-doc both in the UK at Oxford and in the US working in the Yellowstone, she did another post-doc with us. Sarah is now
 
-&lt;a href=&#34;https://www.ephe.fr/annuaire/sarah-cubaynes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;assistant professor&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://www.ephe.fr/annuaire/sarah-cubaynes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;assistant professor&lt;/a&gt; at UMR CEFE in Montpellier, France.&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt; 
 &lt;p&gt;&lt;img src=&#34;https://oliviergimenez.github.io/img/index.jpg&#34; alt=&#34;&#34;&gt;
